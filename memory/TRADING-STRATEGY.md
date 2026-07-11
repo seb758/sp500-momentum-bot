@@ -134,17 +134,44 @@ candidate lists elsewhere and use FMP only to validate a specific ticker's
 fundamentals. If FMP is ever upgraded to a paid plan, steps 1 and 5 can go
 back to a single bulk `fmp.sh sp500` / `fmp.sh screener` call each.
 
+**FMP per-symbol restriction (confirmed July 2026 via a 40-ticker test
+run):** the free tier also 402s on a large, seemingly arbitrary subset of
+*individual* symbols even on the documented per-symbol endpoints — not a
+rate limit, an allowlist. It hit ~40% of large-cap S&P 500 names tested
+(ORCL, LLY, MRK, HD, MCD, CAT, PG, and others all failed) and essentially
+all small/mid-caps tested (11/12, including every satellite candidate
+tried). Treat any FMP 402/error as "data unavailable," never as "failed
+the fundamentals check" — and fall back to Gemini Deep Research per step 3a
+/ 6a below rather than silently dropping the candidate.
+
+**Corporate-action guard:** spinoff/split-adjustment artifacts can produce
+a single-day price move that swamps the momentum calc without being a real
+gain or loss (e.g. HON's ~51% one-day drop from its 2026 spinoff
+adjustment, which `adjustment=split` does not correct for). When computing
+momentum in step 2, flag any ticker with a >20% single-day close-to-close
+move within the lookback window for manual sanity-check before trusting
+its score — don't auto-exclude, since a real 20%+ move (earnings gap,
+biotech catalyst) is a legitimate signal, but don't rank on an
+unscrutinized artifact either.
+
 1. Get the current S&P 500 constituent list via native WebFetch against a
    public source (e.g. Wikipedia's "List of S&P 500 companies"). This list
    changes only a handful of times a year, so staleness risk is low even at
-   weekly cadence.
+   weekly cadence. WebFetch's AI summarization can truncate or invent
+   tickers on a table this large — spot-check a sample of the returned
+   tickers against a second source before trusting the full list, or parse
+   the raw table programmatically instead of relying on summarization.
 2. Compute momentum for all constituents from Alpaca historical bars (3M/6M
    relative return vs SPY, 50/200-day MA position) — price math only, no FMP
-   calls needed.
+   calls needed. Apply the corporate-action guard above.
 3. Shortlist the top ~40-60 names by momentum. Only for this shortlist, pull
    FCF trend, growth, and analyst rating from FMP per-symbol
    (`scripts/fmp.sh cashflow` / `growth` / `rating`) — bounds the API
    budget to the shortlist size, not all 500 names.
+   a. For any shortlisted name FMP 402s/errors on, don't drop it — submit a
+      Gemini Deep Research query for that subset in parallel (submit all,
+      then poll each) asking for recent FCF trend, YoY growth, and current
+      analyst sentiment, and use that in place of the FMP fields.
 4. Rank and select the qualifying core watchlist: positive FCF trend +
    momentum + not-a-sell rating.
 5. Generate small-cap biotech + industrials candidates via Gemini Deep
@@ -153,16 +180,23 @@ back to a single bulk `fmp.sh sp500` / `fmp.sh screener` call each.
    showing price momentum, positive YoY growth, and a documented
    catalyst — the research agent proposes names directly rather than FMP
    pre-filtering by sector/market-cap.
-6. For each proposed candidate, validate fundamentals per-symbol via FMP
-   (`scripts/fmp.sh growth` / `rating`) and confirm momentum via Alpaca
-   bars. Drop anything that doesn't check out quantitatively — the research
-   agent's candidate list is a starting point, not a pass.
+6. For each proposed candidate, confirm momentum via Alpaca bars (apply the
+   corporate-action guard). For fundamentals, try FMP per-symbol
+   (`scripts/fmp.sh growth` / `rating`) first, but expect it to 402 for
+   most small/mid-caps.
+   a. Given FMP's near-total small-cap coverage gap, fold the YoY growth
+      and analyst-sentiment check into the same Gemini Deep Research
+      catalyst query in step 7 rather than a separate FMP call — one
+      consolidated prompt per candidate, not two API calls. Drop anything
+      that doesn't check out (from FMP where it works, from the Gemini
+      report otherwise) — the research agent's candidate list is a
+      starting point, not a pass.
 7. Submit a Gemini Deep Research task per surviving satellite candidate in
-   parallel (`scripts/gemini_research.sh submit`, then poll each) to confirm
-   a documented catalyst — FDA/PDUFA calendar, government contracts, recent
-   news, or price-jump reasoning. Drop any candidate with no confirmed
-   catalyst. (If step 5 already surfaced the catalyst with a citation, this
-   step can double as verification rather than first discovery.)
+   parallel (`scripts/gemini_research.sh submit`, then poll each) asking
+   for: a documented catalyst (FDA/PDUFA calendar, government contracts,
+   recent news, or price-jump reasoning) AND recent YoY revenue/earnings
+   growth AND current analyst sentiment (per step 6a). Drop any candidate
+   with no confirmed catalyst or with negative growth/sentiment.
 8. Write memory/WATCHLIST.md with both lists for the new week, moving the
    prior week's lists into the History section (never delete history).
 

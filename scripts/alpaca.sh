@@ -46,7 +46,10 @@ case "$cmd" in
     # usage: bars SYM [timeframe] [start_YYYY-MM-DD] [end_YYYY-MM-DD]
     sym="${1:?usage: bars SYM [timeframe] [start] [end]}"
     timeframe="${2:-1Day}"
-    start="${3:-$(date -v-260d +%Y-%m-%d 2>/dev/null || date -d '260 days ago' +%Y-%m-%d)}"
+    # 400 calendar days ~= 270+ trading days, enough buffer for a 200-day
+    # SMA anchored at the start of the 6-month momentum window (260 days
+    # undershoots this and silently makes the 200d MA uncomputable).
+    start="${3:-$(date -v-400d +%Y-%m-%d 2>/dev/null || date -d '400 days ago' +%Y-%m-%d)}"
     end="${4:-$(date +%Y-%m-%d)}"
     curl -fsS -H "$H_KEY" -H "$H_SEC" \
       "$DATA/stocks/$sym/bars?timeframe=$timeframe&start=${start}T00:00:00Z&end=${end}T00:00:00Z&limit=10000&adjustment=split"

@@ -58,20 +58,43 @@ specific tickers' fundamentals. If FMP is later upgraded to a paid plan,
 swap STEP 6a back to `bash scripts/fmp.sh sp500` and STEP 7a back to
 `bash scripts/fmp.sh screener '...'`.
 
+NOTE — FMP per-symbol restriction (confirmed July 2026 via a 40-ticker test
+run): even the documented per-symbol endpoints 402 for a large, seemingly
+arbitrary subset of individual symbols — not a rate limit, an allowlist.
+Hit ~40% of large-cap names tested (ORCL, LLY, MRK, HD, MCD, CAT, PG, ...)
+and 11/12 small/mid-caps tested. Treat any FMP 402/error as "data
+unavailable," not "failed the fundamentals check" — fall back to Gemini
+Deep Research per STEP 6c/STEP 7b below instead of dropping the candidate.
+
+NOTE — corporate-action guard: a spinoff/split-adjustment can produce a
+single-day price move that swamps the momentum calc without being a real
+gain or loss (`adjustment=split` doesn't correct for spinoffs — e.g. HON's
+~51% one-day drop on its 2026 spinoff adjustment). Flag any ticker with a
+>20% single-day close-to-close move in the lookback window for manual
+sanity-check before trusting its score; don't auto-exclude, since a real
+20%+ move is sometimes a legitimate signal.
+
 STEP 6 — Core screen (S&P 500 momentum + FCF):
 a. Get the current S&P 500 constituent list via WebFetch against a public
    source (e.g. Wikipedia's "List of S&P 500 companies").
 b. For each constituent, pull ~13 months of daily bars:
    bash scripts/alpaca.sh bars SYM 1Day
+   (the script defaults to a 400-day lookback, enough for a 200-day SMA;
+   only pass an explicit start date if you need something different).
    Compute 3-month and 6-month return relative to SPY's return over the
    same window, and whether price is above its 50-day and 200-day moving
-   average. Rank all constituents by a combined momentum score.
+   average. Apply the corporate-action guard above. Rank all constituents
+   by a combined momentum score.
 c. Take the top ~40-60 by momentum score. ONLY for this shortlist:
    bash scripts/fmp.sh cashflow SYM quarter 8
    bash scripts/fmp.sh growth SYM 8
    bash scripts/fmp.sh rating SYM
    Keep names with a positive/improving FCF trend over the trailing
-   quarters and a rating that isn't Sell/Strong Sell.
+   quarters and a rating that isn't Sell/Strong Sell. For any name FMP
+   402s/errors on, don't drop it — batch those into a parallel Gemini Deep
+   Research submit/poll round (one query per ticker, submitted together)
+   asking for recent FCF trend, YoY growth, and analyst sentiment, and use
+   that instead of the FMP fields.
 d. Rank the survivors; keep the strongest ~15-25 as the new core watchlist.
 
 STEP 7 — Satellite screen (small-cap biotech + industrials):
@@ -80,13 +103,17 @@ a. Use Gemini Deep Research / WebSearch to propose specific small-cap
    momentum, positive YoY growth, and a documented catalyst — the research
    agent names candidates directly since FMP can't bulk-screen on this
    plan.
-b. For each proposed candidate, validate per-symbol via FMP:
+b. For each proposed candidate, try FMP per-symbol first:
    bash scripts/fmp.sh growth SYM
    bash scripts/fmp.sh rating SYM
    Keep only positive YoY growth and Buy/Outperform-or-better (or a recent
-   upgrade via `bash scripts/fmp.sh upgrades SYM`). Drop anything that
-   doesn't check out quantitatively — the research agent's list is a
-   starting point, not a pass.
+   upgrade via `bash scripts/fmp.sh upgrades SYM`). Expect this to 402 for
+   most small/mid-caps (confirmed 11/12 in testing) — when it does, don't
+   drop the candidate here; fold the growth/sentiment check into the STEP 8
+   Gemini Deep Research catalyst query instead (one consolidated prompt per
+   candidate, not a second API call). Drop anything that doesn't check out
+   quantitatively (from FMP or from the STEP 8 report) — the research
+   agent's list is a starting point, not a pass.
 c. Cross-check recent price action: bash scripts/alpaca.sh bars SYM 1Day —
    prioritize names with a confirmed momentum/volume signal, not just a
    fundamentals pass.
@@ -95,13 +122,25 @@ e. Skip any sub-sector currently under the 2-strike cooldown noted in
    memory/WATCHLIST.md or this week's TRADE-LOG.
 
 STEP 8 — Catalyst confirmation for the satellite shortlist, IN PARALLEL:
-a. For each shortlisted candidate, submit one task (do not block):
+a. For each shortlisted candidate, submit one task (do not block). If STEP
+   7b's FMP growth/rating check 402'd for this ticker, extend the query to
+   also ask for growth/sentiment (second variant below); otherwise the
+   plain catalyst-only query is enough since FMP already confirmed those.
    id_TICKER=$(bash scripts/gemini_research.sh submit "Is there a specific,
    near-term catalyst for TICKER (small-cap biotech or industrials)? Look
    for: FDA/PDUFA decision dates, other regulatory approvals, government
    contract awards, major trial readouts, or a confirmed recent price jump
    with volume and its cause. Give the catalyst, its date if known, and
    sources." standard)
+   -- or, if FMP couldn't validate fundamentals for this ticker --
+   id_TICKER=$(bash scripts/gemini_research.sh submit "For TICKER (small-cap
+   biotech or industrials): (1) Is there a specific, near-term catalyst? Look
+   for FDA/PDUFA decision dates, other regulatory approvals, government
+   contract awards, major trial readouts, or a confirmed recent price jump
+   with volume and its cause. (2) What is recent YoY revenue/earnings growth?
+   (3) What is current analyst sentiment (buy/hold/sell, recent upgrades or
+   downgrades)? Give catalyst date if known and cite sources for all three."
+   standard)
    Record each id alongside its ticker.
 b. Poll every id in a loop (sleep between rounds) until each is completed
    or failed, then extract results:
