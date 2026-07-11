@@ -18,7 +18,7 @@ IMPORTANT — ENVIRONMENT VARIABLES:
 
 IMPORTANT — PERSISTENCE:
 - Fresh clone. File changes VANISH unless committed and pushed.
-  MUST commit and push at STEP 8 if any trades fired.
+  MUST commit and push at STEP 9 if any trades fired.
 
 STEP 1 — Read memory for today's plan:
 - memory/TRADING-STRATEGY.md (buy-side gate, sleeve caps)
@@ -37,9 +37,9 @@ Check bid/ask spread on each; skip anything wide or zero (halted/illiquid).
 
 STEP 3 — Run the buy-side gate from TRADING-STRATEGY.md on each planned
 order, sleeve by sleeve. Skip any that fail, log the specific reason:
-- Core: positions after fill <= 6, trades this week <= 3, cost <= 20% of
+- Core: positions after fill <= 6, trades this week <= 6, cost <= 20% of
   equity, ticker on WATCHLIST.md core list
-- Satellite: positions after fill <= 4, trades this week <= 2, cost <= 7.5%
+- Satellite: positions after fill <= 4, trades this week <= 4, cost <= 7.5%
   of equity (5% if holding through a documented binary catalyst date within
   the position's expected hold period), total satellite exposure after
   fill <= 20% of equity, ticker on WATCHLIST.md satellite list
@@ -64,12 +64,24 @@ STEP 6 — Append each trade to memory/TRADE-LOG.md (its BUY template): sleeve,
 shares, entry price, stop level, thesis, target, R:R, and for satellite
 trades the catalyst + catalyst date + max loss if it fails.
 
-STEP 7 — Notification: only if a trade was placed.
+STEP 7 — Learn: append a short "### 9:30 AM Session Note" addendum under
+today's memory/RESEARCH-LOG.md entry, 2-4 bullets max:
+- What was decided (traded / held) and why, one line per candidate acted on
+  or explicitly passed on.
+- Any pattern worth flagging for Friday's review (e.g. "gate failed on
+  cost-vs-cash for the 2nd time this week", "momentum continuing as
+  research predicted on SYM"). Skip this bullet if nothing stands out —
+  don't manufacture a lesson.
+This is a running input to weekly-review's "what worked/didn't work"
+section, not a new file — keep it terse, no restating the full trade log.
+
+STEP 8 — Notification: only if a trade was placed.
   bash scripts/sendgrid.sh "<tickers, sleeve, shares, fill prices, one-line why>"
 
-STEP 8 — COMMIT AND PUSH (mandatory if any trades executed):
-  git add memory/TRADE-LOG.md
+STEP 9 — COMMIT AND PUSH (mandatory if any trades executed, or if STEP 7
+wrote a session note):
+  git add memory/TRADE-LOG.md memory/RESEARCH-LOG.md
   git commit -m "market-open trades $DATE"
   git push origin main
-Skip commit if no trades fired. On push failure: rebase and retry, never
-force-push.
+Skip commit if neither a trade fired nor a session note was written. On
+push failure: rebase and retry, never force-push.

@@ -27,15 +27,28 @@ routine's prompt field. Do not paraphrase — the env-var check block, the
      (required for notifications — falls back to a local file if omitted,
      but that file only persists if committed, so just set these)
 
-## Cron schedules (example: America/Chicago — adjust to your timezone)
+## Cron schedules (America/New_York)
+
+Confirm this timezone matches yours — if you're actually in Central or
+another zone, shift these times or change the routine's timezone setting,
+don't just relabel the column.
+
+Three buy/sell decision windows a day now (was two): 9:30am, 11am, 3pm.
+Each runs the full buy-side gate against ideas already documented in that
+day's RESEARCH-LOG entry — most 11am/3pm firings will often be a no-op on
+the buy side once the week's trade cap is used, that's expected.
 
 | Routine | Cron | When |
 |---|---|---|
-| pre-market | `0 6 * * 1-5` | 6:00 AM weekdays |
-| market-open | `30 8 * * 1-5` | 8:30 AM weekdays (market open) |
-| midday | `0 12 * * 1-5` | Noon weekdays |
-| daily-summary | `0 15 * * 1-5` | 3:00 PM weekdays (market close) |
-| weekly-review | `0 16 * * 5` | 4:00 PM Fridays (includes watchlist refresh — budget it running long) |
+| pre-market | `0 6 * * 1-5` | 6:00 AM weekdays — light daily research pass (news/catalyst check against the existing WATCHLIST.md, NOT a full re-screen) |
+| market-open | `30 9 * * 1-5` | 9:30 AM weekdays (market open) — buy/sell + learn |
+| midday | `0 11 * * 1-5` | 11:00 AM weekdays — buy/sell + learn |
+| daily-summary | `0 15 * * 1-5` | 3:00 PM weekdays — buy/sell + learn + close-risky-positions sweep + daily report |
+| weekly-review | `0 16 * * 5` | 4:00 PM Fridays — full watchlist re-screen (the only full re-screen; budget it running 20-40 min) + performance report |
+
+Weekly trade caps were raised from 3 core / 2 satellite to **6 core / 4
+satellite** (combined 10) on 2026-07-11 to match having 3 decision windows
+a day instead of 2 — see memory/TRADING-STRATEGY.md for the reasoning.
 
 ## First run
 

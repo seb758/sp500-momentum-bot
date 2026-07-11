@@ -30,13 +30,21 @@ Beat the S&P 500 on a risk-adjusted basis using two sleeves in one Alpaca
 | Hard cap | — (bounded by position/count limits) | 20% of equity |
 | Max open positions | 6 | 4 |
 | Max position size | 20% of equity | 7.5% of equity (5% if holding through a known binary catalyst date) |
-| Max new trades/week | 3 | 2 |
+| Max new trades/week | 6 | 4 |
 | Default trailing stop | 10% | 15% |
 | Hard loss cut | -7% | -15% |
 | Tighten stop | 7% at +15%, 5% at +20% | 10% at +25%, 7% at +40% |
 | Never tighten within | 3% of price | 5% of price |
 
-Combined max new trades per week across both sleeves: 5.
+Combined max new trades per week across both sleeves: 10.
+
+Raised from 3/2 (combined 5) on 2026-07-11 when trading moved from 2 to 3
+daily decision windows (market-open, midday, and the 3pm afternoon
+trade+close). Matches each sleeve's max-open-position count, so in
+principle every slot could turn over once in a week — the weekly cap is no
+longer the binding constraint at 3 windows/day, the buy-side gate and
+"patience > activity" judgment are. Watch the weekly-review win rate after
+this change; if trade quality drops, tighten back down.
 
 ## Core Sleeve — Entry Criteria (all must be true)
 
@@ -98,7 +106,7 @@ Combined max new trades per week across both sleeves: 5.
 ## The Buy-Side Gate (both sleeves — every check must pass, or the trade is skipped and the reason logged)
 
 - Total open positions after fill: core ≤ 6, satellite ≤ 4.
-- Trades this week: core ≤ 3, satellite ≤ 2.
+- Trades this week: core ≤ 6, satellite ≤ 4.
 - Position cost ≤ the applicable sleeve position cap.
 - Position cost ≤ available cash.
 - Total satellite sleeve exposure after fill ≤ 20% of equity.

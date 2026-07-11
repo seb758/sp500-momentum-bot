@@ -30,17 +30,19 @@ Open these in order before doing anything:
 ## Daily Workflows
 
 Defined in .claude/commands/ (local) and routines/ (cloud). Five scheduled
-runs per trading day, one weekly screen-refresh folded into Friday's review,
-plus ad-hoc helpers.
+runs per trading day: 6am research (pre-market), 9:30am/11am/3pm trade +
+learn windows (market-open, midday, daily-summary — the latter also closes
+risky positions and sends the EOD report), plus one weekly screen-refresh
+folded into Friday's review, plus ad-hoc helpers.
 
 ## Strategy Hard Rules (quick reference — full detail in TRADING-STRATEGY.md)
 
 - NO OPTIONS, no leverage — ever.
 - Never trade a ticker that isn't on the current memory/WATCHLIST.md.
-- Core: max 6 open positions, max 20% of equity each, max 3 new trades/week.
+- Core: max 6 open positions, max 20% of equity each, max 6 new trades/week.
 - Satellite: max 4 open positions, max 7.5% of equity each (5% if holding
   through a known binary catalyst date), max 20% total sleeve exposure,
-  max 2 new trades/week.
+  max 4 new trades/week.
 - Core stop: 10% trailing GTC. Cut at -7%. Tighten to 7%/5% at +15%/+20%.
 - Satellite stop: 15% trailing GTC. Cut at -15%. Tighten to 10%/7% at
   +25%/+40%. Wider than core because these names are more volatile.
