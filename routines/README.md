@@ -23,7 +23,7 @@ routine's prompt field. Do not paraphrase — the env-var check block, the
    - `GEMINI_API_KEY` (required for research workflows)
    - `GEMINI_RESEARCH_POLL_SECONDS`, `GEMINI_RESEARCH_MAX_WAIT_SECONDS`
      (optional; defaults 20 / 1200)
-   - `CLICKUP_API_KEY`, `CLICKUP_WORKSPACE_ID`, `CLICKUP_CHANNEL_ID`
+   - `SENDGRID_API_KEY`, `SENDGRID_FROM_EMAIL`, `SENDGRID_TO_EMAIL`
      (required for notifications — falls back to a local file if omitted,
      but that file only persists if committed, so just set these)
 

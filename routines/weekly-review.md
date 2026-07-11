@@ -106,8 +106,8 @@ b. Write the new core and satellite tables under "Current — Week of $DATE"
 c. Go back to STEP 4 and fill in the "Watchlist Refresh" subsection: names
    added/dropped per sleeve and why.
 
-STEP 10 — Send ONE ClickUp message, always. <= 15 lines:
-  bash scripts/clickup.sh "Week ending MMM DD
+STEP 10 — Send ONE email, always. <= 15 lines:
+  bash scripts/sendgrid.sh "Week ending MMM DD
   Portfolio: \$X (±X% week, ±X% phase)
   vs S&P 500: ±X%
   Core trades: N (W:X/L:Y) | Satellite trades: N (W:X/L:Y)

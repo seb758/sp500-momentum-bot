@@ -17,5 +17,5 @@ and the mandatory commit-and-push. Steps:
    for tomorrow.
 6. Log each trade to memory/TRADE-LOG.md with sleeve, thesis, stop, target,
    R:R, and (satellite) catalyst + max loss if it fails.
-7. Notify via clickup.sh only if a trade was placed.
+7. Notify via sendgrid.sh only if a trade was placed.
 8. Ask if you'd like it committed.

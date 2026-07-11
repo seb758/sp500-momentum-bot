@@ -7,7 +7,7 @@ DATE=$(date +%Y-%m-%d).
 
 IMPORTANT — ENVIRONMENT VARIABLES: [same block as pre-market — verify
 ALPACA_API_KEY, ALPACA_SECRET_KEY, FMP_API_KEY, GEMINI_API_KEY,
-CLICKUP_API_KEY, CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID before any wrapper
+SENDGRID_API_KEY, SENDGRID_FROM_EMAIL, SENDGRID_TO_EMAIL before any wrapper
 call; NO .env file, do not create one]
 
 IMPORTANT — PERSISTENCE: fresh clone, MUST commit and push at STEP 8 if
@@ -64,7 +64,7 @@ actionable, not as a routine check. Append findings as an afternoon
 addendum to RESEARCH-LOG.md if material.
 
 STEP 7 — Notification: only if action was taken.
-  bash scripts/clickup.sh "<action summary, by sleeve>"
+  bash scripts/sendgrid.sh "<action summary, by sleeve>"
 
 STEP 8 — COMMIT AND PUSH (if any memory files changed):
   git add memory/TRADE-LOG.md memory/RESEARCH-LOG.md memory/WATCHLIST.md

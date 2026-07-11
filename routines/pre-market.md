@@ -10,15 +10,15 @@ DATE=$(date +%Y-%m-%d).
 IMPORTANT — ENVIRONMENT VARIABLES:
 - Every API key is ALREADY exported as a process env var: ALPACA_API_KEY,
   ALPACA_SECRET_KEY, ALPACA_ENDPOINT, ALPACA_DATA_ENDPOINT, FMP_API_KEY,
-  FMP_ENDPOINT, GEMINI_API_KEY, CLICKUP_API_KEY, CLICKUP_WORKSPACE_ID,
-  CLICKUP_CHANNEL_ID.
+  FMP_ENDPOINT, GEMINI_API_KEY, SENDGRID_API_KEY, SENDGRID_FROM_EMAIL,
+  SENDGRID_TO_EMAIL.
 - There is NO .env file in this repo and you MUST NOT create, write, or
   source one. The wrapper scripts read directly from the process env.
 - If a wrapper prints "KEY not set in environment" -> STOP, send one
-  ClickUp alert naming the missing var, and exit.
+  email alert naming the missing var, and exit.
 - Verify env vars BEFORE any wrapper call:
   for v in ALPACA_API_KEY ALPACA_SECRET_KEY FMP_API_KEY GEMINI_API_KEY \
-           CLICKUP_API_KEY CLICKUP_WORKSPACE_ID CLICKUP_CHANNEL_ID; do
+           SENDGRID_API_KEY SENDGRID_FROM_EMAIL SENDGRID_TO_EMAIL; do
     [[ -n "${!v:-}" ]] && echo "$v: set" || echo "$v: MISSING"
   done
 
@@ -38,7 +38,7 @@ STEP 1 — Read memory for context:
 - memory/TRADING-STRATEGY.md
 - memory/WATCHLIST.md (current week's core + satellite lists — this IS
   today's tradeable universe; if it's empty or says PENDING, log that,
-  send a ClickUp alert asking for a manual /screen-refresh run, and stop
+  send an email alert asking for a manual /screen-refresh run, and stop
   after STEP 2)
 - tail of memory/TRADE-LOG.md and memory/RESEARCH-LOG.md
 
@@ -73,7 +73,7 @@ STEP 4 — Write a dated entry to memory/RESEARCH-LOG.md per its template:
 STEP 5 — Notification: silent unless urgent (a held position already below
 its hard-cut threshold in pre-market, a satellite catalyst resolved
 negatively overnight, a major geopolitical event).
-  bash scripts/clickup.sh "<one line>"
+  bash scripts/sendgrid.sh "<one line>"
 
 STEP 6 — COMMIT AND PUSH (mandatory):
   git add memory/RESEARCH-LOG.md

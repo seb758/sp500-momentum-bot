@@ -69,8 +69,9 @@ plus ad-hoc helpers.
   a tight serial loop for many small questions — you will blow the workflow's
   time budget. Exits 3 if GEMINI_API_KEY is unset; fall back to native
   WebSearch and flag the fallback in the log.
-- `bash scripts/clickup.sh` — notifications. Falls back to a local file if
-  credentials are missing; never crashes on missing notification creds.
+- `bash scripts/sendgrid.sh` — email notifications via Twilio SendGrid.
+  Falls back to a local file if credentials are missing; never crashes on
+  missing notification creds.
 
 ## Communication Style
 

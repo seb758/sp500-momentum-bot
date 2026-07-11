@@ -34,9 +34,9 @@ STEP 4 — Append EOD snapshot to memory/TRADE-LOG.md per its template,
 including the core/satellite exposure split and a positions table tagged by
 sleeve, plus a plain-english notes paragraph.
 
-STEP 5 — Send ONE ClickUp message, always, even on no-trade days. <= 15
+STEP 5 — Send ONE email, always, even on no-trade days. <= 15
 lines:
-  bash scripts/clickup.sh "EOD MMM DD
+  bash scripts/sendgrid.sh "EOD MMM DD
   Portfolio: \$X (±X% day, ±X% phase)
   Core: \$X (X%) | Satellite: \$X (X%) | Cash: \$X
   Trades today: <list or none>

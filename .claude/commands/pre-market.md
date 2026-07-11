@@ -16,5 +16,5 @@ manually when ready). Steps:
    it exits 3.
 4. Write a dated entry to memory/RESEARCH-LOG.md per its template (core +
    satellite ideas, only from the current watchlist).
-5. Notify via `bash scripts/clickup.sh` only if something is urgent.
+5. Notify via `bash scripts/sendgrid.sh` only if something is urgent.
 6. Ask if you'd like it committed; if yes, commit memory/RESEARCH-LOG.md.

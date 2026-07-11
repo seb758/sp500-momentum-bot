@@ -9,11 +9,11 @@ DATE=$(date +%Y-%m-%d).
 IMPORTANT — ENVIRONMENT VARIABLES:
 - Every API key is ALREADY exported: ALPACA_API_KEY, ALPACA_SECRET_KEY,
   ALPACA_ENDPOINT, ALPACA_DATA_ENDPOINT, FMP_API_KEY, GEMINI_API_KEY,
-  CLICKUP_API_KEY, CLICKUP_WORKSPACE_ID, CLICKUP_CHANNEL_ID.
+  SENDGRID_API_KEY, SENDGRID_FROM_EMAIL, SENDGRID_TO_EMAIL.
 - There is NO .env file in this repo and you MUST NOT create, write, or
   source one.
 - If a wrapper prints "KEY not set in environment" -> STOP, send one
-  ClickUp alert naming the missing var, and exit.
+  email alert naming the missing var, and exit.
 - Verify env vars BEFORE any wrapper call (same list as pre-market).
 
 IMPORTANT — PERSISTENCE:
@@ -65,7 +65,7 @@ shares, entry price, stop level, thesis, target, R:R, and for satellite
 trades the catalyst + catalyst date + max loss if it fails.
 
 STEP 7 — Notification: only if a trade was placed.
-  bash scripts/clickup.sh "<tickers, sleeve, shares, fill prices, one-line why>"
+  bash scripts/sendgrid.sh "<tickers, sleeve, shares, fill prices, one-line why>"
 
 STEP 8 — COMMIT AND PUSH (mandatory if any trades executed):
   git add memory/TRADE-LOG.md

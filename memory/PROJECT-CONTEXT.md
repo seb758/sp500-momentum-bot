@@ -12,7 +12,7 @@
 - Fundamentals/screening: Financial Modeling Prep
 - Research: Gemini Deep Research (background agent — see CLAUDE.md for its
   submit/poll usage pattern; it is NOT a fast synchronous search API)
-- Notifications: ClickUp chat channel
+- Notifications: email via Twilio SendGrid
 
 ## Known Risk Notes (do not remove — these are load-bearing)
 

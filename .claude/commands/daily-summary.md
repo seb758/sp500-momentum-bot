@@ -10,6 +10,6 @@ Steps:
 3. Compute day P&L, phase P&L, core/satellite exposure split, trades today
    and this week by sleeve.
 4. Append an EOD snapshot section to memory/TRADE-LOG.md per its template.
-5. Send one ClickUp message, always, <= 15 lines.
+5. Send one email, always, <= 15 lines.
 6. Commit is still recommended even locally — tomorrow's day-P&L math reads
    the last committed EOD snapshot. Ask if you'd like it committed now.

@@ -32,4 +32,4 @@ Args: SYMBOL SHARES SIDE (buy or sell). If missing, ask.
    (10% core / 15% satellite) — same flow as the market-open routine.
 8. Log to memory/TRADE-LOG.md with full thesis, sleeve, entry, stop, target,
    R:R, and (satellite) catalyst + max loss if it fails.
-9. `bash scripts/clickup.sh` with trade details.
+9. `bash scripts/sendgrid.sh` with trade details.

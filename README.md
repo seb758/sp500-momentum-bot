@@ -23,13 +23,13 @@ pointing this at a live account.
 | Execution | Alpaca (paper) |
 | Fundamentals / screening | Financial Modeling Prep |
 | Catalyst / market research | Gemini Deep Research (background agent) |
-| Notifications | ClickUp chat channel |
+| Notifications | Email (Twilio SendGrid) |
 | Memory | Markdown files committed to `main` |
 
 ## Quickstart (local)
 
 1. `cp env.template .env` and fill in your Alpaca **paper** keys, an FMP
-   key, a Gemini API key, and (optionally) ClickUp credentials.
+   key, a Gemini API key, and (optionally) SendGrid credentials.
 2. Open this repo in Claude Code.
 3. Run `/portfolio` — should print account + positions cleanly (empty
    account is fine, it just means no positions yet).
