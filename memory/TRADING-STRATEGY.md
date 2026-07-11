@@ -125,23 +125,44 @@ growth) don't change daily anyway — only price does. So the fundamental
 screen runs once a week; daily workflows read the standing watchlist instead
 of re-screening the whole universe.
 
-1. Pull the S&P 500 constituent list (`scripts/fmp.sh sp500` — 1 call).
+**FMP free-tier note:** `sp500-constituent` and the sector/market-cap
+`company-screener` endpoints are paid-plan-only on FMP (confirmed:
+"Restricted Endpoint" on the free tier as of July 2026). `scripts/fmp.sh`
+only exposes the per-symbol endpoints that do work free — quote, profile,
+cashflow, growth, rating, upgrades, gainers. The steps below source
+candidate lists elsewhere and use FMP only to validate a specific ticker's
+fundamentals. If FMP is ever upgraded to a paid plan, steps 1 and 5 can go
+back to a single bulk `fmp.sh sp500` / `fmp.sh screener` call each.
+
+1. Get the current S&P 500 constituent list via native WebFetch against a
+   public source (e.g. Wikipedia's "List of S&P 500 companies"). This list
+   changes only a handful of times a year, so staleness risk is low even at
+   weekly cadence.
 2. Compute momentum for all constituents from Alpaca historical bars (3M/6M
    relative return vs SPY, 50/200-day MA position) — price math only, no FMP
    calls needed.
 3. Shortlist the top ~40-60 names by momentum. Only for this shortlist, pull
-   FCF trend, growth, and analyst rating from FMP (bounds the API budget).
+   FCF trend, growth, and analyst rating from FMP per-symbol
+   (`scripts/fmp.sh cashflow` / `growth` / `rating`) — bounds the API
+   budget to the shortlist size, not all 500 names.
 4. Rank and select the qualifying core watchlist: positive FCF trend +
    momentum + not-a-sell rating.
-5. Pull small-cap biotech + industrials candidates via
-   `scripts/fmp.sh screener` (sector/market-cap filtered).
-6. Screen those by momentum, YoY growth, and analyst rating; shortlist to
-   ~10-15 satellite candidates.
-7. Submit a Gemini Deep Research task per satellite shortlist candidate in
+5. Generate small-cap biotech + industrials candidates via Gemini Deep
+   Research / native WebSearch instead of an FMP bulk screener: ask for
+   specific small-cap ($300M-$3B) biotech and industrials tickers currently
+   showing price momentum, positive YoY growth, and a documented
+   catalyst — the research agent proposes names directly rather than FMP
+   pre-filtering by sector/market-cap.
+6. For each proposed candidate, validate fundamentals per-symbol via FMP
+   (`scripts/fmp.sh growth` / `rating`) and confirm momentum via Alpaca
+   bars. Drop anything that doesn't check out quantitatively — the research
+   agent's candidate list is a starting point, not a pass.
+7. Submit a Gemini Deep Research task per surviving satellite candidate in
    parallel (`scripts/gemini_research.sh submit`, then poll each) to confirm
    a documented catalyst — FDA/PDUFA calendar, government contracts, recent
    news, or price-jump reasoning. Drop any candidate with no confirmed
-   catalyst.
+   catalyst. (If step 5 already surfaced the catalyst with a citation, this
+   step can double as verification rather than first discovery.)
 8. Write memory/WATCHLIST.md with both lists for the new week, moving the
    prior week's lists into the History section (never delete history).
 

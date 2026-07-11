@@ -1,8 +1,15 @@
 #!/usr/bin/env bash
-# Financial Modeling Prep wrapper. All fundamentals/screening calls go through
-# here — free cash flow, YoY growth, analyst ratings, S&P 500 constituents,
-# and the small-cap sector screener for the satellite sleeve.
+# Financial Modeling Prep wrapper. All fundamentals calls go through here —
+# free cash flow, YoY growth, analyst ratings for a given ticker.
 # Usage: bash scripts/fmp.sh <subcommand> [args...]
+#
+# NOTE: FMP retired /api/v3/ (Aug 2025) in favor of /stable/, and the free
+# tier does NOT include sp500-constituent or company-screener (both return
+# "Restricted Endpoint" — paid plans only). Per-symbol endpoints below all
+# work on the free tier. The weekly screen refresh works around the missing
+# bulk endpoints by sourcing the S&P 500 list and satellite candidates
+# elsewhere (see TRADING-STRATEGY.md) and using this script only to validate
+# fundamentals for specific tickers.
 
 set -euo pipefail
 
@@ -18,7 +25,7 @@ fi
 
 : "${FMP_API_KEY:?FMP_API_KEY not set in environment}"
 
-BASE="${FMP_ENDPOINT:-https://financialmodelingprep.com/api/v3}"
+BASE="${FMP_ENDPOINT:-https://financialmodelingprep.com/stable}"
 
 cmd="${1:-}"
 shift || true
@@ -30,48 +37,44 @@ get() {
 }
 
 case "$cmd" in
-  sp500)
-    # Full current S&P 500 constituent list — one call, use weekly not daily.
-    get "/sp500_constituent"
-    ;;
   profile)
     sym="${1:?usage: profile SYM}"
-    get "/profile/$sym"
+    get "/profile?symbol=$sym"
     ;;
   quote)
     sym="${1:?usage: quote SYM}"
-    get "/quote/$sym"
+    get "/quote?symbol=$sym"
     ;;
   cashflow)
     sym="${1:?usage: cashflow SYM [period] [limit]}"
     period="${2:-quarter}"
     limit="${3:-8}"
-    get "/cash-flow-statement/$sym?period=$period&limit=$limit"
+    get "/cash-flow-statement?symbol=$sym&period=$period&limit=$limit"
     ;;
   growth)
     sym="${1:?usage: growth SYM [limit]}"
     limit="${2:-8}"
-    get "/financial-growth/$sym?limit=$limit"
+    get "/financial-growth?symbol=$sym&limit=$limit"
     ;;
   rating)
     sym="${1:?usage: rating SYM}"
-    get "/rating/$sym"
+    get "/ratings-snapshot?symbol=$sym"
     ;;
   upgrades)
     sym="${1:?usage: upgrades SYM}"
-    get "/upgrades-downgrades/$sym"
-    ;;
-  screener)
-    # Free-form query string, e.g.:
-    #   'sector=Healthcare&industry=Biotechnology&marketCapMoreThan=300000000&marketCapLowerThan=3000000000&exchange=NASDAQ&limit=200'
-    qs="${1:?usage: screener 'key=value&key=value...'}"
-    get "/stock-screener?$qs"
+    get "/grades?symbol=$sym"
     ;;
   gainers)
-    get "/stock_market/gainers"
+    get "/biggest-gainers"
+    ;;
+  sp500|screener)
+    echo "ERROR: '$cmd' requires a paid FMP plan (Restricted Endpoint on free tier)." >&2
+    echo "See TRADING-STRATEGY.md 'Weekly Screen Refresh' for the free-tier workaround (WebFetch + Gemini Deep Research for candidate sourcing, this script only for per-symbol fundamentals validation)." >&2
+    exit 5
     ;;
   *)
-    echo "Usage: bash scripts/fmp.sh <sp500|profile|quote|cashflow|growth|rating|upgrades|screener|gainers> [args]" >&2
+    echo "Usage: bash scripts/fmp.sh <profile|quote|cashflow|growth|rating|upgrades|gainers> [args]" >&2
+    echo "('sp500' and 'screener' are disabled — free tier doesn't support them, see error if called)" >&2
     exit 1
     ;;
 esac

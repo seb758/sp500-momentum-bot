@@ -49,8 +49,18 @@ given the gap-risk profile of the satellite sleeve.
 
 === PART B — WEEKLY WATCHLIST SCREEN REFRESH ===
 
+NOTE — FMP free-tier gap: `sp500-constituent` and the sector/market-cap
+screener are paid-plan-only (confirmed "Restricted Endpoint" on the free
+tier). `scripts/fmp.sh` only exposes the per-symbol endpoints that work
+free. STEP 6a and STEP 7a below route around this using WebFetch and
+Gemini Deep Research for candidate sourcing, then use FMP only to validate
+specific tickers' fundamentals. If FMP is later upgraded to a paid plan,
+swap STEP 6a back to `bash scripts/fmp.sh sp500` and STEP 7a back to
+`bash scripts/fmp.sh screener '...'`.
+
 STEP 6 — Core screen (S&P 500 momentum + FCF):
-a. bash scripts/fmp.sh sp500   # full constituent list, 1 call
+a. Get the current S&P 500 constituent list via WebFetch against a public
+   source (e.g. Wikipedia's "List of S&P 500 companies").
 b. For each constituent, pull ~13 months of daily bars:
    bash scripts/alpaca.sh bars SYM 1Day
    Compute 3-month and 6-month return relative to SPY's return over the
@@ -65,13 +75,18 @@ c. Take the top ~40-60 by momentum score. ONLY for this shortlist:
 d. Rank the survivors; keep the strongest ~15-25 as the new core watchlist.
 
 STEP 7 — Satellite screen (small-cap biotech + industrials):
-a. bash scripts/fmp.sh screener 'sector=Healthcare&industry=Biotechnology&marketCapMoreThan=300000000&marketCapLowerThan=3000000000&exchange=NASDAQ&limit=250'
-   bash scripts/fmp.sh screener 'sector=Industrials&marketCapMoreThan=300000000&marketCapLowerThan=3000000000&exchange=NASDAQ&limit=250'
-b. For each result, pull growth and rating:
+a. Use Gemini Deep Research / WebSearch to propose specific small-cap
+   ($300M-$3B) biotech and industrials tickers currently showing price
+   momentum, positive YoY growth, and a documented catalyst — the research
+   agent names candidates directly since FMP can't bulk-screen on this
+   plan.
+b. For each proposed candidate, validate per-symbol via FMP:
    bash scripts/fmp.sh growth SYM
    bash scripts/fmp.sh rating SYM
    Keep only positive YoY growth and Buy/Outperform-or-better (or a recent
-   upgrade via `bash scripts/fmp.sh upgrades SYM`).
+   upgrade via `bash scripts/fmp.sh upgrades SYM`). Drop anything that
+   doesn't check out quantitatively — the research agent's list is a
+   starting point, not a pass.
 c. Cross-check recent price action: bash scripts/alpaca.sh bars SYM 1Day —
    prioritize names with a confirmed momentum/volume signal, not just a
    fundamentals pass.

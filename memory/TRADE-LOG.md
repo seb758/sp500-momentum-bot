@@ -2,9 +2,14 @@
 
 Every trade (both sleeves) + daily EOD snapshot. Append-only, dated sections.
 
-## Day 0 — EOD Snapshot (pre-launch baseline)
+## Day 0 — EOD Snapshot (pre-launch baseline, 2026-07-11)
 
-**Portfolio:** $0.00 | **Cash:** $0.00 | **Day P&L:** $0 | **Phase P&L:** $0
+**Portfolio:** $100,000.00 | **Cash:** $100,000.00 (100%) | **Day P&L:** $0 | **Phase P&L:** $0
+**Core exposure:** $0 (0%) | **Satellite exposure:** $0 (0%)
+
+Alpaca paper account confirmed live via `scripts/alpaca.sh account` — no
+open positions yet. Fundamentals (FMP), research (Gemini), and email
+(SendGrid) credentials still being wired up before the first pre-market run.
 
 No positions yet. Fund the paper account and run pre-market + market-open to
 begin. Fill in the actual starting equity here on Day 0 before the first

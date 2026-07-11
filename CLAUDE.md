@@ -59,8 +59,11 @@ plus ad-hoc helpers.
 ## API Wrappers
 
 - `bash scripts/alpaca.sh` — trading + price bars. Never curl Alpaca directly.
-- `bash scripts/fmp.sh` — fundamentals: FCF, growth, ratings, S&P 500 list,
-  small-cap sector screener.
+- `bash scripts/fmp.sh` — per-symbol fundamentals: FCF, growth, ratings.
+  Free tier does NOT include the S&P 500 list or a sector/market-cap
+  screener (paid-plan-only) — those are sourced via WebFetch/Gemini Deep
+  Research instead during the weekly screen refresh; see
+  TRADING-STRATEGY.md.
 - `bash scripts/gemini_research.sh` — Deep Research agent for catalyst/news
   research. **This is a background agent, not a fast search API — a single
   task takes 5-20 minutes.** Use `research` for one consolidated blocking
