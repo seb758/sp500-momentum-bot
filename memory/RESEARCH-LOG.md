@@ -127,3 +127,139 @@ HOLD — no open positions to protect, no core thesis breaks, and no
 satellite entry criteria fully confirmed pre-market (OCUL's binary catalyst
 is real but sizing/entry needs live market-open data plus the tightened 5%
 cap; MNKD is currently too weakened to enter). Patience > activity.
+
+## 2026-07-13 — Pre-market Research
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 | Daytrade count: 0 (field not present in account payload; no trades executed to date)
+- Core exposure: 0% | Satellite exposure: 0% (flat, no open positions or orders)
+
+### Market Context
+- **Major geopolitical escalation over the weekend:** direct US-Iran missile
+  exchange plus Iranian threats to close the Strait of Hormuz triggered a
+  risk-off flight to safety and a sharp crude oil rally. US 2Y yield spiked
+  to a 15-month high (4.23%), 10Y to 4.58% — fixed income is now pricing a
+  Fed hike by October 2026 despite a weak June payrolls print (57K vs 110K
+  consensus), a genuinely hawkish repricing that pressures equity duration
+  and tech multiples.
+- **Vol complex bifurcated:** VIX cash 15.02, VIX1D anomalously low at 9.90
+  (calm expected for today specifically), but front-month VIX futures
+  +3.5% to 17.55, VIX3M 18.57, and SKEW at an extreme 144.27 — institutions
+  are aggressively bidding tail-risk puts even as near-term realized vol
+  looks contained.
+- **No top-tier US macro data today** (Mon 7/13). Tue 7/14: June CPI (the
+  key print, given the hawkish yield repricing) + new Fed Chair Kevin
+  Warsh's first House testimony; Wed 7/15: Senate testimony. Q2 earnings
+  season also kicks off Tue, led by financials.
+- **Structural risk flags:** systematic/CTA deleveraging concentrated in
+  semis/memory; leveraged-long vs leveraged-short ETF volume ratio at
+  extremes last seen in the 2021 blow-off top; a "peak AI capex" narrative
+  shift (SK Hynix delaying HBM4 ramp for higher-margin DRAM, Meta reselling
+  excess AI compute) triggered a violent WFE selloff (LRCX -10.2%, KLAC
+  -12%, AMAT -7% in one session); a ~$109.8M cluster of IT-sector insider
+  selling (ANET, CRWD, WDAY) in the first week of July.
+- Watchlist-specific overnight items:
+  - **DELL**: no thesis change — still the standout AI-hardware story
+    ($43.8B rev, +88% YoY, $51.3B AI backlog, new DoD/Pentagon contracts).
+  - **CSCO/HPE**: no thesis change — Cisco raised guidance well above
+    consensus and is reallocating capital into AI/silicon; HPE PT hikes
+    continue.
+  - **STX/WDC**: no thesis change — both beat on storage-demand strength;
+    STX has pulled back from June highs (~$1,100 to ~$868) and reports Q4
+    earnings around Jul 16 — a name to watch for a post-earnings gap next
+    week, not actionable pre-market today.
+  - **LRCX/KLAC/AMAT**: no confirmed thesis break, but flagging a real
+    momentum risk — a "peak AI capex" narrative drove single-day drops of
+    10-12% this week (SK Hynix HBM4 delay, Meta compute resale fears).
+    Management (Lam) argues foundry/logic now outweighs memory in the mix
+    (54%), a structural defense, but Erste Group just initiated AMAT at
+    Hold. Verify these three still clear the momentum gate (price vs 50/200
+    day MA, 3M/6M relative return) with live bars at market-open before any
+    new sizing — a drop this size could have pushed them below the moving
+    averages.
+  - **MU/AMD**: continued high-beta whipsaw (MU -10.6% one session on
+    memory-sector rotation; AMD swinging +8.5%/-6.7% intraday) — no new
+    idiosyncratic catalyst, still correlation-driven.
+  - **MRVL/TXN/GLW/NTAP**: no idiosyncratic overnight news — trading as
+    high-beta index proxies.
+  - **PANW**: CEO warned autonomous AI can now execute full cyberattacks in
+    minutes, undercutting the bear case, but shares still fell ~6% to $336
+    on an Evercore PT cut to $320 (Needham countered, raising to $425) —
+    mixed, no thesis break.
+  - **CRWD**: fundamentals intact (ARR $5.51B, +24%) but trading ~137x
+    forward earnings, and CEO Kurtz sold ~$9.8M in a cluster of tech
+    insider selling — a caution flag, not a thesis break.
+  - **CAT**: Michael Burry disclosed a new short, -6.9%, on top of the
+    tariff headwind already on the watchlist notes; Q1 fundamentals (EPS
+    beat, dividend raise) remain solid — no thesis break, but a second
+    consecutive session of headline pressure.
+  - **MPC/VLO**: direct near-term beneficiaries of the Hormuz-risk crude
+    spike — refining margins likely to strengthen short-term; also the
+    most exposed to geopolitical reversal risk if the ceasefire situation
+    resolves.
+  - **GEV**: Erste Group initiated Buy, but shares still -5.22% amid the
+    broader risk-off tape — no thesis break.
+  - **CNC/DVA**: no idiosyncratic news, trading with defensive healthcare
+    rotation flows.
+- No core name shows a confirmed thesis break; all 24 remain on this
+  week's watchlist.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+No core positions currently open. Given the weekend geopolitical shock,
+hawkish yield repricing, tomorrow's CPI print, and the ongoing WFE
+"peak-AI-capex" selloff (LRCX/KLAC/AMAT), this is not a pre-market entry
+setup for any name — elevated event risk into CPI/Fed testimony argues for
+letting the dust settle. Deferring any specific entry/stop/target levels to
+market-open, which pulls live Alpaca quotes; not fabricating price levels
+from this research pass. LRCX/KLAC/AMAT specifically need a live momentum
+recheck given this week's sharp single-day drops before being treated as
+qualifying candidates.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **OCUL** — catalyst reconfirmed ON TRACK: Phase 3 SOL-1 (AXPAXLI, wet
+   AMD) data presentation Thu Jul 16, 2026, 8:15-8:45am ET at ASRS in
+   Montreal — still within the 5-trading-day window. Efficacy already
+   known/positive (74.1% vs 55.8% vs aflibercept at Wk36); market focus at
+   the readout will be the safety profile (vitreous floaters, retinal
+   vasculitis risk). No overnight resolution yet — event is Thursday. If
+   entered, still capped at 5% of equity per the binary-catalyst gap-risk
+   rule, not the standard 7.5%. No entry pre-market; flagging for
+   market-open/midday evaluation ahead of Thursday.
+2. **MNKD** — FUROSCIX PDUFA date reconfirmed ON TRACK for Jul 26, 2026 (no
+   delay/acceleration), outside the 5-day window. No new developments
+   beyond last week's UTHR "Tresmi" competitive-royalty-risk news, which
+   still leaves the thesis weakened. Recommend continuing to hold off new
+   entries pending clarity on royalty-erosion magnitude.
+3. **RIGL, ORN, FSTR, TWIN** — no acceleration; all confirmed still in the
+   H2-2026/late-Jul-to-mid-Aug catalyst windows, no overnight news. No
+   action indicated pre-market.
+
+### Risk Factors
+- Major geopolitical: US-Iran military escalation + Strait of Hormuz threat
+  is the dominant risk factor today — elevated crude/rates volatility,
+  hawkish Fed repricing (market now pricing a hike by Oct 2026), and a
+  historically extreme SKEW (144.27) indicating heavy institutional
+  tail-risk hedging.
+- Binary macro week ahead: June CPI (Tue), new Fed Chair Warsh's first
+  Congressional testimony (Tue/Wed), Q2 earnings season kickoff (Tue,
+  financials) — all high-impact, all before Thursday's OCUL readout.
+  Compounding event risk into a single week.
+- WFE "peak AI capex" selloff (LRCX -10.2%, KLAC -12%, AMAT -7%) is a real
+  momentum risk to re-verify for these three core names at market-open,
+  not yet a confirmed thesis break.
+- Crowding/positioning risk: leveraged-long vs leveraged-short ETF ratio at
+  2021-extreme levels, plus a notable IT insider-selling cluster
+  (~$109.8M) — market fragile to a hawkish CPI/Fed surprise.
+- OCUL binary readout Jul 16 remains the single largest near-term satellite
+  risk; no position held, so no immediate action, but sizing/entry
+  decisions this week should stay disciplined to the 5% binary cap.
+- MNKD thesis remains weakened by the UTHR competitive threat; avoid new
+  entries pending clarity.
+
+### Decision
+HOLD — no open positions to protect. No core thesis breaks, but a
+genuinely elevated macro/geopolitical risk backdrop (Hormuz escalation,
+hawkish Fed repricing, CPI + Fed testimony this week, WFE selloff) argues
+for extra caution on any new core entry until CPI/testimony clear. No
+satellite entry criteria confirmed pre-market (OCUL catalyst is real but
+resolves Thursday, not today; MNKD still weakened). Patience > activity.
