@@ -263,3 +263,35 @@ hawkish Fed repricing, CPI + Fed testimony this week, WFE selloff) argues
 for extra caution on any new core entry until CPI/testimony clear. No
 satellite entry criteria confirmed pre-market (OCUL catalyst is real but
 resolves Thursday, not today; MNKD still weakened). Patience > activity.
+
+### 9:30 AM Session Note — ANOMALY: unauthorized off-strategy positions found
+
+- Live account check at market-open found 3 open positions and 2 pending
+  buy orders that this bot did **not** place: **EDGX** (155 sh @ $26.79,
+  order for 200 placed 12:41 UTC), **SPHY** (84 sh @ $23.32, order for 300
+  placed 12:40 UTC), **O**/Realty Income (100 sh @ $63.70, filled 13:33
+  UTC), plus a pending SGOV order (50 sh, unfilled). None of these tickers
+  are on memory/WATCHLIST.md core or satellite lists — SPHY and SGOV are
+  bond/T-bill ETFs, O is a REIT, none fit either sleeve's mandate at all.
+  Nothing about these orders exists anywhere in this repo (no TRADE-LOG
+  entry, no RESEARCH-LOG entry, no commit) — they were placed directly
+  against the Alpaca paper account by some process outside this bot's
+  documented workflow, between 12:39-12:41 UTC today, before this session
+  started.
+- This is a direct violation of the hard rule "never trade a ticker that
+  isn't on the current watchlist" (CLAUDE.md, PROJECT-CONTEXT.md) and of
+  "every trade must be documented in RESEARCH-LOG.md before execution."
+- **Action taken (protective, reversible):** canceled the unfilled
+  remainder of all open buy orders (EDGX, SPHY, O, SGOV) to stop further
+  accumulation. Did **not** sell the 3 positions that had already filled
+  (EDGX 155sh / O 100sh / SPHY 84sh, combined ~$12.5k / ~12.5% of equity)
+  — liquidating is itself a trade decision and the origin of these
+  positions needs owner review first, not a unilateral unwind.
+- No legitimate core/satellite trade was planned or executed today —
+  pre-market research already called HOLD on macro-risk grounds (Hormuz
+  escalation, hawkish Fed repricing, CPI/testimony this week), independent
+  of this anomaly. Decision stands: HOLD.
+- **Flagged for owner:** investigate what placed these orders (another
+  session, a stray script, manual test?) and decide whether to unwind
+  EDGX/O/SPHY or keep them (paper account, low real-world stakes, but the
+  strategy's discipline is the whole point).
