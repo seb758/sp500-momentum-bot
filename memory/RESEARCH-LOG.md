@@ -263,3 +263,43 @@ hawkish Fed repricing, CPI + Fed testimony this week, WFE selloff) argues
 for extra caution on any new core entry until CPI/testimony clear. No
 satellite entry criteria confirmed pre-market (OCUL catalyst is real but
 resolves Thursday, not today; MNKD still weakened). Patience > activity.
+
+### 11 AM Session Note — ACCOUNT INTEGRITY ANOMALY (unresolved)
+- No "### Approved Trades (verified)" section exists in today's
+  RESEARCH-LOG.md and no Market-open session note was ever appended —
+  this run's designated buy source was empty, so no buys were placed
+  (correct per Step 3).
+- However, `alpaca.sh positions` shows 3 OPEN, UNLOGGED positions that
+  do not appear anywhere in TRADE-LOG.md and are not on WATCHLIST.md:
+  - **O** (Realty Income, REIT) — 100 sh @ $63.70 avg, filled 2026-07-13
+    13:33 UTC (~9:33am ET)
+  - **SPHY** (SPDR High Yield Bond ETF) — 84 sh @ $23.32 avg (partial
+    fill of a 300-sh order), filled ~9:30am ET
+  - **EDGX** — 155 sh @ $26.79 avg (partial fill of a 200-sh order),
+    filled ~9:30am ET, remainder canceled
+  - A 4th order for **SGOV** (T-bill ETF), 50 sh, was placed but
+    canceled unfilled.
+- None of these are S&P 500 momentum/FCF core names or biotech/
+  industrial satellite names — they are dividend/bond/T-bill
+  instruments entirely outside the documented strategy, sourced from
+  neither WATCHLIST.md nor any Approved Trades list.
+- All 4 orders were created ~12:40am UTC pre-market and filled/canceled
+  right at the 9:30am open, i.e. NOT by this 11am run — they predate it.
+  No corresponding market-open thesis, sleeve classification, or stop
+  order was ever logged.
+- **No trailing stop (or any stop) exists on any of the 3 filled
+  positions** — `orders` (open) returns empty. This violates the
+  mandatory "every entry gets an immediate sleeve trailing stop" rule
+  regardless of how the positions originated.
+- Account-level flags also worth owner attention: `options_trading_level:3`,
+  `options_approved_level:3`, `shorting_enabled:true`, `multiplier:"4"` —
+  the account itself is enabled for options/shorting/4x margin, even
+  though nothing here indicates any of that capacity was actually used
+  (all 4 orders were plain equity market buys).
+- **No action taken this run** on these 3 positions — closing or
+  stop-protecting them is a judgment call outside this run's scope
+  (11am trades only from the verified Approved list) and outside what
+  can be safely decided without owner input, since the cause (bug in
+  market-open, direct manual/API action, or something else) is unknown
+  and closing would destroy evidence needed to diagnose it. Flagging
+  for owner review before the 3pm run.

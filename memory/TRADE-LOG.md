@@ -43,3 +43,16 @@ EOD snapshot format (daily-summary workflow appends like this):
 
 **Notes:** one-paragraph plain-english summary.
 ```
+
+## 2026-07-13 — ANOMALY FLAG (11am run, not a strategy trade)
+
+Live Alpaca paper positions found open that were never entered here and
+are not on WATCHLIST.md: **O** (100 sh @ $63.70), **SPHY** (84 sh @
+$23.32), **EDGX** (155 sh @ $26.79) — filled ~9:30am ET today, orders
+created ~pre-market. A 4th, SGOV 50 sh, was placed and canceled unfilled.
+None classify as core or satellite (REIT/bond/T-bill instruments, not
+S&P 500 momentum/FCF or biotech/industrial catalyst names). No stop
+orders exist on any of the 3 filled positions. Cause unknown (market-open
+run malfunction vs. direct manual/API action outside the bot). No action
+taken this run pending owner review — see RESEARCH-LOG.md 11am Session
+Note for full detail.
