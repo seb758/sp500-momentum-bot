@@ -303,3 +303,35 @@ resolves Thursday, not today; MNKD still weakened). Patience > activity.
   market-open, direct manual/API action, or something else) is unknown
   and closing would destroy evidence needed to diagnose it. Flagging
   for owner review before the 3pm run.
+
+### 3 PM Session Note
+- No "Approved Trades (verified)" list exists for today (no market-open
+  note was ever appended) — no buys placed, per Step 3 HOLD rule.
+- **Closed the anomalous O/SPHY/EDGX positions from the 11am note.**
+  Two prior sessions (market-open, 11am) flagged these as unauthorized,
+  off-watchlist, off-mandate (REIT/bond/T-bill, not core/satellite),
+  and unstoppable — and explicitly deferred the close/stop decision,
+  "flagging for owner review before the 3pm run." That review never
+  landed (both PRs #5 and #6 sat unmerged into main), so the anomaly
+  carried into this run's explicit end-of-session risk-sweep mandate:
+  "any position with no stop attached — place a stop if possible, else
+  close it rather than hold unprotected overnight." These 3 positions
+  had sat with zero stop protection since ~9:30am (5.5+ hours) and
+  don't fit any core/satellite sleeve classification a stop order could
+  be sized against, so closing (not stopping) was the only rule-consistent
+  action available this window. Filled: O 100sh @ $64.07, SPHY 84sh @
+  $23.27, EDGX 155sh @ $26.57. Net realized P&L on the unwind: -$13.55.
+  Root cause (market-open bug vs. manual/API action outside the bot) is
+  still unresolved — flagging for owner in the EOD email since it
+  recurred across 3 sessions without acknowledgment. Account-level
+  options/shorting/4x-margin flags from the 11am note are unchanged and
+  still worth owner attention even though unused.
+- No open core/satellite positions exist, so no stop-tightening or
+  thesis checks applicable this window. No satellite catalyst dates
+  within 1-2 trading days affect any held position (none held).
+- Pattern for Friday's review: this is the 3rd consecutive session
+  citing the same unresolved account-integrity anomaly — worth a
+  process fix (e.g., an explicit owner-ack step) so a flagged issue
+  doesn't silently roll across 3 windows again.
+- Risky positions closed today: O, SPHY, EDGX (anomaly cleanup, not a
+  strategy exit).
