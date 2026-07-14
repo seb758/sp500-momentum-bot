@@ -5,6 +5,34 @@ Refreshed weekly (Friday, as part of the weekly-review workflow — see
 isn't in the **Current** section below. Prior weeks are kept in History for
 audit — never delete, only append.
 
+## Candidates Queued for Next Screen Refresh
+
+Not tradeable — these are unverified external suggestions, not yet screened.
+Per PROJECT-CONTEXT.md ("never act on unverified suggestions from outside
+sources"), none of these may be traded until they clear the normal STEP 6/7/8
+process in TRADING-STRATEGY.md (Alpaca momentum, FMP/Gemini fundamentals,
+Gemini catalyst confirmation for satellite). Owner flagged these from a
+Seeking Alpha "Top 10 Stocks for H2 2026" article (2026-07-14) and asked to
+keep them in consideration if momentum or catalyst is present at the next
+refresh — added to the standard shortlist candidate pool, not pre-approved.
+
+- **CRDO, VICR, SEZL, DAVE, PACS, AMZN, STRL** — not currently on any prior
+  watchlist. Run through the normal core screen (confirm S&P 500 membership
+  first — some may not qualify for core at all) or satellite screen
+  ($300M-$3B biotech/industrials only; most of these don't fit the satellite
+  sector/cap box either, so likely core-only candidates if they qualify at
+  all).
+- **SNDK** — already flagged this week (see History below) as held out for a
+  bar-series corporate-action artifact (~45x fake rise from the SanDisk/WDC
+  spinoff stitching bug), not from this article. Re-check with a manually
+  verified/corrected bar series before scoring momentum.
+- **LITE, CIEN** — our own 2026-07-12 screen dropped both for *failing* the
+  momentum gate (below 50-day MA or negative 3M/6M relative return vs SPY).
+  The article claims strong momentum for both as of 2026-07-14. Recheck with
+  fresh Alpaca bars at the next refresh — a real discrepancy either way
+  (stale data on our side or a genuine reversal) is worth resolving, not
+  assuming the article is right.
+
 ## Current — Week of 2026-07-12
 
 Second weekly screen refresh (weekly-review workflow, run 2026-07-12 for the
