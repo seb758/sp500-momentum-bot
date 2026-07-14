@@ -527,3 +527,16 @@ actual data readout hasn't happened yet (Thursday). Elevated event risk
 today (CPI, mega-bank earnings, Hormuz escalation, VIX +14%) argues for
 extra caution on any new entry pre-market. Patience > activity — defer to
 market-open/midday windows with live data.
+
+### 9:30 AM Session Note
+- Both pre-market runs today produced zero core and zero satellite trade
+  ideas — no "Approved Trades" list to execute, so no buy-side gate to run.
+- Re-verified live at open: `alpaca.sh account` shows equity $99,998.63,
+  cash $99,998.63 (100%), 0 daytrades; `positions` and `orders` both
+  empty — matches the pre-market baseline exactly, no overnight drift.
+- No trades placed. This week stands at core 0/6, satellite 0/4 — a valid
+  outcome per the Patience Rule, not a missed opportunity.
+- OCUL's real binary readout is Thu 7/16 (ASRS data) — nothing actionable
+  at this open; revisit at 11am/3pm only if live price action or news
+  changes ahead of schedule, but no entry is planned before the actual
+  data.
