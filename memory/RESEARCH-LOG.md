@@ -335,3 +335,105 @@ resolves Thursday, not today; MNKD still weakened). Patience > activity.
   doesn't silently roll across 3 windows again.
 - Risky positions closed today: O, SPHY, EDGX (anomaly cleanup, not a
   strategy exit).
+
+## 2026-07-14 — Pre-market Research
+
+### Account
+- Equity: $99,998.63 | Cash: $99,998.63 (100%) | Buying power: $399,994.52 | Daytrade count: 0
+- Core exposure: 0% | Satellite exposure: 0% (flat — anomaly positions O/SPHY/EDGX closed 2026-07-13 3pm; `positions` and `orders` both return empty this run)
+
+### Market Context
+- **Data-quality gap (per guard in workflow instructions):** Gemini Deep
+  Research output again did not include section 1 (S&P 500 futures
+  direction / VIX level) or section 2 (top macro catalysts / econ releases
+  today) as standalone content — captured output starts mid-document at
+  sector-level equity analysis (TXN/PANW deep dives). Not fabricating
+  figures from the Gemini gap; backfilled points 1-2 via a single native
+  WebSearch instead (sources below) rather than firing a second 5-20min
+  Deep Research call.
+- **S&P futures / VIX (via WebSearch):** S&P 500 futures modestly lower
+  (~-0.4% as of pre-market), VIX spot ~15.0-15.02 Friday close, front-month
+  VIX futures repriced up to ~17.55 — elevated but not panic-level.
+- **Macro catalysts today:** fresh US-Iran airstrikes / Strait of Hormuz
+  disruption over the weekend (oil near $80/bbl, WTI +~4%), June CPI print,
+  hawkish Fed testimony/commentary, Q2 mega-bank earnings kickoff. This is a
+  continuation/escalation of the Iran/Hormuz risk flagged in the 2026-07-12
+  and prior entries, not a brand-new surprise.
+- **Gemini's sector coverage (what it did return):**
+  - **TXN**: fell ~3.9-4.7% on gross-margin compression from heavy 300mm
+    fab capex hitting depreciation just as industrial/auto end-markets are
+    in inventory digestion; one boutique upgrade to Buy on data-center
+    revenue (+90% YoY) as a counter-narrative. No thesis break — momentum
+    rule already requires positive 3M/6M relative return, this is a
+    volatility/rotation note to watch at market-open, not a watchlist
+    change today.
+  - **PANW**: +5.1% to a new ATH ($368.17) on a wave of overnight PT hikes
+    (Wells Fargo $420, BTIG $380, Needham $425); now ~40% above 50-day /
+    ~77% above 200-day MA — extreme momentum, flagged as an increasingly
+    crowded trade vulnerable to profit-taking, not a thesis break.
+  - **Remaining core names** (DELL, MU, AMD, STX, MRVL, WDC, DDOG, HPE,
+    FTNT, DVA, AMAT, CRWD, NTAP, GLW, CNC, CSCO, LRCX, KLAC, MPC, VLO): no
+    idiosyncratic overnight news found; MU's recent ~5% pullback is
+    sector-rotation beta, not name-specific. Govern these on macro/index
+    flow today, not micro-catalyst hunting.
+  - **CAT/GEV**: called out again as beneficiaries of continued rotation
+    into physical AI-power infrastructure away from digital/semis capex
+    names — consistent with prior weeks' notes, no new action.
+- **Held tickers:** N/A — zero open positions, nothing to break thesis on.
+- **Satellite catalyst proximity (5-trading-day window, confirmed by
+  Gemini):**
+  - **OCUL** — conference data window is Jul 14-22; today (Jul 14) is the
+    first day of that window → **CONFIRMED WITHIN WINDOW**. No data has
+    been presented/read out yet as of this run; not resolved positively or
+    negatively.
+  - MNKD (Q3 2026 window), RIGL (H2 2026 window), ORN (earnings Jul 28,
+    10 trading days out), FSTR/TWIN (Aug earnings) — all **outside** the
+    5-day window, no proximity action needed.
+  - No overnight news found on any satellite ticker outside their
+    scheduled catalyst windows.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. No thesis breaks found on any of the 24 current core names, but
+today's backdrop (fresh Iran/Hormuz escalation, hawkish Fed testimony, CPI
+print, mega-bank earnings, TXN sector-rotation stress) argues against
+initiating new core risk pre-market. Defer to market-open/11am windows with
+live bars if conditions stabilize.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. OCUL — catalyst (AXPAXLI wet-AMD data presentations at ASRS/OIS/HC
+   Wainwright conferences) now inside its documented Jul 14-22 window;
+   catalyst not yet resolved either way. Per TRADING-STRATEGY.md gap-risk
+   rule, conference-data disappointment could gap the stock -20/-40%
+   (~$1.5-3k max loss at the 7.5% cap / $7.5k position). Not recommending
+   pre-market entry: data hasn't been read out yet, and stacking a fresh
+   binary-catalyst entry on top of today's elevated macro/geopolitical
+   volatility (Hormuz escalation + CPI + Fed testimony, same session)
+   compounds risk beyond what the standard sizing already prices in.
+   Revisit at the 9:30am/11am windows with live price action once/if any
+   data reads out — do not chase pre-market.
+No other satellite name is within its 5-day catalyst window this run.
+
+### Risk Factors
+- Iran/Hormuz military escalation (fresh airstrikes over the weekend) is
+  the dominant macro risk — oil near $80/bbl, WTI +~4%. Continuation of a
+  risk flagged since 2026-07-07/07-12, now escalated rather than resolved.
+- Binary macro day: June CPI print, hawkish Fed testimony, Q2 mega-bank
+  earnings kickoff — high-impact events stacking into one session.
+- TXN-led semiconductor capex/margin-compression rotation is a live risk
+  to watch for MU/AMD/STX/WDC/MRVL/DDOG-adjacent names (beta risk, not
+  yet a thesis break on any current holding-eligible name).
+- OCUL's catalyst window is open today but unresolved — gap risk is real
+  and imminent (see Satellite Trade Ideas above) but doesn't require
+  action until data actually reads out.
+- Gemini output again omitted the explicit futures/VIX/econ-calendar
+  sections (2nd occurrence after 2026-07-12) — backfilled via WebSearch
+  this run rather than skipped; worth a prompt-structure fix at the next
+  weekly review if this keeps recurring.
+
+### Decision
+HOLD — no open positions to protect, no core thesis breaks, and no
+satellite catalyst has resolved (OCUL's window just opened, data pending).
+Elevated, multi-front macro/geopolitical risk (Hormuz escalation, CPI, Fed
+testimony, mega-bank earnings, semi-sector rotation) argues for extra
+caution on any new entry pre-market. Patience > activity — defer to
+market-open/midday windows with live data.
