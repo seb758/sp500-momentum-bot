@@ -540,3 +540,17 @@ market-open/midday windows with live data.
   at this open; revisit at 11am/3pm only if live price action or news
   changes ahead of schedule, but no entry is planned before the actual
   data.
+
+### 11 AM Session Note
+- No "Approved Trades (verified)" section exists in today's RESEARCH-LOG
+  (both pre-market runs and the market-open run all returned zero core
+  and zero satellite ideas) — no buy source, so no buys placed per Step 3.
+- `alpaca.sh account`/`positions`/`orders` re-checked live: equity
+  $99,998.63, cash 100%, 0 daytrades, 0 open positions, 0 open orders —
+  matches the 9:30am baseline exactly, no drift. Yesterday's O/SPHY/EDGX
+  anomaly has not recurred.
+- No positions held -> no cuts, no stop-tightening, no thesis checks, no
+  2-strike sub-sector status change (still NONE active). OCUL's binary
+  readout remains Thu 7/16 (ASRS data), unresolved and not actionable yet.
+- No action taken this window. This week stands at core 0/6, satellite
+  0/4 — a valid outcome per the Patience Rule.
