@@ -437,3 +437,93 @@ Elevated, multi-front macro/geopolitical risk (Hormuz escalation, CPI, Fed
 testimony, mega-bank earnings, semi-sector rotation) argues for extra
 caution on any new entry pre-market. Patience > activity — defer to
 market-open/midday windows with live data.
+
+## 2026-07-14 — Pre-market Research (2nd run)
+
+### Account
+- Equity: $99,998.63 | Cash: $99,998.63 (100%) | Buying power: $399,994.52 | Daytrade count: 0
+- Core exposure: 0% | Satellite exposure: 0% (flat — `positions` and `orders` both return empty)
+
+### Market Context
+- **Data-quality gap (3rd consecutive occurrence — 07-12, 07-13-adjacent,
+  now today):** Gemini Deep Research output again omitted section 1
+  (S&P futures / VIX) as standalone content — captured output starts mid
+  section 2 (mega-bank earnings). Not fabricating; backfilled point 1 via
+  one native WebSearch rather than a second 5-20min Deep Research call.
+  This is now a recurring pattern worth a prompt-structure fix at the next
+  weekly review.
+- **S&P futures / VIX (via WebSearch):** ES futures -0.2% pre-market. VIX
+  spot 17.16, +14.17% — a sharp jump from Friday's ~15.0 close, reflecting
+  today's stacked event risk.
+- **Macro catalysts today:** June CPI print at 8:30am ET (the key
+  print given the hawkish yield repricing), Q2 mega-bank earnings kickoff
+  (JPM, GS, BAC, C, WFC all report today), continued US-Iran/Strait of
+  Hormuz escalation pushing Brent toward $85.64 with a reported 20%
+  shipping tariff.
+- **Core watchlist, from Gemini's sector coverage:**
+  - SK Hynix's Nasdaq ADR debut (~$28-29B raise) is a bullish read-through
+    for the memory/storage complex (MU, WDC, STX, NTAP) — validates
+    HBM/enterprise-SSD demand durability. No thesis break.
+  - LRCX/KLAC/AMAT: positioned as secondary WFE beneficiaries of the same
+    memory capex cycle. No thesis break.
+  - FTNT: momentum intact (+61% 30d) but now fwd P/E ~49.95x, PEG 3.81 vs
+    3.14 industry — priced for perfection, a caution flag not a thesis
+    break. Read-through supportive for PANW/CRWD/DDOG (enterprise
+    security/observability budgets tracking AI infra spend).
+  - CAT/GEV: still the AI-power-infrastructure trade, but the prior
+    Siemens Energy downgrade sympathy selloff (GEV -9.9%, CAT -5.5% in a
+    session) confirms real "peak AI capex" repricing risk at their current
+    multiples (CAT 44x P/E, GEV 31x P/E). No new overnight development,
+    but this vulnerability is now explicitly on the record — watch at
+    market-open, not a thesis break.
+  - MPC/VLO: directly exposed to the Hormuz-driven crude spike; margin
+    impact ambiguous (crude up, but June US gasoline prices fell 10%) —
+    volatile, not a thesis break.
+  - GLW, CNC, DVA: no idiosyncratic overnight news.
+  - No thesis break on any of the 24 current core names.
+- **Satellite:**
+  - **OCUL — confirmed within its 5-day catalyst window (today is day 1 of
+    Jul 14-22), but the actual binary data readout has NOT happened yet.**
+    Today's 11:37am ET OIS Retina Summit talk is expected to be a corporate
+    overview, not the data dump. The market-moving event is Phase 3 SOL-1
+    52-week efficacy/safety/durability data at ASRS, Thu Jul 16,
+    8:15-8:45am ET — still ~48 hours out. Preliminary topline (74.1% vs
+    55.8% vision-maintenance at Wk36 vs aflibercept) is strong, but nothing
+    new confirmed this morning either way.
+  - MNKD (PDUFA Jul 26, 12 days out), RIGL (H2 2026, no exact date), ORN
+    (earnings Jul 28, 14 days out), FSTR (mid-Aug), TWIN (Aug) — all
+    confirmed outside the 5-day window, no overnight news.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. No thesis breaks, but today stacks June CPI (8:30am), mega-bank
+earnings, and continued Hormuz escalation into one session — not a
+pre-market entry setup. Defer to market-open/11am with live bars once CPI
+prints and initial market reaction is visible.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. OCUL — within its documented catalyst window, but the actual data
+   readout is Thursday, not today or tomorrow. No entry pre-market; today's
+   OIS talk is not expected to be the data event. Revisit Wed/Thu with live
+   price action — do not chase ahead of the real readout.
+No other satellite name is within its 5-day catalyst window this run.
+
+### Risk Factors
+- VIX +14% overnight to 17.16 — market pricing real event risk into CPI +
+  mega-bank earnings + Hormuz escalation, all stacked into today's session.
+- Iran/Hormuz military escalation continues (unchanged from 07-12/07-13
+  notes, still unresolved) — oil near $85-86/bbl.
+- CAT/GEV "peak AI capex" repricing risk is now explicitly evidenced
+  (Siemens Energy-driven sympathy selloff), not just a narrative risk —
+  watch multiples at market-open.
+- 3rd consecutive Gemini output omitting the futures/VIX section — flag
+  for a prompt-structure fix at the next weekly review so this stops
+  recurring.
+- OCUL's real binary event is Thursday — no action needed today, but
+  sizing/entry discipline (5% cap) applies whenever it's evaluated.
+
+### Decision
+HOLD — no open positions to protect, no core thesis breaks, and OCUL's
+actual data readout hasn't happened yet (Thursday). Elevated event risk
+today (CPI, mega-bank earnings, Hormuz escalation, VIX +14%) argues for
+extra caution on any new entry pre-market. Patience > activity — defer to
+market-open/midday windows with live data.
