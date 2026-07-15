@@ -110,3 +110,28 @@ lists are current. Account essentially flat since Day 0 ($100,000 ->
 $99,998.63). This week: core 0/6 trades, satellite 0/4 trades — valid
 per the Patience Rule. Tomorrow: resume normal pre-market screening;
 watch for CPI/earnings follow-through and Thursday's OCUL data.
+
+### 2026-07-15 — BUY SGOV (income)
+Shares: 397 | Entry: $100.54 | Stop: 5% trailing GTC ($95.51) | Target: n/a | R:R: n/a
+Thesis: Income sleeve liquidity base — see TRADING-STRATEGY.md's "Income /
+Cash-Parking Sleeve" section (owner instruction, 2026-07-15).
+Funding reason (income only): initial sleeve rebalance from 100% cash.
+
+### 2026-07-15 — BUY SPHY (income)
+Shares: 856 | Entry: $23.36 | Stop: 5% trailing GTC ($22.19) | Target: n/a | R:R: n/a
+Thesis: Income sleeve yield leg (high-yield bond).
+Funding reason (income only): initial sleeve rebalance from 100% cash.
+
+### 2026-07-15 — BUY EDGX (income)
+Shares: 746 | Entry: $26.78 | Stop: 5% trailing GTC ($25.43) | Target: n/a | R:R: n/a
+Thesis: Income sleeve yield leg (S&P 500 covered-call income ETF).
+Funding reason (income only): initial sleeve rebalance from 100% cash.
+
+**Income sleeve initial rebalance summary:** account was 100% cash
+($99,998.63 equity) with 0 open positions. Deployed per the new sleeve
+rule (20% cash floor, remainder SGOV 50% / SPHY 25% / EDGX 25%): SGOV
+$39,914.38 (397 sh), SPHY $19,996.16 (856 sh), EDGX $19,977.88 (746 sh) —
+total $79,888.42. Post-trade: cash $20,110.21 (20.1% of $99,978.68
+equity, above the 20% floor), Income exposure $79,868.47 (79.9%), Core/
+Satellite exposure $0. 5% trailing GTC stop placed on all three
+immediately after fill. No Core/Satellite trades today.
