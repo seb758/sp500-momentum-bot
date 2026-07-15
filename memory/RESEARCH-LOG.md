@@ -577,3 +577,106 @@ market-open/midday windows with live data.
   recurring Gemini pre-market output omitting the futures/VIX section
   (4 sessions running) for a prompt-structure fix.
 - Risky positions closed today: none (no positions were open to sweep).
+
+## 2026-07-15 — Pre-market Research
+
+### Account
+- Equity: $99,998.63 | Cash: $99,998.63 (100%) | Buying power: $399,994.52 | Daytrade count: 0
+- Core exposure: 0% | Satellite exposure: 0% (flat — `positions` and `orders` both empty, unchanged from Jul 14 close)
+
+### Market Context
+- **Data-quality gap (5th consecutive occurrence: 07-12, 07-13, 07-14 x2, now
+  today):** Gemini Deep Research output was truncated/started mid-document —
+  captured output began at section 6.2, with sections 1-5 (S&P futures/VIX,
+  today's macro catalysts, held-position overnight check, and per-ticker core
+  watchlist overnight news) entirely absent. Not fabricating any of that
+  missing content; backfilled futures/VIX and the macro calendar via two
+  native WebSearch queries below. Per-ticker core overnight news (section 4)
+  could not be reconstructed without 24 individual lookups, which would blow
+  the time budget for a single pre-market run — treated as an unconfirmed gap,
+  not a "no news" confirmation. **This is now a persistent, worsening pattern
+  (5 of the last ~6 sessions) — needs a prompt-structure fix at Friday's
+  weekly review, not just a flag.**
+- **S&P futures / VIX (via WebSearch):** ES futures +0.11% pre-market. VIX
+  futures ~17.7-17.8 (range 17.67-18.08) — still elevated versus a normal
+  low-teens VIX, consistent with continued Hormuz/Iran-strike risk premium
+  carried over from Monday, though calmer than Monday's spike.
+- **Macro catalysts today:** PPI, Empire State Manufacturing, EIA crude oil
+  inventories, MBA mortgage applications. Heavy earnings day (ASML, BNY
+  Mellon, BlackRock, Cintas, Elevance Health, JBHT, JNJ, Kinder Morgan,
+  Morgan Stanley, PNC, Progressive, United Airlines) — none of these are
+  current core/satellite watchlist names. Continued US strikes on Iran /
+  Strait of Hormuz tension unresolved, keeping oil elevated.
+- **Sector color (from Gemini's concluding section only, low-confidence given
+  the missing per-ticker sections):** narrative of rotation away from
+  semicap-equipment names (LRCX, AMAT) toward analog/storage/networking
+  (TXN, STX, CSCO); FTNT flagged ahead of Jul 29 earnings. Not independently
+  confirmed — no thesis-break action taken on this alone.
+- **Disregarded recommendation:** Gemini's "Concluding Strategic Imperatives"
+  suggested long-volatility options straddles/strangles on OCUL and a
+  market-neutral pairs trade (long FTNT / short CAT). Both violate hard
+  rules (stocks only, no options, no leverage/shorting) and were not
+  actioned — noted here only so it's on record that this was surfaced and
+  rejected, not missed.
+- **Satellite catalyst-window check:**
+  - **OCUL — confirmed catalyst (Phase 3 SOL-1 data, ASRS) is TOMORROW,
+    Jul 16, 8:15-8:45am ET.** Today is the day before, not an entry point.
+  - MNKD — Gemini's per-ticker note claims a "catalyst parameter" triggered
+    Jul 11, 2026 with no specific data/event described, and no thesis-
+    breaking news. This conflicts with the PDUFA date logged Jul 14
+    (Jul 26) and is too vague to act on either way — treated as unconfirmed,
+    not a signal.
+  - RIGL, ORN, FSTR — all confirmed outside their 5-day catalyst windows
+    (Rigel Q2 earnings ~Aug 4; ORN earnings Jul 28; FSTR earnings Aug 10).
+    No overnight thesis breaks noted for any.
+  - **TWIN — THESIS BROKEN, confirmed via SEC 8-K + press wire (StockTitan,
+    GlobeNewswire, company IR page).** On Jul 13, 2026 Twin Vee PowerCats
+    (VEEE) announced a definitive merger with USFM Corporation (a private
+    Greenland nickel mineral-exploration company) combined with a full
+    privatization of its legacy recreational marine business (Twin Vee /
+    Bahama Boat Works brands moved into a Delaware trust; existing
+    shareholders get non-transferable CVRs in that trust plus equity in the
+    new public mining entity, expected to list on NYSE American, close
+    targeted Q3 2026 subject to shareholder vote). This is a total
+    abandonment of the industrials/backlog thesis TWIN was screened on
+    (backlog $179.5M, FCF generation, fiscal Q4 2026 earnings catalyst) — the
+    company is becoming a speculative mining shell, not an industrials
+    momentum name. Not tradeable under current satellite criteria regardless
+    of price action. **Recommend removing TWIN from the satellite watchlist
+    at the next screen refresh** — flagging now rather than waiting for
+    Friday since the thesis is void today, not just stale.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. Section 4 of today's Gemini research (per-ticker overnight news) did
+not come through — no confirmed new signal on any of the 24 core names, and
+no thesis-break evidence either. Insufficient confirmed information to add a
+new idea; default to no action rather than trading on a data gap.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+None actionable today.
+- OCUL's real binary readout is tomorrow (Jul 16) — nothing to do pre-market
+  today; revisit tomorrow with live price action once data is out, not ahead
+  of it.
+- TWIN is thesis-broken as of today (see Market Context) — excluded from
+  consideration entirely, not just deferred.
+- MNKD/RIGL/ORN/FSTR remain outside their catalyst windows.
+
+### Risk Factors
+- VIX futures still elevated (~17.7-17.8) on unresolved Hormuz/Iran strike
+  risk — event risk not fully priced out despite calming from Monday's spike.
+- Heavy Q2 earnings day (ASML, BLK, MS, JNJ, PNC, etc.) could move broad
+  market sentiment even though none of these names are on our watchlist.
+- 5th consecutive session of Gemini Deep Research output truncation — a
+  process risk in its own right (per-ticker overnight checks are now
+  routinely unconfirmed, not just VIX/futures) — escalate at Friday's
+  weekly review.
+- TWIN's merger news is a reminder that satellite watchlist names can go
+  thesis-broken between weekly refreshes; worth a lighter-weight daily
+  headline check on open/pending satellite names generally, not just at
+  refresh, as a process improvement to consider Friday.
+
+### Decision
+HOLD — flat account, no confirmed core signal (data gap on per-ticker
+overnight news), OCUL's real catalyst is tomorrow not today, TWIN thesis is
+broken and excluded, and no other satellite name is within its catalyst
+window. Patience > activity.
