@@ -680,3 +680,14 @@ HOLD — flat account, no confirmed core signal (data gap on per-ticker
 overnight news), OCUL's real catalyst is tomorrow not today, TWIN thesis is
 broken and excluded, and no other satellite name is within its catalyst
 window. Patience > activity.
+
+### 9:30 AM Session Note
+- Re-validated: account still flat ($99,998.63 equity/cash), 0 open
+  positions, 0 open orders — unchanged from pre-market. No new overnight
+  signal to reconsider.
+- No core or satellite trade ideas existed from pre-market to run the
+  buy-side gate against, so no orders placed. HOLD confirmed.
+- This week (Jul 13 start): core 0/6 trades, satellite 0/4 trades.
+- Pattern to flag for Friday: 5th consecutive session of truncated Gemini
+  Deep Research output is now starving both pre-market and market-open of
+  per-ticker signal — same issue noted in pre-market, not new here.
