@@ -2,8 +2,25 @@
 
 Refreshed weekly (Friday, as part of the weekly-review workflow — see
 "Weekly Screen Refresh" in TRADING-STRATEGY.md). Never trade a ticker that
-isn't in the **Current** section below. Prior weeks are kept in History for
-audit — never delete, only append.
+isn't in the **Current** section (Core/Satellite) or the **Income** section
+below. Prior weeks are kept in History for audit — never delete, only
+append.
+
+## Income (fixed roster — not weekly-screened, added 2026-07-15)
+
+Not subject to the weekly screen refresh below; changes only on explicit
+owner instruction. Full rules (cash floor, sizing, sweep-to-fund-a-buy,
+dividend reinvestment, stops) in TRADING-STRATEGY.md's "Income /
+Cash-Parking Sleeve" section.
+
+| Ticker | Role | Target split | Stop |
+|---|---|---|---|
+| SGOV | T-bill fund; liquidity base, buy-funding source, dividend-reinvestment target | 50% of sleeve | 5% trailing |
+| SPHY | SPDR SSGA High Yield Bond ETF | 25% of sleeve | 5% trailing |
+| EDGX | Global X U.S. 500 Income Edge ETF (covered-call overlay, ~9% target distribution) | 25% of sleeve | 5% trailing |
+
+Account-wide cash floor: >= 20% of equity always held as literal cash,
+senior to this sleeve.
 
 ## Candidates Queued for Next Screen Refresh
 

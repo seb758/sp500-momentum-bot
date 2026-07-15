@@ -2,7 +2,7 @@
 
 ## Mission
 
-Beat the S&P 500 on a risk-adjusted basis using two sleeves in one Alpaca
+Beat the S&P 500 on a risk-adjusted basis using three sleeves in one Alpaca
 **paper trading** account:
 
 - **Core (target 85% of equity when deployed):** S&P 500 constituents
@@ -12,6 +12,10 @@ Beat the S&P 500 on a risk-adjusted basis using two sleeves in one Alpaca
   YoY growth, and a documented catalyst — technicals, news, government or
   regulatory approval (e.g. FDA decisions, contract awards), or a confirmed
   price jump with volume.
+- **Income (cash-parking / dividend, added 2026-07-15):** a fixed roster of
+  SGOV / SPHY / EDGX. Not momentum- or catalyst-screened — the point is
+  yield on equity that isn't currently deployed in Core or Satellite,
+  instead of sitting fully idle. See "Income / Cash-Parking Sleeve" below.
 
 ## Capital & Constraints
 
@@ -20,7 +24,9 @@ Beat the S&P 500 on a risk-adjusted basis using two sleeves in one Alpaca
 - Research: Gemini Deep Research (background agent), WebSearch fallback
 - Instruments: stocks only — no options, no leverage, ever
 - PDT limit: 3 day trades / 5 rolling business days if equity < $25k
-- Combined target 75-85% of total capital deployed across both sleeves
+- Combined target 75-85% of total capital deployed across Core + Satellite.
+  Whatever remains, above the 20% account-wide cash floor, sits in the
+  Income sleeve rather than idle cash (see "Income / Cash-Parking Sleeve").
 
 ## Sleeve Targets
 
@@ -36,7 +42,9 @@ Beat the S&P 500 on a risk-adjusted basis using two sleeves in one Alpaca
 | Tighten stop | 7% at +15%, 5% at +20% | 10% at +25%, 7% at +40% |
 | Never tighten within | 3% of price | 5% of price |
 
-Combined max new trades per week across both sleeves: 10.
+Combined max new trades per week across both sleeves: 10. (The Income
+sleeve is not subject to this cap — see below, it isn't a momentum/catalyst
+strategy with "new trades" in the same sense.)
 
 Raised from 3/2 (combined 5) on 2026-07-11 when trading moved from 2 to 3
 daily decision windows (market-open, midday, and the 3pm afternoon
@@ -45,6 +53,69 @@ principle every slot could turn over once in a week — the weekly cap is no
 longer the binding constraint at 3 windows/day, the buy-side gate and
 "patience > activity" judgment are. Watch the weekly-review win rate after
 this change; if trade quality drops, tighten back down.
+
+## Income / Cash-Parking Sleeve (added 2026-07-15, owner instruction)
+
+**Purpose:** yield on equity not currently deployed in Core or Satellite,
+instead of sitting fully idle. Capital preservation and income first — not
+a momentum or catalyst play, and not screened for either.
+
+**Roster (fixed — not part of the weekly screen-refresh; changes only on
+explicit owner instruction):**
+- **SGOV** — short-duration T-bill fund. Near-zero price risk and the
+  deepest quoted liquidity of the three (observed book: tens of thousands
+  of shares on both sides, vs. low hundreds for SPHY/EDGX). Serves as the
+  sleeve's liquidity base: the designated source for (a) funding new
+  Core/Satellite buys when literal cash is short, and (b) receiving all
+  dividend reinvestment across the sleeve.
+- **SPHY** — SPDR SSGA High Yield Bond ETF.
+- **EDGX** — Global X U.S. 500 Income Edge ETF (options-overlay income fund
+  on the S&P 500, ~9% target annualized distribution; launched Feb 2026,
+  short track record — watch liquidity/spread before sizing up).
+
+**Account-wide cash floor:** at least 20% of equity is always held as
+literal, uninvested cash — senior to and separate from the Income sleeve,
+never swept into SGOV/SPHY/EDGX. This is a steady-state target re-checked
+at each rebalance touch (weekly, and immediately after any Core/Satellite
+sell), not an instant-by-instant constraint — a momentary dip while funding
+a same-moment buy (see below) is expected and not a violation.
+
+**Sizing:** whatever equity is not in a Core or Satellite position, above
+the 20% cash floor, is deployed to the Income sleeve. Split within the
+sleeve (owner default, revisit only on explicit instruction): **SGOV 50% /
+SPHY 25% / EDGX 25%**.
+
+**Rebalance cadence:** weekly by default (folded into the weekly-review
+workflow, Part C). Adjusted intraday/daily when:
+- A Core or Satellite position is sold: sweep the freed cash above the 20%
+  floor back into the Income sleeve (SGOV first) at that session's
+  close-out step.
+- A new Core or Satellite buy is being funded and literal cash (per
+  `alpaca.sh account`) is short of the order cost: sell just enough SGOV
+  (market, day) to cover the shortfall *before* placing the buy. **SGOV is
+  the only designated funding source for this — never SPHY or EDGX.**
+  Tapping SPHY/EDGX for buy funding would work against their yield purpose
+  and take real slippage given their much thinner quoted size. Log the
+  SGOV sale to TRADE-LOG.md like any other Income-sleeve trade.
+
+**Dividends:** all distributions from SGOV, SPHY, and EDGX reinvest into
+SGOV — not split pro-rata, not reinvested in the paying ticker.
+
+**Stop:** 5% trailing GTC on every Income position, same PDT fallback
+ladder as Core/Satellite (trailing stop -> fixed stop -> queue for next
+session). Tighter than Core (10%) or Satellite (15%) since capital
+preservation is the point. No gain-based tightening schedule (unlike
+Core/Satellite) — 5% trailing is the whole rule. Note: a 5% move on SGOV
+specifically would itself be a data-integrity flag, not a real signal —
+its stop should essentially never bind under normal conditions.
+
+**Not subject to:** the Core/Satellite momentum/FCF/catalyst entry
+criteria, the weekly new-trade caps, or the buy-side gate's
+position-count/per-position-size checks — those govern Core and Satellite
+only. Income trades still log to TRADE-LOG.md and still respect the
+account-wide daytrade_count and cash-availability checks. No thesis-break
+exit exists for Income (there's no thesis to break) — the 5% trailing stop
+and the sweep-to-fund-a-buy mechanic are its only exit paths.
 
 ## Core Sleeve — Entry Criteria (all must be true)
 

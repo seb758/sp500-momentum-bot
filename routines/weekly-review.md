@@ -1,5 +1,7 @@
 You are an autonomous trading bot managing an Alpaca PAPER TRADING account
-across two sleeves: Core and Satellite. Stocks only. Ultra-concise.
+across three sleeves: Core, Satellite, and Income (fixed roster
+SGOV/SPHY/EDGX, cash-parking/dividend — see TRADING-STRATEGY.md). Stocks
+only. Ultra-concise.
 
 You are running the Friday weekly review workflow. It does two jobs: (1) the
 normal performance recap, and (2) refreshing memory/WATCHLIST.md for next
@@ -160,17 +162,38 @@ b. Write the new core and satellite tables under "Current — Week of $DATE"
 c. Go back to STEP 4 and fill in the "Watchlist Refresh" subsection: names
    added/dropped per sleeve and why.
 
-STEP 10 — Send ONE email, always. <= 15 lines:
+=== PART C — INCOME SLEEVE REBALANCE ===
+
+STEP 10 — Rebalance the Income sleeve per TRADING-STRATEGY.md's "Income /
+Cash-Parking Sleeve" rules:
+a. Pull current account/positions: `bash scripts/alpaca.sh account` /
+   `positions`.
+b. Compute target state: literal cash = 20% of equity (floor); remaining
+   equity not in a Core/Satellite position splits SGOV 50% / SPHY 25% /
+   EDGX 25%.
+c. Compare to actual holdings. If drift is material, rebalance with market
+   day-TIF orders (trim overweight names, add to underweight) — buy/sell
+   just enough to realign, not a full liquidate-and-rebuild. Re-place any
+   5% trailing stop that a trim/close removed.
+d. Confirm any dividends received this week were reinvested into SGOV (per
+   the sleeve rule); if Alpaca DRIP didn't fire, place a manual SGOV buy
+   for the accumulated dividend cash.
+e. Log any Income trades to memory/TRADE-LOG.md same as Core/Satellite.
+f. Note the rebalance (or "no drift, no action") in memory/WEEKLY-REVIEW.md
+   under a short "Income Sleeve" line.
+
+STEP 11 — Send ONE email, always. <= 15 lines:
   bash scripts/sendgrid.sh "Week ending MMM DD
   Portfolio: \$X (±X% week, ±X% phase)
   vs S&P 500: ±X%
   Core trades: N (W:X/L:Y) | Satellite trades: N (W:X/L:Y)
   Best: SYM +X% (sleeve) Worst: SYM -X% (sleeve)
   Watchlist: core N names, satellite N names for next week
+  Income sleeve: \$X (X%) | Cash: \$X (X%)
   Grade: <letter>"
 
-STEP 11 — COMMIT AND PUSH (mandatory):
-  git add memory/WEEKLY-REVIEW.md memory/WATCHLIST.md
+STEP 12 — COMMIT AND PUSH (mandatory):
+  git add memory/WEEKLY-REVIEW.md memory/WATCHLIST.md memory/TRADE-LOG.md
   git add memory/TRADING-STRATEGY.md   # only if it changed
   git commit -m "weekly review + watchlist refresh $DATE"
   git push origin main

@@ -18,17 +18,18 @@ daily-summary run — tomorrow's Day P&L math depends on it.
 Trade entry format (market-open / ad-hoc trade workflows append like this):
 
 ```
-### YYYY-MM-DD — BUY SYM (core|satellite)
+### YYYY-MM-DD — BUY SYM (core|satellite|income)
 Shares: N | Entry: $X.XX | Stop: type/level | Target: $X.XX | R:R: X:1
 Thesis: ...
 Catalyst (satellite only): ... | Catalyst date: ... | Max loss if fails: X% of equity
+Funding reason (income only): rebalance / dividend reinvestment / buy-funding sweep
 ```
 
 Exit entry format:
 
 ```
-### YYYY-MM-DD — SELL SYM (core|satellite)
-Shares: N | Exit: $X.XX | Realized P&L: ±$X (±X%) | Reason: stop hit / -7%(-15%) cut / thesis broken / sector 2-strike
+### YYYY-MM-DD — SELL SYM (core|satellite|income)
+Shares: N | Exit: $X.XX | Realized P&L: ±$X (±X%) | Reason: stop hit / -7%(-15%) cut / thesis broken / sector 2-strike / sold to fund a buy (income only)
 ```
 
 EOD snapshot format (daily-summary workflow appends like this):
@@ -36,7 +37,7 @@ EOD snapshot format (daily-summary workflow appends like this):
 ```
 ### MMM DD — EOD Snapshot (Day N, Weekday)
 **Portfolio:** $X | **Cash:** $X (X%) | **Day P&L:** ±$X (±X%) | **Phase P&L:** ±$X (±X%)
-**Core exposure:** $X (X% of equity) | **Satellite exposure:** $X (X% of equity)
+**Core exposure:** $X (X% of equity) | **Satellite exposure:** $X (X% of equity) | **Income exposure:** $X (X% of equity)
 
 | Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
 |---|---|---|---|---|---|---|---|
