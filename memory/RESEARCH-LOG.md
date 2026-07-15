@@ -704,3 +704,27 @@ window. Patience > activity.
   8:15-8:45am ET) — nothing actionable on it today. TWIN thesis-broken
   (Jul 13 8-K merger, flagged pre-market) remains excluded from
   consideration.
+
+### 3 PM Session Note
+- Still no "### Approved Trades (verified)" section today — Core/Satellite
+  remain HOLD across all three windows. No buys placed.
+- Risk sweep: 0 open Core/Satellite positions, nothing to cut/tighten/
+  thesis-check on that front. Income sleeve (SGOV/SPHY/EDGX, deployed
+  earlier today per owner instruction) all carry their 5% trailing GTC
+  stop — confirmed live in `orders` (EDGX stop $25.4695, SPHY $22.192,
+  SGOV $95.513, all `status: new`). No stop-tightening applies to Income
+  (flat 5% rule, no gain-based schedule per TRADING-STRATEGY.md).
+- Risky positions closed today: none.
+- Account: equity $100,012.76 (Day P&L +$14.13 / +0.01%), cash $20,110.21
+  (20.1%, above the 20% floor), Income exposure $79,902.55 (79.9%). Core/
+  Satellite exposure both 0%.
+- This week (Jul 13 start): core 0/6 trades, satellite 0/4 trades — valid
+  per the Patience Rule; no core signal all day (persistent Gemini
+  truncation gap) and no satellite name in its catalyst window (OCUL's
+  real readout is tomorrow AM; TWIN thesis-broken and excluded).
+- Carryforward for Friday's weekly review: (1) 5th+ consecutive session of
+  truncated Gemini Deep Research output — needs a prompt-structure fix;
+  (2) recommend dropping TWIN from the satellite watchlist (merger/
+  privatization, thesis void, no position held so no trade action needed
+  today); (3) OCUL SOL-1 data drops tomorrow 8:15-8:45am ET — top priority
+  for tomorrow's pre-market run, not a today action.

@@ -135,3 +135,32 @@ total $79,888.42. Post-trade: cash $20,110.21 (20.1% of $99,978.68
 equity, above the 20% floor), Income exposure $79,868.47 (79.9%), Core/
 Satellite exposure $0. 5% trailing GTC stop placed on all three
 immediately after fill. No Core/Satellite trades today.
+
+### Jul 15 — 3pm Snapshot (Day 4, Wednesday)
+**Portfolio:** $100,012.76 | **Cash:** $20,110.21 (20.1%) | **Day P&L:** +$14.13 (+0.01%) | **Phase P&L:** +$12.76 (+0.01%)
+**Core exposure:** $0 (0% of equity) | **Satellite exposure:** $0 (0% of equity) | **Income exposure:** $79,902.55 (79.9% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| SGOV | income | 397 | $100.54 | $100.53 | +0.01% | -$3.97 | 5% trailing ($95.513) |
+| SPHY | income | 856 | $23.36 | $23.355 | +0.15% | -$4.28 | 5% trailing ($22.192) |
+| EDGX | income | 746 | $26.78 | $26.81 | +0.31% | +$22.38 | 5% trailing ($25.4695) |
+
+**Notes:** No Core/Satellite trades in any of today's three windows — no
+"Approved Trades (verified)" list existed at market-open, 11am, or 3pm
+(persistent Gemini Deep Research truncation left no confirmed per-ticker
+signal), and no satellite name was inside its catalyst window (OCUL's
+real Phase 3 SOL-1 readout is tomorrow AM, not today; TWIN went
+thesis-broken on a merger/privatization 8-K and was excluded outright).
+Risk sweep: 0 open Core/Satellite positions, nothing to cut, tighten, or
+thesis-check there. All three Income positions carry their 5% trailing
+GTC stop, confirmed live in `orders` — no stop gaps, no tightening
+applicable (flat 5% rule for Income, unlike Core/Satellite's gain-based
+schedule). Day P&L essentially flat/slightly positive, driven by small
+Income-sleeve price moves (EDGX +0.31%, SGOV/SPHY roughly flat) plus the
+sleeve now being marked at $100,012.76 equity vs yesterday's $99,998.63
+close. This week: core 0/6, satellite 0/4 — valid per the Patience Rule.
+Tomorrow: OCUL's binary Phase 3 SOL-1 data (8:15-8:45am ET) is the top
+pre-market priority; also carrying forward the Gemini truncation issue
+and a recommendation to drop TWIN from the satellite watchlist at
+Friday's refresh.
