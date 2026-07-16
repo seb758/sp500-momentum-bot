@@ -728,3 +728,41 @@ window. Patience > activity.
   privatization, thesis void, no position held so no trade action needed
   today); (3) OCUL SOL-1 data drops tomorrow 8:15-8:45am ET — top priority
   for tomorrow's pre-market run, not a today action.
+
+## 2026-07-16 — Pre-market Research
+
+### Account
+- Equity: $99,997.57 | Cash: $20,110.20 (20.1%, above the 20% floor) | Buying power: $304,125.42 (margin; unused — stocks only, no leverage) | Daytrade count: n/a (equity > $25k, PDT not binding)
+- Core exposure: $0 (0%) | Satellite exposure: $0 (0%)
+- Income exposure: $79,887.37 (79.9%) — SGOV $39,916 (39.9%), EDGX $19,983 (20.0%), SPHY $19,988 (20.0%). All three carry live 5% trailing GTC stops (SGOV $95.513, SPHY $22.192, EDGX $25.4695), confirmed in `orders`. Equity ~-$15 vs yesterday's 3pm mark ($100,012.76) on small Income price moves; nothing near a stop.
+
+> Session note: this cloud session was branched from a stale commit (1fcecb9) that predated the Income-sleeve PRs (#16 add sleeve, #17 initial rebalance, both merged to main 2026-07-15). Verified against origin/main before writing this entry — the SGOV/SPHY/EDGX holdings are the authorized Income sleeve per committed TRADING-STRATEGY.md + TRADE-LOG.md (share counts match live account exactly). Not an anomaly.
+
+### Market Context
+- **DATA GAP (recurring):** the captured Gemini Deep Research output began mid-document — Sections 1-6 were absent. Missing and NOT fabricated: exact S&P 500 futures level/direction, VIX level, today's economic-release calendar, and per-ticker overnight-news for the Income holdings. This is the same Gemini truncation issue flagged the last several sessions (carryforward for Friday: prompt-structure fix).
+- From captured text (soft-landing framing, no hard numbers available): resilient core retail sales + low jobless claims cited as supportive of index futures; WTI crude > $80 (a headwind read-through for airlines).
+- Sector read (captured): capital rotating into physical-economy cyclicals (JBHT freight, VLO refining) and software/cyber (PANW, CRWD, DDOG) insulated from hardware supply chains; tech hardware/memory complex (MU, STX, WDC, ANET) under a technically-driven liquidation on wafer/HBM bottleneck fears — described as institutional rebalancing, not an AI-demand collapse.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+Pre-market run is research/documentation; execution is the market-open/midday/3pm windows. Cash is at the 20% floor, so any Core/Satellite buy would require an SGOV funding sweep per the Income-sleeve rule (sell just enough SGOV — never SPHY/EDGX — to cover the shortfall before the buy). Overnight color for the market-open window to weigh (not a pre-authorization):
+- PANW — 52-wk high $325.91, ~+19% on the week; momentum strong, rating still mixed (prior Hold downgrade noted on watchlist).
+- CRWD — recently +12%, strength continues. DDOG — stable.
+- WST — Q2 2026 earnings 2026-07-23 (binary 5 trading days out); Q1 beat + fresh Strong Buy upgrade. Don't initiate into the print without documenting earnings-gap risk.
+- DAL — no DAL-specific news; UAL guided Q3 EPS below consensus on fuel (WTI > $80) + pricing pressure → negative read-through to airline margins.
+- MU/STX/WDC/ANET — under the hardware-complex selloff; watch for the 3M-relative-strength gate breaking (thesis risk).
+- FLEX, MNST, JBHT, VLO — no thesis-breaking overnight news; JBHT/VLO momentum reaffirmed.
+- (No overnight read captured for DELL, HPE, MRVL, CNC, KLAC, LRCX, MPC, CVS, ELV due to the Sec 1-6 data gap — do not assume clear.)
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+- OCUL (biotech) — **binary catalyst is TODAY, 2026-07-16** (the readout main flagged yesterday as tomorrow's top priority). ASRS 44th Annual Meeting presentation of Phase 3 SOL-1 wet-AMD data for AXPAXLI (OTX-TKI), 8:15-8:45 AM EDT. Reported SOL-1 result: statistically significant superiority vs aflibercept (44.1% vs 34.9% anatomic control at wk 52; single injection held vision ~1yr in two-thirds of patients; clean safety). NDA planned Q4 2026 via 505(b)(2). Pre-market ~-3.14% ($9.64-9.88), attributed to a delayed reaction to the Q1 EPS miss (-$0.40 vs -$0.32), not the clinical data. Cash runway ~$666.7M into 2028.
+  - Per strategy gap-risk rule, any entry here is a same-day binary event: cap at 5% of equity (not 7.5%), document max loss if the readout disappoints, and note trailing stops do NOT protect against the intraday/gap move a clinical readout produces. Disciplined stance: let the data resolve, then assess at the market-open window rather than buying into an unresolved readout pre-market.
+
+### Risk Factors
+- OCUL binary readout resolving this morning — high single-name volatility; do not chase pre-resolution.
+- Hardware/memory complex (MU/STX/WDC/ANET) selling off — watchlist momentum for those names may be breaking.
+- Airlines (DAL) margin pressure on WTI > $80.
+- Liquidity: Core/Satellite cash is at the floor; funding any buy requires an SGOV sweep (log it as an Income-sleeve trade).
+- Data quality: Gemini output truncated again (Sec 1-6 missing) — no verified futures/VIX/macro numbers this run.
+
+### Decision
+**HOLD** (pre-market default). No trades this run: it's research-only, OCUL's binary resolves this morning (wait-and-assess at market-open), and no Core signal cleared given the Gemini data gap. Hand-off to the market-open window: (1) reassess OCUL post-readout under the 5%-cap binary sizing rule; (2) if a qualifying Core name clears, fund via SGOV sweep per the Income rule. This week (Jul 13 start): core 0/6, satellite 0/4.
