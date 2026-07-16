@@ -766,3 +766,30 @@ Pre-market run is research/documentation; execution is the market-open/midday/3p
 
 ### Decision
 **HOLD** (pre-market default). No trades this run: it's research-only, OCUL's binary resolves this morning (wait-and-assess at market-open), and no Core signal cleared given the Gemini data gap. Hand-off to the market-open window: (1) reassess OCUL post-readout under the 5%-cap binary sizing rule; (2) if a qualifying Core name clears, fund via SGOV sweep per the Income rule. This week (Jul 13 start): core 0/6, satellite 0/4.
+
+### 9:30 AM Session Note
+- Traded: BUY AMD/HPE/KLAC (core, 10% trailing stops) + BUY OCUL (satellite,
+  15% trailing stop). First Core/Satellite trades since bot launch. Funded
+  via an SGOV sell sweep (income sleeve, designated funding source) since
+  cash was sitting at the 20% floor. Full detail/thesis in TRADE-LOG.md.
+- Why: a market-wide bid/ask anomaly made most of the 24-name core
+  watchlist untradeable on spread (10 names checked before finding tight
+  ones — DELL/PANW/CRWD/DDOG/VLO/STX/MRVL/FTNT/DVA/AMAT/NTAP/GLW/CNC/TXN/
+  LRCX/MPC/CAT/GEV all 3.5-13% wide, skipped per the spread-check rule).
+  AMD/HPE/KLAC had tight sub-1% spreads and, re-verified live, are still
+  above their 50-day MA. MU/WDC/CSCO by contrast broke below their 50-day
+  MA live today, confirming pre-market's "hardware complex" thesis-risk
+  flag — correctly excluded despite being on the watchlist. OCUL's binary
+  Phase 3 SOL-1 readout resolved positive this morning (statistically
+  significant vs. aflibercept, clean safety); entered post-data at the
+  standard 7.5% satellite cap, not pre-resolution.
+- Pattern for Friday's review: today's spread anomaly hit ~18 of 24 core
+  names simultaneously — worth checking whether this was a data-feed
+  artifact vs. a real liquidity event before trusting tomorrow's quotes at
+  face value.
+- **Process lesson:** the initial SGOV funding sweep was sized only against
+  the immediate order-cost shortfall, not against keeping cash >= the 20%
+  floor *after* all four buys landed — cash dipped to 0.4% of equity for a
+  few minutes before being caught and corrected with a second SGOV sale.
+  Fix for next multi-position session: size the funding sweep against
+  total planned spend + the floor target up front, not order-by-order.

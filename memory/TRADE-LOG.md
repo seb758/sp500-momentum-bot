@@ -164,3 +164,113 @@ Tomorrow: OCUL's binary Phase 3 SOL-1 data (8:15-8:45am ET) is the top
 pre-market priority; also carrying forward the Gemini truncation issue
 and a recommendation to drop TWIN from the satellite watchlist at
 Friday's refresh.
+
+### 2026-07-16 — SELL SGOV (income, buy-funding sweep)
+Shares: 172 | Exit: ~$100.54 | Stop: n/a (partial close) | Target: n/a | R:R: n/a
+Thesis: Fund market-open Core/Satellite buys — cash was at the 20.1% floor
+with no room to absorb new positions. SGOV is the designated buy-funding
+source (never SPHY/EDGX) per TRADING-STRATEGY.md's Income sleeve rule.
+Funding reason (income only): buy-funding sweep for AMD/HPE/KLAC/OCUL below.
+
+### 2026-07-16 — BUY AMD (core)
+Shares: 19 | Entry: $512.301053 | Stop: 10% trailing GTC ($460.73, re-tightens
+per +15%/+20% schedule) | Target: $589.15 (+15%) | R:R: 1.5:1
+Thesis: Momentum rank #3 on Current watchlist, 3M rel. return vs SPY +124.7%
+(screen)/+98.8% (re-verified live). Still above 50-day MA despite today's
+broad AI-hardware pullback that broke MU/WDC/CSCO below theirs. FCF
+positive/improving. Rating Outperform (Daiwa cut from Buy on valuation after
+~150% surge, PT raised $250->$500). Spread ~0.6% at entry — tight vs. most of
+today's watchlist (DELL, PANW, CRWD, DDOG, VLO, STX, FTNT, DVA, AMAT, NTAP,
+GLW, CNC, TXN, LRCX, MPC, CAT, GEV all skipped on wide/anomalous spreads,
+3.5-13%).
+
+### 2026-07-16 — BUY HPE (core)
+Shares: 210 | Entry: $47.27 | Stop: 10% trailing GTC ($42.54, re-tightens per
++15%/+20% schedule) | Target: $54.36 (+15%) | R:R: 1.5:1
+Thesis: Momentum rank #8, 3M rel. return +84.5% (screen)/+85.0% (re-verified
+live), above 50-day MA. FCF positive/improving. Zacks upgraded Hold->Strong
+Buy; GS PT $32->$79, RJ PT $29->$74 on AI networking. Spread ~0.2% at entry.
+
+### 2026-07-16 — BUY KLAC (core)
+Shares: 45 | Entry: $220.389778 | Stop: 10% trailing GTC ($198.35, re-tightens
+per +15%/+20% schedule) | Target: $253.45 (+15%) | R:R: 1.5:1
+Thesis: Momentum rank #20, 3M rel. return +23.0% (screen)/+16.3%
+(re-verified live), above 50-day MA. FCF positive. Rating Moderate Buy —
+upgrades on WFE supply constraints, expanding service revenue. Spread ~0.2%
+at entry. Caveat: KLAC had no overnight news color captured this morning
+(recurring Gemini Deep Research truncation, Sections 1-6 missing) — entered
+on objectively re-verified momentum/spread/rating data only, per "do not
+assume clear" guidance; no negative signal found, just an information gap.
+
+### 2026-07-16 — BUY OCUL (satellite)
+Shares: 753 | Entry: $9.89 | Stop: 15% trailing GTC ($8.41, re-tightens per
++25%/+40% schedule) | Target: $12.36 (+25%) | R:R: 1.67:1
+Thesis: Biotech, Strong Buy rating (>150% upside PT), $2.23B cap, $666.7M
+cash runway into 2028.
+Catalyst: AXPAXLI (OTX-TKI) Phase 3 SOL-1 wet-AMD readout at ASRS
+44th Annual Meeting, reported TODAY 8:15-8:45am ET: statistically
+significant superiority vs. aflibercept (44.1% vs 34.9% anatomic control at
+wk 52), single injection held vision ~1yr in two-thirds of patients, clean
+safety profile. NDA planned Q4 2026 via 505(b)(2). Pre-market dip (~-3.14%)
+attributed to a delayed reaction to the Q1 EPS miss, not the clinical data —
+entered post-readout with the binary event already resolved positively, not
+ahead of it. | Catalyst date: 2026-07-16 (today, resolved) | Max loss if
+fails: catalyst already read out positive; residual risk is the Q3 pre-NDA
+FDA meeting / Q4 NDA filing — multi-stage, not a single binary date, so
+sized at the standard 7.5% satellite cap ($7,499.64 planned; $7,447.17
+filled) rather than the 5% binary cap. Re-cap to 5% if a firm PDUFA date is
+later set.
+
+### 2026-07-16 — SELL SGOV (income, buy-funding sweep, correction)
+Shares: 197 | Exit: ~$100.54 | Stop: n/a (partial close) | Target: n/a | R:R: n/a
+Thesis: First SGOV sale (172 sh) under-funded the four buys above relative
+to the 20% account-wide cash floor — cash fell to $377.95 (0.4% of equity)
+after all four fills, a real floor breach, not the "momentary dip while
+funding a same-moment buy" the rule tolerates. Sold an additional 197 SGOV
+shares immediately to restore cash to $20,184.33 (20.2% of equity). Net
+effect: SGOV fell from 397 to 28 shares (from ~50% to ~11% of the Income
+sleeve) — well off its target split as the designated sole funding source
+for today's Core/Satellite deployment. Flagging for Friday's weekly
+rebalance (Part C) to restore SGOV/SPHY/EDGX to the 50/25/25 split; owner
+should also sanity-check the sizing math on any future multi-position
+same-session entry funded from cash-at-the-floor before firing all orders.
+Funding reason (income only): buy-funding sweep correction (cash-floor
+restoration).
+
+### Jul 16 — Market-Open Snapshot (Day 5, Thursday)
+**Portfolio:** $99,945.81 | **Cash:** $20,184.33 (20.2%) | **Core exposure:**
+$29,617.99 (29.6% of equity) | **Satellite exposure:** $7,405.76 (7.4% of
+equity) | **Income exposure:** $42,738.14 (42.8% of equity: SGOV $2,815.26 /
+SPHY $19,987.60 / EDGX $19,983.40)
+
+| Ticker | Sleeve | Shares | Entry | Stop |
+|---|---|---|---|---|
+| AMD | core | 19 | $512.301053 | 10% trailing ($460.73) |
+| HPE | core | 210 | $47.27 | 10% trailing ($42.54) |
+| KLAC | core | 45 | $220.389778 | 10% trailing ($198.35) |
+| OCUL | satellite | 753 | $9.89 | 15% trailing ($8.41) |
+| SGOV | income | 28 | $100.54 | 5% trailing ($95.52) |
+| SPHY | income | 856 | $23.36 | 5% trailing ($22.19) |
+| EDGX | income | 746 | $26.78 | 5% trailing ($25.47) |
+
+**Notes:** First real Core/Satellite trades since the bot launched
+(2026-07-11) — 4 trading days of zero Core/Satellite activity (valid per
+the Patience Rule) ended today on a signal-rich open: a broad market-wide
+bid/ask anomaly made most of the 24-name core watchlist untradeable on
+spread (DELL, PANW, CRWD, DDOG, VLO, STX, MRVL, FTNT, DVA, AMAT, NTAP, GLW,
+CNC, TXN, LRCX, MPC, CAT, GEV all 3.5-13% wide, skipped), while AMD/HPE/KLAC
+kept tight sub-1% spreads and objectively re-verified momentum (still above
+50-day MA, unlike MU/WDC/CSCO which broke below theirs today — confirming
+the "hardware complex" thesis-risk flag from this morning's pre-market
+note). Satellite: OCUL's binary Phase 3 readout resolved positive this
+morning: entered post-data, not pre-resolution, sized at the standard 7.5%
+cap since no further single-date binary event is imminent. This week: core
+3/6, satellite 1/4 used.
+**Process note (self-correction):** initial funding sweep (172 SGOV shares)
+was sized against the pre-buy cash shortfall only, not against maintaining
+the 20% floor *after* all four buys landed — cash briefly hit $377.95
+(0.4%) once all fills confirmed. Caught and corrected immediately with a
+second 197-share SGOV sale; final state is floor-compliant (20.2% cash).
+No trade was placed while out of compliance since all four buys had already
+filled before the check; the fix was a same-session Income-sleeve sale, not
+a Core/Satellite trade reversal.
