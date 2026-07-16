@@ -804,3 +804,43 @@ Pre-market run is research/documentation; execution is the market-open/midday/3p
   satellite losses to date). Income sleeve (SGOV/SPHY/EDGX) unchanged,
   stops intact. No unexplained sharp intraday moves — skipped the optional
   Gemini call. This week: core 3/6, satellite 1/4.
+
+### 3 PM Session Note
+- No "### Approved Trades (verified)" section exists in today's
+  RESEARCH-LOG entry — per STEP 3, no buys placed this window.
+- Risk sweep re-run since 11am: AMD -3.58%, HPE -4.34%, KLAC -0.54%, OCUL
+  -9.76% — all four have widened since 11am but none at the -7%
+  (core)/-15% (satellite) hard-cut. All four plus SGOV/SPHY/EDGX confirmed
+  carrying live trailing-stop orders (`orders` cross-checked against
+  `positions` — 7 positions, 7 stops, none missing).
+- OCUL flagged for a closer look given the drawdown widened from -5.11%
+  (11am) to -9.76%: pulled Alpaca quote/daily bars (steady drift from
+  yesterday's $9.96 close through today, no single-bar gap) and ran a
+  WebSearch for same-day news. No thesis-breaking headline found — the
+  ASRS SOL-1 presentation (this morning's already-priced-in catalyst) and
+  a reaffirmed FDA agreement on the Q4 2026 NDA submission timeline are
+  the only OCUL-specific items today, both consistent with or supportive
+  of the entry thesis. Reads as continued technical/profit-taking drift
+  post-catalyst, not a reversal — held, not closed. Watching -15% cut
+  level ($8.4065) going into tomorrow.
+- Core names (AMD/HPE/KLAC): no thesis-breaking news, still on current
+  WATCHLIST.md, momentum/FCF basis unchanged since the 2026-07-12 screen.
+  Broader hardware/memory-complex weakness (flagged pre-market) is the
+  likely driver of AMD/HPE softness, not a name-specific break.
+- No tightening applicable — all 4 Core/Satellite positions are currently
+  underwater (tightening schedule only applies to winners at +15%/+20%
+  core, +25%/+40% satellite). No stop moved down (none eligible).
+- No satellite catalyst dates inside the next 1-2 trading days for any
+  held name (OCUL's binary event already resolved pre-entry). No 2-strike
+  sub-sector concern (0 satellite losses realized to date).
+- Risky positions closed today: none.
+- Cash $20,184.33 / equity $98,361.75 = 20.52%, above the 20% floor — no
+  funding sweep needed.
+- This week (Jul 13 start): core 3/6 trades, satellite 1/4 trades —
+  unchanged from 11am (no new trades either window).
+- Carryforward for Friday's review: OCUL's continued single-day drift
+  (-9.76% vs entry, despite a reportedly positive catalyst and reaffirmed
+  FDA timeline) is worth a second look — possible profit-taking on the
+  "buy the rumor, sell the news" pattern common after conference data;
+  watch whether it stabilizes or keeps bleeding into next week before
+  concluding either way.

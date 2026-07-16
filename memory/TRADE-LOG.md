@@ -212,3 +212,41 @@ $99,439 = 20.3%, still above the 20% floor. This week (Jul 13 start): core
 counts (3 core, 1 satellite) and sizes (~9.7-9.9% core each, 7.45%
 satellite) within the buy-side gate. No further gate check needed for this
 window — see 11 AM Session Note in RESEARCH-LOG.md for the risk sweep.
+
+### Jul 16 — 3pm Snapshot (Day 5, Thursday)
+**Portfolio:** $98,361.75 | **Cash:** $20,184.33 (20.5%) | **Day P&L:** -$1,651.01 (-1.65%) | **Phase P&L:** -$1,638.25 (-1.64%)
+**Core exposure:** $28,745.51 (29.2% of equity) | **Satellite exposure:** $6,720.53 (6.8% of equity) | **Income exposure:** $42,716.75 (43.4% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| AMD | core | 19 | $512.301053 | $493.94 | -6.65% | -$348.86 (-3.58%) | 10% trailing ($466.479) |
+| HPE | core | 210 | $47.27 | $45.22 | -4.58% | -$430.50 (-4.34%) | 10% trailing ($42.714) |
+| KLAC | core | 45 | $220.389778 | $219.21 | -2.36% | -$53.09 (-0.54%) | 10% trailing ($205.90191) |
+| OCUL | satellite | 753 | $9.89 | $8.925 | -10.39% | -$726.65 (-9.76%) | 15% trailing ($8.38525) |
+| SGOV | income | 28 | $100.54 | $100.5439 | +0.00% | +$0.11 (+0.00%) | 5% trailing ($95.5225) |
+| SPHY | income | 856 | $23.36 | $23.345 | -0.06% | -$12.84 (-0.06%) | 5% trailing ($22.192) |
+| EDGX | income | 746 | $26.78 | $26.70 | -0.33% | -$59.68 (-0.30%) | 5% trailing ($25.479) |
+
+**Notes:** No Core/Satellite trades this window — no "Approved Trades
+(verified)" list existed in today's RESEARCH-LOG.md, so per STEP 3 the buy
+side was HOLD. Risk sweep: all 7 positions (4 Core/Satellite + 3 Income)
+confirmed carrying live trailing-stop orders, none missing. AMD/HPE/KLAC/
+OCUL all widened since 11am but none reached their -7%/-15% hard-cut. OCUL
+was checked closest given its drawdown grew to -9.76% (from -5.11% at
+11am) — Alpaca bars show a steady same-day drift (no gap/halt), and a
+WebSearch for OCUL news turned up only the already-priced-in ASRS SOL-1
+presentation and a reaffirmed FDA Q4 2026 NDA-submission timeline, both
+consistent with the entry thesis, not a reversal. Read as post-catalyst
+profit-taking, not a thesis break — held. No stop tightening applied
+(all 4 Core/Satellite positions are currently underwater; the
+gain-based tightening schedule only applies to winners). No satellite
+catalyst dates inside the next 1-2 trading days for any held name. No
+2-strike sub-sector concern (0 satellite losses realized). Cash 20.5%,
+above the 20% floor — no funding sweep needed. Day P&L (-1.65%) driven
+almost entirely by the four new Core/Satellite positions opened this
+morning moving against entry, not by Income-sleeve moves (which were
+flat to slightly negative). This week (Jul 13 start): core 3/6 trades,
+satellite 1/4 trades — unchanged, valid per the Patience Rule (no new
+signal cleared any window today). Tomorrow: weekly-review / watchlist
+screen-refresh; also revisit whether OCUL's continued drift stabilizes
+or extends before drawing a conclusion on the entry.
