@@ -766,3 +766,41 @@ Pre-market run is research/documentation; execution is the market-open/midday/3p
 
 ### Decision
 **HOLD** (pre-market default). No trades this run: it's research-only, OCUL's binary resolves this morning (wait-and-assess at market-open), and no Core signal cleared given the Gemini data gap. Hand-off to the market-open window: (1) reassess OCUL post-readout under the 5%-cap binary sizing rule; (2) if a qualifying Core name clears, fund via SGOV sweep per the Income rule. This week (Jul 13 start): core 0/6, satellite 0/4.
+
+### 9:30 AM Session Note (RECONSTRUCTED post-hoc by the 11am session)
+- **Session-persistence gap:** the market-open session executed real trades
+  on Alpaca (fills + live stops, 13:36-13:39 UTC) but never wrote this note,
+  never appended to TRADE-LOG.md, and never committed — it must have
+  terminated right after STEP 5 (placing stops). The 11am session
+  discovered this via `alpaca.sh positions`/`orders closed` (no prior
+  commit existed) and reconstructed the trade log entries from Alpaca's
+  order history; see the "RECONSTRUCTED market-open entries" block in
+  TRADE-LOG.md for full detail and the gate-compliance check.
+- **What was decided (reconstructed):** bought AMD, HPE, KLAC (core,
+  ~9.7-9.9% of equity each, all top-20 momentum names on the current
+  watchlist) and OCUL (satellite, 7.45% of equity) after its Phase 3
+  SOL-1 readout resolved positively pre-market. Funded via two SGOV sells
+  (SGOV-first sweep rule) totaling 369 sh. 10%/15% trailing stops placed
+  on all four immediately per rule.
+- **Pattern to flag for Friday's review:** this is the second session in
+  four trading days (see 2026-07-13 ANOMALY FLAG) where a scheduled window
+  produced live account state with no corresponding commit — unlike the
+  13th, this one *was* legitimate/gate-compliant, just unlogged. Worth
+  checking whether the market-open routine's STEP 6-9 sequence is
+  vulnerable to truncation/timeout after order placement.
+
+### 11 AM Session Note
+- Verified the reconstructed market-open trades above against the
+  buy-side gate: all four names on current WATCHLIST.md, position/sleeve
+  counts (3 core, 1 satellite) and sizes within cap, cash floor intact
+  (20.3%) — no corrective action needed.
+- No "Approved Trades (verified)" section existed for this window (expected
+  — market-open filled everything itself, nothing left over) — no new buys.
+- Risk sweep on all 4 Core/Satellite positions: AMD -0.15%, HPE -2.48%,
+  KLAC +1.21%, OCUL -5.11% — none near the -7%/-15% cut thresholds, none
+  near the +15%/+20% (core) or +25%/+40% (satellite) tighten thresholds,
+  no thesis breaks (OCUL's catalyst resolved positively, momentum/FCF
+  intact on the three core names). No 2-strike sub-sector concern (0
+  satellite losses to date). Income sleeve (SGOV/SPHY/EDGX) unchanged,
+  stops intact. No unexplained sharp intraday moves — skipped the optional
+  Gemini call. This week: core 3/6, satellite 1/4.
