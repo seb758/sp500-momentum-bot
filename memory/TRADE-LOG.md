@@ -164,3 +164,51 @@ Tomorrow: OCUL's binary Phase 3 SOL-1 data (8:15-8:45am ET) is the top
 pre-market priority; also carrying forward the Gemini truncation issue
 and a recommendation to drop TWIN from the satellite watchlist at
 Friday's refresh.
+
+## 2026-07-16 — RECONSTRUCTED market-open entries (session-persistence gap)
+
+The 9:30am market-open session executed real fills and live stop orders on
+Alpaca between 13:36-13:39 UTC (9:36-9:39am ET) today but never reached its
+own STEP 6 (TRADE-LOG append), STEP 7 (session note), or STEP 9
+(commit/push) — no record of these trades existed in this repo when the
+11am session started; `git log` showed only pre-market's commit and
+`RESEARCH-LOG.md` had no "Approved Trades" section or "9:30 AM Session
+Note" for today. The 11am session found the live positions/orders via
+`alpaca.sh positions`/`orders closed` and is reconstructing the log below
+from that order history so the audit trail matches reality. Entry
+theses are sourced from the standing WATCHLIST.md notes for each name
+(not fabricated); Target/R:R were not captured before the original
+session terminated and are marked n/a rather than invented.
+
+### 2026-07-16 — SELL SGOV (income)
+Shares: 172 | Exit: $100.54 | Realized P&L: ~$0.00 (0.00%) | Reason: sold to fund a buy (income only) — Core/Satellite buy-funding sweep (SGOV-first per Income sleeve rule)
+
+### 2026-07-16 — BUY AMD (core)
+Shares: 19 | Entry: $512.301053 | Stop: 10% trailing GTC (current trigger $466.479) | Target: n/a (reconstructed) | R:R: n/a (reconstructed)
+Thesis: Core watchlist momentum name (2026-07-12 screen rank 3, +124.7% 3M rel. return vs SPY, FCF positive/improving, Outperform rating; Daiwa cut Buy→Outperform on valuation after ~150% surge, PT raised $250→$500).
+
+### 2026-07-16 — BUY HPE (core)
+Shares: 210 | Entry: $47.27 | Stop: 10% trailing GTC (current trigger $42.714) | Target: n/a (reconstructed) | R:R: n/a (reconstructed)
+Thesis: Core watchlist momentum name (2026-07-12 screen rank 8, +84.5% 3M rel. return vs SPY, FCF positive/improving, Buy rating; Zacks upgraded Hold→Strong Buy, GS PT $32→$79 / RJ $29→$74 on AI networking).
+
+### 2026-07-16 — BUY KLAC (core)
+Shares: 45 | Entry: $220.389778 | Stop: 10% trailing GTC (current trigger $205.90191) | Target: n/a (reconstructed) | R:R: n/a (reconstructed)
+Thesis: Core watchlist momentum name (2026-07-12 screen rank 20, +23.0% 3M rel. return vs SPY, FCF positive/improving, Moderate Buy rating; upgrades on WFE supply constraints, expanding service revenue).
+
+### 2026-07-16 — SELL SGOV (income)
+Shares: 197 | Exit: $100.54 | Realized P&L: ~$0.00 (0.00%) | Reason: sold to fund a buy (income only) — Core/Satellite buy-funding sweep (SGOV-first per Income sleeve rule)
+
+### 2026-07-16 — BUY OCUL (satellite)
+Shares: 753 | Entry: $9.89 | Stop: 15% trailing GTC (current trigger $8.38525) | Target: n/a (reconstructed) | R:R: n/a (reconstructed)
+Thesis: Satellite watchlist biotech name; entered *after* today's binary catalyst resolved (see below), so sized at the standard 7.5% cap (cost = 7.45% of pre-trade equity), not the 5% binary-hold cap — the position was opened post-resolution, not held through an unresolved event.
+Catalyst: ASRS 44th Annual Meeting presentation of Phase 3 SOL-1 wet-AMD data for AXPAXLI (OTX-TKI), reported statistically significant superiority vs aflibercept (44.1% vs 34.9% anatomic control at wk 52), clean safety, NDA planned Q4 2026. Pre-market weakness (-3.14%) attributed to a delayed Q1 EPS-miss reaction, not the clinical data (per pre-market RESEARCH-LOG entry). | Catalyst date: 2026-07-16 (resolved pre-market, positive) | Max loss if fails: n/a — catalyst already resolved positively before this entry.
+
+**Funding/sizing reconciliation:** SGOV sold 172 + 197 = 369 sh @ $100.54 =
+$37,099.26 raised vs. AMD $9,733.72 + HPE $9,926.70 + KLAC $9,917.54 + OCUL
+$7,447.17 = $37,025.13 spent (small residual absorbed into cash, consistent
+with SGOV-sweep-first funding). Post-trade cash $20,184.33 / equity
+$99,439 = 20.3%, still above the 20% floor. This week (Jul 13 start): core
+3/6, satellite 1/4 — all four names confirmed on WATCHLIST.md, position
+counts (3 core, 1 satellite) and sizes (~9.7-9.9% core each, 7.45%
+satellite) within the buy-side gate. No further gate check needed for this
+window — see 11 AM Session Note in RESEARCH-LOG.md for the risk sweep.
