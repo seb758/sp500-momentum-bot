@@ -250,3 +250,41 @@ satellite 1/4 trades — unchanged, valid per the Patience Rule (no new
 signal cleared any window today). Tomorrow: weekly-review / watchlist
 screen-refresh; also revisit whether OCUL's continued drift stabilizes
 or extends before drawing a conclusion on the entry.
+
+## 2026-07-17 — Session-persistence gap: no market-open (9:30am) log exists
+
+Same pattern as 2026-07-16: `git log` shows only the pre-market commit for
+today when this 11am session started — no "### Approved Trades (verified)"
+or "9:30 AM Session Note" in RESEARCH-LOG.md, no TRADE-LOG entries. Whether
+a 9:30am session ran and failed to persist, or never ran, is unknown; either
+way its GTC trailing stops were live from 7/16 and did their job
+mechanically at the open regardless. Reconstructing the two stop-outs below
+from `alpaca.sh orders closed` order history so the audit trail matches
+reality (same approach as the 7/16 reconstruction).
+
+### 2026-07-17 — SELL AMD (core) — trailing stop
+Shares: 19 | Entry: $512.301053 | Exit: $465.934211 | Realized P&L: -$880.97 (-9.05%) | Reason: 10% GTC trailing stop filled automatically at 2026-07-17T13:38:01Z (9:38am ET), trail from hwm $518.31, trigger $466.479. Fired before any session touched the position today — mechanical stop protection working as designed against the pre-market NAND-oversupply/capex-deferral semis selloff flagged in this morning's pre-market research (AMD wasn't itself named in that selloff group, but sector-wide semis weakness carried through). Past the -7% manual hard-cut level; the stop had already filled by the time this session ran, nothing left to manually cut.
+
+### 2026-07-17 — SELL KLAC (core) — trailing stop
+Shares: 45 | Entry: $220.389778 | Exit: $205.80 | Realized P&L: -$656.54 (-6.62%) | Reason: 10% GTC trailing stop filled automatically at 2026-07-17T13:38:36Z (9:38am ET), trail from hwm $228.7799, trigger $205.90191. Directly on-thesis with this morning's flagged risk: KLAC's entry rationale (WFE supply constraints) is exposed to the same NAND-oversupply/capex-deferral narrative hitting WDC/STX/MU/AMAT/LRCX pre-market. Stop fired just under the -7% hard-cut level.
+
+**Post-exit sleeve state:** Core down to 1 open position (HPE, -4.21%, not
+at hard-cut). Satellite unchanged (OCUL, 1 position, -7.53%, not at
+hard-cut). Neither exit was satellite biotech/industrials, so the 2-strike
+sub-sector rule is not triggered by these (core-only exits). This week's
+counts unaffected — the weekly cap tracks new entries, not exits: core
+3/6, satellite 1/4, unchanged.
+
+### 2026-07-17 — BUY SGOV (income) — cash-floor sweep
+Shares: 187 | Entry: $100.58 | Stop: 5% trailing GTC (replaced combined
+215-share stop, trigger $95.54625, hwm $100.575) | Target: n/a | R:R: n/a
+Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md, "Income /
+Cash-Parking Sleeve" — sweep freed cash above the 20% floor into SGOV
+first at the close-out step following a Core/Satellite sell).
+Funding reason (income only): AMD + KLAC stop-outs freed $38,298 cash vs.
+a 20% floor of ~$19,447 (equity $97,235.30) — swept $18,808.46 (187 sh)
+of the ~$18,850.94 excess into SGOV, leaving cash at ~20.0% (conservative
+vs. the floor given intraday price movement). Old 28-share SGOV stop
+canceled and replaced with one 5% trailing stop on the combined 215-share
+position (215 = 28 existing + 187 new) rather than stacking two stop
+orders on the same symbol.
