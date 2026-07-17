@@ -1001,3 +1001,61 @@ break yet but bears watching; (4) WDC/STX/MU/AMAT/LRCX momentum-gate
 status is in doubt — confirm at the next screen refresh rather than
 assume; (5) no Core signal to act on this window. This week (Jul 13
 start): core 3/6, satellite 1/4 — unchanged, valid per the Patience Rule.
+
+### 9:30 AM Session Note
+- Live re-check: equity $97,609.33, cash $20,184.25 (20.68%, just above the
+  20% floor), buying power $297,527.23 (margin; unused). Positions
+  unchanged from pre-market (AMD, HPE, KLAC, OCUL, SGOV, SPHY, EDGX), all 7
+  confirmed carrying live GTC trailing stops in `orders`, none missing.
+- Risk check on the four Core/Satellite holdings — none at/near a hard-cut
+  or stop trigger: AMD -6.49% (stop $466.479 vs $479.05), HPE -5.05% (stop
+  $42.714 vs $44.885), KLAC -5.12% (stop $205.90191 vs $209.115), OCUL
+  -9.10% (stop $8.38525 vs $8.99). No thesis breaks, no tightening
+  eligible (all four underwater). No action taken.
+- **Evaluated MNKD as today's flagged satellite candidate** (FUROSCIX PDUFA
+  target action date Sun 2026-07-26; effective decision date Fri 2026-07-24
+  — within the 5-trading-day window as of today):
+  - Quote: bid $3.97 / ask $3.98 (200x300 sh), spread ~0.25% — liquid,
+    tradeable.
+  - `fmp.sh rating`/`growth` both 402'd (expected per the documented
+    per-symbol allowlist restriction) — used native WebSearch fallback per
+    strategy rule.
+  - Analyst rating: consensus **Buy** (7 analysts: 29% Strong Buy, 57% Buy,
+    14% Hold, 0% Sell/Strong Sell; PT $9.11) — passes criterion 4. One
+    analyst's Hold downgrade (citing unclear post-TYVASO-DPI cash
+    generation) directly echoes the Tresmi royalty-erosion concern flagged
+    2026-07-12/13, but doesn't move the consensus off Buy.
+  - YoY growth: Q1 2026 revenue $90.2M, **+15% YoY** — passes criterion 3
+    (revenue growth; GAAP net income swung to a loss on +116% SG&A/+56% R&D
+    from the scPharma deal and commercial launch prep, but the rule is
+    revenue OR earnings growth).
+  - Catalyst: FUROSCIX PDUFA, well-documented, matches WATCHLIST.md's
+    "pending FDA regulatory decisions on pipeline" catalyst family —
+    passes criterion 5. Per gap-risk rule, holding through this date means
+    **5% cap, not 7.5%**: 5% of equity = $4,880.47 → ~1,226 sh @ ~$3.98 ≈
+    $4,879.48. Max loss if the PDUFA disappoints: comparable biotech PDUFA
+    misses gap -30/-50%, so ~$1.46-2.44k (1.5-2.5% of equity).
+  - **Buy-side gate FAILED on funding, not thesis.** Post-trade cash would
+    be ~$20,184 - $4,879 = ~$15,305 (15.7% of equity) — breaches the 20%
+    account-wide cash floor ($19,521.87). Per the Income-sleeve rule, a
+    cash shortfall should be covered by an SGOV-first sweep before the
+    buy — but SGOV is already depleted to $2,815.96 (28 sh, from two
+    funding sweeps on 2026-07-16) and can't cover the ~$4,217 shortfall on
+    its own; SPHY/EDGX are explicitly off-limits as a funding source
+    regardless of shortfall size. Skipped rather than force an undersized
+    partial entry or breach the cash floor.
+  - **Skipped, logged, no trade placed.** All other buy-side gate checks
+    (position count 1/4 satellite before this trade, sleeve exposure room,
+    weekly trade count, watchlist membership, PDT n/a) would otherwise have
+    passed.
+- No Core buy candidates today (WDC/STX/MU/AMAT/LRCX momentum-gate status
+  still unconfirmed post-selloff per pre-market; no other Core signal).
+- **Flag for owner:** SGOV's depletion is now an active blocker on new
+  Core/Satellite entries, not just a stale-target cosmetic issue — it
+  blocked a rule-qualifying MNKD entry this morning. Today is Friday, so
+  the standing weekly-review rebalance (Part C) should replenish it; if
+  that runs today, MNKD (or another qualifying idea) could be
+  re-evaluated at midday/3pm with restored SGOV liquidity. PDUFA effective
+  date (Fri Jul 24) leaves runway into next week if not entered today.
+- No trades placed this window. This week (Jul 13 start): core 3/6,
+  satellite 1/4 — unchanged. No notification sent (no trade fired).
