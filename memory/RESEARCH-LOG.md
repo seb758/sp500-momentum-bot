@@ -844,3 +844,160 @@ Pre-market run is research/documentation; execution is the market-open/midday/3p
   "buy the rumor, sell the news" pattern common after conference data;
   watch whether it stabilizes or keeps bleeding into next week before
   concluding either way.
+
+## 2026-07-17 — Pre-market Research
+
+### Account
+- Equity: $98,325.22 | Cash: $20,184.25 (20.5%, above the 20% floor) |
+  Buying power: $299,531.71 (margin; unused — stocks only, no leverage) |
+  Daytrade count: n/a (equity > $25k, PDT not binding)
+- Core exposure: $28,261.10 (28.7%) — AMD $9,323.30, HPE $9,330.30, KLAC
+  $9,607.50
+- Satellite exposure: $7,153.50 (7.3%) — OCUL
+- Income exposure: $42,726.37 (43.5%) — EDGX $19,914.25 (20.3%), SPHY
+  $19,996.16 (20.3%), SGOV $2,815.96 (2.9% — depleted vs. its 50%-of-sleeve
+  target from Jul 16's two funding sweeps; a rebalance-back-to-target is a
+  weekly-review action, not a pre-market one)
+- All 7 positions confirmed carrying live GTC trailing stops in `orders`
+  (AMD 10% @ $466.479, HPE 10% @ $42.714, KLAC 10% @ $205.90191, OCUL 15%
+  @ $8.38525, SGOV/SPHY/EDGX 5% each) — none missing.
+
+### Market Context
+- **DATA GAP (recurring, same issue flagged the last several sessions):**
+  the captured Gemini output began mid-document at a "SGOV and SPHY"
+  section — the requested item (1) S&P 500 futures direction/VIX level,
+  and the dedicated item (3) held-ticker write-up for AMD/HPE/KLAC (the
+  output explicitly refers back to "as previously noted" and "the
+  held-tickers section" for content that isn't actually present in what
+  was captured) did not render. No specific futures or VIX number is
+  reported below — not fabricated. Carryforward: the Gemini
+  prompt-structure fix flagged in prior sessions is still outstanding.
+- What did come through, well-sourced: a real, violent pre-market
+  semiconductor-equipment/memory selloff on 2026-07-17, triggered by
+  manufacturer guidance that NAND oversupply persists through H2 2026,
+  forcing a capex-deferral repricing. Reported pre-market moves: WDC
+  -9.15%, STX -10.00%, MU -5.65%, AMAT -6.46%, LRCX also down sharply
+  (>-10% in the prior session's rotation) — all five are current core
+  watchlist names, none currently held.
+- Distinct from the above, AI-networking/infra names (MRVL, CSCO, DELL)
+  and cybersecurity (CRWD, PANW, FTNT, DDOG) are described as
+  fundamentally intact, with the sell-off read as a rotation out of
+  memory/equipment rather than a broad AI-demand collapse.
+- **Data-quality flag:** `alpaca.sh quote` for AMD/HPE/KLAC/OCUL returned
+  anomalous bid-only NBBOs (ap=0, as=0 on all four) timestamped exactly at
+  yesterday's 4pm ET close, inconsistent with (and ~3-6% below) the same
+  names' `positions` current_price/change_today figures, which do
+  independently reconcile against fresh daily bars. Treated the `quote`
+  output as unreliable/stale and used `positions`/`bars` for all pricing
+  below — flagging the `quote` discrepancy for engineering follow-up
+  (possible free-tier feed gap in pre-market hours), not used as a signal.
+
+### Held-Position Thesis Check (AMD, HPE, KLAC, OCUL, SGOV, SPHY, EDGX)
+- **AMD (core):** -4.22% since entry ($490.70 vs $512.301053). Not in the
+  memory/equipment collapse group — described as a favored "pure-play
+  compute provider." No thesis break.
+- **HPE (core):** -6.01% since entry ($44.43 vs $47.27) — **closest of the
+  four to the -7% core hard-cut.** Described as an "integrated
+  architecture builder," thesis intact per the research, but watch closely
+  at market-open given the proximity to the cut level.
+- **KLAC (core):** -3.13% since entry ($213.50 vs $220.389778). Explicitly
+  named alongside LRCX/AMAT as an equipment name being "heavily
+  discounted" on the NAND-oversupply/capex-deferral narrative — this
+  directly touches KLAC's original entry rationale ("upgrades on WFE
+  supply constraints"). Not a thesis break yet (still on watchlist, no
+  two-week-running drop), but flag for the weekly review given the
+  sector-wide read-through.
+- **OCUL (satellite):** -3.94% since entry ($9.50 vs $9.89). Post-catalyst
+  confirmed intact — Phase 3 SOL-1 superiority/durability data stands;
+  next milestone is the H.C. Wainwright conference fireside chat
+  2026-07-22 (informational, not a binary regulatory date). No thesis
+  break.
+- **SGOV/SPHY (income):** no thesis-breaking news. Context: the broader
+  Bloomberg U.S. Aggregate Bond Index is in a record 71-month drawdown;
+  SGOV's ~0.10yr duration continues to serve its intended
+  capital-preservation/liquidity role, SPHY's high-yield book unaffected
+  by any acute credit event.
+- **EDGX (income):** thesis reinforced — Cboe secured SEC approval for
+  23/5 near-continuous EDGX equities trading (launch Dec 2026), building
+  on the near-24-hour options session that went live Jul 13. No
+  thesis-breaking news.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+Pre-market is research/documentation only; execution happens at the
+market-open/midday/3pm windows. Overnight/pre-market color to weigh then
+(not a pre-authorization):
+- **WDC, STX, MU, AMAT, LRCX** — severe pre-market drawdowns (-5% to -10%,
+  see Market Context) on the NAND-oversupply/capex-deferral narrative.
+  Momentum-gate qualification (Core rule #4: positive 3M/6M relative
+  return + above both MAs) for these five is now in real doubt — worth
+  confirming at the next screen refresh rather than assuming continued
+  pass.
+- CRWD — named 2026 Global Company of the Year (ITDR) by Frost & Sullivan;
+  a CEO insider sale (20,000 sh @ $193.23) noted but read as minor/
+  technical, not thesis-breaking.
+- PANW — added 110 new platformized customers this quarter (~2,280 total),
+  on track for its 2030 targets; intact.
+- CSCO — beat Q_ revenue/EPS; announced ~4,000 job cuts to reallocate
+  capex toward silicon/fiber/AI-security. Intact.
+- DELL — Q1 FY27 revenue $43.8B (+87.5% YoY), operating income +213.8%
+  YoY. Intact.
+- CAT, GEV — data-center power-infrastructure beneficiary thesis
+  reinforced (CAT: up to 2.1 GW gas-generator agreement).
+- DVA, CNC, DDOG, FTNT, NTAP, GLW, TXN, MPC, VLO — no thesis-breaking
+  overnight news reported.
+- No new Core buy candidate cleared this pre-market pass — none needed
+  given the research-only nature of this window.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+- **MNKD — binary catalyst now inside the 5-trading-day window.** PDUFA
+  target action date is Sunday 2026-07-26; since FDA decisions land during
+  market hours, the effective date is Friday 2026-07-24 — 5 trading days
+  from today. Modeled probability of approval >73% per the research (favorable
+  precedent: legacy On-body Infusor formulation already FDA-approved for
+  CHF/CKD; ReadyFlow Autoinjector cuts administration time from ~5hr to
+  <10sec). Flag prominently for market-open/midday: any entry ahead of the
+  Jul 24 resolution is a same-day-gap binary hold and must use the 5% cap
+  (not 7.5%), with max-loss-if-fails documented per strategy rule.
+- OCUL — catalyst already resolved (see Held-Position section); no change
+  needed to sizing/status.
+- RIGL — Phase 1b dose-expansion ongoing (R289, transfusion-dependent
+  lower-risk MDS), no confirmed near-term date, still H2 2026 window. No
+  change.
+- ORN — Q2 earnings 2026-07-28 (post-market), call 2026-07-29 — 7
+  trading days out, not yet inside the 5-day window.
+- FSTR — Q2 earnings 2026-08-10 (pre-market) — well outside the window.
+- TWIN — research turned up **no confirmed near-term catalyst** at all
+  (last earnings reported back on 2026-02-04). Combined with last week's
+  merger/privatization 8-K thesis-break flag, this reinforces the standing
+  recommendation to drop TWIN at the next screen refresh.
+
+### Risk Factors
+- NAND-oversupply-driven equipment/memory selloff (WDC/STX/MU/LRCX/AMAT,
+  all core watchlist, -5% to -10% pre-market) — momentum-gate risk for
+  those five, and a sector-narrative headwind for held KLAC specifically.
+- HPE at -6.01%, nearest held position to its -7% hard-cut — watch at
+  market-open; not yet breached, so no notification triggered this run.
+- MNKD's PDUFA event (effectively 2026-07-24) is now inside the
+  5-trading-day satellite catalyst window — binary-event sizing discipline
+  applies to any new entry from here forward.
+- Data quality: recurring Gemini truncation (futures/VIX and the
+  dedicated held-ticker section both missing again this run) plus an
+  anomalous/stale `alpaca.sh quote` reading on all four held equities
+  (see Market Context) — neither treated as a trading signal, both
+  flagged for follow-up.
+- Cash at 20.5%, essentially at the 20% floor — any new Core/Satellite buy
+  this week requires an SGOV funding sweep per the Income-sleeve rule, and
+  SGOV itself is already thin ($2,815.96, well under its 50%-of-sleeve
+  target) after Jul 16's two funding sales.
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). No
+position is below its hard-cut threshold pre-market, so no urgent
+notification triggered. Handoff to market-open: (1) watch HPE closely
+(-6.01%, nearest to the -7% core cut); (2) MNKD's PDUFA is now inside the
+5-day satellite window — size any entry at the 5% binary cap with
+documented max loss; (3) KLAC's equipment-sector headwind is not a thesis
+break yet but bears watching; (4) WDC/STX/MU/AMAT/LRCX momentum-gate
+status is in doubt — confirm at the next screen refresh rather than
+assume; (5) no Core signal to act on this window. This week (Jul 13
+start): core 3/6, satellite 1/4 — unchanged, valid per the Patience Rule.
