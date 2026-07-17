@@ -1001,3 +1001,34 @@ break yet but bears watching; (4) WDC/STX/MU/AMAT/LRCX momentum-gate
 status is in doubt — confirm at the next screen refresh rather than
 assume; (5) no Core signal to act on this window. This week (Jul 13
 start): core 3/6, satellite 1/4 — unchanged, valid per the Patience Rule.
+
+### 11 AM Session Note
+- **No 9:30am session log exists for today** — same persistence gap as
+  2026-07-16 (no "Approved Trades" section, no "9:30 AM Session Note").
+  Buy-side this window: HOLD, no buys — nothing in today's RESEARCH-LOG
+  qualifies as an approved list per STEP 3.
+- **AMD and KLAC stopped out automatically** at the open (9:38am ET,
+  before this session ran): AMD 10% trailing stop filled -9.05% ($880.97
+  realized loss), KLAC 10% trailing stop filled -6.62% ($656.54 realized
+  loss) — both squarely in this morning's flagged NAND-oversupply/
+  capex-deferral semis selloff (KLAC directly, via its WFE-supply-
+  constraint entry thesis; AMD via broader sector contagion). Mechanical
+  GTC stops did their job; reconstructed both to TRADE-LOG since no
+  session had logged them. Core down to 1 open position (HPE, -4.27%,
+  not near cut). No 2-strike sub-sector impact (core, not satellite).
+- **Income sweep executed:** AMD+KLAC exits freed cash to 39%+ of equity,
+  well above the 20% floor. Swept $18,808.46 (187 sh) into SGOV per the
+  sweep-back rule, replacing the old 28-share stop with one 5% trailing
+  stop on the combined 215-share position. Cash now ~20.0%, at floor.
+- Remaining positions (HPE -4.27%, OCUL -7.79%) checked against hard-cuts
+  (-7% / -15%) — neither breached. Thesis check: HPE's "integrated
+  architecture builder" thesis and OCUL's post-catalyst thesis both
+  intact per this morning's research, no break. No stops eligible for
+  tightening (no positions in gain). No unexplained sharp moves beyond
+  the already-documented NAND selloff — skipped the optional Gemini call.
+- **Lesson:** two sessions running now (7/16, 7/17) have failed to persist
+  a 9:30am log. Worth flagging for engineering follow-up at the weekly
+  review — mechanical stops are covering the gap so far, but a session
+  that needed to *manually* cut (not just let a trailing stop fire) would
+  be exposed. This week (Jul 13 start): core 3/6, satellite 1/4 —
+  unchanged, valid per the Patience Rule.
