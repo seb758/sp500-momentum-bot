@@ -288,3 +288,37 @@ vs. the floor given intraday price movement). Old 28-share SGOV stop
 canceled and replaced with one 5% trailing stop on the combined 215-share
 position (215 = 28 existing + 187 new) rather than stacking two stop
 orders on the same symbol.
+
+### Jul 17 — 3pm Snapshot (Day 6, Friday)
+**Portfolio:** $97,361.71 | **Cash:** $19,489.54 (20.0%) | **Day P&L:** -$1,000.04 (-1.02%) | **Phase P&L:** -$2,638.29 (-2.64%)
+**Core exposure:** $9,685.20 (9.9% of equity) | **Satellite exposure:** $6,844.77 (7.0% of equity) | **Income exposure:** $61,342.20 (63.0% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 210 | $47.27 | $46.12 | +2.19% | -$241.50 (-2.43%) | 10% trailing ($42.714) |
+| OCUL | satellite | 753 | $9.89 | $9.09 | -0.82% | -$602.40 (-8.09%) | 15% trailing ($8.38525) |
+| EDGX | income | 746 | $26.78 | $26.4605 | -0.88% | -$238.35 (-1.19%) | 5% trailing ($25.479) |
+| SGOV | income | 215 | $100.574791 | $100.575 | +0.03% | +$0.04 (+0.00%) | 5% trailing ($95.551) |
+| SPHY | income | 856 | $23.36 | $23.34 | -0.09% | -$17.12 (-0.09%) | 5% trailing ($22.2015) |
+
+**Notes:** No Core/Satellite trades this window — no "Approved Trades
+(verified)" list existed anywhere in today's RESEARCH-LOG (pre-market,
+11am, and 3pm all returned zero qualifying ideas), so per STEP 3 the buy
+side was HOLD. Core is down to 1 open position (HPE) and satellite to 1
+(OCUL) after this morning's AMD/KLAC mechanical stop-outs (reconstructed
+at 11am — see above). Risk sweep: both remaining positions checked against
+hard-cuts (HPE -2.43% vs -7%, OCUL -8.09% vs -15%) — neither breached. All
+5 open positions confirmed carrying live GTC trailing stops, none missing.
+No satellite catalyst inside the next 1-2 trading days for OCUL (next
+milestone is the informational H.C. Wainwright fireside chat 2026-07-22,
+not binary) so no gap-risk action needed. Thesis check: HPE and OCUL both
+intact per this morning's research, nothing closed. No stop tightening —
+neither position is in gain. Cash 20.0%, right at the floor, no funding
+sweep needed (no new buy this window). Day P&L (-1.02%) driven mostly by
+OCUL's continued drift, partly offset by HPE's intraday bounce. This week
+(Jul 13 start): core 3/6, satellite 1/4 — unchanged (exits don't count
+against the weekly new-entry cap), valid per the Patience Rule. Tomorrow:
+none (weekend) — next session is Monday pre-market; Friday's weekly-review
+watchlist screen-refresh should also revisit TWIN (no confirmed catalyst,
+merger/privatization 8-K) and the NAND-oversupply-hit core names
+(WDC/STX/MU/AMAT/LRCX) per this morning's flags.
