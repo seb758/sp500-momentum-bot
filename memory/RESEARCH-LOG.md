@@ -1032,3 +1032,34 @@ start): core 3/6, satellite 1/4 — unchanged, valid per the Patience Rule.
   that needed to *manually* cut (not just let a trailing stop fire) would
   be exposed. This week (Jul 13 start): core 3/6, satellite 1/4 —
   unchanged, valid per the Patience Rule.
+
+### 3 PM Session Note
+- No "Approved Trades (verified)" section exists anywhere in today's log
+  (pre-market Decision was HOLD; 11am confirmed no qualifying list) — no
+  buy source, so no buys placed per Step 3. Only 2 open Core/Satellite
+  slots occupied (HPE core, OCUL satellite) after this morning's AMD/KLAC
+  stop-outs, but there was nothing approved to fill them with.
+- Risk sweep: HPE (core) -2.43% and OCUL (satellite) -8.09%, both well
+  inside their -7%/-15% hard-cuts. All 5 open positions (HPE, OCUL, EDGX,
+  SGOV, SPHY) confirmed carrying live GTC trailing stops in `orders` — none
+  missing. No satellite catalyst inside the next 1-2 trading days for OCUL
+  (next milestone is the informational H.C. Wainwright fireside chat
+  2026-07-22, not binary). Thesis check: HPE's "integrated architecture
+  builder" thesis and OCUL's post-catalyst thesis both intact per this
+  morning's research — no breaks, nothing closed this window.
+- No stop tightening: neither HPE nor OCUL is in gain (both underwater);
+  the gain-based tightening schedule doesn't apply. Income stops are flat
+  5% by rule, no tightening schedule.
+- Cash $19,489.54 = 20.0% of equity, essentially at the 20% floor — no
+  funding sweep triggered (no new buy this window).
+- Day P&L -$1,000.04 (-1.02%) vs yesterday's 3pm snapshot, driven mostly
+  by OCUL's continued drift (-8.09%, up from -7.79% at 11am) partially
+  offset by HPE's intraday bounce (+2.19% today despite still -2.43% since
+  entry). Income sleeve roughly flat.
+- This week (Jul 13 start): core 3/6, satellite 1/4 — unchanged (today's
+  AMD/KLAC stop-outs are exits, not new entries, so they don't touch the
+  weekly cap). Valid per the Patience Rule — zero tradeable ideas across
+  all three windows today.
+- Risky positions closed today: none this window (AMD and KLAC were
+  already stopped out mechanically before market-open and reconstructed
+  into the log at 11am — see above).
