@@ -1107,3 +1107,52 @@ The consolidated Gemini Deep Research call returned a **truncated/mid-document**
 
 ### Decision
 **HOLD** (pre-market default; research-only, no trades this run). Neither held position (HPE -3.07%, OCUL -9.30%) is near its hard-cut threshold (-7% / -15%), OCUL's catalyst is resolving positively not negatively, and no major geopolitical event — so no urgent pre-market notification triggered per Step 5. Handoff to market-open: (1) no core buy candidate confirmed today given lost Gemini coverage — don't treat silence as a pass; (2) WDC/STX/MU/AMAT/LRCX/MRVL/KLAC momentum-gate status increasingly doubtful amid the deepening AI-capex selloff — watch, don't add; (3) MNKD's PDUFA window remains active — any entry must use the 5% binary cap with documented max loss; (4) OCUL's continued drift despite positive catalyst news bears a closer look at midday if it persists. This week (Jul 13 start): core 3/6, satellite 1/4 — unchanged, valid per the Patience Rule.
+
+## 2026-07-19 — Pre-market Research
+
+**Note:** today (2026-07-19) is a Sunday — markets closed. Account/position
+data below is Friday 2026-07-17's close carried forward unchanged (no
+weekend price action). Running per the standard schedule; findings feed
+Monday's market-open decision.
+
+### Account
+- Equity: $97,188.82 | Cash: $19,489.51 (20.06%) | Buying power: $295,516.11 | Daytrade count: not present in account payload (same pattern as prior entries)
+- Core exposure: $9,622.20 (9.90%) | Satellite exposure: $6,754.41 (6.95%) | Income exposure: $61,322.70 (63.10% — SGOV $21,624.70 / EDGX $19,727.52 / SPHY $19,970.48)
+- Open positions: HPE (core, 210 sh, -3.07% unrealized), OCUL (satellite, 753 sh, -9.30% unrealized), SGOV/SPHY/EDGX (income). All 5 positions confirmed carrying live GTC trailing stops via `alpaca.sh orders` (HPE 10% trail $42.714; OCUL 15% trail $8.38525; SGOV 5% trail $95.551; SPHY 5% trail $22.2015; EDGX 5% trail $25.479) — none missing, all unchanged since Friday.
+- This week (Jul 13 start): core 3/6 trades, satellite 1/4 trades used.
+
+### Data-quality flag
+Gemini Deep Research output was again truncated/mid-document — it opens directly on a "Cybersecurity, Energy, and Defensive Rotations" sector section. Missing entirely: section 1 (S&P futures/VIX as explicit figures), section 2 (top macro catalysts/econ releases), and section 3 (per-held-ticker overnight check for HPE/OCUL/SGOV/SPHY/EDGX specifically — none of the five were addressed by name). This is the same recurring truncation pattern flagged every session since 2026-07-12 (now 8+ consecutive occurrences) — still unresolved, escalate again at the next weekly review. Not fabricating any missing figure. Additionally, the per-ticker "pre-market" percentage moves Gemini did report (e.g. PANW +6.84%, WDC -4.64%) cannot be genuine today's pre-market data since markets are closed Sunday — treating these as a likely (unconfirmed) carryover/restatement of Friday 7/17's session action, not as fresh Monday signal. Backfilled points 1 and held-position checks via native WebSearch instead of a second 5-20min Deep Research call.
+
+### Market Context (WebSearch fallback + Gemini's covered sections)
+- **VIX:** confirmed closed at 18.77 on Fri 7/17 (+12.19% from 16.73) — elevated, consistent with the past week's climb, not a new spike.
+- **S&P futures:** WebSearch could only surface a vague "-0.27% as of mid-July" figure, not a specific today/Monday pre-market number — treating S&P futures direction as **unconfirmed** for Monday rather than citing that stale figure as current.
+- **Iran/Strait of Hormuz:** the closure Gemini's conclusion frames as fresh ("collapse of the ceasefire," "20% tariff on the Strait") traces back to Iran's IRGC closure declaration on **2026-07-11** — this is the same escalation already carried in every research-log entry since 07-12/07-13, **not a new overnight development**. No confirmed fresh escalation beyond what's already on record. Brent/WTI remain elevated on this backdrop (consistent with prior entries), still a live tailwind for MPC/VLO.
+- **Sector rotation (Gemini, not independently verified per-ticker):** narrative continues out of high-multiple semis/hardware (DELL, AMD, MRVL, MU, WDC, STX, NTAP flagged "severe negative") and into cybersecurity (PANW, CRWD, FTNT, DDOG — "strong positive," acting as a defensive tech proxy) and energy/industrials (MPC, VLO, CAT, GEV — "strong positive" on the crude spike). Gemini flags AMAT/LRCX/TXN as anomalously positive even as the broader semi-equipment index reportedly falls — flagged as an inconsistency in the source, not confirmed with live bars this run. CSCO/GLW described as pressured. None of this is a confirmed thesis break on any core name; treat as a coloring for market-open's live-bar check, not a pre-authorization.
+
+### Held-Position Thesis Check
+- **HPE (core, -3.07%):** no negative news found. WebSearch confirms continued positive catalyst flow — Vultr AI-datacenter deal w/ NVIDIA (GB300 NVL72, Spectrum-X networking), Qblox quantum-computing collaboration, expanded ScanSource/Juniper distribution partnership, record Q2 FY26 (revenue +40% YoY, networking +148%, Juniper synergies guided $600M+). Thesis intact, no break. Still AI-hardware-adjacent so not fully insulated from the sector-rotation narrative above, but nothing name-specific negative.
+- **OCUL (satellite, -9.30%):** ASRS 44th Annual Meeting (where the Phase 3 SOL-1 data was presented Jul 16) ran through Jul 18; WebSearch found no negative follow-on news post-conference. No new information since the Jul 18 entry's positive-resolution read (p=0.0006 vs. standard of care). Continued price drift reads as post-catalyst churn, not a thesis break — not near the -15% hard-cut.
+- **SGOV/SPHY/EDGX (income):** no thesis-breaking news found; no name-specific search run beyond the standing Income-sleeve rationale (rates ballast / high-yield carry / covered-call income), consistent with prior entries.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. Gemini's per-ticker section-4 coverage was largely lost to truncation (only the sector-rotation table above came through, not individual news items), so none of the 24 core names has a confirmed overnight check beyond that unverified sector framing. WDC/STX/MU/AMAT/LRCX/MRVL/KLAC's momentum-gate status remains in doubt per last several entries (deepening AI-capex selloff) — no new entries from this group; needs a live-bar recheck at market-open, not assumed to have failed or passed.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD** — Gemini confirms FDA PDUFA target action date **July 26, 2026** for the FUROSCIX ReadyFlow Autoinjector sNDA, and because Jul 26 is a Sunday, action is expected to land by Fri Jul 24 or Mon Jul 27 — **within the 5-trading-day window as of Monday's open**. Not held. Any entry from here forward must use the 5% binary-catalyst cap (~$4.86k at current equity), with documented max-loss-if-fails, per the gap-risk rule. Not executed this run (pre-market is research-only) — flagging for market-open/midday evaluation.
+2. **OCUL** (held) — no near-term additional catalyst; next scheduled event is Q2 earnings ~Aug 4, outside the 5-day window. See Held-Position Thesis Check above; no status change.
+3. **ORN** — Q2 earnings Jul 28 (7 trading days out as of Monday) — not yet in window. Gemini notes a bullish 30%-raised 2026 EPS estimate ($0.33) and a $23B bidding pipeline post-J.E. McAmis; no action needed pre-window.
+4. **RIGL** — Q2 earnings ~Aug 4; not in window. Gemini notes the new VEPPANU (vepdegestrant) licensing deal with Arvinas/Pfizer as a positive fundamental update; recent EPS miss ($0.44 vs $0.80 est.) noted but doesn't change catalyst timing.
+5. **FSTR** — Q2 earnings ~Aug 10; not in window. No overnight thesis break.
+6. **TWIN** — remains thesis-broken per the 2026-07-15 merger/privatization 8-K (unchanged); Gemini's own estimate now pegs next earnings ~Aug 7. Still excluded from consideration regardless of price action — reiterating the standing recommendation to drop it from the satellite watchlist at the next screen refresh.
+
+### Risk Factors
+- Gemini Deep Research truncation is now an 8+ session-running, unresolved reliability issue — sections 1-3 (macro figures, held-position check) lost again this run. Needs a prompt-structure or tooling fix at the next weekly review, not just another flag.
+- Iran/Strait-of-Hormuz closure (declared 07-11) remains the dominant standing macro risk, unchanged from every prior entry this week — no fresh escalation confirmed overnight, but still live and unresolved.
+- VIX elevated (18.77 Fri close, +12% week) — consistent with ongoing risk premium, not a new spike.
+- Gemini's sector-rotation narrative (semis/hardware weak, cybersecurity/energy strong) is unverified per-ticker this run and includes an internally flagged inconsistency (AMAT/LRCX/TXN "anomalously positive" vs. a falling broader semi-equipment index) — needs live-bar confirmation at market-open before acting on it either way.
+- MNKD's PDUFA window opens Monday — the single largest near-term satellite risk/opportunity on the list; any entry must respect the 5% binary cap.
+- Cash at 20.06%, essentially at the 20% floor — any new Core/Satellite buy this week still requires an SGOV funding sweep per the Income-sleeve rule.
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run; also a non-trading Sunday). Neither held position (HPE -3.07%, OCUL -9.30%) is near its hard-cut threshold, no satellite catalyst has resolved negatively, and the "escalation" framing in Gemini's conclusion traces to an 8-day-old, already-logged development rather than a fresh overnight event — so no urgent notification triggered per Step 5. Handoff to Monday's market-open: (1) no core buy candidate confirmed given lost Gemini coverage — don't treat silence as a pass, recheck WDC/STX/MU/AMAT/LRCX/MRVL/KLAC's momentum-gate status live; (2) MNKD enters its 5-trading-day PDUFA window Monday — evaluate at the 5% binary cap if considering entry; (3) HPE and OCUL theses both intact, no action. This week (Jul 13 start): core 3/6, satellite 1/4 — unchanged, valid per the Patience Rule.
