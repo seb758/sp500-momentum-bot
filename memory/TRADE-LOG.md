@@ -322,3 +322,41 @@ none (weekend) — next session is Monday pre-market; Friday's weekly-review
 watchlist screen-refresh should also revisit TWIN (no confirmed catalyst,
 merger/privatization 8-K) and the NAND-oversupply-hit core names
 (WDC/STX/MU/AMAT/LRCX) per this morning's flags.
+
+## Jul 20 — 3pm Snapshot (Day 8, Monday)
+**Portfolio:** $96,804.92 | **Cash:** $19,489.51 (20.13%) | **Day P&L:** -$556.79 (-0.57%) | **Phase P&L:** -$3,195.08 (-3.20%)
+**Core exposure:** $9,433.41 (9.74% of equity) | **Satellite exposure:** $6,584.99 (6.80% of equity) | **Income exposure:** $61,297.02 (63.32% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 210 | $47.27 | $44.921 | -1.96% | -$493.29 (-4.97%) | 10% trailing ($42.714) |
+| OCUL | satellite | 753 | $9.89 | $8.745 | -2.51% | -$862.19 (-11.58%) | 15% trailing ($8.38525) |
+| SGOV | income | 215 | $100.574791 | $100.585 | +0.01% | +$2.19 (+0.00%) | 5% trailing ($95.5605) |
+| SPHY | income | 856 | $23.36 | $23.32 | -0.04% | -$34.24 (-0.17%) | 5% trailing ($22.2015) |
+| EDGX | income | 746 | $26.78 | $26.42 | -0.09% | -$268.56 (-1.34%) | 5% trailing ($25.479) |
+
+**Notes:** No Core/Satellite trades this window — no "Approved Trades
+(verified)" list existed anywhere in today's RESEARCH-LOG (pre-market or
+11am), so per STEP 3 the buy side was HOLD; new trading week (Jul 20
+start) stays at core 0/6, satellite 0/4. Risk sweep: both open
+Core/Satellite positions checked against hard-cuts (HPE -4.97% vs -7%,
+OCUL -11.58% vs -15%) — neither breached, though OCUL continues to sit
+closest to its cut (eased slightly from -11.78% at 11am). All 5 open
+positions confirmed carrying live GTC trailing stops via `alpaca.sh
+orders`/`orders closed`, none missing, no fills today. Thesis check: fresh
+WebSearch on both held names found nothing negative — OCUL's only news is
+forward-looking conference items (HC Wainwright fireside chat Jul 22,
+still informational, not a binary PDUFA date) plus a routine
+inducement-grant 8-K; HPE has no new developments beyond the already-
+logged 7/19 Buy->Hold rating change, Juniper/AI-infra story intact. No
+closes. No satellite catalyst inside the next 1-2 trading days is binary,
+so no gap-risk action needed. No stop tightening — both positions remain
+underwater; Income names roughly flat to slightly negative. No 2-strike
+sub-sector concern (0 satellite losses realized this week). Day P&L
+(-0.57%) driven by HPE/OCUL continuing to drift against entry plus a
+modest EDGX pullback, partly offset by flat SGOV/SPHY. This week (Jul 20
+start): core 0/6, satellite 0/4 — valid per the Patience Rule, a clean
+slate so far this week. Tomorrow: continue monitoring OCUL's proximity to
+its -15% hard-cut and HPE's rating-downgrade watch item; Wednesday's
+Alphabet earnings (7/22) is the next major AI-capex read-through for the
+core semis/AI-infra cluster.
