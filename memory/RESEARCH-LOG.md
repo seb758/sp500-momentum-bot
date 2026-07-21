@@ -31,6 +31,38 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-07-21 — Pre-market Research
+
+### Account
+- Equity: $96,893.55 | Cash: $19,489.51 (20.11%) | Buying power: $294,689.34 (margin-inflated by the standing 4x multiplier flag — no margin/leverage was or will be used) | Daytrade count: not present in account payload
+- Core exposure: $9,586.50 (9.89%, HPE) | Satellite exposure: $6,558.63 (6.77%, OCUL) | Income exposure: $61,258.91 (63.22%: EDGX $19,661.58 / SGOV $21,626.85 / SPHY $19,970.48)
+- All 5 open positions (HPE, OCUL, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing.
+
+### Market Context
+- **Data-quality gap (recurring):** today's Gemini Deep Research output again started mid-document — it answered point (4) [satellite watchlist catalyst/overnight check] in full plus a "Strategic Posture" conclusion, but points (1) futures/VIX, (2) macro catalysts/econ releases, and (3) held-ticker [HPE/Income] overnight checks were not returned as standalone sections. Not fabricating those from the Gemini gap — backfilled via two native WebSearch queries below instead of a second 5-20min Deep Research call.
+- **S&P 500 futures / VIX (via WebSearch):** futures +0.45% pre-market; VIX ~17.58, down ~5.7% overnight. Backdrop: cooler US inflation data, 10Y yield eased to ~4.52%, oil retreating on reports of renewed US-Iran diplomatic contact (vs. last week's escalation), semis stabilizing after last week's selloff.
+- **HPE (held, core) — thesis check (via WebSearch, since Gemini's held-ticker section didn't return):** no new negative development beyond the analyst downgrade to Hold already logged 7/19 (rating still Hold, not Sell — still clears the core "not Sell/Strong Sell" bar). Company raised FY26 revenue growth guide to 29-33% and FCF outlook to ≥$3.5B — fundamentals intact, recent price weakness read as AI-hardware-complex profit-taking/de-rating, not thesis break.
+- **OCUL (held, satellite) — thesis check (via WebSearch):** no new negative news. Only items found are the already-known HC Wainwright fireside chat tomorrow (7/22, informational, not binary) and a routine 7/9 inducement-grant 8-K. Thesis intact, no action.
+- **Gemini's covered section — AI-hardware complex:** flags HPE's downgrade and a sharp KLAC/LRCX/AMAT selloff as evidence that "AI capex" valuations are hitting their limit; distinguishes pass-through hardware margin compression from names capturing structural IP value. Calls out **Alphabet (GOOGL) earnings tomorrow (7/22 PM)** as the key read-through for hyperscaler capex sustainability — a real risk factor for the whole core AI-hardware cluster (18/24 names concentrated there per the 7/12 screen), not just HPE.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. No thesis breaks on any of the 24 current core names; nothing in Gemini's partial output or the WebSearch backfill surfaced a new qualifying entry. GOOGL earnings tomorrow is a live risk to the AI-hardware cluster broadly — not a reason to enter pre-market, but a reason for caution sizing into it today. Deferring to market-open for any live-quote entry check.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD** — FDA PDUFA (Furoscix ReadyFlow Autoinjector) confirmed on track for Jul 26, 2026; last trading session before the date is Fri Jul 24 — **within the 5-trading-day window**. Fundamentals reaffirmed: Q1 rev +15% YoY to $90.2M, management reaffirmed $110-120M FY26 Furoscix target. One Rule 10b5-1 director sale ($213K, 7/17) is a routine vesting-triggered sale, not a bearish signal. If entered, **cap at 5% of equity** per the binary-catalyst gap-risk rule (PDUFA = known binary event date) — max loss if the decision misses is a gap of unknown magnitude on an FDA rejection, sized to ~5% of equity at that cap. No entry taken pre-market; flagging for market-open/11am evaluation with live quotes ahead of Friday's date.
+2. **ORN** — Q2 earnings confirmed for Jul 28 (after close); counting forward, that's exactly the 5th trading day — **within the 5-trading-day window**. Momentum strong (~$12.66), thesis (data-center/hyperscale-adjacent concrete + marine construction backlog) unchanged from the 7/12 screen. This is an earnings catalyst, not a PDUFA/trial-readout/contract-decision event, so the standard 7.5% cap applies (per WATCHLIST.md's existing max-loss note), not the tighter 5%. No entry pre-market; flagging for evaluation with live quotes closer to the print.
+3. **RIGL, FSTR** — confirmed still outside their 5-trading-day windows (RIGL: H2 2026 window, no specific date yet; FSTR: ~Aug 10 earnings estimate). No overnight developments. No action.
+4. **TWIN — thesis-broken status reconfirmed.** Gemini independently re-verified the 7/13 definitive reverse-merger/privatization (Twin Vee PowerCats/VEEE into a nickel-mining shell via USFM Corp): legacy marine business goes into a private trust, public entity becomes a mining-exploration vehicle. Thesis is void regardless of price action. No position held. Recommend confirming TWIN's removal at the next weekly screen refresh (flagged 7/15, still pending — watchlist hasn't refreshed since 7/12).
+
+### Risk Factors
+- GOOGL earnings tomorrow (7/22 PM) is the single biggest near-term risk to the core AI-hardware cluster (18/24 names) — any CapEx-hesitation signal could trigger broad multiple compression across HPE (held) and the rest of the semis/AI-infra names.
+- MNKD's PDUFA (Jul 26) and ORN's earnings (Jul 28) are both now inside the 5-trading-day satellite catalyst window — real gap risk on both if entered; neither entered yet.
+- Recurring Gemini output truncation (missing standalone futures/VIX/held-ticker sections again today) — same pattern flagged repeatedly in prior sessions; still unresolved, still backfilled via WebSearch rather than skipped.
+- Standing account-level flags (options_trading_level 3, shorting_enabled true, multiplier "4") unchanged from prior notes — unused, but still worth owner attention.
+
+### Decision
+HOLD — no core thesis breaks, no satellite entry executed pre-market. MNKD and ORN are both live satellite candidates now inside their catalyst windows; deferring sizing/entry to market-open with live quotes and the applicable gap-risk caps (5% MNKD, 7.5% ORN). Patience > activity.
+
 ## 2026-07-12 — Pre-market Research
 
 ### Account
