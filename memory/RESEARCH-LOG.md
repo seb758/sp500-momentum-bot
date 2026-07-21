@@ -69,6 +69,14 @@ HOLD — no core thesis breaks, no satellite entry executed pre-market. MNKD and
 - Core: no live-quote change to the pre-market HOLD — no thesis breaks, GOOGL earnings tomorrow remains the key overhang for the AI-hardware cluster.
 - Pattern to flag for Friday's review: this is the second time a live quote has looked implausible/stale on a lower-liquidity satellite name (ORN, ~100-share quoted size) — worth checking whether Alpaca's SIP feed lags on thin names around the open, rather than assuming it's always a real market condition.
 
+### 11 AM Session Note
+- No "### Approved Trades (verified)" list exists in today's log (only the 9:30 AM Session Note format) — per STEP 3, no buys placed this window. HOLD on new entries.
+- **Cash-floor breach found and corrected:** account cash was $14,629.51 (15.02% of equity) at session start — below the 20% floor, because market-open's MNKD buy wasn't preceded by the required SGOV-first funding sweep. Sold 49 sh SGOV ($100.59) to restore cash to $19,558.42 (20.08% of equity); canceled and re-placed the SGOV trailing stop on the remaining 166 sh (5%, trigger $95.56525). Logged to TRADE-LOG.md. Flagging market-open's funding-sweep step for review so this doesn't recur.
+- Risk sweep: all 6 positions (HPE core -1.90%; MNKD, OCUL satellite -0.13%/-8.29%; EDGX, SPHY, SGOV income) confirmed carrying live GTC trailing stops, none missing. No hard-cuts breached (core -7% / satellite -15% thresholds far off). No stop tightening — no Core/Satellite position is currently in gain.
+- Thesis check: HPE and OCUL both intact per this morning's research (no new negative news); MNKD not yet at its Jul 26 PDUFA date. No closes. No 2-strike sub-sector concern (0 satellite losses realized this week).
+- Sleeve exposure: core 10.00% (HPE), satellite 12.00% (MNKD+OCUL), income 57.93%, cash 20.08%.
+- This week (Jul 20 start): core 0/6, satellite 1/4 (MNKD) — unchanged from market-open.
+
 ## 2026-07-12 — Pre-market Research
 
 ### Account
