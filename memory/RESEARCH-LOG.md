@@ -63,6 +63,12 @@ None. No thesis breaks on any of the 24 current core names; nothing in Gemini's 
 ### Decision
 HOLD — no core thesis breaks, no satellite entry executed pre-market. MNKD and ORN are both live satellite candidates now inside their catalyst windows; deferring sizing/entry to market-open with live quotes and the applicable gap-risk caps (5% MNKD, 7.5% ORN). Patience > activity.
 
+### 9:30 AM Session Note
+- Traded: BUY MNKD (satellite), 1215 sh @ $4.00, 5% binary-catalyst cap ahead of the Jul 26 PDUFA decision. Gate passed clean (satellite 2/4 positions, 1/4 weekly trades, 11.75% satellite exposure). 15% trailing stop placed immediately (trigger $3.3915).
+- Held: ORN — skipped despite being inside its earnings catalyst window. Live quote showed a ~$4-wide bid/ask (bid $11.15/ask $15.12) against a $12.68 prior close, a stale/bad quote that trips the wide-spread skip rule. No entry; re-check next session with a fresh quote before treating it as tradeable.
+- Core: no live-quote change to the pre-market HOLD — no thesis breaks, GOOGL earnings tomorrow remains the key overhang for the AI-hardware cluster.
+- Pattern to flag for Friday's review: this is the second time a live quote has looked implausible/stale on a lower-liquidity satellite name (ORN, ~100-share quoted size) — worth checking whether Alpaca's SIP feed lags on thin names around the open, rather than assuming it's always a real market condition.
+
 ## 2026-07-12 — Pre-market Research
 
 ### Account
