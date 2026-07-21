@@ -77,6 +77,14 @@ HOLD — no core thesis breaks, no satellite entry executed pre-market. MNKD and
 - Sleeve exposure: core 10.00% (HPE), satellite 12.00% (MNKD+OCUL), income 57.93%, cash 20.08%.
 - This week (Jul 20 start): core 0/6, satellite 1/4 (MNKD) — unchanged from market-open.
 
+### 3 PM Session Note
+- No "### Approved Trades (verified)" list exists anywhere in today's log — buy side stayed HOLD per STEP 3, no new positions.
+- Risk sweep: all 6 open positions (HPE core; MNKD, OCUL satellite; EDGX, SGOV, SPHY income) confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing. No hard-cuts breached: HPE -2.17% (vs -7%), OCUL -8.80% (vs -15%), MNKD +4.75% (in gain, no cut applies). Thesis intact on HPE and OCUL per this morning's research, nothing new since 11am.
+- MNKD's PDUFA (Jul 26, last trading session before it Fri Jul 24) is 3 trading days out from today (Wed/Thu/Fri remain) — not yet inside the STEP 4 "next 1-2 trading days" gap-risk trigger. Already sized at the 5% binary-catalyst cap and documented at entry, so no action; will need explicit re-check Thursday or Friday as the window closes. OCUL's only near-term item is tomorrow's HC Wainwright fireside chat (informational, not binary) — no gap-risk action needed.
+- No stop tightening: MNKD's +4.75% gain is well below the +25% satellite tightening threshold; HPE is not in gain. No stops moved.
+- Cash $19,558.42 = 20.03% of equity, at/above the 20% floor — no funding sweep needed. This week (Jul 20 start): core 0/6, satellite 1/4 (MNKD) — unchanged from 11am, valid per the Patience Rule.
+- Risky positions closed today: none.
+
 ## 2026-07-12 — Pre-market Research
 
 ### Account

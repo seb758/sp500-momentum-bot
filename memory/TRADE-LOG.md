@@ -372,3 +372,41 @@ Note: ORN (the other candidate flagged in today's pre-market research) was skipp
 Shares: 49 | Exit: $100.59 | Realized P&L: ~$0.00 (0.00%) | Reason: cash-floor restoration (income only) — Income sleeve rule requires literal cash always >= 20% of equity. Market-open's MNKD buy ($4,860) was not preceded by the required SGOV-first funding sweep, leaving cash at $14,629.51 = 15.02% of equity ($97,408.87) at this session's start — a real floor breach, not the expected momentary same-moment dip. Sold 49 sh to restore the floor with a small buffer: post-sale cash $19,558.42 = 20.08% of equity ($97,401.06).
 Mechanics: canceled the standing 215-share 5% trailing stop (dc9b994b...), sold 49 sh market/day, re-placed a fresh 5% trailing GTC stop on the remaining 166 sh (trigger $95.56525, hwm $100.595) — same cancel-then-replace pattern as the 7/17 sweep, avoiding two stacked stop orders on one symbol.
 Flag for review: market-open should be checked for why the pre-buy SGOV sweep didn't fire before the MNKD fill — recurring risk if the funding-shortfall check is being skipped at that session.
+
+### Jul 21 — 3pm Snapshot (Day 9, Tuesday)
+**Portfolio:** $97,641.25 | **Cash:** $19,558.42 (20.03%) | **Day P&L:** +$836.33 (+0.86%) | **Phase P&L:** -$2,358.75 (-2.36%)
+**Core exposure:** $9,711.45 (9.94% of equity) | **Satellite exposure:** $11,882.91 (12.17% of equity) | **Income exposure:** $56,488.47 (57.85% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 210 | $47.27 | $46.245 | +3.78% | -$215.25 (-2.17%) | 10% trailing ($42.714) |
+| MNKD | satellite | 1215 | $4.00 | $4.19 | +5.28% | +$230.85 (+4.75%) | 15% trailing ($3.5955) |
+| OCUL | satellite | 753 | $9.89 | $9.02 | +3.56% | -$655.11 (-8.80%) | 15% trailing ($8.38525) |
+| SGOV | income | 166 | $100.574791 | $100.5962 | +0.01% | +$3.55 (+0.02%) | 5% trailing ($95.57) |
+| SPHY | income | 856 | $23.36 | $23.31 | -0.09% | -$42.80 (-0.21%) | 5% trailing ($22.2015) |
+| EDGX | income | 746 | $26.78 | $26.59 | +0.89% | -$141.74 (-0.71%) | 5% trailing ($25.479) |
+
+**Notes:** No Core/Satellite trades this window — no "Approved Trades
+(verified)" list existed anywhere in today's RESEARCH-LOG, so per STEP 3
+the buy side was HOLD (this morning's MNKD buy came from the 9:30am
+market-open window, not this session). Risk sweep: all 6 open positions
+confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none
+missing. Hard-cut check: HPE -2.17% and OCUL -8.80% both well clear of
+their -7%/-15% cuts; MNKD is in gain (+4.75%), no cut applies. Thesis
+intact on HPE and OCUL, nothing new since 11am. MNKD's Jul 26 PDUFA
+(last trading session before it Fri Jul 24) is 3 trading days out — not
+yet inside the 1-2-trading-day gap-risk trigger; already sized at the 5%
+binary-catalyst cap and documented at entry, holding through is valid,
+re-check Thu/Fri as the window closes. OCUL's only near-term item is
+tomorrow's informational HC Wainwright fireside chat, not binary — no
+action. No stop tightening: MNKD's gain is below the +25% satellite
+tightening threshold, HPE is not in gain. No 2-strike sub-sector concern
+(0 satellite losses realized this week). Cash 20.03%, at/above the 20%
+floor, no funding sweep needed. Day P&L (+0.86%) driven by a broad
+across-the-board bounce (HPE +3.78%, OCUL +3.56%, MNKD +5.28% intraday)
+recovering some of yesterday's drift; Income sleeve roughly flat. This
+week (Jul 20 start): core 0/6, satellite 1/4 (MNKD) — unchanged, valid
+per the Patience Rule. Tomorrow: GOOGL earnings (7/22 PM) is the key
+read-through risk for the core AI-hardware cluster; continue tracking
+MNKD's approach to its Jul 26 PDUFA and OCUL's HC Wainwright fireside
+chat (informational only).
