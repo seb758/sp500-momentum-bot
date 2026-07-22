@@ -69,6 +69,12 @@ None. No confirmed thesis break on any of the 24 current core names, but the SOX
 ### Decision
 HOLD — no core thesis breaks, no satellite entry executed pre-market. MNKD (held) and ORN (not held) are both inside their catalyst windows; ORN needs a fresh live quote at market-open before any evaluation. SOX bear-market confirmation plus tonight's GOOGL print argue for extra caution on any new core risk. Patience > activity.
 
+### 9:30 AM Session Note
+- No trades this window. No core ideas from pre-market research; account/positions re-validated live (equity $97,768.36, cash $19,558.40 = 20.00% — right at the floor, no sweep needed).
+- ORN re-checked with a fresh live quote per pre-market's flag: bid $11.18 / ask $15.27, ~27% wide — still tripping the wide/illiquid-spread skip rule (same issue as 07-21, not a stale artifact this time, a genuinely thin book). Skipped again; needs a materially tighter spread before it's tradeable regardless of catalyst/momentum standing.
+- MNKD (held) and OCUL (held) both re-confirmed intact, no action; MNKD's Jul 26 PDUFA is now inside the gap-risk window per pre-market, continue holding per the documented plan.
+- Pattern worth flagging for Friday's review: ORN has now failed the live-quote/spread check twice in a row (07-21 stale, 07-22 wide) despite clearing every other satellite gate — worth deciding whether to keep carrying it as a candidate or drop it until its liquidity genuinely improves.
+
 ## 2026-07-21 — Pre-market Research
 
 ### Account
