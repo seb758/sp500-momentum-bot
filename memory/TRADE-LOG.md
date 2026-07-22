@@ -410,3 +410,44 @@ per the Patience Rule. Tomorrow: GOOGL earnings (7/22 PM) is the key
 read-through risk for the core AI-hardware cluster; continue tracking
 MNKD's approach to its Jul 26 PDUFA and OCUL's HC Wainwright fireside
 chat (informational only).
+
+## Jul 22 — 3pm Snapshot (Day 10, Wednesday)
+**Portfolio:** $97,368.31 | **Cash:** $19,558.40 (20.09%) | **Day P&L:** -$272.94 (-0.28%) | **Phase P&L:** -$2,631.69 (-2.63%)
+**Core exposure:** $10,154.55 (10.43% of equity) | **Satellite exposure:** $11,187.78 (11.49% of equity) | **Income exposure:** $56,463.98 (57.99% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 210 | $47.27 | $48.355 | +3.50% | +$227.85 (+2.30%) | 10% trailing ($44.712) |
+| MNKD | satellite | 1215 | $4.00 | $3.81 | -5.93% | -$230.85 (-4.75%) | 15% trailing ($3.5955) |
+| OCUL | satellite | 753 | $9.89 | $8.71 | -2.46% | -$888.54 (-11.93%) | 15% trailing ($8.38525) |
+| SGOV | income | 166 | $100.58 | $100.61 | +0.01% | +$4.98 (+0.03%) | 5% trailing ($95.5795) |
+| SPHY | income | 856 | $23.36 | $23.27 | -0.21% | -$77.04 (-0.39%) | 5% trailing ($22.2015) |
+| EDGX | income | 746 | $26.78 | $26.60 | +0.20% | -$134.28 (-0.67%) | 5% trailing ($25.479) |
+
+**Notes:** No Core/Satellite trades this window — no "Approved Trades
+(verified)" list existed anywhere in today's RESEARCH-LOG, so per STEP 3
+the buy side was HOLD; this week (Jul 20 start) stays at core 0/6,
+satellite 1/4 (MNKD). Risk sweep: all 6 open positions confirmed carrying
+live GTC trailing stops via `alpaca.sh orders`, none missing. Hard-cut
+check: HPE +2.30% (in gain), MNKD -4.75%, OCUL -11.93% (eased slightly
+from -12.59% at 11am) — none at their -7%/-15% cuts. Fresh WebSearch
+thesis check on HPE, MNKD, and OCUL found nothing negative (MNKD's
+pediatric Afrezza FDA approval is incrementally positive; Furoscix
+ReadyFlow PDUFA reconfirmed on track for Jul 26; OCUL's HC Wainwright
+fireside chat occurred today as scheduled, informational only) — nothing
+closed. Gap-risk check: MNKD's Jul 26 PDUFA is now 2 trading days out
+(Thu 7/23, Fri 7/24 remain) — inside the 1-2-trading-day gap-risk window.
+It was properly sized/documented at entry (5% binary-catalyst cap, max
+loss logged 7/21) and conviction hasn't weakened, so holding through is
+valid per the rule — stated explicitly rather than silently doing
+nothing. OCUL has no firm binary PDUFA date, so the gap-risk trigger
+doesn't apply to it. No stop tightening — no position crossed a
+tightening threshold since 11am. No 2-strike sub-sector concern (0
+satellite losses realized this week). Cash 20.09%, at/above the 20%
+floor, no funding sweep needed. Risky positions closed today: none. Day
+P&L (-0.28%) driven mainly by MNKD's intraday dip and OCUL's continued
+drift, partly offset by HPE's gain and flat-to-slightly-negative Income
+sleeve. Tomorrow: GOOGL's after-close earnings tonight (7/22) is the key
+overnight read-through for the core AI-hardware cluster (HPE among
+others); continue tracking MNKD into its Jul 26 PDUFA (2 trading days
+left) and monitor OCUL's proximity to its -15% hard-cut.
