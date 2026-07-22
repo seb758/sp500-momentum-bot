@@ -75,6 +75,16 @@ HOLD — no core thesis breaks, no satellite entry executed pre-market. MNKD (he
 - MNKD (held) and OCUL (held) both re-confirmed intact, no action; MNKD's Jul 26 PDUFA is now inside the gap-risk window per pre-market, continue holding per the documented plan.
 - Pattern worth flagging for Friday's review: ORN has now failed the live-quote/spread check twice in a row (07-21 stale, 07-22 wide) despite clearing every other satellite gate — worth deciding whether to keep carrying it as a candidate or drop it until its liquidity genuinely improves.
 
+### 11 AM Session Note
+- No "### Approved Trades (verified)" list exists in today's log (only the 9:30 AM Session Note) — per STEP 3, no buys placed this window. HOLD on new entries.
+- Account: equity $97,525.08, cash $19,558.40 (20.05%) — at/above the 20% floor, no funding sweep needed.
+- Risk sweep: all 6 positions (HPE core; MNKD, OCUL satellite; EDGX, SGOV, SPHY income) confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing. No hard-cuts breached: HPE +3.83% (in gain), MNKD -2.13%, OCUL -12.59% (widened from -8.80% at 9:30am pre-market baseline but still short of the -15% satellite cut). No stop tightening — HPE's +3.83% gain is well below the +15% core tightening threshold; MNKD and OCUL are not in gain.
+- Thesis check: HPE and OCUL both intact, no new negative news since this morning's research. MNKD's Jul 26 PDUFA is now 2 trading days out (Thu 7/23, Fri 7/24 remain) — inside the gap-risk window, already sized at the 5% binary-catalyst cap and documented at entry; continue holding per plan, re-check Thursday/Friday as the window closes further.
+- No name moved sharply with an unexplained cause today (OCUL's drift and MNKD's dip are continuations of already-documented patterns; HPE's gain has no negative flag) — skipped the optional Step 7 Gemini call.
+- No 2-strike sub-sector concern (0 satellite losses realized this week). This week (Jul 20 start): core 0/6, satellite 1/4 (MNKD) — unchanged.
+- Sleeve exposure: core 10.57% (HPE), satellite 11.55% (MNKD+OCUL), income 57.82%, cash 20.05%.
+- No action taken this window — no email notification sent per STEP 9 (action-only).
+
 ## 2026-07-21 — Pre-market Research
 
 ### Account
