@@ -31,6 +31,44 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-07-22 — Pre-market Research
+
+### Account
+- Equity: $98,030.56 | Cash: $19,558.40 (19.95%) | Buying power: $294,019.03 (margin-inflated by the standing 4x multiplier flag — no margin/leverage was or will be used) | Daytrade count: not present in account payload
+- Core exposure: $10,195.50 (10.40%, HPE) | Satellite exposure: $11,810.70 (12.05%: MNKD $4,920.75 / OCUL $6,889.95) | Income exposure: $56,465.96 (57.60%: EDGX $19,804.44 / SGOV $16,699.60 / SPHY $19,961.92)
+- Cash 19.95% is marginally below the 20% floor (~$77 short) — a same-moment price-appreciation drift, not a funding-shortfall breach (no buy was placed since the last sweep). Not actionable pre-market; re-check at market-open if a new buy needs funding.
+- All 6 open positions (HPE, MNKD, OCUL, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing.
+
+### Market Context
+- **Data-quality gap (recurring):** today's Gemini Deep Research output again started mid-document — it returned the OCUL/ORN/FSTR/TWIN/RIGL satellite section and a "Strategic Synthesis" close, but sections 1-3 (S&P futures/VIX, macro catalysts/GOOGL reaction, HPE held-ticker check) and the full core-watchlist section 4 were not returned as standalone content. Backfilled via native WebSearch below rather than firing a second 5-20min Deep Research call. This is now a long-recurring pattern (flagged 07-12, 07-13, 07-14, and again today) — still unresolved at the prompt-structure level, worth a hard look at the next weekly review.
+- **Data-integrity flag:** Gemini's OCUL commentary cited "recent closes situated between $14.56 and $18.21" — this is wildly inconsistent with our live Alpaca fill ($9.15) and WebSearch-confirmed mid-July trading range (~$8.90-$9.15). Treating this as a hallucinated/wrong-ticker data point, not a real price level — not used for any decision.
+- **S&P 500 futures / VIX (via WebSearch):** futures -0.33% premarket, Nasdaq-100 futures -0.7%; VIX ~17.41 (+2.11%). Premarket weakness attributed to investors positioning ahead of Alphabet (GOOGL) and Tesla (TSLA) earnings after today's close, plus fresh tariff headlines and rising oil prices.
+- **GOOGL earnings — correcting an error in today's research query:** I mistakenly asked Gemini for GOOGL's "reaction" as if it had already reported. It has NOT reported yet — Alphabet reports Q2 results after market close TODAY (7/22), not yesterday. Consensus: EPS $2.87 (+24% YoY), revenue ~$116.5B (+21% YoY). Alphabet raised FY26 capex guidance to $180-190B and flagged 2027 capex rising further; Q1 FCF fell 47% YoY as capex rose 107%. This is the single biggest incremental read-through for the core AI-hardware cluster (18/24 core names) and will not resolve until after tonight's close — not a pre-market factor today, but the top risk item into tomorrow.
+- **HPE (held, core) — thesis check (via WebSearch):** no negative news. GTT Communications expanded a strategic partnership with HPE for cloud-first enterprise networking; Private Cloud AI business continues strong YoY growth. Thesis intact, no action.
+- **MNKD (held, satellite) — thesis check (via WebSearch):** no negative news. FDA PDUFA for FUROSCIX ReadyFlow Autoinjector reconfirmed on track for Jul 26, 2026 (4 calendar days out) — same date as documented at entry, no delay. No new competitive or safety signal beyond the already-logged UTHR Tresmi thesis note.
+- **OCUL (held, satellite) — thesis check (via WebSearch):** no negative news. HC Wainwright 6th Annual Ophthalmology Virtual Conference fireside chat is TODAY (informational, not binary, as previously flagged). AXPAXLI NDA filing still planned Q4 2026. Thesis intact, no action.
+- **Semiconductor/AI-hardware sector — material escalation vs. prior sessions:** WebSearch confirms the Philadelphia Semiconductor Index (SOX) is now down ~24% from its late-June high and has technically entered a bear market, with ~$3.3T in global semiconductor market value erased since June 22. Drivers: TSMC's Q3 capex guide feeding margin-compression worries, SK Hynix HBM expansion slowdown, hawkish Fed repricing under Chair Warsh, and broadening skepticism on AI-infra ROI. This directly affects the AI-hardware-concentrated core watchlist (MU, AMD, STX, WDC, MRVL, DDOG, AMAT, LRCX, KLAC — 9 of 24 names, part of the broader 18/24 AI-adjacent cluster). No confirmed thesis break on any individual name from this research pass (would require live Alpaca bars to check 50/200-day MA and 3M/6M relative return, which is a market-open/weekly-review task, not pre-market), but this is a materially worse read than 07-21's "semis stabilizing" note — flag as the top core-side risk factor today, compounding into tonight's GOOGL print.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. No confirmed thesis break on any of the 24 current core names, but the SOX bear-market confirmation above plus tonight's GOOGL earnings argue strongly against any new core entry pre-market. Defer to market-open/11am with live bars if conditions stabilize — do not chase into this much sector-level uncertainty.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — PDUFA reconfirmed on track for Jul 26, 2026, 4 calendar days out — still inside the 5-trading-day gap-risk window, already sized at the 5% binary-catalyst cap per the 07-21 entry. No new information changes the thesis. Continue holding through the catalyst per the documented plan; re-check Thu/Fri as the window closes.
+2. **ORN** — Gemini confirms Q2 2026 earnings after close Tue Jul 28, 2026 (call Jul 29) — exactly 4 trading days out, inside the 5-day window. Technicals noted as weakened (short/long MA crossover, lower volume, pulled back to ~$12.80) heading into the print — a real risk factor for a name whose thesis was data-center/marine-infrastructure momentum. No position held. Not an entry pre-market (no live quote pulled); flag for market-open re-evaluation with a fresh quote (last session's quote was implausible/stale per the 07-21 note — recheck before treating any level as tradeable).
+3. **RIGL, FSTR** — no overnight news, no near-term catalyst confirmed within the 5-day window. No action.
+4. **TWIN** — still thesis-broken (reverse-merger/privatization into a mining shell, flagged since 07-13/07-15). Repeating the standing recommendation to formally drop it at the next weekly screen refresh — this has now been flagged unactioned across multiple sessions.
+
+### Risk Factors
+- SOX in a confirmed technical bear market (-24% from late-June highs, ~$3.3T erased) — the single largest risk to the core sleeve given its heavy AI-hardware concentration (9+ of 24 names direct semis/memory/equipment exposure). Materially worse than the "stabilizing" read from 07-21.
+- GOOGL earnings after tonight's close is the key incremental catalyst for the AI-hardware complex — unresolved as of this research pass; my initial query incorrectly assumed it had already reported, corrected above.
+- MNKD's PDUFA (Jul 26) and ORN's earnings (Jul 28) are both now inside their 5-trading-day satellite catalyst windows — MNKD already held and sized at the tightened 5% cap; ORN not yet entered, needs a fresh live-quote check (prior session's quote was stale/implausible).
+- Cash at 19.95%, marginally below the 20% floor from price drift, not a funding breach — monitor, no action needed absent a new buy.
+- Recurring Gemini output truncation (missing standalone futures/VIX/macro/held-ticker sections again today, 4th+ occurrence) — still unresolved, still backfilled via WebSearch. A hallucinated OCUL price range in today's output is a new, more serious variant of this problem (fabricated data, not just missing sections) — worth flagging explicitly to the owner, not just noting internally.
+- Standing account-level flags (options_trading_level 3, shorting_enabled true, multiplier "4") unchanged, unused, still worth owner attention.
+
+### Decision
+HOLD — no core thesis breaks, no satellite entry executed pre-market. MNKD (held) and ORN (not held) are both inside their catalyst windows; ORN needs a fresh live quote at market-open before any evaluation. SOX bear-market confirmation plus tonight's GOOGL print argue for extra caution on any new core risk. Patience > activity.
+
 ## 2026-07-21 — Pre-market Research
 
 ### Account
