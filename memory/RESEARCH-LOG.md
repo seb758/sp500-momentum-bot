@@ -85,6 +85,17 @@ HOLD — no core thesis breaks, no satellite entry executed pre-market. MNKD (he
 - Sleeve exposure: core 10.57% (HPE), satellite 11.55% (MNKD+OCUL), income 57.82%, cash 20.05%.
 - No action taken this window — no email notification sent per STEP 9 (action-only).
 
+### 3 PM Session Note
+- No "### Approved Trades (verified)" list exists anywhere in today's log — per STEP 3, no buys placed this window. HOLD on new entries.
+- Account: equity $97,368.31, cash $19,558.40 (20.09%) — at/above the 20% floor, no funding sweep needed.
+- Risk sweep: all 6 positions (HPE core; MNKD, OCUL satellite; EDGX, SGOV, SPHY income) confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing. No hard-cuts breached: HPE +2.30% (in gain), MNKD -4.75%, OCUL -11.93% (eased slightly from -12.59% at 11am, still short of the -15% satellite cut). No stop tightening — HPE's gain is well below +15%; MNKD and OCUL are not in gain.
+- Fresh WebSearch thesis check on all three non-income names found nothing negative: HPE — Buy-rated, Private Cloud AI/Juniper story intact, no new items. MNKD — FDA approved Afrezza for ages 6+ (pediatric label expansion, stock +20% on the news per search results, though our live fill shows -4.75% today — treating the search snippet's price reference as stale/inconsistent, not acting on it) and the Furoscix ReadyFlow PDUFA reconfirmed on track for Jul 26. OCUL — HC Wainwright fireside chat happened today as scheduled (informational), AXPAXLI NDA still tracking Q4 2026, no negative news. Thesis intact on all three, nothing closed.
+- Gap-risk check (STEP 4): MNKD's Jul 26 PDUFA is now 2 trading days out (Thu 7/23, Fri 7/24 remain before the Sunday PDUFA date) — inside the 1-2-trading-day gap-risk trigger. It WAS properly sized/documented at entry (5% binary-catalyst cap, $4,860 cost = 5.00% of equity at entry, max-loss-if-fails logged in the 7/21 BUY note) and conviction has not weakened (today's Afrezza pediatric approval is incrementally positive, not negative) — holding through is valid per the rule, stated explicitly here rather than silently doing nothing. OCUL has no firm binary PDUFA date (still multi-stage regulatory process, conference data only) — gap-risk trigger does not apply.
+- No stop tightening this window (no position crossed a tightening threshold since 11am). No 2-strike sub-sector concern (0 satellite losses realized this week).
+- Risky positions closed today: none.
+- This week (Jul 20 start): core 0/6, satellite 1/4 (MNKD) — unchanged, valid per the Patience Rule.
+- Pattern for Friday's review: ORN has now failed the live-quote/spread check twice in a row (07-21 stale, 07-22 wide) — decide whether to keep carrying it as a candidate or drop it until liquidity improves. Also carry forward the recurring Gemini output-truncation/hallucination flag from pre-market.
+
 ## 2026-07-21 — Pre-market Research
 
 ### Account
