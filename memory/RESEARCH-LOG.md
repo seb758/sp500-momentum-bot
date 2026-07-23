@@ -1336,3 +1336,45 @@ Gemini Deep Research output was **truncated/mid-document again** — opens direc
 - No satellite catalyst inside the next 1-2 trading days is binary (OCUL's Jul 22 event remains informational) — no gap-risk close required. No 2-strike sub-sector concern (0 satellite losses realized this week).
 - No stops eligible for tightening (both Core/Satellite positions still underwater; Income names roughly flat). No stop moved down.
 - This week (Jul 20 start): core 0/6, satellite 0/4 — unchanged, valid per the Patience Rule. Risky positions closed today: none.
+
+## 2026-07-23 — Pre-market Research
+
+### Account
+- Equity: $97,289.82 | Cash: $19,558.40 (20.11%) | Buying power: $19,558.40 (not margin-inflated today, unlike some prior sessions) | Daytrade count: not present in account payload (same pattern as prior entries)
+- Core exposure: $10,080.00 (10.36%, HPE) | Satellite exposure: $11,236.89 (11.55%: MNKD $4,738.50 / OCUL $6,498.39) | Income exposure: $56,414.53 (57.98%: EDGX $19,793.32 / SGOV $16,702.09 / SPHY $19,919.12)
+- All 6 open positions (HPE, MNKD, OCUL, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing.
+
+### Data-quality note
+Gemini Deep Research returned a complete, well-structured report this run — Parts I-IV all present (catalysts, core/income holdings, satellite catalyst monitor, full watchlist sweep), breaking the 9+ consecutive-session truncation streak flagged every prior entry since 07-12. One partial gap: no explicit numeric S&P 500 futures level/direction was given (VIX was: spot ~17.05, VIN26 futures ~18.77 — a steep contango pricing in vol through the earnings gauntlet). Not fabricating a futures figure since none was returned.
+
+### Market Context
+- **Semiconductor rotation, sharply worse:** aggressive "precision strike" selloff in semi capital-equipment and memory names — KLAC, LRCX, SNDK, TER down 10-14% on preliminary guidance that NAND oversupply persists through at least Q3 2026, forcing capex deferrals in testing/metrology tools. MU also carries a fresh Sell call ($1,014 PT, ~11% downside) despite record fiscal Q3 revenue ($41.5B, 84.9% gross margin, HBM sold out through 2027) — bull/bear split, not a clean read. This directly threatens momentum-gate status for 6 of 24 core watchlist names (MU, WDC, STX, AMAT, LRCX, KLAC) — needs a live-bar recheck at market-open, not assumed to have failed or passed.
+- **Megacap earnings digestion:** GOOGL cloud revenue +82% YoY but stock pressured on AI-capex-return scrutiny; TSLA revenue up but capex hit FCF hard; TXN (7/22) beat on both lines but slipped with the broader sector. Cybersecurity (CRWD, PANW, FTNT) and CSCO catching a safe-haven/AI-infrastructure bid instead — CSCO booked $1.9B in AI orders from hyperscalers (vs $600M prior year), PT raised to $133-140.
+- **Geopolitical — fresh escalation, not just the standing 07-11 backdrop:** a breakdown in US-Iran ceasefire talks has crude oil up ~7% overnight, driving 3-2-1 crack spreads to ~$59/bbl (triple January levels). This is materially newer than prior entries' framing ("no fresh escalation, same 07-11 backdrop") — a genuine overnight development, not a stale repeat. Tailwind for core names VLO (+5% overnight to ~$295.79, Jefferies PT raised to street-high $312 ahead of its Jul 30 print) and MPC (also at all-time highs); headwind for broad risk sentiment.
+- **New 5-day catalyst confirmed for GLW (core watchlist, not held):** down ~20.7% over 30 days on AI-optical rotation plus a solar-wafer-facility shutdown ($30M unexpected expense); reports Q2 earnings Tue Jul 28 (within the 5-trading-day window). Flag for market-open/next-refresh attention, not a buy signal today.
+
+### Held-Position Thesis Check
+- **HPE (core):** no adverse overnight news. Enterprise networking / on-prem AI server demand backdrop intact. Thesis holds, no action.
+- **MNKD (satellite) — top item today:** FDA PDUFA target action date for FUROSCIX ReadyFlow remains **Sunday Jul 26** with **no early/surprise action announced** as of this morning. Because Jul 26 is a Sunday, the decision is expected to reach the company/market either **tomorrow (Fri 7/24) after-hours** or **Monday (7/27) pre-market** — there is no FDA-published release schedule, so both remain live possibilities. Today (Thu 7/23) and tomorrow are the only two trading sessions before the weekend gap; the trailing stop does not protect against this. Position was already sized at the 5% binary-catalyst cap and documented at entry (per 07-21) — holding through remains valid per the rule, nothing new changes that calculus, but this is now the single highest-urgency item on the book. Re-check at every session through Friday's close.
+- **OCUL (satellite):** no negative news. Next scheduled event is Q2 earnings ~Aug 4-7 — outside the 5-day window. Thesis intact, not near the -15% hard-cut (currently -12.7%, tightening toward it — watch, no action yet).
+- **SGOV/SPHY/EDGX (income):** no thesis-breaking news; sleeve remains insulated from the equity-side rotation, doing its job as ballast into an elevated-vol earnings week.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. The semi capital-equipment/memory selloff (KLAC, LRCX, AMAT, MU, WDC, STX) puts 6 of 24 core names' momentum-gate status in real doubt — not assumed failed, needs a live-bar recheck at market-open. GLW's confirmed Jul 28 earnings catalyst is a risk/watch item, not a signal. No new core buy candidate clears pre-market given this much sector uncertainty into a heavy earnings week.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — see Held-Position Thesis Check. PDUFA decision could land as soon as tomorrow after-hours. Already at the 5% binary cap, documented. No action pre-market; re-evaluate at every session through Friday close.
+2. **OCUL (held)** — no status change; no near-term binary catalyst.
+3. **ORN** — Q2 earnings confirmed Tue Jul 28 after close (call Jul 29) — now inside the 5-trading-day window (3 trading days out). Consensus $0.06 EPS / ~$225.7M revenue; Q1 beat ($0.05 vs $0.00 est.) supports the thesis, no negative overnight news. Not held. Entering this close to an earnings print raises gap risk right as the window opens — flag for market-open evaluation with a fresh quote/bars, not a pre-market entry.
+4. **RIGL, FSTR** — no overnight news, no catalyst inside the 5-day window. No action.
+5. **TWIN** — still thesis-broken (07-15 merger/privatization 8-K). Reiterating the standing recommendation to drop it at the next screen refresh — flagged unactioned across multiple sessions now.
+
+### Risk Factors
+- MNKD's PDUFA decision is imminent — expected Fri 7/24 after-hours or Mon 7/27 pre-market, with no weekend stop protection. Top event risk on the book; already properly sized and documented, nothing further to do pre-market.
+- Semiconductor/AI-capex selloff deepened sharply overnight (KLAC/LRCX/SNDK/TER -10-14%, MU carrying a fresh Sell call) — threatens momentum-gate status for 6 of 24 core watchlist names; needs live-bar confirmation at market-open before acting either way.
+- Fresh US-Iran ceasefire breakdown driving oil +7% overnight — a genuine new escalation, not the same stale 07-11 backdrop; tailwind for VLO/MPC, headwind for broad risk sentiment and a driver of the current VIX futures/spot contango.
+- GLW and ORN both now sit inside their 5-trading-day catalyst windows (Jul 28 earnings for both) — watch items for the next few sessions.
+- Cash at 20.11%, above the 20% floor — no funding sweep needed absent a new buy.
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). Neither held position is near its hard-cut (HPE in gain; MNKD -2.5%; OCUL -12.7%, watching but not breached at -15%). No satellite catalyst has resolved negatively — MNKD's PDUFA remains pending, not yet decided. Given the imminence of the MNKD decision (next 1-2 trading sessions, no weekend gap protection) plus a genuine fresh geopolitical escalation (Iran ceasefire breakdown) and a sharply deepening semi-sector selloff threatening 6 core names, an urgent notification is warranted per Step 5 despite no hard-cut breach — the owner should know these are live going into Friday. Handoff to market-open: (1) recheck WDC/STX/MU/AMAT/LRCX/KLAC momentum-gate status live, don't assume pass or fail; (2) MNKD PDUFA — no action needed, already sized/documented, just monitor; (3) ORN now inside its catalyst window — evaluate with fresh bars if considering entry, mindful of earnings-proximity gap risk; (4) HPE and OCUL theses both intact. This week (Jul 20 start): core 0/6, satellite 0/4 — unchanged, valid per the Patience Rule.
