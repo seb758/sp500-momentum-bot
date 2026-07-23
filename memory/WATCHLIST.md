@@ -156,10 +156,12 @@ accordingly; a single AI-sector drawdown would hit most of this list at once.
   catalyst** beyond ORN/FSTR/TWIN. Per the Patience Rule, a focused list is a
   valid outcome — not forcing weaker names in.
 
-**2-strike sub-sector cooldown status:** NONE active. Zero satellite trades
-have been executed to date (account still at the Day-0 baseline), so neither
-biotech nor industrials is under a cooldown — both sub-sectors are open for new
-positions next week.
+**2-strike sub-sector cooldown status (updated 2026-07-23 11am):** NONE
+active — but **biotech is at strike 1 of 2** after OCUL's 15% trailing-stop
+exit today (2026-07-23, -15.23%, no thesis break — mechanical stop after a
+multi-session drift; see TRADE-LOG.md). One more consecutive losing biotech
+satellite trade triggers a 2-week new-entry cooldown in biotech. Industrials
+remains at 0 strikes, no satellite industrials trade executed yet.
 
 ## History
 
