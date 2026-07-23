@@ -451,3 +451,11 @@ sleeve. Tomorrow: GOOGL's after-close earnings tonight (7/22) is the key
 overnight read-through for the core AI-hardware cluster (HPE among
 others); continue tracking MNKD into its Jul 26 PDUFA (2 trading days
 left) and monitor OCUL's proximity to its -15% hard-cut.
+
+### 2026-07-23 — SELL OCUL (satellite) — trailing stop
+Shares: 753 | Exit: $8.383267 | Realized P&L: -$1,134.57 (-15.23%) | Reason: 15% GTC trailing stop filled automatically at 2026-07-23T13:51:58Z (9:51am ET), trail from hwm $9.865, trigger $8.38525. Filled before this 11am session ran — mechanical stop protection working as designed after several sessions of documented drift (no thesis break, no negative catalyst news; last check at 9:30am today had it at -13.55%, still short of the -15% hard-cut). First satellite loss realized this week; first biotech-sub-sector loss under the 2-strike cooldown tracker (strike 1 of 2 — cooldown not yet triggered, needs a second consecutive biotech loss).
+
+### 2026-07-23 — BUY SGOV (income) — sweep-back after satellite sell
+Shares: 64.102464718 | Entry: $100.62 | Stop: 5% trailing GTC on the combined 230-share round-lot position (fractional 0.102 sh left unprotected, immaterial ~$10.3), trigger $95.58425 (hwm $100.615) | Target: n/a | R:R: n/a
+Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
+Funding reason (income only): OCUL's stop-out freed cash to $25,871 (26.72% of $96,832.39 equity) vs. the 20% floor (~$19,366.48) — swept $6,450 (excess ~$6,504.52, left a ~$54 buffer) into SGOV. Post-sweep cash $19,421.01 = 20.06% of equity, at/above the floor. Canceled the standing 166-share 5% trailing stop and re-placed one 5% trailing GTC stop on the combined 230-share round-lot position (same cancel-then-replace pattern as prior sweeps).
