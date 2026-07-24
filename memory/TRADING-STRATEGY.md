@@ -90,13 +90,20 @@ workflow, Part C). Adjusted intraday/daily when:
 - A Core or Satellite position is sold: sweep the freed cash above the 20%
   floor back into the Income sleeve (SGOV first) at that session's
   close-out step.
-- A new Core or Satellite buy is being funded and literal cash (per
-  `alpaca.sh account`) is short of the order cost: sell just enough SGOV
-  (market, day) to cover the shortfall *before* placing the buy. **SGOV is
-  the only designated funding source for this — never SPHY or EDGX.**
-  Tapping SPHY/EDGX for buy funding would work against their yield purpose
-  and take real slippage given their much thinner quoted size. Log the
-  SGOV sale to TRADE-LOG.md like any other Income-sleeve trade.
+- A new Core or Satellite buy is being placed and **post-trade cash (literal
+  cash per `alpaca.sh account`, minus the order cost) would fall below the
+  20% floor:** sell enough SGOV (market, day) to keep cash at/above the
+  floor, *before* placing the buy. Check this pre-trade against the 20%
+  floor specifically — **not** merely whether literal cash is short of the
+  order cost outright. A buy that literal cash can fully cover can still
+  push post-trade cash below the floor; checking only "is cash short of the
+  order cost" misses that case and was the root cause of two real floor
+  breaches (2026-07-21 MNKD, 2026-07-24 MU) that had to be corrected
+  after the fact instead of prevented. **SGOV is the only designated
+  funding source for this — never SPHY or EDGX.** Tapping SPHY/EDGX for buy
+  funding would work against their yield purpose and take real slippage
+  given their much thinner quoted size. Log the SGOV sale to TRADE-LOG.md
+  like any other Income-sleeve trade.
 
 **Dividends:** all distributions from SGOV, SPHY, and EDGX reinvest into
 SGOV — not split pro-rata, not reinvested in the paying ticker.
