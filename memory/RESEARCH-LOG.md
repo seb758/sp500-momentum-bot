@@ -76,6 +76,12 @@ None. Six of 24 watchlist names (MU, WDC, STX, AMAT, LRCX, KLAC) have an unresol
 ### Decision
 **HOLD** (pre-market default; research-only, no trades this run). No held position is near its hard-cut (HPE in gain; MNKD +7.25% unrealized, well clear of -15%). No satellite catalyst has *verifiably* resolved — MNKD's PDUFA is still pending despite Gemini's unconfirmed claim, which is being treated as false pending real confirmation. Handoff to market-open: (1) do not treat MNKD as de-risked — re-verify PDUFA status from a primary source (MannKind IR page or an FDA release) before any position-sizing change; (2) recheck WDC/STX/MU/AMAT/LRCX/KLAC momentum-gate status live, momentum-gate section was lost to truncation; (3) HPE thesis intact, no action; (4) ORN inside its earnings catalyst window but still showing an illiquid spread — recheck before any entry. This week (Jul 20 start): core 0/6, satellite 1/4 (MNKD, no new trade — MNKD's entry was last week).
 
+### 9:30 AM Session Note
+- Recomputed the 6 deferred momentum-gate names from fresh Alpaca bars: MU/WDC/STX/AMAT now pass (above 50d/200d MA, positive 3M/6M rel. return vs SPY); LRCX/KLAC fail (both below 50-day MA). Of the passers, only MU had a tradeable spread (~0.7%) — WDC/STX/AMAT showed wide 6.5-10.2% spreads ~3-4 min after the open (thin opening-auction liquidity), so only MU traded. Bought 10 sh MU (core), 10% trailing stop placed. Core now 2/6 positions, 1/6 trades this week.
+- ORN's bid/ask spread was ~31% at market-open, its third straight session failing the liquidity check (07-21 through 07-24, each reading worse) despite sitting inside its Jul 28 earnings catalyst window — skipped again. Escalating this to Friday's weekly-review as a clear drop/deprioritize candidate.
+- Process gap: the MU buy was funded from literal cash instead of a pre-buy SGOV sweep, dropping cash to ~10.07% of equity — a real floor breach, corrected post-hoc by selling 96 sh SGOV (same issue as 7/21's MNKD entry). The market-open workflow should check "would post-trade cash fall below the 20% floor" *before* placing a Core/Satellite buy, not just "is literal cash short of the order cost" — recurring miss, worth fixing at the instruction level before it happens a third time.
+- MNKD's PDUFA remains unverified/pending (no primary-source confirmation found this window); held, no action. HPE thesis intact, no action.
+
 ## 2026-07-22 — Pre-market Research
 
 ### Account
