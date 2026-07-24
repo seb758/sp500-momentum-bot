@@ -512,3 +512,41 @@ Flag for review: the SGOV-first funding sweep should be checked *before* placing
 
 ### 2026-07-24 — SKIP ORN (satellite)
 No entry. Live quote bid $10.93/ask $15.00 — ~31% spread, same illiquid/wide-spread condition flagged 07-21 through 07-23 (now failed the liquidity check three sessions running, worse than the prior ~17-27% reads). Skipped per STEP 2 skip rule despite being inside its Jul 28 earnings catalyst window. Per pre-market's flag, this is now a standing pattern worth dropping/deprioritizing at Friday's weekly-review regardless of catalyst/momentum strength.
+
+## Jul 24 — 3pm Snapshot (Day 12, Friday)
+**Portfolio:** $96,385.55 | **Cash:** $19,416.04 (20.14%) | **Day P&L:** -$287.14 (-0.30%) | **Phase P&L:** -$3,614.45 (-3.61%)
+**Core exposure:** $19,032.75 (19.75% of equity) | **Satellite exposure:** $5,004.22 (5.19% of equity) | **Income exposure:** $52,929.05 (54.91% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 210 | $47.27 | $47.465 | -0.37% | +$40.95 (+0.41%) | 10% trailing ($44.712) |
+| MU | core | 10 | $966.531 | $906.51 | -8.45% | -$600.21 (-6.21%) | 10% trailing ($869.481) |
+| MNKD | satellite | 1215 | $4.00 | $4.1187 | +5.88% | +$144.22 (+2.97%) | 15% trailing ($3.5955) |
+| EDGX | income | 746 | $26.78 | $26.25 | +0.17% | -$395.38 (-1.98%) | 5% trailing ($25.479) |
+| SGOV | income | 134.102 | $100.591143 | $100.6388 | +0.03% | +$6.39 (+0.05%) | 5% trailing ($95.608) |
+| SPHY | income | 856 | $23.36 | $23.19 | -0.04% | -$145.52 (-0.73%) | 5% trailing ($22.2015) |
+
+**Notes:** One core trade this window's predecessor (9:30am BUY MU) and one income
+sweep (SELL SGOV, cash-floor restoration) already logged above; no "### Approved
+Trades (verified)" list existed anywhere in today's RESEARCH-LOG, so per STEP 3 the
+3pm buy side was HOLD — this week (Jul 20 start) stays at core 1/6 (MU), satellite
+1/4 (MNKD). Risk sweep: MU -6.21% is the closest any position has come to a
+hard-cut today (core cut -7%), but WebSearch confirms the drop tracks a broad
+semiconductor sector selloff (Micron -5.5% intraday sector-wide, not company
+news) — analysts maintain Strong Buy, Citigroup called the selloff a buying
+opportunity; momentum/FCF gate passed fresh this morning, no thesis break — held,
+no action. HPE +0.41% and MNKD +2.97% are both well clear of their cuts. All 6
+open positions confirmed carrying live GTC trailing stops via `alpaca.sh orders`,
+none missing. MNKD's PDUFA gap risk is resolved: the FDA approved FUROSCIX
+ReadyFlow Autoinjector this morning (independently confirmed via multiple primary
+sources at 11am), so no binary event risk remains into the weekend. No stop
+tightening this window — no position crossed a tightening threshold. No 2-strike
+sub-sector concern change (biotech still 1/2 from OCUL's 7/23 stop-out;
+industrials 0). Cash 20.14%, at/above the 20% floor, no funding sweep needed.
+Risky positions closed today: none. Day P&L (-0.30%) driven mainly by MU's
+sector-selloff-driven drift since this morning's entry, partly offset by
+HPE/MNKD gains; Income sleeve roughly flat to slightly negative. Tomorrow:
+monitor MU for further sector-wide semi weakness vs. a genuine thesis break
+(analysts still Strong Buy); no near-term satellite catalyst remains open
+(MNKD resolved); watch ORN's Jul 28 earnings and its now 3-session-running
+illiquid spread ahead of Friday's weekly-review screen refresh.
