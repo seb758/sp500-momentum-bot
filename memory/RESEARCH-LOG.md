@@ -31,6 +31,51 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-07-24 — Pre-market Research
+
+### Account
+- Equity: $97,460.85 | Cash: $19,420.87 (19.93%) | Buying power: $292,025.56 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload
+- Core exposure: $10,236.39 (10.50%, HPE) | Satellite exposure: $5,212.35 (5.35%, MNKD) | Income exposure: $62,591.25 (64.22%: EDGX $19,548.86 / SGOV $23,157.51 / SPHY $19,884.88)
+- Cash 19.93% is marginally below the 20% floor (~$68 short) — same-moment price-appreciation drift (HPE +2.32%, MNKD +7.25% unrealized) since the last touch, not a funding-shortfall breach; no buy placed. Not actionable pre-market — recheck at market-open/next rebalance touch per the "steady-state target, not instant-by-instant" rule.
+- All 5 open positions (HPE, MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing, no auth errors.
+
+### Data-quality note
+Gemini Deep Research **truncated again** — missing section 1 (opening S&P futures/VIX/economic-releases summary) and an entire semiconductor-detail section (AMD, MU, STX, WDC, TXN, AMAT, LRCX, KLAC all absent from the body; only referenced obliquely in the closing synthesis as "28% multiple compression in KLAC/AMAT/LRCX" — not corroborated, not used below). **HPE (a held core position) was also entirely absent** from the report. Filled VIX/futures and an HPE thesis check via native WebSearch fallback per the data-quality guard; did not fabricate any semiconductor-sector figure the truncated report didn't show.
+
+**Critical: MNKD FDA-approval claim is UNCONFIRMED, likely a Gemini fabrication.** Gemini's report stated the FUROSCIX ReadyFlow PDUFA decision was "Approved" (citing mannkindcorp.com). Four independent WebSearch checks (news search, stock-news search, direct site:investors.mannkindcorp.com search, PDUFA-specific search) found **no press release, no approval announcement, and no fresh MNKD news dated today** — every source still describes the decision as **pending**, target date July 26, 2026 (a Sunday), with H.C. Wainwright still calling it an "underappreciated catalyst" in the future tense as of the most recent indexed coverage. MannKind's own investor-relations press-release page shows no July 2026 releases at all. **Treating Gemini's "Approved" claim as false/hallucinated — MNKD's PDUFA remains unresolved.** This is a data-integrity failure on a live, real-money position, not just a truncation — flagging for owner attention and recommending the weekly review add a verification step (e.g., a second independent source or a Gemini self-consistency check) before ever acting on a Gemini-reported binary-catalyst resolution.
+
+### Market Context
+- **S&P futures/VIX (via WebSearch fallback):** ES +0.2%, Dow +0.5%, Nasdaq +0.1% — tentative recovery attempt after Thursday's megacap-tech-led selloff. VIX 18.83 (+0.70%), not spiking. Backdrop: new round of tariffs took effect today, alongside AI-capex jitters, rising oil, and elevated bond yields.
+- **Cybersecurity rotation (CRWD, PANW, FTNT, DDOG — core watchlist):** capital rotating out of expensive semi-hardware into cybersecurity software. CRWD announced a Cerebras partnership for AI-accelerated threat detection (called a "watershed moment" for enterprise security spend); PANW/FTNT both near all-time highs, FTNT's Jul 29 earnings has options pricing in a ~12% move (has exceeded implied vol in 4 of its last 8 prints). DDOG downgraded to Hold at Jefferies overnight but PT raised to $280 — valuation call, not a fundamental cut.
+- **Energy/refining (VLO, MPC — core watchlist):** 3-2-1 crack spread hit an all-time-high ~$70/bbl overnight on Mideast supply disruption (Strait of Hormuz tension) — exceeds even 2022's energy-crisis peak. VLO hit a 52-week high $309.90 (+20% in July), announced a fresh $5B buyback. MPC +24% in July, best month since 2021. Both names' theses look intact/strengthening.
+- **Hardware/infra (DELL, GLW, MRVL, CSCO — core watchlist):** DELL had crashed 11% earlier this week on enterprise-spend concerns but is insulated by a new $9.7B/5yr DoW software-cloud contract, +9% pre-market in sympathy with SMCI. GLW -3.45% on soft display/telecom guidance despite an NVIDIA optical-connectivity partnership; options market pricing a wide ±9.48% move today. MRVL hit a record high $329.88 on S&P 500 index inclusion + KeyBanc PT raise to $385. CSCO showing elevated options IV (37.27%) into today.
+- **Status quo, no material news** for STX, WDC, DVA, NTAP, CNC, CAT, GEV (core watchlist) — theses unchanged, momentum-gate status not rechecked live this run (semis section lost to truncation; defer to market-open live-bar check as in prior sessions).
+
+### Held-Position Thesis Check
+- **HPE (core):** +3.02% to $48.13 on continued AI/federal momentum — DoE Genesis Mission R&D selection, a new Vultr+NVIDIA AI-datacenter deployment win, and a Qblox quantum-computing testbed collaboration. No adverse news. Thesis intact, no action.
+- **MNKD (satellite) — top item, see Data-quality note above.** PDUFA decision remains PENDING despite Gemini's unconfirmed "Approved" claim — do not act on that claim. Target date Jul 26 (Sunday) means the decision could still land after today's close or Monday pre-market; today is the last trading session before the weekend gap with no stop protection. Position already sized/documented at the 5% binary-catalyst cap since entry — holding through remains the only valid action; nothing changes that calculus absent a *verified* resolution.
+- **EDGX/SGOV/SPHY (income):** no thesis-breaking news; ballast role unaffected by the equity-side rotation.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. Six of 24 watchlist names (MU, WDC, STX, AMAT, LRCX, KLAC) have an unresolved momentum-gate question carried over from 07-23's selloff, and this run's semiconductor detail was lost to truncation — no live-bar recheck possible pre-market. Per the Patience Rule and "don't invent candidates," no new core idea clears today without that recheck; defer to market-open.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — see Held-Position Thesis Check. No new entry; monitor only.
+2. **ORN** — Q2 earnings confirmed Jul 28 (2 trading days out, inside the 5-day window); no material overnight news, thesis (backlog + infrastructure exposure) unchanged. Not held. Note: this name's quote has shown an illiquid ~17% bid/ask spread on the last two checks (7/21, 7/23) — recheck liquidity fresh at market-open before considering any entry this close to earnings.
+3. **RIGL, FSTR, TWIN** — no material overnight news, no catalyst inside the 5-day window. No action.
+4. **OCUL** — no longer held (stopped out 7/23); no near-term catalyst per Gemini. No action.
+
+### Risk Factors
+- **MNKD's PDUFA remains pending, not approved** — Gemini's contrary claim is unconfirmed and should not be acted on (see Data-quality note). This is the single largest live event-risk on the book going into the weekend gap.
+- Gemini Deep Research truncation continues (missing sections + a full HPE omission) and, for the first time, appears to have **fabricated a specific binary-outcome fact** rather than just dropping content — a step up in severity from prior sessions' pure-truncation issue; worth a fix (second-source verification, or splitting the query) at the next weekly review.
+- Cash at 19.93%, marginally below the 20% floor from same-moment price drift, not a funding action — watch at next rebalance touch, not urgent.
+- 6 of 24 core watchlist names carry an unresolved momentum-gate question from the 07-23 semi selloff — needs a live-bar recheck at market-open.
+- ORN's bid/ask spread has now failed the liquidity check twice running — same standing note as 07-23, worth dropping/deprioritizing at the next screen refresh regardless of catalyst strength.
+- FTNT's Jul 29 earnings (not held, watchlist only) carries an unusually large implied move (~12%) — watch item for the core list, not actionable today.
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). No held position is near its hard-cut (HPE in gain; MNKD +7.25% unrealized, well clear of -15%). No satellite catalyst has *verifiably* resolved — MNKD's PDUFA is still pending despite Gemini's unconfirmed claim, which is being treated as false pending real confirmation. Handoff to market-open: (1) do not treat MNKD as de-risked — re-verify PDUFA status from a primary source (MannKind IR page or an FDA release) before any position-sizing change; (2) recheck WDC/STX/MU/AMAT/LRCX/KLAC momentum-gate status live, momentum-gate section was lost to truncation; (3) HPE thesis intact, no action; (4) ORN inside its earnings catalyst window but still showing an illiquid spread — recheck before any entry. This week (Jul 20 start): core 0/6, satellite 1/4 (MNKD, no new trade — MNKD's entry was last week).
+
 ## 2026-07-22 — Pre-market Research
 
 ### Account
