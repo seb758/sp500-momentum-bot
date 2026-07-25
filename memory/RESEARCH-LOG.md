@@ -31,6 +31,56 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-07-25 — Pre-market Research
+
+### Account
+- Equity: $96,553.80 | Cash: $19,416.01 (20.11%) | Buying power: $289,635.48 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload
+- Core exposure: $19,224.40 (19.91%: HPE $10,014.90 / MU $9,209.50) | Satellite exposure: $5,017.95 (5.20%, MNKD) | Income exposure: $52,895.44 (54.78%: EDGX $19,557.29 / SGOV $13,496.07 / SPHY $19,842.08)
+- Cash 20.11% is at/above the 20% floor — no funding sweep needed.
+- All 6 open positions (HPE, MU, MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing, no auth errors.
+
+### Data-quality note
+Gemini's report was not truncated this time (clean opening heading, complete Sources list, no mid-word cutoff) — first run of the two submitted this session was reviewer error (piped through `tail -c 20000` locally, discarding the opening third of the report before it could be logged; re-submitted and captured the full report on the second attempt). However, the report never states an explicit VIX print or S&P futures %, despite being asked for both — filled that specific gap via WebSearch fallback below rather than inventing a number. One WebSearch fallback query returned a result badged "7 25 25" describing S&P/Nasdaq at fresh record highs — that source is either mis-dated or from July 2025, and it flatly contradicts Gemini's internally consistent, specifically-2026-dated narrative (Dell's $9.69B DoD contract, IBM's earnings-driven guidance cut, Alphabet/Tesla capex commentary) corroborated across both of today's Gemini runs. Discarding that WebSearch result as unreliable rather than using it.
+
+### Market Context
+- **VIX/futures (WebSearch fallback, moderate confidence):** VIX futures trading ~18.8-19.5, technicals reading neutral — not a spike level. No reliable premarket S&P/Dow/Nasdaq % found for today specifically; not fabricating one.
+- **Macro backdrop (Gemini, corroborated across both runs):** 10-year Treasury yield ~4.7% (closed last week at 4.683%); crude oil near $100/bbl on Mideast (Iran-linked) supply risk; new 12.5% global tariffs took effect; S&P 500 support watched around 7,300-7,400. Today's PCE inflation print is a live risk — a hot print would lock in a "higher for longer" Fed stance.
+- **"Budget cannibalization" theme (new, sector-wide):** IBM's overnight profit warning (~25% earnings plunge per Gemini) is being read as confirmation that enterprise IT budgets are shifting from traditional hardware to cybersecurity/AI software. Rotating capital into CRWD/PANW/FTNT (all core watchlist), out of semis/storage/enterprise hardware (AMD, AMAT, WDC, STX, NTAP, HPE).
+- **Semiconductor/AI-hardware rout:** driven by Alphabet/Tesla earnings-call commentary on ballooning AI capex with vague profitability timelines. AMD, AMAT, WDC, STX under heavy distribution (WDC ~$532-560, STX ~$827-910, AMAT ~$554-562 per Gemini's snapshot ranges — not independently verified against Alpaca bars pre-market; live-bar recheck needed at market-open as usual). DDOG down ~3.3% to ~$244-246 on the same rotation, though a Jefferies downgrade there was a valuation call, not a fundamental cut.
+- **Dell (DELL, core, not held):** won a 5-year, $9.69B DoD blanket purchase agreement for Microsoft licensing/cloud (via Dell Federal Systems) — shares reportedly up to +7% after-hours. Structural margin defense against the memory-cost pressure flagged in recent weeks.
+- **Energy (VLO/MPC, core, not held):** dual-edged — near-$100 oil supports refining margins but also risks compressing demand; no change to prior-week thesis direction, watch crack spreads at market-open.
+- **No idiosyncratic overnight news** for CNC, DVA, CVS, ABBV, LLY, DOC, WST, BBY, URI, GE — all tracking macro/rate-sensitivity themes only per Gemini.
+
+### Held-Position Thesis Check
+- **MNKD (satellite, held):** Thesis strongly reinforced, not just intact. FDA approved Furoscix ReadyFlow on 07-24 (ahead of the 07-26 PDUFA target), consistent with yesterday's independently-verified 11am resolution already in TRADE-LOG.md. New detail from today's report: MannKind simultaneously closed a $50M PIPE (Frazier Life Sciences-led) to fund the $45M CVR payment triggered by approval — balance-sheet overhang addressed, FY revenue outlook ($110-120M) reaffirmed. H.C. Wainwright reiterated a $10 PT. No action; catalyst window closed, this is now a commercial-execution story per the watchlist's own framing.
+- **MU (core, held):** Thesis intact despite the sector-wide semi rout — Gemini flags MU showing relative strength (+3.5%) while peers fell, and cites Dell's memory-cost commentary as third-party validation of MU's pricing power. Account shows MU at -4.72% unrealized (cost $9,665.31 → mkt $9,209.50), consistent with sector drag rather than a name-specific break — same read as the past two sessions' notes on MU. Not near the -7% core cut. No action; live momentum-gate recheck still needed at market-open as usual.
+- **HPE (core, held):** New caution flag, not a thesis break. IBM's profit warning is being read market-wide as evidence of budget rotation away from traditional enterprise hardware — HPE is directly exposed as a legacy IT/storage vendor. No explicit HPE-specific bad news; position is +0.89% unrealized (cost $9,926.70 → mkt $10,014.90), nowhere near the -7% cut. Watch item for market-open/midday, not an action item pre-market.
+- **EDGX (income, held):** No idiosyncratic news; macro-dependent on broad index stability, watch the ~7,300-7,400 S&P support zone Gemini flagged.
+- **SGOV (income, held):** Thesis strengthened — benefits mechanically from the 10Y yield near 4.7% via higher front-end rates while principal stays insulated by ultra-short duration.
+- **SPHY (income, held):** New vulnerability flag. High-yield credit is exposed to both rising base rates (squeezes issuer interest coverage) and slowdown fears (from $100 oil + new tariffs), which widen credit spreads. Gemini calls for a "review... if today's PCE prints hot." Not an action item pre-market (no position-specific loss trigger hit), but the single risk factor most worth re-checking after this morning's PCE release.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. Semiconductor/storage momentum-gate status (MU already held; WDC, STX, AMAT, NTAP unresolved) needs a fresh Alpaca-bar recheck at market-open given the overnight sector rout described above — no new entry invented pre-market. Cybersecurity names (CRWD, PANW, FTNT) are showing relative strength on the rotation theme but none is a fresh idea today; FTNT already carries an outsized ~12% earnings-implied move into its Jul 29 print (see Risk Factors) — not a pre-market entry candidate regardless.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — see Held-Position Thesis Check. Catalyst resolved; no new entry, monitor only.
+2. **CVLG** — Q2 2026 earnings confirmed July 29 after close (3 trading days out, inside the 5-day window). Not held. Prior Q1 missed on weather/fuel costs ($0.26 vs $0.35 est.); management guided to sequential H2 improvement; stock at a 52-week high ($49.37) heading in, trailing P/E >320x — priced for a clean beat, real gap risk either direction. Per WATCHLIST.md this is an earnings catalyst (not FDA/regulatory), so the standard 7.5% cap would apply, not the tightened 5% binary cap, if entered. No pre-market entry — defer to a live momentum/spread recheck at market-open, this close to a binary print.
+3. **RIGL** — no overnight news; Q2 earnings now estimated ~Aug 4 (7 trading days out), outside the 5-day window. No action.
+4. **FSTR** — no overnight news; Q2 earnings now estimated ~Aug 10 (previously logged as "early August" — narrowing slightly), outside the 5-day window. No action.
+5. **CGEM** — update: Gemini now reports a specific PDUFA target action date of **Feb 27, 2027** for the zipalertinib NDA — this resolves last week's "unconfirmed/inconsistent timing" flag on WATCHLIST.md. Far outside any near-term window; no longer an imminent-but-unverified watch item, just a distant date. No action.
+
+### Risk Factors
+- **VIX/futures level not reliably confirmed this session** — Gemini's report never stated one despite being asked; the one WebSearch fallback result returned looks mis-dated (badged 7/25/25, describing record highs that contradict Gemini's selloff narrative) and was discarded rather than used. Best available read: VIX futures ~18.8-19.5 (neutral), a broad but not panicked risk-off tone per Gemini's qualitative description.
+- **HPE budget-cannibalization exposure (new today)** — IBM's profit warning is being read as a sector-wide signal that enterprise hardware spend is losing share to cybersecurity/AI software. Not a thesis break (HPE is in gain, no company-specific bad news), but worth tracking for confirmation or reversal over the next few sessions.
+- **SPHY rate/credit sensitivity (new today)** — vulnerable to today's PCE print; a hot number would pressure high-yield spreads. Watch post-PCE, not urgent pre-market.
+- **Sector-wide semi/storage rout** — MU (held), plus watchlist names WDC/STX/AMAT/NTAP, need a live momentum-gate recheck at market-open; Gemini's price ranges are unverified snapshots, not Alpaca bars.
+- **FTNT earnings, Jul 29 (not held, watchlist only)** — options pricing in a ~12% move; the name has exceeded implied vol in prior prints. Watch item, not actionable pre-market.
+- **CVLG earnings, Jul 29 (not held, satellite watchlist)** — inside the 5-day window, 320x trailing P/E leaves no margin for a miss. See Satellite Trade Ideas above.
+- Reviewer process note: the first Gemini call this session was accidentally truncated locally (piped through `tail -c 20000`) before being logged — caught before writing anything to this file, re-run in full. No downstream contamination, but flagging so the habit doesn't repeat.
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). No held position is near its hard-cut (HPE +0.89%, MU -4.72% — both well inside the -7% core cut; MNKD +3.25%, well clear of -15%). No satellite catalyst resolved negatively — MNKD's is fully resolved positive (already known as of yesterday, reinforced by new PIPE-financing detail today). No fresh single geopolitical shock beyond the standing, already-known oil/tariff/yield backdrop. Per STEP 5, none of this rises to an urgent pre-market notification — staying silent. Handoff to market-open: (1) recheck WDC/STX/AMAT/NTAP momentum-gate status live given the overnight sector rout; (2) CVLG (satellite, not held) is inside its Jul 29 earnings window — evaluate with a fresh quote/spread check before any entry, standard 7.5% cap applies if entered; (3) HPE and SPHY both carry new (non-actionable) watch flags from today's research — recheck at midday/3pm for confirmation; (4) MU thesis intact despite sector drag, no action. This week (Jul 20 start): core 1/6 (MU), satellite 1/4 (MNKD) — unchanged, no trades executed pre-market by design.
+
 ## 2026-07-24 — Pre-market Research
 
 ### Account
