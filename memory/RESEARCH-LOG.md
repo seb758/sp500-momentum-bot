@@ -99,6 +99,13 @@ None. The deepening semi/AI-hardware sector rout puts MU's (held) and several wa
 - No sharp unexplained moves this window beyond MU (fully explained by the ongoing sector rout) — no ad-hoc Gemini call needed per STEP 7.
 - **Lesson for Friday's review:** second consecutive week a held core position has stopped out mechanically mid-session on sector-wide (not company-specific) drawdown (MU today, following the semis rout pattern flagged since 7/23). Worth discussing at the weekly review whether the semis/AI-hardware sector-concentration cap (currently 8/25 names, 32%) is tight enough given how correlated the drawdowns are, or whether it's simply mechanical-stop-as-designed and no change is needed.
 
+### 3 PM Session Note
+- **No "### Approved Trades (verified)" section exists in today's log** (only the 9:30 AM and 11 AM Session Notes) — per STEP 3, no buys placed this window. HOLD on new entries. This week (Jul 27 start) stays at core 0/6, satellite 0/4.
+- **Risk sweep: no closes needed.** All 5 open positions (HPE, MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing. No core/satellite position near its hard-cut (HPE +0.67% unrealized, MNKD +1.50%). Fresh WebSearch on HPE and MNKD found no adverse news since 11am (HPE: Paul Singer top-pick mention, Buy-rated, $64 PT — positive; MNKD: no new developments beyond the already-resolved 7/24 Furoscix approval) — both theses intact, nothing closed. No satellite catalyst inside the 1-2 trading-day gap-risk window (MNKD's PDUFA fully resolved 7/24; no other satellite name held). No stop tightening this window — neither HPE (+0.67%, well below +15%) nor MNKD (+1.50%, well below +25%) crossed a tightening threshold. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- **Cash 20.10%, at/above the 20% floor** (unchanged since the 11am SGOV sweep-back) — no funding sweep needed this window.
+- Risky positions closed today: none this window (MU's mechanical stop-out and the SGOV sweep-back both already happened before 11am and are logged above).
+- Day P&L -0.52% ($95,885.60 vs $96,385.55 Jul 24 3pm close), driven mainly by the mechanical MU stop-out earlier today plus modest income-sleeve drift (EDGX -2.45% unrealized, SPHY -0.66%), partly offset by HPE/MNKD gains. Pattern for Friday's review: same as the 11am note — second consecutive week a held core position stopped out mid-session on sector-wide (not company-specific) drawdown; worth revisiting the semis/AI-hardware concentration cap.
+
 ## 2026-07-26 — Pre-market Research
 
 ### Account

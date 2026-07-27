@@ -561,3 +561,41 @@ Shares: 10 | Exit: $869.37 | Realized P&L: -$971.61 (-10.05%) | Reason: 10% GTC 
 Shares: 87.900477634 | Entry: $100.619252 (notional $8,836.88) | Stop: 5% trailing GTC on the whole-share portion (221 of 221.900477634 total sh), trigger $95.6175 (hwm $100.65); 0.900 fractional sh left unprotected, immaterial (~$90.60) | Target: n/a | R:R: n/a
 Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
 Funding reason (income only): MU's mechanical stop-out (see above) freed cash to $28,109.71 (29.32% of $95,864.13 equity) vs. the 20% floor (~$19,172.83) — swept $8,836.88 (excess ~$8,936.88, left a ~$100 buffer) into SGOV. Post-sweep cash $19,272.84 = 20.10% of equity ($95,887.00). Canceled the standing 134-share 5% trailing stop and re-placed one 5% trailing GTC stop on the 221 whole shares of the combined position (same cancel-then-replace pattern as the 7/23 and 7/24 sweeps).
+
+## Jul 27 — 3pm Snapshot (Day 13, Monday)
+**Portfolio:** $95,885.60 | **Cash:** $19,272.84 (20.10%) | **Day P&L:** -$499.95 (-0.52%) | **Phase P&L:** -$4,114.40 (-4.11%)
+**Core exposure:** $9,992.85 (10.42% of equity) | **Satellite exposure:** $4,932.90 (5.15% of equity) | **Income exposure:** $61,687.01 (64.35% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 210 | $47.27 | $47.585 | -0.22% | +$66.15 (+0.67%) | 10% trailing ($44.712) |
+| MNKD | satellite | 1215 | $4.00 | $4.06 | -1.70% | +$72.90 (+1.50%) | 15% trailing ($3.5995) |
+| EDGX | income | 746 | $26.78 | $26.125 | -0.35% | -$488.63 (-2.45%) | 5% trailing ($25.479) |
+| SGOV | income | 221.900 | $100.619252 | $100.65 | +0.01% | +$6.82 (+0.03%) | 5% trailing ($95.6175) |
+| SPHY | income | 856 | $23.36 | $23.205 | +0.11% | -$132.68 (-0.66%) | 5% trailing ($22.2015) |
+
+**Notes:** MU's mechanical 10% trailing-stop loss (-$971.61, -10.05%) and the
+SGOV sweep-back both already happened before 11am today and are logged above;
+no "### Approved Trades (verified)" list existed anywhere in today's
+RESEARCH-LOG (pre-market, 9:30am, 11am, and 3pm all returned zero qualifying
+ideas), so per STEP 3 the buy side was HOLD all session — this week (Jul 27
+start) stays at core 0/6, satellite 0/4. Risk sweep: HPE +0.67% and MNKD
++1.50% both well clear of their -7%/-15% hard-cuts; all 5 open positions
+confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none
+missing. Fresh WebSearch found no adverse news on HPE (Paul Singer top-pick
+mention, Buy consensus, $64.13 PT) or MNKD (no new developments beyond the
+already-resolved 7/24 Furoscix approval) since 11am — both theses intact,
+nothing closed. No satellite catalyst inside the 1-2 trading-day gap-risk
+window (MNKD's PDUFA fully resolved 7/24). No stop tightening this window —
+neither position crossed a tightening threshold. 2-strike sub-sector tracker
+unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.10%, at/above the
+20% floor, no funding sweep needed. Risky positions closed today: none this
+window (MU's stop-out and SGOV sweep predate this session, already logged).
+Day P&L (-0.52%) driven mainly by the earlier mechanical MU stop-out plus
+modest income-sleeve drift (EDGX -2.45%, SPHY -0.66%), partly offset by
+HPE/MNKD gains. Phase P&L now -4.11% since Day 0 ($100,000 -> $95,885.60).
+Tomorrow: monitor for a genuine thesis break vs. continued sector-wide semi
+drift (no held core semis names remain after MU's exit); no near-term
+satellite catalyst open; revisit the semis/AI-hardware sector-concentration
+cap and the two-week-running mechanical-stop pattern at Friday's weekly
+review.
