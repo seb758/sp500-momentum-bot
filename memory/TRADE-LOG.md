@@ -553,3 +553,11 @@ monitor MU for further sector-wide semi weakness vs. a genuine thesis break
 (analysts still Strong Buy); no near-term satellite catalyst remains open
 (MNKD resolved); watch ORN's Jul 28 earnings and its now 3-session-running
 illiquid spread ahead of Friday's weekly-review screen refresh.
+
+### 2026-07-27 — SELL MU (core)
+Shares: 10 | Exit: $869.37 | Realized P&L: -$971.61 (-10.05%) | Reason: 10% GTC trailing stop filled automatically at 2026-07-27T14:26:22Z (10:26am ET), trail from hwm $966.09, trigger $869.481. Filled before this 11am session ran — mechanical stop protection working as designed; continuation of the sector-wide semi/AI-hardware rout flagged across pre-market and the 9:30am note (no company-specific negative catalyst, analysts still Strong Buy, forward P/E ~5.7x). Fill price came in slightly below the $869.481 trigger (normal slippage). First core loss realized this week; core has no 2-strike sub-sector cooldown rule (satellite-only).
+
+### 2026-07-27 — BUY SGOV (income) — sweep-back after core sell
+Shares: 87.900477634 | Entry: $100.619252 (notional $8,836.88) | Stop: 5% trailing GTC on the whole-share portion (221 of 221.900477634 total sh), trigger $95.6175 (hwm $100.65); 0.900 fractional sh left unprotected, immaterial (~$90.60) | Target: n/a | R:R: n/a
+Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
+Funding reason (income only): MU's mechanical stop-out (see above) freed cash to $28,109.71 (29.32% of $95,864.13 equity) vs. the 20% floor (~$19,172.83) — swept $8,836.88 (excess ~$8,936.88, left a ~$100 buffer) into SGOV. Post-sweep cash $19,272.84 = 20.10% of equity ($95,887.00). Canceled the standing 134-share 5% trailing stop and re-placed one 5% trailing GTC stop on the 221 whole shares of the combined position (same cancel-then-replace pattern as the 7/23 and 7/24 sweeps).
