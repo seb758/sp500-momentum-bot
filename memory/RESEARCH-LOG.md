@@ -91,6 +91,14 @@ None. The deepening semi/AI-hardware sector rout puts MU's (held) and several wa
 - **MU (core, held) — thesis check only, no action.** Sector rout continues but no company-specific negative news; -4.68% unrealized (cost $9,665.31 → mkt $9,213.20), well clear of the -7% hard-cut. No new momentum-gate computation needed for an already-held position outside the risk-sweep window.
 - **Pattern worth flagging for Friday's review:** this is now three consecutive sessions (7/24, and today across both the semis cluster and CVLG) where the binding constraint on real candidates has been thin opening-auction liquidity rather than the fundamentals/momentum screen itself. Worth discussing whether market-open should wait a few extra minutes past 9:30 before pulling quotes on lower-liquidity names, or keep the current behavior (skip and log, retry next window).
 
+### 11 AM Session Note
+- **No "### Approved Trades (verified)" section exists in today's log** (only the 9:30 AM Session Note) — per STEP 3, no buys placed this window. HOLD on new entries. This week (Jul 27 start) stays at core 0/6, satellite 0/4.
+- **MU (core) stopped out mechanically at 10:26am ET, before this window ran** — 10% GTC trailing stop filled at $869.37 (-10.05%, -$971.61 realized), continuing the sector-wide semi/AI-hardware rout flagged pre-market and at 9:30am. No company-specific negative news; analysts still Strong Buy (fwd P/E ~5.7x). Logged to TRADE-LOG. Core has no 2-strike sub-sector cooldown (satellite-only), so no cooldown implication.
+- **Income sweep-back executed:** MU's exit freed cash to 29.32% of equity, well above the 20% floor — swept $8,836.88 into SGOV (notional buy), leaving a ~$100 buffer over the floor (post-sweep cash 20.10%). Canceled and re-placed the SGOV trailing stop on the combined 221 whole shares (5%); 0.900 fractional sh left unprotected per the standing fractional-share stop limitation, immaterial (~$91).
+- **HPE (core, held) and MNKD (satellite, held) — thesis checks pass, no action.** HPE -0.06% unrealized, MNKD +0.75%; neither near a hard-cut or tightening threshold, no adverse news since 9:30am. All 5 remaining positions (HPE, MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders` after the SGOV re-place.
+- No sharp unexplained moves this window beyond MU (fully explained by the ongoing sector rout) — no ad-hoc Gemini call needed per STEP 7.
+- **Lesson for Friday's review:** second consecutive week a held core position has stopped out mechanically mid-session on sector-wide (not company-specific) drawdown (MU today, following the semis rout pattern flagged since 7/23). Worth discussing at the weekly review whether the semis/AI-hardware sector-concentration cap (currently 8/25 names, 32%) is tight enough given how correlated the drawdowns are, or whether it's simply mechanical-stop-as-designed and no change is needed.
+
 ## 2026-07-26 — Pre-market Research
 
 ### Account
