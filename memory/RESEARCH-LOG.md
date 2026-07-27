@@ -31,6 +31,57 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-07-27 — Pre-market Research
+
+### Account
+- Equity: $97,147.87 | Cash: $19,416.01 (19.99%) | Buying power: $291,327.85 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $19,763.20 (20.35%: HPE $10,268.20 / MU $9,495.00) | Satellite exposure: $4,981.74 (5.13%, MNKD) | Income exposure: $52,986.92 (54.55%: EDGX $19,557.29 / SGOV $13,497.41 / SPHY $19,932.22)
+- Cash 19.99% — a hair under the 20% floor. Not treated as a breach (no buy this window, steady-state re-check point per TRADING-STRATEGY.md, not an instant-by-instant constraint) but the buffer is thin; flag for market-open — any new buy today must re-check post-trade cash against the floor before sizing, not just literal-cash-vs-order-cost.
+- All 6 open positions (HPE, MU, MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing, no auth errors.
+- New week starts today (Jul 27): core 0/6, satellite 0/4 (last week, Jul 20 start, closed at core 1/6 [MU], satellite 1/4 [MNKD]).
+
+### Data-quality note
+Gemini's report again started mid-document — opened directly on a "Semiconductors and Hardware Infrastructure" subsection with no preceding Part I/II ever returned (no explicit S&P 500 futures level or VIX print), despite being asked for both. Not fabricating a number from the missing section. The report's own "Strategic Synthesis" section gives direction only (futures gapping higher, vol term structure normalizing into contango on the Iran de-escalation) with no point-figures. Backfilled via WebSearch: VIX ~18.58, S&P 500 ~7,411.98, VIX futures ~19.99-20.10. Flagging low confidence — the 18.58 VIX print exactly matches Friday 7/24's already-logged close (see 7/26 entry), so this is likely a stale/cached read rather than a genuine Monday pre-market number, not a fresh independent data point. Treat market-open's live print as authoritative, not this figure.
+
+### Market Context
+- **Geopolitical de-escalation (Gemini):** US-Iran ceasefire holding/de-escalating overnight, sending crude oil down sharply (WTI/Brent -4% to -8%) and permitting a broad equity-futures gap higher with vol normalizing into contango — a reversal of the Iran-escalation risk-off backdrop flagged repeatedly in the 7/22-7/24 entries. Positive for broad risk sentiment, negative near-term for MPC/VLO (crack-spread compression, inventory write-down risk on the speed of the drop, even though lower crude is a medium-term positive).
+- **Semiconductor/AI-hardware rout deepening, sector-wide:** AMAT -26.7% in July, MU -26.5% in July (still +197% YTD, forward P/E only 5.7x — cheap, not a fundamental break), WDC -25.4% in July, AMD -5.35% off recent highs. Hyperscaler capex-ROI anxiety (Google's negative FCF print cited as the trigger) is the driver, not company-specific news. This threatens momentum-gate status for MU (held), plus WDC/STX/AMAT/NTAP/DELL on the core watchlist — needs a live-bar recheck at market-open, not assumed pass/fail, consistent with the recurring flag from prior sessions.
+- **Cybersecurity divergence:** PANW flagged for margin compression from elevated memory component costs (hardware-reliant); CRWD getting price-target upgrades as the cloud-native beneficiary of the same rotation. Watchlist names, neither held.
+- **DELL (core, not held) — fresh positive catalyst:** a 5-year, $9.7B DoD contract for software/cloud infrastructure, diversifying revenue away from pure enterprise AI. Earnings ahead ($2.96 EPS / $35.7B revenue consensus); gross-margin scrutiny expected given memory-cost pressure.
+- **ABBV (core, not held):** declined 7 consecutive sessions on a mid-July guidance cut (FY26 adjusted EPS to $13.91-$14.11) — driven entirely by a $291M IPR&D/milestone charge tied to the proposed $10.9B Apogee Therapeutics acquisition, not core-business deterioration. Reports Jul 31 (outside the 5-day window, not a core buy signal today).
+- **LLY (core, not held):** showing relative strength, a beneficiary of the defensive rotation into healthcare (also lifting CNC, HUM, DVA per Gemini).
+- **Durable goods orders today; Q2 GDP/PCE inflation data upcoming** — flagged as live catalysts for BBY/URI (both watchlist, not held).
+- No idiosyncratic overnight news for CVS, DOC, WST, GE beyond the sector/macro themes above.
+
+### Held-Position Thesis Check
+- **HPE (core, held):** No adverse news; Gemini reads HPE as benefiting (not hurt) from the hardware-infrastructure side of the AI buildout — server-backlog read-through intact. Thesis holds, no action.
+- **MU (core, held):** Caught in the sector-wide semi rout (-26.5% July) but no company-specific negative catalyst — YTD +197%, forward P/E 5.7x, consistent with the "cheap on fundamentals, dragged by sector sentiment" read from prior sessions. -1.76% unrealized (cost $9,665.31 → mkt $9,495.00), nowhere near the -7% cut. Momentum-gate status needs a live recheck at market-open given the deepening drawdown, per the recurring flag.
+- **MNKD (satellite, held):** Catalyst fully resolved (FUROSCIX ReadyFlow FDA-approved 7/24). Gemini confirms no further binary event risk — focus now on commercial rollout (late August 2026) and deployment of the $50M PIPE raised to fund the CVR payment. Thesis intact/reinforced, no action. +2.5% unrealized.
+- **EDGX (income, held):** No idiosyncratic news; no thesis-breaking development.
+- **SGOV (income, held):** No thesis-breaking news; Gemini notes continued heavy institutional inflows into ultra-short T-bill vehicles as investors wait out the FOMC/GDP data — consistent with its role as the sleeve's liquidity base.
+- **SPHY (income, held) — standing caution, not new:** Gemini reiterates the tight ~267bps OAS credit spread leaves little cushion against a slowdown/rate shock; flagged repeatedly in prior sessions, still a weekly-review-cadence discussion item, not a pre-market action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. The deepening semi/AI-hardware sector rout puts MU's (held) and several watchlist names' (WDC, STX, AMAT, NTAP, DELL) momentum-gate status in real question — not assumed failed, needs a live-bar recheck at market-open per the recurring pattern. DELL's fresh $9.7B DoD contract is a positive data point, not a pre-market entry signal (no live quotes today). No new core candidate clears pre-market given this much sector uncertainty.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — see Held-Position Thesis Check. Catalyst resolved; no new entry, monitor only.
+2. **CVLG** — Q2 2026 earnings confirmed Jul 29 after close, 2 trading days out — inside the 5-trading-day window (Gemini confirms this is the only satellite name currently inside its window). Not held. Consensus EPS $0.42 vs a Q1 miss ($0.26 vs $0.35 est.); a recent "Overweight" resumption of coverage is a positive data point. No pre-market entry — defer to a live momentum/spread recheck at market-open, this close to a binary print; standard 7.5% cap applies (earnings catalyst, not FDA/regulatory) if entered.
+3. **RIGL** — not held. Q2 earnings Aug 4-5 (6-7 trading days out) — just outside the 5-day window. Q1 EPS miss but stock reacted positively (+2.4%) on R289 pipeline optionality; FY26 revenue guidance ($275-290M) reaffirmed. No action today.
+4. **FSTR** — not held. Q2 earnings Aug 10 (10 trading days out), outside the window. Q1 beat (EPS $0.14 vs -$0.22 est.) already in the rearview. No action.
+5. **CGEM** — not held. Gemini now gives a clean, specific PDUFA date for zipalertinib: Feb 27, 2027 — resolving the internally-inconsistent timing flagged on the current watchlist entry. This is far outside any near-term window (>100 trading days); no longer even an imminent-but-unverified case. No action; update WATCHLIST.md's catalyst-date note at the next screen refresh.
+
+### Risk Factors
+- Gemini's report structurally truncated again (missing Part I/II, no direct VIX/futures print) — same recurring pattern flagged across prior sessions; WebSearch backfill used but flagged low-confidence (likely a stale/cached VIX read, not a fresh Monday number).
+- Semiconductor/AI-hardware sector rout deepening (AMAT/MU/WDC all down 25%+ in July) — real threat to MU's (held) and several watchlist names' momentum-gate status; needs live-bar confirmation at market-open, not acted on pre-market either way.
+- Cash at 19.99%, just under the 20% floor — thin buffer; any market-open buy must check post-trade cash against the floor before sizing.
+- CVLG (satellite, not held) enters its Jul 29 earnings window in 2 trading days — real gap risk on entry this close to a binary print if considered at market-open.
+- Crude oil's sharp overnight drop (Iran de-escalation) creates near-term margin/inventory-write-down risk for MPC/VLO (core watchlist, not held) despite being a longer-term positive for refiners.
+- No held position is near a hard-cut threshold (HPE +3.44%, MU -1.76%, MNKD +2.5%).
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). No held position is near its hard-cut. No satellite catalyst resolved negatively overnight — MNKD's remains resolved positive from 7/24, nothing new. Handoff to market-open: (1) live-bar momentum-gate recheck for MU (held) plus WDC/STX/AMAT/NTAP/DELL given the deepening semi-sector rout — don't assume pass or fail; (2) CVLG (satellite, not held) is inside its Jul 29 earnings window — evaluate with a fresh quote/spread check before any entry, standard 7.5% cap applies; (3) cash at 19.99%, just under the 20% floor — check post-trade cash against the floor before any buy, SGOV-first sweep if needed; (4) MPC/VLO (not held) will trade high-beta to the overnight crude collapse — no signal either way pre-market; (5) CGEM's PDUFA date is now confirmed Feb 27, 2027 — update WATCHLIST.md's stale "unconfirmed/inconsistent" note at the next screen refresh. No urgent notification warranted — no held position near a hard-cut, no satellite catalyst resolved negatively, and the overnight geopolitical move (de-escalation) is favorable, not the kind of adverse event Step 5 calls for. This week (Jul 27 start): core 0/6, satellite 0/4.
+
 ## 2026-07-26 — Pre-market Research
 
 ### Account
