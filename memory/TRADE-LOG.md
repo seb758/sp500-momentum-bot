@@ -513,6 +513,9 @@ Flag for review: the SGOV-first funding sweep should be checked *before* placing
 ### 2026-07-24 — SKIP ORN (satellite)
 No entry. Live quote bid $10.93/ask $15.00 — ~31% spread, same illiquid/wide-spread condition flagged 07-21 through 07-23 (now failed the liquidity check three sessions running, worse than the prior ~17-27% reads). Skipped per STEP 2 skip rule despite being inside its Jul 28 earnings catalyst window. Per pre-market's flag, this is now a standing pattern worth dropping/deprioritizing at Friday's weekly-review regardless of catalyst/momentum strength.
 
+### 2026-07-27 — SKIP CVLG (satellite)
+No entry. Inside its Jul 29 earnings window (2 trading days out per today's pre-market entry) — the only satellite name in-window this session. Live quote at market-open: bid $39.36/ask $55.75, ~35% spread — grossly wide/stale, same thin-opening-liquidity condition repeatedly flagged for ORN in the 7/21-7/24 entries. Skipped per the wide/illiquid-spread skip rule in STEP 2; never reached the buy-side gate. Re-check with a fresh quote at 11am/3pm if the spread tightens before the earnings print.
+
 ## Jul 24 — 3pm Snapshot (Day 12, Friday)
 **Portfolio:** $96,385.55 | **Cash:** $19,416.04 (20.14%) | **Day P&L:** -$287.14 (-0.30%) | **Phase P&L:** -$3,614.45 (-3.61%)
 **Core exposure:** $19,032.75 (19.75% of equity) | **Satellite exposure:** $5,004.22 (5.19% of equity) | **Income exposure:** $52,929.05 (54.91% of equity)
