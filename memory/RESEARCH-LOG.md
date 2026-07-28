@@ -31,6 +31,53 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-07-28 — Pre-market Research
+
+### Account
+- Equity: $95,669.32 | Cash: $19,272.82 (20.15%) | Buying power: $287,191.24 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $9,922.50 (10.37%, HPE) | Satellite exposure: $4,762.80 (4.98%, MNKD) | Income exposure: $61,711.20 (64.51%: EDGX $19,508.05 / SGOV $22,335.39 / SPHY $19,867.76)
+- Cash 20.15% is at/above the 20% floor — no funding sweep needed.
+- All 5 open positions (HPE, MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing, no auth errors.
+- This week (Jul 27 start): core 0/6, satellite 0/4 — no trades yet.
+
+### Data-quality flag
+Two consecutive Gemini Deep Research calls this session came back severely truncated — worse than the recurring "starts mid-document" pattern flagged in every 7/24-7/27 entry. First call returned only a satellite-catalyst verification table plus a closing synthesis; sections 1-3 (futures/VIX/macro, held-ticker news, watchlist news) never arrived. Re-ran once to try to recover them, this time capturing full stdout straight to a file (no local truncation) — the second call returned only the closing "Strategic Synthesis" paragraph and sources list, none of sections 1-4. Given the repeated pattern and the standing instruction against looping small queries, did not fire a third call this session. Filled sections 1-2 and the held-position checks via native WebSearch instead; anything not independently confirmed below is flagged as unconfirmed rather than invented.
+Also: this session's Gemini output claims "CGEM" resolves to a Moroccan business federation, not the Cullinan Therapeutics biotech ticker Gemini gave a clean Feb 27, 2027 PDUFA date for just last session (see 2026-07-27 entry). Directly contradicts last week's "resolved" read — treating CGEM's catalyst timing as unconfirmed/inconsistent again, not trusting either number as authoritative until a cleaner pass.
+
+### Market Context (WebSearch fallback — Gemini's sections 1-2 unrecoverable this session)
+- VIX ~18.98 (+1.66%). Nasdaq 100 futures ~-0.6% premarket.
+- Deepening global semiconductor selloff: SK Hynix -13%, Samsung -10%, Korea's KOSPI -9%, Japan/Taiwan benchmarks ~-4% overnight, on renewed AI-capex-ROI doubts, China chipmaking-competition progress, and "AI circular financing" concerns. US premarket: Nvidia ~-1.2%, Intel/AMD ~-3%+, Micron ~-5%. Continuation/escalation of the sector rout flagged in every session since 7/23 (no held core semis remain after MU's 7/27 stop-out).
+- No single dominant scheduled macro release surfaced in this search beyond the ongoing chip-sector story; oil reportedly softer alongside the risk-off tone per one source.
+- Fragment retained from Gemini's truncated synthesis (moderate confidence only, not independently re-verified): 10-year Treasury yield near/above 4.75% flagged as a threshold that could pressure high-yield credit — relevant to SPHY (held), carried forward as a watch item, not a fresh confirmed number.
+
+### Held-Position Thesis Check
+- **HPE (core, held):** No adverse news found. Recent items are positive-to-neutral: Citi raised its price target and opened a 90-day "upside catalyst watch" (7/22); a Rigetti/HPE/Pittsburgh Supercomputing Center quantum-testbed partnership (7/25); a new board appointment (7/24). Gemini's truncated synthesis also reads HPE as insulated from hardware-commoditization fears via its networking/enterprise-AI-compute mix. -0.04% unrealized, thesis intact, no action.
+- **MNKD (satellite, held):** No new developments beyond the already-resolved 7/24 FUROSCIX ReadyFlow FDA approval. -2.00% unrealized, well clear of the -15% cut. Thesis intact, no action.
+- **EDGX (income, held):** No idiosyncratic news. Today's vol uptick (VIX +1.66%) is mechanically favorable for a covered-call overlay fund (more premium to collect), consistent with the standing rationale. -2.35% unrealized, no action.
+- **SGOV (income, held):** No thesis-breaking news; standing rationale (liquidity base, T-bill yield) unchanged. +0.04% unrealized.
+- **SPHY (income, held):** No fresh negative news. High-yield OAS still reported near 269bps (Jul 10 reading — tight but not shown deteriorating), consistent with the standing credit-spread-compression watch flagged in prior sessions, not a new development. -0.64% unrealized, no action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. The semiconductor/AI-hardware rout is deepening further overnight (SK Hynix/Samsung crashing, US chip names premarket-red) — bears directly on watchlist names DELL, STX, WDC, AMAT, NTAP, DDOG's momentum-gate status, which has been in live-recheck limbo for several sessions running. Not assumed pass or fail pre-market; needs a fresh Alpaca-bar check at market-open as usual. No other watchlist name carries a fresh confirmed catalyst today beyond the ongoing sector-wide theme.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — catalyst resolved 7/24, monitor only, no new entry.
+2. **CVLG** — Q2 earnings confirmed for Wednesday 7/29 after 4pm ET (independently confirmed via WebSearch, consistent with WATCHLIST.md), call 7/30. One trading day out — inside the 5-day window. Not held. No pre-market entry this close to a binary print; defer to a live quote/spread check at market-open if considered (standard 7.5% cap, earnings catalyst not FDA/regulatory).
+3. **RIGL** — not held. Gemini's fragmentary-but-tabulated satellite-catalyst matrix this session dates RIGL's Q2 earnings at August 4, 2026 — exactly 5 trading days out, which would put it inside the window (a change from last session's "6-7 trading days, just outside" read). Given today's severe Gemini truncation, treating this date as moderate- not high-confidence; flag for market-open/midday to re-verify before treating it as inside the window.
+4. **FSTR** — not held. Q2 earnings ~August 10, outside the 5-day window per both Gemini runs' surviving fragments. No action.
+5. **CGEM** — not held. See Data-quality flag above: this session's Gemini output disputes its own prior week's "Feb 27, 2027" PDUFA read, casting doubt on ticker resolution. Treating catalyst status as unconfirmed/inconsistent, not a near-term binary risk either way. No action.
+
+### Risk Factors
+- Two consecutive severely truncated Gemini Deep Research reports this session (see Data-quality flag) — reduced confidence in anything Gemini-sourced today; WebSearch used to independently confirm market context and held-position checks instead.
+- Semiconductor/AI-hardware selloff deepening globally (Korea -9% index-wide, chip names -10/-13% overnight) — no held core semis remain, but keeps several watchlist names' momentum-gate status unresolved pending a live-bar check at market-open.
+- CVLG (satellite, not held) is 1 trading day from its Jul 29 AMC earnings print — real gap risk if considered for entry today or tomorrow.
+- RIGL's exact earnings date needs re-verification — today's fragmentary source puts it right at the 5-day boundary (Aug 4), a change from last week's "outside the window" read.
+- No held position is near its hard-cut (HPE -0.04%, MNKD -2.00%, EDGX -2.35%, SGOV +0.04%, SPHY -0.64% — all core/satellite/income cuts well clear).
+- CGEM's catalyst-date data quality is now actively contradictory session-over-session — not a live risk (not held) but worth resolving at the next screen refresh.
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). No held position near a hard-cut. No satellite catalyst resolved negatively overnight (MNKD's remains resolved positive from 7/24). The deepening global chip selloff is a real market-wide risk but not a single-name adverse event on a held position, and no held position carries core-semis exposure since MU's 7/27 exit. Handoff to market-open: (1) live-bar momentum-gate recheck for DELL/STX/WDC/AMAT/NTAP/DDOG given the deepening overnight chip rout — don't assume pass or fail; (2) CVLG (satellite, not held) is 1 trading day from its Jul 29 AMC print — fresh quote/spread check before any entry, standard 7.5% cap; (3) re-verify RIGL's exact earnings date (Aug 4 per today's fragmentary Gemini read) before treating it as inside/outside the 5-day window; (4) cash at 20.15%, comfortably above the floor, no sweep needed absent a same-session buy; (5) CGEM's catalyst-date data-quality contradiction — flag for the next screen refresh, not a pre-market action. This week (Jul 27 start): core 0/6, satellite 0/4.
+
 ## 2026-07-27 — Pre-market Research
 
 ### Account
