@@ -95,6 +95,17 @@ None. The semiconductor/AI-hardware rout is deepening further overnight (SK Hyni
 - No sharp unexplained moves this window beyond HPE (fully explained by the ongoing, already-documented sector rout) — no ad-hoc Gemini call needed per STEP 7.
 - Action taken this window (HPE stop-out confirmed + logged, cash-floor sweep) — sending notification per STEP 9.
 
+### 3 PM Session Note
+- **No "### Approved Trades (verified)" section exists in today's log** (Decision, 9:30 AM, and 11 AM notes only) — per STEP 3, no buys placed this window either. HOLD on new entries. This week (Jul 27 start) stays at core 0/6, satellite 0/4.
+- **Risk sweep: no closes needed.** Account re-pulled: equity $95,209.81, cash $19,116.75 (20.08%, at/above the 20% floor — HPE's exit + SGOV sweep from the 11am window already restored it, no fresh sweep needed). All 4 open positions (MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing. None at/beyond its hard-cut: MNKD -3.125% (sat cut -15%), EDGX -1.65% (income -5%), SPHY -0.56% (income -5%), SGOV +0.03% (income -5%) — all well clear.
+- **MNKD (satellite, held) — thesis check passes, no action.** Fresh WebSearch found no new negative developments: FUROSCIX ReadyFlow approval (7/24) and the associated $50M private placement (10,440,838 sh + pre-funded warrants at $3.89/$3.88) remain the latest news, both already known; no fresh adverse item. Today's -3.125% move (from $4.00 entry, -1.90% intraday) tracks broader market softness, not a company-specific event. Well clear of the -15% cut, thesis intact.
+- **EDGX/SGOV/SPHY (income, held) — no action.** No idiosyncratic news; standing rationale unchanged for all three. None near their 5% trailing stops.
+- **No stop tightening this window.** Core has zero open positions. MNKD is at a loss, not a gain, so below any tightening threshold. Income sleeve has no gain-based tightening schedule.
+- **No satellite catalyst inside the 1-2 trading-day gap-risk window** — MNKD's PDUFA fully resolved 7/24; no other satellite position held.
+- **2-strike sub-sector tracker unchanged:** biotech 1/2 (OCUL 7/23), industrials 0/2. No satellite trades this session.
+- **Risky positions closed today: none this window** (HPE's stop-out and the SGOV sweep predate this session's 3pm window, already logged at 11am).
+- Pattern still flagged for Friday's review: third consecutive week a held core position stopped out mechanically on sector-wide (not company-specific) drawdown (MU 7/24, MU 7/27, HPE 7/28); core sleeve currently has zero open positions and no fresh core buy candidate today given the deepening chip-sector rout.
+
 ## 2026-07-27 — Pre-market Research
 
 ### Account

@@ -607,3 +607,49 @@ Shares: 210 | Exit: $44.569333 | Realized P&L: -$567.14 (-5.71%) | Reason: 10% G
 Shares: 94.53238625 | Entry: $100.66 (notional $9,515.64) | Stop: 5% trailing GTC on the whole-share portion (316 of 316.432863884 total sh), trigger $95.627 (hwm $100.66); 0.432863864 fractional sh left unprotected, immaterial (~$43.56) | Target: n/a | R:R: n/a
 Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
 Funding reason (income only): HPE's mechanical stop-out (see above) freed cash to $28,632.38 (30.10% of $95,108.18 equity) vs. the 20% floor (~$19,021.64) — swept $9,515.64 into SGOV, leaving cash at $19,116.75 = 20.10% of equity ($95,106.12). Canceled the standing 221-share 5% trailing stop and re-placed one 5% trailing GTC stop on the 316 whole shares of the combined position (same cancel-then-replace pattern as the 7/23, 7/24, and 7/27 sweeps).
+
+## Jul 28 — 3pm Snapshot (Day 14, Tuesday)
+**Portfolio:** $95,209.81 | **Cash:** $19,116.75 (20.08%) | **Day P&L:** -$675.79 (-0.70%) | **Phase P&L:** -$4,790.19 (-4.79%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $4,708.13 (4.94% of equity) | **Income exposure:** $71,384.94 (74.98% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $3.875 | -1.90% | -$151.88 (-3.13%) | 15% trailing ($3.59975) |
+| EDGX | income | 746 | $26.78 | $26.3379 | +0.72% | -$329.81 (-1.65%) | 5% trailing ($25.479) |
+| SGOV | income | 316.433 | $100.631425 | $100.6598 | +0.01% | +$8.98 (+0.03%) | 5% trailing ($95.627) |
+| SPHY | income | 856 | $23.36 | $23.2299 | +0.09% | -$111.37 (-0.56%) | 5% trailing ($22.2015) |
+
+**Notes:** HPE's mechanical 10% trailing-stop loss (-$567.14, -5.71%) and the
+SGOV sweep-back both happened at 9:35am today and are logged above; core
+sleeve now has zero open positions. No "### Approved Trades (verified)" list
+existed anywhere in today's RESEARCH-LOG (pre-market, 9:30am, 11am, and 3pm
+all returned zero qualifying ideas — the deepening global chip-sector rout
+kept every core watchlist momentum-gate recheck ambiguous/failing and both
+satellite candidates in-window, CVLG and RIGL, tripped the wide/illiquid
+opening-spread skip rule), so per STEP 3 the buy side was HOLD all session —
+this week (Jul 27 start) stays at core 0/6, satellite 0/4. Risk sweep: no
+position at/beyond its hard-cut (MNKD -3.13% vs -15% cut; EDGX/SPHY/SGOV all
+within 2% of entry vs their 5% income stop); all 4 open positions confirmed
+carrying live GTC trailing stops via `alpaca.sh orders`, none missing. Fresh
+WebSearch found no new adverse MNKD news since 11am (FUROSCIX approval and
+the associated $50M private placement remain the latest, already-known
+items) — today's -3.13% move tracks broader market softness, not a
+company-specific event; thesis intact, no action. No satellite catalyst
+inside the 1-2 trading-day gap-risk window (MNKD's PDUFA fully resolved
+7/24). No stop tightening this window — core has no open positions and MNKD
+is at a loss, not a gain; Income sleeve has no gain-based schedule. 2-strike
+sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash
+20.08%, at/above the 20% floor (already restored by the 11am sweep), no
+fresh sweep needed. Risky positions closed today: none this window (HPE's
+stop-out and SGOV sweep predate this session, already logged at 11am). Day
+P&L (-0.70%) driven almost entirely by HPE's morning stop-out; income sleeve
+roughly flat to slightly negative on the day. Phase P&L now -4.79% since Day
+0 ($100,000 -> $95,209.81). Third consecutive week a held core position has
+stopped out mechanically on sector-wide (not company-specific) drawdown (MU
+7/24, MU 7/27, HPE 7/28) — flagging again for Friday's review re: the
+semis/AI-hardware sector-concentration cap. Tomorrow: core sleeve is flat
+(zero positions) with no fresh candidate given the deepening chip rout;
+watch CVLG's Jul 29 AMC earnings print (satellite, not held, repeatedly
+skipped on opening-liquidity) and RIGL's Aug 4 earnings date for
+re-verification; revisit the semis-concentration pattern and the persistent
+opening-liquidity skip pattern at Friday's weekly review.
