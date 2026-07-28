@@ -599,3 +599,11 @@ drift (no held core semis names remain after MU's exit); no near-term
 satellite catalyst open; revisit the semis/AI-hardware sector-concentration
 cap and the two-week-running mechanical-stop pattern at Friday's weekly
 review.
+
+### 2026-07-28 — SELL HPE (core)
+Shares: 210 | Exit: $44.569333 | Realized P&L: -$567.14 (-5.71%) | Reason: 10% GTC trailing stop filled automatically at 2026-07-28T13:35:18Z (9:35am ET), trail from hwm $49.68, trigger $44.712. Filled before this 11am session ran — continuation of the sector-wide semi/AI-hardware rout flagged pre-market and at 9:30am (HPE down ~6.10% intraday this morning per the 9:30am note); no company-specific negative news identified. Third consecutive week a held core position has stopped out mechanically on sector-wide (not company-specific) drawdown (MU 7/27, MU 7/24-week, now HPE) — flagging again for Friday's review re: the semis/AI-hardware sector-concentration cap. Core has no 2-strike sub-sector cooldown rule (satellite-only). Core sleeve now has zero open positions.
+
+### 2026-07-28 — BUY SGOV (income) — sweep-back after core sell
+Shares: 94.53238625 | Entry: $100.66 (notional $9,515.64) | Stop: 5% trailing GTC on the whole-share portion (316 of 316.432863884 total sh), trigger $95.627 (hwm $100.66); 0.432863864 fractional sh left unprotected, immaterial (~$43.56) | Target: n/a | R:R: n/a
+Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
+Funding reason (income only): HPE's mechanical stop-out (see above) freed cash to $28,632.38 (30.10% of $95,108.18 equity) vs. the 20% floor (~$19,021.64) — swept $9,515.64 into SGOV, leaving cash at $19,116.75 = 20.10% of equity ($95,106.12). Canceled the standing 221-share 5% trailing stop and re-placed one 5% trailing GTC stop on the 316 whole shares of the combined position (same cancel-then-replace pattern as the 7/23, 7/24, and 7/27 sweeps).
