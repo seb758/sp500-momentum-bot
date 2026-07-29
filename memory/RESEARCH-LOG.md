@@ -31,6 +31,52 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-07-29 — Pre-market Research
+
+### Account
+- Equity: $95,383.20 | Cash: $19,116.70 (20.04%) | Buying power: $286,095.85 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $0.00 (0.00%, zero open positions since HPE's 7/28 stop-out) | Satellite exposure: $4,896.45 (5.13%, MNKD) | Income exposure: $71,370.05 (74.83%: EDGX $19,612.79 / SGOV $31,855.26 / SPHY $19,902.00)
+- Cash 20.04% is at/above the 20% floor — no funding sweep needed.
+- All 4 open positions (MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stop orders via `alpaca.sh orders` — none missing, no auth errors.
+- This week (Jul 27 start): core 0/6, satellite 0/4 — no trades yet.
+
+### Data-quality flag — Gemini output rejected this session
+The single consolidated Gemini Deep Research call returned a response that fails the data-quality guard on two counts, not just the usual truncation: (1) it started mid-document with no sections 1-2 (no explicit S&P futures level or VIX print anywhere in the output, despite being asked directly), and (2) it contains an outright false, thesis-relevant claim — it describes MNKD as facing "an overdue FDA press release on its PDUFA date," directly contradicting the already-confirmed fact (TRADE-LOG.md, 2026-07-24) that FUROSCIX ReadyFlow was FDA-approved five days ago. The same report also asserts a "15% VIX spike" and an active "military conflict in the Strait of Hormuz" driving today's session — neither is corroborated by independent WebSearch (VIX flat at ~18.22, no Hormuz conflict headlines found). Given the pattern of degrading Gemini output flagged in every session since 7/24 (truncation each time), today's escalation to a fabricated, thesis-contradicting claim is a step change worth flagging explicitly for the next weekly review, not just noted and dropped. None of Gemini's figures used below; all market context and held-position checks below are WebSearch-sourced and independently verified.
+
+### Market Context (WebSearch, Gemini output rejected — see flag above)
+- VIX ~18.22 (+0.05%, essentially flat). S&P 500 futures ~+0.2% premarket.
+- FOMC rate decision today, 2pm ET (meeting began 7/28) — market pricing a small probability of a hike this meeting per one source, ~100% priced for September; Fed funds has held 3.50-3.75% through 2026. Real event-risk window for the whole market this afternoon.
+- Heavy earnings slate today: MSFT, META, LRCX, ARM, QCOM, SBUX, PG, VRT, GD, AON all report. None held; LRCX not on the current watchlist.
+- Chip-sector weakness continuing this morning (AI-capex jitters, China chip-making-advancement concerns) — Nasdaq described as near correction territory. Continuation of the rout flagged in every session since 7/23/7/24 (three consecutive mechanical core stop-outs: MU 7/24, MU 7/27, HPE 7/28); core sleeve is now flat (0 positions) so no immediate held-position exposure, but bears on any fresh core momentum-gate recheck at market-open.
+- No held-name-specific corporate news found beyond what's logged in Held-Position Thesis Check below.
+
+### Held-Position Thesis Check
+- **MNKD (satellite, held):** No PDUFA is outstanding — FUROSCIX ReadyFlow was FDA-approved 2026-07-24 (already logged); Gemini's claim otherwise this session is rejected per the data-quality flag above. New, single confirmed source (GlobeNewswire/Manila Times, 7/28-7/29): MannKind will report Q2 2026 results after close **Wednesday, August 5, 2026** — not held-position risk today, just the forward earnings date. +0.75% unrealized. Thesis intact, no action.
+- **EDGX (income, held):** No idiosyncratic news found. -1.83% unrealized. Mechanically-favorable-to-elevated-vol rationale unchanged; thesis intact, no action.
+- **SGOV (income, held):** No thesis-breaking news. +0.04% unrealized (flat). No action.
+- **SPHY (income, held) — standing caution, not new:** OAS still reported at a tight ~267bps, same compressed-spread caution flagged repeatedly in prior sessions (weekly-review-cadence discussion item, not a pre-market action). -0.47% unrealized, well clear of the 5% stop. No action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. Core sleeve is flat (0 positions, HPE stopped out 7/28). Chip-sector weakness is continuing again this morning (Nasdaq near correction territory per WebSearch) — bears directly on watchlist names DELL, STX, WDC, AMAT, NTAP, DDOG, MU-adjacent momentum-gate status. Not assumed pass or fail pre-market; needs a fresh Alpaca-bar check at market-open as usual, consistent with the recurring pattern flagged in every session since 7/23. No other watchlist name carries a fresh confirmed catalyst today.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — catalyst resolved 7/24, monitor only, no new entry. Next earnings 8/5 (not a near-term binary window today).
+2. **CVLG** — Q2 2026 earnings confirmed for **today, 2026-07-29, after 4pm ET** (WebSearch-independently confirmed via the company's own 8-K/press release; call is 7/30 10am ET) — squarely inside the catalyst window, in fact the catalyst day itself. Not held. No pre-market entry this close to the print; defer to a live quote/spread check at market-open per the recurring wide-spread skip pattern flagged for CVLG in every session since 7/27 (spreads have run 35-40% at the open each time). Standard 7.5% cap applies if ever entered (earnings catalyst, not FDA/regulatory).
+3. **RIGL** — not held. Q2 2026 earnings confirmed for **Tuesday, August 4, 2026** after close (single clean WebSearch-confirmed source, resolves the inconsistent Aug 4 / Aug 4-5 reads from prior sessions) — 4 trading days out (7/30, 7/31, 8/3, 8/4), inside the 5-trading-day window as of today. No pre-market entry; flag for market-open/midday live quote check given the pattern of skips on illiquid opening spreads for this name.
+4. **FSTR** — not held. No fresh data this session; last confirmed date (~Aug 10) remains outside the window absent new information.
+5. **CGEM** — not held. No fresh data this session; catalyst-date status remains unconfirmed/inconsistent per prior sessions' flags, carried forward for the next screen refresh.
+
+### Risk Factors
+- Gemini Deep Research output rejected this session for a fabricated, thesis-contradicting claim (MNKD PDUFA described as pending when it was resolved 7/24) plus missing futures/VIX sections — see Data-quality flag above. Escalating pattern (was truncation-only 7/24-7/28) worth resolving before trusting Gemini output unverified again; WebSearch fully covered today's gaps.
+- FOMC rate decision at 2pm ET today plus a heavy mega-cap earnings slate (MSFT, META, LRCX, ARM, QCOM, SBUX) — broad market event-risk window this afternoon, unrelated to any held position directly.
+- Chip-sector weakness continuing (Nasdaq near correction territory) — no held core exposure currently (core flat), but keeps core watchlist momentum-gate status uncertain pending a live-bar check at market-open.
+- CVLG (satellite, not held) reports today after close — real gap risk if considered for entry at market-open or midday; recurring wide-spread pattern (35-40%) has skipped it three sessions running.
+- RIGL (satellite, not held) is now confirmed inside its 5-trading-day catalyst window (Aug 4) — relevant for future satellite consideration, not an entry today.
+- No held position is near its hard-cut (MNKD +0.75%, EDGX -1.83%, SGOV +0.04%, SPHY -0.47% — all well clear of their respective 15%/5% stops).
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). No held position is near a hard-cut. No satellite catalyst resolved negatively overnight — MNKD's remains resolved positive from 7/24, nothing new; Gemini's contrary claim is rejected as unreliable, independently checked via WebSearch. No major geopolitical event confirmed (Gemini's claimed Hormuz conflict/VIX spike did not check out). Handoff to market-open: (1) live-bar momentum-gate recheck for the core watchlist given continuing chip-sector weakness — don't assume pass or fail; (2) CVLG (satellite, not held) reports after close today — fresh quote/spread check before any entry, standard 7.5% cap; (3) RIGL now confirmed inside its 5-day window (Aug 4) — re-check quote/spread, same recurring skip pattern to watch for; (4) cash at 20.04%, at the floor, re-check before any same-session buy; (5) flag the Gemini data-quality escalation (truncation → outright fabrication) for the next weekly review. No urgent notification warranted this run — no held position near a hard-cut, no satellite catalyst resolved negatively, market context (VIX flat, futures +0.2%) is unremarkable once corrected for Gemini's rejected claims. This week (Jul 27 start): core 0/6, satellite 0/4.
+
 ## 2026-07-28 — Pre-market Research
 
 ### Account
