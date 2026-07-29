@@ -653,3 +653,43 @@ watch CVLG's Jul 29 AMC earnings print (satellite, not held, repeatedly
 skipped on opening-liquidity) and RIGL's Aug 4 earnings date for
 re-verification; revisit the semis-concentration pattern and the persistent
 opening-liquidity skip pattern at Friday's weekly review.
+
+## Jul 29 — 3pm Snapshot (Day 15, Wednesday)
+**Portfolio:** $94,992.12 | **Cash:** $19,116.70 (20.13%) | **Day P&L:** -$217.69 (-0.23%) | **Phase P&L:** -$5,007.88 (-5.01%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $4,744.58 (5.00% of equity) | **Income exposure:** $71,130.85 (74.88% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $3.905 | -0.13% | -$115.43 (-2.37%) | 15% trailing ($3.59975) |
+| EDGX | income | 746 | $26.78 | $25.985 | -1.16% | -$593.07 (-2.97%) | 5% trailing ($25.479) |
+| SGOV | income | 316.433 | $100.631425 | $100.675 | +0.01% | +$13.79 (+0.04%) | 5% trailing ($95.646) |
+| SPHY | income | 856 | $23.36 | $23.235 | -0.02% | -$107.00 (-0.54%) | 5% trailing ($22.2015) |
+
+**Notes:** No Core/Satellite trades this window — no "### Approved Trades
+(verified)" list existed anywhere in today's RESEARCH-LOG (pre-market, 9:30am,
+11am, and 3pm all returned zero qualifying ideas — satellite candidates CVLG
+and RIGL both failed the wide/illiquid-spread skip rule again, and core stayed
+flat on the Patience Rule despite DELL/DDOG/PANW/FTNT flagged as live-passing
+the momentum gate at 9:30am, per the standing sector-concentration caution),
+so per STEP 3 the buy side was HOLD all session — this week (Jul 27 start)
+stays at core 0/6, satellite 0/4. Risk sweep: MNKD -2.37% well clear of its
+-15% hard-cut; EDGX -2.97% and SPHY -0.54% both well inside their 5% income
+stops; all 4 open positions confirmed carrying live GTC trailing stops via
+`alpaca.sh orders`, none missing. FOMC held rates steady at 3.50-3.75% (9-3
+vote, 3 dissents favoring a hike) at 2pm ET — no surprise, no held-position
+impact. WebSearch confirms no new MNKD news since 11am beyond the
+already-logged Aug 5 Q2 earnings date; FDA approval (7/24) remains the latest
+material item. No thesis break on any held name. No stop tightening this
+window — no position is in gain past its threshold (MNKD underwater, Income
+sleeve has no gain-based schedule). No stop moved down. 2-strike sub-sector
+tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.13%,
+at/above the 20% floor, no funding sweep needed. Risky positions closed
+today: none. Day P&L (-0.23%) driven by modest EDGX/MNKD drift; core sleeve
+remains flat (zero positions) since HPE's 7/28 stop-out, pushing Income
+exposure to 74.88% of equity. Phase P&L now -5.01% since Day 0 ($100,000 ->
+$94,992.12). Tomorrow: decide explicitly at Friday's (7/31) weekly review
+whether to act on DELL/DDOG/PANW/FTNT's live-passing momentum-gate status
+given the standing sector-concentration caution (3 consecutive mechanical
+core stop-outs in the AI-hardware/semis cluster: MU 7/24, MU 7/27, HPE 7/28);
+CVLG (satellite, not held) reports after today's close; RIGL earnings 8/4 now
+inside its catalyst window for future consideration.
