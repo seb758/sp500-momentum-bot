@@ -82,6 +82,13 @@ None. STX and WDC show a genuine positive earnings-driven divergence from the br
 - **Thesis check:** MNKD's catalyst remains resolved positive (FDA approval 7/24, private placement closing); no new adverse news, intraday move consistent with the already-logged thesis, not unexplained. No thesis-break on any held name. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
 - No Gemini follow-up needed — MNKD's intraday move has a documented cause; nothing else moved sharply unexplained.
 
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists anywhere in today's RESEARCH-LOG (pre-market and 11am both checked) — per STEP 3 no buys placed. This week (Jul 27 start) stays at core 0/6, satellite 0/4.
+- **Account/positions/stops:** Equity $95,429.08, cash $19,116.70 (20.03%, at/above the 20% floor — no funding sweep needed). 4 open positions unchanged: MNKD (satellite, +1.63% unrealized, +5.58% intraday, continued FUROSCIX-approval follow-through), EDGX (income, -1.94% unrealized, +1.20% intraday), SGOV (income, +0.05%), SPHY (income, -0.36%, +0.37% intraday). All 4 confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing, no fills this window. Core sleeve remains flat (0 positions since HPE's 7/28 stop-out).
+- **Risk sweep:** no position at/beyond its hard-cut (MNKD +1.63% vs -15% satellite cut). No missing stops. MNKD's catalyst (FUROSCIX FDA approval) remains fully resolved since 7/24, and WATCHLIST.md shows no single near-dated binary event for MNKD (MNKD-201 IPF readout has no firm date) — no 1-2 trading-day gap-risk window open. No thesis break on any held name. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- **Stop tightening:** none — MNKD's +1.63% gain is far below the +25% satellite tightening threshold; Income sleeve has no gain-based schedule. No stop moved down.
+- Risky positions closed today: none.
+
 ## 2026-07-29 — Pre-market Research
 
 ### Account
