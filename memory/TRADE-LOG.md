@@ -693,3 +693,39 @@ given the standing sector-concentration caution (3 consecutive mechanical
 core stop-outs in the AI-hardware/semis cluster: MU 7/24, MU 7/27, HPE 7/28);
 CVLG (satellite, not held) reports after today's close; RIGL earnings 8/4 now
 inside its catalyst window for future consideration.
+
+## Jul 30 — 3pm Snapshot (Day 16, Thursday)
+**Portfolio:** $95,429.08 | **Cash:** $19,116.70 (20.03%) | **Day P&L:** +$436.96 (+0.46%) | **Phase P&L:** -$4,570.92 (-4.57%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $4,938.98 (5.18% of equity) | **Income exposure:** $71,373.40 (74.79% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $4.065 | +5.58% | +$78.98 (+1.63%) | 15% trailing ($3.59975) |
+| EDGX | income | 746 | $26.78 | $26.26 | +1.20% | -$387.92 (-1.94%) | 5% trailing ($25.479) |
+| SGOV | income | 316.433 | $100.631425 | $100.685 | +0.01% | +$16.95 (+0.05%) | 5% trailing ($95.6555) |
+| SPHY | income | 856 | $23.36 | $23.275 | +0.37% | -$72.76 (-0.36%) | 5% trailing ($22.2015) |
+
+**Notes:** No Core/Satellite trades this window — no "### Approved Trades
+(verified)" list existed anywhere in today's RESEARCH-LOG (pre-market and
+11am both returned zero qualifying ideas; no 3pm buy-side idea list either),
+so per STEP 3 the buy side was HOLD all session — this week (Jul 27 start)
+stays at core 0/6, satellite 0/4. Risk sweep: MNKD +1.63% well clear of its
+-15% hard-cut; all 4 open positions confirmed carrying live GTC trailing
+stops via `alpaca.sh orders`, none missing. MNKD's FUROSCIX FDA-approval
+catalyst remains fully resolved since 7/24 and WATCHLIST.md shows no firm
+near-dated binary event for MNKD, so no 1-2 trading-day gap-risk window is
+open on it. No thesis break on any held name. No stop tightening this
+window — MNKD's +1.63% gain is far below the satellite +25% tightening
+threshold; Income sleeve has no gain-based schedule. No stop moved down.
+2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials
+0/2. Cash 20.03%, at/above the 20% floor, no funding sweep needed. Risky
+positions closed today: none. Day P&L (+0.46%) driven mainly by MNKD's
+continued FUROSCIX-approval follow-through (+5.58% intraday) and a modest
+EDGX bounce, partly offset by SPHY's slight drift; core sleeve remains flat
+(zero positions) since HPE's 7/28 stop-out. Phase P&L now -4.57% since Day 0
+($100,000 -> $95,429.08). Tomorrow: Friday's (7/31) weekly review is the
+key decision point on whether to act on the standing AI-hardware/semis
+sector-concentration caution (3 consecutive mechanical core stop-outs: MU
+7/24, MU 7/27, HPE 7/28) now that core sleeve has sat flat for 2 full
+sessions; also re-verify CVLG's Jul 29 AMC earnings result and RIGL's 8/4
+earnings date at the weekly screen refresh.
