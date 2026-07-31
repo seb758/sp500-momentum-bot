@@ -31,6 +31,52 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-07-31 — Pre-market Research
+
+### Account
+- Equity: $95,506.14 | Cash: $19,116.70 (20.02%) | Buying power: $286,372.02 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $0.00 (0.00%, zero open positions since HPE's 7/28 stop-out) | Satellite exposure: $4,981.50 (5.22%, MNKD) | Income exposure: $71,407.93 (74.76%: EDGX $19,629.42 / SGOV $31,867.95 / SPHY $19,910.56)
+- Cash 20.02% is at/above the 20% floor — no funding sweep needed.
+- All 4 open positions (MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stop orders via `alpaca.sh orders` — none missing, no auth errors.
+- This week (Jul 27 start): core 0/6, satellite 0/4 — no trades yet.
+
+### Data-quality note
+Gemini's consolidated call again started mid-document — no sections 1 (futures/VIX) or the held-ticker overnight-news section arrived in captured output (it opens directly on the satellite catalyst-proximity table and references "the Current Holdings section" that was never actually shown). Same recurring truncation pattern flagged in every session since 7/24. Did not fabricate any figure from the missing sections; filled sections 1 and 3 via native WebSearch instead, flagged as such below. The satellite catalyst-proximity table Gemini did return (section 4) looks complete and internally consistent, so that part is used as-is.
+
+### Market Context (WebSearch fallback for futures/VIX/macro — Gemini's sections 1-2 unrecoverable this session)
+- VIX futures ~18.5-18.8 (normal range, no fear spike). Thursday 7/30 was a big risk-on session: S&P 500 +1.7%, Nasdaq 100 +3.4%, MSFT +16% (~$450B added) on strong earnings/AI-capex commentary — a sharp reversal of the semis/AI-hardware rout that drove 3 consecutive mechanical core stop-outs (MU 7/24, MU 7/27, HPE 7/28). Today's session (per Gemini's captured synthesis) described as a continued tech-led gap-up in the Nasdaq 100, alongside a hawkish bond-market undertone (10-year yield ~4.67%) and an elevated SKEW/contangoed VIX term structure — read together as "don't blindly chase the gap-up," not a risk-off signal.
+- June PCE (already released, reference data): headline -0.1% MoM, core +0.1% MoM, 3.7%/3.3% YoY — benign, roughly as expected.
+- Today's releases: Employment Cost Index (8:30am ET), Michigan Consumer Sentiment final (10am ET).
+- **ABBV (core watchlist, not held) reports Q2 pre-market today** — guided EPS $3.57-3.61 vs consensus $3.66, revenue ~$16.7B vs consensus $16.81B. Real event risk for the name but not a pre-market entry signal (no live quotes yet); flagged as this session's most concrete earnings catalyst on the watchlist.
+- No dedicated market-catalysts section recovered from Gemini beyond the above; nothing else material surfaced via WebSearch.
+
+### Held-Position Thesis Check
+- **MNKD (satellite, held):** No new binary event. FUROSCIX ReadyFlow FDA approval (7/24) remains fully resolved; Gemini confirms Q2 2026 earnings now dated **Wednesday, August 5, 2026** (WebSearch-corroborated, GlobeNewswire 7/28 release) — not inside the 5-trading-day window as of today. +2.5% unrealized ($4.00 → $4.10), well clear of the -15% hard-cut. Thesis intact, no action.
+- **EDGX (income, held):** No idiosyncratic news beyond routine July distribution announcements (Global X, 7/24). -1.74% unrealized, stop at $25.479 vs current $26.3129 — comfortable buffer. No action.
+- **SGOV (income, held):** No thesis-breaking news; standing liquidity-base rationale unchanged. +0.08% unrealized.
+- **SPHY (income, held) — standing caution, not new:** OAS still reported ~267bps, same compressed-spread caution flagged repeatedly in prior sessions (weekly-review-cadence discussion item, not a pre-market action). -0.43% unrealized, well clear of the 5% stop. No action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. Core sleeve remains flat (0 positions since HPE's 7/28 stop-out). Yesterday's sharp tech-led rally (S&P +1.7%, Nasdaq 100 +3.4%, MSFT +16%) is a genuine positive reversal signal for the AI-hardware/semis cluster (DELL, MU, DDOG, PANW, FTNT, AMD, HPE, STX, NTAP, WDC, AMAT, CRWD) that has been the source of 3 consecutive mechanical core stop-outs this month — DELL/DDOG/PANW/FTNT were already flagged as live-passing the momentum gate as of 7/29's 9:30am check. Whether to re-enter this cluster (vs. the standing sector-concentration caution) is explicitly the decision point flagged for today's weekly review, not a pre-market call — needs a fresh live-bar momentum-gate + spread check at market-open regardless. ABBV's pre-market print is a fresh data point for future core consideration, not evaluated today (reports pre-market, no live reaction yet). No candidate clears pre-market given the change in regime is too fresh to trust without live data — consistent with the Patience Rule.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — see Held-Position Thesis Check. Catalyst resolved; earnings 8/5, outside the window. Monitor only, no new entry.
+2. **RIGL** — not held. Q2 2026 earnings confirmed Tuesday, **August 4, 2026** after close — **2 trading days out, inside the 5-trading-day window.** Consensus EPS $0.13-0.14 / revenue $55.27M. Real gap risk on entry this close to a binary print; standard 7.5% cap would apply (earnings catalyst, not FDA/regulatory) per the established ORN/FSTR/CVLG precedent. No pre-market entry — defer to a live momentum/spread recheck at market-open, watching for the recurring wide-spread pattern that has skipped this name repeatedly.
+3. **CGEM** — not held. Q2 2026 earnings now confirmed Thursday, **August 6, 2026** pre-market — **4 trading days out, inside the 5-trading-day window.** New from Gemini: recent positive FDA End-of-Phase-1 feedback for CLN-049 (FLT3xCD3 bispecific, AML) clears the path to a registrational Phase 2 start Q3 2026; cash runway extended to ~$439M into 2029 (de-risks dilution). Does not resolve the standing zipalertinib NDA-timing inconsistency flagged on WATCHLIST.md — that remains a separate, still-unconfirmed item. No pre-market entry given the earnings proximity — defer to market-open live check.
+4. **FSTR** — not held. Q2 2026 earnings confirmed Monday, August 10 — 6 trading days out, outside the window. Credit facility expanded to $150M through 2030 (positive balance-sheet update); PT raised to $40; new SVP-Rail succession announced. No action.
+5. **CVLG** — not held. Catalyst resolved: Q2 2026 results reported 7/29 AMC — adjusted EPS $0.42 (beat) but operating ratio 97.3% (margin degradation), stock -8.9% on the print per Gemini. Confirms the margin-compression risk flagged as the live watch item in the 7/24 WATCHLIST.md entry. No action (not held, catalyst now resolved negatively on the margin dimension) — flag for the next screen refresh as a name whose earnings-day price action doesn't support a fresh look.
+
+### Risk Factors
+- Gemini's report truncated again — no futures/VIX or market-catalysts sections recovered; WebSearch backfill used, flagged above. Recurring pattern every session since 7/24, worth resolving before trusting Gemini output unverified again (carry to Friday's review).
+- ABBV (core watchlist, not held) reports pre-market today — guided EPS below consensus ($3.57-3.61 vs $3.66); a real data point for future core consideration once the market reacts, not acted on pre-market.
+- RIGL (2 trading days) and CGEM (4 trading days) both now confirmed inside the satellite catalyst window — real gap risk if either is considered for entry; 7.5% cap would apply to either (earnings, not FDA/regulatory), not evaluated pre-market.
+- CVLG's Jul 29 earnings print resolved negatively on margins (-8.9% reaction) — not held, but confirms the standing margin-compression concern rather than resolving it positively.
+- Yesterday's sharp AI/tech rally (Nasdaq 100 +3.4%, MSFT +16%) is a genuine but very fresh reversal of the semis rout responsible for 3 mechanical core stop-outs this month — real risk of chasing a one-day move; needs live-bar confirmation at market-open, not assumed durable.
+- No held position is near its hard-cut: MNKD +2.5% (cut -15%), EDGX -1.74% (5% trailing stop, comfortable buffer), SPHY -0.43% (stop well clear), SGOV +0.08%.
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). No held position is near its hard-cut. No satellite catalyst resolved negatively overnight — MNKD's remains resolved positive from 7/24. No confirmed major geopolitical event meeting the urgent-notification bar. Handoff to market-open: (1) live-bar momentum-gate + spread recheck for DELL/DDOG/PANW/FTNT (and the broader AI-hardware cluster) given yesterday's sharp reversal rally — this is also today's weekly-review decision point on re-entering the sector post-caution; (2) RIGL (2 trading days) and CGEM (4 trading days) both inside the satellite catalyst window — live spread/momentum check before any entry, 7.5% cap if entered; (3) ABBV's pre-market print — watch market reaction, no action pre-market; (4) cash 20.02%, at/above the floor, no funding sweep needed absent a new buy; (5) confirm VIX/futures tone with a fresh check at market-open given this session's Gemini truncation gap. This week (Jul 27 start) stays at core 0/6, satellite 0/4.
+
 ## 2026-07-30 — Pre-market Research
 
 ### Account
