@@ -85,6 +85,15 @@ None. Core sleeve remains flat (0 positions since HPE's 7/28 stop-out). Yesterda
 - **Risk sweep:** no position near a hard-cut (MNKD +2.75% vs -15%; EDGX/SPHY well inside their 5% income stops). No stop tightening — MNKD's gain is far below the +25% satellite tightening threshold; Income sleeve has no gain-based schedule. No stop moved down. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
 - **Lesson for today's weekly review:** DELL/DDOG/PANW/FTNT have now live-passed the momentum gate across multiple sessions (7/29, 7/30, today) with the sector-concentration caution the only thing holding back entry — worth resolving explicitly today rather than carrying forward again.
 
+### 11 AM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists anywhere in today's RESEARCH-LOG (only the Decision and 9:30 AM Session Note) — per STEP 3 this window trades from that list only, so no buys placed. This week (Jul 27 start) stays at core 0/6, satellite 0/4.
+- **Account/positions/stops:** Equity $95,315.65, cash $19,116.70 (20.06%, at/above the 20% floor — no funding sweep needed). 4 open positions unchanged: MNKD (satellite, -1.25% unrealized, down from +2.75% at 9:30am — normal intraday drift, not a thesis break), EDGX (-1.64%), SGOV (+0.08%), SPHY (-0.58%). All 4 confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing. Core exposure $0.00 (0.00%, flat since HPE's 7/28 stop-out), satellite exposure $4,799.25 (5.04%, MNKD), income exposure $71,399.70 (74.91%).
+- **Cuts:** none. MNKD -1.25% well clear of the -15% hard-cut; no core positions to evaluate.
+- **Stop tightening:** none. MNKD is underwater (no gain-based tightening applies); income sleeve has no gain-based tightening schedule. No stop moved down.
+- **Thesis check:** MNKD — no new binary event, FUROSCIX approval (7/24) remains resolved, Q2 earnings now 3 trading days out (Aug 5). No thesis break. EDGX/SGOV/SPHY — no thesis to break, no idiosyncratic news. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- **Step 7 (optional Gemini check):** skipped — MNKD's -3.9% intraday move is within normal volatility for this name (15% stop band) and has no thesis implication; not flagged as an unexplained sharp move worth a consolidated research call.
+- No action taken this window — zero trades, zero cuts, zero tightens, zero stop moves.
+
 ## 2026-07-30 — Pre-market Research
 
 ### Account
