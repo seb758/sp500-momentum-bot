@@ -94,6 +94,14 @@ None. Core sleeve remains flat (0 positions since HPE's 7/28 stop-out). Yesterda
 - **Step 7 (optional Gemini check):** skipped — MNKD's -3.9% intraday move is within normal volatility for this name (15% stop band) and has no thesis implication; not flagged as an unexplained sharp move worth a consolidated research call.
 - No action taken this window — zero trades, zero cuts, zero tightens, zero stop moves.
 
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists anywhere in today's RESEARCH-LOG (pre-market, 9:30am, 11am all HOLD) — per STEP 3 this window trades from that list only, so no buys placed. This week (Jul 27 start) stays at core 0/6, satellite 0/4.
+- **Account/positions/stops:** Equity $95,298.43, cash $19,116.70 (20.06%, at/above the 20% floor — no funding sweep needed). 4 open positions unchanged: MNKD (satellite, -2.75% unrealized, down from -1.25% at 11am — normal intraday drift), EDGX (income, -1.49%), SGOV (income, +0.08%), SPHY (income, -0.45%). All 4 confirmed carrying live GTC trailing stops via `alpaca.sh orders` (re-checked this window), none missing. Core exposure $0.00 (0.00%, flat since HPE's 7/28 stop-out), satellite exposure $4,726.35 (4.96%, MNKD), income exposure $71,454.84 (74.98%).
+- **Risk sweep (end-of-session):** no position at/beyond its sleeve hard-cut (MNKD -2.75% vs -15%; no core positions). No open position missing a stop. No satellite catalyst inside the 1-2 trading-day gap-risk window (MNKD's FUROSCIX approval remains resolved since 7/24; Q2 earnings now 8/5, still outside the window). No thesis break on any held name. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Risky positions closed today: none.
+- **Stop tightening:** none. MNKD remains underwater (no gain-based tightening threshold met); income sleeve has no gain-based schedule. No stop moved down.
+- **Lesson for Friday's review carryover:** DELL/DDOG/PANW/FTNT have now live-passed the momentum gate across 7/29, 7/30, and today's pre-market/9:30am checks, with the sector-concentration caution (3 consecutive mechanical core stop-outs: MU 7/24, MU 7/27, HPE 7/28) the only thing holding back re-entry — this was flagged as today's weekly-review decision point; confirm it was addressed there.
+- No action taken this window — zero trades, zero cuts, zero tightens, zero stop moves.
+
 ## 2026-07-30 — Pre-market Research
 
 ### Account
