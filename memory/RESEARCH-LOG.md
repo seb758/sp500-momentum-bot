@@ -31,7 +31,58 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
-## 2026-07-31 — Pre-market Research
+## 2026-08-01 — Pre-market Research (Saturday — market closed, no trading day)
+
+### Account
+- Equity: $95,281.68 | Cash: $19,116.70 (20.06%) | Buying power: $285,928.23 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $0.00 (0.00%, zero open positions since HPE's 7/28 stop-out) | Satellite exposure: $4,750.65 (4.99%, MNKD) | Income exposure: $71,414.33 (74.95%: EDGX $19,627.26 / SGOV $31,867.95 / SPHY $19,919.12)
+- Cash 20.06% is at/above the 20% floor — no funding sweep needed.
+- All 4 open positions (MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stop orders via `alpaca.sh orders` — none missing, no auth errors.
+- This week (Jul 27 start): core 0/6, satellite 0/4 — no trades.
+- **Today is Saturday — not a trading day.** No market-open/11am/3pm sessions will execute against today's date; this is a research-only entry. Any trade ideas below are informational for Monday 8/3, not actionable today.
+
+### Data-quality flag — Gemini report rejected on multiple counts this session
+The consolidated Gemini Deep Research call returned a report with severe, compounding data-quality problems — worse than the truncation pattern flagged every session since 7/24, and an escalation beyond the outright fabrication flagged 7/29. Cross-checked against independent WebSearch before writing anything below:
+1. **Fabricated/wrong macro figure:** Gemini asserted "core inflation has re-accelerated to 3.2%." This does not exist — the last actual core CPI print (June 2026, released July) was 2.6% YoY, and July's CPI is not due until August 12, 2026. Rejected outright, not used below.
+2. **Volatility narrative contradicted by real data:** Gemini described "elevated tail-risk hedging," a VIX "climbing toward 20," and "the equity risk premium has effectively vanished." Independent WebSearch shows VIX actually compressed to ~16.21 intraday Friday 7/31 (prior close 17.09) and S&P 500 futures +0.41% — i.e. the market is calm/risk-on, the opposite of Gemini's framing. The 10-year yield figure (4.69-4.75%) was roughly correct and is used below.
+3. **Stale news repackaged as "overnight":** several items presented as fresh developments are actually already-logged, days-to-weeks-old events: the SMCI $60B order backlog / DELL+6%/HPE+5% after-hours reaction dates to ~7/21-7/22 (already old news, not new since); the Medicare Part D subsidy-termination hit to CNC/CVS/HUM and HUM's GAAP guidance cut ($8.36→$6.52) were already reported and logged in the 7/30 pre-market entry, not new for today. CRWD's earnings-reaction drop also appears to predate today, unconfirmed date, next earnings not until 8/25.
+4. **One item does check out as real and current:** the underlying Iran/Strait of Hormuz conflict is a genuine, ongoing war (Ali Khamenei assassinated 2026-02-28; son Mojtaba Khamenei confirmed as Iran's new Supreme Leader 2026-03-08; strait effectively closed to US/Israel-linked shipping since March, consistent with the "Iran/Hormuz escalation" already noted in this account's own 2026-07-14 log). A fresh incident is independently confirmed: IRGC-linked forces struck tankers transiting under US military escort on/around 7/31, per CNBC. The DOE's ~172M-barrel SPR release is real but dates to March 2026, not new. Given VIX is compressed and futures are calm, the market is not currently pricing this as a fresh risk-off shock — noted as a standing risk factor, not an urgent trigger (see Decision).
+Given the scale of these problems, Gemini's report is rejected as a synthesis; only independently WebSearch-verified facts are used below. This is now four consecutive sessions (7/28 truncation, 7/29 fabrication, 7/30 truncation, 8/1 fabrication+staleness+contradicted-by-data) with a serious Gemini data-quality failure — strongly recommend addressing this at the next weekly review (e.g., dropping Gemini for daily research and relying on WebSearch, or re-testing the wrapper/prompt).
+
+### Market Context (WebSearch-verified; Gemini's synthesis rejected per flag above)
+- VIX ~16.21 intraday Fri 7/31 (prior close 17.09) — compressed, calm. S&P 500 e-mini ~7,493.75, +0.41%. 10-year Treasury yield ~4.69-4.75%, a real but gradual rise (not a sudden spike).
+- Core CPI 3.2%: rejected as fabricated (see flag). Last real print: June core CPI +2.6% YoY, flat 0.0% MoM. July CPI due 8/12/2026.
+- Iran/Strait of Hormuz: ongoing war since Feb/Mar 2026 (new Supreme Leader Mojtaba Khamenei since 3/8); fresh IRGC strike on US-escorted tankers ~7/31 per CNBC. Not currently moving VIX/futures — market pricing calm despite it.
+- HUM/CNC/CVS Medicare Part D subsidy-termination headwind and HUM's GAAP guidance cut ($8.36→$6.52 EPS) — real, but already logged 7/30, not new today. None of the three held.
+- SMCI's $60B AI-server order backlog and the DELL(+6%)/HPE(+5%) sympathy pop — real, but dates to ~7/21-7/22, not fresh overnight news. Relevant to the standing core AI-hardware-cluster re-entry question carried from Friday's (7/31) weekly review, not a new signal today.
+
+### Held-Position Thesis Check
+- **MNKD (satellite, held):** No new binary event; FUROSCIX ReadyFlow FDA approval (7/24) remains resolved. Next earnings 8/5, outside the 5-day window. -2.25% unrealized ($4.00 → $3.91), well clear of the -15% hard-cut (stop $3.59975). Thesis intact, no action.
+- **EDGX (income, held):** No idiosyncratic news. -1.75% unrealized, stop $25.479 vs current $26.31 — comfortable buffer. No action.
+- **SGOV (income, held):** No thesis-breaking news. +0.08% unrealized. No action.
+- **SPHY (income, held):** -0.39% unrealized, stop $22.2015 vs current $23.27 — well clear. Standing OAS-compression caution unchanged (weekly-review item, not a pre-market action). No action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None — market closed today, purely informational. Carried forward from Friday's (7/31) weekly-review decision point: DELL/DDOG/PANW/FTNT have live-passed the momentum gate across multiple recent sessions, with the sector-concentration caution (3 consecutive mechanical core stop-outs this month: MU 7/24, MU 7/27, HPE 7/28) the only thing holding back re-entry. SMCI's backlog update (real but ~10 days old) reinforces the AI-hardware demand thesis but isn't new information. Needs a fresh live-bar momentum-gate + spread check Monday at market-open regardless, consistent with the Patience Rule.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — see Held-Position Thesis Check. Catalyst resolved; earnings 8/5 (outside 5-day window as of Monday). Monitor only, no new entry.
+2. **RIGL** — not held. Q2 2026 earnings Tuesday 8/4 after close — will be inside the 5-trading-day window as of Monday 8/3. Standard 7.5% cap would apply if entered (earnings catalyst, not FDA/regulatory). No action today (market closed); live spread/momentum recheck needed Monday given this name's recurring wide-spread skip pattern.
+3. **CGEM** — not held. Q2 2026 earnings ~8/6-8/7 — will be inside the 5-day window as of Monday. Zipalertinib NDA-timing inconsistency flagged on WATCHLIST.md remains unresolved. No action today; live recheck needed Monday.
+4. **FSTR** — not held. No new tradeable catalyst; Q2 earnings 8/10 remains outside the window.
+5. **CVLG** — not held. Catalyst (Q2 earnings, 7/29 AMC) already resolved negatively on margin (per 7/31 entry); no change. No action.
+
+### Risk Factors
+- Gemini Deep Research output rejected outright this session for a fabricated CPI figure, a volatility narrative contradicted by real VIX/futures data, and several "overnight" items that are actually days-to-weeks stale — see Data-quality flag above. Fourth consecutive session with a serious Gemini data-quality problem; recommend addressing at the next weekly review.
+- Iran/Strait of Hormuz war remains a real, ongoing risk (fresh tanker strike ~7/31) with potential to affect VLO/MPC (refiners, watchlist not held) and broader risk sentiment, but is not currently moving VIX/futures — treated as a standing watch item, not an urgent trigger today.
+- HUM/CNC/CVS Medicare Part D subsidy-termination headwind persists (already logged 7/30); none held, relevant only to future core consideration.
+- No held position is near its hard-cut: MNKD -2.25% (cut -15%), EDGX -1.75% (5% trailing, comfortable buffer), SPHY -0.39% (well clear), SGOV +0.08%.
+- Standing carryover: core AI-hardware-cluster re-entry question (DELL/DDOG/PANW/FTNT) from Friday's weekly review — needs a live decision Monday, not today.
+
+### Decision
+**HOLD** (market closed — Saturday, no trading possible regardless of research findings). No held position is near its hard-cut. No satellite catalyst resolved negatively overnight — MNKD's remains resolved positive from 7/24. No confirmed *new* major geopolitical shock meeting the urgent-notification bar: the Iran/Hormuz conflict is real and ongoing (fresh tanker strike ~7/31) but the market itself is pricing it calmly (VIX compressed ~16.21, futures +0.41%), and it isn't new information beyond what's already been tracked in this log since 7/14. No urgent SendGrid notification sent this run. Handoff to Monday 8/3 pre-market/market-open: (1) live-bar momentum-gate + spread recheck for the AI-hardware cluster (DELL/DDOG/PANW/FTNT) — this week's carryover decision point; (2) RIGL (earnings 8/4) and CGEM (earnings ~8/6-8/7) will both be inside their satellite catalyst windows — live spread/momentum check before any entry; (3) cash 20.06%, at/above the floor, recheck before any Monday buy; (4) flag the now-four-consecutive-session Gemini data-quality failure for the next weekly review. This week (Jul 27 start) stays at core 0/6, satellite 0/4.
+
+
 
 ### Account
 - Equity: $95,506.14 | Cash: $19,116.70 (20.02%) | Buying power: $286,372.02 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
