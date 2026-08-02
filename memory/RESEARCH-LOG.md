@@ -31,6 +31,59 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-08-02 — Pre-market Research (Sunday — market closed, no trading day)
+
+### Account
+- Equity: $95,281.68 | Cash: $19,116.70 (20.06%) | Buying power: $285,928.23 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $0.00 (0.00%, zero open positions since HPE's 7/28 stop-out) | Satellite exposure: $4,750.65 (4.99%, MNKD) | Income exposure: $71,414.33 (74.95%: EDGX $19,627.26 / SGOV $31,867.95 / SPHY $19,919.12)
+- Cash 20.06% is at/above the 20% floor — no funding sweep needed.
+- All 4 open positions (MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stop orders via `alpaca.sh orders` — none missing, no auth errors.
+- This week (Jul 27 start): core 0/6, satellite 0/4 — no trades.
+- **Today is Sunday — not a trading day.** No market-open/11am/3pm sessions will execute against today's date; this is a research-only entry. Any trade ideas below are informational for Monday 8/3, not actionable today.
+
+### Data-quality flag
+Gemini's consolidated call again started mid-document — captured output opens directly on section "2. Semiconductors & Data Infrastructure," missing section 1 (S&P futures/VIX), the market-catalysts/economic-releases section, and the held-ticker (EDGX/MNKD/SGOV/SPHY) thesis-break section entirely. Same recurring truncation pattern flagged every session since 7/24. Did not fabricate any figure from the missing sections — filled futures/VIX and held-position news via native WebSearch instead, flagged below.
+
+Separately, Gemini's satellite catalyst-proximity table (which *did* arrive complete) asserts **no catalyst within 5 trading days for RIGL or CGEM** — this directly contradicts this log's own previously-verified dates: RIGL Q2 earnings confirmed **Tuesday Aug 4** (7/31 entry, GlobeNewswire-sourced) and CGEM Q2 earnings confirmed **Thursday Aug 6** (7/31 entry). Both dates, if still accurate, fall inside the 5-trading-day window as of Monday 8/3 (Aug 4 = 2 trading days out, Aug 6 = 4 trading days out). Not overwriting the previously-verified dates with Gemini's contradicted claim — treating RIGL/CGEM as **still inside their catalyst windows** pending a live re-verification Monday, not as newly cleared.
+
+### Market Context (WebSearch fallback for futures/VIX — Gemini's section 1 unrecoverable this session)
+- VIX (front-month futures) ~18.5-18.8, S&P 500 cash index closed Friday 7/31 +0.70%, September E-mini S&P futures (ESU26) +0.69% — normal range, no fear spike.
+- Geopolitical: Gemini's recovered sections (3-5) describe direct U.S.-Iran military strikes in Kuwait and Bahrain over the weekend injecting volatility into crude prices — consistent with, and an apparent escalation of, the ongoing Iran/Strait-of-Hormuz conflict tracked in this log since mid-July. Not independently WebSearch-confirmed this session; treat as an unverified single-source claim pending Monday's cross-check, not an urgent trigger given VIX remains compressed.
+- SK Hynix Q2 earnings miss triggered a broad memory-sector selloff hitting MU and WDC (both core watchlist, not held); STX (also watchlist, not held) reportedly decoupled and held up on its HAMR/AI-storage narrative — relevant to a future core entry decision, not actionable pre-market.
+- GE Vernova (GEV, not held, not on watchlist) posted a -22.1% EPS miss over the weekend — no read-through to held/watchlisted GE.
+- CNC (core watchlist, not held) flagged by Gemini with an "existential" Medicare Part D subsidy-termination earnings risk — consistent with the HUM/CVS Part D headwind already logged 7/30; CNC not held, relevant only to future core consideration.
+- AMD (core watchlist, not held) reports Q2 earnings Tuesday 8/4; AMAT (watchlist, not held) faces a fresh geopolitical headwind from reported Chinese domestic DUV lithography tools bypassing ASML export controls.
+- MPC (watchlist, not held) has Q2 earnings Aug 4; both MPC/VLO (watchlist, not held) may see a crack-spread bid if the Iran/Kuwait/Bahrain escalation holds.
+
+### Held-Position Thesis Check (WebSearch fallback — Gemini's held-ticker section unrecoverable this session)
+- **MNKD (satellite, held):** No thesis-breaking news. WebSearch confirms Q2 2026 earnings remains dated **Wednesday, August 5, 2026** — outside the 5-trading-day window as of Monday. A $50M private placement (led by Frazier Life Sciences) and positive Phase 1b topline results for INFLO-1 (nintedanib dry powder) were both reported in late July — the private placement is modestly dilutive but not a thesis break; the trial data is incrementally positive. -2.25% unrealized ($4.00 → $3.91), well clear of the -15% hard-cut (stop $3.59975). No action.
+- **EDGX (income, held):** No idiosyncratic news found. -1.75% unrealized, stop $25.479 vs current $26.31 — comfortable buffer. No action.
+- **SGOV (income, held):** No thesis-breaking news. +0.08% unrealized. No action.
+- **SPHY (income, held):** No idiosyncratic news found this session. -0.39% unrealized, stop $22.2015 vs current $23.27 — well clear. No action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None — market closed today, purely informational. Standing carryover from the 7/31 weekly review: DELL/DDOG/PANW/FTNT have live-passed the momentum gate across multiple recent sessions, with the sector-concentration caution (3 consecutive mechanical core stop-outs this month: MU 7/24, MU 7/27, HPE 7/28) the deciding factor on re-entry. This session's SK Hynix-driven memory selloff (hitting MU/WDC) and STX's reported decoupling are new inputs for that decision, not yet acted on. Needs a fresh live-bar momentum-gate + spread check Monday at market-open, consistent with the Patience Rule.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **MNKD (held)** — see Held-Position Thesis Check. Catalyst resolved; earnings 8/5 (outside 5-day window as of Monday). Monitor only, no new entry.
+2. **RIGL** — not held. Per this log's own 7/31-verified date, Q2 earnings Tuesday 8/4 — 2 trading days out as of Monday, inside the 5-trading-day window (see Data-quality flag: Gemini's table today contradicts this without new evidence, not trusted over the prior verified source). Standard 7.5% cap would apply if entered (earnings catalyst, not FDA/regulatory). No action today; live spread/momentum recheck needed Monday — this name has repeatedly failed the wide/illiquid-spread skip rule in recent sessions.
+3. **CGEM** — not held. Per this log's own 7/31-verified date, Q2 earnings Thursday 8/6 — 4 trading days out as of Monday, inside the 5-trading-day window (same Gemini-contradiction caveat as RIGL above). Zipalertinib NDA-timing inconsistency flagged on WATCHLIST.md remains unresolved. No action today; live recheck needed Monday.
+4. **FSTR** — not held. Gemini confirms a Board-approved executive officer change (SVP-Rail transition, effective 8/1) — a low-risk continuity event per Gemini's own characterization (prior similar announcement moved the stock -0.42%), not a thesis-relevant catalyst. Next earnings remains outside the window per prior verification. No action.
+5. **CVLG** — not held. Catalyst (Q2 earnings, 7/29 AMC) already resolved negatively on margin (per 7/31 entry: adjusted EPS beat but operating ratio degraded to 98.0%, CEO flagged cost disappointment) — Gemini's fuller detail today ($332.9M revenue vs $302.9M YoY, $8.8M operating income, $289.7M net debt) confirms rather than changes that read. No action.
+
+### Risk Factors
+- Gemini's report truncated again — no futures/VIX, catalysts, or held-position sections recovered; WebSearch backfill used, flagged above. Recurring pattern every session since 7/24, worth resolving before trusting Gemini output unverified again (carry to next weekly review).
+- Gemini's satellite catalyst-proximity table contradicts this log's own previously-verified RIGL (8/4) and CGEM (8/6) earnings dates without new evidence — treated as unreliable and not adopted; both names held as still-inside-window pending Monday's live re-verification.
+- Unverified single-source claim (from Gemini's recovered sections only) of fresh direct U.S.-Iran military strikes in Kuwait/Bahrain over the weekend — not independently WebSearch-confirmed this session despite an attempt; needs a Monday cross-check. VIX remains compressed (~18.5-18.8), so the market is not currently pricing this as an acute shock.
+- SK Hynix-driven memory-sector selloff hit MU/WDC (watchlist, not held); STX (watchlist, not held) reportedly decoupled — relevant to the standing core AI-hardware re-entry decision, not yet acted on.
+- CNC (watchlist, not held) flagged with an "existential" Medicare Part D subsidy-termination risk — consistent with the already-logged HUM/CVS headwind; relevant only to future core consideration.
+- No held position is near its hard-cut: MNKD -2.25% (cut -15%), EDGX -1.75% (5% trailing, comfortable buffer), SPHY -0.39% (well clear), SGOV +0.08%.
+
+### Decision
+**HOLD** (market closed — Sunday, no trading possible regardless of research findings). No held position is near its hard-cut. No satellite catalyst resolved negatively overnight — MNKD's remains resolved positive from 7/24. No confirmed *new* major geopolitical shock meeting the urgent-notification bar: the one unverified claim of fresh Iran/Kuwait/Bahrain strikes could not be independently confirmed this session, and VIX remains compressed, so it does not clear the bar for an urgent send pending Monday's verification. No urgent SendGrid notification sent this run. Handoff to Monday 8/3: (1) live-bar momentum-gate + spread recheck for the AI-hardware cluster (DELL/DDOG/PANW/FTNT), now with the added context of the SK Hynix-driven MU/WDC selloff and STX's reported decoupling; (2) RIGL (2 trading days) and CGEM (4 trading days) — re-verify their earnings dates live given today's Gemini contradiction, then live spread/momentum check before any entry; (3) cash 20.06%, at/above the floor, recheck before any Monday buy; (4) independently confirm or rule out the reported Iran/Kuwait/Bahrain strikes; (5) flag the now-five-consecutive-session Gemini truncation pattern plus today's new contradicted-catalyst-date issue for the next weekly review. This week (Jul 27 start) stays at core 0/6, satellite 0/4.
+
+
+
 ## 2026-08-01 — Pre-market Research (Saturday — market closed, no trading day)
 
 ### Account
