@@ -94,6 +94,15 @@ None sourced pre-market. Gemini's per-ticker coverage for the 25-name core list 
 - **Thesis check:** no break on any held name. MNKD's FUROSCIX catalyst remains resolved since 7/24; Aug 5 earnings (2 trading days out) is a watch item, not a re-triggered binary-gap case per the 9:30 AM note — no action. No Gemini call this window — nothing moved sharply without an obvious cause; day-over-day moves are modest drift consistent with the broader tape. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
 - **Lesson:** no new pattern beyond the 9:30 AM note's carryover items (AI-hardware/semis re-entry decision, missed 7/31 weekly refresh) — both still open, still need owner/Friday-review attention.
 
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists anywhere in today's RESEARCH-LOG — per STEP 3, no buys placed this window. This week (Aug 3 start) stays at core 0/6, satellite 0/4.
+- **Risk sweep, live via `alpaca.sh account`/`positions`/`orders`:** equity $95,286.30, cash $19,116.70 (20.06%, at/above the 20% floor, no funding sweep needed). No position at/beyond its sleeve hard-cut — MNKD -4.88% (cut -15%), EDGX -0.28% / SPHY -0.75% / SGOV -0.20% (all well inside the 5% income stop). All 4 positions confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing: MNKD 15% trail $3.59975 (hwm $4.235), EDGX 5% trail $25.479 (hwm $26.82), SGOV 5% trail $95.684 (hwm $100.72), SPHY 5% trail $22.2015 (hwm $23.37). No thesis break on any held name.
+- **MNKD catalyst-window check:** Q2 earnings confirmed Wed Aug 5 after close — 2 trading days out, inside the 1-2 trading-day proximity window mentioned in STEP 4, but per WATCHLIST.md there is no firm near-dated FDA/regulatory binary date for MNKD (the FUROSCIX PDUFA that the position's 5% binary sizing was originally set against resolved 7/24). This is a standard earnings print, not the documented binary catalyst — conviction unchanged, position already sized conservatively (5% cap) and well clear of its hard-cut. **Holding through, not closing** — same conclusion as the 9:30 AM and 11 AM notes, restated explicitly per STEP 4's requirement to document rather than silently pass.
+- **No stop tightening this window** — no position is in gain past its sleeve's gain-based threshold (all 4 currently underwater vs. entry; Income sleeve has no gain-based schedule anyway). No stop moved down.
+- **2-strike sub-sector tracker unchanged:** biotech 1/2 (OCUL 7/23), industrials 0/2.
+- **Risky positions closed today: none.**
+- **Lesson for Friday's review (if it runs):** carrying forward the two open items from pre-market/9:30/11am — the still-unresolved DELL/DDOG/PANW/FTNT AI-hardware/semis re-entry decision (now carried across a 6th+ session) and the missed 7/31 weekly screen refresh (watchlist now stale since 7/24). Neither is a same-day action item; both need explicit owner/Friday-review resolution.
+
 ## 2026-08-02 — Pre-market Research (Sunday — market closed, no trading day)
 
 ### Account
