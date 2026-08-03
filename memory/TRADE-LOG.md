@@ -766,3 +766,48 @@ PANW/FTNT live-passing the momentum gate across multiple sessions); watch
 RIGL's Aug 4 and CGEM's Aug 6 earnings dates as they move inside/through
 the satellite catalyst window, and MNKD's Aug 5 earnings as it approaches
 the 1-2 trading-day gap-risk window next week.
+
+## Aug 3 — 3pm Snapshot (Day 18, Monday)
+**Portfolio:** $95,286.30 | **Cash:** $19,116.70 (20.06%) | **Day P&L:** -$12.13 (-0.01%) | **Phase P&L:** -$4,713.70 (-4.71%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $4,623.08 (4.85% of equity) | **Income exposure:** $71,546.94 (75.09% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $3.805 | -2.69% | -$236.93 (-4.88%) | 15% trailing ($3.59975) |
+| EDGX | income | 746 | $26.78 | $26.7055 | +1.50% | -$55.58 (-0.28%) | 5% trailing ($25.479) |
+| SGOV | income | 316.433 | $100.631425 | $100.4266 | -0.28% | -$64.81 (-0.20%) | 5% trailing ($95.684) |
+| SPHY | income | 856 | $23.36 | $23.185 | -0.37% | -$149.80 (-0.75%) | 5% trailing ($22.2015) |
+
+**Notes:** No Core/Satellite trades this window — no "### Approved Trades
+(verified)" list existed anywhere in today's RESEARCH-LOG (pre-market,
+9:30am, and 11am all returned zero qualifying ideas; RIGL and CGEM both
+failed the recurring wide/illiquid-spread skip rule again at 9:30am, and
+core stayed flat on the standing, still-unresolved AI-hardware/semis
+sector-concentration caution around DELL/DDOG/PANW/FTNT), so per STEP 3 the
+buy side was HOLD all session — this new trading week (Aug 3 start) stays at
+core 0/6, satellite 0/4. Risk sweep: no position at/beyond its sleeve
+hard-cut (MNKD -4.88% vs -15%; EDGX/SPHY/SGOV all well inside their 5%
+income stops); all 4 open positions confirmed carrying live GTC trailing
+stops via `alpaca.sh orders`, none missing. MNKD's Aug 5 Q2 earnings print
+is 2 trading days out, inside the 1-2 trading-day proximity window flagged
+by STEP 4, but WATCHLIST.md documents no firm near-dated FDA/regulatory
+binary date for this name (the FUROSCIX PDUFA the position was originally
+sized against at the 5% binary cap resolved 7/24) — this is a standard
+earnings print, not a re-triggered binary-gap case; conviction unchanged and
+the position is well clear of its hard-cut, so holding through rather than
+closing, documented explicitly per STEP 4 rather than silently passing. No
+other thesis break on any held name. No stop tightening this window — no
+position is in gain past its sleeve's gain-based threshold (all 4 currently
+underwater vs. entry; Income sleeve has no gain-based schedule). No stop
+moved down. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23),
+industrials 0/2. Cash 20.06%, at/above the 20% floor, no funding sweep
+needed. Risky positions closed today: none. Day P&L (-0.01%) essentially
+flat — MNKD's -2.69% intraday drift roughly offset by EDGX's +1.50% bounce;
+core sleeve remains flat (zero positions) since HPE's 7/28 stop-out, now 4
+full sessions running. Phase P&L now -4.71% since Day 0 ($100,000 ->
+$95,286.30). Tomorrow: RIGL's Aug 4 earnings (after close, 4:30pm ET) moves
+inside the satellite catalyst window for live re-evaluation at market-open;
+MNKD's Aug 5 earnings is now 1 trading day out; the AI-hardware/semis
+re-entry decision and the missed 7/31 weekly refresh both remain open items
+needing owner/Friday-review resolution — recommend running `/screen-refresh`
+ad hoc given two consecutive missed Friday refreshes (7/17, 7/31).
