@@ -31,6 +31,55 @@ Format each entry:
 TRADE or HOLD (default HOLD if no qualifying edge)
 ```
 
+## 2026-08-03 — Pre-market Research
+
+### Account
+- Equity: $95,159.47 | Cash: $19,116.70 (20.09%) | Buying power: $285,556.88 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $0.00 (0.00%, zero open positions since HPE's 7/28 stop-out) | Satellite exposure: $4,787.10 (5.03%, MNKD) | Income exposure: $71,255.67 (74.89%: EDGX $19,627.26 / SGOV $31,777.77 / SPHY $19,850.64)
+- Cash 20.09%, above the 20% floor — no funding sweep needed.
+- All 4 open positions (MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stop orders via `alpaca.sh orders` — none missing, no auth errors. MNKD 15% trail $3.59975 (hwm $4.235); EDGX 5% trail $25.479 (hwm $26.82); SGOV 5% trail $95.684 (hwm $100.72); SPHY 5% trail $22.2015 (hwm $23.37).
+- **New trading week (Aug 3 start): core 0/6, satellite 0/4** — last week's (Jul 27-31) zero trades don't carry over.
+
+### Process flag — Friday 7/31 weekly screen refresh appears to have not run
+WATCHLIST.md's "Current" section is still headed "Week of 2026-07-24" and WEEKLY-REVIEW.md's most recent dated entry is "Week ending 2026-07-24" — neither file has an entry for the week ending 7/31. This is the same failure mode flagged as a Key Lesson in the 7/24 weekly review ("A missed Friday refresh isn't a no-op... worth an explicit persistence check before a weekly-review run is considered complete"), recurring a second time in three weeks (the other being 7/17). Practical effect: today's trade ideas below are screened against a watchlist that is now 10 calendar days stale, and the standing decision point carried from last week — whether to re-enter the AI-hardware/semis cluster (DELL/DDOG/PANW/FTNT) after 3 consecutive mechanical core stop-outs — was never actually resolved by a weekly review. Not fabricating a refresh that didn't happen; trading today strictly off the 7/24 list per the "never trade a ticker not on the current watchlist" rule. Flagging for owner attention.
+
+### Data-quality flag — Gemini truncated again
+The consolidated Gemini Deep Research call returned a report that starts mid-document (opens on an "Industrials, Aerospace, Energy, and Consumer" section covering URI/GE/MPC/VLO/BBY) — section 1 (S&P futures/VIX), section 2 (macro catalysts/econ releases), and section 3 (held-ticker EDGX/MNKD/SGOV/SPHY overnight check) never arrived, and section 4's per-ticker coverage came through only for URI/GE/MPC/VLO/BBY plus a passing CRWD/PANW/FTNT mention. Same recurring truncation pattern flagged nearly every session since 7/24 (well past a dozen occurrences now). Filled sections 1-3 via native WebSearch below per the data-quality guard, not fabricating anything Gemini didn't return. One item from the recovered "Strategic Conclusions" section is explicitly not trusted: it lists RIGL/MNKD/CGEM/FSTR as all inside their catalyst windows "over the next 120 hours," but FSTR's own previously-verified Aug 10 earnings date is 7 trading days out, not inside 120 hours — RIGL/CGEM/MNKD dates are independently WebSearch-verified below instead.
+
+### Market Context (WebSearch fallback — Gemini's sections 1-2 unrecoverable this session)
+- VIX spot opened ~16.82 (intraday range 15.82-18.70); VIX futures ~18.03 (opened 17.98) — same contango pattern flagged in prior sessions, not a fear spike. S&P 500 Friday 7/31 close +0.70%, Dow +0.53%, Nasdaq 100 +0.60%, continuing Thursday's (7/30) sharp risk-on reversal.
+- **Iran/Strait of Hormuz — de-escalation, not escalation:** Trump held off a planned military strike on Iran over the weekend in favor of resuming negotiations today (Monday 8/3) aimed at reopening the strait to a single shipping corridor; oil prices declined and Treasury yields steadied on the news. This is a genuine change from the standing "elevated/unresolved" framing carried in this log since mid-July — the acute military-escalation risk is, as of this morning, easing rather than worsening. One fresh incident noted: an LNG carrier (Qatari-origin cargo) was struck transiting the strait 8/1 — the underlying conflict remains live and unresolved, this is a de-escalation in trajectory, not a resolution.
+- US equity futures reflected the de-escalation pre-market: S&P 500/Nasdaq-100 futures +~0.5%, Dow futures +~0.6%.
+- This week's economic calendar is labor-market-centric: JOLTS Tuesday 8/5, Friday's employment report 8/7. No major scheduled release specifically for today beyond routine data.
+- No name-specific overnight catalyst found for any core/satellite watchlist ticker beyond what's covered below.
+
+### Held-Position Thesis Check (WebSearch — Gemini's section 3 unrecoverable this session)
+- **MNKD (satellite, held, -1.50% unrealized: $4.00 → $3.94):** No new binary event. FUROSCIX ReadyFlow FDA approval (7/24) remains resolved. Q2 2026 earnings confirmed for Wednesday, August 5 after market close — 2 trading days out, inside the 5-trading-day catalyst-proximity window, but this is a standard earnings print, not the binary regulatory catalyst the position was originally sized against (already resolved 7/24) — a watch item, not a re-triggered gap-risk case. Well clear of the -15% hard-cut. No action.
+- **EDGX (income, held, -1.75% unrealized):** No idiosyncratic news found. Stop $25.479 vs current $26.31 — comfortable buffer. No action.
+- **SGOV (income, held, -0.21% unrealized):** No thesis-breaking news. No action.
+- **SPHY (income, held, -0.73% unrealized):** No idiosyncratic news found this session. Stop $22.2015 vs current $23.19 — well clear. No action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-07-24)
+None sourced pre-market. Gemini's per-ticker coverage for the 25-name core list came through only for URI, GE, MPC, VLO, BBY (none held, all fundamentally intact per the recovered section, no negative flags) plus a passing CRWD/PANW/FTNT mention; the other ~17 names (DELL, MU, DDOG, HUM, AMD, HPE, CNC, STX, DVA, NTAP, WDC, AMAT, DOC, WST, LLY, ABBV) have no confirmed overnight check today. The standing decision point carried from last week — whether DELL/DDOG/PANW/FTNT's repeated live-passing momentum-gate status (7/29, 7/30, 8/1 sessions) justifies re-entering the AI-hardware/semis cluster after 3 consecutive mechanical stop-outs (MU 7/24, MU 7/27, HPE 7/28) — remains unresolved (see Process flag above; no weekly review ran to decide it). Needs a live-bar momentum-gate + spread recheck at market-open; not treating carryover momentum-pass status as a standing pre-authorization to buy.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-07-24)
+1. **MNKD (held)** — see Held-Position Thesis Check. Catalyst resolved; earnings 8/5 is a watch item, not a new binary-gap case. No new entry (already held).
+2. **RIGL** — not held. Q2 2026 earnings confirmed Tuesday, August 4 after close, 4:30pm ET call — 1 trading day out, inside the 5-trading-day window. Standard 7.5% cap would apply if entered (earnings catalyst, not FDA/regulatory). This name has also repeatedly failed the wide/illiquid-spread skip rule in recent sessions (7/31: bid $32.30/ask $44.25, ~31% spread) — needs a fresh live quote at market-open before any consideration, not a pre-market entry.
+3. **CGEM** — not held. **Date discrepancy flagged:** this log's prior entries (7/31) had Q2 2026 earnings confirmed for Thursday, August 6; a fresh WebSearch this session returns August 7 (pre-market) instead. Not resolving this conflict by picking one — both fall inside the 5-trading-day window regardless (3-4 trading days out), so the practical in-window conclusion is unchanged, but the exact date needs live re-verification before any entry decision. Zipalertinib NDA-timing inconsistency flagged on WATCHLIST.md also remains unresolved.
+4. **FSTR** — not held. Q2 2026 earnings remains confirmed for Monday, August 10 — 7 trading days out, outside the 5-day window (Gemini's "120 hours" claim for this name is not trusted, see Data-quality flag). No new news beyond the already-logged 8/1 SVP-Rail succession (Jason Bowlin), a routine continuity item. No action.
+5. **CVLG** — not held. Catalyst already resolved negatively on margin at the 7/29 print (per 7/31 entry). No action.
+
+### Risk Factors
+- Friday 7/31's weekly screen refresh appears to have not run — watchlist is 10 calendar days stale and the AI-hardware-cluster re-entry decision point was never resolved. See Process flag above; needs owner attention.
+- Gemini Deep Research truncated again — sections 1-3 lost, filled via WebSearch. Well past a dozen consecutive sessions with a serious data-quality issue on this call; the standing recommendation to address this at the next weekly review still hasn't been actioned because the last two weekly reviews (7/17, 7/31) don't appear to have run.
+- CGEM's earnings date is now unconfirmed between two sources (8/6 vs 8/7) — doesn't change the in-window conclusion but needs live re-verification before any entry.
+- RIGL (1 trading day) and CGEM (3-4 trading days) are both inside their satellite catalyst windows with a recurring wide/illiquid-spread pattern on RIGL specifically — real gap + liquidity risk if either is considered for entry, not evaluated pre-market.
+- Iran/Strait of Hormuz: net de-escalation this weekend (Trump held off a strike, talks resume today, oil down) after weeks of this being an unresolved standing risk — but the underlying conflict is not resolved (a tanker was struck 8/1) and today's negotiations could go either way; not treating this as fully resolved.
+- No held position is near its hard-cut: MNKD -1.50% (cut -15%), EDGX -1.75% / SPHY -0.73% (both well inside the 5% income stop), SGOV -0.21%.
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). No held position is near its hard-cut. No satellite catalyst has resolved negatively — MNKD's FDA catalyst remains resolved positive from 7/24, RIGL/CGEM haven't reported yet. The Iran/Hormuz news this weekend is a de-escalation, not an escalation, and VIX remains in its normal range — doesn't clear the urgent-notification bar. The missed 7/31 weekly refresh is a real process gap but not itself a today's-market emergency; flagged here rather than via an urgent SendGrid send. Handoff to market-open: (1) live-bar momentum-gate + spread recheck for DELL/DDOG/PANW/FTNT (and the broader core list) given the still-unresolved AI-hardware re-entry decision; (2) RIGL and CGEM both inside their catalyst windows — live spread/momentum check before any entry, 7.5% cap if entered, re-verify CGEM's exact earnings date; (3) cash 20.09%, at/above the floor, recheck before any buy; (4) the missed weekly refresh needs owner attention — recommend running `/screen-refresh` ad hoc rather than waiting for next Friday. New trading week (Aug 3 start): core 0/6, satellite 0/4.
+
 ## 2026-08-02 — Pre-market Research (Sunday — market closed, no trading day)
 
 ### Account
