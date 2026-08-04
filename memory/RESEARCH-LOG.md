@@ -2146,3 +2146,10 @@ Gemini Deep Research output was truncated again — this run returned **only** a
 - Cash $19,116.70 / equity $95,353.24 = 20.05%, at/essentially at the 20% floor — no funding sweep needed since no trade fired. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
 - Result: **HOLD, zero new trades this window.** This week (Aug 3 start) stays at core 0/6, satellite 0/4.
 - Lesson: WATCHLIST.md is now 11 calendar days stale with two consecutive missed Friday refreshes (7/17, 7/31) and FMP is 402'ing on every per-symbol call tried today — the combination means core entries are effectively blocked even when live momentum clears, since fundamentals can't be freshly verified. Worth flagging at the next review as a process gap, not just a data-quality footnote.
+
+### 11 AM Session Note
+- **No buys.** No "### Approved Trades (verified)" list exists anywhere in today's RESEARCH-LOG (pre-market and 9:30am both HOLD) — per STEP 3, buy side stays HOLD. This week (Aug 3 start) unchanged: core 0/6, satellite 0/4.
+- Risk sweep: MNKD (satellite) -3.38% (entry $4.00, last $3.865), well clear of the -15% hard-cut; earnings tomorrow (8/5) confirmed as a standard print, not a re-triggered binary (FUROSCIX approval resolved 7/24) — no thesis break, holding through. Core sleeve remains flat (0 positions). Income: EDGX +0.15%, SGOV -0.20%, SPHY -0.46%, all well inside 5% stops. All 4 open positions confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing.
+- No stop tightening (no position past its gain-based threshold; MNKD is underwater, not up). No stop moved down. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- Cash $19,116.70 / equity $95,504.40 = 20.01%, at/above the 20% floor — no funding sweep needed since no trade fired.
+- Result: **HOLD, zero new trades this window.**
