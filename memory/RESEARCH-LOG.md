@@ -2153,3 +2153,10 @@ Gemini Deep Research output was truncated again — this run returned **only** a
 - No stop tightening (no position past its gain-based threshold; MNKD is underwater, not up). No stop moved down. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
 - Cash $19,116.70 / equity $95,504.40 = 20.01%, at/above the 20% floor — no funding sweep needed since no trade fired.
 - Result: **HOLD, zero new trades this window.**
+
+### 3 PM Session Note
+- **No buys.** No "### Approved Trades (verified)" section exists anywhere in today's RESEARCH-LOG (pre-market, 9:30am, 11am, and this 3pm check all confirm none) — per STEP 3, buy side stays HOLD. This week (Aug 3 start) unchanged: core 0/6, satellite 0/4.
+- Risk sweep: MNKD (satellite) -1.00% (entry $4.00, last $3.96), well clear of the -15% hard-cut. Q2 earnings tomorrow (8/5, after close) now 1 trading day out — reconfirmed as a standard commercial print, not a re-triggered binary (FUROSCIX PDUFA resolved 7/24); position was already sized/documented per the binary-catalyst rule at entry and conviction is unchanged, so holding through rather than closing (documented explicitly per STEP 4, not silently passing). All 4 open positions (MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing. No thesis break on any held name.
+- No stop tightening this window — no position past its sleeve's gain-based threshold (MNKD -1.00%, EDGX +1.34% but Income sleeve has no gain-based schedule). No stop moved down. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- Cash $19,116.70 / equity $95,867.15 = 19.95%, a hair below the 20% floor purely from today's portfolio gains (EDGX +1.67%, MNKD +4.21% intraday) — no trade fired this window to trigger the SGOV funding-sweep mechanism, so no forced sale; flag for Friday's weekly rebalance touch instead. Risky positions closed today: none.
+- Result: **HOLD, zero new trades this window.** This week (Aug 3 start) stays at core 0/6, satellite 0/4.
