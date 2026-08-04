@@ -2090,3 +2090,50 @@ None. The semi capital-equipment/memory selloff (KLAC, LRCX, AMAT, MU, WDC, STX)
 - Risk sweep: HPE +0.49% and MNKD -2.37% both well clear of their -7%/-15% hard-cuts; all 5 open positions (HPE, MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing. Fresh WebSearch found no adverse news on HPE (DOE Genesis Mission selection is incrementally positive, insider sale routine) or MNKD (no PDUFA decision has landed yet) since 11am — both theses intact, nothing closed.
 - Gap-risk check: MNKD's Furoscix PDUFA is now 1 trading day out (decision expected Fri 7/24 after-hours or Mon 7/27 pre-market — no weekend stop protection either way). It was properly sized/documented at entry (5% binary-catalyst cap, max loss logged 7/21) and conviction hasn't weakened per today's research — holding through remains valid, stated explicitly per the rule rather than silently doing nothing. No stop tightening this window (HPE below +15%, MNKD not in gain; Income sleeve has no gain-based schedule). 2-strike sub-sector tracker unchanged: biotech strike 1/2, no cooldown triggered.
 - Cash 20.09%, at/above the 20% floor — no funding sweep needed (no trades this window). Risky positions closed today: none.
+
+## 2026-08-04 — Pre-market Research
+
+**Note:** No RESEARCH-LOG entries persisted between 2026-07-23 and today (11-session gap, cloud-session persistence issue per prior TRADE-LOG snapshots) — this run resumes logging, not a backfill of the missing sessions.
+
+### Account
+- Equity: $95,322.50 | Cash: $19,116.70 (20.06%) | Buying power: $286,120.28 | Positions market value: $76,205.80
+- Core exposure: $0.00 (0.00%) | Satellite exposure: $4,653.45 (4.88%, MNKD) | Income exposure: $71,552.35 (75.06% — SGOV $31,779.35 / EDGX $19,913.80 / SPHY $19,859.20)
+- Open positions: MNKD (satellite, 1215 sh @ $4.00 entry, -4.25% unrealized), SGOV/SPHY/EDGX (income). Core sleeve flat (0 positions) since HPE's 2026-07-28 stop-out, now 5+ trading sessions running. All 4 open positions confirmed carrying live GTC trailing stops via `alpaca.sh orders` (MNKD 15% trail $3.59975; SGOV 5% trail $95.684; EDGX 5% trail $25.479; SPHY 5% trail $22.2015) — none missing.
+- This trading week (Aug 3 start): core 0/6, satellite 0/4.
+
+### Data-quality flag
+Gemini Deep Research output was truncated again — this run returned **only** a "Strategic Syntheses and Afternoon Outlook" summary paragraph plus a source list; sections 1-4 (explicit futures/VIX figures, econ calendar, per-held-ticker checks, per-watchlist-ticker checks) never came through in the captured output. Same recurring pattern flagged repeatedly since 2026-07-12, still unresolved — needs an actual fix (prompt restructuring or splitting into smaller calls) at the next weekly review. Not fabricating any figure Gemini didn't show; backfilled below via native WebSearch per the data-quality guard. Gemini's synthesis itself did surface three usable, non-fabricated leads, corroborated independently below: AMD earnings after today's close as an AI-capex-cycle bellwether, an LLY Neuroscience-division leadership departure ahead of tomorrow's earnings, and RIGL/MNKD/CGEM/FSTR sitting inside a cluster of near-term binary catalysts.
+
+### Market Context (WebSearch fallback for Gemini's missing sections 1-2)
+- **VIX:** ~18.0 (futures), range 17.98-18.08 — calm, not elevated.
+- **S&P 500/Nasdaq/Dow futures:** modestly higher pre-market (S&P +0.1%, Nasdaq-100 +0.6%, Dow +0.1%) after a record-high Monday close, on a ~5% overnight drop in oil after Trump canceled planned strikes on Iran to revive negotiations — a de-escalatory, risk-on catalyst, not a fresh escalation.
+- **Earnings calendar today:** AMD, Caterpillar, Merck, McDonald's, SpaceX (after close) headline a heavy Tuesday slate. AMD (core watchlist, not held) is the key AI-infra bellwether — its guidance is a read-through for the semis/AI-hardware cluster (DELL, MU, HPE, STX, NTAP, WDC, AMAT all on the current core watchlist).
+- **LLY (core watchlist, not held):** Neuroscience-division head Anne White's departure reported ahead of LLY's earnings call tomorrow (8/5) — a fresh execution-risk flag on a stock "priced for perfection" (Kisunla Alzheimer's rollout). Not a Sell-rating trigger, just a watch item if LLY is considered for entry.
+- No major scheduled US econ data/Fed events surfaced for today; Amazon's market cap crossed $3T on strong hyperscaler earnings (index-level tailwind, no direct watchlist overlap).
+
+### Held-Position Thesis Check
+- **MNKD (satellite, -4.25%):** no new news found beyond the already-known Q2 2026 earnings date, confirmed **Wednesday 2026-08-05 after market close** (4:30pm ET call) — 1 trading day out. FUROSCIX ReadyFlow PDUFA catalyst remains fully resolved since 7/24 (approved); this is a standard earnings print, not a re-triggered binary-regulatory event. No thesis break, well clear of the -15% hard-cut.
+- **SGOV/SPHY/EDGX (income):** no thesis-breaking news. SGOV declared its routine August distribution ($0.3068/share, ex-div 8/3, payable 8/6, 30-day SEC yield 3.57%) — routine; per the Income-sleeve rule, reinvest to SGOV at settlement, no action needed pre-market. No SPHY/EDGX-specific news surfaced.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+- None. Gemini's per-ticker section-4 coverage was lost entirely to truncation — no confirmed overnight check exists today for any of the 25 current core names (DELL, MU, DDOG, HUM, PANW, AMD, FTNT, HPE, CNC, STX, CRWD, DVA, NTAP, WDC, URI, MPC, CVS, AMAT, DOC, BBY, VLO, WST, LLY, ABBV, GE) beyond the AMD-earnings and LLY-leadership flags above — silence on the rest is not treated as a pass. Needs a live-bar recheck at market-open before any entry.
+- Watch item: AMD's after-hours print today is a high-impact read-through for the AI-hardware core cluster (DELL, MU, HPE, STX, NTAP, WDC, AMAT) — momentum-gate status for that group should be rechecked live tomorrow morning regardless of print direction.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+- **RIGL** — Q2 2026 earnings confirmed **today, 2026-08-04, after market close** (4:30pm ET) — inside the 5-trading-day catalyst window (same-day). Not held. Any entry today would be entering same-day into an after-hours binary print with no stop protection overnight — must use the 5% binary-catalyst cap with documented max-loss-if-fails per the gap-risk rule, if considered at market-open/midday before the print (and re-evaluated fresh after the print if not entered beforehand). Not executed this run (pre-market is research-only).
+- **MNKD** (held) — see Held-Position Thesis Check; earnings tomorrow (8/5), 1 trading day out.
+- **CGEM** — correction to a standing data-quality flag: zipalertinib's FDA target action date is confirmed **February 27, 2027** (NDA accepted, Breakthrough Therapy), not the internally-inconsistent "Q1 2026/August 6" figure carried in WATCHLIST.md from a prior Gemini run. This is **not** inside the 5-trading-day window — update WATCHLIST.md's catalyst-date field at the next screen refresh.
+- **FSTR** — Q2 2026 earnings confirmed **Monday 2026-08-10, pre-market** (was "mid-August" estimate in WATCHLIST.md) — 4 trading days out, inside the 5-trading-day window as of today.
+- **CVLG** — not rechecked this run (no overnight news search performed); its 7/29 earnings catalyst has already passed per TRADE-LOG.
+
+### Risk Factors
+- Gemini Deep Research truncation remains an unresolved, recurring reliability issue (flagged repeatedly since 07-12) — full sections 1-4 lost again this run, backfilled via WebSearch only for the items judged decision-relevant (macro tone, held-position checks, satellite catalyst dates), not exhaustively for all 25 core names.
+- RIGL's earnings print tonight and MNKD's tomorrow are both binary, overnight-gap events with no stop protection — MNKD is held (position already sized/documented at entry, no forced action); RIGL is not held, so no gap risk unless a same-day entry is made.
+- AMD's after-hours print tonight is a bellwether for the core AI-hardware cluster (DELL, MU, HPE, STX, NTAP, WDC, AMAT) — expect a live momentum/sentiment shift either direction to check at market-open.
+- LLY leadership departure (Neuroscience) ahead of tomorrow's earnings — execution-risk watch item, not a rating downgrade, relevant only if LLY is considered for a new core entry.
+- WATCHLIST.md is now 11 calendar days stale (last refresh 2026-07-24; Friday 7/31 refresh was missed per TRADE-LOG) — momentum/fundamentals on the current lists are correspondingly stale; recommend an ad hoc `/screen-refresh` at the next opportunity, consistent with the standing carryover flag from prior sessions.
+- Cash at 20.06%, essentially at the floor — any new Core/Satellite buy this week requires an SGOV funding sweep per the Income-sleeve rule.
+- No held position is near its hard-cut (MNKD -4.25% vs -15%); no major geopolitical escalation (today's Iran news is de-escalatory); VIX calm (~18.0).
+
+### Decision
+**HOLD** (pre-market default; research-only, no trades this run). No held position is near its hard-cut, no satellite catalyst resolved negatively overnight (RIGL and MNKD catalysts are still pending, not yet resolved), and no major geopolitical escalation — so no urgent pre-market notification triggered per Step 5. Handoff to market-open/midday: (1) no core buy candidate confirmed given lost Gemini coverage — don't treat silence as a pass, recheck the full core list live, especially AI-hardware names ahead of/after AMD's print; (2) RIGL's earnings print is tonight — any same-day entry must use the 5% binary cap with documented max loss, otherwise re-evaluate fresh post-print; (3) MNKD (held) reports tomorrow, 1 trading day out, no action needed today; (4) CGEM's catalyst-date correction (Feb 2027, not imminent) and FSTR's confirmed 8/10 date should be reflected in WATCHLIST.md at the next screen refresh. This week (Aug 3 start): core 0/6, satellite 0/4 — Patience Rule applies as always.
