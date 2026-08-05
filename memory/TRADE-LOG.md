@@ -889,3 +889,50 @@ MNKD's Aug 5 earnings is now 1 trading day out; the AI-hardware/semis
 re-entry decision and the missed 7/31 weekly refresh both remain open items
 needing owner/Friday-review resolution — recommend running `/screen-refresh`
 ad hoc given two consecutive missed Friday refreshes (7/17, 7/31).
+
+## Aug 5 — 3pm Snapshot (Day 20, Wednesday)
+**Portfolio:** $96,060.91 | **Cash:** $19,116.70 (19.90%) | **Day P&L:** +$193.76 (+0.20%) | **Phase P&L:** -$3,939.09 (-3.94%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $4,993.65 (5.20% of equity) | **Income exposure:** $71,950.56 (74.90% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $4.11 | +3.79% | +$133.65 (+2.75%) | 15% trailing ($3.59975) |
+| EDGX | income | 746 | $26.78 | $27.1699 | +0.15% | +$290.87 (+1.46%) | 5% trailing ($25.9255) |
+| SGOV | income | 316.433 | $100.631425 | $100.445 | +0.02% | -$58.99 (-0.19%) | 5% trailing ($95.684) |
+| SPHY | income | 856 | $23.36 | $23.245 | -0.11% | -$98.44 (-0.49%) | 5% trailing ($22.2015) |
+
+**Notes:** No Core/Satellite trades this window — no "### Approved Trades
+(verified)" section existed anywhere in today's RESEARCH-LOG (pre-market,
+9:30am, and 11am all returned zero qualifying ideas: a broad wide/illiquid-
+spread anomaly hit most core candidates at market-open, and RIGL again
+failed the same skip rule despite a positive 8/4 earnings print), so per
+STEP 3 the buy side was HOLD all session — this week (Aug 3 start) stays at
+core 0/6, satellite 0/4. Risk sweep: no position at/beyond its sleeve
+hard-cut (MNKD +2.75% vs -15%; no core positions); all 4 open positions
+confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none
+missing. MNKD's Q2 2026 earnings print after today's close (4:30pm ET) is a
+genuine overnight gap-risk event with no stop protection, but was
+reconfirmed for the fourth time today as a standard commercial print, not a
+re-triggered binary — the FUROSCIX ReadyFlow PDUFA the position was
+originally sized/documented against at the 5% binary cap resolved 7/24, and
+WATCHLIST.md documents no new firm near-dated FDA/regulatory binary date.
+Conviction unchanged and well clear of the hard-cut, so holding through
+rather than closing, documented explicitly per STEP 4 rather than silently
+passing. No other thesis break on any held name. No stop tightening this
+window — MNKD's +2.75% gain is well below the +25% satellite tightening
+threshold; Income sleeve has no gain-based schedule. No stop moved down.
+2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials
+0/2. Cash 19.90%, still a hair below the 20% floor purely from price drift
+(no trade this window to trigger the SGOV funding-sweep mechanism, which is
+a pre-trade check, not a standalone rebalance trigger) — flagged again for
+Friday's weekly rebalance touch. Risky positions closed today: none. Day
+P&L (+0.20%) driven mainly by MNKD's +3.79% move ahead of tonight's print,
+partly offset by SPHY's modest pullback; core sleeve remains flat (zero
+positions) since HPE's 7/28 stop-out, now 6 full sessions running. Phase
+P&L now -3.94% since Day 0 ($100,000 -> $96,060.91). Tomorrow: MNKD's Q2
+earnings after tonight's close (4:30pm ET) is the key overnight event,
+already sized/documented at entry, no forced action expected pre-print
+beyond a live re-check at market-open; CGEM's Q2 print is tomorrow
+pre-market (8/6), moving it into a fresh post-print re-evaluation; the
+missed 7/31 weekly screen refresh and the still-below-floor cash level both
+remain open items for Friday's (8/7) weekly review.
