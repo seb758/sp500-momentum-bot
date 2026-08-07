@@ -984,3 +984,43 @@ process items flagged across this week's sessions, plus the still-below-
 floor cash level. RIGL's VEPPANU commercial-launch catalyst window and
 FSTR's 8/10 earnings window both continue approaching for satellite
 consideration once the weekly refresh confirms current watchlist status.
+
+## Aug 7 — 3pm Snapshot (Day 22, Friday)
+**Portfolio:** $96,124.12 | **Cash:** $19,116.70 (19.89%) | **Day P&L:** +$415.66 (+0.43%) | **Phase P&L:** -$3,875.88 (-3.88%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $4,994.74 (5.20% of equity) | **Income exposure:** $72,008.74 (74.91% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $4.1109 | +5.68% | +$134.74 (+2.77%) | 15% trailing ($3.59975) |
+| EDGX | income | 746 | $26.78 | $27.18 | +0.42% | +$298.40 (+1.49%) | 5% trailing ($25.9255) |
+| SGOV | income | 316.433 | $100.631425 | $100.4833 | +0.02% | -$46.87 (-0.15%) | 5% trailing ($95.684) |
+| SPHY | income | 856 | $23.36 | $23.29 | +0.26% | -$59.92 (-0.30%) | 5% trailing ($22.2015) |
+
+**Notes:** No Core/Satellite trades this window — no "Approved Trades
+(verified)" section existed anywhere in today's RESEARCH-LOG (pre-market,
+9:30am, and 11am all returned zero qualifying ideas; the AI-hardware/semis
+core cluster remains parked pending today's overdue weekly screen-refresh
+rather than acted on stale fundamentals), so per STEP 3 the buy side was
+HOLD all session — this week (Aug 3 start) stays at core 0/6, satellite
+0/4. Risk sweep: MNKD +2.77% unrealized, well clear of the -15% hard-cut;
+all 4 open positions confirmed carrying live GTC trailing stops via
+`alpaca.sh orders`, none missing. MNKD's catalyst remains resolved
+(FUROSCIX ReadyFlow PDUFA, 7/24) with no new near-dated binary documented
+in WATCHLIST.md — no thesis break, holding through as usual, documented
+explicitly per STEP 4 rather than silently passing. No other thesis break
+on any held name. No stop tightening this window — MNKD's +2.77% gain is
+well below the +25% satellite tighten threshold; Income sleeve has no
+gain-based schedule. No stop moved down. 2-strike sub-sector tracker
+unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 19.89%, still a
+hair below the 20% floor purely from price drift (no trade this window to
+trigger the SGOV funding-sweep mechanism) — carries into today's weekly
+review for the rebalance touch. Risky positions closed today: none. Day
+P&L (+0.43%) driven mainly by MNKD's continued post-earnings recovery
+(+5.68% today), plus modest EDGX/SGOV gains; core sleeve remains flat
+(zero positions) since HPE's 7/28 stop-out, now 10 full sessions running.
+Phase P&L now -3.88% since Day 0 ($100,000 -> $96,124.12). Tomorrow: the
+overdue weekly review/screen-refresh (today, 8/7) remains the standing
+top-priority item — WATCHLIST.md 14 calendar days stale, two consecutive
+Friday refreshes missed — along with the unresolved Gemini-truncation
+issue; FSTR's 8/10 earnings and RIGL's ~5-8-trading-day-out VEPPANU launch
+are the live satellite catalyst items to watch next week.
