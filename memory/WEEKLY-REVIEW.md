@@ -378,3 +378,271 @@ selloff, new tariffs, a 10Y yield spike to an 18-month high) explains some
 of the drawdown, but not the process gaps. Grade reflects that mix: neither
 a clean pass nor a rule violation, but real operational debt that needs to
 close out before it compounds.
+
+---
+
+## Week ending 2026-08-07
+
+**Coverage note — this entry spans TWO market weeks (2026-07-27 through
+2026-08-07), not one.** The Friday 2026-07-31 weekly-review run never
+happened or never persisted — WATCHLIST.md's "Current" section and
+WEEKLY-REVIEW.md's most recent dated entry were both still "2026-07-24"
+going into this session, meaning the bot traded off a screen 14 calendar
+days stale for the back half of this period. This is the second time this
+exact failure mode has occurred (the first was 7/17, caught up in the
+7/24 review) — see "What Didn't Work" below. All trade activity below is
+aggregated over the full two-week span since the last confirmed review.
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $96,449.19 (per week-ending-2026-07-24 review) |
+| Ending portfolio | $96,078.42 |
+| Period return (2 weeks) | -$370.77 (-0.38%) |
+| S&P 500, same 2 weeks (Fri 07-24 close to Fri 08-07 close) | +4.62% (index closed 7,754.28, via Gemini Deep Research; note: last week's cited 07-24 close of 7,434.91 implies +4.30% by direct arithmetic — a ~0.3pp discrepancy between Gemini's stated headline figure and the two point-in-time levels it separately cited across the two sessions; flagging per the data-quality guard rather than silently picking one, direction and magnitude both clearly a strong rally either way) |
+| Bot vs S&P (2-week basis) | -5.00pp (bot underperformed) |
+| Core trades | 2 (W:0 / L:2 / open:0) |
+| Satellite trades | 0 new (MNKD carried over from before this period, held throughout, no new entries/exits — 1 open) |
+| Win rate (closed trades) | 0% (0/2) |
+| Best trade (closed) | HPE -5.71% (core) — least-bad of 2 closed trades, both losses |
+| Worst trade (closed) | MU -10.05% (core) |
+| Profit factor | 0.00 (gross profit $0 / gross loss $1,538.75) |
+
+Income sleeve (SGOV/SPHY/EDGX) is not included in the trade/win-rate stats
+above — it's not momentum/catalyst-screened and isn't subject to the weekly
+trade caps. No Income-sleeve trades this period (no Core/Satellite sell
+triggered a sweep-back, and no buy triggered a pre-trade funding sweep) —
+cash drifted below the 20% floor as a result, see "What Didn't Work."
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| MU | core | $966.531 | $869.37 | -$971.61 (-10.05%) | 10% GTC trailing stop, filled 2026-07-27T14:26:22Z (10:26am ET), trail from hwm $966.09. Sector-wide semis/AI-hardware selloff, no company-specific negative catalyst (analysts still Strong Buy); second consecutive week this cluster stopped out (following the week-ending-07-24 MU loss) |
+| HPE | core | $47.27 | $44.569333 | -$567.14 (-5.71%) | 10% GTC trailing stop, filled 2026-07-28T13:35:18Z (9:35am ET), trail from hwm $49.68. Continuation of the same sector-wide semis/AI-hardware rout, no company-specific news. Third consecutive mechanical core stop-out in the same cluster (MU week-ending-07-24, MU 07-27, HPE 07-28) — core sleeve reduced to zero open positions and stayed there for the rest of the period (10 consecutive trading sessions through 08-07) |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| MNKD | satellite | $4.00 | $4.08 | +$97.20 (+2.00%) | 15% trailing, trigger $3.59975 (hwm $4.235) |
+| EDGX | income | $26.78 | $27.1851 | +$302.20 (+1.51%) | 5% trailing, trigger $25.9255 (hwm $27.29) |
+| SGOV | income | $100.631425 | $100.485 | -$46.33 (-0.15%) | 5% trailing, trigger $95.684 (hwm $100.72) |
+| SPHY | income | $23.36 | $23.28 | -$68.48 (-0.34%) | 5% trailing, trigger $22.2015 (hwm $23.37) |
+
+All 4 open positions confirmed carrying live GTC trailing stop orders via
+`alpaca.sh orders open`, none missing. Week-end exposure: core $0.00 (0.00%
+of equity), satellite $4,957.20 (5.16%), income $72,004.52 (74.94%), cash
+$19,116.70 (19.90%, below the 20% floor — see "What Didn't Work").
+
+### Watchlist Refresh
+- **Core: 22 names (was 25).** Full ~500-name universe re-screened on
+  fresh Alpaca bars (S&P 500 list sourced from a GitHub-hosted dataset —
+  see data-quality note below). FMP 402'd on cashflow/growth for
+  effectively the entire ~50-name shortlist (only 5/50 — PYPL, CSCO, DAL,
+  UAL, TGT — returned a usable rating directly); core fundamentals
+  validation came almost entirely from Gemini Deep Research, batched ~10
+  tickers/query, run in parallel. New this week (13 names): ZBRA, CRL,
+  ANET, PYPL, BAX, CSCO, GRMN, FFIV, STT, NUE, GEN, XYZ, MET. Retained (9):
+  DELL, PANW, HPE, CRWD, NTAP, VLO, CNC, MPC, URI. Dropped from the prior
+  25-name list (16): MU, DDOG, HUM, AMD, STX, DVA, WDC, CVS, AMAT, DOC,
+  BBY, LLY, ABBV, GE — all fell below this week's momentum cut or failed
+  the live gate outright (MU/AMD/STX/WDC/AMAT in particular have now
+  failed the momentum gate on every live session check this week, per
+  daily research-log notes); plus **FTNT** and **WST**, which passed
+  momentum but failed fundamentals specifically this week (FTNT: Hold
+  consensus with a growing Sell/Strong Sell lean including a DZ Bank
+  downgrade; WST: FCF trend turned explicitly negative over the last few
+  quarters). See WATCHLIST.md for the full ticker-by-ticker audit,
+  including 6 names that failed fundamentals this week (FTNT, HPQ, WST,
+  TRV, FDS, PAYX) and 22 "sector-capped alternates" held out only by the
+  cut line.
+- **Satellite: 4 names (was 5).** Added **SVRA** (new). Retained MNKD
+  (held), RIGL, CGEM. Dropped **FSTR** and **CVLG** — both now fail the
+  live momentum gate (FSTR below its 50-day MA despite its real 08-10
+  earnings catalyst; CVLG flat/below its 50-day MA, consistent with the
+  margin-compression concern flagged in the 07-24 refresh materializing in
+  price action).
+- **Data-quality catch:** this week's Gemini satellite-candidate sourcing
+  round surfaced two tickers — **SCPH** and **NVEE** — presented as live,
+  independently-tradeable small/mid-cap candidates with fabricated-looking
+  Q2 2026 detail. Both were disproved before being added: SCPH
+  (scPharmaceuticals) was fully acquired by MannKind — the bot's own held
+  MNKD position — in a deal that closed 2025-10-07 and is no longer an
+  independent public company; NVEE (NV5 Global)'s Alpaca bar history stops
+  in early August 2025, a full year stale, consistent with an
+  unmentioned-but-real merger/delisting. Neither would have been caught
+  without the independent Alpaca price-history cross-check STEP 7c
+  requires — a concrete instance of exactly the failure mode the
+  data-quality guard exists to catch, not a hypothetical one. Full detail
+  in WATCHLIST.md.
+- **Core sector mix (22 names):** IT hardware/storage 3 (DELL, HPE, NTAP),
+  cybersecurity/software 3 (PANW, CRWD, GEN), other IT hardware/networking/
+  instruments 4 (ZBRA, ANET, CSCO, FFIV), health care 3 (CRL, BAX, CNC),
+  financials 4 (PYPL, STT, XYZ, MET), energy 2 (VLO, MPC), consumer
+  discretionary 1 (GRMN), materials 1 (NUE), industrials 1 (URI) — 7
+  distinct GICS sectors. The semis/AI-hardware cluster (DELL, HPE, NTAP)
+  is only 3 of 22 names (13.6%) — the lowest concentration of any refresh
+  to date (32% on 07-24, ~72% at launch) — but this is a direct
+  consequence of AMD/MU/STX/WDC/AMAT all failing the live momentum gate
+  this week, not a deliberate diversification choice; if that cluster's
+  momentum recovers, expect the concentration to climb back toward the cap
+  at the next refresh.
+
+### What Worked
+- Mechanical stop discipline held again on both closed trades (MU, HPE) —
+  real GTC trailing-stop fills, no manual override, no averaging down, no
+  mental stops.
+- MNKD navigated a genuine overnight gap-risk event (Q2 2026 earnings,
+  08-05 after close, no stop protection over the print) without incident:
+  held through per documented, repeatedly-reconfirmed rationale (FUROSCIX
+  PDUFA catalyst already resolved 07-24, not a re-triggered binary), drew a
+  soft-print dip to -6.46% intraday on 08-06, and recovered to +2.00%
+  unrealized by week end — the "hold through, don't force-react" call was
+  vindicated.
+- The Patience Rule held under real pressure: core sleeve stayed at zero
+  new trades for 10 straight sessions despite DELL/DDOG/PANW/FTNT/CRWD
+  live-passing the momentum gate on multiple days, because fundamentals
+  couldn't be freshly verified (stale watchlist + FMP allowlist gaps +
+  Gemini truncation) — the bot did not force an entry off unverified data.
+- Every session's risk sweep (all 4 open positions, GTC stops, 2-strike
+  tracker, cash floor) was logged in full even through the persistence gap
+  — the audit trail itself never broke down, even though the watchlist
+  refresh did.
+
+### What Didn't Work
+- **Second consecutive missed Friday watchlist refresh (07-31).** The
+  week-ending-07-24 review's own "Key Lesson" was to add "an explicit
+  persistence check... before a weekly-review run is considered complete,
+  so a skipped or failed run is caught immediately." That did not prevent
+  a second miss three weeks later — WATCHLIST.md sat 14 calendar days
+  stale by today, and no session flagged it as more than a recurring
+  research-log footnote until this review. This is now a demonstrated
+  pattern (7/17 and 7/31 both missed within a 4-week span), not a one-off.
+- **Gemini Deep Research truncation, now 5 consecutive weeks unresolved
+  (since 2026-07-12).** Every pre-market run in this period lost
+  significant structured content — VIX/futures, econ calendar, and
+  per-ticker checks were repeatedly dropped, sometimes entirely (08-05,
+  08-06 captured almost no structured sections). WebSearch fallback
+  covered the decision-relevant gaps each day, so no bad trade resulted,
+  but the persistent coverage gap materially contributed to core staying
+  un-invested: several sessions could not confirm fresh fundamentals on
+  live-momentum-passing names (DELL, DDOG, PANW, FTNT, CRWD) because
+  Gemini's per-ticker section was the mechanism meant to supply that
+  confirmation. Flagged as needing "an actual fix" in at least four
+  separate daily research-log entries (08-04 through 08-07) before this
+  review — see Key Lessons and Adjustments.
+- **Semis/AI-hardware sector concentration risk materialized exactly as
+  warned in the week-ending-07-24 review.** MU (07-27) and HPE (07-28)
+  both stopped out mechanically on sector-wide (not company-specific)
+  drawdown — the third and fourth such mechanical stop in the same
+  cluster in three weeks (MU week-ending-07-24, MU 07-27, HPE 07-28). Core
+  sleeve then sat at zero positions for 10 consecutive trading sessions
+  through the end of this period.
+- **The bot underperformed the S&P 500 by roughly 5 percentage points this
+  period** (-0.38% vs +4.62%), driven almost entirely by sitting at 0%
+  core exposure through a strong two-week rally (Fed-cut repricing on a
+  weak jobs report, mega-cap software/AI strength), compounded by locking
+  in two core losses on the way in. This is the direct, quantified cost of
+  the concentration-driven stop-outs plus the process gaps (stale
+  watchlist, degraded research pipeline) that prevented a timely,
+  verified re-entry.
+- **A new, broader wide/illiquid-spread pattern emerged 08-05/08-06**:
+  normally-liquid mega-caps (CRWD, PANW, DDOG, FTNT) tripped the
+  wide-spread skip rule at the open alongside the usual thin small/mid-cap
+  names (RIGL, CGEM) — a session note flagged this as possibly an
+  IEX-feed thin-top-of-book pattern at the opening auction, not yet
+  root-caused. Worth monitoring for recurrence; if it persists, it is
+  independently blocking core entries, not just satellite ones.
+- **Cash floor sat below 20% (19.89%-19.98%) for roughly the back half of
+  this period**, purely from price drift on existing positions, with no
+  Core/Satellite trade to trigger the SGOV funding-sweep mechanism (which
+  the strategy document specifies as pre-trade-only, not a standalone
+  rebalance trigger). Flagged in at least 6 separate session notes across
+  08-04 through 08-07 without correction — a structural gap, not an
+  oversight in any single session.
+
+### Key Lessons
+- A documented mitigation that is never actually executed provides no
+  protection: the 07-24 review's proposed "explicit persistence check" did
+  not stop a second consecutive missed refresh. A real fix needs to change
+  what a daily session *does* when it finds the watchlist stale beyond a
+  threshold (e.g., treat >7-calendar-days-stale as a hard escalation in
+  the pre-market report, not a routine footnote), not just add another
+  reminder to check.
+- Repeatedly flagging an unresolved data-quality issue without anyone
+  actually changing the mechanism produces the same outcome every time.
+  The Gemini truncation problem was correctly diagnosed early (too much
+  requested content in one blocking `research` call) and the fix was
+  named explicitly in session notes ("prompt restructuring / splitting
+  into smaller calls") but never implemented, because the daily pre-market
+  workflow's Gemini call pattern lives in `.claude/commands/pre-market.md`
+  / `routines/pre-market.md`, outside this weekly-review session's file
+  scope (STEP 11 only commits specific `memory/` files). Recording the
+  concrete fix here so it's actionable by whichever session next has
+  write access to those files: split the single consolidated pre-market
+  `research` call into 2 smaller parallel `submit`+`poll` calls (e.g. one
+  for macro/VIX/econ-calendar + held-position checks, one for the core
+  watchlist's per-ticker checks), each of which fits comfortably under
+  the truncation threshold that's been triggering for 5 weeks running.
+- The Income sleeve's cash-floor sweep is, by design, a pre-trade-only
+  check (confirmed again this period) — a multi-session drift below the
+  floor with zero Core/Satellite trading activity has no mechanism that
+  will ever self-correct it. Either the rule needs to explicitly tolerate
+  small drift (documented as immaterial below some threshold) or it needs
+  a standalone periodic check independent of trade activity. Addressing
+  this directly in TRADING-STRATEGY.md this session (see strategy-doc
+  change note below) since it's now failed the same way for a full week.
+- Sector-concentration risk isn't fully addressed by capping the
+  *watchlist* construction (~40% cap, semis/AI-hardware as one cluster) —
+  it also needs to be managed at the *portfolio* level, since the buy-side
+  gate doesn't independently limit how many positions from one correlated
+  cluster can be open at once. The watchlist cap held at 8/25 (32%) both
+  of the last two refreshes and did what it was designed to do at
+  screen-construction time; the portfolio-level concentration that hurt
+  this period came from which names got bought and stopped out, not from
+  the watchlist being miscalibrated.
+
+### Adjustments for Next Week
+- This session's screen refresh (see Watchlist Refresh below) resets
+  WATCHLIST.md to current data — treat a missing or failed weekly-review
+  commit on a future Friday as a hard blocker requiring owner escalation,
+  not just a footnote in next week's "what didn't work."
+- **TRADING-STRATEGY.md change (this commit):** clarified the Income
+  sleeve's cash-floor rule to explicitly tolerate a small drift (<1% of
+  equity) from price movement alone as immaterial and not requiring
+  action, while adding that a drift persisting beyond 3 consecutive
+  trading sessions should trigger a standalone SGOV sale to restore the
+  floor even with no Core/Satellite trade pending — closing the gap where
+  the sweep is otherwise pre-trade-only. This is a mechanics fix, not a
+  change to the 20% floor itself or to risk tolerance.
+- Flag prominently (this review's email + PR description) that
+  `.claude/commands/pre-market.md` / `routines/pre-market.md` need the
+  Gemini-query-splitting fix described in Key Lessons — this is outside
+  weekly-review's file scope this session but is now the single
+  highest-value reliability fix outstanding.
+- Watch the new mega-cap wide-spread pattern (CRWD/PANW/DDOG/FTNT on
+  08-05/08-06) for recurrence next week; if it repeats, treat it as a
+  standing data-feed issue worth its own investigation rather than a
+  per-session anomaly.
+- No core risk-cap changes (sleeve %, stop widths, sector-cap threshold)
+  this week — this period's shortfalls were process/reliability failures
+  (missed refresh, degraded research pipeline, cash-mechanism gap) and a
+  genuinely difficult sector-concentration outcome, not evidence the risk
+  parameters themselves are miscalibrated.
+
+### Overall Grade: D+
+Mechanical risk controls again performed exactly as designed (every stop
+fired correctly, MNKD's binary-adjacent earnings gap was handled with
+documented conviction rather than a knee-jerk exit, and the Patience Rule
+held even under multi-session pressure to chase live-passing momentum
+names). But the period's actual outcome was weak on every measure that
+matters: a 0% closed-trade win rate, a real dollar loss while the S&P
+rallied nearly 5%, and — more importantly — two process failures that
+were each explicitly flagged as needing a fix in a prior review or
+session and recurred anyway (a second missed Friday refresh, a fifth
+straight week of unaddressed Gemini truncation). Unlike the week-ending-
+07-24 review, where the drawdown was substantially explained by adverse
+market conditions, this period's underperformance is harder to excuse:
+the market rallied hard and the bot missed nearly all of it because of
+compounding, previously-identified operational gaps. Grade reflects that:
+solid mechanical execution can't offset a second consecutive miss on a
+lesson the bot already claimed to have learned.
