@@ -104,6 +104,21 @@ workflow, Part C). Adjusted intraday/daily when:
   funding would work against their yield purpose and take real slippage
   given their much thinner quoted size. Log the SGOV sale to TRADE-LOG.md
   like any other Income-sleeve trade.
+- **Price-drift floor breaches with no pending trade (added 2026-08-07):**
+  the two triggers above only fire around a Core/Satellite trade — they do
+  nothing when cash drifts below the 20% floor purely from price
+  appreciation on existing Income/Satellite positions while no buy or sell
+  is happening. This gap let cash sit below the floor for roughly a week
+  (2026-08-04 through 2026-08-07, 19.89%-19.98%) with no session correcting
+  it, because none had a triggering trade. Two-part fix: (a) a drift of
+  less than 1% of equity below the floor, driven purely by price movement,
+  is immaterial and requires no action — don't force a same-day SGOV sale
+  over a few basis points; (b) if that drift persists for more than 3
+  consecutive trading sessions, the next daily session (any window) sells
+  enough SGOV to restore cash to at/above the 20% floor as a standalone
+  action, independent of whether a Core/Satellite trade is pending. This is
+  a mechanics fix to close the pre-trade-only gap, not a change to the 20%
+  floor itself or to risk tolerance.
 
 **Dividends:** all distributions from SGOV, SPHY, and EDGX reinvest into
 SGOV — not split pro-rata, not reinvested in the paying ticker.
