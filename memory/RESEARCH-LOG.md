@@ -2514,3 +2514,10 @@ The client-side bug diagnosed 2026-08-09 (`extract_report()` reads only `steps[-
 - **Cash floor restored:** 20.24% of equity (per 9:30am's standalone SGOV sweep) — at/above the 20% floor, no further action needed this window.
 - 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
 - No unexplained sharp intraday movers warranting a consolidated Gemini check this window.
+
+### 3 PM Session Note
+- **Buy-side: HOLD, both sleeves.** Still no "### Approved Trades (verified)" section anywhere in today's RESEARCH-LOG — per STEP 3, no buys placed. This week (Aug 10 start) stays at core 0/6, satellite 0/4 (MNKD carryover holding).
+- **Risk sweep: no cuts.** MNKD (only satellite position) -1.88% unrealized, well clear of the -15% hard-cut; no core positions held. All 4 open positions (MNKD, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing. MNKD drifted -4.50% intraday (close $4.11 -> $3.925) with no new company-specific news found and no thesis break — the FUROSCIX ReadyFlow PDUFA remains resolved (7/24), no new near-dated binary documented in WATCHLIST.md, so treated as ordinary price noise, not a re-check trigger; conviction unchanged, holding through. No other thesis break on any held name. No stop tightening this window — no position past its sleeve's gain-based threshold (MNKD underwater; Income sleeve has no gain-based schedule). No stop moved down.
+- **Cash floor:** 20.27% of equity, at/above the 20% floor (restored at 9:30am's standalone SGOV sweep) — no action needed.
+- 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- Risky positions closed today: none.
