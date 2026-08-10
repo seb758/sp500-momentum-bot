@@ -1024,3 +1024,7 @@ top-priority item — WATCHLIST.md 14 calendar days stale, two consecutive
 Friday refreshes missed — along with the unresolved Gemini-truncation
 issue; FSTR's 8/10 earnings and RIGL's ~5-8-trading-day-out VEPPANU launch
 are the live satellite catalyst items to watch next week.
+
+### 2026-08-10 — SELL SGOV (income) — cash-floor sweep
+Shares: 3 | Exit: $100.49 | Realized P&L: ~$0.00 (0.00%) | Reason: cash-floor restoration (income only) — cash had been below the 20% floor continuously since 8/4 (range 19.89%-19.98%), past TRADING-STRATEGY.md's 3-consecutive-session action threshold (rule added 8/7) for a standalone sweep independent of any pending buy. Flagged as materially overdue by pre-market research; executed at this session's first trading window per that handoff. Pre-sale: cash $19,116.70 = 19.90% of equity ($96,058.21). Post-sale: cash $19,418.17 = 20.24% of equity ($96,013.19).
+Mechanics: canceled the standing 316-share 5% trailing stop (b3c364c7...), sold 3 sh market/day, re-placed a fresh 5% trailing GTC stop on 313 of the remaining 313.432863884 sh (trigger $95.4655, hwm $100.49) — same cancel-then-replace pattern as the 7/21 and 7/17 sweeps, avoiding two stacked stop orders on one symbol. The 0.432863884-share fractional remainder is left unstopped, consistent with how the prior 316-share stop already excluded it.
