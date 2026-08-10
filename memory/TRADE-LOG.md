@@ -1028,3 +1028,47 @@ are the live satellite catalyst items to watch next week.
 ### 2026-08-10 — SELL SGOV (income) — cash-floor sweep
 Shares: 3 | Exit: $100.49 | Realized P&L: ~$0.00 (0.00%) | Reason: cash-floor restoration (income only) — cash had been below the 20% floor continuously since 8/4 (range 19.89%-19.98%), past TRADING-STRATEGY.md's 3-consecutive-session action threshold (rule added 8/7) for a standalone sweep independent of any pending buy. Flagged as materially overdue by pre-market research; executed at this session's first trading window per that handoff. Pre-sale: cash $19,116.70 = 19.90% of equity ($96,058.21). Post-sale: cash $19,418.17 = 20.24% of equity ($96,013.19).
 Mechanics: canceled the standing 316-share 5% trailing stop (b3c364c7...), sold 3 sh market/day, re-placed a fresh 5% trailing GTC stop on 313 of the remaining 313.432863884 sh (trigger $95.4655, hwm $100.49) — same cancel-then-replace pattern as the 7/21 and 7/17 sweeps, avoiding two stacked stop orders on one symbol. The 0.432863884-share fractional remainder is left unstopped, consistent with how the prior 316-share stop already excluded it.
+
+## Aug 10 — 3pm Snapshot (Day 23, Monday)
+**Portfolio:** $95,822.40 | **Cash:** $19,418.17 (20.27%) | **Day P&L:** -$301.72 (-0.31%) | **Phase P&L:** -$4,177.60 (-4.18%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $4,768.88 (4.98% of equity) | **Income exposure:** $71,634.04 (74.76% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $3.925 | -4.50% | -$91.13 (-1.88%) | 15% trailing ($3.59975) |
+| EDGX | income | 746 | $26.78 | $27.14 | -0.17% | +$268.56 (+1.34%) | 5% trailing ($25.9255) |
+| SGOV | income | 313.433 | $100.631425 | $100.495 | +0.01% | -$42.76 (-0.14%) | 5% trailing ($95.475, 313 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.235 | -0.19% | -$107.00 (-0.54%) | 5% trailing ($22.2015) |
+
+**Notes:** No Core/Satellite trades this window — no "Approved Trades
+(verified)" section existed anywhere in today's RESEARCH-LOG (pre-market,
+9:30am, and 11am all returned zero qualifying ideas: RIGL failed the
+illiquid-spread skip rule for a 5th straight session despite being inside
+its VEPPANU catalyst window, and the broad wide-spread anomaly continued
+hitting DELL/PANW/CRWD/ANET), so per STEP 3 the buy side was HOLD all
+session — this week (Aug 10 start) stays at core 0/6, satellite 0/4 (MNKD
+carryover holding). Risk sweep: MNKD -1.88% unrealized, well clear of the
+-15% hard-cut; all 4 open positions confirmed carrying live GTC trailing
+stops via `alpaca.sh orders`, none missing. MNKD drifted -4.50% intraday
+(close $4.11 -> $3.925) on no fresh company-specific news; the FUROSCIX
+ReadyFlow PDUFA remains resolved (7/24) with no new near-dated binary
+documented in WATCHLIST.md, so treated as ordinary noise, not a thesis
+break — conviction unchanged, holding through, documented explicitly per
+STEP 4 rather than silently passing. No other thesis break on any held
+name. No stop tightening this window — no position past its sleeve's
+gain-based threshold (MNKD underwater; Income sleeve has no gain-based
+schedule). No stop moved down. 2-strike sub-sector tracker unchanged:
+biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.27%, at/above the 20%
+floor following this morning's overdue standalone SGOV sweep (9:30am) — no
+further action needed. Risky positions closed today: none. Day P&L
+(-0.31%) driven almost entirely by MNKD's intraday slide, partly offset by
+EDGX's gain; core sleeve remains flat (zero positions) since HPE's 7/28
+stop-out, now 11 full sessions running. Phase P&L now -4.18% since Day 0
+($100,000 -> $95,822.40). Tomorrow: SVRA's Q2 2026 earnings call (Tue 8/11,
+4:00pm ET) is the key near-term satellite watch item (not itself a binary,
+PDUFA remains Nov 22); RIGL stays inside its VEPPANU launch window pending
+a liquidity normalization; CPI (Wed 8/12 pre-market) and CSCO earnings
+(Wed 8/12 post-market, core watchlist name) are the next macro/company
+catalysts on the calendar; the still-open gemini_research.sh
+extract_report() bug (3 consecutive sessions reproduced) remains flagged
+for owner attention.
