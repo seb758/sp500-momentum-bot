@@ -1082,4 +1082,50 @@ Shares: 114 | Entry: $41.84 | Stop: 15% trailing GTC, trigger $35.20275 (hwm $41
 Thesis: VEPPANU (vepdegestrant) commercial launch guided for "mid-August 2026" on the 8/4 earnings call — inside the 5-trading-day gap-risk window as of today per pre-market research. Momentum clears the gate (3M rel. +44.4pp vs SPY per the 8/7 screen, above both 50d/200d MA), commercial-stage with real product revenue (Q2 2026 record rev $78.7M beat, EPS $0.88 vs $0.21 consensus, FY26 guidance raised to $285-295M ex-VEPPANU), consensus not Sell. Live spread confirmed tight and stable across 3 checks this session (bid $40.95/ask $41.84-41.90, ~2.2%) — the recurring RIGL illiquid-spread pattern (7/27, 7/29, 8/3, 8/4, 8/10) did not reproduce today.
 Catalyst (satellite): VEPPANU commercial launch | Catalyst date: mid-August 2026 (guided, not a single confirmed day) | Max loss if fails: position capped at 5% of equity ($4,790 cap, actual cost $4,769.76 = 4.98% of equity) per the binary-catalyst gap-risk rule — a disappointing launch could plausibly gap the stock -20/-30% overnight (trailing stop does not protect against this) => ~$954-$1,431 (~1.0-1.5% of equity) realistic worst case, not the 15% trail level.
 Gate: satellite positions after fill 2/4 (MNKD, RIGL), satellite trades this week 1/4, cost $4,769.76 = 4.98% of equity ($95,806.66) — under the tightened 5% binary-catalyst cap. Satellite exposure after fill ~$9,491.05 (9.91% of equity, well within the 20% sleeve cap). Cash floor pre-checked and funded via the SGOV sweep above; post-trade cash confirmed $19,271.38 (20.13% of equity, $95,747.08) via `alpaca.sh account` — at/above the 20% floor.
+
+## Aug 11 — 3pm Snapshot (Day 24, Tuesday)
+**Portfolio:** $95,597.35 | **Cash:** $19,271.38 (20.16%) | **Day P&L:** -$225.05 (-0.23%) | **Phase P&L:** -$4,402.65 (-4.40%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $9,369.99 (9.80% of equity) | **Income exposure:** $66,956.46 (70.04% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $3.85 | -2.04% | -$182.25 (-3.75%) | 15% trailing ($3.59975) |
+| RIGL | satellite | 114 | $41.84 | $41.16 | -1.20% | -$77.52 (-1.63%) | 15% trailing ($35.70374) |
+| EDGX | income | 746 | $26.78 | $27.04 | -0.11% | +$193.96 (+0.97%) | 5% trailing ($25.9255) |
+| SGOV | income | 267.433 | $100.631917 | $100.505 | +0.00% | -$33.94 (-0.13%) | 5% trailing ($95.4845, 267 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.255 | +0.06% | -$89.88 (-0.45%) | 5% trailing ($22.2015) |
+
+**Notes:** One satellite trade this window's predecessor (9:30am BUY RIGL, 4.98% of
+equity, 5% binary-catalyst cap) plus its pre-trade SGOV funding sweep already
+logged above; no "Approved Trades (verified)" section existed anywhere in
+today's RESEARCH-LOG (pre-market, 11am, and this 3pm check all confirm none
+beyond the 9:30am live recheck that executed RIGL), so the 3pm buy side was
+HOLD — this week (Aug 10 start) stays at core 0/6, satellite 1/4 (RIGL).
+Risk sweep: no position at/beyond its sleeve hard-cut (MNKD -3.75% and RIGL
+-1.63% vs. -15%; no core positions); all 5 open positions confirmed carrying
+live GTC trailing stops via `alpaca.sh orders`/`positions`, none missing.
+Neither satellite catalyst is inside the 1-2 trading-day gap-risk window —
+MNKD's FUROSCIX PDUFA remains resolved since 7/24, and RIGL's VEPPANU
+commercial launch is a guided "mid-August 2026" window rather than a single
+dated event, already sized/documented at the 5% binary cap at this morning's
+entry — holding through both remains valid, stated explicitly rather than
+silently doing nothing. No thesis break on any held name. No stop
+tightening this window — MNKD and RIGL are both underwater vs. entry;
+Income sleeve has no gain-based schedule. No stop moved down. 2-strike
+sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+Cash 20.16%, at/above the 20% floor, no funding sweep needed beyond this
+morning's pre-trade RIGL sweep. Risky positions closed today: none. Day
+P&L (-0.23%) driven mainly by MNKD's continued intraday drift (-2.04%
+today) and RIGL's modest pullback since this morning's entry (-1.20%
+today), partly offset by EDGX's gain; core sleeve remains flat (zero
+positions) since HPE's 7/28 stop-out, now 14 full sessions running. Phase
+P&L now -4.40% since Day 0 ($100,000 -> $95,597.35). Tomorrow: CPI (Wed
+8/12 pre-market) is the key macro swing factor per this morning's research;
+CSCO earnings (Wed 8/12 post-market, core watchlist name) is the next
+company-specific catalyst; SVRA's 8/11 4pm ET earnings call (tonight, after
+this session) is a real near-term volatility event to check at tomorrow's
+pre-market open; the recurring DELL/PANW/ANET/CRWD/CSCO wide-spread
+data-feed anomaly (8/10, 8/11) and the still-open `gemini_research.sh`
+`extract_report()` bug (4 consecutive sessions reproduced) both remain open
+items for the next weekly review.
 Note: Core buy-side was HOLD this window — DELL, PANW, ANET, CRWD, and CSCO all showed erratic/unstable quotes (asks jumping $10-20+ within seconds while bids stayed frozen, e.g. PANW ask $378.02 -> $395.50 in under a minute with bid unchanged), consistent with the recurring wide-spread data-feed anomaly flagged in prior sessions (8/10 note) rather than genuine illiquidity. Skipped per the "skip anything wide or zero (halted/illiquid)" rule — not a fundamentals or momentum fail. PYPL (real overnight M&A speculation: Stripe/Advent $53B take-over bid, stock +19% to ~$59) was also skipped — a take-over-bid price spike is not the momentum+FCF signal this screen is built to capture, and is the same category of poor fit documented for AVDL's M&A-completion catalyst in WATCHLIST.md (excluded there as "poor fit, not a fundamentals fail") — applying the same judgment here even though PYPL sits in the core sleeve rather than satellite.
