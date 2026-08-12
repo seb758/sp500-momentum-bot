@@ -1138,3 +1138,50 @@ Shares: 172 | Entry: $55.56 | Stop: 10% trailing GTC, trigger $50.067 (hwm $55.6
 Thesis: Core watchlist momentum name, 2026-08-07 screen rank 3 of 22 (3M rel. return +71.5% vs SPY, above both 50d/200d MA), FCF positive/improving (Q2 FCF $915M, +$1.8B YoY, FY outlook raised to >=$3.5B on AI systems bookings), Moderate Buy/Buy rating, rev +40%. Pre-market research (8/12) found no new red flags: AI-infrastructure buildout thesis intact, pivoting to higher-margin networking (Juniper integration) over lower-margin AI-server contracts. Previously held core position (stopped out 2026-07-28); core sleeve has been empty for 15 straight sessions since, largely because the top-ranked names (DELL, PANW, ANET, CRWD) have been blocked by a recurring wide-spread data-feed anomaly (flagged 8/10, 8/11 and again today). Today's live market-open spread check found HPE clean (bid $55.49/ask $55.55, ~0.1%) — one of only 6 of the 22 core watchlist names with a normal spread this window (HPE, PYPL, BAX, CNC, GEN, XYZ all clean; DELL/PANW/ANET/CRWD/ZBRA/NUE/URI/VLO/MPC/MET/STT/CRL/GRMN/FFIV all showing anomalous 5-12% spreads consistent with the known bug, not genuine illiquidity). Entered HPE alone rather than all 6 clean names at once — deliberately conservative given this is an unsupervised scheduled run and entering all 6 would have exhausted this week's entire 6-trade/6-position core budget in a single session and required selling down almost the entire SGOV position; PYPL/BAX/CNC/GEN/XYZ left as documented candidates for a future session, not a fail (XYZ specifically carries a post-earnings insider-selling caution flag from pre-market research, worth extra scrutiny before any entry).
 Gate: core positions after fill 1/6, core trades this week 1/6, cost $9,556.32 = 9.97% of equity ($95,836.38 pre-trade) — under the 20% per-position cap. Cash floor pre-checked and funded via the SGOV sweep above; post-trade cash confirmed $19,263.39 (20.10% of equity, $95,841.47) via `alpaca.sh account` — at/above the 20% floor.
 Note: Core buy-side was HOLD this window — DELL, PANW, ANET, CRWD, and CSCO all showed erratic/unstable quotes (asks jumping $10-20+ within seconds while bids stayed frozen, e.g. PANW ask $378.02 -> $395.50 in under a minute with bid unchanged), consistent with the recurring wide-spread data-feed anomaly flagged in prior sessions (8/10 note) rather than genuine illiquidity. Skipped per the "skip anything wide or zero (halted/illiquid)" rule — not a fundamentals or momentum fail. PYPL (real overnight M&A speculation: Stripe/Advent $53B take-over bid, stock +19% to ~$59) was also skipped — a take-over-bid price spike is not the momentum+FCF signal this screen is built to capture, and is the same category of poor fit documented for AVDL's M&A-completion catalyst in WATCHLIST.md (excluded there as "poor fit, not a fundamentals fail") — applying the same judgment here even though PYPL sits in the core sleeve rather than satellite.
+
+## Aug 12 — 3pm Snapshot (Day 25, Wednesday)
+**Portfolio:** $96,213.61 | **Cash:** $19,263.39 (20.02%) | **Day P&L:** +$616.26 (+0.64%) | **Phase P&L:** -$3,786.39 (-3.79%)
+**Core exposure:** $9,926.12 (10.32% of equity) | **Satellite exposure:** $9,475.22 (9.85% of equity) | **Income exposure:** $57,548.89 (59.81% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 172 | $55.56 | $57.71 | +6.12% | +$369.80 (+3.87%) | 10% trailing ($51.9885) |
+| MNKD | satellite | 1215 | $4.00 | $3.885 | +1.17% | -$139.73 (-2.88%) | 15% trailing ($3.59975) |
+| RIGL | satellite | 114 | $41.84 | $41.71 | -0.74% | -$14.82 (-0.31%) | 15% trailing ($36.533) |
+| EDGX | income | 746 | $26.78 | $27.18 | +0.47% | +$298.40 (+1.49%) | 5% trailing ($25.9255) |
+| SGOV | income | 172.433 | $100.640847 | $100.515 | +0.01% | -$21.70 (-0.13%) | 5% trailing ($95.494, 172 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.295 | +0.15% | -$55.64 (-0.28%) | 5% trailing ($22.2015) |
+
+**Notes:** One core trade this window's predecessor (9:30am BUY HPE, 9.97% of
+equity at entry, funded via a 95-sh SGOV sweep) already logged above; no
+"### Approved Trades (verified)" section existed anywhere in today's
+RESEARCH-LOG (pre-market, 9:30am, 11am, and this 3pm check all confirm none
+beyond the 9:30am live recheck that executed HPE), so the 3pm buy side was
+HOLD — this week (Aug 10 start) stays at core 1/6 (HPE), satellite 1/4
+(RIGL). Risk sweep: no position at/beyond its sleeve hard-cut (HPE +3.87%
+vs. -7% cut; MNKD -2.88% and RIGL -0.31% vs. -15% cut); all 6 open
+positions confirmed carrying live GTC trailing stops via `alpaca.sh
+orders`/`positions`, none missing. RIGL's VEPPANU commercial launch
+catalyst remains inside its guided "mid-August" window (pre-market Gemini
+put it ~120 hours out) but was properly sized/documented at the 5%
+binary-catalyst cap at entry (8/11, 4.98% of equity, max-loss logged
+$954-$1,431) with conviction unchanged — holding through remains valid,
+stated explicitly per STEP 4 rather than silently passing. MNKD's catalyst
+remains resolved (FUROSCIX PDUFA, 7/24), no new near-dated binary. No other
+thesis break on any held name. No stop tightening this window — HPE's
++3.87% gain is below the core +15% tighten threshold; MNKD/RIGL both
+underwater; Income sleeve has no gain-based schedule. No stop moved down.
+2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials
+0/2. Cash 20.02%, at/above the 20% floor, no sweep needed beyond this
+morning's pre-trade HPE sweep. Risky positions closed today: none. Day
+P&L (+0.64%) driven mainly by HPE's continued post-entry gain (+6.12%
+today, CPI print absorbed cleanly) plus modest EDGX/SPHY gains, partly
+offset by MNKD's drift; core sleeve holds its first position (HPE) after
+15 sessions flat since the 7/28 stop-out. Phase P&L now -3.79% since Day 0
+($100,000 -> $96,213.61). Tomorrow: the 3-consecutive-session wide-spread
+data-feed anomaly (DELL/PANW/ANET/CRWD/CSCO and others, widening in scope)
+and the 5-consecutive-session `gemini_research.sh` `extract_report()`
+truncation bug both remain open items flagged for the next weekly review;
+RIGL's VEPPANU launch stays the key near-term satellite watch item as it
+enters its guided mid-August window; CSCO earnings (post-market today) is
+the next company-specific catalyst to check at tomorrow's pre-market open.
