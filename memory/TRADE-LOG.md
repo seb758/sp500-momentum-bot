@@ -1194,3 +1194,56 @@ Mechanics: canceled the standing 172-share 5% trailing stop (245358a8...), sold 
 Shares: 356 | Entry: $27.27 | Stop: 10% trailing GTC, trigger $24.534 (hwm $27.26) | Target: n/a (no firm analyst PT tied to this entry) | R:R: n/a
 Thesis: Core watchlist momentum name, 2026-08-07 screen rank 11 of 22 (3M rel. return +49.4% vs SPY, above both 50d/200d MA), FCF positive/improving (Q2 FCF $181M, up sharply from $76M prior quarter), "Constructive, no Sell" analyst consensus, rev +5.0% on medical products/therapies demand. Pre-market research (8/13) found no new red flags on the core watchlist generally; today's live market-open spread check found BAX clean and stable across 4 checks over ~90 seconds (bid/ask ~0.2-0.3% spread, both sides moving together) — one of only 3 of the 21 non-held core watchlist names with a normal, stable spread this window (GEN, BAX, CSCO clean; DELL, MPC, CRL, ANET, PANW, NTAP, ZBRA, VLO, CNC, GRMN, FFIV, STT, NUE, URI, MET all showing the recurring wide/erratic-spread data-feed anomaly — ask running away while bid stayed frozen or lagged, reproduced live on DELL/MPC/CRL specifically during this session's checks). PYPL also clean but excluded again: the Stripe/Advent $53B take-over bid remains unresolved (price still ~$59, unchanged from 8/12), same poor-fit judgment as 8/12 (M&A price spike, not the momentum+FCF signal this screen targets). Entered BAX alone rather than all 3 clean names (BAX/CSCO/GEN) — same deliberately conservative judgment as 8/12's HPE-alone entry: funding 2-3 simultaneous core buys from cash would have required selling down nearly the entire remaining SGOV position (only $17.3k) in one unsupervised session. BAX was the strongest of the three (rank 11 vs. CSCO's 12 and GEN's 19; GEN also carries only a Hold rating vs. BAX's cleaner "Constructive, no Sell"). CSCO and GEN left as documented candidates for a future session, not a fail.
 Gate: core positions after fill 2/6 (HPE, BAX), core trades this week 2/6 (HPE 8/12, BAX 8/13), cost $9,708.12 = 10.02% of equity ($96,929.48 pre-trade) — under the 20% per-position cap. Cash floor pre-checked and funded via the SGOV sweep above; post-trade cash confirmed $19,406.00 (20.02% of equity, $96,912.27) via `alpaca.sh account` — at/above the 20% floor.
+
+## Aug 13 — 3pm Snapshot (Day 26, Thursday)
+**Portfolio:** $96,457.63 | **Cash:** $19,406.00 (20.12%) | **Day P&L:** +$244.02 (+0.25%) | **Phase P&L:** -$3,542.37 (-3.54%)
+**Core exposure:** $20,034.56 (20.77% of equity) | **Satellite exposure:** $9,175.19 (9.51% of equity) | **Income exposure:** $47,841.15 (49.60% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 172 | $55.56 | $60.41 | +2.76% | +$834.20 (+8.73%) | 10% trailing ($57.096) |
+| BAX | core | 356 | $27.27 | $27.09 | +0.52% | -$64.08 (-0.66%) | 10% trailing ($24.705) |
+| MNKD | satellite | 1215 | $4.00 | $3.715 | -3.51% | -$346.28 (-7.13%) | 15% trailing ($3.59975) |
+| RIGL | satellite | 114 | $41.84 | $40.89 | -2.34% | -$108.30 (-2.27%) | 15% trailing ($36.533) |
+| EDGX | income | 746 | $26.78 | $27.3255 | +0.61% | +$406.94 (+2.04%) | 5% trailing ($25.9825) |
+| SGOV | income | 74.433 | $100.655482 | $100.52 | +0.00% | -$10.08 (-0.13%) | 5% trailing ($95.5035, 74 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.3345 | +0.19% | -$21.83 (-0.11%) | 5% trailing ($22.2015) |
+
+**Notes:** One core trade this window's predecessor (9:30am BUY BAX, 10.02% of
+equity at entry, funded via a 98-sh SGOV sweep) already logged above; no
+"### Approved Trades (verified)" section existed anywhere in today's
+RESEARCH-LOG (pre-market, 9:30am, 11am, and this 3pm check all confirm none
+beyond the 9:30am live recheck that executed BAX), so the 3pm buy side was
+HOLD — this week (Aug 10 start) stays at core 2/6 (HPE, BAX), satellite 1/4
+(RIGL). Risk sweep: no position at/beyond its sleeve hard-cut (BAX -0.66%
+and MNKD -7.13% vs. -7%/-15% cuts, RIGL -2.27% vs. -15%, HPE +8.73% in
+gain); all 7 open positions confirmed carrying live GTC trailing stops via
+`alpaca.sh orders`/`positions`, none missing. MNKD continued its intraday
+slide (-3.51% today) on no fresh company-specific news — FUROSCIX PDUFA
+remains resolved (7/24) with no new near-dated binary documented in
+WATCHLIST.md, so treated as ordinary drift, not a thesis break — conviction
+unchanged, holding through, documented explicitly per STEP 4 rather than
+silently passing. RIGL's VEPPANU commercial launch stays inside its guided
+mid-August window (not yet inside the 1-2 trading-day forced-close window),
+already sized/documented at the 5% binary cap at entry — holding through
+remains valid, stated explicitly. No other thesis break on any held name.
+No stop tightening this window — HPE's +8.73% gain is below the core +15%
+tighten threshold (pulled back slightly from 11am's +10.97% on a modest
+afternoon giveback); BAX/MNKD/RIGL all underwater; Income sleeve has no
+gain-based schedule. No stop moved down. 2-strike sub-sector tracker
+unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.12%, at/above
+the 20% floor, no further sweep needed beyond this morning's pre-trade BAX
+sweep. Risky positions closed today: none. Day P&L (+0.25%) driven mainly
+by HPE's continued gain and EDGX's steady climb, partly offset by MNKD's
+intraday slide and a slight BAX/RIGL pullback; core sleeve now holds 2
+positions (HPE, BAX) after 15 sessions flat through 8/11. Phase P&L now
+-3.54% since Day 0 ($100,000 -> $96,457.63). Tomorrow: MNKD's continued
+drift is the key satellite watch item to confirm as ordinary noise vs. an
+emerging thesis concern if it persists; RIGL's VEPPANU launch enters its
+final approach to the mid-August guided window; the recurring
+DELL/PANW/ANET/CRWD/CSCO wide-spread data-feed anomaly (now 5+ consecutive
+sessions) and the `gemini_research.sh` `extract_report()` bug (6 consecutive
+sessions, today's manual-poll workaround itself also failed) both remain
+open items escalating for the next weekly review; CSCO earnings
+(post-market 8/12, already absorbed) and retail sales (8/14 pre-market) are
+the next macro items on the calendar.
