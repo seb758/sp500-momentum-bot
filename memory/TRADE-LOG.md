@@ -1195,6 +1195,29 @@ Shares: 356 | Entry: $27.27 | Stop: 10% trailing GTC, trigger $24.534 (hwm $27.2
 Thesis: Core watchlist momentum name, 2026-08-07 screen rank 11 of 22 (3M rel. return +49.4% vs SPY, above both 50d/200d MA), FCF positive/improving (Q2 FCF $181M, up sharply from $76M prior quarter), "Constructive, no Sell" analyst consensus, rev +5.0% on medical products/therapies demand. Pre-market research (8/13) found no new red flags on the core watchlist generally; today's live market-open spread check found BAX clean and stable across 4 checks over ~90 seconds (bid/ask ~0.2-0.3% spread, both sides moving together) — one of only 3 of the 21 non-held core watchlist names with a normal, stable spread this window (GEN, BAX, CSCO clean; DELL, MPC, CRL, ANET, PANW, NTAP, ZBRA, VLO, CNC, GRMN, FFIV, STT, NUE, URI, MET all showing the recurring wide/erratic-spread data-feed anomaly — ask running away while bid stayed frozen or lagged, reproduced live on DELL/MPC/CRL specifically during this session's checks). PYPL also clean but excluded again: the Stripe/Advent $53B take-over bid remains unresolved (price still ~$59, unchanged from 8/12), same poor-fit judgment as 8/12 (M&A price spike, not the momentum+FCF signal this screen targets). Entered BAX alone rather than all 3 clean names (BAX/CSCO/GEN) — same deliberately conservative judgment as 8/12's HPE-alone entry: funding 2-3 simultaneous core buys from cash would have required selling down nearly the entire remaining SGOV position (only $17.3k) in one unsupervised session. BAX was the strongest of the three (rank 11 vs. CSCO's 12 and GEN's 19; GEN also carries only a Hold rating vs. BAX's cleaner "Constructive, no Sell"). CSCO and GEN left as documented candidates for a future session, not a fail.
 Gate: core positions after fill 2/6 (HPE, BAX), core trades this week 2/6 (HPE 8/12, BAX 8/13), cost $9,708.12 = 10.02% of equity ($96,929.48 pre-trade) — under the 20% per-position cap. Cash floor pre-checked and funded via the SGOV sweep above; post-trade cash confirmed $19,406.00 (20.02% of equity, $96,912.27) via `alpaca.sh account` — at/above the 20% floor.
 
+## 2026-08-14 — RECONSTRUCTED market-open entries (session-persistence gap)
+
+Same recurring pattern as 7/16, 7/17, 7/24: the 9:30am market-open session
+executed a real fill + live stop order on Alpaca at 14:49-14:50 UTC (10:49-
+10:50am ET) today, but never reached its own TRADE-LOG append or
+RESEARCH-LOG "9:30 AM Session Note" — today's RESEARCH-LOG.md contains only
+the Pre-market entry when this 11am session started; `alpaca.sh positions`/
+`orders`/`orders closed` show the live fill/stop. Reconstructing from that
+order history so the audit trail matches reality; thesis is sourced from the
+standing WATCHLIST.md/RESEARCH-LOG.md pre-market notes for PANW, not
+fabricated.
+
+### 2026-08-14 — SELL SGOV (income) — cash-floor sweep (pre-trade, funds PANW buy)
+Shares: 74 | Exit: $100.55 | Realized P&L: ~$0.00 (0.00%) | Reason: pre-trade cash-floor check ahead of the PANW buy below, per TRADING-STRATEGY.md's SGOV-first buy-funding sweep rule. Order filled 2026-08-14T14:49:40Z, cash after: pre-market $19,405.76 + $7,440.70 (sale proceeds) = $26,846.46.
+Mechanics: canceled the standing 74-share 5% trailing stop (960a9589...) ahead of the sale — same cancel-then-replace-adjacent pattern as prior sweeps. The 0.432863884-share fractional remainder is left unstopped, consistent with prior sweeps (immaterial, ~$43).
+
+### 2026-08-14 — BUY PANW (core)
+Shares: 19 | Entry: $387.45 | Stop: 10% trailing GTC, trigger $348.73182 (hwm $387.4798) | Target: n/a (no firm analyst PT tied to this entry) | R:R: n/a
+Thesis: Core watchlist momentum name, 2026-08-07 screen rank 2 of 22 (3M rel. return +77.9% vs SPY, above both 50d/200d MA), FCF positive/improving (Q3 adj FCF +57% YoY), Buy/Moderate Buy analyst consensus, rev +31.1% on platformization + AI product adoption driving bookings. Order filled 2026-08-14T14:50:08Z, immediately after the SGOV sweep above.
+Gate (reconstructed): core positions after fill 3/6 (HPE, BAX, PANW), core trades this week 3/6 (HPE 8/12, BAX 8/13, PANW 8/14), cost $7,361.55 = ~7.65% of post-fill equity ($96,198.42) — under the 20% per-position cap. Cash floor pre-checked and funded via the SGOV sweep above; post-trade cash reconciles exactly to the live $19,484.91 (20.25% of $96,198.42 equity) confirmed via `alpaca.sh account` this session — at/above the 20% floor throughout, no breach.
+
+**Post-reconstruction sleeve state:** Core 3 open positions (HPE, BAX, PANW), satellite 2 (MNKD, RIGL — MNKD a carryover holding, not a new trade this week). This week (Aug 10 start): core 3/6, satellite 1/4 (RIGL) new-trade count; combined 4/10 weekly cap. Satellite exposure $9,352.19 (9.72% of equity), well within the 20% sleeve cap.
+
 ## Aug 13 — 3pm Snapshot (Day 26, Thursday)
 **Portfolio:** $96,457.63 | **Cash:** $19,406.00 (20.12%) | **Day P&L:** +$244.02 (+0.25%) | **Phase P&L:** -$3,542.37 (-3.54%)
 **Core exposure:** $20,034.56 (20.77% of equity) | **Satellite exposure:** $9,175.19 (9.51% of equity) | **Income exposure:** $47,841.15 (49.60% of equity)
