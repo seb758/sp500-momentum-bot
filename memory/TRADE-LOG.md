@@ -1270,3 +1270,53 @@ sessions, today's manual-poll workaround itself also failed) both remain
 open items escalating for the next weekly review; CSCO earnings
 (post-market 8/12, already absorbed) and retail sales (8/14 pre-market) are
 the next macro items on the calendar.
+
+## Aug 14 — 3pm Snapshot (Day 27, Friday)
+**Portfolio:** $96,221.94 | **Cash:** $19,484.91 (20.25%) | **Day P&L:** -$235.69 (-0.24%) | **Phase P&L:** -$3,778.06 (-3.78%)
+**Core exposure:** $26,975.31 (28.03% of equity) | **Satellite exposure:** $9,469.59 (9.84% of equity) | **Income exposure:** $40,291.27 (41.87% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 172 | $55.56 | $58.945 | -1.46% | +$582.22 (+6.09%) | 10% trailing ($57.096) |
+| BAX | core | 356 | $27.27 | $26.825 | -0.83% | -$158.42 (-1.63%) | 10% trailing ($24.705) |
+| PANW | core | 19 | $387.45 | $383.53 | -3.15% | -$74.48 (-1.01%) | 10% trailing ($348.73182) |
+| MNKD | satellite | 1215 | $4.00 | $3.81 | +2.15% | -$230.85 (-4.75%) | 15% trailing ($3.59975) |
+| RIGL | satellite | 114 | $41.84 | $42.46 | +4.09% | +$70.68 (+1.48%) | 15% trailing ($36.533) |
+| EDGX | income | 746 | $26.78 | $27.21 | -0.33% | +$320.78 (+1.61%) | 5% trailing ($25.9825) |
+| SGOV | income | 0.433 | $100.66 | $100.5567 | +0.03% | -$0.04 (-0.10%) | none (fractional dust, ~$43, unstopped since 8/14's sweep) |
+| SPHY | income | 856 | $23.36 | $23.305 | -0.11% | -$47.08 (-0.24%) | 5% trailing ($22.2015) |
+
+**Notes:** Today's trade activity was entirely the reconstructed 9:30am
+window (SELL 74 SGOV pre-trade sweep, BUY 19 PANW core) already logged
+above — no "### Approved Trades (verified)" section existed anywhere in
+today's RESEARCH-LOG (pre-market, 9:30am reconstruction, 11am, and this
+3pm check all confirm none beyond that), so the 3pm buy side was HOLD —
+this week (Aug 10 start) stays at core 3/6 (HPE, BAX, PANW), satellite 1/4
+(RIGL). Risk sweep: no position at/beyond its sleeve hard-cut (BAX -1.63%,
+PANW -1.01% vs. -7% core cut; MNKD -4.75%, RIGL +1.48% vs. -15% satellite
+cut; HPE +6.09% in gain); all 8 open positions confirmed via `alpaca.sh
+orders`/`positions` — 7 carry live GTC trailing stops, only the
+0.432863884-sh SGOV fractional remainder is unstopped (same immaterial
+~$43 dust flagged every prior sweep, not a new gap). No thesis break on
+any held name — BAX's interim-CFO resignation and MNKD's stale 7/24
+private placement (both surfaced pre-market) remain non-red-flag
+housekeeping items; RIGL's VEPPANU commercial launch (announced 8/13) is a
+resolved positive catalyst, not inside the 1-2 trading-day gap-risk
+window — holding through remains valid, stated explicitly rather than
+silently doing nothing; MNKD's FUROSCIX PDUFA remains resolved (7/24), no
+near-dated binary. No stop tightening this window — HPE's +6.09% gain is
+below the core +15% threshold; no other position cleared its tighten
+threshold. No stop moved down. 2-strike sub-sector tracker unchanged:
+biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.25%, at/above the 20%
+floor, no sweep needed. Risky positions closed today: none. Day P&L
+(-0.24%) driven by a broad afternoon pullback in HPE/EDGX/SPHY/BAX/PANW
+partly offset by MNKD/RIGL's intraday gains; core sleeve holds 3 positions
+(HPE, BAX, PANW) after 15 sessions flat through 8/11. Phase P&L now -3.78%
+since Day 0 ($100,000 -> $96,221.94). This is the last session of the
+current trading week (Aug 10 start) — Friday's weekly review/screen-refresh
+is the next scheduled workflow. Open items for that review: the market-open
+session-persistence gap (now 4 instances: 7/16, 7/17, 7/24, 8/14), the
+`gemini_research.sh` `extract_report()` bug (7 consecutive sessions,
+8/9-8/14, still unpatched), and the DELL/PANW/ANET/CRWD/CSCO wide/erratic-
+spread data-feed anomaly (5+ consecutive sessions, 8/10-8/14, widening in
+scope).
