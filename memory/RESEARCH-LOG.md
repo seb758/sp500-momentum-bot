@@ -2845,3 +2845,50 @@ No fresh momentum/FCF recheck run this session (weekend — no live Alpaca bar/p
 
 ### Decision
 HOLD — market closed today (Saturday), no trades possible or needed. Re-evaluate live at Monday 2026-08-17's pre-market/market-open session with fresh Alpaca bars.
+
+## 2026-08-16 — Pre-market Research
+
+**Scheduling flag (recurring):** today is Sunday — US markets are closed, no trading session today. The pre-market workflow fired anyway on its schedule, same as yesterday (Saturday 8/15) — second consecutive non-trading-day firing. This is the same schedule/cron gap flagged yesterday; still unresolved, flagging again rather than assuming it self-fixes. This run is weekend prep for Monday 2026-08-17's open. No trades placed or possible today.
+
+### Account
+- Equity: $96,265.46 | Cash: $19,484.72 (20.24%, at/above the 20% floor) | Buying power: $289,182.76 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- **Data unchanged from yesterday's (8/15) snapshot** — `balance_asof` still 2026-08-14 (Friday's close); no new price action over the weekend, as expected with markets closed.
+- Core exposure: $26,915.13 (27.96%) — HPE, BAX, PANW | Satellite exposure: $9,531.87 (9.90%) — MNKD, RIGL | Income exposure: $40,333.74 (41.90%) — EDGX $20,336.86 / SGOV $43.53 (fractional dust) / SPHY $19,953.36
+- All 8 open positions confirmed via `alpaca.sh orders`/`positions`, no auth errors: 7 carry live GTC trailing stops (BAX 10% $24.705, EDGX 5% $25.9825, HPE 10% $57.096, MNKD 15% $3.59975, PANW 10% $348.73182, RIGL 15% $36.533, SPHY 5% $22.2015); the 0.432863884-sh SGOV fractional remainder remains unstopped — same immaterial ~$43 dust flagged every prior session since 8/14's sweep, not a new gap.
+- No position at/beyond its sleeve hard-cut: BAX -1.98%, PANW -0.82% vs. -7% core cut; MNKD -3.75%, RIGL +1.77% vs. -15% satellite cut; HPE +5.67% in gain (below the +15% core tighten threshold — no stop tightening this window). No stop moved down.
+- This week (Aug 10 start) stands at core 3/6 (HPE, BAX, PANW), satellite 2/4 (MNKD, RIGL) — no new trades possible today (market closed).
+
+### Process flag — Friday 8/14 weekly screen refresh still has not run (now 2 sessions confirmed)
+WATCHLIST.md's "Current" section is still headed "Week of 2026-08-07" and WEEKLY-REVIEW.md's most recent dated entry is still "Week ending 2026-08-07" — unchanged from yesterday's check. Same missed/unpersisted-Friday-refresh failure mode flagged repeatedly this cycle (7/17, 7/31, 8/14 — third occurrence in five weeks, now confirmed persisting into a second weekend day). Today's ideas below are screened strictly against the 8/07 watchlist per the "never trade a ticker not on the current watchlist" rule.
+
+### Data-quality flag — Gemini `extract_report()` truncation, 9th+ consecutive session
+The consolidated Gemini Deep Research call again returned a report starting mid-document (missing sections 1-3: futures/VIX, econ calendar, held-position overnight check for BAX/EDGX/HPE/MNKD/PANW/RIGL/SGOV/SPHY). Only section 4 (watchlist reconnaissance) and the closing synthesis survived in structured form. This is now the 9th+ consecutive session with this bug (8/9 through 8/16), one session worse in count than yesterday's flag. Filled the missing sections via native WebSearch per the data-quality guard — nothing fabricated. The fix already named in the 8/07 weekly review (split the single consolidated call into 2 smaller submit+poll calls) still hasn't shipped — flagging again with the same urgency as yesterday.
+- Minor secondary flag: the raw Gemini output opened with a self-correcting aside about SVRA's PDUFA date, explicitly citing "portfolio parameters" (i.e. this session's own query text) to override what looks like an internal miscalculation that briefly treated SVRA as inside the 5-day danger zone before landing on the correct 2026-11-22 date. Same class of PDUFA-date-confusion artifact caught twice before (8/9, recurred 8/15) — resolved correctly again, but the pattern of Gemini second-guessing a date it's given directly is now three sessions running and worth a look alongside the truncation bug.
+
+### Market Context (WebSearch — Gemini's sections 1-2 unrecoverable this session)
+- VIX closed 14.25 on Friday 8/14 (-2.60% on the day) — a 2026 low, consistent with the "immaculate landing" framing from yesterday's synthesis. No live Sunday-evening futures print was available at query time (CME equity futures reopen ~6pm ET Sunday; specific overnight pricing wasn't surfaced by search as of this run) — not fabricating a number search didn't return.
+- Week of 8/17 calendar (confirmed via WebSearch, consistent with yesterday's read): NY Empire State Manufacturing + NAHB Housing Index (Mon 8/17); Building Permits, Housing Starts, Import/Export Prices, Industrial Production, Capacity Utilization (Tue 8/18) — also HD reports pre-open Tue, TGT/LOW Wed; FOMC minutes (Wed 8/19, the week's key event, sets up Fed Chair Warsh's first Jackson Hole keynote 8/27-29); WMT/BABA/NetEase/DE earnings (Thu 8/20) as a consumer/China-demand read. Nothing scheduled for Monday's open itself beyond the routine Monday releases.
+- Middle East/Strait of Hormuz situation not independently rechecked this session (WebSearch budget spent on futures/VIX/calendar/held-satellite names) — carrying forward yesterday's "elevated/unresolved, not acutely worsening" read; re-verify live Monday pre-market.
+
+### Held-Position Thesis Check (Gemini section 4 + targeted WebSearch)
+- **HPE, BAX, PANW (core):** Gemini's watchlist reconnaissance (which did come through intact) found zero idiosyncratic thesis-breaking weekend news for any of the three. Sector-level tailwind: CSCO's blockbuster 8/12 earnings (Q4 FY26 rev +18% YoY, AI-infra orders +4.5x to $1.3B, stock +17% to a record high) is driving sympathy strength across AI-hardware/networking names — flagged as context, not a position-specific catalyst. No action on any of the three.
+- **MNKD (satellite, -3.75% unrealized):** Targeted WebSearch found no news beyond what's already logged (Q2 results 8/5, FUROSCIX ramp, positive Phase 1b inhaled-nintedanib data 8/1-ish week) — nothing new, nothing negative. FUROSCIX PDUFA remains resolved (7/24). No thesis break. No action.
+- **RIGL (satellite, +1.77% unrealized):** Targeted WebSearch confirms VEPPANU commercially available as of 8/13 (Rigel's own press release), consistent with what's already logged — no new negative development. Gemini's synthesis separately called this a "successfully navigated" binary. No action.
+- **EDGX, SGOV, SPHY (income):** No idiosyncratic news surfaced (WebSearch budget prioritized the equity sleeves this session; nothing in Gemini's partial output or general market context suggests fund-level risk to any of the three). No action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-08-07)
+No fresh momentum/FCF recheck run this session — weekend, no live Alpaca bar/price data would differ from Friday's close, and no trading window exists to act on it today. Nothing in Gemini's watchlist reconnaissance or the WebSearch follow-ups invalidates any of the 22-name 8/07 core list. Deferring a full live recheck (spreads, momentum, buy-side gate) to Monday's market-open session.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-08-07)
+- **RIGL** (held) — catalyst live/derisked (VEPPANU available 8/13); no new-entry decision needed, already at 2/4 satellite slots.
+- **CGEM** — not held. Gemini's synthesis reiterates Cullinan's 8/13 Phase 3 REZILIENT3 primary-endpoint hit (zipalertinib + chemo, first-line) as a positive out-of-band data point — same item flagged yesterday, no incremental news since. Doesn't change CGEM's documented Feb-2027 PDUFA catalyst date or its standard 7.5% cap. Live momentum/spread confirmation still deferred to Monday's market-open session, not actionable today.
+- **SVRA** — PDUFA date reconfirmed 2026-11-22 (see the self-correction flagged in the data-quality section above) — well outside the 5-day window. No change.
+- No new satellite entries possible today regardless (market closed).
+
+### Risk Factors
+- Two operational-reliability issues are now confirmed persisting into a second consecutive non-trading-day session: the Gemini truncation bug (9th+ session) and the missed 8/14 weekly refresh. Both need real fixes at the next weekly review, not further logging.
+- Middle East/Strait of Hormuz carried forward as an unresolved macro tail risk under a very low VIX — not independently rechecked this session, re-verify Monday.
+- No held position near its hard-cut; no satellite catalyst resolved negatively; no new company-specific negative news on any held name. Nothing here rises to the "urgent, notify now" bar.
+
+### Decision
+HOLD — market closed today (Sunday), no trades possible or needed. Re-evaluate live at Monday 2026-08-17's pre-market/market-open session with fresh Alpaca bars.
