@@ -2892,3 +2892,54 @@ No fresh momentum/FCF recheck run this session — weekend, no live Alpaca bar/p
 
 ### Decision
 HOLD — market closed today (Sunday), no trades possible or needed. Re-evaluate live at Monday 2026-08-17's pre-market/market-open session with fresh Alpaca bars.
+
+## 2026-08-17 — Pre-market Research
+
+### Account
+- Equity: $96,422.96 | Cash: $19,484.72 (20.21%, at/above the 20% floor) | Buying power: $289,536.28 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $26,963.28 (27.96%) — HPE $10,208.20 / BAX $9,501.64 / PANW $7,253.44 | Satellite exposure: $9,641.22 (10.00%) — MNKD $4,787.10 / RIGL $4,854.12 | Income exposure: $40,333.75 (41.83%) — EDGX $20,336.86 / SPHY $19,953.36 / SGOV $43.53 (fractional dust)
+- All 8 open positions confirmed via `alpaca.sh orders`/`positions`, no auth errors: 7 carry live GTC trailing stops (BAX 10% $24.705, EDGX 5% $25.9825, HPE 10% $57.096, MNKD 15% $3.59975, PANW 10% $348.73182, RIGL 15% $36.533, SPHY 5% $22.2015); the 0.432863884-sh SGOV fractional remainder remains unstopped — same immaterial ~$43 dust flagged every prior session, not a new gap.
+- No position at/beyond its sleeve hard-cut: BAX -2.13%, PANW -1.47%, MNKD -1.50% vs. -7%/-15% cuts; HPE +6.82%, RIGL +1.77% in gain (both below their gain-tighten thresholds — no stop tightening this window, no stop moved down).
+- This is a fresh trading week (Aug 17 start) — new-trade counters reset: core 0/6, satellite 0/4 used so far this week.
+- **Watchlist still stale:** WATCHLIST.md's "Current" section remains headed "Week of 2026-08-07" — the 8/14 refresh did not run/persist (per 8/15 and 8/16 logs, third+ occurrence this cycle). Today's ideas are screened strictly against the 8/07 list per the "never trade a ticker not on the current watchlist" rule; the weekly-review workflow (separate scheduled run) owns fixing this.
+
+### Data-quality flag — Gemini fabricated specific facts this session, not just truncated (escalation from prior sessions' bug)
+The consolidated Gemini call again started mid-document — section 1 (S&P futures/VIX) and part of section 2 (macro catalysts/econ calendar) never arrived; this is the same `extract_report()` truncation bug flagged for 9+ consecutive sessions (8/9-8/16), now day 10+, still unpatched despite the fix (split into 2 smaller submit+poll calls) being named at the 8/07 weekly review. Filled sections 1-2 via native WebSearch per the data-quality guard.
+
+**More seriously, the sections that did arrive contained outright fabricated facts, independently caught by cross-checking against this session's own live Alpaca pull:**
+- Gemini claimed **"HPE's explosive overnight 38% surge"** on historic revenue guidance. Alpaca's actual daily bars for HPE (last 15 sessions) show no such move anywhere — the largest single-day change was ~+7% (8/12→8/13 open); HPE closed 8/14 at $58.71 and opened today essentially flat (~$59.35 per this session's `positions` pull, +1.09% day change). **Not real — treated as fabrication, not acted on.**
+- Gemini claimed PANW is "hovering near all-time highs of approximately $273" and "reporting fiscal third-quarter earnings after the market close" today. Alpaca's live quote has PANW at ~$382-402 (ask $401.83/bid $368.03) — nowhere near $273 — and WebSearch confirms PANW's actual next earnings date is **Sept 1, 2026** (fiscal Q4), not today. This directly contradicts the Sept-1 date this same log already verified on 8/15. **Not real — treated as fabrication, not acted on.**
+- The rest of the report (BAX tender offer, MNKD CVR/private-placement, RIGL Veppanu pricing/launch, satellite catalyst-proximity table) is internally consistent with facts already verified in prior sessions' logs and is treated as reliable; only the two items above are flagged as fabricated.
+
+This is a step up in severity from the standing truncation bug — the tool produced plausible-sounding, specific, wrong numbers for two S&P 500-scale companies with public earnings dates, not just missing sections. Escalating for real attention at the next weekly review: the pipeline needs a fact-check/grounding-verification step (or the submit+poll split, which would also reduce the surface for this kind of error), not just another log flag. No trading decision this session relied on either fabricated claim.
+
+### Market Context (WebSearch — Gemini's sections 1-2 unrecoverable this session)
+- VIX ~14.26 (-2.53%), a 2026 low. S&P 500 futures roughly flat/slightly higher (+0.11-0.5% depending on source), Nasdaq 100 futures +0.5% on AI-capex optimism (Anthropic revenue growth cited as a read-through). S&P 500 at all-time highs, Russell 2000 also hit fresh highs this week — broadening participation.
+- Today's econ calendar: NY Empire State Manufacturing Index (8:30am ET, est. 10.2 vs. prior 15.6), NAHB Housing Market Index (10:00am ET, est. 35.0 vs. prior 34.0), TIC Net Long-Term Transactions (4:00pm ET). Rest of week: Housing Starts/Building Permits/Industrial Production + HD earnings (Tue 8/18), FOMC minutes (Wed 8/19), WMT/TGT/LOW earnings — Fed's Jackson Hole conference and NVDA earnings both loom the following week(s).
+- Middle East/Strait of Hormuz: carried forward as unresolved/elevated per the last several sessions' logs; not independently rechecked this session (WebSearch budget spent on the fabrication cross-check above) — re-verify at market-open if oil-sensitive names (VLO, MPC) move sharply.
+
+### Held-Position Thesis Check
+- **HPE (core, +6.82% unrealized):** No thesis break. Ignore the fabricated "38% surge" claim (see data-quality flag) — actual move is modest/flat. Prior verified positives (DOJ Juniper-settlement approval, Morgan Stanley upgrade) stand from 8/15's log.
+- **BAX (core, -2.13% unrealized):** No thesis break. $500M senior-notes tender offer's Early Tender Time is today (5:00pm ET) per Gemini — consistent with the tender offer already logged 8/13/8/15 (routine balance-sheet management, not new information). No action.
+- **PANW (core, -1.47% unrealized):** No thesis break. Ignore Gemini's fabricated earnings-today/price claims (see data-quality flag) — actual next earnings is Sept 1, outside the 5-day window, per WebSearch confirmation. No action.
+- **MNKD (satellite, -1.50% unrealized):** No thesis break. FDA approval of Furoscix ReadyFlow triggered the previously-flagged $45M CVR payment, funded via a $50M private placement (10.44M shares @ $3.89 + pre-funded warrants) — dilutive but neutralizes CVR balance-sheet risk; consistent with the private-placement item already logged 8/14. Commercialization proceeding as expected, not a negative surprise. No action.
+- **RIGL (satellite, +1.77% unrealized):** No thesis break. Veppanu (vepdegestrant) launched at a $29,400/30-day list price — a premium-pricing signal, positive for the commercial thesis. Consistent with the 8/13 launch already logged. No action.
+- **EDGX, SGOV, SPHY (income):** No idiosyncratic news; trade on macro beta (rates, credit) today. No action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-08-07)
+No new core candidates fabricated or added — the 8/07 list stands unchanged pending the still-outstanding weekly refresh. Sector-rotation note from this session's research (unverified against live Alpaca momentum data, informational only): AI-hardware/infrastructure names (DELL, HPE, NTAP, ANET) getting a sympathy tailwind from strong sector earnings this week, while legacy networking (CSCO) saw a post-earnings pullback despite beating — worth a look at live momentum/spread data during the market-open session, not actionable pre-market. No fresh momentum/FCF recheck run this session (deferred to market-open per standard practice); nothing here invalidates any of the 22-name 8/07 core list.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-08-07)
+- **MNKD, RIGL** (held) — both thesis-intact per above; already at 2/4 satellite slots, no new-entry decision needed.
+- **CGEM** — not held. Gemini's catalyst-proximity table confirms CLN-049 Phase 2 initiation is guided "Q3 2026" generally, no specific date inside the 5-day window (Aug 17-21). No change to the documented Feb-2027 zipalertinib PDUFA catalyst or standard 7.5% cap. Not actionable pre-market — defer to market-open for live momentum/spread confirmation.
+- **SVRA** — not held. PDUFA date unchanged at 2026-11-22, well outside the 5-day window. No change.
+- Gemini's table confirms **none of MNKD/RIGL/CGEM/SVRA have a documented catalyst falling inside the Aug 17-21 window** — consistent with WATCHLIST.md. No new satellite entries flagged this session.
+
+### Risk Factors
+- Gemini Deep Research produced outright fabricated facts this session (HPE "38% surge," PANW price/earnings-date) on top of the standing 10+-session truncation bug — a data-integrity escalation that needs real attention at the next weekly review, not just another log entry. Every claim used above was cross-checked against live Alpaca data or WebSearch before being relied on.
+- Watchlist refresh still stale (headed "Week of 2026-08-07"), now spanning a third missed/unpersisted Friday refresh this cycle — flagged again for the weekly-review owner.
+- Middle East/Strait of Hormuz not independently rechecked this session; carried forward as an unresolved macro tail risk under a very low VIX.
+- No held position near its hard-cut; no satellite catalyst resolved negatively or imminent; no acute new geopolitical escalation found. Nothing here rises to the "urgent, notify now" bar.
+
+### Decision
+HOLD — default patience; no new core or satellite candidate cleared today given the stale watchlist and no qualifying live-momentum recheck yet (deferred to market-open). All held positions thesis-intact, no stop action needed, cash at floor. Re-evaluate live momentum/spreads at today's market-open session per the standard workflow split.
