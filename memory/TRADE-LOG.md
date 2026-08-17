@@ -1320,3 +1320,11 @@ session-persistence gap (now 4 instances: 7/16, 7/17, 7/24, 8/14), the
 8/9-8/14, still unpatched), and the DELL/PANW/ANET/CRWD/CSCO wide/erratic-
 spread data-feed anomaly (5+ consecutive sessions, 8/10-8/14, widening in
 scope).
+
+### 2026-08-17 — SELL HPE (core)
+Shares: 172 | Exit: $57.11 | Realized P&L: +$266.60 (+2.79%) | Reason: 10% GTC trailing stop filled automatically at 2026-08-17T13:40:15Z (9:40am ET), trail from hwm $63.44 (+14.2% above entry), trigger $57.096. Filled 3 minutes after the 9:30am market-open session's commit (09:37:26 ET) correctly reported "no trades" — the stop hit at 9:40am ET, after that session ended and before this 11am session started; this is a standing GTC order firing mechanically between sessions, not a session-persistence gap. A winning exit, not a loss cut: HPE ran from entry $55.56 to a $63.44 high before the 10% trail gave back most of the gain. No company-specific negative news found this session (BAX/PANW/MNKD/RIGL thesis checks below also found nothing new). Core sleeve now holds BAX and PANW (2 open positions); this week (Aug 17 start) stays core 0/6 new trades (exits don't count against the weekly buy cap).
+
+### 2026-08-17 — BUY SGOV (income) — sweep-back after core sell
+Shares: 100.098339465 | Entry: $100.57 (notional $10,066.90) | Stop: 5% trailing GTC on the whole-share portion (100 of 100.531203349 total sh), trigger $95.53675 (hwm $100.565); 0.531203349 fractional sh left unprotected, immaterial (~$53.42) | Target: n/a | R:R: n/a
+Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
+Funding reason (income only): HPE's mechanical stop-out (see above) freed cash to $29,307.64 (30.63% of $95,703.70 equity) vs. the 20% floor (~$19,140.74) — swept $10,066.90 into SGOV, leaving cash at $19,240.75 = 20.11% of equity ($95,686.38). This also resolves the SGOV-depletion funding blocker flagged pre-market/9:30am today (SGOV had been swept down to ~$43 across 7 sweeps in 5 weeks with no offsetting rebalance) — SGOV is back to ~$10,110, restoring real buy-funding capacity for future Core/Satellite entries.
