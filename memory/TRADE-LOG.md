@@ -1328,3 +1328,52 @@ Shares: 172 | Exit: $57.11 | Realized P&L: +$266.60 (+2.79%) | Reason: 10% GTC t
 Shares: 100.098339465 | Entry: $100.57 (notional $10,066.90) | Stop: 5% trailing GTC on the whole-share portion (100 of 100.531203349 total sh), trigger $95.53675 (hwm $100.565); 0.531203349 fractional sh left unprotected, immaterial (~$53.42) | Target: n/a | R:R: n/a
 Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
 Funding reason (income only): HPE's mechanical stop-out (see above) freed cash to $29,307.64 (30.63% of $95,703.70 equity) vs. the 20% floor (~$19,140.74) — swept $10,066.90 into SGOV, leaving cash at $19,240.75 = 20.11% of equity ($95,686.38). This also resolves the SGOV-depletion funding blocker flagged pre-market/9:30am today (SGOV had been swept down to ~$43 across 7 sweeps in 5 weeks with no offsetting rebalance) — SGOV is back to ~$10,110, restoring real buy-funding capacity for future Core/Satellite entries.
+
+## Aug 17 — 3pm Snapshot (Day 28, Monday)
+**Portfolio:** $95,561.89 | **Cash:** $19,240.75 (20.13%) | **Day P&L:** -$660.05 (-0.69%) | **Phase P&L:** -$4,438.11 (-4.44%)
+**Core exposure:** $16,405.87 (17.17% of equity) | **Satellite exposure:** $9,579.69 (10.02% of equity) | **Income exposure:** $50,337.36 (52.68% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| BAX | core | 356 | $27.27 | $25.985 | -2.79% | -$457.46 (-4.71%) | 10% trailing ($24.705) |
+| PANW | core | 19 | $387.45 | $376.59 | -2.00% | -$206.34 (-2.80%) | 10% trailing ($348.73182) |
+| MNKD | satellite | 1215 | $4.00 | $3.91 | +1.56% | -$109.35 (-2.25%) | 15% trailing ($3.59975) |
+| RIGL | satellite | 114 | $41.84 | $42.36 | -0.52% | +$59.28 (+1.24%) | 15% trailing ($36.771) |
+| EDGX | income | 746 | $26.78 | $27.20 | -0.22% | +$313.32 (+1.57%) | 5% trailing ($25.9825) |
+| SGOV | income | 100.531 | $100.570388 | $100.565 | +0.01% | -$0.54 (-0.01%) | 5% trailing ($95.5415, 100 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.29 | -0.09% | -$59.92 (-0.30%) | 5% trailing ($22.2015) |
+
+**Notes:** HPE's mechanical 10% trailing stop fired at 9:40am ET (winning exit,
++2.79%, +$266.60) and the SGOV sweep-back already logged above; no
+"### Approved Trades (verified)" section existed anywhere in today's
+RESEARCH-LOG (pre-market, 9:30am, 11am, and this 3pm check all confirm
+none, still blocked by the stale 8/07 watchlist), so the 3pm buy side was
+HOLD — this week (Aug 17 start) stays at core 0/6, satellite 0/4 new
+trades (HPE's exit doesn't count against the cap). Risk sweep: no
+position at/beyond its sleeve hard-cut (BAX -4.71%, PANW -2.80% vs. -7%
+core cut; MNKD -2.25% vs. -15% satellite cut; RIGL +1.24% in gain); all 7
+stop-protected positions confirmed carrying live GTC trailing stops via
+`alpaca.sh orders`, none missing (SGOV's 0.531-sh fractional remainder
+stays unstopped, same immaterial ~$53 dust flagged every prior sweep).
+Thesis check: WebSearch found no negative news on BAX (continuing drift,
+-3.70% at 11am to -4.71% now, read as broad market/sector pressure, not
+company-specific — routine tender-offer item only) or PANW (TD Cowen
+raised PT to $400/Buy today, Wells Fargo flagged AI/identity momentum;
+Sept 1 earnings date confirmed genuine vs. this morning's flagged Gemini
+fabrication) — both held, no cuts. No satellite catalyst inside the
+1-2-trading-day gap-risk window (MNKD's PDUFA resolved 7/24; RIGL's
+VEPPANU launch resolved 8/13) — no gap-risk action needed. No stop
+tightening this window (RIGL's +1.24% well below the +25% satellite
+threshold; no core position in double-digit gain). No stop moved down.
+2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23),
+industrials 0/2. Cash 20.13%, at/above the 20% floor, no further sweep
+needed beyond this morning's HPE sweep-back. Risky positions closed
+today: none (beyond the mechanical HPE stop already logged). Day P&L
+(-0.69%) driven by broad afternoon softness across BAX/PANW/MNKD/SPHY,
+partly offset by RIGL/EDGX gains. Phase P&L now -4.44% since Day 0
+($100,000 -> $95,561.89). Tomorrow: continue watching BAX's drift for a
+genuine thesis break vs. ordinary noise; PANW's Sept 1 earnings date is
+the next real company-specific catalyst; the `gemini_research.sh`
+`extract_report()` truncation/fabrication bug (10+ consecutive sessions)
+and the still-stale WATCHLIST.md ("Week of 2026-08-07") both remain the
+top open items for this week's weekly review.
