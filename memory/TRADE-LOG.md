@@ -1377,3 +1377,51 @@ the next real company-specific catalyst; the `gemini_research.sh`
 `extract_report()` truncation/fabrication bug (10+ consecutive sessions)
 and the still-stale WATCHLIST.md ("Week of 2026-08-07") both remain the
 top open items for this week's weekly review.
+
+## Aug 18 — 3pm Snapshot (Day 29, Tuesday)
+**Portfolio:** $95,610.66 | **Cash:** $19,240.49 (20.12%) | **Day P&L:** +$48.77 (+0.05%) | **Phase P&L:** -$4,389.34 (-4.39%)
+**Core exposure:** $16,373.56 (17.13% of equity) | **Satellite exposure:** $9,876.78 (10.33% of equity) | **Income exposure:** $50,115.55 (52.41% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| BAX | core | 356 | $27.27 | $26.025 | +0.44% | -$443.22 (-4.57%) | 10% trailing ($24.705) |
+| PANW | core | 19 | $387.45 | $374.14 | -0.43% | -$252.89 (-3.44%) | 10% trailing ($348.73182) |
+| MNKD | satellite | 1215 | $4.00 | $4.075 | +4.49% | +$91.13 (+1.88%) | 15% trailing ($3.59975) |
+| RIGL | satellite | 114 | $41.84 | $43.2075 | +1.78% | +$155.90 (+3.27%) | 15% trailing ($37.1535) |
+| EDGX | income | 746 | $26.78 | $26.93 | -0.81% | +$111.90 (+0.56%) | 5% trailing ($25.9825) |
+| SGOV | income | 100.531 | $100.570388 | $100.575 | +0.01% | +$0.46 (+0.00%) | 5% trailing ($95.551, 100 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.265 | -0.11% | -$81.32 (-0.41%) | 5% trailing ($22.2015) |
+
+**Notes:** No trade activity today — no "### Approved Trades (verified)"
+section existed anywhere in today's RESEARCH-LOG (pre-market, 9:30am, 11am,
+and this 3pm check all confirm none, still blocked by the stale 8/07
+watchlist), so buy side stayed HOLD all four checks; this week (Aug 17
+start) stays at core 0/6, satellite 0/4 new trades. Risk sweep: no position
+at/beyond its sleeve hard-cut (BAX -4.57%, PANW -3.44% vs. -7% core cut;
+MNKD +1.88%, RIGL +3.27%, both in gain, vs. -15% satellite cut); all 7
+stop-protected positions confirmed carrying live GTC trailing stops via
+`alpaca.sh orders`, none missing (SGOV's 0.531203349-sh fractional
+remainder stays unstopped, same immaterial ~$53 dust flagged every prior
+sweep). Fresh thesis check this window (WebSearch on all four core/
+satellite names) found no negative news: BAX's continuing drift remains
+broad market/sector pressure, not company-specific (no new items beyond
+the known interim-CFO transition); PANW strengthened (Citizens reiterated
+Outperform $415 PT, Wells Fargo raised PT to $475 from $420); MNKD
+unchanged (FUROSCIX PDUFA resolved 7/24, no new binary); RIGL strengthened
+(Citi raised PT to $83 from $81, VEPPANU launch resolved positively
+8/13-14). No thesis break, nothing cut. No satellite catalyst inside the
+1-2 trading-day gap-risk window for either MNKD or RIGL. No stop
+tightening this window — MNKD/RIGL both well below the +25% satellite
+threshold, no core position in gain. No stop moved down. 2-strike
+sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+Cash 20.12%, at/above the 20% floor, no sweep needed. Risky positions
+closed today: none. Day P&L (+0.05%) driven by MNKD's intraday gain and a
+modest BAX bounce, mostly offset by EDGX/PANW softness. Phase P&L now
+-4.39% since Day 0 ($100,000 -> $95,610.66). Persistence note: the
+multi-session `main`-sync gap flagged in this morning's 9:30am note is
+resolved — `origin/main` merged through PR #125 (11am session) and is
+fully caught up with this branch as of this snapshot. Tomorrow: continue
+watching BAX's drift for a genuine thesis break vs. ordinary noise; the
+`gemini_research.sh` `extract_report()` bug and the still-stale
+WATCHLIST.md ("Week of 2026-08-07," now 2 consecutive missed Friday
+refreshes) remain the top open items for this week's weekly review.
