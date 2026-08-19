@@ -1425,3 +1425,11 @@ watching BAX's drift for a genuine thesis break vs. ordinary noise; the
 `gemini_research.sh` `extract_report()` bug and the still-stale
 WATCHLIST.md ("Week of 2026-08-07," now 2 consecutive missed Friday
 refreshes) remain the top open items for this week's weekly review.
+
+### 2026-08-19 — SELL PANW (core) — mandatory -7% hard cut
+Shares: 19 | Entry: $387.45 | Exit: ~$356.32 (avg fill) | Realized P&L: -$591.47 (-8.04%) | Reason: unrealized_plpc hit -7.96% (below the -7% core hard-cut threshold) per `alpaca.sh positions` at this session's state pull — mandatory manual cut per STEP 4, ahead of and independent of the still-live 10% GTC trailing stop (which was at $348.73182, not yet triggered). Cancelled the trailing stop order first (shares were reserved, qty_available 0) then closed via market sell, day TIF. No specific negative company catalyst found (WebSearch: no news beyond already-known items; analyst sentiment stayed positive — Wells Fargo $475 PT, UBS $390 PT, both reiterated) — reads as broad intraday softness/profit-taking after PANW's recent run, not a thesis break, but the -7% rule is mechanical and doesn't wait for a explanation. Core sleeve now holds only BAX (1 open position); this week (Aug 17 start) stays core 0/6 new trades (exits don't count against the weekly buy cap).
+
+### 2026-08-19 — BUY SGOV (income) — sweep-back after core sell
+Shares: ~66.209 (166.740468683 total held) | Entry: ~$100.578 (notional $6,660.00) | Stop: 5% trailing GTC replaced to cover the full 166 whole-share position, trigger $95.55385 (hwm $100.583); 0.740468683 fractional sh left unprotected, immaterial (~$74.49) | Target: n/a | R:R: n/a
+Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
+Funding reason (income only): PANW's mandatory -7% cut (see above) freed cash to $26,010.57 (27.09% of $96,023.63 equity) vs. the 20% floor (~$19,204.73) — swept $6,660.00 into SGOV, leaving cash at $19,350.58 = 20.15% of equity ($96,024.00). Cancelled the prior 100-share SGOV trailing stop and replaced it with a new 5% trailing stop covering all 166 whole shares.
