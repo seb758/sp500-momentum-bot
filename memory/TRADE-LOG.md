@@ -1433,3 +1433,55 @@ Shares: 19 | Entry: $387.45 | Exit: ~$356.32 (avg fill) | Realized P&L: -$591.47
 Shares: ~66.209 (166.740468683 total held) | Entry: ~$100.578 (notional $6,660.00) | Stop: 5% trailing GTC replaced to cover the full 166 whole-share position, trigger $95.55385 (hwm $100.583); 0.740468683 fractional sh left unprotected, immaterial (~$74.49) | Target: n/a | R:R: n/a
 Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
 Funding reason (income only): PANW's mandatory -7% cut (see above) freed cash to $26,010.57 (27.09% of $96,023.63 equity) vs. the 20% floor (~$19,204.73) — swept $6,660.00 into SGOV, leaving cash at $19,350.58 = 20.15% of equity ($96,024.00). Cancelled the prior 100-share SGOV trailing stop and replaced it with a new 5% trailing stop covering all 166 whole shares.
+
+## Aug 19 — 3pm Snapshot (Day 30, Wednesday)
+**Portfolio:** $96,222.12 | **Cash:** $19,350.58 (20.11%) | **Day P&L:** +$611.46 (+0.64%) | **Phase P&L:** -$3,777.88 (-3.78%)
+**Core exposure:** $9,471.38 (9.84% of equity) | **Satellite exposure:** $10,551.09 (10.97% of equity) | **Income exposure:** $56,849.07 (59.08% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| BAX | core | 356 | $27.27 | $26.605 | +2.56% | -$236.74 (-2.44%) | 10% trailing ($24.705) |
+| MNKD | satellite | 1215 | $4.00 | $4.36 | +7.13% | +$437.40 (+9.00%) | 15% trailing ($3.71875) |
+| RIGL | satellite | 114 | $41.84 | $46.085 | +5.65% | +$483.93 (+10.15%) | 15% trailing ($39.3125) |
+| EDGX | income | 746 | $26.78 | $26.9703 | -0.04% | +$141.96 (+0.71%) | 5% trailing ($25.9825) |
+| SGOV | income | 166.740 | $100.578175 | $100.585 | +0.01% | +$1.14 (+0.00%) | 5% trailing ($95.5605, 166 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.315 | +0.19% | -$38.52 (-0.19%) | 5% trailing ($22.2015) |
+
+**Notes:** No trade activity this window — no "### Approved Trades (verified)"
+section existed anywhere in today's RESEARCH-LOG (pre-market, 11am, and this
+3pm check all confirm none, still blocked by the stale 8/07 watchlist and the
+market-open session-persistence gap), so buy side was HOLD — this week (Aug
+17 start) stays at core 0/6, satellite 0/4 new trades (PANW's/HPE's exits
+don't count against the cap). Today's only trades were the 11am mandatory
+PANW hard-cut sell (-7.96%, -$591.47) and its SGOV sweep-back, already
+logged above. Risk sweep: no position at/beyond its sleeve hard-cut (BAX
+-2.44% vs. -7% core cut; MNKD +9.00%, RIGL +10.15%, both in solid gain, vs.
+-15% satellite cut); all 6 open positions confirmed via `alpaca.sh
+orders`/`positions` carrying live GTC trailing stops, none missing (SGOV's
+0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74
+dust flagged every prior sweep, not a new gap). Fresh WebSearch thesis check
+on BAX/MNKD/RIGL found no negative news on any name — BAX's interim-CFO
+transition and routine $0.01 dividend (ex-date 8/28) are non-red-flag
+housekeeping; MNKD's and RIGL's gains read as continued momentum off
+already-logged, resolved positive catalysts, not new events. No thesis
+break, nothing cut. No satellite catalyst inside the 1-2 trading-day
+gap-risk window (MNKD's FUROSCIX PDUFA resolved 7/24; RIGL's VEPPANU launch
+resolved 8/13) — no forced close needed. No stop tightening this window —
+MNKD +9.00% and RIGL +10.15% both remain below the +25% satellite tighten
+threshold; no core position in gain. No stop moved down. 2-strike
+sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+Cash 20.11%, at/above the 20% floor, no further sweep needed beyond 11am's
+PANW sweep-back. Risky positions closed today: none beyond the 11am
+mandatory PANW cut. Day P&L (+0.64%) driven by strong MNKD/RIGL satellite
+gains, partly offset by a still-underwater BAX and mixed income-sleeve
+moves. Phase P&L now -3.78% since Day 0 ($100,000 -> $96,222.12). Core
+sleeve now holds only BAX (1 position, well under its 6-position cap; low
+core exposure at 9.84% of equity is a Friday-review watch item, not an
+error — a fresh watchlist screen refresh is the fix, not a forced trade).
+Tomorrow: continue watching BAX for a genuine thesis break vs. ordinary
+drift/recovery; MNKD's and RIGL's strong satellite gains are approaching
+(though still below) their +25% tighten thresholds — watch for a tighten
+trigger in coming sessions; the market-open session-persistence gap (5th
+instance in ~5 weeks) and the still-stale WATCHLIST.md ("Week of
+2026-08-07," 3 consecutive missed Friday refreshes) remain the top open
+items for this week's weekly review.
