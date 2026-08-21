@@ -1538,3 +1538,51 @@ missed/duplicated Friday refreshes: 7/17, 7/31, 8/14) and is the binding
 constraint on every buy-side decision; the `gemini_research.sh`
 `extract_report()` truncation bug (11+ consecutive sessions, with a concrete
 fabricated fact caught pre-market today) is the other standing item.
+
+## Aug 21 — 3pm Snapshot (Day 32, Friday)
+**Portfolio:** $95,832.30 | **Cash:** $19,350.42 (20.19%) | **Day P&L:** -$12.52 (-0.01%) | **Phase P&L:** -$4,167.70 (-4.17%)
+**Core exposure:** $9,364.58 (9.77% of equity) | **Satellite exposure:** $10,357.23 (10.81% of equity) | **Income exposure:** $56,760.07 (59.23% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| BAX | core | 356 | $27.27 | $26.305 | -0.40% | -$343.54 (-3.54%) | 10% trailing ($24.705) |
+| MNKD | satellite | 1215 | $4.00 | $4.23 | -0.70% | +$279.45 (+5.75%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $45.77 | +1.15% | +$448.02 (+9.39%) | 15% trailing ($40.239) |
+| EDGX | income | 746 | $26.78 | $26.865 | +0.17% | +$63.41 (+0.32%) | 5% trailing ($25.9825) |
+| SGOV | income | 166.740 | $100.578175 | $100.625 | +0.04% | +$7.81 (+0.05%) | 5% trailing ($95.5985, 166 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.295 | +0.11% | -$55.64 (-0.28%) | 5% trailing ($22.2015) |
+
+**Notes:** No trade activity today — no "### Approved Trades (verified)"
+section existed anywhere in today's RESEARCH-LOG (pre-market, 9:30am, 11am,
+and this 3pm check all confirm none, still blocked by the stale "Week of
+2026-08-07" watchlist), so buy side stayed HOLD across all four windows;
+this week (Aug 17 start) closes at core 0/6, satellite 0/4 new trades — a
+full week with zero new entries, valid per the Patience Rule given the
+watchlist gap. Risk sweep: no position at/beyond its sleeve hard-cut (BAX
+-3.54% vs. -7% core cut; MNKD +5.75%, RIGL +9.39%, both in gain vs. -15%
+satellite cut); all 6 open positions confirmed via `alpaca.sh
+orders`/`positions` carrying live GTC trailing stops, none missing (SGOV's
+0.740468683-sh fractional remainder stays unstopped, same immaterial ~$75
+dust flagged every prior sweep, not a new gap). Thesis check carried
+forward from 11am (no new news window): BAX's Ascension Saint Thomas
+headline-association item remains a watch item with no confirmed
+Baxter-specific tie, not a thesis break; MNKD and RIGL both thesis-intact,
+nothing new since 11am. No closes. No satellite catalyst inside the
+1-2 trading-day gap-risk window for either MNKD (FUROSCIX PDUFA resolved
+7/24) or RIGL (VEPPANU launch resolved 8/13). No stop tightening this
+window — MNKD +5.75% and RIGL +9.39% both remain well below the +25%
+satellite tighten threshold; BAX is not in gain so the core tighten
+schedule doesn't apply. No stop moved down. 2-strike sub-sector tracker
+unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.19%,
+at/above the 20% floor, no sweep needed. Risky positions closed today:
+none. Day P&L (-0.01%) essentially flat — modest BAX/MNKD softness offset
+by RIGL's continued gain and small income-sleeve upticks. Phase P&L now
+-4.17% since Day 0 ($100,000 -> $95,832.30). Core sleeve still holds only
+BAX (1 of 6 slots, 9.77% exposure vs. 85% target) — a direct consequence
+of the 14-day-stale watchlist, not a deliberate pass. Tomorrow: weekend;
+next session is Monday pre-market. This week's weekly-review/screen-refresh
+(separate workflow, scheduled today) is the fix for the stale
+"Week of 2026-08-07" WATCHLIST.md (3 consecutive missed/duplicated Friday
+refreshes: 7/17, 7/31, 8/14) and remains the top open item, alongside the
+`gemini_research.sh` `extract_report()` truncation bug (12+ consecutive
+sessions).

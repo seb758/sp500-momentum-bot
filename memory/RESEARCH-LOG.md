@@ -3231,3 +3231,15 @@ HOLD — default patience; no new core or satellite candidate cleared today give
 - 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
 - Cash 20.17%, at/above the 20% floor — no funding sweep needed.
 - No memory-file changes beyond this note — TRADE-LOG.md unaffected (no trades this window).
+
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists anywhere in today's RESEARCH-LOG (pre-market, 9:30 AM, and 11 AM all confirm none, still blocked by the stale "Week of 2026-08-07" watchlist) — per STEP 3 no buys placed this window. This week (Aug 17 start) closes at core 0/6, satellite 0/4 new trades.
+- Live `alpaca.sh account`/`positions`/`orders` pull: equity $95,832.30, cash $19,350.42 (20.19%, at/above the 20% floor). Core exposure $9,364.58 (9.77%, BAX only); satellite exposure $10,357.23 (10.81%, MNKD $5,139.45 + RIGL $5,217.78); income exposure $56,760.07 (59.23%, EDGX $20,041.29 / SGOV $16,778.26 / SPHY $19,940.52).
+- Risk sweep: no position at/beyond its sleeve hard-cut (BAX -3.54% vs. -7% core cut; MNKD +5.75%, RIGL +9.39%, both in gain vs. -15% satellite cut). All 6 open positions confirmed via `alpaca.sh orders` carrying live GTC trailing stops (BAX 10% $24.705 hwm $27.45; MNKD 15% $3.74 hwm $4.40; RIGL 15% $40.239 hwm $47.34; EDGX 5% $25.9825 hwm $27.35; SPHY 5% $22.2015 hwm $23.37; SGOV 5% $95.5985 hwm $100.63 covering 166 of 166.740468683 sh, same immaterial ~$75 fractional dust flagged every prior sweep). None missing, none moved down.
+- No stop tightening this window — MNKD (+5.75%) and RIGL (+9.39%) both remain well below the +25% satellite tighten threshold; BAX is not in gain so the core tighten schedule doesn't apply.
+- Thesis check carried forward from 11 AM (no new WebSearch this window, no material time elapsed/news since): BAX no confirmed Baxter-specific negative tie to the Ascension Saint Thomas headline (watch item only), MNKD/RIGL both thesis-intact, nothing new. No thesis break, nothing cut.
+- No satellite catalyst inside the 1-2 trading-day gap-risk window for either MNKD (FUROSCIX PDUFA resolved 7/24) or RIGL (VEPPANU launch resolved 8/13; R289 LR-MDS readout guided to year-end).
+- 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- Cash 20.19%, at/above the 20% floor — no funding sweep needed.
+- Risky positions closed today: none.
+- Pattern for Friday's review: core sleeve has now sat at 1 open position (BAX only, ~9.8% exposure vs. 85% target) for over a week, directly downstream of the stale "Week of 2026-08-07" watchlist — today's scheduled screen refresh (separate workflow) is the fix, not a forced trade here.
