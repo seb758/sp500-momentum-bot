@@ -3214,3 +3214,9 @@ No new core candidates — the 8/07 list stands unchanged pending today's schedu
 
 ### Decision
 HOLD — default patience; no new core or satellite candidate cleared today given the stale watchlist (no fresh screen to draw from; today's scheduled refresh is a separate workflow) and no live-momentum recheck yet (deferred to market-open). All held positions thesis-intact, no stop action needed, cash at/above floor. Re-evaluate live momentum/spreads and BAX's Ascension-headline exposure at today's market-open session per the standard workflow split.
+
+### 9:30 AM Session Note
+- HOLD confirmed at market-open: pre-market's decision stands, no ticker to gate since no candidate cleared (stale "Week of 2026-08-07" watchlist, 3rd consecutive missed/duplicated Friday refresh) — buy-side gate not run, nothing to check it against.
+- Live `alpaca.sh account`/`positions` reconfirm: equity $96,373.76, cash $19,350.42 (20.08%, at/above floor), no position near its sleeve hard-cut (BAX -3.37%, MNKD +7.75%, RIGL +9.32%). No action taken on any held position.
+- This week (Aug 17 start) closes core 0/6, satellite 0/4 new trades — a full week with zero new entries, valid per the Patience Rule given the watchlist gap, not a forced-inaction judgment call.
+- Pattern to flag for today's weekly review: core sleeve has sat at 1 open position (BAX only, ~9.8% exposure vs. 85% target) for over a week now, directly downstream of the stale watchlist — today's screen refresh (separate workflow) is the fix.
