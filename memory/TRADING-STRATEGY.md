@@ -255,6 +255,21 @@ its score — don't auto-exclude, since a real 20%+ move (earnings gap,
 biotech catalyst) is a legitimate signal, but don't rank on an
 unscrutinized artifact either.
 
+**Pending-catalyst guard (added 2026-08-21, owner instruction):** a
+Gemini-sourced satellite catalyst described as "pending," "upcoming," or
+"building" is not confirmed pending just because the text says so — Gemini
+has twice presented catalysts that had already resolved (once with a wrong
+date, once — twice in the same week — with a catalyst that had already
+failed catastrophically days earlier) as if they were still live
+opportunities. Before treating any satellite candidate's catalyst as
+forward-looking, run the same single-day-move scan used for the
+corporate-action guard above against that candidate's own recent price
+history. If a large recent move shows up (positive or negative) anywhere
+near the "pending" catalyst's supposed subject, treat the catalyst as
+unconfirmed and independently verify via WebSearch whether it has already
+resolved before adding the name — don't rely on Gemini's own framing to
+tell you whether an event is still ahead of you or already behind you.
+
 1. Get the current S&P 500 constituent list via native WebFetch against a
    public source (e.g. Wikipedia's "List of S&P 500 companies"). This list
    changes only a handful of times a year, so staleness risk is low even at

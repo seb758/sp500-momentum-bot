@@ -646,3 +646,251 @@ the market rallied hard and the bot missed nearly all of it because of
 compounding, previously-identified operational gaps. Grade reflects that:
 solid mechanical execution can't offset a second consecutive miss on a
 lesson the bot already claimed to have learned.
+
+---
+
+## Week ending 2026-08-21
+
+**Coverage note — this entry spans TWO market weeks (2026-08-10 through
+2026-08-21), not one.** The Friday 2026-08-14 weekly-review run never
+happened or never persisted — WATCHLIST.md's "Current" section and this
+file's most recent dated entry were both still "2026-08-07" going into this
+session, meaning the bot traded off a screen up to 14 calendar days stale
+for the back half of this period. **This is the third time this exact
+failure mode has occurred in five weeks** (7/17, 7/31, now 8/14) — see "What
+Didn't Work" below. All trade activity below is aggregated over the full
+two-week span since the last confirmed review.
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $96,078.42 (per week-ending-2026-08-07 review) |
+| Ending portfolio | $95,787.38 |
+| Period return (2 weeks) | -$291.04 (-0.30%) |
+| S&P 500, same 2 weeks (Fri 08-07 close to Fri 08-21 close) | -1.02% (7,754.28 -> 7,678.72, via Gemini Deep Research; headline figure and point-in-time levels reconciled cleanly this week, no discrepancy to flag) |
+| Bot vs S&P (2-week basis) | +0.72pp (bot outperformed) |
+| Core trades | 3 (W:1 / L:1 / open:1) |
+| Satellite trades | 1 (W:0 / L:0 / open:1; MNKD held throughout, not a new trade this period) |
+| Win rate (closed trades) | 50% (1/2) |
+| Best trade (closed) | HPE +2.79% (core) |
+| Worst trade (closed) | PANW -8.04% (core) |
+| Profit factor | 0.45 (gross profit $266.60 / gross loss $591.47) |
+
+Income sleeve (SGOV/SPHY/EDGX) is not included in the trade/win-rate stats
+above — it's not momentum/catalyst-screened and isn't subject to the weekly
+trade caps. This period's income activity was routine sweep-backs after the
+HPE (08-17) and PANW (08-19) exits, both funding SGOV per the sweep-first
+rule — no floor breaches this period.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| HPE | core | $55.56 | $57.11 | +$266.60 (+2.79%) | 10% GTC trailing stop, filled 2026-08-17T13:40:15Z (9:40am ET), trail from hwm $63.44 (+14.2% above entry). A winning exit, not a loss cut — no company-specific negative news found |
+| PANW | core | $387.45 | ~$356.32 | -$591.47 (-8.04%) | Mandatory -7% hard cut, executed 2026-08-19 ahead of the still-live 10% GTC trailing stop (which hadn't yet triggered). No negative catalyst found (analyst sentiment stayed positive, PTs reiterated/raised same day) — broad intraday softness/profit-taking after PANW's recent run, not a thesis break, but the -7% rule is mechanical |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| BAX | core | $27.27 | $26.34 | -$331.08 (-3.41%) | 10% trailing, trigger $24.705 (hwm $27.45) |
+| MNKD | satellite | $4.00 | $4.15 | +$182.25 (+3.75%) | 15% trailing, trigger $3.74 (hwm $4.40) |
+| RIGL | satellite | $41.84 | $45.89 | +$461.70 (+9.68%) | 15% trailing, trigger $40.239 (hwm $47.34) |
+| EDGX | income | $26.78 | — | +$85.27 (+0.43%) | 5% trailing, trigger $25.9825 (hwm $27.35) |
+| SGOV | income | $100.578 | — | +$7.81 (+0.05%) | 5% trailing, trigger $95.5985 (hwm $100.63, 166 of 166.740468683 sh covered) |
+| SPHY | income | $23.36 | — | -$51.36 (-0.26%) | 5% trailing, trigger $22.2015 (hwm $23.37) |
+
+All 6 open positions confirmed carrying live GTC trailing stop orders via
+`alpaca.sh orders open`, none missing. Week-end exposure: core $9,377.04
+(9.79% of equity), satellite $10,273.71 (10.73%), income $56,786.21
+(59.28%), cash $19,350.42 (20.20%, above the 20% floor).
+
+### Watchlist Refresh
+- **Core: 22 names (was 22, but the prior list was 2 weeks stale — see
+  coverage note above).** Full ~500-name universe re-screened on fresh
+  Alpaca bars. FMP 402'd on cashflow/growth/rating for the entire 59-name
+  shortlist this week — core fundamentals validation came entirely from
+  Gemini Deep Research, batched ~10 tickers/query, run fully in parallel
+  (7 batches, all completed this session; one batch and the satellite
+  biotech query both hit transient infrastructure 502/500 errors near the
+  end and needed a resubmit — noted for the record, not a strategy issue).
+  New this week (14 names): MRVL, NTAP, EXPE, IQV, WDAY, VEEV, ABNB, BBY,
+  TGT, APA, ANET, BKNG, DASH, XYZ. Retained (8): DELL, HPE, PANW, MU, MPC,
+  VLO, PSX, ZBRA. Dropped from the prior 22-name list on this week's
+  momentum re-rank or fundamentals: CRL, CSCO, GRMN(cut-line, not failed),
+  FFIV, STT(cut-line), XYZ(retained, ignore), MET, GEN — see WATCHLIST.md
+  for the full ticker-by-ticker audit, including 16 names that failed
+  fundamentals this week (MRNA, CRL, HPQ, FDS, PYPL, TECH, **BAX**, AMGN,
+  LH, IT, GPN, AXON, SWK, PAYX, ADP, RVTY) and 19 "sector-capped
+  alternates."
+- **BAX (currently held core position) dropped off the list this week** —
+  momentum still clean, but analyst consensus deteriorated from
+  "Constructive, no Sell" (08-07) to Hold with a 15% Sell lean plus flagged
+  negative net margins. This starts the thesis-broken clock (exit if still
+  off the list next Friday); not itself a forced exit today. See
+  WATCHLIST.md for full detail.
+- **Satellite: 5 names (was 4).** Added **TWIN** and **SHIP**. Retained MNKD
+  (held), RIGL (held), CGEM. Dropped **SVRA** (fails the live momentum gate
+  this week after clearing cleanly at 08-07 — the PDUFA catalyst itself is
+  unchanged, a pure price-action reversal).
+- **Major data-quality correction this week:** TWIN (Twin Disc) had been
+  wrongly excluded since the 07-24 refresh on a **fabricated
+  "reverse-merger into a mining shell" finding** that never held up —
+  independently confirmed this week via WebSearch (GlobeNewswire, AP,
+  Motley Fool earnings-call transcript) and Alpaca's own continuous
+  price/volume history that Twin Disc has been a real, normally-trading
+  public company the entire time, reporting record Q4 FY26 results and a
+  25% dividend increase on 08-20. Re-added this week. Full detail and root
+  cause in WATCHLIST.md.
+- **Two more serious data-quality catches, both averted:** this week's
+  Gemini biotech-candidate search presented **TENX** and **EYPT** as live,
+  upcoming-catalyst opportunities — for Phase 3 trials that had already
+  failed catastrophically (TENX -89% on 08-10, EYPT -71.5% on 08-17) days
+  before the search ran. Both caught by the standing Alpaca price-history
+  cross-check (STEP 7c) before being added — see "Key Lessons" and the
+  TRADING-STRATEGY.md change note below for the process fix this earns.
+  Separately, **ORN** was resourced with a bullish "52-week-high, JPM
+  Overweight" framing that directly contradicts fresh Alpaca bars (below
+  both MAs, -39.8pp 3M relative return) — excluded on the data, not the
+  narrative. The biotech search was also severely truncated (7 of 11 named
+  candidates had zero supporting detail) — treated as data-unavailable, not
+  screened, per the guard.
+- **Core sector mix (22 names):** semis/AI-hardware cluster (DELL, MRVL,
+  HPE, MU, NTAP) 5/22 (22.7%), well under the 40% cap. 8 distinct GICS-level
+  groupings represented (AI-hardware/semis, software, other IT hardware/
+  networking, energy, consumer discretionary, health care, consumer
+  staples, financials) — see WATCHLIST.md for the full breakdown.
+
+### What Worked
+- Mechanical stop discipline held on both closed trades — HPE's winning
+  exit (ran to +14.2% before the 10% trail gave back gains to +2.79%, real
+  GTC fill) and PANW's mandatory -7% hard cut (executed ahead of the
+  still-live trailing stop, no hesitation) both fired exactly as designed,
+  no manual override, no averaging down.
+- Buy-side discipline stayed genuinely conservative under real pressure: on
+  each of the three entry days (08-12 HPE, 08-13 BAX, 08-14 PANW) multiple
+  names cleared the live momentum/spread checks simultaneously, but the bot
+  entered one name per session rather than batch-entering all clean names
+  at once — a deliberate choice to avoid exhausting the weekly trade
+  budget and SGOV funding capacity in a single unsupervised session.
+- **The data-quality guard caught its two highest-stakes findings to
+  date.** TENX and EYPT were both independently verified against live
+  price action before being added to the satellite list — had either gone
+  unchecked, the watchlist would have presented an already-crashed
+  (-89% / -71.5%) biotech as a fresh momentum opportunity. This is a step
+  up in real-money relevance from every prior catch (SCPH/NVEE 8/07, SVRA's
+  wrong PDUFA date 8/20).
+- A separate, non-trivial correction: TWIN's ~4-week wrongful exclusion on
+  a fabricated corporate-action finding was identified and reversed this
+  week, restoring a real, currently-strong candidate to the pool.
+- The bot **outperformed the S&P 500 by 0.72pp** this period despite the
+  market environment being genuinely difficult (per this week's Gemini
+  benchmark research: a Treasury-buyback-driven bond-market head-fake,
+  renewed Iran/Strait-of-Hormuz escalation, a Shiller CAPE near 41, and a
+  late-week S&P pullback below technical support) — low core deployment
+  (a consequence of the stale watchlist, not a deliberate defensive call)
+  happened to help this period, unlike the 08-07 period where the same
+  under-deployment cost 5 points against a rallying tape.
+
+### What Didn't Work
+- **Third consecutive missed/duplicated Friday watchlist refresh in five
+  weeks (7/17, 7/31, 8/14).** WATCHLIST.md sat up to 14 calendar days stale
+  through this period, directly capping the core sleeve near-empty (1 of 6
+  positions, ~9.8% of equity vs. an 85% target) for most of the two weeks —
+  every daily session correctly declined to force a trade off stale data,
+  but the structural cause went unaddressed for a third straight cycle
+  despite two prior reviews each proposing a fix.
+- **The `gemini_research.sh` `extract_report()` truncation bug, now 12+
+  consecutive sessions unresolved (since 8/9), escalated this week from
+  "wrong details" to "recommending trades on things that already
+  catastrophically failed."** 8/20 caught a wrong PDUFA date (SVRA); this
+  week's biotech search presented two already-failed Phase 3 trials as
+  live opportunities. Both were caught before being acted on, but the
+  failure mode has now clearly moved from an annoyance to a real-money risk
+  that came down to a single verification step.
+- **The recurring wide/erratic-spread data-feed anomaly** (DELL, PANW,
+  ANET, CRWD, CSCO and others showing erratic quotes at the open) continued
+  through this period, repeatedly blocking entries into the
+  highest-momentum core names and forcing entries into lower-ranked but
+  clean-spread alternatives (HPE, BAX, PANW) instead.
+- **A fourth market-open session-persistence gap occurred (08-14, PANW)** —
+  a real fill and stop order executed on Alpaca but the session never
+  reached its own TRADE-LOG append or commit step, requiring
+  reconstruction by the following 11am session. Same pattern as 7/16,
+  7/17, 7/24.
+
+### Key Lessons
+- **A documented mitigation that is never actually enforced provides no
+  protection — this is now the third time this exact lesson has had to be
+  relearned.** The 07-24 review proposed an "explicit persistence check";
+  the 08-07 review proposed treating a stale watchlist as "a hard blocker
+  requiring owner escalation." Neither prevented this week's miss. Writing
+  another process fix into this file is very unlikely to break the
+  pattern on its own — this needs owner-level attention to the underlying
+  scheduling/trigger reliability (outside any single session's file scope
+  to fix), not a fourth documented reminder.
+- **A Gemini-sourced "pending catalyst" needs the same skepticism as a
+  Gemini-sourced fundamental figure — treat it as unconfirmed until an
+  independent price/news check, not just when the framing looks odd.**
+  TENX and EYPT were both presented in confident, well-cited prose as
+  live, building-momentum opportunities; nothing in the text itself
+  signaled staleness. Only a mechanical cross-check (recent single-day
+  price flags -> WebSearch) surfaced that both catalysts had already
+  resolved, catastrophically, days earlier. Formalizing this check (see
+  TRADING-STRATEGY.md change below) closes a gap that has now produced two
+  near-misses in two weeks (SVRA's date, TENX/EYPT's resolution status).
+- **An authoritative structured source beats narrative framing for sector
+  classification.** UMAC's Gemini writeup described it as a "defense
+  supplier" fitting the industrials box; FMP's `profile` endpoint (which
+  works even when fundamentals endpoints 402) classified it Technology
+  Hardware. Trusting the structured field over the narrative avoided a
+  sector-mismatched addition — worth using `fmp.sh profile` as a standard
+  sector-fit check in future satellite screens, not just for market cap.
+
+### Adjustments for Next Week
+- This session's screen refresh (see Watchlist Refresh above) resets
+  WATCHLIST.md to current data. Repeating, for the third time, that a
+  missed Friday refresh is a hard blocker — but per the Key Lessons above,
+  simply repeating this note has not worked twice already, so this is
+  being flagged in the email/PR as an item needing owner attention to the
+  scheduling layer itself, not left as another in-file reminder alone.
+- **TRADING-STRATEGY.md change (this commit):** add an explicit
+  requirement that any Gemini-sourced satellite catalyst described as
+  "pending," "upcoming," or "building" must be cross-checked against the
+  candidate's own recent price action (the same single-day-move scan
+  already used for the corporate-action guard) before being treated as
+  live — if a large recent move is present, confirm via independent
+  WebSearch whether the catalyst has already resolved before treating it
+  as a forward-looking opportunity. This is a mechanics fix closing a
+  now twice-proven gap, not a change to risk tolerance.
+- BAX needs tracking against the thesis-broken clock — a second
+  consecutive week off the watchlist next Friday triggers an exit
+  regardless of P&L (currently -3.41%, well clear of the -7% cut).
+- Continue watching MNKD's weakening 6-month relative momentum (-34.4pp,
+  turned negative since 08-07) — catalyst remains resolved and no thesis
+  break yet, but worth a closer look if the trend persists.
+- No core risk-cap changes (sleeve %, stop widths, tighten thresholds) this
+  week. A daily session note (08-20) raised a fair question about whether
+  the satellite +25% first-tighten threshold is too wide for names that
+  historically top out nearer +10%, but one week of anecdote (MNKD/RIGL
+  both round-tripping meaningful gains on quiet sector-beta days) isn't
+  enough to justify touching a deliberately-set parameter — logged as a
+  standing discussion item for a future review with more data.
+
+### Overall Grade: C-
+Risk controls again performed exactly as designed on every trade that
+happened (a clean mechanical win on HPE, a clean mechanical loss cut on
+PANW, no overrides either direction), and the bot actually beat the S&P
+this period by 0.72pp — a genuinely good relative result, even though it
+mostly reflects being under-invested during a rough two weeks for the
+broader market rather than a skillful call. What keeps this from a better
+grade: a third consecutive miss on a specific, previously-identified,
+twice-"fixed" process failure (the Friday refresh), and a Gemini
+data-reliability problem that escalated this week to its most dangerous
+form yet — recommending trades on clinical assets that had already failed
+catastrophically. Both dangerous outcomes were caught before any capital
+was at risk, which is meaningfully better than a near-miss that gets
+missed, and this week's process fix (formalizing the pending-catalyst
+price check) is concrete rather than another vague reminder. Grade
+reflects that mix: better outcomes and a real, actionable fix earned this
+week, set against a systemic scheduling failure that has now resisted two
+prior attempts to fix it and needs escalation beyond what any single
+session can do.
