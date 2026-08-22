@@ -3243,3 +3243,54 @@ HOLD — default patience; no new core or satellite candidate cleared today give
 - Cash 20.19%, at/above the 20% floor — no funding sweep needed.
 - Risky positions closed today: none.
 - Pattern for Friday's review: core sleeve has now sat at 1 open position (BAX only, ~9.8% exposure vs. 85% target) for over a week, directly downstream of the stale "Week of 2026-08-07" watchlist — today's scheduled screen refresh (separate workflow) is the fix, not a forced trade here.
+
+## 2026-08-22 — Pre-market Research
+
+**Market closed today (Saturday).** This session's scheduled trigger fired
+on a non-trading day — `date -d 2026-08-22 +%A` confirms Saturday. No
+market-open/11am/3pm windows exist today; nothing here is actionable until
+Monday 2026-08-24 pre-market. Completing the research pull for continuity
+(account state, thesis checks) but the Decision below is HOLD by
+construction, not a screened judgment call. Flagging the weekend firing
+itself as an operational item — see Risk Factors.
+
+### Account
+- Equity: $95,788.21 | Cash: $19,350.42 (20.20%, at/above the 20% floor) | Buying power: $287,393.70 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $9,377.04 (9.79%) — BAX only | Satellite exposure: $10,273.71 (10.73%) — MNKD $5,042.25 / RIGL $5,231.46 | Income exposure: $56,787.04 (59.28%) — EDGX $20,063.15 / SGOV $16,779.09 / SPHY $19,944.80
+- All 6 open positions confirmed via `alpaca.sh positions`/`orders`, no auth errors: all carry live GTC trailing stops (BAX 10% $24.705 hwm $27.45; MNKD 15% $3.74 hwm $4.40; RIGL 15% $40.239 hwm $47.34; EDGX 5% $25.9825 hwm $27.35; SPHY 5% $22.2015 hwm $23.37; SGOV 5% $95.5985 hwm $100.63 covering 166 of 166.740468683 sh). SGOV's 0.740468683-sh fractional remainder stays unstopped, same immaterial (~$75) dust flagged every prior sweep, not a new gap.
+- No position at/beyond its sleeve hard-cut: BAX -3.41% vs. -7% core cut; MNKD +3.75%, RIGL +9.68%, both in gain vs. -15% satellite cut. Neither satellite name near its +25% tighten threshold; no core position in gain.
+- This week (Aug 17 start, last trading day was Friday 8/21): core 0/6, satellite 0/4 new trades — carries forward unchanged, next new-trade window opens Monday.
+- **Watchlist refreshed:** WATCHLIST.md is now current — "Week of 2026-08-21" (refreshed yesterday, ending the 3-consecutive-missed-Friday streak). BAX (currently held core position) is off this week's list — week 1 of the two-consecutive-week thesis-broken rule; not yet a forced exit. MNKD and RIGL remain on the current satellite list.
+
+### Data-quality check
+The consolidated Gemini Deep Research call completed (exit 0) and, unlike the prior three-plus weeks of sessions, actually delivered usable per-ticker content this time — but it **omitted requested sections (1) S&P 500 futures/VIX and (2) top market-moving catalysts/economic releases entirely**, jumping straight to section (3)/(4) held-ticker and watchlist analysis. Different failure mode than the prior `extract_report()` truncation (which cut off mid-document); this time the missing sections were never generated rather than cut off partway. Per the data-quality guard, no VIX/futures/catalyst figure from those two sections is fabricated here — native WebSearch fallback was used for both, see Market Context below.
+- No fabricated fact caught this session on the held/watchlist per-ticker content (unlike 8/20's SVRA PDUFA-date fabrication) — Gemini's per-ticker claims for BAX/MNKD/RIGL/EDGX/SGOV/SPHY and the satellite 5-day catalyst check were independently plausible and consistent with prior sessions' logged facts; not separately re-verified line-by-line given no held-position action was contemplated on a non-trading day.
+
+### Market Context (WebSearch fallback — Gemini sections 1-2 were missing)
+- **S&P 500 futures / VIX:** VIX ~15.87 (-0.87% day/day), premarket in the mid-15s — contained. E-mini S&P futures (ESU26) +0.37%, modestly positive tone.
+- **Economic calendar:** No major US data release scheduled for Saturday 8/22 itself (market closed). Look-ahead: Aug 25 — Consumer Confidence, July new home sales; Aug 26 — July PCE/core PCE, personal income/spending, Q2 GDP second estimate. Fed Chair Warsh's first Jackson Hole keynote is Aug 27-29 — the dominant macro focus into next week, not today.
+- No acute geopolitical item surfaced this session.
+
+### Held-Position Thesis Check (per Gemini, cross-checked against no contradicting WebSearch findings)
+- **BAX (core, -3.41% unrealized):** No thesis break. No new 8-K, press release, or clinical update since 8/21's Ascension Saint Thomas headline-association watch item (still no confirmed Baxter product tie). Held, no action possible/needed (market closed).
+- **MNKD (satellite, +3.75% unrealized):** No thesis break. Gemini reconfirms the $100M+ Q2 revenue milestone (8/5), the $36.3M convertible-note settlement (cash + share issuance, de-levering), and the INFLO-1 Phase 1b Nintedanib DPI (MNKD-201, IPF) readout guided for Q3 2026 — no specific date inside the next 5 trading days. No new near-term binary.
+- **RIGL (satellite, +9.68% unrealized):** No thesis break. No new item beyond already-logged Q2 beat/raised guidance and the 8/13 VEPPANU launch; no binary catalyst inside the 5-day window.
+- **EDGX, SGOV, SPHY (income):** No idiosyncratic negative news; SPHY/SGOV thesis reaffirmed by continued Treasury buyback-driven yield stabilization (same macro tailwind logged in prior sessions). No action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-08-21)
+Market closed — nothing actionable today regardless of screen results. For continuity: Gemini found no idiosyncratic overnight news for DELL, MRVL, MU, NTAP, EXPE, IQV, WDAY, ZBRA, VEEV, PSX, BBY, APA, BKNG, DASH (all thesis-neutral, no change). Notable items, none of which are new entries today (market closed): TGT down 2.25% premarket in sympathy with broader retail, no distinct company news; ABNB technically extended (fresh 52-week high $184.70, forward P/E 33.7x, some insider selling 8/7-8/17 — watch item, not a thesis break, still on watchlist); XYZ shows a valuation paradox (Third Point 13F stake disclosed vs. a shareholder-rights-firm investigation announced — net-neutral, no change to watchlist status); MPC/VLO got a fresh institutional endorsement (Piper Sandler initiated both Overweight, "top sector picks"); PANW/ANET/HPE all broke out to fresh 52-week highs Friday (8/21), decoupling from broader tech softness. None of this changes Monday's momentum/FCF gate, which will be recomputed fresh at market-open per standard practice — nothing here is pre-approved.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-08-21)
+- **MNKD, RIGL** (held) — both thesis-intact per above; already at 2/4 satellite slots.
+- **CGEM** — not held. Gemini confirms no catalyst inside the 5-trading-day window (Feb 27, 2027 zipalertinib PDUFA unchanged, far outside it). No change.
+- **TWIN** — not held (re-added to watchlist 8/21). Its 8/20 earnings catalyst is already resolved per WATCHLIST.md; Gemini's satellite catalyst scan did not surface it as a fresh binary this week either.
+- **SHIP** — not held. Ex-dividend date 9/25 is not a near-dated binary; not inside the 5-day window.
+- Gemini's explicit 5-trading-day scan (Aug 22-28) found **no documented binary regulatory/clinical catalyst for any of MNKD, RIGL, CGEM, TWIN, or SHIP** — consistent with WATCHLIST.md. No new satellite entries flagged.
+
+### Risk Factors
+- **Operational: this pre-market routine fired on a non-trading day (Saturday 8/22).** The scheduled-run cadence in CLAUDE.md is described as "five scheduled runs per trading day" — a weekend firing is outside that design intent, wastes a Gemini Deep Research call (5-20 min agent), and produces a research-log entry with no possible trading action. Worth checking the underlying cron/trigger schedule for a day-of-week filter; recommend owner review before next weekend to avoid a recurring wasted run.
+- BAX is off this week's core watchlist (week 1 of 2 for the thesis-broken rule) — not yet a forced exit, but flag for Monday's pre-market to track toward a second consecutive week.
+- No held position near its hard-cut; no satellite catalyst inside the gap-risk window; no acute macro/geopolitical item found.
+
+### Decision
+HOLD — market closed (Saturday), no trading session exists today. All held positions thesis-intact per available research, no stop action needed (and none possible until Monday), cash at/above floor. Resume normal pre-market screening Monday 2026-08-24; re-run momentum/FCF/spread checks fresh against the current "Week of 2026-08-21" watchlist at that session.
