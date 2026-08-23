@@ -3294,3 +3294,85 @@ Market closed — nothing actionable today regardless of screen results. For con
 
 ### Decision
 HOLD — market closed (Saturday), no trading session exists today. All held positions thesis-intact per available research, no stop action needed (and none possible until Monday), cash at/above floor. Resume normal pre-market screening Monday 2026-08-24; re-run momentum/FCF/spread checks fresh against the current "Week of 2026-08-21" watchlist at that session.
+
+## 2026-08-23 — Pre-market Research
+
+**Market closed today (Sunday) — second consecutive non-trading-day firing.**
+`date -d 2026-08-23 +%A` confirms Sunday. This is the second day in a row
+this routine has fired outside the "five scheduled runs per trading day"
+design intent (Saturday 8/22, now Sunday 8/23) — yesterday's entry already
+flagged the operational gap and recommended owner review of the underlying
+cron/trigger day-of-week filter before the next weekend; it recurred the
+very next day. Escalating, see Risk Factors.
+
+### Account
+- Equity: $95,788.21 | Cash: $19,350.42 (20.20%, at/above the 20% floor) —
+  **identical to yesterday's (8/22) snapshot to the cent**, confirming no
+  market activity since Saturday (expected, market closed both days).
+- Positions and GTC trailing stops (via `alpaca.sh positions`/`orders`, no
+  auth errors) unchanged from 8/22: BAX core -3.41% (stop 10% $24.705, hwm
+  $27.45); MNKD satellite +3.75% (stop 15% $3.74, hwm $4.40); RIGL satellite
+  +9.68% (stop 15% $40.239, hwm $47.34); EDGX income +0.43% (stop 5%
+  $25.9825, hwm $27.35); SGOV income (stop 5% $95.5985, hwm $100.63,
+  covering 166 of 166.740468683 sh — same immaterial ~$75 fractional dust
+  flagged every prior sweep); SPHY income -0.26% (stop 5% $22.2015, hwm
+  $23.37). No position at/beyond its sleeve hard-cut. No stop tightening
+  applicable (no satellite name near +25%; no core position in gain).
+- This week (Aug 17 start): core 0/6, satellite 0/4 new trades — carries
+  forward unchanged, next new-trade window opens Monday 8/24.
+- Watchlist: current "Week of 2026-08-21" (refreshed 8/21, unchanged since
+  8/22's check). BAX remains off the core list — week 2 of the
+  two-consecutive-week thesis-broken tracking window; **flag for Monday
+  pre-market: if BAX is still absent from the next screen refresh (due
+  8/28), this crosses the two-consecutive-Friday threshold and would
+  trigger a mandatory thesis-broken exit regardless of P&L.**
+
+### Data-quality / research-call decision
+**Deliberately skipped a fresh Gemini Deep Research call this session** —
+account state above is byte-identical to yesterday's (8/22) snapshot, which
+already ran a full consolidated Gemini query covering market context and
+held/watchlist thesis checks for this same non-trading weekend. A second
+full research cycle (5-20 min background agent) would re-ask the same
+questions about the same static weekend with no new information available,
+directly repeating the waste flagged in 8/22's Risk Factors. This is a
+judgment call under the Patience Rule / API-budget discipline (see
+TRADING-STRATEGY.md), not a fallback due to a missing key or an error — no
+data-quality guard applies here since no external research was attempted.
+Yesterday's (8/22) thesis checks on BAX/MNKD/RIGL/EDGX/SGOV/SPHY and the
+satellite 5-day catalyst scan (none found) are carried forward unchanged;
+nothing has occurred since to invalidate them (market closed both days).
+
+### Market Context
+Carried forward from 8/22 (VIX ~15.87, ESU26 +0.37%, no major data release
+until Aug 25 Consumer Confidence / Aug 26 PCE+GDP / Aug 27-29 Jackson Hole)
+— not re-checked today given no new trading session or news window since
+that pull.
+
+### Core / Satellite Trade Ideas
+Not applicable — market closed, no session exists today, nothing
+actionable regardless of screen results. Full momentum/FCF/catalyst checks
+resume fresh Monday 8/24 pre-market against the current Week-of-2026-08-21
+watchlist.
+
+### Risk Factors
+- **Operational, escalated: two consecutive non-trading-day firings
+  (Sat 8/22, Sun 8/23).** The scheduled cadence in CLAUDE.md is "five
+  scheduled runs per trading day" with no weekend firings by design intent.
+  This is now a confirmed recurring pattern, not a one-off — the owner
+  should add a trading-day/weekday filter to the underlying routine/cron
+  trigger. Left unresolved, expect a third firing Monday 8/24, which
+  *would* be a legitimate trading day and should run the full workflow
+  normally.
+- BAX: week 2 of 2 off the core watchlist — see Account section, tracked
+  for Monday.
+- No held position near its hard-cut; no satellite catalyst inside the
+  gap-risk window (per 8/22's scan, unchanged); no acute macro item since
+  8/22's check.
+
+### Decision
+HOLD — market closed (Sunday), no trading session exists today, account
+and thesis checks unchanged from yesterday's snapshot. Resume normal
+pre-market screening Monday 2026-08-24; that session should run the full
+workflow (including a fresh Gemini Deep Research call) since it is a real
+trading day. Monday's session must also check whether BAX has cleared its
+second consecutive week off the watchlist (thesis-broken exit trigger).
