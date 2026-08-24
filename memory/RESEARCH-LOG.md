@@ -3477,3 +3477,41 @@ HOLD — no held position broken or near its cut, no satellite binary catalyst i
   only, 9.79% of equity vs. 85% target) on the stale Week-of-8/21 watchlist
   — Friday 8/28's refresh is the fix, not a forced trade. Next check: 3pm
   window.
+
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists
+  anywhere in today's RESEARCH-LOG (pre-market, 9:30am, 11am, and this 3pm
+  check all confirm none — still blocked by the stale "Week of 2026-08-21"
+  watchlist for a fresh core name; no satellite candidate cleared either).
+  This week (Aug 24 start) closes at core 0/6, satellite 0/4 new trades.
+- Live account: equity $95,636.54, cash $19,350.42 (20.24%, above the 20%
+  floor) — no sweep needed. All 6 open positions (BAX core; MNKD/RIGL
+  satellite; EDGX/SGOV/SPHY income) confirmed via `alpaca.sh
+  positions`/`orders` carrying live GTC trailing stops, none missing, none
+  moved down: BAX 10% $24.705 (hwm $27.45); MNKD 15% $3.74 (hwm $4.40); RIGL
+  15% $40.239 (hwm $47.34); EDGX 5% $25.9825 (hwm $27.35); SPHY 5% $22.2015
+  (hwm $23.37); SGOV 5% $95.608 (hwm $100.64, covers 166 of 166.740468683
+  sh — same immaterial ~$75 fractional dust flagged every prior sweep, not
+  a new gap).
+- Risk sweep: no position at/beyond its sleeve hard-cut (BAX -3.35% vs. the
+  -7% core cut; MNKD +3.13%, RIGL +7.96%, both in gain vs. the -15%
+  satellite cut). Fresh WebSearch thesis check on BAX/MNKD/RIGL found
+  nothing new or negative since the 11am note: BAX's CFO transition/$0.01
+  dividend (ex-date 8/28) and modestly higher analyst fair-value estimates
+  are unchanged housekeeping; MNKD's FUROSCIX ReadyFlow approval and $50M
+  private placement remain the last confirmed items, no new binary; RIGL's
+  VEPPANU commercial launch (8/13) remains resolved-positive, no new
+  catalyst. No thesis break, nothing closed. No satellite catalyst inside
+  the 1-2 trading-day gap-risk window for either MNKD or RIGL (both
+  catalysts already resolved). No stop tightening this window — MNKD
+  +3.13% and RIGL +7.96% both remain well below the +25% satellite tighten
+  threshold; BAX is not in gain so the core tighten schedule doesn't apply.
+  No stop moved down. 2-strike sub-sector tracker unchanged: biotech 1/2
+  (OCUL 7/23), industrials 0/2. Risky positions closed today: none.
+- Decision: HOLD, no action taken. Core sleeve remains underweight (BAX
+  only, 9.81% of equity vs. 85% target) on the stale Week-of-8/21 watchlist
+  — Friday 8/28's refresh is the fix, not a forced trade. A full day with
+  zero new trades in either sleeve is a valid Patience-Rule outcome, not an
+  error. BAX's second consecutive week off the core watchlist (per
+  WATCHLIST.md's 08-21 refresh) is decided at Friday 8/28's screen refresh,
+  not mid-week — no forced exit today.
