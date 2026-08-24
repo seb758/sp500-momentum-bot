@@ -3451,3 +3451,29 @@ HOLD — no held position broken or near its cut, no satellite binary catalyst i
   illiquid opening prints. Re-check spreads on this same shortlist at the
   11am window once opening-auction liquidity normalizes; if any clear the
   spread bar, run the full fundamentals/momentum gate then.
+
+### 11 AM Session Note
+- No "### Approved Trades (verified)" section in today's entry (pre-market
+  and 9:30am both landed on HOLD, no trade) — per this window's mandate
+  (execute Market-open's approved list only, no re-screen), buy side stayed
+  HOLD. This week (Aug 24 start): core 0/6, satellite 0/4 new trades.
+- Live account: equity $95,596.67, cash $19,350.42 (20.24%, above the 20%
+  floor) — no sweep needed. All 6 open positions (BAX core; MNKD/RIGL
+  satellite; EDGX/SGOV/SPHY income) confirmed via `alpaca.sh
+  positions`/`orders` carrying live GTC trailing stops, none missing, none
+  moved down: BAX 10% $24.705 (hwm $27.45); MNKD 15% $3.74 (hwm $4.40); RIGL
+  15% $40.239 (hwm $47.34); EDGX 5% $25.9825 (hwm $27.35); SPHY 5% $22.2015
+  (hwm $23.37); SGOV 5% $95.608 (hwm $100.64, covers 166 of 166.740468683
+  sh — same immaterial ~$75 fractional dust flagged every prior sweep).
+- No position at/beyond its sleeve hard-cut (BAX -3.78% vs. -7% core cut;
+  MNKD +2.88%, RIGL +9.02%, both in gain vs. -15% satellite cut). No
+  stop-tighten trigger (both satellite gains below +25%; BAX not in gain so
+  the core tighten schedule doesn't apply). No thesis break on any held
+  name — nothing new since the 9:30am note; no sharp unexplained intraday
+  move on any position (largest intraday move BAX -0.38%), so no Gemini
+  catalyst-check call this window. 2-strike sub-sector tracker unchanged:
+  biotech 1/2 (OCUL 7/23), industrials 0/2.
+- Decision: HOLD, no action taken. Core sleeve remains underweight (BAX
+  only, 9.79% of equity vs. 85% target) on the stale Week-of-8/21 watchlist
+  — Friday 8/28's refresh is the fix, not a forced trade. Next check: 3pm
+  window.
