@@ -3426,3 +3426,28 @@ No fresh momentum/FCF/rating re-screen run this session (that's the market-open 
 
 ### Decision
 HOLD — no held position broken or near its cut, no satellite binary catalyst inside the gap-risk window, cash at/above the 20% floor. Nothing here is a pre-approved trade; core/satellite entries still require the full momentum/FCF/catalyst gate to be re-run fresh at market-open per TRADING-STRATEGY.md. Watch items for later today/this week: NVDA earnings' effect on the AI-hardware cluster, MNKD's resale-registration supply overhang, and BAX's countdown to Friday's watchlist-refresh thesis-broken decision.
+
+### 9:30 AM Session Note
+- Live account confirmed: equity $95,677.37, cash $19,350.42 (20.23%, above the
+  20% floor). All 6 open positions (BAX core; MNKD/RIGL satellite; EDGX/SGOV/SPHY
+  income) carry live GTC trailing stops, none missing, none at/beyond hard-cut
+  (BAX -3.48% vs -7%; MNKD +2.63%, RIGL +8.73%, both vs -15%). No stop-tighten
+  trigger (both satellite gains below +25%). This week (Aug 24 start): core
+  0/6, satellite 0/4 new trades.
+- Since pre-market deferred the momentum re-screen to this session with no
+  specific candidate flagged, ran STEP 2 live quotes on the highest-ranked
+  unheld core names (DELL, MRVL, HPE, PANW, MU, NTAP) and the unheld satellite
+  names (CGEM, TWIN, SHIP) before running the fundamentals/momentum gate.
+  Every single one showed a grossly wide bid/ask spread ~3-4 min after the
+  open: DELL ~10.8%, MRVL ~9.5%, HPE ~5.8%, PANW ~9.2%, MU ~2.1%, NTAP ~6.1%,
+  CGEM ~28.3%, TWIN ~38.1%, SHIP ~20.7% — the same thin-opening-auction
+  illiquidity condition repeatedly documented in TRADE-LOG (e.g. WDC/STX/AMAT
+  7/24, ORN/CVLG 7/21-7/27), well outside the tight ~0.5-1% spreads seen on
+  confirmed live entries. Per the wide/illiquid-spread skip rule in STEP 2,
+  none reached the buy-side gate — no fundamentals/catalyst check was run on
+  any of them this window.
+- Decision: HOLD, no trade. Core sleeve remains underweight (BAX only, 9.8%
+  of equity vs. 85% target) — a real gap, but not one to force through
+  illiquid opening prints. Re-check spreads on this same shortlist at the
+  11am window once opening-auction liquidity normalizes; if any clear the
+  spread bar, run the full fundamentals/momentum gate then.
