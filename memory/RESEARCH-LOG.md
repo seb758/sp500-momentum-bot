@@ -3376,3 +3376,53 @@ pre-market screening Monday 2026-08-24; that session should run the full
 workflow (including a fresh Gemini Deep Research call) since it is a real
 trading day. Monday's session must also check whether BAX has cleared its
 second consecutive week off the watchlist (thesis-broken exit trigger).
+
+## 2026-08-24 — Pre-market Research
+
+**First real trading day this workflow has run since Friday 8/21** (Sat
+8/22 and Sun 8/23 both fired on non-trading days, flagged in those entries
+as an operational gap — recommend owner review of the underlying cron
+day-of-week filter; not re-flagged in depth here since it's a known,
+already-escalated item).
+
+### Account
+- Equity: $95,753.43 | Cash: $19,350.42 (20.21%, at/above the 20% floor) | Buying power: $287,325.46 (margin-inflated 4x multiplier, no margin used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $9,377.04 (9.79%) — BAX only | Satellite exposure: $10,237.26 (10.69%) — MNKD $5,005.80 / RIGL $5,231.46 | Income exposure: $56,788.71 (59.30%) — EDGX $20,063.15 / SGOV $16,780.76 / SPHY $19,944.80
+- All 6 open positions confirmed via `alpaca.sh positions`/`orders`, no auth errors: all carry live GTC trailing stops (BAX 10% $24.705 hwm $27.45; MNKD 15% $3.74 hwm $4.40; RIGL 15% $40.239 hwm $47.34; EDGX 5% $25.9825 hwm $27.35; SPHY 5% $22.2015 hwm $23.37; SGOV 5% $95.5985 hwm $100.63 covering 166 of 166.740468683 sh — same immaterial ~$75 fractional dust flagged every prior sweep, not a new gap). None missing, none moved down.
+- No position at/beyond its sleeve hard-cut: BAX -3.41% vs. -7% core cut; MNKD +3.00%, RIGL +9.68%, both in gain vs. -15% satellite cut. Neither satellite name near its +25% tighten threshold; no core position in gain.
+- This week (Aug 24 start, fresh week): core 0/6, satellite 0/4 new trades so far.
+- Watchlist: current "Week of 2026-08-21" (unchanged, next refresh due Friday 8/28). BAX remains off the core list — **this is week 2 of the two-consecutive-week thesis-broken window, but per TRADE-LOG.md's 8/23 note the check fires at the *next screen refresh* (8/28), not mid-week — no forced exit today.** Flagging for Friday's refresh.
+
+### Data-quality check
+The consolidated Gemini Deep Research call completed (exit 0) but the captured output **starts mid-document** — opens on "Exchange and Fixed Income Allocations (EDGX, SGOV, SPHY)," missing the requested section (1) S&P 500 futures/VIX header, section (2) top catalysts/economic releases header, and the explicit BAX/MNKD/RIGL overnight-thesis-check portion of section (3) (jumps straight to EDGX/SGOV/SPHY). Per the data-quality guard, no figure or headline from those missing portions is used from the Gemini output — native WebSearch fallback was run for (1) SPX futures/VIX and (2)/(3) BAX/MNKD/RIGL-specific overnight news, below. Gemini's own conclusion paragraph did surface a VIX figure (15.90) and named the Iran-sanctions catalyst in passing; both are corroborated independently by the WebSearch fallback, so used with that corroboration.
+- Gemini's Part IV (core watchlist) and Part V (satellite catalyst table) content was intact and used as-is (no truncation markers, coherent chain of tickers/citations throughout).
+
+### Market Context (WebSearch fallback for sections 1-2; Gemini corroborates)
+- **S&P 500 futures / VIX:** E-mini S&P futures +0.4% premarket. VIX 15.94 (+5.36% day/day) — Gemini's 15.90 figure is consistent. 10-year Treasury yield near a 20-month high (~4.74%), a background headwind for long-duration growth names per Gemini's framing.
+- **Top catalyst (per Gemini, not independently re-verified line-by-line):** Treasury Secretary Bessent reportedly set to announce expanded Iran sanctions — a geopolitical crude-supply risk flagged as bullish for the energy cluster (MPC/VLO/PSX/APA, all on the core watchlist) and a general risk-off/dispersion driver. Treat as directionally useful, not a confirmed fact, since it wasn't independently re-checked.
+- **Economic calendar (carried forward from 8/22, unchanged):** Aug 25 Consumer Confidence + July new home sales; Aug 26 PCE/core PCE + Q2 GDP second estimate; Fed Chair Warsh's Jackson Hole keynote Aug 27-29. Gemini adds: NVDA earnings this week is the dominant AI-capex swing factor for the semis/hardware cluster; DELL/HPE both report imminently (~8/28, ~9/2).
+
+### Held-Position Thesis Check (WebSearch, since Gemini's version was cut off)
+- **BAX (core, -3.41% unrealized):** No thesis break. New CFO John Rogers confirmed effective Oct 1 (following interim CFO Zielinski's planned Sept 15 resignation) — a scheduled transition, not a surprise departure. $0.01 dividend ex-date 8/28 (routine, already logged). Analyst fair-value estimates have drifted modestly higher ($27.29 -> ~$28.73). No negative news.
+- **MNKD (satellite, +3.00% unrealized):** No thesis break, but one item worth logging: an 8/21 Form 424B7 prospectus supplement covers resale of up to ~12.85M shares (incl. shares underlying pre-funded warrants) by the selling stockholders from the 7/24 private placement (the same raise already logged as funding the scPharmaceuticals milestone) — this is a resale registration of already-issued shares, not a new dilutive offering by the company, but it does put more freely-tradeable supply into the market and is worth watching for technical pressure. Furoscix ReadyFlow "late August" commercial availability remains the live, ongoing catalyst (gradual rollout, not a single-day binary).
+- **RIGL (satellite, +9.68% unrealized):** No thesis break. VEPPANU is confirmed commercially available since 8/11 (first-and-only FDA-approved PROTAC for ER+/HER2-, ESR1-mutated breast cancer) at $29,400/30-day supply. H.C. Wainwright raised its price target from $57 to $85 citing VEPPANU + the Rezlidhia partnership. Thesis strengthening, not weakening.
+- **EDGX, SGOV, SPHY (income):** No idiosyncratic news surfaced (Gemini's intact commentary: SGOV remains an optimal zero-duration ballast at >3.7% short-bill yields; SPHY's 7.08% SEC yield is attractive but flagged with elevated duration/credit-risk commentary given the steep long end of the curve — a standing macro watch item, not a thesis break for a fixed 5%-trailing-stop income holding).
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-08-21)
+No fresh momentum/FCF/rating re-screen run this session (that's the market-open workflow's job); this is overnight-news context only, nothing here is pre-approved. Per Gemini: AI-hardware/semis cluster (DELL, HPE, MRVL, MU, ANET) showing overnight softness/volatility (MU -1.40% and MRVL -2.88% on Blue Ocean overnight tape) ahead of NVDA earnings, plus an active DELL/HPE OEM server pricing war (HPE now guaranteeing 30-day quote validity, DELL matching) — a margin-compression watch item, not a thesis break for either. Energy cluster (MPC, VLO, PSX, APA) has a constructive geopolitical setup on the Iran-sanctions catalyst above. NTAP earnings confirmed 9/2; WDAY/PANW report week of 8/31 with WDAY facing softening-hiring headwinds. VEEV benefiting from a healthcare-tech analyst-upgrade wave. TGT/BBY value-retail bid continues; travel/discretionary (EXPE/ABNB/BKNG/DASH) flagged as macro-vulnerable on weak July retail sales/consumer confidence. IQV reaffirmed strong (record $3.15B R&DS bookings, raised FY26 guidance). None of this changes Monday's momentum/FCF gate, which will be recomputed fresh at market-open per standard practice.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-08-21)
+- **MNKD, RIGL** (held) — both thesis-intact per above; already at 2/4 satellite slots.
+- **CGEM** — not held. Confirmed outside the 5-trading-day window (IASLC lung-cancer conference catalyst is Sept 12-15, not near-dated); Gemini flags a risk of pre-conference abstract leaks as a watch item, not an actionable catalyst today.
+- **TWIN, SHIP** — not held. Both are attending the D.A. Davidson Small Satellite Conference (Salt Lake City, Aug 23-26) this week — Gemini frames this as a volatility/PR-risk window (possible backlog or partnership disclosures at a micro-cap conference), not a documented binary catalyst per TRADING-STRATEGY.md's definition. Logged as a watch item; not a new entry trigger on its own.
+- No documented binary regulatory/clinical catalyst inside the 5-day window (Aug 24-31) for any of MNKD, RIGL, CGEM, TWIN, or SHIP that would require entry/exit action today.
+
+### Risk Factors
+- MNKD: 8/21 resale registration of ~12.85M shares from the already-logged 7/24 private placement — supply overhang worth monitoring, not a thesis break (see Held-Position Thesis Check).
+- BAX remains off the core watchlist for a 2nd week — no forced exit today per the 8/28-refresh-triggered rule (see Account section), but this is the last research window before Friday's refresh decides it.
+- 10-year Treasury yield near a 20-month high (~4.74%) is a standing macro headwind for long-duration growth/discretionary names on the watchlist (EXPE/ABNB/BKNG/DASH/WDAY flagged specifically by Gemini).
+- Iran-sanctions catalyst (per Gemini, not independently re-verified) could move energy-cluster watchlist names (MPC/VLO/PSX/APA) and broader risk sentiment intraday.
+- No held position at/beyond its sleeve hard-cut; no satellite catalyst inside the gap-risk window requiring action.
+
+### Decision
+HOLD — no held position broken or near its cut, no satellite binary catalyst inside the gap-risk window, cash at/above the 20% floor. Nothing here is a pre-approved trade; core/satellite entries still require the full momentum/FCF/catalyst gate to be re-run fresh at market-open per TRADING-STRATEGY.md. Watch items for later today/this week: NVDA earnings' effect on the AI-hardware cluster, MNKD's resale-registration supply overhang, and BAX's countdown to Friday's watchlist-refresh thesis-broken decision.
