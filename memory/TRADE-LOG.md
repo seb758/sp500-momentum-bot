@@ -1647,3 +1647,51 @@ Shares: 92 | Entry: $100.65 | Reason: the planned DELL buy the SGOV sweep above 
 Mechanics: canceled the interim 74-share trailing stop, replaced with the standard 166-share 5% trailing stop — restores the exact pre-session position size (166.740468683 total shares, same 0.740468683-share fractional remainder left unstopped as every prior sweep, immaterial ~$75 dust).
 
 **Post-reconstruction sleeve state:** no net change to any sleeve. Core still 1 open position (BAX only), satellite still 2 (MNKD, RIGL), income back to its pre-session SGOV/SPHY/EDGX split. This week (Aug 24 start): core 0/6, satellite 0/4 new trades — unchanged, since neither SGOV leg was a Core/Satellite entry and the round trip nets to the same Income-sleeve position it started from.
+
+## Aug 25 — 3pm Snapshot (Day 34, Tuesday)
+**Portfolio:** $95,936.21 | **Cash:** $19,349.50 (20.17%) | **Day P&L:** +$299.67 (+0.31%) | **Phase P&L:** -$4,063.79 (-4.06%)
+**Core exposure:** $9,378.82 (9.78% of equity) | **Satellite exposure:** $10,380.84 (10.82% of equity) | **Income exposure:** $56,827.05 (59.24% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| BAX | core | 356 | $27.27 | $26.345 | -0.55% | -$329.30 (-3.39%) | 10% trailing ($24.705) |
+| MNKD | satellite | 1215 | $4.00 | $4.18 | +2.70% | +$218.70 (+4.50%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $46.51 | +3.10% | +$532.38 (+11.16%) | 15% trailing ($40.341) |
+| EDGX | income | 746 | $26.78 | $26.87 | +0.21% | +$67.14 (+0.34%) | 5% trailing ($25.9825) |
+| SGOV | income | 166.740 | $100.617805 | $100.645 | +0.01% | +$4.53 (+0.03%) | 5% trailing ($95.6175, 166 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.365 | +0.24% | +$4.28 (+0.02%) | 5% trailing ($22.2015) |
+
+**Notes:** No trade activity today in either sleeve beyond the market-open
+SGOV round-trip (income-only, already logged and net-zero) — no "### Approved
+Trades (verified)" section existed anywhere in today's RESEARCH-LOG
+(pre-market, 9:30am, 11am, and this 3pm check all confirm none: market-open's
+only candidate, DELL, was aborted on a wide/unstable opening-auction spread),
+so the buy side stayed HOLD across all four windows; this week (Aug 24 start)
+closes at core 0/6, satellite 0/4 new trades — valid per the Patience Rule.
+Risk sweep: no position at/beyond its sleeve hard-cut (BAX -3.39% vs. the -7%
+core cut; MNKD +4.50%, RIGL +11.16%, both in gain vs. the -15% satellite
+cut); all 6 open positions confirmed via `alpaca.sh positions`/`orders`
+carrying live GTC trailing stops, none missing (SGOV's 0.740468683-sh
+fractional remainder stays unstopped, same immaterial ~$75 dust flagged every
+prior sweep, not a new gap). RIGL's trailing stop ratcheted up on its own
+from $40.239 to $40.341 (hwm $47.46) — mechanical trail, not a manual move.
+No satellite catalyst inside the 1-2 trading-day gap-risk window (MNKD's
+FUROSCIX PDUFA resolved 7/24, end-of-August launch is gradual not binary;
+RIGL's VEPPANU launch resolved 8/13). No thesis break on BAX/MNKD/RIGL — BAX
+remains off the core watchlist for a 2nd consecutive week (Week of 8/21);
+per the standing interpretation carried since 8/23, the two-week
+thesis-broken exit is decided at Friday 8/28's screen refresh, not forced
+mid-week. No stop tightening this window — MNKD and RIGL both remain below
+the +25% satellite tighten threshold; BAX is not in gain so the core tighten
+schedule doesn't apply. No stop moved down. 2-strike sub-sector tracker
+unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.17%, at/above
+the 20% floor, no sweep needed. Risky positions closed today: none. Day P&L
+(+0.31%) driven mainly by RIGL (+3.10%) and MNKD (+2.70%) continuing their
+gains, partly offset by BAX softness. Phase P&L now -4.06% since Day 0
+($100,000 -> $95,936.21). Core sleeve still holds only BAX (1 of 6 slots,
+9.78% exposure vs. 85% target) — a direct consequence of the current
+watchlist having only one qualifying held core name, not a deliberate pass.
+Tomorrow: Friday 8/28's weekly-review/screen-refresh is the top open item —
+decides BAX's two-week thesis-broken status and is the fix for core's
+underweight exposure; also carrying forward the standing Gemini
+`extract_report()` truncation bug (13th+ consecutive session).
