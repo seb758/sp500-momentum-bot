@@ -1637,3 +1637,13 @@ screen refresh, not mid-week); watch MNKD/RIGL's approach toward their
 +25% satellite tighten threshold; Friday 8/28's weekly-review/screen-refresh
 remains the top open item to bring core exposure back toward its 85%
 target.
+
+### 2026-08-25 — SELL SGOV (income) — cash-floor sweep (pre-trade, funds planned DELL buy)
+Shares: 92 | Exit: $100.64 | Realized P&L: ~$0.00 (0.00%) | Reason: pre-trade cash-floor check ahead of a planned DELL core buy (top-ranked, unheld name on the current "Week of 2026-08-21" core watchlist), per TRADING-STRATEGY.md's SGOV-first buy-funding sweep rule. Order filled 2026-08-25T13:38:08Z, cash after: pre-market $19,350.42 + $9,258.88 (sale proceeds) = $28,609.30.
+Mechanics: canceled the standing 166-share 5% trailing stop (a26821c1...) ahead of the sale, replaced with a 74-share 5% trailing stop for the reduced position.
+
+### 2026-08-25 — BUY SGOV (income) — reversal, DELL buy aborted on spread-check failure
+Shares: 92 | Entry: $100.65 | Reason: the planned DELL buy the SGOV sweep above was funding did not go through — see 9:30 AM Session Note below. DELL's live quote proved unstable/wide across repeated polls within about a minute (ap/bp $446.91/$445.22 -> $466.09/$419.61 -> $466.09/$447.01 -> $466.09/$419.61 -> $448.49/$419.61; spread flickered roughly 0.4%-10.5%), the same thin/illiquid-quote condition documented in the 8/24 9:30am session note for this exact shortlist. MRVL (next-ranked unheld core name) also flickered 0.7%-4.2% across three polls. Per STEP 2's skip-wide-or-zero-spread rule, no buy was placed on either name. With no buy left to fund, reversed the sweep rather than leave cash sitting idle above the 20% floor with the Income sleeve underweight its target split. Net cost of the round trip: $0.92 on 92 shares (bid/ask friction on the sell-then-buy-back), immaterial. Order filled 2026-08-25T13:39:19Z.
+Mechanics: canceled the interim 74-share trailing stop, replaced with the standard 166-share 5% trailing stop — restores the exact pre-session position size (166.740468683 total shares, same 0.740468683-share fractional remainder left unstopped as every prior sweep, immaterial ~$75 dust).
+
+**Post-reconstruction sleeve state:** no net change to any sleeve. Core still 1 open position (BAX only), satellite still 2 (MNKD, RIGL), income back to its pre-session SGOV/SPHY/EDGX split. This week (Aug 24 start): core 0/6, satellite 0/4 new trades — unchanged, since neither SGOV leg was a Core/Satellite entry and the round trip nets to the same Income-sleeve position it started from.
