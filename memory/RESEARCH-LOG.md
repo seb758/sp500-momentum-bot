@@ -3584,3 +3584,54 @@ HOLD — no held position broken or near its cut, no satellite binary catalyst i
 - **2-strike sub-sector tracker unchanged:** biotech 1/2 (OCUL 7/23), industrials 0/2.
 - **Risky positions closed today: none.**
 - **Lesson for Friday's review:** BAX's second-consecutive-week-off-watchlist status is now the top open item heading into 8/28's refresh — if it's still absent, the thesis-broken rule requires an exit regardless of P&L. Also carrying forward the standing Gemini `extract_report()` truncation bug (13th+ consecutive session).
+
+## 2026-08-26 — Pre-market Research
+
+### Account
+- Equity: $95,887.77 | Cash: $19,349.27 (20.18%, at/above the 20% floor) | Buying power: $287,661.36 (margin-inflated 4x multiplier, no margin used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $9,366.36 (9.77%) — BAX only | Satellite exposure: $10,355.40 (10.80%) — MNKD $5,054.40 / RIGL $5,301.00 | Income exposure: $56,816.74 (59.25%) — EDGX $20,028.76 / SGOV $16,783.26 / SPHY $20,004.72
+- All 6 open positions confirmed via `alpaca.sh positions`/`orders`, no auth errors: all carry live GTC trailing stops (BAX 10% $24.705 hwm $27.45; MNKD 15% $3.74 hwm $4.40; RIGL 15% $40.341 hwm $47.46; EDGX 5% $25.9825 hwm $27.35; SPHY 5% $22.210905 hwm $23.3799; SGOV 5% $95.6175 hwm $100.65 covering 166 of 166.740468683 sh — same immaterial ~$75 fractional dust flagged every prior sweep, not a new gap). None missing, none moved down.
+- No position at/beyond its sleeve hard-cut: BAX -3.52% vs. -7% core cut; MNKD +4.00%, RIGL +11.14%, both in gain vs. -15% satellite cut.
+- This week (Aug 24 start): core 0/6, satellite 0/4 new trades so far.
+- Watchlist: current "Week of 2026-08-21" (unchanged, next refresh due Friday 8/28). BAX remains off the core list — this is week 2 of the two-consecutive-week thesis-broken window; per TRADE-LOG.md's 8/23 note the check fires at the next screen refresh (8/28), not mid-week — no forced exit today.
+
+### Data-quality check — Gemini truncation bug appears resolved this session (first clean report in 13+ sessions)
+The consolidated Gemini Deep Research call completed (exit 0) and the captured output is a **coherent, complete report from its opening header through its closing Strategic Directives and sources list** — no mid-document start, no missing sections. All four requested points are addressed, though not under explicit numbered headers: market catalysts/VIX are covered in "Top Market-Moving Catalysts" and the Income Allocation section, held-position thesis checks are covered per-ticker, and the full watchlist sweep plus the 5-day satellite catalyst calendar are both present and explicit. Treating this session's output as reliable and using it directly — flagging the apparent resolution of the long-standing `extract_report()` truncation bug for tracking; will confirm over the next few sessions before declaring it fixed for good.
+
+### Market Context
+- **S&P 500 / VIX:** S&P 500 +0.11%, DJIA +0.54%, notable divergence with Nasdaq 100 lagging. VIX 15.85 (subdued, no systemic stress signal).
+- **Top catalyst — structural sector rotation, not macro data:** Capital is aggressively rotating out of semiconductor/AI-hardware infrastructure names and into beaten-down software/recurring-revenue names. Options market confirms: SMH (semis ETF) 30-day IV at 37; MU specifically pricing IV of 66 with a 1.2:1 call/put ratio — heavy uncertainty on where the hardware selloff bottoms. CRWD and CRM both report earnings shortly with options pricing ~8.5% expected moves, underscoring the stakes of the software-rotation thesis.
+- **Economic calendar:** Aug 26 PCE/core PCE + Q2 GDP second estimate; Fed Chair Warsh's Jackson Hole keynote Aug 27-29 (both carried forward from prior sessions, not independently re-verified today).
+
+### Held-Position Thesis Check
+- **BAX (core, -3.52% unrealized) — NEW, real, action-relevant:** Baxter issued a **voluntary recall of one lot of cefazolin in dextrose injection** (Lot LD175708, exp. Feb 2027) after particulate cardboard was found inside IV infusion bags distributed nationwide Mar-Jun 2025. Baxter's own FDA communication describes a "reasonable probability" of vessel blockage, immune activation, and organ dysfunction if a contaminated bag were used; Baxter states it has received **no adverse clinical event reports** to date. Single-lot scope makes the direct financial impact immaterial, but this lands on a company still rehabilitating investor trust after the fatal Novu IQ infusion-pump failures (79 injuries, 2 deaths) earlier this year — Gemini's assessment: thesis **not fundamentally broken**, but "severely stressed," recommending stop-tightening to protect the multiple-expansion gains earned over the past three months rather than an outright exit. Not a hard-cut breach (-3.52% vs. -7%) and not one of the three explicit urgent-notification triggers (position not below hard-cut, no satellite catalyst involved, not geopolitical) — logged here for market-open's attention rather than an interrupt-worthy email. Combined with BAX's second consecutive week off the core watchlist (Friday 8/28 refresh decides the thesis-broken exit), this is now two independent reasons to scrutinize BAX closely this week.
+- **MNKD (satellite, +4.00% unrealized):** No thesis-breaking news. Confirmed **no catalyst inside the 5-trading-day window** (Aug 26-Sep 2) — next visible events are institutional healthcare-conference presentations Sept 4 (Wells Fargo), Sept 6 (Morgan Stanley), Sept 10 (H.C. Wainwright), all after the window. Pipeline (Nintedanib DPI Phase 1b, FUROSCIX ReadyFlow COGS reduction) and balance sheet (Blackstone $500M non-dilutive facility) both intact.
+- **RIGL (satellite, +11.14% unrealized):** No material overnight news found across clinical/regulatory/financial sources. Thesis fully intact. No catalyst inside the 5-day window.
+- **EDGX, SGOV, SPHY (income):** No idiosyncratic news. VIX subdued (15.85), no credit-market stress — thesis intact for all three fixed-stop income holdings.
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-08-21)
+Overnight-news context only — nothing here is pre-approved; the full momentum/FCF/rating gate still runs fresh at market-open.
+- **XYZ:** Strong Q2 beat (EPS $1.02 vs. $0.48 est., rev +9.3% to $6.62B), FY26 EPS guide $4.02. Neighborhoods ecosystem scaling (~$1B annualized GPV). Routine 10b5-1 insider sales offset by much larger institutional buying (BlackRock +$621M stake). Thesis intact/strengthening.
+- **ABNB:** Q2 rev +17% to $3.6B, GBV +16% to $27.2B, EBITDA margin 35%, FY26 guidance raised to "at least mid-teens" growth. AI-native platform overhaul cited as structural driver. Thesis intact/strengthening.
+- **DASH:** Q2 rev +35.6% to $4.45B (beat), EPS $0.46 (narrow miss on reinvestment spend). Forward EPS growth guided +77%. Thesis intact.
+- **MU:** Fundamentals remain exceptional (record Q3 revenue $13.64B, FY guide raised to $18.3-19.1B, HBM sold out into 2027, ~$100B in new take-or-pay contracts) but squarely in the eye of today's semis-rotation selloff — high volatility (66 IV) expected, not a fundamentals-driven thesis break.
+- **ANET:** Record quarterly revenue (>$3B), guidance raised on hyperscaler AI-cluster demand; fundamentally pristine but exposed to the same rotation pressuring MU.
+- **ZBRA:** Q2 net sales +20.4%, EPS $6.35 (beat), FY guidance raised. Thesis intact/strengthening.
+- **VLO / MPC / PSX:** Crack-spread compression and seasonal-maintenance headwinds flagged across all three refiners (94-99% Q4 utilization already near-maxed); valuations stretched. Watch item, not a thesis break.
+- **DELL, MRVL, HPE, PANW, NTAP, EXPE, IQV, WDAY, VEEV, BBY, TGT, APA, BKNG:** No material overnight news; DELL/MRVL/HPE/NTAP flagged as exposed to today's hardware-rotation headwind, PANW/WDAY/VEEV flagged as likely beneficiaries of the rotation into software (a potential opportunity if today's momentum recheck at market-open still clears the gate), EXPE/BKNG correlated positively to ABNB's strong quarter.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-08-21)
+- **MNKD, RIGL** (held) — both thesis-intact per above; already at 2/4 satellite slots.
+- **CGEM, SHIP** — not held. No material overnight news found for either.
+- **TWIN** — not held. Already reported its primary near-term catalyst (Q4/FY earnings, 8/20) — nothing further inside the window.
+- **Definitive 5-day catalyst confirmation (explicit in this session's Gemini report):** none of MNKD, RIGL, CGEM, TWIN, or SHIP has a documented regulatory/clinical/corporate catalyst date inside the Aug 26-Sep 2 window. No gap-risk entry/exit action required on any satellite name today.
+
+### Risk Factors
+- **BAX recall (new today)** — see Held-Position Thesis Check. Not a hard-cut breach, but a second, independent reason (alongside BAX's second week off the core watchlist) to watch this position closely; market-open should consider whether stop-tightening is warranted given it's not yet in gain (tightening schedule only applies above +15%).
+- BAX's second consecutive week off the core watchlist — Friday 8/28's screen refresh is the scheduled decision point for the thesis-broken exit, not today.
+- Structural sector rotation out of AI-hardware/semis (heavily represented on the core watchlist: DELL, MRVL, HPE, MU, NTAP, ANET) into software — elevated volatility expected across that cluster today (MU 66 IV), independent of fundamentals.
+- CRWD/CRM earnings this week (options pricing ~8.5% expected moves) could set sentiment for the broader software names on the watchlist (PANW, WDAY, VEEV).
+- No held position at/beyond its sleeve hard-cut; no satellite catalyst inside the gap-risk window requiring forced action.
+
+### Decision
+HOLD — no held position at/beyond its hard-cut, no satellite binary catalyst inside the gap-risk window, cash at/above the 20% floor. Nothing here is pre-approved; core/satellite entries still require the full momentum/FCF/catalyst gate to be re-run fresh at market-open per TRADING-STRATEGY.md. Watch items for today: BAX's new recall headline (real but immaterial-so-far, watch for stop-tightening at market-open), BAX's countdown to Friday's watchlist-refresh thesis-broken decision, and today's semis-to-software sector rotation as a possible tailwind for PANW/WDAY/VEEV if they still clear the momentum gate fresh this morning.
