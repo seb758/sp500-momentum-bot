@@ -1704,3 +1704,53 @@ Mechanics: canceled the standing 166-share 5% trailing stop (e7bbf45f...) ahead 
 Shares: 115 | Entry: $83.31 | Stop: 10% trailing GTC, trigger $75.033 (hwm $83.37) | Target: n/a (no firm analyst PT tied to this entry) | R:R: n/a
 Thesis: Core watchlist momentum name, Week of 2026-08-21 screen rank 22 of 22 (last cut-line name; 3M rel. return +10.1% vs SPY at Friday's refresh), FCF positive/accelerating (TTM FCF +172% YoY), gross profit +25%, Cash App scaling, Moderate/Strong Buy analyst consensus (minor 3.8% Strong Sell). Pre-market research flagged today's structural sector rotation out of AI-hardware/semis into software/recurring-revenue names, plus a fresh Q2 beat (EPS $1.02 vs. $0.48 est., rev +9.3% to $6.62B, FY26 EPS guide $4.02, Neighborhoods GPV ~$1B annualized, BlackRock +$621M institutional buying offsetting routine insider 10b5-1 sales) — thesis intact/strengthening. Momentum re-verified fresh at market-open via Alpaca bars: above both 50d ($78.97) and 200d ($68.07) MA, 3M rel. return +13.8pp and 6M rel. return +48.8pp vs SPY, both stronger than Friday's screen. Live spread check: XYZ was the only one of 7 candidate names checked (PANW, WDAY, VEEV, XYZ, ABNB, DASH, ZBRA — the software-rotation beneficiaries and earnings-beat names flagged in pre-market research) with a stable, tight spread (~0.5%, ap/bp $83.50/$83.05 held flat across 3 polls ~40s apart); the other 6 all showed wide, static 5-13% spreads (PANW ~5.2%, WDAY ~5.1%, VEEV ~10.7%, ABNB ~5.5%, DASH ~9.1%, ZBRA ~12.8%), same illiquid-opening-quote condition documented 8/24/8/25 — skipped per STEP 2. CGEM and SHIP (unheld satellite candidates) also checked and skipped on the same wide-spread grounds (~16% and ~28% respectively). Order filled 2026-08-26T13:37:38Z, immediately after the SGOV sweep above.
 Gate: core positions after fill 2/6 (BAX, XYZ), core trades this week 1/6 (week of Aug 24), cost $9,580.65 = 9.99% of equity ($95,849.11 post-fill) — under the 20% per-position cap. Cash floor pre-checked and funded via the SGOV sweep above; post-trade cash confirmed $19,431.02 (20.27% of equity) via `alpaca.sh account` — at/above the 20% floor throughout, no breach.
+
+## Aug 26 — 3pm Snapshot (Day 35, Wednesday)
+**Portfolio:** $96,036.04 | **Cash:** $19,431.02 (20.23%) | **Day P&L:** +$129.39 (+0.13%) | **Phase P&L:** -$3,963.96 (-3.96%)
+**Core exposure:** $19,129.68 (19.92% of equity) | **Satellite exposure:** $10,318.97 (10.74% of equity) | **Income exposure:** $47,156.37 (49.10% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| BAX | core | 356 | $27.27 | $26.66 | +1.41% | -$217.16 (-2.24%) | 10% trailing ($24.705) |
+| XYZ | core | 115 | $83.31 | $83.815 | +1.32% | +$58.08 (+0.61%) | 10% trailing ($75.438) |
+| MNKD | satellite | 1215 | $4.00 | $4.115 | -1.08% | +$139.73 (+2.88%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $46.66 | -0.19% | +$549.48 (+11.52%) | 15% trailing ($40.341) |
+| EDGX | income | 746 | $26.78 | $26.88 | +0.12% | +$74.60 (+0.37%) | 5% trailing ($25.9825) |
+| SGOV | income | 70.740 | $100.622082 | $100.6577 | +0.02% | +$2.52 (+0.04%) | 5% trailing ($95.627, 70 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.345 | -0.11% | -$12.84 (-0.06%) | 5% trailing ($22.2205) |
+
+**Notes:** Only trade today: 9:30am BUY XYZ (core), 115 sh @ $83.31, funded via the
+standard SGOV pre-trade sweep (sold 96 sh, later reversed at market-open on 8/25 for
+an aborted DELL buy — see 8/25/8/26 entries above; the current 70.740468683-share
+SGOV position reflects yesterday's baseline minus today's 96-share sweep for XYZ).
+No "### Approved Trades (verified)" section appeared in today's RESEARCH-LOG at any
+window (pre-market, 9:30am, 11am, 3pm) — the XYZ buy was verified and logged directly
+in the 9:30am note rather than staged as a list, so all other windows stayed HOLD on
+new entries. This week (Aug 24 start) closes at core 1/6, satellite 0/4 new trades —
+valid per the Patience Rule on the satellite side. Risk sweep (3pm): no position
+at/beyond its sleeve hard-cut (BAX -2.24% vs. -7% core cut; XYZ +0.61%; MNKD +2.88%,
+RIGL +11.52%, both vs. -15% satellite cut); all 7 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing (SGOV's
+0.740468683-sh fractional remainder stays unstopped, same immaterial ~$75 dust
+flagged every prior sweep, not a new gap). No satellite catalyst inside the 1-2
+trading-day gap-risk window for MNKD or RIGL (both confirmed catalyst-free through
+Sep 2 per pre-market research). Thesis check: BAX's cefazolin recall (new today, see
+pre-market note) remains "stressed but not broken" per Gemini's read; BAX also sits a
+2nd consecutive week off the core watchlist — Friday 8/28's screen refresh is the
+scheduled decision point for the thesis-broken exit, not today. XYZ (new position) no
+adverse news since entry. MNKD/RIGL thesis intact, nothing new since 11am. No closes.
+No stop tightening this window — BAX/XYZ below the core +15% threshold, MNKD/RIGL
+below the satellite +25% threshold; RIGL's stop remains at its previously-ratcheted
+level (hwm $47.46, stop $40.341). No stop moved down. 2-strike sub-sector tracker
+unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.23%, at/above the 20%
+floor, no sweep needed. Risky positions closed today: none. Day P&L (+0.13%) driven
+mainly by BAX/XYZ's late-session bounce (both +1.3-1.4% intraday) offsetting modest
+MNKD/RIGL softness. Phase P&L now -3.96% since Day 0 ($100,000 -> $96,036.04). Core
+exposure jumped to 19.92% (2 of 6 slots: BAX, XYZ) from ~9.8% yesterday, still well
+under the 85% target but meaningfully improved off today's XYZ entry. Tomorrow:
+Friday 8/28's weekly-review/screen-refresh is the top open item — decides BAX's
+two-week thesis-broken status and continues building out core exposure toward its
+85% target; also carrying forward the wide-opening-spread pattern (binding
+constraint on core deployment more often than the fundamentals gate) and the
+standing note that the Gemini `extract_report()` truncation bug looked resolved this
+session (first clean report in 13+ sessions) but needs a few more sessions to confirm.
