@@ -1769,3 +1769,44 @@ buy-side gate (momentum/FCF/catalyst not even evaluated — skipped at the sprea
 check per STEP 2). Held positions (BAX, XYZ core; MNKD, RIGL satellite) unaffected —
 no existing position needed a gate check. This week (Aug 24 start) stays at core
 1/6, satellite 0/4 new trades — valid per the Patience Rule.
+
+## Aug 27 — 3pm Snapshot (Day 36, Thursday)
+**Portfolio:** $95,976.78 | **Cash:** $19,430.79 (20.25%) | **Day P&L:** -$59.26 (-0.06%) | **Phase P&L:** -$4,023.22 (-4.02%)
+**Core exposure:** $19,033.87 (19.83% of equity) | **Satellite exposure:** $10,282.91 (10.72% of equity) | **Income exposure:** $47,229.21 (49.21% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| BAX | core | 356 | $27.27 | $25.895 | -2.28% | -$489.50 (-5.04%) | 10% trailing ($24.705) |
+| XYZ | core | 115 | $83.31 | $85.35 | +2.71% | +$234.60 (+2.45%) | 10% trailing ($78.228) |
+| MNKD | satellite | 1215 | $4.00 | $4.075 | -0.37% | +$91.13 (+1.88%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $46.77 | +0.62% | +$562.02 (+11.78%) | 15% trailing ($40.341) |
+| EDGX | income | 746 | $26.78 | $26.965 | +0.26% | +$138.01 (+0.69%) | 5% trailing ($25.9825) |
+| SGOV | income | 70.740 | $100.622082 | $100.67 | +0.02% | +$1.41 (+0.02%) | 5% trailing ($95.6365, 70 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.355 | -0.06% | -$4.28 (-0.02%) | 5% trailing ($22.23) |
+
+**Notes:** No approved-trades list appeared in today's RESEARCH-LOG at any window
+(pre-market HOLD, 9:30am/11am both skipped on wide/flickering opening-auction
+spreads) — no buys placed either sleeve this window. This week (Aug 24 start)
+closes at core 1/6 (XYZ, 8/26), satellite 0/4 new trades — valid per the Patience
+Rule. Risk sweep (3pm): no position at/beyond its sleeve hard-cut (BAX -5.04% vs.
+-7% core cut; XYZ +2.45%; MNKD +1.88%, RIGL +11.78%, both vs. -15% satellite cut);
+all 7 open positions confirmed via `alpaca.sh positions`/`orders` carrying live GTC
+trailing stops, none missing (SGOV's 0.740468683-sh fractional remainder stays
+unstopped, same immaterial ~$75 dust flagged every prior sweep, not a new gap). No
+satellite catalyst inside the 1-2 trading-day gap-risk window for MNKD or RIGL — the
+pre-market ESC Congress claim was independently checked and rejected as unconfirmed;
+both catalysts remain resolved (MNKD FUROSCIX approved 7/24, RIGL VEPPANU launch
+resolved 8/13). Thesis check: BAX's cefazolin recall stays "stressed but not broken";
+BAX sits a 2nd consecutive week off the core watchlist — Friday 8/28's screen refresh
+is the scheduled decision point, not today. XYZ/MNKD/RIGL thesis intact, nothing new
+since 11am. No closes. No stop tightening this window — XYZ below the core +15%
+threshold, MNKD/RIGL below the satellite +25% threshold. No stop moved down.
+2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+Cash 20.25%, at/above the 20% floor, no sweep needed. Risky positions closed today:
+none. Day P&L (-0.06%) essentially flat — BAX's cefazolin-recall-driven softness
+(-2.28% intraday) roughly offset by XYZ's continued strength (+2.71% intraday) and
+small satellite/income gains. Phase P&L now -4.02% since Day 0 ($100,000 ->
+$95,976.78). Core exposure 19.83% (2 of 6 slots: BAX, XYZ), still well under the 85%
+target. Tomorrow: Friday 8/28's weekly-review/screen-refresh is the top open item —
+decides BAX's two-week thesis-broken status and continues working toward the core
+exposure target; watch RIGL's approach toward its +25% satellite tighten threshold.
