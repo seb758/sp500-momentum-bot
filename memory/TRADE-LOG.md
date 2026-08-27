@@ -1754,3 +1754,18 @@ two-week thesis-broken status and continues building out core exposure toward it
 constraint on core deployment more often than the fundamentals gate) and the
 standing note that the Gemini `extract_report()` truncation bug looked resolved this
 session (first clean report in 13+ sessions) but needs a few more sessions to confirm.
+
+### 2026-08-27 — SKIP all candidates (market-open, no qualifying trades)
+No entry either sleeve. Pre-market's Decision was HOLD (no pre-approved list); at
+9:30am, live quotes were checked for 14 unheld core watchlist names (TGT, WDAY, ZBRA,
+VEEV, EXPE, IQV, ABNB, APA, ANET, BKNG, DASH, MPC, VLO, PSX) and 3 unheld satellite
+names (CGEM, TWIN, SHIP) — every one showed a wide bid/ask spread on first poll
+(core: roughly 4-14%; satellite: 29-38%). Re-polled the 3 tightest core names (APA,
+MPC, ANET) about a minute later: all three widened further (APA 0.15%->5.0%, MPC
+0.83%->5.1%, ANET 4.0%->8.8%), confirming flickering/unstable opening-auction
+liquidity rather than a momentary snapshot — the same condition documented 8/24
+(DELL/MRVL), 8/25 (DELL/MRVL), and 8/26 (6 of 7 candidates). None reached the
+buy-side gate (momentum/FCF/catalyst not even evaluated — skipped at the spread
+check per STEP 2). Held positions (BAX, XYZ core; MNKD, RIGL satellite) unaffected —
+no existing position needed a gate check. This week (Aug 24 start) stays at core
+1/6, satellite 0/4 new trades — valid per the Patience Rule.

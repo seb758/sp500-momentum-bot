@@ -3706,3 +3706,8 @@ Nothing here is pre-approved — the full momentum/FCF/rating gate still runs fr
 
 ### Decision
 HOLD — no held position broken or near its cut, no verified satellite binary catalyst inside the gap-risk window (the only candidate claim was independently checked and rejected as unconfirmed), cash at/above the 20% floor. Nothing here is pre-approved; core/satellite entries still require the full momentum/FCF/catalyst gate to be re-run fresh at market-open per TRADING-STRATEGY.md. Watch items for today: NVDA earnings' effect on the core AI-hardware cluster, PANW's technical breakdown ahead of any re-screen, and tomorrow's (8/28) weekly screen-refresh which decides BAX's two-week thesis-broken status.
+
+### 9:30 AM Session Note
+- Live re-validation clean: account equity $95,889.96, cash 20.27% (above the 20% floor); all 7 open positions (BAX, XYZ, MNKD, RIGL, EDGX, SGOV, SPHY) carry live GTC stops, none missing, none at/beyond their sleeve hard-cut (BAX -4.13%, XYZ +1.46%, MNKD +1.25%, RIGL +10.64%).
+- Checked live quotes on all 14 unheld core watchlist names and all 3 unheld satellite watchlist names — every one showed a wide and/or unstable spread on re-poll (see TRADE-LOG SKIP entry for detail). No trade placed either sleeve; buy-side gate never reached since the spread check (STEP 2) failed first.
+- Pattern worth flagging for Friday's (8/28) weekly review: this is now 4 consecutive sessions (8/24, 8/25, 8/26, 8/27) where wide/flickering opening-auction spreads — not fundamentals or momentum — are the binding constraint on new core deployment. Core remains at 2/6 positions (19.9% exposure vs. 85% target) for the same reason across the week.
