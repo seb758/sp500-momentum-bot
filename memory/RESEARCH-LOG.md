@@ -3655,3 +3655,54 @@ HOLD — no held position at/beyond its hard-cut, no satellite binary catalyst i
 - **No stop tightening.** Core tighten thresholds (+15%/+20%) not reached by BAX (loss) or XYZ (+0.61%). Satellite tighten thresholds (+25%/+40%) not reached by MNKD (+2.88%) or RIGL (+11.52%) — RIGL's stop remains at its previously-ratcheted level (hwm $47.46, stop $40.341), not a manual tighten. No stop moved down.
 - **Cash:** $19,431.02 / 20.23% of $96,036.04 equity, at/above the 20% floor — no sweep needed.
 - **Pattern flag carried to Friday's review:** the wide/static opening-spread condition (6 of 7 rotation-candidates skipped at 9:30 today) remains the binding constraint on core deployment more often than the fundamentals gate — worth investigating which venues/names are affected.
+
+## 2026-08-27 — Pre-market Research
+
+### Account
+- Equity: $96,006.01 | Cash: $19,430.79 (20.24%, at/above the 20% floor) | Buying power: $288,138.86 (margin-inflated 4x multiplier, no margin used or planned)
+- Core exposure: $19,125.05 (19.93%) — BAX $9,434.00 (-2.82% unrealized) / XYZ $9,691.05 (+1.15% unrealized) | Satellite exposure: $10,260.45 (10.69%) — MNKD $4,993.65 (+2.75% unrealized) / RIGL $5,266.80 (+10.42% unrealized) | Income exposure: $47,189.73 (49.15%) — EDGX $20,064.27 / SGOV $7,120.74 (70.740468683 sh, 70 sh stop-covered) / SPHY $20,004.72
+- All 7 open positions confirmed via `alpaca.sh positions`/`orders`, no auth errors: all carry live GTC trailing stops (BAX 10% $24.705 hwm $27.45; XYZ 10% $75.501 hwm $83.89; MNKD 15% $3.74 hwm $4.40; RIGL 15% $40.341 hwm $47.46; EDGX 5% $25.9825 hwm $27.35; SPHY 5% $22.2205 hwm $23.39; SGOV 5% $95.627 hwm $100.66 covering 70 of 70.740468683 sh — same immaterial ~$75 fractional dust flagged every prior sweep, not a new gap). None missing, none moved down.
+- No position at/beyond its sleeve hard-cut: BAX -2.82% vs. -7% core cut; XYZ +1.15%; MNKD +2.75%, RIGL +10.42%, both vs. -15% satellite cut.
+- This week (Aug 24 start): core 1/6 (XYZ, 8/26), satellite 0/4 new trades so far.
+- Watchlist: current "Week of 2026-08-21" (next refresh due tomorrow, Friday 8/28). BAX remains off the core list for a 2nd consecutive week — per the standing interpretation (TRADE-LOG.md 8/23 note), the two-week thesis-broken exit is decided at tomorrow's screen refresh, not mid-week — no forced exit today.
+
+### Data-quality check — partial truncation (section 1 missing) + suspect satellite catalyst claim
+The consolidated Gemini Deep Research call completed (exit 0) but the captured output **starts mid-document**, opening directly inside section 2 (retail-earnings commentary, Dollar General) with no S&P 500 futures/VIX section (section 1) ever appearing. Per the data-quality guard, no futures/VIX figure from Gemini is used; native WebSearch fallback was run for section 1 instead (see Market Context below). Sections 2-4 (retail context, held-ticker thesis checks, watchlist news) are otherwise coherent and used as-is.
+
+**Separately, a satellite-catalyst claim in Gemini's section 5 does not hold up and is being rejected, not carried forward:** the report asserts both MNKD and RIGL are "confirmed within the 5-day catalyst window" because the ESC (European Society of Cardiology) Congress 2026 opens in Munich tomorrow (Aug 28). The ESC Congress itself is real (confirmed via WebSearch), but neither company's presence there is documented. For RIGL specifically, the report's justification is generic boilerplate ("Rigel Medical... deploys Medical Science Liaisons... exactly like the ESC...") — WebSearch confirms Rigel Pharmaceuticals' actual 2026 conference calendar is ASCO (May, Chicago) and EHA2026 (June, Stockholm), both oncology/hematology congresses unrelated to cardiology, with no ESC presentation found anywhere. "Rigel Medical" (electrical-safety testing equipment) is a different, unrelated company from Rigel Pharmaceuticals (ticker RIGL) — this reads as the same kind of entity-conflation fabrication caught previously with SCPH/NVEE (8/07) and TENX/EYPT (8/21). For MNKD, WebSearch found the FDA-approved Furoscix ReadyFlow launch (end of August) and the real ESC Congress dates, but no specific, documented MNKD presentation or data readout at ESC — Gemini's language ("any real-world efficacy data... presented at ESC... directly impacts...") is speculative framing, not a confirmed event. Per the Pending-catalyst guard (TRADING-STRATEGY.md, added 08-21), this catalyst claim is treated as **unconfirmed and rejected** — MNKD and RIGL are **not** being treated as inside a binary gap-risk window today. Both positions' actual, previously-documented catalysts remain resolved (MNKD's FUROSCIX PDUFA approved 7/24, commercial launch is a gradual rollout not a discrete binary event; RIGL's VEPPANU commercial launch resolved 8/13) — unchanged from every prior session's assessment this week.
+
+### Market Context (WebSearch fallback for section 1)
+- **VIX:** ~15.21, down modestly day/day — subdued, no systemic-stress signal, consistent with the 15.85 level logged 8/25-8/26.
+- **S&P 500 futures:** a specific pre-market futures print was not found in fallback search results (recent search results skew toward intraday/prior-session data) — not fabricating a number here per the data-quality guard. General market commentary describes indices near recent levels awaiting today's NVDA earnings.
+- **Top catalyst — NVDA earnings today:** widely flagged (Gemini + WebSearch) as the dominant swing factor for the AI-hardware/semis cluster (DELL, MRVL, HPE, MU, NTAP, ANET all represented on the core watchlist) given massive YTD moves in the group (DELL +268%, MU +229%, MRVL +188%, HPE +130%, NTAP +81% YTD per Gemini's report).
+- **Retail earnings (Dollar Tree reported, beat massively on a one-time tariff-refund benefit; Dollar General reports today, consensus $2.00 EPS/$11.17B rev) and Best Buy (beat, $1.28 vs $1.23 EPS)** — context for the low-income-consumer/discount-retail read-through; none of these are on our watchlist, informational only.
+
+### Held-Position Thesis Check
+- **BAX (core, -2.82% unrealized):** No new adverse news since 8/26's cefazolin-recall flag (still "stressed, not broken" per that assessment). No thesis break today. Remains off the core watchlist for a 2nd consecutive week — tomorrow's (8/28) screen refresh is the decision point.
+- **XYZ (core, +1.15% unrealized):** No adverse overnight developments. Thesis intact.
+- **MNKD (satellite, +2.75% unrealized):** No thesis-breaking news. The only "new" item is the rejected ESC Congress catalyst claim above — treated as unconfirmed, not a real event. FUROSCIX ReadyFlow's end-of-August commercial launch remains the standing, already-approved catalyst (gradual rollout, not binary).
+- **RIGL (satellite, +10.42% unrealized):** No thesis-breaking news. Same rejected ESC Congress claim as above — not acted on. VEPPANU commercial launch (resolved 8/13) remains the standing thesis.
+- **EDGX, SGOV, SPHY (income):** No idiosyncratic news. Yield curve/credit backdrop stable (10Y ~4.64% per Gemini). Thesis intact for all three fixed-stop holdings.
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-08-21)
+Nothing here is pre-approved — the full momentum/FCF/rating gate still runs fresh at market-open.
+- **DELL, HPE, NTAP, MU, MRVL (AI-hardware/storage cluster):** Fundamentals remain strong per Gemini's report (DELL FY27 revenue guide raised to $165-169B; HPE Juniper-driven EPS trajectory to $3.00 by FY28; NTAP beat with raised guidance) but the whole cluster is highly exposed to today's NVDA earnings swing — a volatility, not fundamentals, watch item.
+- **PANW:** Gemini flags a bearish technical setup (daily "double top," broke $314.95 neckline support, downside target ~$302.95/$298.83) — a momentum/technical caution flag for market-open's live re-screen, not a fundamentals issue on its own.
+- **MPC, VLO, PSX:** Crack spreads adjusting to slightly lower crude on easing Middle East risk premium; no company-specific news.
+- **TGT:** Trading in sympathy with today's discount-retail earnings prints (Dollar Tree, Dollar General); no idiosyncratic news.
+- **WDAY, ZBRA, VEEV, EXPE, IQV, ABNB, APA, ANET, BKNG, DASH:** No idiosyncratic overnight catalysts or thesis-altering news found.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-08-21)
+- **MNKD, RIGL** (held) — thesis-intact per above; ESC Congress catalyst claim rejected as unconfirmed (see data-quality note); already at 2/4 satellite slots.
+- **CGEM, TWIN, SHIP** — not held. Gemini's report explicitly confirms no company-specific presentations or catalyst events for any of the three inside the 5-trading-day window (Aug 27-Sep 3) — consistent with prior weeks. Passive watch only.
+- No documented, verified binary catalyst inside the 5-trading-day window for any of MNKD, RIGL, CGEM, TWIN, or SHIP that would require entry/exit action today.
+
+### Risk Factors
+- NVDA earnings today — dominant swing factor for the core AI-hardware/semis cluster (DELL, MRVL, HPE, MU, NTAP, ANET), independent of each name's own fundamentals.
+- PANW technical breakdown (double-top pattern) — a caution flag for market-open's live momentum re-screen on this watchlist name.
+- Gemini data-quality: section 1 (futures/VIX) truncated, WebSearch fallback used; a fabricated/unconfirmed ESC Congress catalyst claim for MNKD/RIGL was identified and rejected — see data-quality note above. Both issues logged for the standing `extract_report()` truncation/accuracy tracking.
+- BAX's 2nd consecutive week off the core watchlist — tomorrow's (8/28) screen refresh is the decision point, not today.
+- No held position at/beyond its sleeve hard-cut; no verified satellite catalyst inside the gap-risk window requiring forced action.
+
+### Decision
+HOLD — no held position broken or near its cut, no verified satellite binary catalyst inside the gap-risk window (the only candidate claim was independently checked and rejected as unconfirmed), cash at/above the 20% floor. Nothing here is pre-approved; core/satellite entries still require the full momentum/FCF/catalyst gate to be re-run fresh at market-open per TRADING-STRATEGY.md. Watch items for today: NVDA earnings' effect on the core AI-hardware cluster, PANW's technical breakdown ahead of any re-screen, and tomorrow's (8/28) weekly screen-refresh which decides BAX's two-week thesis-broken status.
