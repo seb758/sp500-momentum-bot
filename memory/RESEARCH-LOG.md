@@ -3781,3 +3781,9 @@ Nothing here is pre-approved — the full momentum/FCF/rating gate still runs fr
 
 ### Decision
 HOLD — no held position broken or at its cut (BAX closest at -4.91% vs. -7%), no verified satellite binary catalyst inside the gap-risk window (MNKD's conference presentation doesn't meet the binary-event bar), cash at/above the 20% floor. Nothing here is pre-approved; core/satellite entries still require the full momentum/FCF/catalyst gate to be re-run fresh at market-open per TRADING-STRATEGY.md. Watch items for today: BAX's -4.91% unrealized position ahead of its -7% cut, today's (8/28) weekly screen-refresh deciding BAX's two-week thesis-broken status, MRVL's beat-and-raise print for the core re-screen, and MNKD's upcoming Wells Fargo conference date.
+
+### 9:30 AM Session Note
+- Traded: BUY APA (core), 121 sh @ $42.61, 10% trailing stop placed ($38.331). Full detail in TRADE-LOG.md.
+- Of 20 core/satellite candidates polled at open, APA was the only one with a genuinely stable, tight spread across 4 repeated polls (~0.16-0.26%) — HPE, MPC, and ABNB looked promising on a first poll but widened sharply (4-7%) on re-poll, same flickering-opening-liquidity pattern as every session this week. Re-polling before trusting a first-look tight spread keeps paying off.
+- Funding this buy required an SGOV sweep (cash was already right at the 20.23% floor); SGOV is now down to ~20.7 sh (~$2,088), well under its 50%-of-sleeve target — sized the APA position down (5.4% of equity vs. the recent ~10% pattern) to stay within available SGOV rather than breach the "never SPHY/EDGX for buy-funding" rule. Flagging for today's separate weekly-review Part C rebalance to true up the income sleeve.
+- BAX still off-watchlist 2nd week running and closest to its hard cut (-4.36% intraday vs. -7%) — today's weekly screen-refresh (run separately) is the scheduled thesis-broken decision point, not this window.
