@@ -894,3 +894,267 @@ reflects that mix: better outcomes and a real, actionable fix earned this
 week, set against a systemic scheduling failure that has now resisted two
 prior attempts to fix it and needs escalation beyond what any single
 session can do.
+
+---
+
+## Week ending 2026-08-28
+
+**Coverage note — this entry covers a single market week (2026-08-24 through
+2026-08-28).** Unlike the last three reviews, this refresh ran **on
+schedule** — the 08-21 review ran on time the prior Friday, so this is the
+first back-to-back on-time pair since 07-12/07-24 (the original 07-17,
+07-31, and 08-14 misses are the three-in-five-weeks pattern flagged in the
+last two reviews). Worth noting explicitly since the last review flagged
+this as needing "owner-level attention... not a fourth documented reminder"
+— whatever changed, this week's refresh landing on time is the first
+positive data point since that escalation.
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $95,787.38 (per week-ending-2026-08-21 review) |
+| Ending portfolio | $95,644.46 |
+| Week return | -$142.92 (-0.15%) |
+| S&P 500 week | +0.49% (7,674.37 -> 7,711.99, via Gemini Deep Research; note: last week's review cited a 7,678.72 close for 08-21 vs. this week's report citing 7,674.37 as the same date's starting level — a ~0.06% discrepancy between consecutive weeks' Gemini reports, flagged per the data-quality guard rather than silently picking one; direction and magnitude of this week's S&P advance are clear either way) |
+| Bot vs S&P | -0.64pp (bot underperformed) |
+| Core trades | 2 (W:0 / L:0 / open:2) |
+| Satellite trades | 0 (W:0 / L:0 / open:2; MNKD and RIGL both carried over, held throughout, no new entries/exits this period) |
+| Win rate | n/a (no closed trades) |
+| Best trade | n/a |
+| Worst trade | n/a |
+| Profit factor | n/a (no closed trades) |
+
+Income sleeve (SGOV/SPHY/EDGX) is not included in the trade/win-rate stats
+above — it's not momentum/catalyst-screened and isn't subject to the weekly
+trade caps. This period's income activity was a partial SGOV sweep (50 sh,
+08-28) to fund the APA buy, plus a same-day sweep/reversal round trip
+(08-25, DELL buy aborted on a spread-check failure, net cost $0.92) — no
+floor breaches this period, but SGOV is now materially depleted (~20.7 sh,
+~$2,088, vs. its 50%-of-sleeve target) and flagged for rebalancing.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| — | — | — | — | — | No trades closed this week |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| APA | core | $42.61 | $42.54 | -$8.47 (-0.16%) | 10% trailing, trigger $38.655 (hwm $42.95) |
+| BAX | core | $27.27 | $26.13 | -$405.84 (-4.18%) | 10% trailing, trigger $24.705 (hwm $27.45) |
+| XYZ | core | $83.31 | $83.57 | +$29.90 (+0.31%) | 10% trailing, trigger $78.228 (hwm $86.92) |
+| MNKD | satellite | $4.00 | $3.95 | -$60.75 (-1.25%) | 15% trailing, trigger $3.74 (hwm $4.40) |
+| RIGL | satellite | $41.84 | $46.48 | +$528.96 (+11.09%) | 15% trailing, trigger $40.341 (hwm $47.46) |
+| EDGX | income | $26.78 | $26.9676 | +$139.95 (+0.70%) | 5% trailing, trigger $25.9825 (hwm $27.35) |
+| SGOV | income | $100.65 | $100.6985 | +$1.01 (+0.05%) | 5% trailing, trigger $95.665 (hwm $100.70, 20 of 20.740468683 sh covered) |
+| SPHY | income | $23.36 | $23.33 | -$25.68 (-0.13%) | 5% trailing, trigger $22.23 (hwm $23.40) |
+
+All 8 open positions confirmed carrying live GTC trailing stop orders via
+`alpaca.sh orders open`, none missing. Week-end exposure (equity
+$95,644.46): core $24,060.17 (25.16%), satellite $10,097.97 (10.56%),
+income $42,176.84 (44.09%), cash $19,309.48 (20.19%, above the 20% floor).
+
+### Watchlist Refresh
+- **Core: 24 names (was 22, +2 net).** Full ~503-name universe re-screened
+  via fresh Alpaca bars (a single long-running scan script rather than
+  per-ticker calls). FMP 402'd on cashflow/growth/rating for 54 of the
+  59-name shortlist — only MRNA, TGT, PYPL, HOOD, PLTR returned usable data;
+  the rest came from Gemini Deep Research, batched ~9 tickers/query, run in
+  parallel. New this week: PANW, VEEV, ZBRA, IQV, EXPE, TGT, PYPL, STT,
+  HOOD, PLTR, ADP, RVTY, INCY (13 names either newly clearing the gate or
+  promoted off last week's alternates bench). Retained: DELL, MRVL, HPE,
+  CRWD, CRL, NTAP, MPC, VLO, ANET, XYZ, CNC (11). Dropped from the prior
+  22-name list on this week's momentum re-rank: MU, WDAY, ABNB, BBY, BKNG,
+  DASH, PSX (fell below the cut or failed the live momentum gate this week
+  — MU in particular joined AMD/STX/WDC/AMAT/CSCO/LRCX/KLAC in failing on
+  price this week, a live sector rotation out of semis/AI-hardware). Six
+  names failed fundamentals despite passing momentum and are logged with
+  reasons in WATCHLIST.md (FTNT, HUM, PSX, WDAY, FDS, PAYX, HPQ, TECH, CDW,
+  ROP, EXPD, LH, WAT, A, TRV, ALL, GPC, MRNA, AMGN — 19 names, the fullest
+  "failed fundamentals" audit trail to date).
+- **BAX (held core position) drops off the list for a 2nd consecutive
+  week — this triggers the thesis-broken exit rule.** Flagging for the next
+  trading session to execute (this workflow doesn't place trades). **APA
+  (bought this week) also drops off the list** on a fresh Sell-lean finding
+  since the 08-21 screen that qualified it — week 1 off the list, no forced
+  exit yet, clock starts today. Full detail in WATCHLIST.md.
+- **Satellite: 8 names (was 5, +3 net).** Added **ZYME, DCO, PLPC** — all
+  independently confirmed via `fmp.sh profile` for market cap ($2.08B/
+  $2.66B/$1.98B, all in range) and correct sector (Healthcare/Biotechnology;
+  Industrials/Aerospace & Defense; Industrials/Electrical Equipment).
+  Retained MNKD, RIGL (both held), CGEM, TWIN, SHIP (all momentum-confirmed
+  clean again this week). No satellite names dropped this week (SVRA
+  remains excluded, still failing momentum for a 2nd straight refresh).
+- **Data-quality catch this week: HEES (H&E Equipment Services)** was
+  sourced by Gemini as a live small-cap industrials candidate but returns
+  **zero price bars from Alpaca** — no independent trading history exists,
+  consistent with a real-world acquisition (not an independent public
+  company any longer). Caught by the standing Alpaca price-history
+  cross-check before being added, the same mechanism that caught SCPH/NVEE
+  (8/07) and TENX/EYPT (8/21).
+- **A notable reversal: LITE (Lumentum) clears the core momentum gate for
+  the first time in six consecutive refreshes** (above both MAs, +8.9pp 3M /
+  +29.4pp 6M rel. return) and also clears fundamentals cleanly (FCF turned
+  positive, +222% QoQ; revenue +109% YoY on AI-datacenter optics demand) —
+  it lands in this week's sector-capped alternates, just below the 24-name
+  cut line, not excluded on the merits. Full detail in WATCHLIST.md's
+  "Candidates Queued" section.
+- **Gemini Deep Research truncated three separate times this session**
+  (the core-fundamentals batch covering CNC/BAX/APA/ADP/RVTY/INCY/GEN/FFIV/
+  GPC; the combined satellite-candidate query's biotech half; and the
+  fundamentals batch covering FDS/PAYX/STT/XYZ/HPQ/TECH, which was missing
+  DASH/CRM/ABNB). Separately, two Gemini interactions started returning
+  `400 invalid_request` on poll after running 25+ minutes with no prior
+  error — a new failure mode, not seen in prior weeks (previously
+  truncation and outright fabrication, not a mid-flight interaction
+  failure). Per the data-quality guard, nothing was taken from a truncated
+  or failed report — every one was resubmitted and re-verified before use,
+  costing roughly 35 extra minutes this session but keeping every
+  fundamentals figure traceable to a complete report.
+- **Core sector mix (24 names):** semis/AI-hardware cluster (DELL, MRVL,
+  HPE, NTAP) is 4/24 (16.7%), well under the ~40% cap and the lowest
+  concentration since the 08-07 refresh's 13.6% low — driven by a real,
+  live momentum reversal in MU/AMD/STX/WDC/AMAT/CSCO/LRCX/KLAC this week,
+  not a deliberate diversification choice. 10 distinct sector groupings
+  represented (AI-hardware/semis, cybersecurity/software, life
+  sciences/CRO, energy, other IT hardware/networking, consumer/travel,
+  financials/fintech, software/data, health care, business services) — the
+  most diversified core list to date. Full ticker-level detail, the failed-
+  fundamentals audit, and the alternates bench are all in WATCHLIST.md.
+
+### What Worked
+- **The weekly screen refresh ran on schedule for the second Friday
+  running** — after three misses in five weeks (7/17, 7/31, 8/14) prompted
+  the 08-21 review to flag this as needing owner-level attention beyond
+  another in-file reminder, this is the first confirming data point that
+  whatever changed is holding.
+- The data-quality guard caught its most subtle case yet: HEES returned
+  *no data at all* from Alpaca (not a truncated or fabricated report, just
+  a real ticker with zero trading history) — the standing independent
+  price-history cross-check flagged it correctly regardless of the failure
+  mode, the fourth consecutive week this exact mechanism has caught a bad
+  candidate before it reached the tradeable list (SCPH/NVEE 8/07, TENX/EYPT
+  8/21, HEES 8/28).
+- Spot-checking WebFetch's summarized S&P 500 list against a second source
+  paid off in the other direction this week: six tickers that looked like
+  plausible AI-hallucinated symbols (HONA, PSKY, Q, FDXF, MRSH, VMRK) were
+  all confirmed real via `fmp.sh profile` — the summarizer had not invented
+  anything this time, avoiding a false-positive exclusion of legitimate
+  constituents.
+- Live spread re-polling before trusting a first-look tight quote continued
+  paying off all week — XYZ (8/26) and APA (8/28) were both correctly
+  identified as the one genuinely liquid entry among 7-20 candidates checked
+  each session, while several names that looked tight on a first poll
+  widened sharply on re-poll.
+- The SGOV-first funding-sweep rule and the "never tap SPHY/EDGX" rule both
+  held under real pressure: when available SGOV couldn't fully fund a
+  standard ~10%-of-equity APA position on 08-28, the position was sized
+  down (5.4% of equity) to fit available SGOV rather than breach the
+  sweep-source rule.
+- Risk sweep discipline held all week: every session confirmed all open
+  positions carrying live GTC trailing stops, no position reached its hard
+  cut, no stop moved down, 2-strike sub-sector tracker correctly held
+  unchanged (biotech 1/2, industrials 0/2).
+
+### What Didn't Work
+- **The wide/flickering opening-auction spread pattern, now affecting core
+  names as often as satellite ones, blocked most of the week's would-be
+  core entries.** DELL/MRVL flickered 08-24 and 08-25; 6 of 7 candidates
+  failed on 08-26; all 17-20 candidates checked failed on 08-27 (a full
+  no-trade day); HPE/MPC/ABNB flickered again on 08-28. Only 2 of 5 trading
+  days produced a clean core fill — this is a continuation of a pattern
+  flagged in the 08-21 review, now persisting into a fourth-plus week
+  without a root cause identified.
+- **BAX's thesis-broken clock ran out this week** — held off-watchlist for
+  a second consecutive Friday, triggering the exit rule. The position was
+  correctly flagged and tracked all week (per the standing interpretation
+  that the exit decision belongs at the Friday refresh, not mid-week), but
+  it's a real example of a held position losing its qualifying thesis while
+  still open, and the sell itself has to wait for the next trading session.
+- **APA failed fresh fundamentals validation the same week it was bought** —
+  not a process error (it passed cleanly at both the 08-21 screen and at
+  market-open verification on 08-28), just a reminder that a name's
+  qualifying status can turn over within days on live data, and the
+  thesis-broken clock is now running on a position barely a day old.
+- **Gemini truncation escalated in variety, if not severity, this week** —
+  in addition to the now-familiar mid-document truncation, two interactions
+  began returning outright `400` errors on poll after running normally for
+  25+ minutes, a failure mode not seen in prior sessions. Every instance was
+  caught and resubmitted rather than used, but it added real session time
+  (~35 minutes) and is a new wrinkle on an already 15+-session-old
+  reliability problem.
+- **Core sleeve stayed well under its 85% target all week** (9.8%-25.2% of
+  equity) — a direct function of the spread-blocking pattern above plus the
+  watchlist having been nearly cleared out through most of the week, not a
+  deliberate defensive stance.
+
+### Key Lessons
+- A single clean Gemini report should not be read as "the truncation bug is
+  fixed" (the 08-26 daily note flagged exactly this trap after one clean
+  report) — this week's pattern confirms it: three separate truncations
+  plus two new-style `400` failures occurred in the same session that
+  otherwise ran cleanly for several other batches. Track Gemini reliability
+  as intermittent-but-unresolved, verified per-call, not something that
+  gets "fixed" and stays fixed.
+- The wide-spread pattern has now blocked or partially blocked core entries
+  in four of the last five weekly reviews' covered periods — worth
+  escalating from "watch for recurrence" to "standing infrastructure
+  question" (IEX-feed opening-auction data quality) the same way the
+  missed-Friday-refresh pattern was escalated in the last review, rather
+  than re-flagging it as a fresh observation each week.
+- A name can pass the watchlist screen one week and fail it the next on
+  real, live analyst-rating movement (APA's fresh Sell lean) — the
+  thesis-broken two-week rule exists precisely for this, and it is now
+  tracking two positions (BAX exiting, APA on watch) simultaneously for the
+  first time, a real test of whether the daily sessions correctly action
+  both without conflating them.
+- Independently verifying a WebFetch-summarized list against a structured
+  source (`fmp.sh profile`) is worth doing even when nothing looks obviously
+  wrong — this week's six unusual-looking tickers all turned out to be real,
+  which is itself useful information (the summarizer isn't reliably
+  hallucinating on this particular table), but the check only has value if
+  it's run every time, not just when a name looks suspicious.
+
+### Adjustments for Next Week
+- This session's screen refresh (see Watchlist Refresh above) resets
+  WATCHLIST.md to current data. **BAX must be exited at the next trading
+  session regardless of P&L** (thesis-broken, 2nd consecutive week off the
+  list) — this is the single most important action item from this review.
+- **Track APA's watchlist status at the 09-04 refresh closely** — if still
+  off the list, it triggers the same 2-week thesis-broken exit BAX is
+  hitting this week.
+- Rebalance the Income sleeve back toward its 50% SGOV / 25% SPHY / 25%
+  EDGX target — SGOV is currently ~20.7 sh (~$2,088) against a sleeve that
+  should be roughly $21,000 SGOV given ~$42,000 total income exposure.
+- Continue watching the wide/flickering-spread pattern into next week; if
+  it persists a second full week running at this severity, treat it as a
+  standing data-feed issue worth its own investigation (per Key Lessons
+  above) rather than a per-session anomaly.
+- No core risk-cap changes (sleeve %, stop widths, tighten thresholds,
+  sector-cap threshold) this week — this period's shortfalls were a
+  spread/liquidity access problem and two held-position thesis
+  developments (one triggering, one starting its clock), not evidence the
+  risk parameters themselves are miscalibrated.
+
+### Overall Grade: B-
+The single biggest process story this week is positive and overdue: the
+weekly refresh ran on time for a second straight Friday after three misses
+in five weeks forced an explicit escalation in the last review — the first
+real evidence that whatever was broken is fixed, or at least improving. The
+data-quality guard also had its best week yet, catching a genuinely novel
+failure mode (a candidate with zero price history, not a truncated or
+fabricated report) using the same standing mechanism, and a WebFetch
+spot-check this week confirmed six unusual tickers were real rather than
+hallucinated — the guard is working in both directions, not just excluding
+good names or including bad ones. Risk discipline was clean throughout (no
+hard-cut breaches, no missing stops, correct funding-sweep behavior under
+real capital constraints). Against that: the bot modestly underperformed
+the S&P (-0.64pp) on a week where a persistent wide-spread pattern blocked
+most attempted core entries, and — more consequentially — a held core
+position (BAX) hit its thesis-broken exit trigger this week, with a second
+(APA) starting the same clock the day after being bought. Neither is a
+process failure (both were caught and flagged exactly as the rules
+require), but they're real portfolio actions the next session has to
+execute correctly. Grade reflects a genuinely better process week than the
+last several, tempered by a benchmark-lagging result and two live
+thesis-broken situations that need clean follow-through.
