@@ -1819,3 +1819,54 @@ Mechanics: canceled the standing 70-share 5% trailing stop (58fc3281...) ahead o
 Shares: 121 | Entry: $42.61 | Stop: 10% trailing GTC, trigger $38.331 (hwm $42.59) | Target: n/a (no firm analyst PT tied to this entry) | R:R: n/a
 Thesis: Core watchlist momentum name, Week of 2026-08-21 screen rank 18 of 22 (3M rel. return +10.0% vs SPY at Friday's refresh), FCF positive/consistent ($1.2B H1 FCF), Hold rating (0 explicit Sell) — all per this week's Gemini-sourced watchlist data (FMP 402'd on cashflow/rating for this ticker again today, consistent with the standing free-tier gap). Pre-market research flagged Thursday's >1% WTI crude rally (Strait of Hormuz risk premium) as a tailwind for upstream names including APA. Momentum re-verified fresh at market-open via Alpaca bars (Jan 2026-Aug 2026 history): 3M rel. return +13.83pp and 6M rel. return +33.77pp vs SPY, both stronger than the 8/21 screen; above both 50-day ($36.64) and 200-day ($33.00) MA; no single-day move >20% in the lookback window (max 9.8%, 04-08), so no corporate-action artifact concern. Live spread check: APA was the only one of 11 core candidates polled (MRVL, DELL, HPE, MU, NTAP, ANET, PANW, MPC, VLO, PSX, APA, BKNG, TGT, BBY, ZBRA, WDAY, VEEV, EXPE, ABNB, DASH, IQV) with a stable, tight spread across 4 separate polls over ~1 minute (0.19% -> 0.26% -> 0.16% -> 0.16%); HPE, MPC, and ABNB all looked tight on a first poll but widened sharply on re-poll (HPE 0.23%->4.21%, MPC 0.91%->5.17%, ABNB 1.63%->7.46%), the same flickering-opening-liquidity pattern documented 8/24 through 8/27 — all other candidates were wide (5-14%) on first poll and not pursued further. CGEM/TWIN/SHIP (unheld satellite candidates) also checked and skipped on the same wide-spread grounds (28-36%).
 Gate: core positions after fill 3/6 (BAX, XYZ, APA), core trades this week 2/6 (week of Aug 24), cost $5,155.81 = 5.37% of equity ($96,079.20 post-fill) — under the 20% per-position cap; sized below the recent ~10%-of-equity pattern specifically to stay within available SGOV for the pre-trade cash-floor sweep (see SGOV entry above) rather than tap SPHY/EDGX or skip the floor check. Post-trade cash confirmed $19,309.48 (20.10% of equity) via `alpaca.sh account` — at/above the 20% floor.
+
+## Aug 28 — 3pm Snapshot (Day 37, Friday)
+**Portfolio:** $95,594.53 | **Cash:** $19,309.48 (20.20%) | **Day P&L:** -$382.25 (-0.40%) | **Phase P&L:** -$4,405.47 (-4.41%)
+**Core exposure:** $24,063.43 (25.17% of equity) | **Satellite exposure:** $10,075.94 (10.54% of equity) | **Income exposure:** $42,143.91 (44.08% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| APA | core | 121 | $42.61 | $42.48 | +0.24% | -$15.73 (-0.31%) | 10% trailing ($38.655) |
+| BAX | core | 356 | $27.27 | $26.145 | +0.83% | -$400.50 (-4.13%) | 10% trailing ($24.705) |
+| XYZ | core | 115 | $83.31 | $83.615 | -1.46% | +$35.08 (+0.37%) | 10% trailing ($78.228) |
+| MNKD | satellite | 1215 | $4.00 | $3.945 | -2.83% | -$66.83 (-1.38%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $46.34 | -1.11% | +$513.00 (+10.76%) | 15% trailing ($40.341) |
+| EDGX | income | 746 | $26.78 | $26.935 | -0.13% | +$115.63 (+0.58%) | 5% trailing ($25.9825) |
+| SGOV | income | 20.740 | $100.65 | $100.6999 | +0.04% | +$1.03 (+0.05%) | 5% trailing ($95.665, 20 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.3199 | -0.17% | -$34.33 (-0.17%) | 5% trailing ($22.23) |
+
+**Notes:** Only trade today: 9:30am BUY APA (core), 121 sh @ $42.61, funded via a
+partial SGOV sweep (50 sh) sized below the recent ~10%-of-equity pattern to stay
+within available SGOV rather than tap SPHY/EDGX. No "### Approved Trades (verified)"
+section appeared in today's RESEARCH-LOG at any window (pre-market, 9:30am, 11am,
+3pm) — the APA buy was verified and logged directly in the 9:30am note, so all other
+windows (including this one) stayed HOLD on new entries. This week (Aug 24 start)
+closes at core 2/6 (XYZ 8/26, APA 8/28), satellite 0/4 new trades — valid per the
+Patience Rule on the satellite side. Risk sweep (3pm): no position at/beyond its
+sleeve hard-cut (APA -0.31%, BAX -4.13% closest vs. -7% core cut, XYZ +0.37%; MNKD
+-1.38%, RIGL +10.76%, both vs. -15% satellite cut); all 8 open positions confirmed
+via `alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing
+(SGOV's 0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74.5
+dust flagged every prior sweep, not a new gap). No stop moved down. No satellite
+catalyst inside the 1-2 trading-day gap-risk window (MNKD's Wells Fargo conference is
+Sept 4, non-binary IR event; RIGL's VEPPANU launch resolved 8/13). Thesis check: fresh
+WebSearch on MNKD (today's biggest intraday mover, -2.83%) and BAX (closest to hard
+cut, 2nd week off-watchlist) both found nothing adverse — MNKD's private-placement/
+shelf items are already-known and routine, analysts still Buy-rated; BAX's new-CFO/
+credit-amendment/raised-guidance news is neutral-to-positive, cefazolin recall
+unchanged ("stressed but not broken"). BAX's two-week thesis-broken decision remains
+today's separate weekly-review screen-refresh (WATCHLIST.md still showed "Week of
+2026-08-21" as current as of this session — refresh had not yet run/persisted), not
+this 3pm window. No stop tightening this window — XYZ/APA below the core +15%
+threshold, RIGL below the satellite +25% threshold. 2-strike sub-sector tracker
+unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.20%, at/above the 20%
+floor, no sweep needed. Risky positions closed today: none. Day P&L (-0.40%) driven
+mainly by MNKD's intraday dip and BAX's continued softness, partly offset by XYZ/EDGX
+gains and RIGL holding most of its +10.76% unrealized gain. Phase P&L now -4.41%
+since Day 0 ($100,000 -> $95,594.53). Core exposure jumped to 25.17% (3 of 6 slots:
+APA, BAX, XYZ) from 19.83% Thursday on today's APA entry. Tomorrow: the weekly-review/
+screen-refresh (separate workflow) is the top open item still pending as of this
+session — it decides BAX's two-week thesis-broken status and should true up the
+depleted SGOV sub-allocation (~20.7 sh vs. its 50%-of-sleeve target) flagged since
+8/28's market-open entry; also watch RIGL's continued approach toward its +25%
+satellite tighten threshold and MNKD's Sept 4 Wells Fargo conference date.
