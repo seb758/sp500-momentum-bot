@@ -3800,3 +3800,112 @@ HOLD — no held position broken or at its cut (BAX closest at -4.91% vs. -7%), 
 - Thesis check: fresh WebSearch on MNKD (today's biggest intraday mover, -2.83%) found no adverse news — Q2 print, $50M private placement, and an 8/21 shelf registration are already-known/routine items, analysts (Cantor Fitzgerald, Truist) still Buy-rated; read as normal volatility, not a thesis break. BAX (closest to hard cut, off-watchlist 2nd consecutive week) also checked fresh: new CFO appointment (8/19), credit-agreement amendment (8/14), and raised FY guidance are neutral-to-positive, no new cefazolin-recall development found — "stressed but not broken" stands. BAX's two-week thesis-broken decision point remains today's separate weekly-review screen-refresh (WATCHLIST.md still shows "Week of 2026-08-21" as current as of this session — refresh had not yet run/persisted), not this 3pm window. No satellite catalyst inside the 1-2 trading-day gap-risk window (MNKD's Wells Fargo conference is Sept 4, still outer-edge/non-binary; RIGL's VEPPANU launch resolved 8/13). No stop tightening — RIGL below the +25% satellite threshold, XYZ/APA below the core +15% threshold. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.20%, at/above the 20% floor, no sweep needed.
 - Risky positions closed today: none.
 - Lesson: none new this window.
+
+## 2026-08-29 — Pre-market Research
+
+**Note: today is a Saturday — markets and futures are closed.** This scheduled
+pre-market workflow fired on a non-trading day (weekend). All figures below are
+carried from Friday 8/28's close; no fresh intraday price action exists to
+check. Decision defaults to HOLD regardless of findings — no trading session
+occurs today.
+
+### Account
+- Equity: $95,644.16 | Cash: $19,309.35 (20.19%) | Buying power: $287,135.46 | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $24,060.17 (25.16%: APA $5,147.34 / BAX $9,302.28 / XYZ $9,610.55) | Satellite exposure: $10,097.97 (10.56%: MNKD $4,799.25 / RIGL $5,298.72) | Income exposure: $42,176.67 (44.09%: EDGX $20,117.83 / SGOV $2,088.36 / SPHY $19,970.48)
+- Cash 20.19%, at/above the 20% floor (thin margin — watch at next touch).
+- All 8 open positions (APA, BAX, XYZ, MNKD, RIGL, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stop orders via `alpaca.sh orders` — none missing, no auth errors. Stops: APA 10% trail $38.655 (hwm $42.95); BAX 10% trail $24.705 (hwm $27.45); XYZ 10% trail $78.228 (hwm $86.92); MNKD 15% trail $3.74 (hwm $4.40); RIGL 15% trail $40.341 (hwm $47.46); EDGX 5% trail $25.9825 (hwm $27.35); SGOV 5% trail $95.665 (hwm $100.70, 20 of 20.740468683 sh covered — same immaterial ~$74.5 fractional-share dust flagged every prior sweep); SPHY 5% trail $22.23 (hwm $23.40).
+
+### Data-quality flag — Gemini truncated again
+The consolidated Gemini Deep Research call returned a report that opens
+mid-document (first visible section is a "Semiconductors: Margin
+Disappointment" discussion, not section 1). **Sections 1 (S&P futures/VIX)
+and 2 (top macro catalysts/econ releases) never arrived at all.** Section 3
+(held-ticker overnight thesis check) is partial: MRVL/PYPL/XYZ/HOOD/STT/TGT/
+EXPE/RVTY/CRL/IQV/CNC/INCY/MPC/VLO/ZBRA/ADP/PANW/CRWD got coverage, but
+APA/BAX/EDGX/SGOV/SPHY (5 of 8 held positions) got none. Section 4
+(satellite catalyst-window verification) came through complete and clean —
+used as-is below. Per the data-quality guard, nothing below is fabricated
+for the missing pieces; gaps are filled via targeted WebSearch (BAX, APA,
+general VIX/futures level) or left explicitly flagged as unconfirmed
+(EDGX/SGOV/SPHY — no held-position-specific check this session beyond the
+standing low-volatility profile of these income instruments).
+
+### Market Context
+- Weekend — no fresh futures/VIX print exists for "today." Last observed
+  levels (WebSearch, reflecting Thursday 8/27-into-Friday 8/28 trade): VIX
+  spot ~17 (S&P VIX futures ~17.05, Neutral technical signal); S&P 500 index
+  +0.72% on the referenced session, Nasdaq 100 +1.43% — consistent with the
+  already-logged Aug 27/28 snapshots in TRADE-LOG.md, not new information.
+- No name-specific catalyst or economic release applies to a closed market.
+  Standing forward items already on record: PANW reports fiscal Q4 results
+  Tuesday 9/1 (per Gemini's partial section 3) — a real, dated event for the
+  next trading session, not held currently but on the core watchlist.
+
+### Held-Position Thesis Check
+- **APA (core, -0.31% unrealized):** WebSearch found nothing new since the
+  8/6 Q2 beat and 8/10 Truist PT raise to $39 — no adverse development. No
+  action.
+- **BAX (core, -4.13% unrealized, 2nd consecutive week off the core
+  watchlist — thesis-broken exit already triggered per WATCHLIST.md's
+  8/28 refresh):** WebSearch found only a routine $0.01 special/token
+  dividend (ex-date 8/28) and a Synovis (Baxter subsidiary) distribution
+  deal with MediThinQ — both neutral. No new cefazolin-recall development.
+  **Carrying forward the standing flag: exit BAX at the next trading
+  session (Monday 9/1 market-open) regardless of P&L, per the two-week
+  thesis-broken rule** — this workflow does not place trades itself.
+- **XYZ (core, +0.37% unrealized):** No fresh check this session (Gemini's
+  partial section 3 covered it — "entirely divorced from PayPal's M&A
+  woes," nothing adverse). No action.
+- **MNKD (satellite, -1.38% unrealized):** Per Gemini's satellite table,
+  clear of any binary catalyst through 9/4 — Furoscix ReadyFlow rollout
+  ("end of August 2026") is a gradual commercial event, not a discrete
+  regulatory date; next earnings Nov 3-9. No action.
+- **RIGL (satellite, +10.76% unrealized, approaching the +25% satellite
+  tighten threshold):** No scheduled catalysts near-term per Gemini's
+  table. No action; continue watching the tighten threshold.
+- **EDGX / SGOV / SPHY (income):** No ticker-specific check surfaced this
+  session (data gap, not a clean pass) — flagged as unconfirmed rather than
+  assumed clear. These are low-volatility instruments (all three sat well
+  inside their 5% trailing stops as of Friday's close) — low urgency, but
+  worth a direct check at the next live session rather than carried as
+  "checked."
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-08-28)
+None sourced — non-trading day, decision is HOLD regardless. For the
+record, no adverse news surfaced this session for the covered subset
+(DELL, MRVL, PANW, HPE, CRWD, CRL, NTAP, VEEV, MPC, VLO, ZBRA, IQV, EXPE,
+ANET, TGT, PYPL, XYZ, STT, HOOD, PLTR, CNC, ADP, RVTY, INCY) beyond what
+Gemini's partial section 3 covered (MRVL's post-earnings margin-driven
+~10% overnight decline — not a held or currently-actionable name; PYPL's
+~12.5% decline on the collapsed Advent/Stripe buyout report — also not
+held). Neither changes today's HOLD.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-08-28)
+Per Gemini's satellite catalyst-verification table (complete, trusted):
+**no watchlist satellite ticker (MNKD, RIGL, CGEM, TWIN, SHIP, ZYME, DCO,
+PLPC) has a binary catalyst inside the next 5 trading days (8/31-9/4).**
+ZYME's Ziihera approval and CGEM's Phase 3 data are both already resolved;
+CGEM's next binary (NDA PDUFA) is 2027-02-27, far outside any near-term
+window. No new entries sourced or warranted — non-trading day regardless.
+
+### Risk Factors
+- Gemini Deep Research truncated again — sections 1-2 lost entirely, section
+  3 half-covered (APA/BAX/EDGX/SGOV/SPHY, 5 of 8 held positions, got no
+  Gemini-sourced check this session). Filled BAX/APA/VIX gaps via WebSearch;
+  EDGX/SGOV/SPHY remain an open gap for the next session to close.
+- BAX's thesis-broken exit is due at Monday 9/1 market-open — top actionable
+  item once trading resumes.
+- Cash at 20.19%, only 0.19pp above the 20% floor — watch for a floor breach
+  at the next Core/Satellite trade or on continued price drift (per
+  TRADING-STRATEGY.md's price-drift floor-breach rule).
+- RIGL (+10.76%) approaching its +25% satellite stop-tighten threshold —
+  not yet triggered.
+- No held position is near its hard-cut: APA -0.31% (cut -7%), BAX -4.13%
+  (cut -7%), XYZ +0.37%; MNKD -1.38% (cut -15%), RIGL +10.76%.
+
+### Decision
+HOLD — non-trading day (Saturday); no orders placed or planned. Top items
+for Monday 9/1 market-open: (1) execute BAX's mandatory thesis-broken exit,
+(2) re-verify EDGX/SGOV/SPHY thesis with live data given this session's
+coverage gap, (3) PANW reports fiscal Q4 after Tuesday 9/1 close — watch
+for elevated implied-vol pricing per Gemini's note, not currently held.
