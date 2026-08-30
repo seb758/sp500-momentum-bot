@@ -3909,3 +3909,197 @@ for Monday 9/1 market-open: (1) execute BAX's mandatory thesis-broken exit,
 (2) re-verify EDGX/SGOV/SPHY thesis with live data given this session's
 coverage gap, (3) PANW reports fiscal Q4 after Tuesday 9/1 close — watch
 for elevated implied-vol pricing per Gemini's note, not currently held.
+
+## 2026-08-30 — Pre-market Research
+
+**Note: today is a Sunday — markets and futures are closed.** This scheduled
+pre-market workflow fired on a non-trading day (weekend), same as yesterday.
+All figures below are carried from Friday 8/28's close; no fresh intraday
+price action exists to check. Decision defaults to HOLD regardless of
+findings — no trading session occurs today.
+
+### Account
+- Equity: $95,644.16 | Cash: $19,309.35 (20.19%) | Buying power: $287,135.46 (margin-inflated 4x multiplier, no margin used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $24,060.17 (25.16%) — APA $5,147.34 (-0.16% unrealized) / BAX $9,302.28 (-4.18% unrealized) / XYZ $9,610.55 (+0.31% unrealized) | Satellite exposure: $10,097.97 (10.56%) — MNKD $4,799.25 (-1.25% unrealized) / RIGL $5,298.72 (+11.09% unrealized) | Income exposure: $42,176.67 (44.09%) — EDGX $20,117.83 (+0.70% unrealized) / SGOV $2,088.36 (20.740468683 sh, 20 sh stop-covered) / SPHY $19,970.48 (-0.13% unrealized)
+- Cash 20.19%, at/above the 20% floor — thin margin (0.19pp), same flag carried from Saturday's session; no sweep needed today (weekend, no trade pending).
+- All 8 open positions (APA, BAX, XYZ, MNKD, RIGL, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stop orders via `alpaca.sh orders` — none missing, no auth errors. Stops: APA 10% trail $38.655 (hwm $42.95); BAX 10% trail $24.705 (hwm $27.45); XYZ 10% trail $78.228 (hwm $86.92); MNKD 15% trail $3.74 (hwm $4.40); RIGL 15% trail $40.341 (hwm $47.46); EDGX 5% trail $25.9825 (hwm $27.35); SGOV 5% trail $95.665 (hwm $100.70, 20 of 20.740468683 sh covered — same immaterial ~$74.6 fractional-share dust flagged every prior sweep); SPHY 5% trail $22.23 (hwm $23.40).
+
+### Data-quality check — Gemini report complete this session, but two findings needed independent verification
+The consolidated Gemini Deep Research call returned a report that opens
+cleanly on section 1 and covers all 4 requested sections in full — first
+fully complete, non-truncated report since 8/26/8/27, per the standing
+`extract_report()` truncation tracker. However, two claims were surprising
+enough (one touching a held position, one a live catalyst-proximity
+determination) to independently verify via WebSearch before trusting them,
+per the data-quality/pending-catalyst guards:
+
+1. **VIX framing overstated — checked and corrected.** Gemini characterized
+   Friday 8/28's close as showing "severe upward pressure" on the VIX in
+   off-hours pricing models, attributed to a hawkish Fed Chair Kevin Warsh
+   Jackson Hole speech. The Jackson Hole speech itself is real and
+   independently confirmed (federalreserve.gov transcript, CNBC, Washington
+   Post: Warsh warned inflation's "underlying trends" haven't improved,
+   market now pricing in higher September rate-hike odds). But the VIX
+   claim is **not supported by the data** — independently verified via
+   WebSearch: VIX closed Friday 8/28 at **14.43, down 0.55% day/day,
+   touching a year-to-date low** (CNBC headline: "Stock traders warm up to
+   Warsh as volatility index touches year-to-date low"). Treating the real
+   VIX print (14.43, calm/low) as the actual market read, not Gemini's
+   "severe upward pressure" framing — the hawkish Fed rhetoric is real, but
+   equity-vol markets are not (yet) pricing distress from it.
+2. **TWIN satellite catalyst — entity mix-up, disregarded.** Gemini's
+   satellite catalyst-proximity table describes TWIN's catalyst as a
+   "Horizon Europe Project 1st Year Completion" / "TwinShip Consortium"
+   maritime-digitalization research project, resolved February 2026. This
+   is **not our holding** — Twin Disc, Incorporated (the actual TWIN
+   watchlist name, industrials) has no connection to that EU consortium;
+   the name match ("Twin"/"TwinShip") appears to have caused a Gemini
+   entity mix-up. Independently re-verified Twin Disc's real catalyst via
+   WebSearch: Q4 FY2026 earnings reported 8/20 (record $114.4M revenue,
+   +18.3% YoY, EPS $0.64 vs. $0.48 est.) plus a 25% quarterly dividend
+   increase to $0.05/share — matches the catalyst already on record in
+   WATCHLIST.md, resolved 8/20, not the fabricated "TwinShip" story.
+   Gemini's specific table entry for TWIN is disregarded; the standing,
+   previously-verified catalyst stands. TWIN is not held — no action
+   impact, logged for the standing Gemini-accuracy tracker.
+
+One claim was surprising but **checked out as real**: Gemini's report
+states Block (XYZ, held core) was part of an Advent International/Stripe
+consortium that approached PayPal about a takeover starting April 2026,
+exited before the formal $60.50/share offer was submitted, and that the
+Stripe/Advent bid collapsed 8/28 (PayPal -11.68% to -16%, per source).
+Independently confirmed via WebSearch (Bloomberg, Forbes, tikr.com): real
+and accurate — Block did participate in and then exit the consortium
+before Stripe/Advent's ~$53B offer, which PayPal's board viewed as
+inadequate and which collapsed Friday. No fabrication; used as-is below.
+
+### Market Context
+- **VIX:** 14.43 (Friday 8/28 close, verified via WebSearch), down 0.55%
+  day/day, a year-to-date low — calm, not the "severe upward pressure"
+  Gemini's report initially claimed (see data-quality note above).
+- **S&P 500 futures / cash:** Friday 8/28 cash close: S&P 500 +0.3%, Dow
+  +0.2%, Nasdaq +0.3%. Nasdaq 100 futures were soft heading into the
+  weekend (~-0.1%) on cooling AI-trade enthusiasm and Marvell's post-earnings
+  selloff (see below). No live weekend futures print exists (markets
+  closed) beyond this.
+- **Macro:** Fed Chair Kevin Warsh's hawkish Jackson Hole speech (8/28,
+  confirmed real) — inflation's "underlying trends" not improving, rates
+  may need to go higher. Market-implied September rate-hike odds jumped
+  (Gemini cites 35.4% -> 55.0%, not independently re-verified to the exact
+  bp — treat as directional, not a precise figure). 2-year Treasury yield
+  +7bp to 4.30%, 10-year +1.7bp to 4.69% per Gemini (not independently
+  re-verified). Real, but as shown above, not (yet) translating into
+  elevated equity volatility.
+- **Geopolitical:** Iran-Oman Hormuz revenue-sharing deal (per Gemini,
+  not independently re-verified) reported to have steadied Brent Crude over
+  the weekend — relevant to the refining/energy cluster (MPC, VLO, APA held).
+
+### Held-Position Thesis Check
+- **APA (core, -0.16% unrealized):** No adverse weekend news found. Tethered
+  to crude stabilization dynamics per Gemini's Hormuz item (unverified
+  independently, informational only). No action.
+- **BAX (core, -4.18% unrealized, thesis-broken exit already due):** No new
+  adverse or positive news found this session. **Carrying forward the
+  standing flag from Saturday: BAX's two-week off-watchlist thesis-broken
+  exit is due at Monday 9/1 market-open, regardless of P&L** — this workflow
+  does not place trades itself.
+- **XYZ (core, +0.31% unrealized):** Thesis intact — Q2 gross-profit guide
+  raised to $12.33B, GenAI product rollout (Moneybot, Managerbot), Neighborhoods
+  local-commerce initiative all cited as real positives (per Gemini, broadly
+  consistent with XYZ's standing thesis, not independently re-verified
+  line-by-line). **New risk factor, verified real (see data-quality note):**
+  XYZ was part of the now-collapsed Advent/Stripe consortium pursuit of
+  PayPal — XYZ itself exited before the formal offer, so no direct M&A
+  exposure, but PYPL's -11.68%/-16% collapse this weekend elevates
+  sector-wide scrutiny of payments/fintech valuations. Not a thesis break,
+  not an action trigger — flagging as an elevated-beta watch item for
+  Monday's session, particularly if broad payments-sector selling emerges
+  at the open.
+- **MNKD (satellite, -1.25% unrealized):** Gemini's catalyst-proximity table
+  flags MNKD as "within 5 days" citing a Furoscix ReadyFlow **commercial
+  launch** "by end of August 2026." This is a different event from the
+  already-resolved FDA approval (7/24) — a commercial-availability/launch
+  date, not a named FDA/regulatory decision, contract award, or trial
+  readout. Per TRADING-STRATEGY.md's definition of a "known binary event
+  date" and the same treatment applied to MNKD's Wells Fargo conference
+  item on 8/28, this does not meet the bar for the 5% (vs. standard 7.5%)
+  position cap — logged as a watch item for possible commercial-launch-driven
+  volatility, not a binary gap-risk trigger. No resize action.
+- **RIGL (satellite, +11.09% unrealized):** No new thesis-breaking or
+  thesis-affirming news beyond what's already on record (VEPPANU
+  launch/Arvinas-Pfizer licensing, both resolved). Continues approaching
+  (not yet at) the +25% satellite tighten threshold — watch, no action.
+- **EDGX, SGOV, SPHY (income):** No idiosyncratic news. Gemini frames SGOV
+  as benefiting from higher front-end yields (Fed's hawkish repricing) and
+  SPHY as facing modest spread-widening headwinds from the same dynamic —
+  informational, no action; these are low-volatility instruments and none
+  sat near their 5% trailing stops as of Friday's close.
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-08-28)
+None sourced — non-trading day, decision is HOLD regardless. For the
+record, no thesis-breaking news surfaced this session for the covered
+watchlist names. Notable items, informational only:
+- **MRVL:** Real Q2 beat-and-raise (record $2.74B revenue +36.5% YoY, FY27
+  guide raised to ~$12B on a new Alphabet custom-chip deal) but stock fell
+  >7% in extended trading anyway — a "beat isn't enough" repricing in
+  high-multiple AI hardware, per Gemini, broadly consistent with the
+  post-earnings reaction already known from Saturday's session. Not held.
+- **ANET, DELL, HPE:** Sympathy strength cited (ANET +6.2% Friday on a
+  first-ever $3B quarter and raised FY guide to $12.6B; DELL/HPE +3.6%/+3.4%
+  sympathy). None held currently.
+- **CRWD, PANW:** No adverse news; cybersecurity framed as a non-discretionary
+  budget item holding up well. PANW reports fiscal Q4 after Tuesday 9/1
+  close (already flagged Saturday).
+- **PLTR, VEEV, ADP:** No adverse news; all cited with strong Q2 prints
+  already broadly consistent with their current watchlist standing.
+- **PYPL:** Not held, not on our watchlist as a live core name this week
+  regardless — the M&A-collapse selloff (-11.68% to -16%) is relevant only
+  as sector-risk context for XYZ (see above), not a trade idea.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-08-28)
+Per Gemini's satellite catalyst-proximity table (MNKD flag caveated above,
+TWIN entry disregarded per data-quality note): no other watchlist satellite
+ticker (CGEM, SHIP, ZYME, DCO, PLPC) has a binary catalyst inside the next
+5 trading days. CGEM's PDUFA remains Feb 27, 2027 (far out); ZYME's
+approval and PLPC's Q2 print are both already resolved; SHIP's dividend
+ex-date is ~3-4 weeks out (9/24-25); DCO's Investor Day is 9/17
+(informational, not binary). No new entries sourced or warranted —
+non-trading day regardless.
+
+### Risk Factors
+- BAX's mandatory thesis-broken exit is due at Monday 9/1 market-open — top
+  actionable item once trading resumes, carried forward from Saturday.
+- Cash at 20.19%, still only 0.19pp above the 20% floor — watch for a floor
+  breach at the next Core/Satellite trade or on continued price drift, per
+  TRADING-STRATEGY.md's price-drift floor-breach rule.
+- Real, verified hawkish Fed shift (Kevin Warsh's Jackson Hole speech,
+  higher rate-hike odds, yields up) — but not yet showing up as elevated
+  equity volatility (VIX at a YTD low) or in this session's held-position
+  P&L. Worth tracking Monday's open reaction as the first live test of
+  whether equities re-price the hawkish tone.
+- XYZ's sector (payments/fintech) faces elevated scrutiny after PYPL's
+  M&A-collapse selloff — verified real, not a thesis break for XYZ, but a
+  watch item given XYZ's own prior, brief involvement in that consortium.
+- RIGL (+11.09%) continues approaching its +25% satellite stop-tighten
+  threshold — not yet triggered.
+- MNKD's Furoscix ReadyFlow commercial-launch date ("end of August") is a
+  soft, non-binary watch item, not a gap-risk trigger — no cap resize.
+- No held position is near its hard-cut: APA -0.16% (cut -7%), BAX -4.18%
+  (cut -7%, exit already due for thesis-broken reasons, not the P&L cut),
+  XYZ +0.31%; MNKD -1.25% (cut -15%), RIGL +11.09%.
+- Gemini accuracy tracker: report was complete/non-truncated this session
+  (a positive data point), but contained one overstated macro claim (VIX)
+  and one clear entity mix-up (TWIN/"TwinShip") — both caught and corrected
+  via independent WebSearch before being trusted, consistent with the
+  standing practice of not taking Gemini's framing at face value on
+  surprising or load-bearing claims.
+
+### Decision
+HOLD — non-trading day (Sunday); no orders placed or planned. No held
+position broken or at its hard cut. Top items for Monday 9/1 market-open:
+(1) execute BAX's mandatory thesis-broken exit (carried forward from
+Saturday, now confirmed with no new information changing that call), (2)
+watch the market's live reaction to the confirmed hawkish Fed stance now
+that cash trading resumes, (3) PANW reports fiscal Q4 after Tuesday 9/1
+close, (4) re-verify EDGX/SGOV/SPHY thesis with live data (still an open
+gap from Saturday's partial Gemini coverage).
