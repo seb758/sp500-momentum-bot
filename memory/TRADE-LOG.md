@@ -1888,3 +1888,49 @@ Process note: doing the sweep-back before checking whether a same-session buy wa
 Shares: 180 | Entry: $52.690889 | Stop: 10% trailing GTC, trigger $47.43 (hwm $52.70) | Target: n/a (no firm analyst PT tied to this entry) | R:R: n/a
 Thesis: Core watchlist momentum name, Week of 2026-08-28 screen rank 4 of 24 (3M rel. return +40.2% vs SPY, FCF positive/improving — Q2 FCF $915M, +$1.8B YoY), Moderate Buy rating (9 SB, 2 B, 5 H, 0 Sell). Pre-market research (2026-08-31) found no adverse overnight news for HPE. Live spread check at market-open: HPE was the tightest/most stable of 29 core+satellite candidates polled across 4 rounds over ~2 minutes (1.22% -> 0.23% -> 0.71% -> 0.10%/0.23% on the final two polls), unlike DELL/MRVL/PANW/CRWD/CRL/NTAP/MPC/STT/INCY and others which all showed wide 5-13% spreads, and PLTR/PYPL which looked tight on a first poll but widened sharply on re-poll (PLTR 0.09%->6.38%; PYPL 0.30%->0.96%->3.20%) — same flickering-opening-liquidity pattern documented repeatedly 8/24 through 8/28. ANET and ZBRA also cleared the spread check with reasonable stability but only one core buy was made this session per the Patience Rule.
 Gate: core positions after fill 3/6 (APA, XYZ, HPE), core trades this week 1/6 (week of Aug 31 start), cost $9,484.36 = 9.94% of equity ($95,439.77 post-fill) — under the 20% per-position cap. Cash floor pre-checked and funded via the SGOV sale above; post-trade cash confirmed $19,129.47 (20.04% of equity) via `alpaca.sh account` — at/above the 20% floor.
+
+## Aug 31 — 3pm Snapshot (Day 40, Monday)
+**Portfolio:** $95,252.10 | **Cash:** $19,129.47 (20.09%) | **Day P&L:** -$342.43 (-0.36%) | **Phase P&L:** -$4,747.90 (-4.75%)
+**Core exposure:** $24,038.03 (25.24% of equity) | **Satellite exposure:** $10,036.04 (10.54% of equity) | **Income exposure:** $42,048.56 (44.15% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| APA | core | 121 | $42.61 | $42.83 | +0.68% | +$26.62 (+0.52%) | 10% trailing ($39.699) |
+| HPE | core | 180 | $52.690889 | $52.39 | +0.15% | -$54.16 (-0.57%) | 10% trailing ($47.79) |
+| XYZ | core | 115 | $83.31 | $81.96 | -1.93% | -$155.25 (-1.62%) | 10% trailing ($78.228) |
+| MNKD | satellite | 1215 | $4.00 | $3.945 | -0.13% | -$66.83 (-1.38%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $45.99 | -1.05% | +$473.10 (+9.92%) | 15% trailing ($40.341) |
+| EDGX | income | 746 | $26.78 | $26.79 | -0.66% | +$7.46 (+0.04%) | 5% trailing ($25.9825) |
+| SGOV | income | 20.740 | $100.690883 | $100.695 | +0.01% | +$0.09 (+0.00%) | 5% trailing ($95.665, 20 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.335 | +0.02% | -$21.40 (-0.11%) | 5% trailing ($22.23) |
+
+**Notes:** Two trades today, both this morning: 9:30am SELL BAX (core, thesis-broken
+exit, -$402.71/-4.15% realized, mandatory per the two-week off-watchlist rule) and
+9:30am BUY HPE (core, 180 sh @ $52.690889, funded via a same-session SGOV
+sweep-back/sweep-out round-trip). No "### Approved Trades (verified)" section
+appeared in today's RESEARCH-LOG at any window — both morning actions were
+verified/logged directly, so 11am and this 3pm window both stayed HOLD on new
+entries. This week (Aug 31 start) closes at core 1/6 (HPE 8/31), satellite 0/4 new
+trades — valid per the Patience Rule. Risk sweep (3pm): no position at/beyond its
+sleeve hard-cut (APA +0.52%, HPE -0.57%, XYZ -1.62%, all vs. -7% core cut; MNKD
+-1.38%, RIGL +9.92%, both vs. -15% satellite cut); all 8 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing (SGOV's
+0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74.5 dust
+flagged every prior sweep, not a new gap). No stop moved down. No satellite catalyst
+inside the 1-2 trading-day gap-risk window (MNKD's Wells Fargo conference is Sept 4,
+non-binary IR event 4 trading days out; RIGL's VEPPANU launch resolved 8/13). Thesis
+check: HPE/XYZ current on this week's (Aug 28) core watchlist; APA remains week-1-off
+-list, no forced exit until the 9/4 refresh — no new research run this window, nothing
+moved sharply enough since 11am (largest mover RIGL -1.05%) to warrant a fresh check.
+No stop tightening this window — RIGL below the +25% satellite threshold, APA/HPE/XYZ
+all below the core +15% threshold. 2-strike sub-sector tracker unchanged: biotech 1/2
+(OCUL 7/23), industrials 0/2. Cash 20.09%, at/above the 20% floor, no sweep needed.
+Risky positions closed today: none (BAX's exit was a scheduled thesis-broken exit,
+not a risk-sweep catch). Day P&L (-0.36%) driven mainly by XYZ's intraday softness
+(-1.93%) and EDGX's ex-dividend dip (-0.66%), partly offset by APA's oil-tailwind
+gain (+0.68%). Phase P&L now -4.75% since Day 0 ($100,000 -> $95,252.10). Core
+exposure 25.24% (3 of 6 slots: APA, HPE, XYZ), satellite steady at 10.54% (2 of 4
+slots: MNKD, RIGL). Tomorrow: watch APA's approach to the 9/4 two-week thesis-broken
+decision point; watch RIGL's continued approach toward its +25% satellite tighten
+threshold; income sleeve's SGOV sub-allocation (~20.7 sh vs. its 50%-of-sleeve
+target) remains depleted, still flagged for the next weekly-review Part C rebalance.
