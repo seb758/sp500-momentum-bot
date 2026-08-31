@@ -1870,3 +1870,21 @@ session — it decides BAX's two-week thesis-broken status and should true up th
 depleted SGOV sub-allocation (~20.7 sh vs. its 50%-of-sleeve target) flagged since
 8/28's market-open entry; also watch RIGL's continued approach toward its +25%
 satellite tighten threshold and MNKD's Sept 4 Wells Fargo conference date.
+
+### 2026-08-31 — SELL BAX (core) — thesis-broken exit
+Shares: 356 | Exit: $26.138792 | Realized P&L: -$402.71 (-4.15%) | Reason: thesis broken — BAX dropped off the core watchlist for a 2nd consecutive week (off since the 2026-08-21 refresh, confirmed still off at 2026-08-28's refresh) per TRADING-STRATEGY.md's mandatory two-week thesis-broken exit rule, executed regardless of P&L (-4.24% unrealized pre-sale, well clear of the -7% hard-cut). Cefazolin recall and analyst-rating deterioration (Hold with a ~15% Sell lean) cited across multiple weeks as the underlying watchlist-exclusion cause; today's pre-market research confirmed no new adverse news — the exit is rules-driven, not news-driven. Canceled the standing 10% trailing stop before selling.
+
+### 2026-08-31 — BUY SGOV (income) — cash-floor sweep-back after BAX sale
+Shares: 93 | Entry: $100.70 | Stop: 5% trailing GTC on the combined 113-share round-lot position (later replaced, see below) | Target: n/a | R:R: n/a
+Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
+Funding reason (income only): BAX's exit freed cash to $28,614.76 (29.96% of $95,491.97 equity) vs. the 20% floor (~$19,098.39) — swept 93 sh (~$9,365) into SGOV, leaving a ~$150 buffer above the floor.
+
+### 2026-08-31 — SELL SGOV (income) — cash-floor funding for HPE buy
+Shares: 93 | Exit: $100.69 | Realized P&L: -$0.93 (0.00%) | Reason: pre-trade cash-floor check ahead of the HPE buy below, per TRADING-STRATEGY.md's SGOV-first buy-funding sweep rule — reverses most of the sweep-back above within the same session, since the planned HPE entry would otherwise have dropped post-trade cash to ~10.2% of equity, well below the 20% floor.
+Mechanics: canceled the 113-share combined 5% trailing stop placed after the sweep-back above, sold 93 sh market/day, re-placed a fresh 5% trailing GTC stop on the remaining 20 whole shares (0.740468683-share fractional remainder stays unstopped, same immaterial ~$75 dust flagged every prior sweep).
+Process note: doing the sweep-back before checking whether a same-session buy was likely created an avoidable same-day SGOV round-trip (buy 93 sh @ $100.70, sell 93 sh @ $100.69, net -$0.93) — worth checking for a pending buy candidate before executing the post-sell sweep in a future session.
+
+### 2026-08-31 — BUY HPE (core)
+Shares: 180 | Entry: $52.690889 | Stop: 10% trailing GTC, trigger $47.43 (hwm $52.70) | Target: n/a (no firm analyst PT tied to this entry) | R:R: n/a
+Thesis: Core watchlist momentum name, Week of 2026-08-28 screen rank 4 of 24 (3M rel. return +40.2% vs SPY, FCF positive/improving — Q2 FCF $915M, +$1.8B YoY), Moderate Buy rating (9 SB, 2 B, 5 H, 0 Sell). Pre-market research (2026-08-31) found no adverse overnight news for HPE. Live spread check at market-open: HPE was the tightest/most stable of 29 core+satellite candidates polled across 4 rounds over ~2 minutes (1.22% -> 0.23% -> 0.71% -> 0.10%/0.23% on the final two polls), unlike DELL/MRVL/PANW/CRWD/CRL/NTAP/MPC/STT/INCY and others which all showed wide 5-13% spreads, and PLTR/PYPL which looked tight on a first poll but widened sharply on re-poll (PLTR 0.09%->6.38%; PYPL 0.30%->0.96%->3.20%) — same flickering-opening-liquidity pattern documented repeatedly 8/24 through 8/28. ANET and ZBRA also cleared the spread check with reasonable stability but only one core buy was made this session per the Patience Rule.
+Gate: core positions after fill 3/6 (APA, XYZ, HPE), core trades this week 1/6 (week of Aug 31 start), cost $9,484.36 = 9.94% of equity ($95,439.77 post-fill) — under the 20% per-position cap. Cash floor pre-checked and funded via the SGOV sale above; post-trade cash confirmed $19,129.47 (20.04% of equity) via `alpaca.sh account` — at/above the 20% floor.
