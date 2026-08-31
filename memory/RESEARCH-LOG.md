@@ -3857,6 +3857,12 @@ Nothing here is pre-approved — the full momentum/FCF/rating gate still runs fr
 ### Decision
 HOLD on new entries — no qualifying edge confirmed pre-market; nothing here is pre-approved, and full momentum/FCF/catalyst gates still run fresh at market-open per TRADING-STRATEGY.md. The one mandatory action item for today is **BAX's thesis-broken exit** (2nd consecutive week off the core watchlist), to be executed at market-open per the standing rule — not a "TRADE" decision under this workflow's own scope (research/idea generation only), but flagged prominently as the session's top priority.
 
+### 9:30 AM Session Note
+- Executed BAX's mandatory thesis-broken exit (356 sh @ $26.138792 avg, -$402.71/-4.15% realized) — 2nd consecutive week off the core watchlist, rules-driven per TRADING-STRATEGY.md, no new adverse news beyond what was already known.
+- Freed cash swept into SGOV (93 sh), then partially reversed (93 sh sold) same session to fund a fresh HPE buy — net same-day SGOV round-trip cost ~$0.93, an avoidable inefficiency from sweeping before checking for a pending buy candidate. Lesson for future sessions: check for a likely same-session buy before running the post-sell sweep-back, not just at close-out.
+- BUY HPE (core), 180 sh @ $52.690889, 10% trailing GTC stop placed. Live spread check across 29 core+satellite candidates found HPE the tightest/most stable (settled ~0.1-0.7%); ANET and ZBRA also cleared but only one core buy was taken per the Patience Rule. Core now 3/6 positions (APA, XYZ, HPE) after the BAX exit.
+- No satellite trades — no candidate had a documented binary catalyst inside the 5-day window per pre-market's confirmed finding; MNKD/RIGL held unchanged.
+
 ## 2026-08-29 — Pre-market Research
 
 **Note: today is a Saturday — markets and futures are closed.** This scheduled
