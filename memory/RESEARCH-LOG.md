@@ -3863,6 +3863,12 @@ HOLD on new entries — no qualifying edge confirmed pre-market; nothing here is
 - BUY HPE (core), 180 sh @ $52.690889, 10% trailing GTC stop placed. Live spread check across 29 core+satellite candidates found HPE the tightest/most stable (settled ~0.1-0.7%); ANET and ZBRA also cleared but only one core buy was taken per the Patience Rule. Core now 3/6 positions (APA, XYZ, HPE) after the BAX exit.
 - No satellite trades — no candidate had a documented binary catalyst inside the 5-day window per pre-market's confirmed finding; MNKD/RIGL held unchanged.
 
+### 11 AM Session Note
+- No trades. No "### Approved Trades (verified)" section exists anywhere in today's RESEARCH-LOG (market-open's BAX exit and HPE buy were both verified/logged directly, not staged as a list) — per STEP 3 the buy side stayed HOLD. This week (Aug 31 start) holds at core 1/6 (HPE 8/31), satellite 0/4 new trades — valid per the Patience Rule.
+- Risk sweep: no position at/beyond its sleeve hard-cut — APA +0.07%, HPE -0.66%, XYZ -0.56% (all vs. -7% core cut); MNKD -2.13%, RIGL +8.98% (both vs. -15% satellite cut). All 8 open positions confirmed via `alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing (SGOV's 0.740468683-sh fractional remainder stays unstopped, same immaterial ~$75 dust flagged every prior sweep). No stop tightening — core names all below the +15% threshold, RIGL below the +25% satellite threshold (continues approaching, watch). No stop moved down.
+- Thesis check: HPE and XYZ both current on this week's (Aug 28) core watchlist, no issue. APA is week-1-off-list (fresh deterioration flagged at Friday's refresh, Sell lean emerged) — not yet at the two-week exit trigger; re-check at the 09-04 refresh. MNKD/RIGL catalysts remain resolved, no binary event inside the 5-day window. Nothing moved sharply enough (largest intraday mover RIGL -1.90%) to warrant the optional Gemini check. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.09% ($19,129.47 of $95,217.72 equity), at/above the 20% floor, no sweep needed.
+- Lesson: none new this window; the 9:30am same-day SGOV round-trip lesson (check for a pending buy before sweeping back) stands as the session's open item.
+
 ## 2026-08-29 — Pre-market Research
 
 **Note: today is a Saturday — markets and futures are closed.** This scheduled
