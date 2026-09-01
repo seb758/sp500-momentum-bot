@@ -1934,3 +1934,57 @@ slots: MNKD, RIGL). Tomorrow: watch APA's approach to the 9/4 two-week thesis-br
 decision point; watch RIGL's continued approach toward its +25% satellite tighten
 threshold; income sleeve's SGOV sub-allocation (~20.7 sh vs. its 50%-of-sleeve
 target) remains depleted, still flagged for the next weekly-review Part C rebalance.
+
+## Sep 1 — 3pm Snapshot (Day 41, Tuesday)
+**Portfolio:** $94,647.00 | **Cash:** $19,128.98 (20.21%) | **Day P&L:** -$789.79 (-0.83%) | **Phase P&L:** -$5,353.00 (-5.35%)
+**Core exposure:** $23,521.17 (24.85% of equity) | **Satellite exposure:** $10,211.19 (10.79% of equity) | **Income exposure:** $41,785.66 (44.15% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| APA | core | 121 | $42.61 | $44.05 | +2.09% | +$174.24 (+3.38%) | 10% trailing ($39.9465) |
+| HPE | core | 180 | $52.690889 | $50.7908 | -2.77% | -$342.02 (-3.61%) | 10% trailing ($47.799) |
+| XYZ | core | 115 | $83.31 | $78.685 | -4.07% | -$531.88 (-5.55%) | 10% trailing ($78.228) |
+| MNKD | satellite | 1215 | $4.00 | $3.97 | -1.00% | -$36.45 (-0.75%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $47.26 | +2.34% | +$617.88 (+12.95%) | 15% trailing ($40.341) |
+| EDGX | income | 746 | $26.78 | $26.675 | -0.69% | -$78.33 (-0.39%) | 5% trailing ($25.9825) |
+| SGOV | income | 20.740 | $100.70 | $100.4099 | -0.28% | -$6.02 (-0.29%) | 5% trailing ($95.665, 20 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.135 | -0.92% | -$192.60 (-0.96%) | 5% trailing ($22.23) |
+
+**Notes:** No trades today. No "### Approved Trades (verified)" section
+appeared in today's RESEARCH-LOG at any window (pre-market, 9:30am, 11am,
+3pm) — Gemini truncation left the core watchlist's overnight-news sweep
+unconfirmed all session, so no new core or satellite candidate was sourced.
+This week (Aug 31 start) closes today's session at core 1/6 (HPE 8/31),
+satellite 0/4 new trades — valid per the Patience Rule. Risk sweep (3pm): no
+position at/beyond its sleeve hard-cut (APA +3.38%, HPE -3.61%, XYZ -5.55%,
+all vs. -7% core cut; MNKD -0.75%, RIGL +12.95%, both vs. -15% satellite
+cut); all 8 open positions confirmed via `alpaca.sh positions`/`orders`
+carrying live GTC trailing stops, none missing (SGOV's 0.740468683-sh
+fractional remainder stays unstopped, same immaterial ~$74 dust flagged
+every prior sweep, not a new gap). XYZ closed the session only ~0.6% above
+its trailing stop ($78.685 vs. $78.228) — the closest any position has come
+to triggering this week; a natural mechanism outcome, not a discretionary
+call, and no thesis break was found to justify an early exit ahead of it.
+No stop moved down. No satellite catalyst inside the 1-2 trading-day
+gap-risk window (MNKD's Wells Fargo conference is 9/4, non-binary IR event;
+RIGL's VEPPANU launch resolved 8/13). Thesis check: fresh WebSearch on XYZ
+(today's biggest core mover) and HPE (reports Q3 earnings tomorrow 9/2,
+4:30pm ET — timing now confirmed) both found no adverse company-specific
+news; today's broad weakness (XYZ, HPE, EDGX, SPHY, SGOV all red) tracks the
+Iran/Strait-of-Hormuz-driven risk-off move flagged this morning (VIX futures
+~17.30 vs. Friday's 14.43 close), not idiosyncratic deterioration. APA
+remains week 1 of 2 off the core watchlist (since 8/28) — no forced exit
+until the 9/4 Friday refresh. No stop tightening this window — APA/HPE/XYZ
+below the core +15% threshold, RIGL below the satellite +25% threshold.
+2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials
+0/2. Cash 20.21%, at/above the 20% floor, no sweep needed. Risky positions
+closed today: none. Day P&L (-0.83%) driven by broad market softness across
+core/income, partly offset by APA's oil-tailwind gain (+2.09%) and RIGL's
+continued strength (+2.34%). Phase P&L now -5.35% since Day 0 ($100,000 ->
+$94,647.00). Core exposure 24.85% (3 of 6 slots: APA, HPE, XYZ), satellite
+steady at 10.79% (2 of 4 slots: MNKD, RIGL). Tomorrow: watch XYZ's stop
+level first thing pre-market/at-open given today's close proximity; HPE's
+Q3 earnings call after tomorrow's close (9/2, 4:30pm ET) is the next major
+event-risk item; APA's 9/4 two-week thesis-broken decision point and RIGL's
+continued approach toward its +25% satellite tighten threshold remain open
+watch items.

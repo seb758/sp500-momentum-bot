@@ -4378,3 +4378,50 @@ point.
   exact report-timing discrepancy across sources (after-close 9/2 vs.
   pre-market Wednesday) should be resolved with a fresh check rather than
   assumed.
+
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" list appeared at
+  any window today (pre-market, 9:30am, 11am, this window) — per STEP 3
+  nothing was quoted or gated this session. This week (Aug 31 start) stays
+  at core 1/6 (HPE 8/31), satellite 0/4 — valid per the Patience Rule. No
+  buys placed.
+- **Risk sweep, live via `alpaca.sh account`/`positions`/`orders`:** equity
+  $94,647.00, cash $19,128.98 (20.21%, at/above the 20% floor, no funding
+  sweep needed). No position at/beyond its sleeve hard-cut — APA +3.38%,
+  HPE -3.61%, XYZ -5.55% (core cut -7%); MNKD -0.75%, RIGL +12.95%
+  (satellite cut -15%). **XYZ is the one to watch: $78.685 vs. its
+  10%-trailing stop at $78.228 — only ~0.6% away, closest any position has
+  come to its stop this week.** All 8 open positions confirmed carrying live
+  GTC trailing stops via `alpaca.sh orders`, none missing (APA 10%/$39.9465,
+  HPE 10%/$47.799, XYZ 10%/$78.228, MNKD 15%/$3.74, RIGL 15%/$40.341, EDGX
+  5%/$25.9825, SPHY 5%/$22.23, SGOV 5%/$95.665 on 20 covered sh — the
+  0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74
+  dust flagged every prior sweep, not a new gap).
+- **Thesis check:** today's weakness is broad and market-wide, not
+  idiosyncratic — HPE, XYZ, EDGX, SPHY, SGOV all red, continuing the
+  Iran/Strait-of-Hormuz-driven risk-off move flagged in this morning's
+  pre-market note (VIX futures ~17.30 vs. Friday's 14.43 close). Targeted
+  WebSearch on XYZ (today's biggest core mover and closest to a stop) and
+  HPE (reports earnings tomorrow) found no company-specific adverse news for
+  either — XYZ's Buy consensus (31 analysts, avg PT $78.74-$81.93) and
+  underlying Q2 beat thesis stand; HPE's Buy-side momentum (BofA PT $82,
+  fresh JPM/Morgan Stanley upgrades) stands, with its Q3 earnings call now
+  confirmed for tomorrow 9/2 4:30pm ET (resolves the timing ambiguity
+  flagged in the 11am Lesson). No thesis broken on any held position. APA
+  stays week 1 of 2 off the core watchlist (since 8/28) — no forced exit
+  until the 9/4 Friday refresh. No satellite catalyst inside the
+  1-2-trading-day gap-risk window (MNKD's Wells Fargo conference is 9/4,
+  non-binary IR event; RIGL's VEPPANU launch resolved 8/13). 2-strike
+  sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- **No stop tightening this window** — RIGL (+12.95%) remains below the
+  satellite +25% threshold; APA/HPE/XYZ all below the core +15% threshold.
+  No stop moved down.
+- **Risky positions closed today: none.**
+- **Lesson:** XYZ closing this near its trailing stop with no thesis break
+  is exactly the trailing-stop mechanism working as designed — flag for
+  tomorrow's pre-market to check first whether XYZ stopped out overnight/
+  pre-market before assuming it's still held; if it is still held and
+  extends its slide, the next natural checkpoint is the -7% hard-cut, not a
+  discretionary early exit absent a thesis break. HPE's Q3 print after
+  tomorrow's close is the other top item — no position/stop action until
+  the market has reacted.
