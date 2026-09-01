@@ -4178,3 +4178,134 @@ watch the market's live reaction to the confirmed hawkish Fed stance now
 that cash trading resumes, (3) PANW reports fiscal Q4 after Tuesday 9/1
 close, (4) re-verify EDGX/SGOV/SPHY thesis with live data (still an open
 gap from Saturday's partial Gemini coverage).
+
+## 2026-09-01 — Pre-market Research
+
+### Account
+- Equity: $95,266.03 | Cash: $19,128.98 (20.08%) | Buying power: $285,840.83 | Daytrade count: n/a (not returned by account endpoint; no same-day round trips this week per TRADE-LOG)
+- Core exposure: $24,037.76 (25.23%) — APA $5,265.86, HPE $9,408.60, XYZ $9,363.30
+- Satellite exposure: $10,067.55 (10.57%) — MNKD $4,823.55, RIGL $5,244.00
+- Income exposure: $42,031.74 (44.13%) — EDGX $20,038.53, SGOV $2,082.65, SPHY $19,910.56
+- Cash 20.08%, at/just above the 20% floor — no sweep needed, watch on next trade/drift per the price-drift floor-breach rule.
+- All 8 open positions confirmed carrying live GTC trailing stop orders via `alpaca.sh orders` — none missing (SGOV's 0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74 dust flagged every prior sweep, not a new gap).
+- BAX's thesis-broken exit (2-week off-watchlist) already executed 2026-08-31 — no longer an open item.
+
+### Data-quality flag — Gemini report truncated this session
+The consolidated Gemini Deep Research call returned output that opens
+mid-document directly at "Confirmed Catalysts Within 5 Trading Days" (part
+of requested section 4) — sections 1 (S&P futures/VIX), 2 (top
+market-moving catalysts/econ releases), and the structured section 3
+(per-held-ticker overnight-news thesis check) are absent from the captured
+output. A "Strategic Synthesis" paragraph at the end does reference some
+figures in passing (10-year yield ~4.75%, "extreme suppression" of the VIX
+futures curve, XYZ/ARK Invest accumulation, a PYPL leadership issue, PANW
+and DELL reporting earnings today) but per the data-quality guard these are
+not trusted at face value from a truncated document — independently
+verified/supplemented via WebSearch below rather than fabricated or
+carried forward as-is. Only single-shot `research` was budgeted this
+session (per the "one consolidated call" rule); did not re-submit given the
+WebSearch fallback below covered the load-bearing gaps (VIX/futures level,
+held-position adverse-news check).
+
+### Market Context (WebSearch fallback for futures/VIX — Gemini's sections 1-2 unrecoverable this session)
+- **VIX:** front-month VIX futures ~17.30 (day range 17.08-17.43) per
+  Investing.com/Barchart, up from Friday 8/28's cash VIX close of 14.43 (a
+  real, independently verified year-to-date low logged in the 8/31 entry).
+  A real increase in priced volatility but not an alarm-level print — flag
+  as a moderate uptick, not "extreme suppression" (Gemini's own
+  characterization, itself untrusted here) or a distress signal.
+- **S&P 500 futures:** E-mini S&P futures (ESU26) cited +0.68% in recent
+  trading; exact live pre-market level not resolved via WebSearch — treat
+  as directionally positive/inconclusive rather than a precise figure.
+- **Econ releases / catalysts today:** not independently confirmed via
+  WebSearch this session (search budget prioritized VIX/futures and
+  held-position checks per the consolidated-query discipline). One item
+  carried forward from 8/31's independently-verified note: PANW (core
+  watchlist, not held) reports fiscal Q4 after today's close — already on
+  record, consistent with (not solely sourced from) today's truncated
+  Gemini synthesis. DELL earnings today was also referenced in the
+  Gemini synthesis but not independently re-verified this session — treat
+  as unconfirmed, not acted on.
+
+### Held-Position Thesis Check (WebSearch fallback — Gemini's section 3 unrecoverable this session)
+- **APA (core, +2.13% unrealized):** No adverse news found via WebSearch.
+  Off-watchlist since the 8/28 refresh (week 1 of 2) — the 9/4 Friday
+  refresh is the scheduled two-week thesis-broken decision point, not
+  today. No action.
+- **HPE (core, -0.80% unrealized):** No adverse news found. Thesis intact
+  per prior sessions (Juniper/AI-infra integration). No action.
+- **XYZ (core, -2.27% unrealized):** No adverse news found this session.
+  Prior sessions flagged elevated payments-sector scrutiny after PYPL's
+  M&A-collapse selloff (XYZ itself not directly exposed, exited the
+  consortium before the formal bid) — still just a watch item, not a
+  thesis break.
+- **MNKD (satellite, -0.75% unrealized):** No adverse news found. No PDUFA,
+  trial readout, or earnings date confirmed inside the next 5 trading days
+  (per the Gemini report's satellite catalyst-proximity table, the one
+  structured section that was intact and cross-checked) — catalyst remains
+  resolved (FUROSCIX approval 7/24), standard 7.5% cap basis unchanged.
+- **RIGL (satellite, +9.94% unrealized):** No adverse news found. Same
+  catalyst-proximity table confirms no scheduled PDUFA/readout/earnings in
+  the next 5 trading days — VEPPANU launch catalyst remains resolved
+  (8/13). Continues approaching (not yet at) the +25% satellite tighten
+  threshold — watch, no action.
+- **EDGX, SGOV, SPHY (income):** No idiosyncratic news checked this session
+  (search budget prioritized the equity sleeves) — no position near its 5%
+  trailing stop as of yesterday's close, no action needed regardless.
+
+### Core Trade Ideas (from current WATCHLIST.md core list, Week of 2026-08-28)
+None sourced this session. The Gemini report's missing sections 1-3 mean no
+fresh overnight-news sweep exists for the 24-name core watchlist beyond the
+three held names checked above via WebSearch — do not invent momentum/FCF
+signal on unchecked names. PANW (reports today after close) and DELL
+(earnings referenced but unconfirmed) are event-risk watch items only, not
+trade ideas pending confirmed data.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list, Week of 2026-08-28)
+Per the Gemini report's intact satellite catalyst-proximity table: **CGEM**
+has a Sept 4 Cantor Global Healthcare Conference fireside chat (informational
+IR event following the already-known REZILIENT3 Phase 3 PFS hit, not a
+binary regulatory/trial-readout date) and **ZYME** has a Sept 8 Wells Fargo
+Healthcare Conference fireside chat (informational, tied to already-resolved
+Ziihera royalty economics) — neither is a named FDA/regulatory decision,
+contract award, or trial readout, so neither meets the "known binary event"
+bar per TRADING-STRATEGY.md; no position-cap resize implication for either
+(both currently unheld). TWIN, SHIP, DCO all confirmed catalyst-clear
+(earnings already reported, next events weeks out). MNKD and RIGL (held)
+confirmed no near-term catalyst per the same table (see Held-Position
+Thesis Check above). No new satellite entries sourced this session.
+
+### Risk Factors
+- Gemini Deep Research truncated again this session (sections 1-3 missing)
+  — WebSearch fallback covered VIX/futures and the 5 held-position adverse-
+  news checks, but the full 24-name core watchlist overnight-news sweep and
+  the econ-calendar/catalyst list (section 2) remain unconfirmed gaps today.
+- VIX futures ~17.30, up from Friday's 14.43 YTD-low close — a real
+  increase in priced volatility, worth watching at the open though not
+  itself alarm-level.
+- APA remains off the core watchlist (week 1 of 2 since 8/28) — no action
+  due until the 9/4 Friday refresh confirms or reverses.
+- RIGL (+9.94%) continues approaching its +25% satellite tighten threshold
+  — not yet triggered.
+- Cash at 20.08%, just above the 20% floor — watch for a breach on the next
+  Core/Satellite trade or on continued price drift.
+- No held position is near its hard-cut: APA +2.13% (cut -7%), HPE -0.80%,
+  XYZ -2.27%; MNKD -0.75% (cut -15%), RIGL +9.94%.
+- PANW (not held, core watchlist) reports fiscal Q4 after today's close —
+  relevant to next session's momentum/FCF re-screen, not an immediate
+  action item.
+
+### Decision
+HOLD — no confirmed core or satellite trade idea cleared this session; the
+Gemini truncation left the core watchlist's overnight-news sweep and the
+econ-calendar section unconfirmed, so no new core candidate is sourced
+regardless of momentum standing from last Friday's screen. No held position
+broken or at its hard cut; no satellite catalyst inside the gap-risk
+window. Valid per the Patience Rule. Top items for market-open: (1) monitor
+open reaction to the VIX uptick (~17.30 futures vs. Friday's 14.43 close),
+(2) re-check the core watchlist names with fresh Alpaca momentum + a
+targeted WebSearch sweep if time allows, (3) PANW's after-close Q4 print
+today is the next major watchlist data point (feeds Friday 9/4's screen,
+not an immediate trade signal), (4) continue watching RIGL's approach to
+its +25% tighten threshold and APA's 9/4 two-week thesis-broken decision
+point.
