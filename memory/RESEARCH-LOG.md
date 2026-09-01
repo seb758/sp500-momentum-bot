@@ -4332,3 +4332,49 @@ point.
   satellite catalyst inside the 1-2 trading-day gap-risk window for MNKD or
   RIGL. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23),
   industrials 0/2.
+
+### 11 AM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" list exists
+  anywhere in today's RESEARCH-LOG (pre-market's Decision explicitly
+  sourced none, Gemini truncation left the core watchlist overnight-news
+  sweep unconfirmed) — per STEP 3 nothing was quoted or gated this window.
+  This week (Aug 31 start) stays at core 1/6 (HPE 8/31), satellite 0/4 —
+  valid per the Patience Rule.
+- **Risk sweep, live via `alpaca.sh account`/`positions`/`orders`:** equity
+  $94,891.39, cash $19,128.98 (20.16%, at/above the 20% floor, no funding
+  sweep needed). No position at/beyond its sleeve hard-cut — APA +3.25%,
+  HPE -2.75%, XYZ -4.05% (core cut -7%); MNKD -1.00%, RIGL +11.62%
+  (satellite cut -15%). All 8 open positions confirmed carrying live GTC
+  trailing stops via `alpaca.sh orders`, none missing (APA 10%/$39.762, HPE
+  10%/$47.799, XYZ 10%/$78.228, MNKD 15%/$3.74, RIGL 15%/$40.341, EDGX
+  5%/$25.9825, SGOV 5%/$95.665 on 20 covered sh, SPHY 5%/$22.23). No stop
+  tightening this window — RIGL remains below the +25% satellite threshold,
+  APA/HPE/XYZ all below the core +15% threshold; no stop moved down.
+- **Thesis check:** today's move is broad-market, not idiosyncratic — most
+  positions red (HPE -1.91%, XYZ -2.54% intraday, MNKD -1.25%, SPHY/EDGX/
+  SGOV all slightly negative) while only APA (+1.96% intraday, oil-tailwind
+  beneficiary) and RIGL (+1.13% intraday) are green. WebSearch confirms the
+  driver: renewed US-Iran Strait of Hormuz tanker attacks overnight pushed
+  oil and bond yields up and drove a broad risk-off/tech-led selloff — not
+  company-specific news on any held name. Targeted WebSearch on HPE and XYZ
+  (today's two biggest core movers) found no adverse news: HPE reports Q3
+  earnings tomorrow (9/2, after Tuesday close per one source /
+  pre-market Wednesday per Street estimates — treat the exact time as
+  unconfirmed) with analysts expecting +32% revenue/+114% EPS YoY, PT raised
+  to $82 (BofA) and a fresh JPM Buy (8/27) — event-risk watch item for
+  tomorrow, not an action today, thesis intact (Juniper integration on
+  track). XYZ's weekly pullback (-6.6% per one source) is priced action, not
+  a news-driven thesis break — Q2 beat (EPS $1.02 vs $0.79 est, +25% gross
+  profit) and a run of analyst target hikes/upgrades remain the standing
+  thesis; no new adverse item found. No thesis broken on any held position.
+  APA stays week 1 of 2 off the core watchlist (since 8/28) — no forced exit
+  until the 9/4 Friday refresh. No satellite catalyst inside the
+  1-2-trading-day gap-risk window (MNKD's Wells Fargo conference is 9/4,
+  non-binary IR event; RIGL's VEPPANU launch resolved 8/13). 2-strike
+  sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- **Lesson:** HPE's earnings tomorrow (9/2) is now the top event-risk item
+  for the next session — flag for pre-market/market-open to re-check
+  guidance/reaction before any stop or position decision, and note the
+  exact report-timing discrepancy across sources (after-close 9/2 vs.
+  pre-market Wednesday) should be resolved with a fresh check rather than
+  assumed.
