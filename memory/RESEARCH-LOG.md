@@ -4309,3 +4309,26 @@ today is the next major watchlist data point (feeds Friday 9/4's screen,
 not an immediate trade signal), (4) continue watching RIGL's approach to
 its +25% tighten threshold and APA's 9/4 two-week thesis-broken decision
 point.
+
+### 9:30 AM Session Note
+- **Buy-side: HOLD.** Pre-market's Decision left no approved candidate list
+  (Gemini truncation, explicit "no new core candidate is sourced" call) —
+  per STEP 3 there was no planned ticker to quote or gate this window, so
+  no buys placed either sleeve. This week (Aug 31 start) stays at core 1/6
+  (HPE 8/31), satellite 0/4 — valid per the Patience Rule.
+- **Risk sweep, live via `alpaca.sh account`/`positions`/`orders`:** equity
+  $95,123.33, cash $19,128.98 (20.11%, at/above the 20% floor, no funding
+  sweep needed). No position at/beyond its sleeve hard-cut — APA +2.91%,
+  HPE -0.69%, XYZ -4.19% (core cut -7%; XYZ is today's biggest mover,
+  -2.68% intraday, still well clear); MNKD -0.25%, RIGL +10.88% (satellite
+  cut -15%). All 8 open positions confirmed carrying live GTC trailing
+  stops via `alpaca.sh orders`, none missing (APA 10%/$39.762, HPE
+  10%/$47.799, XYZ 10%/$78.228, MNKD 15%/$3.74, RIGL 15%/$40.341, EDGX
+  5%/$25.9825, SGOV 5%/$95.665, SPHY 5%/$22.23). No stop tightening this
+  window — RIGL remains below the +25% satellite threshold, APA/HPE/XYZ
+  all below the core +15% threshold; no stop moved down.
+- **Thesis/gap-risk:** no break. APA stays week 1 of 2 off the core
+  watchlist (since 8/28) — no forced exit until the 9/4 Friday refresh. No
+  satellite catalyst inside the 1-2 trading-day gap-risk window for MNKD or
+  RIGL. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23),
+  industrials 0/2.
