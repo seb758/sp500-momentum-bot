@@ -4425,3 +4425,46 @@ point.
   discretionary early exit absent a thesis break. HPE's Q3 print after
   tomorrow's close is the other top item — no position/stop action until
   the market has reacted.
+
+## 2026-09-02 — Pre-market Research
+
+### Account
+- Equity: $95,240.37 | Cash: $28,124.05 (29.53%) | Buying power: $296,553.35 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned) | Daytrade count: not present in account payload (same pattern as prior sessions)
+- Core exposure: $15,088.31 (15.84%: APA $5,397.11 / HPE $9,691.20) | Satellite exposure: $10,250.70 (10.76%: MNKD $4,835.70 / RIGL $5,415.00) | Income exposure: $41,777.32 (43.87%: EDGX $19,886.72 / SGOV $2,082.76 / SPHY $19,807.84)
+- **XYZ (core) stopped out overnight** — filled 2026-09-01 19:47 UTC at $78.22 via its 10% trailing stop (hwm $86.92), 115 sh, confirmed via `alpaca.sh orders` closed history. This was explicitly flagged as the likely next checkpoint in yesterday's 3pm session note (XYZ closed that session only ~0.6% above its stop) — mechanism working as designed, not a surprise, no thesis break involved. Core is now 2/6 open positions (APA, HPE).
+- Cash 29.53%, well above the 20% floor — elevated because XYZ's stop-out proceeds ($8,996.44 notional) haven't yet been swept into the Income sleeve. Per TRADING-STRATEGY.md this sweep happens "at that session's close-out step" — flagging for the next trade-window session (market-open) to execute, not actioned here since this is a research-only workflow.
+- All 7 remaining open positions (APA, HPE, MNKD, RIGL, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stop orders via `alpaca.sh orders`, none missing: APA 10%/$39.9555 (hwm $44.395), HPE 10%/$47.799 (hwm $53.11), MNKD 15%/$3.74 (hwm $4.40), RIGL 15%/$40.6725 (hwm $47.85), EDGX 5%/$25.9825 (hwm $27.35), SPHY 5%/$22.23 (hwm $23.40), SGOV 5%/$95.665 on 20 covered sh (hwm $100.70; the 0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74 dust flagged every prior sweep).
+- **This week (Aug 31 start):** core 1/6 new trades used (HPE 8/31), satellite 0/4 — XYZ's stop-out is a sell, not a new trade, doesn't change the count.
+
+### Data-quality flag — Gemini truncated again
+The consolidated Gemini Deep Research call returned a report that starts mid-document (opens on a "Twin Disc (TWIN)" satellite section) — sections 1-3 (S&P futures/VIX, macro catalysts, held-ticker overnight check) never arrived, and section 4's watchlist sweep came through only for TWIN and SHIP (2 of 8 satellite names; 0 of 24 core names) plus a brief closing-paragraph mention of APA/HPE/PANW/DELL/MRVL. Same recurring truncation pattern flagged repeatedly in this log since July. Per the data-quality guard, none of the missing sections are fabricated — filled the critical points (VIX/futures, today's catalysts, held-position overnight news, HPE pre-earnings check) via native WebSearch fallback below. The full 24-name core / remaining 6-name satellite watchlist overnight-news sweep was **not** independently re-verified this session (same gap accepted in prior truncated sessions) — today's core/satellite ideas below rely on last Friday's (8/28) screen only, not a fresh overnight check, so no new candidate is sourced regardless of standing momentum.
+
+### Market Context (WebSearch fallback — Gemini's sections 1-2 unrecoverable this session)
+- VIX futures ~17.25 (range 17.08-17.28), continuing the uptick from Friday's 14.43 close flagged in yesterday's sessions — not yet alarm-level but a real, sustained increase in priced volatility across three sessions now.
+- September S&P 500 E-mini futures (ESU26) down ~-0.50% pre-market. Broad risk-off continuing: rising oil prices are pushing inflation expectations and Treasury yields higher (10-year ~4.78%, 30-year just below 5.3%), extending the Iran/Strait-of-Hormuz-driven move flagged in yesterday's 11am/3pm notes, plus renewed worry about surging corporate borrowing to finance the AI buildout.
+- Today's calendar: ADP August employment, July factory orders, Fed Beige Book. Earnings after today's close include **HPE** (held core position), plus AVGO, SNOW, NTAP (watchlist core name), FIVE.
+- No name-specific adverse overnight catalyst found for APA, MNKD, RIGL, EDGX, SGOV, or SPHY.
+
+### Held-Position Thesis Check (WebSearch — Gemini's section 3 unrecoverable this session)
+- **APA (core, held):** No adverse company-specific news found; most recent substantive coverage is the 8/5 Q2 beat (EPS $1.89 vs $1.87 est.) and the ongoing $700M cost-reduction / 5% oil-growth / Suriname-2028 narrative already priced into the standing thesis. Remains week 2 of 2 off the core watchlist (off since 8/28) — **the 9/4 Friday refresh is the forced-exit decision point regardless of P&L if still off-list.**
+- **HPE (core, held):** Reports Q3 FY26 earnings today after close (webcast begins 3:30pm CT / ~4:30pm ET). No pre-announcement or guidance leak found. Company's own prior guidance: revenue $11.5-12.1B, non-GAAP EPS $0.88-0.93; consensus sits slightly above company guidance ($12.1B rev / $0.94 EPS), and JPM previewed expecting HPE to raise full-year guidance on AI/non-AI infrastructure tailwinds. Constructive setup, nothing bearish surfaced — earnings reaction is tomorrow's top event-risk item, no action pre-print.
+- **MNKD (satellite, held):** No new binary news. Sept 4 Wells Fargo Healthcare Conference remains a non-binary IR appearance (per WATCHLIST.md), not inside a gap-risk catalyst window. FUROSCIX/Afrezza approvals remain resolved. One data point worth noting, not thesis-breaking: a third-party fair-value estimate was trimmed ~22% ($9.61→$7.50) on narrow-portfolio/adoption concerns — sentiment, not a new fact pattern; well clear of the -15% hard-cut.
+- **RIGL (satellite, held):** No new news found since the 8/13 VEPPANU launch (resolved). Thesis intact.
+- **EDGX / SGOV / SPHY (income):** No idiosyncratic ETF-level news; income sleeve is not thesis-screened per TRADING-STRATEGY.md.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None. Gemini truncation left the 24-name core watchlist's overnight-news sweep unconfirmed (see data-quality flag above) — per STEP 3/4, no core candidate is sourced this session regardless of last Friday's momentum standing.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+None. Only TWIN and SHIP had any fresh detail from the truncated Gemini report, and neither surfaces a new entry signal beyond what's already reflected in last Friday's (8/28) screen (both are "Retained," not new opportunities) — no fresh catalyst check was possible for CGEM, ZYME, DCO, PLPC this session. No satellite ticker is inside a near-dated binary-catalyst gap-risk window (MNKD's 9/4 conference is explicitly non-binary; RIGL's catalyst resolved 8/13).
+
+### Risk Factors
+- VIX futures elevated for a third consecutive session (~17.25, up from 14.43 last Friday) alongside rising oil/yields — a real, sustained risk-off drift, not yet a hard alarm.
+- APA is week 2 of 2 off the core watchlist — 9/4 Friday refresh is a hard exit decision point if still unlisted, regardless of P&L.
+- HPE reports Q3 earnings after today's close — the session's single largest event-risk item; guidance/reaction to be assessed at tomorrow's pre-market/market-open before any stop or position action.
+- Cash is 29.53%, well above the 20% floor (temporarily, post-XYZ stop-out) — not a floor breach, but the freed cash should be swept into Income sleeve at the next trade-window session.
+- Full core/satellite watchlist overnight-news sweep unconfirmed again this session (Gemini truncation) — same recurring data-quality gap.
+- No held position is near its hard-cut: APA well clear of -7%, HPE well clear of -7%, MNKD well clear of -15%, RIGL well clear of -15% (+13.5% unrealized, approaching but still below the +25% satellite tighten threshold).
+
+### Decision
+HOLD — no confirmed core or satellite trade idea cleared this session (Gemini truncation left the watchlist overnight-news sweep unconfirmed, so no new candidate is sourced regardless of last Friday's screen). No held position broken or at its hard cut; no satellite catalyst inside the gap-risk window. Valid per the Patience Rule. Top items for market-open: (1) sweep XYZ's stop-out proceeds into the Income sleeve (cash is 29.53%, well above the 20% floor), (2) monitor open reaction to the VIX/oil/yield-driven risk-off move, (3) HPE reports Q3 earnings after today's close — the top event-risk item, assess reaction tomorrow, (4) APA's 9/4 two-week thesis-broken decision point is now imminent (2 trading days out), (5) continue watching RIGL's approach toward its +25% satellite tighten threshold.
