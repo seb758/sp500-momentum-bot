@@ -1997,3 +1997,55 @@ Mechanics: canceled the standing 20-share 5% trailing stop before the buy, repla
 
 ### 2026-09-02 — Data-integrity flag: EDGX quote/mark frozen at market-open
 No trade taken. EDGX's positions/quote data at market-open (13:32-13:36 UTC) showed a stale quote (bid $26.61, ask $0/no offer, timestamp fixed at 2026-09-01T19:59:30Z — yesterday's close) alongside a `current_price` mark of $23.00 (-13.72% "change_today") that did not move or refresh across 3 separate re-polls ~1 minute apart. No news found (WebSearch) of a halt, NAV event, or fund issue for EDGX (Global X U.S. 500 Income Edge ETF). EDGX's standing 5% trailing stop (hwm $27.35, trigger $25.9825) did not fire despite the mark showing well below it — consistent with a frozen/stale paper-feed print rather than a real trade-through, matching the "flickering opening liquidity" pattern flagged repeatedly for this ticker since July. Per STEP 2's zero-spread/halted-ticker skip rule, took no action on EDGX (no real ask to transact against); did not treat the -13.7% mark as a real loss or hard-cut trigger. Flagging for the next session to re-check whether the quote has refreshed and whether the stop needs re-verification once real liquidity returns.
+
+## Sep 2 — 3pm Snapshot (Day 42, Wednesday)
+**Portfolio:** $95,366.76 | **Cash:** $18,684.57 (19.59%) | **Day P&L:** +$719.76 (+0.76%) | **Phase P&L:** -$4,633.24 (-4.63%)
+**Core exposure:** $14,831.36 (15.55% of equity) | **Satellite exposure:** $10,521.77 (11.03% of equity) | **Income exposure:** $51,327.22 (53.82% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| APA | core | 121 | $42.61 | $45.01 | +1.60% | +$290.40 (+5.63%) | 10% trailing ($40.6125) |
+| HPE | core | 180 | $52.690889 | $52.1397 | +2.50% | -$99.21 (-1.05%) | 10% trailing ($47.799) |
+| MNKD | satellite | 1215 | $4.00 | $4.045 | +1.63% | +$54.68 (+1.13%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $49.185 | +3.55% | +$837.33 (+17.56%) | 15% trailing ($41.80725) |
+| EDGX | income | 746 | $26.78 | $26.795 | +0.52% | +$11.19 (+0.06%) | 5% trailing ($25.9825) |
+| SGOV | income | 114.740468683 | $100.470613 | $100.415 | +0.00% | -$6.38 (-0.06%) | 5% trailing ($95.399, 114 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.1501 | +0.04% | -$179.67 (-0.90%) | 5% trailing ($22.23) |
+
+**Notes:** One income-sleeve trade today (9:30am): BUY SGOV 94 sh @ $100.470613,
+funded from XYZ's overnight stop-out proceeds (cash was 30.55% of equity pre-trade,
+well above the 20% floor). No core or satellite trades — no "### Approved Trades
+(verified)" section appeared in today's RESEARCH-LOG at any window (Gemini
+truncation left the overnight watchlist sweep unconfirmed all session), so 9:30am,
+11am, and this 3pm window all stayed HOLD on new entries. This week (Aug 31 start)
+closes at core 1/6 (HPE 8/31), satellite 0/4 new trades — valid per the Patience
+Rule. Risk sweep (3pm): no position at/beyond its sleeve hard-cut (APA +5.63%, HPE
+-1.05%, both vs. -7% core cut; MNKD +1.13%, RIGL +17.56%, both vs. -15% satellite
+cut); all 7 open positions confirmed via `alpaca.sh positions`/`orders` carrying
+live GTC trailing stops, none missing (SGOV's 0.740468683-sh fractional remainder
+stays unstopped, same immaterial ~$74 dust flagged every prior sweep, not a new
+gap). No stop moved down. No satellite catalyst inside the 1-2 trading-day
+gap-risk window (MNKD's Wells Fargo conference is 9/4, explicitly non-binary IR
+event; RIGL's VEPPANU launch resolved 8/13). Thesis check: HPE remains current on
+this week's (8/28) core watchlist; APA stays week 1 off-list (dropped 8/28) — the
+mandatory two-week exit falls due at the 9/4 Friday refresh, not before, no forced
+action this window. HPE reports Q3 FY26 earnings after today's close — no action
+pre-print, tomorrow's reaction is the top event-risk item. No stop tightening this
+window — APA/HPE below the core +15% threshold, RIGL (+17.56%) still below the
+satellite +25% threshold. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL
+7/23), industrials 0/2. Cash 19.59%, 0.41pp under the 20% floor on pure
+price-appreciation drift (first flagged under-floor at 11am today, day 1 of the
+3-consecutive-session grace window) — immaterial per the Income sleeve drift rule,
+no sweep this window. The EDGX/RIGL frozen-quote artifacts flagged at market-open
+and 11am appear resolved — both position marks show normal, sane intraday changes
+this window. Risky positions closed today: none. Day P&L (+0.76%) driven by broad
+strength across core/satellite (APA +1.60%, HPE +2.50%, RIGL +3.55%), partly offset
+by softness in SPHY/SGOV. Phase P&L now -4.63% since Day 0 ($100,000 ->
+$95,366.76). Core exposure fell to 15.55% (2 of 6 slots: APA, HPE) from 24.85%
+Monday after XYZ's overnight stop-out; satellite steady at 11.03% (2 of 4 slots:
+MNKD, RIGL). Tomorrow: HPE's Q3 earnings reaction (reported after today's close) is
+the top event-risk item to assess at pre-market/market-open; APA's 9/4 Friday
+two-week thesis-broken decision point is now imminent (1 trading day out); watch
+whether the cash-floor drift persists past the 3-session grace window; RIGL's
+continued approach toward its +25% satellite tighten threshold remains an open
+watch item.
