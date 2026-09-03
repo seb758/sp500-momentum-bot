@@ -2059,4 +2059,57 @@ Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash 
 Funding reason (income only): swept $7,933.97 (79 sh) into SGOV, leaving cash at $19,051.64 (20.22% of $94,220.48 post-trade equity) — a small buffer above the floor, consistent with prior sweep sizing.
 Mechanics: canceled the standing 114-share 5% trailing stop before the buy, replaced with a 193-share 5% trailing GTC stop after fill (0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74 dust flagged every prior sweep, not a new gap).
 
+## Sep 3 — 3pm Snapshot (Day 43, Thursday)
+**Portfolio:** $94,268.54 | **Cash:** $19,051.64 (20.21%) | **Day P&L:** -$1,098.22 (-1.15%) | **Phase P&L:** -$5,731.46 (-5.73%)
+**Core exposure:** $5,352.44 (5.68% of equity) | **Satellite exposure:** $10,391.46 (11.02% of equity) | **Income exposure:** $59,473.00 (63.09% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| APA | core | 121 | $42.61 | $44.235 | -1.03% | +$196.63 (+3.81%) | 10% trailing ($40.6125) |
+| MNKD | satellite | 1215 | $4.00 | $4.01 | -0.74% | +$12.15 (+0.25%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $48.415 | -2.03% | +$749.55 (+15.72%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $27.05 | +1.00% | +$201.42 (+1.01%) | 5% trailing ($25.9825) |
+| SGOV | income | 193.740468683 | $100.454053 | $100.4225 | +0.00% | -$6.11 (-0.03%) | 5% trailing ($95.399, 193 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.175 | +0.15% | -$158.36 (-0.79%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite trades this window — no "Approved Trades (verified)"
+list existed in today's RESEARCH-LOG at any window, so per STEP 3 the buy side
+was HOLD; this week (Aug 31 start) stays core 1/6 (HPE 8/31, since stopped out),
+satellite 0/4 new trades — valid per the Patience Rule. Today's only account
+activity was this morning's mechanical HPE trailing-stop fill (10% GTC, -12.48%
+realized — an overnight/pre-market gap through the trail following HPE's
+post-Q3-earnings margin-mix selloff despite a beat-and-raise print, no thesis
+break) and the resulting SGOV sweep-back (79 sh, restoring cash to the 20%
+floor) — both already logged above from the market-open window. Risk sweep
+(3pm): no position at/beyond its sleeve hard-cut (APA +3.81% vs. -7% core cut;
+MNKD +0.25%, RIGL +15.72%, both vs. -15% satellite cut); all 6 open positions
+confirmed via `alpaca.sh positions`/`orders` carrying live GTC trailing stops,
+none missing (SGOV's 0.740468683-sh fractional remainder stays unstopped, same
+immaterial ~$74 dust flagged every prior sweep, not a new gap). No stop moved
+down. No satellite catalyst inside the 1-2 trading-day gap-risk window (MNKD's
+Wells Fargo conference 9/4 remains non-binary IR; RIGL has no confirmed
+near-term date). Thesis check: APA remains week 2 of 2 off the core
+watchlist (dropped 8/28) — tomorrow's 9/4 Friday refresh is the mandatory
+two-week thesis-broken exit decision point, no forced action today; MNKD/RIGL
+theses intact, nothing moved sharply enough intraday (largest mover RIGL,
+-2.03%) to warrant a fresh check beyond this morning's research. No stop
+tightening this window — APA below the core +15% threshold, RIGL (+15.72%)
+still below the satellite +25% threshold, MNKD not in meaningful gain.
+2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials
+0/2. Cash 20.21%, at/above the 20% floor, no sweep needed. Risky positions
+closed today: none (HPE's stop-out was a standard mechanical trailing-stop
+fill at market-open, not a discretionary 3pm risk-sweep catch). Day P&L
+(-1.15%) driven mainly by HPE's realized loss earlier today plus RIGL's
+intraday pullback (-2.03%, still up +15.72% from entry), partly offset by
+EDGX's gain (+1.00%). Phase P&L now -5.73% since Day 0 ($100,000 ->
+$94,268.54). Core exposure fell sharply to 5.68% (1 of 6 slots: APA) after
+today's HPE exit; satellite steady at 11.02% (2 of 4 slots: MNKD, RIGL).
+Tomorrow: the weekly-review/screen-refresh's most consequential item is
+APA's mandatory two-week thesis-broken exit decision (execute regardless of
+P&L if APA is still off the core watchlist); core exposure is down to a
+single slot and well under the 85% target, so rebuilding core exposure is
+also a priority once fresh candidates clear the momentum/FCF/spread gates;
+continue watching RIGL's approach toward its +25% satellite tighten
+threshold.
+
 **Post-sweep sleeve state:** Core down to 1 open position (APA — currently week 2 of 2 off the core watchlist; tomorrow's 9/4 Friday refresh is the mandatory thesis-broken exit decision point if still unlisted). Satellite unchanged (MNKD, RIGL). This week (Aug 31 start): core 1/6, satellite 0/4 new trades — unchanged (a stop-out is an exit, not a new entry, so it doesn't count against or reset the weekly cap).
