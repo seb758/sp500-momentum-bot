@@ -2049,3 +2049,14 @@ two-week thesis-broken decision point is now imminent (1 trading day out); watch
 whether the cash-floor drift persists past the 3-session grace window; RIGL's
 continued approach toward its +25% satellite tighten threshold remains an open
 watch item.
+
+### 2026-09-03 — SELL HPE (core) — trailing stop
+Shares: 180 | Entry: $52.690889 | Exit: $46.116944 | Realized P&L: -$1,183.31 (-12.48%) | Reason: 10% GTC trailing stop filled automatically at 2026-09-03T13:32:48Z (9:32am ET), trail from hwm $53.11, trigger $47.799. Filled before this market-open session ran — mechanical stop protection following through on the post-Q3-earnings margin-mix selloff (beat-and-raise on revenue/EPS/guidance, but management guided sequential operating-margin compression as lower-margin AI-server mix grows) flagged as a live valuation risk in this morning's pre-market research. Exit landed past the -7% hard-cut level (a real overnight/pre-market gap through the 10% trail, not a same-day mechanical trigger) — consistent with the earnings-gap risk this sleeve's stops don't fully protect against. No thesis break in the underlying business; this was a valuation/margin-mix reaction the stop caught mechanically.
+
+### 2026-09-03 — BUY SGOV (income) — cash-floor sweep-back after HPE stop-out
+Shares: 79 | Entry: $100.43 (market) | Stop: 5% trailing GTC, replacing the prior 114-share stop with one covering the combined 193 whole shares, trigger $95.399095 (hwm $100.4201) | Target: n/a | R:R: n/a
+Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell). HPE's overnight stop-out left cash at $26,985.61 (28.65% of $94,210.33 equity) at market-open, well above the 20% floor, with no pending core/satellite buy candidate this session (pre-market's Decision was HOLD) to fund instead.
+Funding reason (income only): swept $7,933.97 (79 sh) into SGOV, leaving cash at $19,051.64 (20.22% of $94,220.48 post-trade equity) — a small buffer above the floor, consistent with prior sweep sizing.
+Mechanics: canceled the standing 114-share 5% trailing stop before the buy, replaced with a 193-share 5% trailing GTC stop after fill (0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74 dust flagged every prior sweep, not a new gap).
+
+**Post-sweep sleeve state:** Core down to 1 open position (APA — currently week 2 of 2 off the core watchlist; tomorrow's 9/4 Friday refresh is the mandatory thesis-broken exit decision point if still unlisted). Satellite unchanged (MNKD, RIGL). This week (Aug 31 start): core 1/6, satellite 0/4 new trades — unchanged (a stop-out is an exit, not a new entry, so it doesn't count against or reset the weekly cap).
