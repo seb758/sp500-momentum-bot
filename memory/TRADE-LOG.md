@@ -2113,3 +2113,61 @@ continue watching RIGL's approach toward its +25% satellite tighten
 threshold.
 
 **Post-sweep sleeve state:** Core down to 1 open position (APA — currently week 2 of 2 off the core watchlist; tomorrow's 9/4 Friday refresh is the mandatory thesis-broken exit decision point if still unlisted). Satellite unchanged (MNKD, RIGL). This week (Aug 31 start): core 1/6, satellite 0/4 new trades — unchanged (a stop-out is an exit, not a new entry, so it doesn't count against or reset the weekly cap).
+
+## Sep 4 — 3pm Snapshot (Day 44, Friday)
+**Portfolio:** $94,224.92 | **Cash:** $19,051.41 (20.22%) | **Day P&L:** -$43.62 (-0.05%) | **Phase P&L:** -$5,775.08 (-5.78%)
+**Core exposure:** $5,204.21 (5.52% of equity) | **Satellite exposure:** $10,512.05 (11.16% of equity) | **Income exposure:** $59,457.26 (63.11% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| APA | core | 121 | $42.61 | $43.01 | -2.65% | +$48.40 (+0.94%) | 10% trailing ($40.6125) |
+| MNKD | satellite | 1215 | $4.00 | $4.075 | +2.90% | +$91.13 (+1.88%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $48.78 | +0.58% | +$791.16 (+16.59%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $27.0299 | -0.09% | +$186.43 (+0.93%) | 5% trailing ($25.9825) |
+| SGOV | income | 193.740468683 | $100.454053 | $100.4628 | +0.03% | +$1.69 (+0.01%) | 5% trailing ($95.4465, 193 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.165 | -0.02% | -$166.92 (-0.84%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite trades this window — no "Approved Trades (verified)"
+list existed in today's RESEARCH-LOG at any window (pre-market, 9:30am, 11am,
+this window), so per STEP 3 the buy side was HOLD all session; this week (Aug
+31 start) stays core 1/6 (HPE 8/31, since stopped out), satellite 0/4 new
+trades — valid per the Patience Rule. No account activity today at all (no
+buys, no sells, no sweeps) — the first fully quiet day this week. Risk sweep
+(3pm): no position at/beyond its sleeve hard-cut (APA +0.94% vs. -7% core
+cut; MNKD +1.88%, RIGL +16.59%, both vs. -15% satellite cut); all 6 open
+positions confirmed via `alpaca.sh positions`/`orders` carrying live GTC
+trailing stops, none missing (SGOV's 0.740468683-sh fractional remainder
+stays unstopped, same immaterial ~$74 dust flagged every prior sweep, not a
+new gap; SGOV's stop hwm ticked up intraday to $100.47/trigger $95.4465, a
+normal trailing-stop ratchet, not a manual move). No stop moved down. No
+stop tightening this window — APA below the core +15% threshold, MNKD/RIGL
+both below the satellite +25% threshold (RIGL at +16.59%, continuing to
+approach it — watch). No satellite catalyst inside the 1-2 trading-day
+gap-risk window: MNKD's Wells Fargo Healthcare Conference was today (9/4),
+confirmed non-binary IR event, no gap-risk sizing triggered; RIGL's Citi
+(9/9)/Cantor (9/10) appearances remain outside the window measured from the
+next trading day (Tue 9/8, since Mon 9/7 is the Labor Day holiday) and are
+non-binary per Gemini's audit. Thesis check: MNKD/RIGL both intact, no
+adverse news. **APA's mandatory two-week thesis-broken exit (off the core
+watchlist since 8/28, today being the second confirming Friday) did NOT
+execute this session** — per the 9:30am and 11am research-log notes,
+`routines/README.md`'s weekly-review workflow (the one that actually
+re-screens and persists WATCHLIST.md) runs at 4:00pm today, after this 3pm
+window closes; acting before that would mean exiting on a refresh that
+hasn't happened in the record yet. No adverse APA news found today
+(Raymond James PT raise to $54, 9/2). The exit is queued for the next trade
+window after today's 4pm weekly-review confirms the list — Tue 9/8
+market-open (Mon 9/7 market holiday, no session). 2-strike sub-sector
+tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2. Cash 20.22%,
+at/above the 20% floor, no sweep needed. Risky positions closed today:
+none. Day P&L (-0.05%) essentially flat — APA's intraday pullback (-2.65%)
+roughly offset by MNKD's gain (+2.90%) and RIGL/EDGX's modest gains, income
+sleeve flat. Phase P&L now -5.78% since Day 0 ($100,000 -> $94,224.92). Core
+exposure 5.52% (1 of 6 slots: APA), satellite steady at 11.16% (2 of 4
+slots: MNKD, RIGL) — core remains well under its 85% target with 5 of 6
+slots open. Tomorrow (next session Tue 9/8, given the Labor Day holiday):
+execute APA's mandatory thesis-broken exit if today's 4pm weekly-review
+confirms it is still off the core watchlist, regardless of P&L; rebuild
+core exposure from fresh candidates once the weekly screen refresh clears
+new names through the momentum/FCF/spread gates; continue watching RIGL's
+approach toward its +25% satellite tighten threshold.
