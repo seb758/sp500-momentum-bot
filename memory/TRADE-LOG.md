@@ -1989,6 +1989,26 @@ event-risk item; APA's 9/4 two-week thesis-broken decision point and RIGL's
 continued approach toward its +25% satellite tighten threshold remain open
 watch items.
 
+### 2026-09-01 — SELL XYZ (core) — trailing stop [RECONSTRUCTED, logged 2026-09-04]
+
+**Logging-gap note:** this fill was never recorded with its own TRADE-LOG
+entry by any 2026-09-01 or 09-02 session — the only trace in this file
+before today was the 09-02 SGOV sweep-back entry's rationale text
+("XYZ's overnight stop-out ... left cash at 30.55% of equity"), which
+described the *consequence* of the exit without ever logging the exit
+itself. Reconstructed today (2026-09-04 weekly-review session) from
+`alpaca.sh orders closed` order history so the audit trail matches
+reality — same reconstruction approach used for the 2026-07-16/07-17
+session-persistence gaps. The fill timestamp (19:47 UTC = 3:47pm ET on
+09-01) places it a few minutes after that day's 3pm session took its
+snapshot (which still showed XYZ open at -5.55%, "closest any position has
+come to triggering" its stop) but before the 4pm market close — a
+same-day mechanical stop-out in the gap between the 3pm window and the
+next morning's pre-market session, not an overnight/multi-day gap like
+the July incidents.
+
+Shares: 115 | Entry: $83.31 | Exit: $78.22 | Realized P&L: -$585.35 (-6.11%) | Reason: 10% GTC trailing stop filled automatically at 2026-09-01T19:47:01Z (3:47pm ET), trail from hwm $86.92, trigger $78.228 (fill printed 1 cent through the trigger, normal slippage). No thesis-break news found in any 09-01 session note for XYZ prior to the fill — mechanical stop protection working as designed, consistent with the "closest position to its stop" observation already on record in the Sep 1 3pm snapshot.
+
 ### 2026-09-02 — BUY SGOV (income) — cash-floor sweep-back after XYZ stop-out
 Shares: 94 | Entry: $100.470613 (market) | Stop: 5% trailing GTC, replacing the prior 20-share stop with one covering the combined 114 whole shares, trigger $95.39425 (hwm $100.415) | Target: n/a | R:R: n/a
 Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell). XYZ's overnight stop-out (2026-09-01, 115 sh @ $78.22) left cash at 29.53% of equity per this morning's pre-market research, well above the 20% floor, flagged there as the top market-open action item.
