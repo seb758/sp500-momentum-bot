@@ -1158,3 +1158,247 @@ require), but they're real portfolio actions the next session has to
 execute correctly. Grade reflects a genuinely better process week than the
 last several, tempered by a benchmark-lagging result and two live
 thesis-broken situations that need clean follow-through.
+
+---
+
+## Week ending 2026-09-04
+
+**Coverage note — this entry covers a single market week (2026-08-31 through
+2026-09-04).** The 08-28 review's refresh landed on time, and this refresh is
+also running on schedule (third Friday in a row on time) — WATCHLIST.md's
+"Current" section was still dated "Week of 2026-08-28" going into this
+session, correctly current for the full period.
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $95,644.46 (per week-ending-2026-08-28 review) |
+| Ending portfolio | $94,167.29 |
+| Week return | -$1,477.17 (-1.54%) |
+| S&P 500 week | +0.10% (7,711.76 -> 7,719.38, via Gemini Deep Research; note: last week's review cited a 7,711.99 close for 08-28 vs. this week's report citing 7,711.76 for the same date — a ~0.003% discrepancy, immaterial, flagged per the data-quality guard rather than silently picking one) |
+| Bot vs S&P | -1.64pp (bot underperformed) |
+| Core trades | 3 (W:0 / L:3 / open:0) |
+| Satellite trades | 0 (W:0 / L:0 / open:2; MNKD and RIGL both carried over, held throughout, no new entries/exits this period) |
+| Win rate (closed trades) | 0% (0/3) |
+| Best trade (closed) | BAX -4.15% (core) — least-bad of 3 closed trades, all losses |
+| Worst trade (closed) | HPE -12.48% (core) |
+| Profit factor | 0.00 (gross profit $0 / gross loss $2,171.37) |
+
+Income sleeve (SGOV/SPHY/EDGX) is not included in the trade/win-rate stats
+above — it's not momentum/catalyst-screened and isn't subject to the weekly
+trade caps. This period's income activity was three sweeps: an avoidable
+same-day SGOV round-trip funding the BAX->HPE turnover (08-31, net -$0.93),
+a sweep-back after XYZ's stop-out (09-02, 94 sh), and a sweep-back after
+HPE's stop-out (09-03, 79 sh). Cash dipped to 19.59% (0.41pp under the 20%
+floor) for a single session (09-02) on pure price drift — immaterial and
+resolved the next session per TRADING-STRATEGY.md's drift-tolerance rule, no
+standalone action required.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| BAX | core | $27.27 | $26.138792 | -$402.71 (-4.15%) | Thesis-broken exit (2nd consecutive week off the core watchlist), executed 08-31 regardless of P&L per TRADING-STRATEGY.md's mandatory rule |
+| XYZ | core | $83.31 | $78.22 | -$585.35 (-6.11%) | 10% GTC trailing stop, filled 2026-09-01T19:47:01Z (3:47pm ET) — **this fill was never logged with its own TRADE-LOG entry until this review**; reconstructed from Alpaca order history, see "What Didn't Work" |
+| HPE | core | $52.690889 | $46.116944 | -$1,183.31 (-12.48%) | 10% GTC trailing stop, filled 2026-09-03T13:32:48Z, a real overnight/pre-market gap through the 10% trail following a post-Q3-earnings margin-mix selloff (beat-and-raise print, no thesis break) |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| APA | core | $42.61 | $42.76 | +$18.15 (+0.35%) | 10% trailing, trigger $40.6125 (hwm $45.125) |
+| MNKD | satellite | $4.00 | $4.06 | +$72.90 (+1.50%) | 15% trailing, trigger $3.74 (hwm $4.40) |
+| RIGL | satellite | $41.84 | $48.67 | +$778.62 (+16.32%) | 15% trailing, trigger $42.415 (hwm $49.90) |
+| EDGX | income | $26.78 | $27.0396 | +$193.66 (+0.97%) | 5% trailing, trigger $25.9825 (hwm $27.35) |
+| SGOV | income | $100.454053 | $100.465 | +$2.12 (+0.01%) | 5% trailing, trigger $95.4465 (hwm $100.47, 193 of 193.740468683 sh covered) |
+| SPHY | income | $23.36 | $23.16 | -$171.20 (-0.86%) | 5% trailing, trigger $22.23 (hwm $23.40) |
+
+All 6 open positions confirmed carrying live GTC trailing stop orders via
+`alpaca.sh orders open`, none missing. Week-end exposure (equity
+$94,167.29): core $5,173.96 (5.49%), satellite $10,481.28 (11.13%), income
+$59,460.64 (63.15%), cash $19,051.41 (20.23%, above the 20% floor).
+
+### Watchlist Refresh
+- **Core: 24 names (was 24, but composition changed significantly).** Full
+  503-name universe re-screened via fresh Alpaca bars (S&P 500 list sourced
+  by direct `curl` against a GitHub-hosted dataset, bypassing WebFetch's
+  AI-summarization risk entirely this week). New this week: HUM, CRWD, CRL,
+  ZBRA, IQV, HOOD, NTAP, WDAY, ABNB, STT, CRM, CNC, RVTY, DASH, INCY, MRK,
+  DXCM, ADP, TRV (19 names, mostly newly clearing momentum or fundamentals).
+  Retained: DELL, MPC, VLO, VEEV, PSX (5). Dropped from the prior 24-name
+  list this week: MRVL, PANW, HPE, EXPE, ANET, TGT, PYPL, XYZ, PLTR — some
+  on a live momentum re-rank, others on fresh fundamentals fails (TGT, PYPL
+  — see WATCHLIST.md). Full ticker-by-ticker audit, including 11 names that
+  failed fundamentals this week (MRNA, HPQ, ALL, EXPD, PRU, PYPL, TECH, BAX,
+  TGT, FDS — plus APA, see below) and 11 "sector-capped alternates," is in
+  WATCHLIST.md.
+- **A new, real fundamentals theme this week:** DELL, NTAP, and MRK all show
+  FCF explicitly declining (not just decelerating) this quarter/TTM, each
+  traced to a specific, deliberate reinvestment decision (inventory builds
+  against secured AI-hardware backlogs for DELL/NTAP; accelerated M&A/R&D
+  ahead of the 2028 Keytruda patent cliff for MRK) rather than demand-side
+  deterioration — passed with an explicit flag rather than excluded, same
+  judgment already applied to WDAY's calendar-driven FCF dip and STT's
+  banking-mechanics-driven negative operating cash flow. Worth watching
+  closely next refresh for whether this reverses or becomes a genuine
+  multi-quarter pattern.
+- **APA (currently held core position) drops off the list for a 2nd
+  consecutive week — this triggers the mandatory thesis-broken exit rule.**
+  Flagging for the next trading session (Tue 09-08, after the Labor Day
+  holiday) to execute the exit regardless of P&L — this workflow doesn't
+  place trades itself.
+- **Gemini Deep Research reliability was the worst yet this session.** Of 6
+  core-fundamentals batches, only 2 returned complete on the first try; the
+  rest needed 1-2 resubmits each (one died mid-flight with repeated
+  `400`/`500` errors after 25+ minutes). More seriously, **two interactions
+  never completed at all** despite 3 submission attempts and 50+ minutes of
+  polling each: a 9-ticker core batch (GPC, GEN, BBY, MET, BNY, EXPE, PAYX,
+  ANET, GPN — all low-ranked, logged as data-unavailable rather than guessed
+  at) and the satellite biotech candidate-sourcing query. This is a new
+  failure mode (an interaction that simply never finishes) beyond prior
+  weeks' truncation and mid-flight `400`s, and cost roughly 50 extra minutes
+  of session time on top of an already-heavy ~45 minutes of resubmits.
+- **Satellite: 7 names (was 8, +1/-2 net).** Added **GNK** (Genco Shipping,
+  Industrials — verified $1.2B cap, real Q3-dividend catalyst). Retained
+  RIGL, CGEM, PLPC, SHIP, ZYME (all momentum-confirmed clean); MNKD held
+  (satellite has no mandatory watchlist-exit rule, but its momentum failed
+  both MAs this week for the first time — a watch item, not yet a thesis
+  break). Dropped **TWIN** and **DCO** (both now below their 50-day MA — a
+  live momentum reversal, no adverse fundamentals). No new biotech names
+  cleared this week — the sourcing query never completed (see Gemini
+  reliability note above); a WebSearch fallback found only names outside
+  the $300M-$3B cap window (too large: MIRM, SRRK; too small: INO, TLSA,
+  MBRX). Full detail in WATCHLIST.md.
+- **Two data-quality catches this week**, continuing the streak of at least
+  one per refresh since 08-07:
+  1. **GNK's sourced write-up claimed Diana Shipping's acquisition offer
+     "remains on the table"** as a live M&A-floor catalyst — independent
+     WebSearch found Diana withdrew the offer 2026-08-13, three weeks
+     before this refresh, with Genco's own public shareholder letter
+     confirming it. Dropped from GNK's catalyst rationale; only the
+     independently-verified Q3 dividend-declaration catalyst is used.
+  2. **QURE (uniQure)** was correctly excluded despite a real, verified
+     +78% single-day catalyst move (FDA-news-driven, not an artifact) and
+     clean momentum — its BLA hasn't actually been filed yet (no PDUFA date
+     exists) and its $3.09B cap sits just outside the $3B ceiling. Logged
+     as a high-risk binary watch, not added.
+- **Core sector mix (24 names):** semis + AI-hardware cluster (DELL, NTAP)
+  is only 2/24 (8.3%), well under the ~40% cap. Health Care is the largest
+  single sector at 9/24 (37.5% — spanning managed care, CRO/life-sciences
+  tools, pharma/biotech, and medtech, not one correlated cluster), followed
+  by Information Technology 6, Energy 3, Financials 3, Consumer
+  Discretionary 2, Industrials 1 — 6 distinct GICS sectors. Full breakdown
+  in WATCHLIST.md.
+
+### What Worked
+- Mechanical stop discipline held on all 3 closed trades this week — BAX's
+  thesis-broken exit executed exactly per rule (regardless of P&L, at the
+  very next trading session after the triggering 08-28 refresh), and XYZ/HPE
+  both stopped out via real GTC trailing-stop fills, no manual override, no
+  averaging down, no stop moved down.
+- Cash floor discipline held all week bar one immaterial single-session dip
+  (09-02, 19.59%, 0.41pp under the 20% floor on pure price drift), correctly
+  left uncorrected per TRADING-STRATEGY.md's <1%/<3-session drift-tolerance
+  carve-out and resolved naturally the next session via the HPE sweep-back.
+- The 09-02 EDGX frozen-quote/stale-mark data anomaly (a stuck yesterday's
+  quote alongside a phantom -13.7% mark) was correctly read as a feed
+  artifact, not a real trade-through — no action taken, consistent with the
+  zero-spread/halted-ticker skip rule, and the mark resolved to normal by
+  11am.
+- Risk sweep discipline held every session: all open positions confirmed
+  carrying live GTC stops, none missing, 2-strike sub-sector tracker
+  correctly held unchanged (biotech 1/2 from OCUL 07-23, industrials 0/2).
+- Patience Rule held under a thinning core sleeve: only 1 new core entry
+  (HPE, 08-31) and 0 new satellite entries this week, even as core fell to a
+  single open position — no forced trade to "use" the weekly budget.
+
+### What Didn't Work
+- **A real trade-logging gap recurred: XYZ's 09-01 mechanical stop-out
+  (115 sh, -$585.35/-6.11%) was never recorded with its own TRADE-LOG entry
+  by any 09-01 or 09-02 session.** The only trace before this review was a
+  passing mention in the next day's SGOV sweep-back rationale ("XYZ's
+  overnight stop-out ... left cash at 30.55% of equity") — the exit itself
+  was never logged. Reconstructed this session from `alpaca.sh orders
+  closed` order history (see TRADE-LOG.md's flagged 09-01 entry). Narrower
+  than the July 16/17 session-persistence gaps (a single missing entry
+  inside an otherwise-complete day of notes, not a whole session's fills
+  going unlogged), but the same underlying risk: a live, capital-relevant
+  trade existed with no audit trail until caught downstream. This also means
+  every session between 09-01 and today was implicitly working off a
+  TRADE-LOG that undercounted this week's core losses by one.
+- **Two of three closed core trades this week ended via a stop catching a
+  fast move, not a slow grind** — XYZ closed within 0.6% of its trigger at
+  the prior session's 3pm check, then was through it less than an hour
+  later; HPE gapped through its 10% trail overnight on the post-earnings
+  margin-mix selloff, landing past even the -7% hard-cut level in one move.
+  A reminder that core-sleeve trailing stops, like satellite's, don't fully
+  protect against a fast single-session or overnight move — a risk
+  TRADING-STRATEGY.md has so far only flagged explicitly for the satellite
+  sleeve's binary-catalyst gap risk.
+- Core sleeve ended the week at a single open position (APA, 5.5% of
+  equity) against an 85% target — three mechanical exits (BAX, XYZ, HPE)
+  against only one new entry (HPE, itself since exited) left the sleeve
+  thin heading into this refresh.
+- APA's mandatory two-week thesis-broken exit decision (off the core
+  watchlist since 08-28) fell due today (09-04) but could not be evaluated
+  until this screen refresh runs — every daily session through today
+  correctly deferred rather than acting on a stale watchlist read, so the
+  exit (if applicable) is queued for the next trading session, not
+  reflected in this week's closed-trade count.
+
+### Key Lessons
+- A trade-logging gap doesn't require a full session-persistence failure to
+  slip through — this week's gap was one missing SELL entry inside an
+  otherwise fully-logged day, caught only because this review reconciled
+  Alpaca's live position count against what TRADE-LOG implied rather than
+  trusting the daily narrative notes at face value. Worth making that
+  reconciliation (closed-order history vs. TRADE-LOG entries for the
+  covered period) a standing weekly-review step going forward, not a
+  one-off catch.
+- A 10% (core) or 15% (satellite) trailing stop only protects against a
+  continued grind in one direction once its high-water mark is set — it
+  does not protect against a fast single-session move or an overnight gap
+  that jumps straight through the trigger. HPE's -12.48% fill (past the
+  -7% hard-cut level in one move) is a concrete instance of exactly this on
+  the core side, not just the satellite gap-risk case the strategy doc
+  already documents.
+
+### Adjustments for Next Week
+- Execute APA's mandatory two-week thesis-broken exit at the next trading
+  session if it is still off the core watchlist after this refresh (see
+  Watchlist Refresh below), regardless of P&L.
+- Rebuild core exposure — down to 1 of 6 slots (APA only, 5.5% of equity) —
+  from this week's freshly re-screened watchlist once spread/liquidity
+  checks clear at market-open.
+- Add a routine cross-check to weekly-review Part A: reconcile
+  `alpaca.sh orders closed` against the covered period's TRADE-LOG entries
+  before finalizing stats, to catch a single missing trade-log entry the
+  way this week's XYZ gap was caught, rather than relying solely on daily
+  session notes.
+- Watch RIGL's continued approach toward its +25% satellite tighten
+  threshold (currently +16.32%).
+- No core risk-cap changes (sleeve %, stop widths, tighten thresholds) this
+  week — this period's shortfalls were a logging-completeness gap and two
+  stops caught by fast moves/gaps, not evidence the risk parameters
+  themselves are miscalibrated.
+
+### Overall Grade: C-
+Risk-management process held up exactly as designed everywhere it was
+tested this week — BAX's mandatory thesis-broken exit fired on schedule,
+XYZ's and HPE's stops both caught real moves mechanically (one a fast
+same-session move, one an overnight earnings gap), the cash floor and
+2-strike tracker stayed correctly maintained, and the weekly screen refresh
+itself landed on time for a third consecutive Friday with two more genuine
+data-quality catches (GNK's stale M&A claim, QURE's correctly-applied cap
+boundary) despite Gemini's worst reliability yet (two interactions that
+never completed at all, a new failure mode). Against that: the week's
+actual trading result was weak on every measure — a 0% win rate across 3
+closed core trades, a real dollar loss while the S&P was roughly flat
+(-1.64pp of relative underperformance), and core sleeve ending the week at
+a single open position against an 85% target. Most consequentially, this
+review caught a genuine trade-logging gap (XYZ's 09-01 stop-out was never
+recorded until this session reconstructed it) that every daily session
+between 09-01 and today missed — a narrower version of the July
+session-persistence failures, but a real one, and only caught because this
+review added a reconciliation step the daily sessions don't currently run.
+Grade reflects that mix: strong process and a genuinely productive,
+on-schedule screen refresh, offset by a losing week and a new logging gap
+that needs a standing fix, not just this week's one-time catch.
