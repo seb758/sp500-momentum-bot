@@ -4625,3 +4625,167 @@ HOLD — no core or satellite trade sourced this session (no fresh momentum re-s
 - **Risky positions closed today: none.**
 - Pattern for Friday's review: the pre-market runbook phrasing ("execute at market-open if today's refresh confirms") has now been confirmed twice today (9:30am, this window) to be sequenced wrong given the actual cron order (weekly-review fires last, at 4pm Friday) — worth fixing the wording in the workflow doc so it reads "next trade window after weekly-review" rather than "market-open," to avoid a future session misreading it as same-day-actionable.
 - APA's mandatory two-week thesis-broken exit still correctly held for after today's 4pm weekly-review confirms the watchlist status, per the 9:30am note's sequencing logic — unchanged, nothing new to add at 11am. MNKD/RIGL theses intact, no catalyst resolution news since pre-market. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+
+## 2026-09-06 — Pre-market Research
+
+Note on timing: today is Sunday 2026-09-06. Monday 2026-09-07 (Labor Day) is a
+market holiday, so the next trading session is Tuesday 2026-09-08. This run
+executes the standard pre-market workflow (cloud session, no trades placed)
+ahead of that session; account/position data below reflects Friday 9/4's
+close (no fills since).
+
+### Account
+- Equity: $94,169.47 | Cash: $19,051.41 (20.23%) | Buying power: $282,589.88
+  (margin-inflated by the standing 4x multiplier flag — no margin/leverage
+  used or planned) | Daytrade count: not present in account payload (same
+  pattern as prior sessions)
+- Core exposure: $5,175.17 (5.50%: APA) | Satellite exposure: $10,481.28
+  (11.13%: MNKD $4,932.90 / RIGL $5,548.38) | Income exposure: $59,461.61
+  (63.14%: EDGX $20,171.54 / SGOV $19,465.10 / SPHY $19,824.96)
+- All 6 open positions (APA, MNKD, RIGL, EDGX, SGOV, SPHY) confirmed carrying
+  live GTC trailing stop orders via `alpaca.sh orders`, none missing: APA
+  10%/$40.6125 (hwm $45.125), MNKD 15%/$3.74 (hwm $4.40), RIGL 15%/$42.415
+  (hwm $49.90), EDGX 5%/$25.9825 (hwm $27.35), SPHY 5%/$22.23 (hwm $23.40),
+  SGOV 5%/$95.4465 on 193 covered sh (hwm $100.47; the 0.740468683-sh
+  fractional remainder stays unstopped, same immaterial ~$74 dust flagged
+  every prior sweep). No auth errors.
+- **This week:** the Aug 31 trading week closed Friday 9/4 at core 1/6 new
+  trades (HPE 8/31, since stopped out), satellite 0/4. Monday 9/7 is a market
+  holiday, so the next week's 0/6, 0/4 counters effectively start fresh
+  Tuesday 9/8.
+
+### Data-quality flag — Gemini truncated again (Section 1 missing)
+The consolidated Gemini Deep Research call 503'd once (transient, retried
+successfully) and the successful report opened directly on Section 2 —
+Section 1 (S&P futures direction / VIX level) never arrived, same recurring
+truncation pattern flagged repeatedly in this log since July. Per the
+data-quality guard, filled the gap via native WebSearch below rather than
+inventing a figure.
+
+**Second, more unusual flag:** the report's substantive content (an active,
+months-long US-Iran military conflict effectively closing the Strait of
+Hormuz, ~9% weekly oil spike, a live Fed rate-hike debate) is extraordinary
+enough that it was independently cross-checked against WebSearch before
+being written into this log, per this file's standing practice of not
+trusting Gemini's framing at face value (see the 9/4 GNK stale-M&A catch and
+similar catches every week since 8/07). **Result: corroborated, not a
+fabrication** — multiple independent sources (militarytimes.com, cnbc.com,
+Wikipedia, tradingeconomics.com) confirm the Strait of Hormuz conflict
+(campaign ongoing since March 2026, latest strikes resumed 9/1), the oil
+price move, and market pricing of a September Fed hike. The OPEC+ Sept 6
+meeting's specific "held output unchanged" outcome and the midterm-turnout
+figures are Gemini-sourced only, not independently re-confirmed post-meeting
+— noted below as lower-confidence, not asserted as fully verified.
+
+### Market Context
+- **VIX ~16.25** (WebSearch, Investing.com/Barchart — Gemini's Section 1 was
+  missing this figure entirely) — moderately elevated vs. the ~14.4 baseline
+  seen in prior weeks, not an alarm-level print.
+- **S&P 500 / E-mini futures ~-0.44% to -0.46%** (WebSearch) heading into
+  Tuesday, driven by rising oil prices lifting inflation expectations and
+  yields.
+- **Brent crude ~$96-97.6/bbl, up ~9% for the week** (Gemini + WebSearch
+  corroborated) on the Strait of Hormuz disruption.
+- **Iran/Strait of Hormuz conflict independently confirmed real and
+  ongoing:** US strikes on IRGC targets resumed 9/1/2026 after two Saudi
+  tankers were struck transiting the strait 8/31; part of a campaign dating
+  to March 2026, not a new or invented event.
+- **OPEC+ met 9/6 (Sunday) per Gemini** and reportedly held October output
+  unchanged given the physical disruption to Gulf exports — meeting date and
+  pre-meeting "expected to hold steady" reporting confirmed independently;
+  the specific post-meeting outcome is Gemini-only, treated as likely but
+  not fully verified.
+- **10-year Treasury yield ~4.78-4.80%; Fed funds futures pricing ~61-66%
+  odds of a 25bp hike at the Sept 15-16 FOMC** (Gemini 61%, WebSearch/FedWatch
+  ~66% — independently corroborated, minor variance in the exact number, not
+  in direction). Would be the first hike in some time per both sources —
+  a real, live policy risk into two upcoming catalysts: Aug CPI (Wed 9/11)
+  and the FOMC decision itself.
+- U.S. midterm primary elections Tue 9/8 (Gemini-sourced, not independently
+  re-verified — background context only, not a trading trigger).
+
+### Held-Position Thesis Check
+- **APA (core, held):** No adverse news; oil-price tailwind (Brent +9%/wk)
+  is squarely on-thesis for an E&P name and strengthens the setup
+  fundamentally. **This does not change the mechanical exit**: APA is off
+  the core watchlist for a 2nd consecutive Friday (dropped 8/28, still off
+  9/4) — the thesis-broken exit is queued for Tuesday 9/8 market-open per
+  TRADING-STRATEGY.md's two-week rule, to be executed regardless of P&L.
+- **EDGX (income):** No idiosyncratic news; not thesis-screened.
+- **MNKD (satellite, held):** Thesis intact. Regulatory catalysts already
+  resolved (pediatric Afrezza approval 5/29, Furoscix ReadyFlow 7/24)
+  — narrative has shifted to commercial execution; one real, non-thesis-
+  breaking risk flagged by Gemini worth tracking: Q2 Afrezza revenue itself
+  contracted -7% YoY even as total revenue grew +43% on Furoscix/Tyvaso DPI
+  royalties. No catalyst inside the 5-day gap-risk window.
+  No adverse move; well clear of the -15% hard-cut.
+- **RIGL (satellite, held):** Thesis intact, no adverse news. Management
+  presents at Citi Biopharma (9/9), Cantor Global Healthcare (9/10), and
+  H.C. Wainwright (9/15) — all informational investor conferences, not
+  binary readouts, consistent with WATCHLIST.md's existing non-binary
+  classification for this name; no gap-risk sizing action triggered.
+- **SGOV (income):** Thesis strengthened — short-duration T-bills benefit
+  directly from the higher-for-longer/hike-risk rate backdrop.
+- **SPHY (income): real risk flag, not a thesis break.** Rising yields +
+  oil-driven inflation risk typically widen high-yield credit spreads;
+  Gemini flagged this as "high vulnerability" for the sub-investment-grade
+  space generically (no issuer-specific news). Currently -0.86% unrealized,
+  well inside the flat 5% trailing stop — watch item, no action.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+No entries placed — this is a research-only, no-trade workflow, and markets
+are closed until Tuesday regardless. For Tuesday market-open's evaluation:
+energy names already on the watchlist (**VLO, MPC, PSX**) are the most
+direct, real beneficiaries of the oil spike/Hormuz disruption — Jefferies
+raised VLO's price target to $401 from $312 over the weekend. **CRWD** and
+**WDAY** also got weekend price-target hikes from Jefferies ($230 from $190;
+$225 from $205) on continued institutional demand for defensive
+cybersecurity/enterprise-software growth. None of this is a substitute for
+Tuesday's live momentum/FCF/spread recheck at the buy-side gate — flagged as
+the more promising names to re-verify first, not pre-approved.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+No entries. MNKD and RIGL (held) have no catalyst inside the 5-trading-day
+gap-risk window per the audit above. Of the unheld names, **PLPC** shows a
+real, if unconfirmed-until-Friday, momentum risk flag — Gemini reports a
+3.64% weekend-adjacent slide through its 50-day MA on elevated volume, no
+earnings catalyst until late October — worth a fresh Alpaca-bars check at
+the next refresh rather than an entry signal now. CGEM, SHIP, ZYME, GNK: no
+material weekend news: GNK's dividend-declaration catalyst remains ~early
+Nov (unchanged), SHIP's next earnings is late Oct/Nov (unchanged). No
+satellite candidate qualifies for a new entry this session.
+
+### Risk Factors
+- Active, independently-confirmed US-Iran conflict effectively disrupting
+  Strait of Hormuz transit — real, sustained oil-price and volatility driver
+  (Brent +9%/wk), not a one-day spike.
+- Elevated Fed rate-hike risk (~61-66% odds for 9/15-16 FOMC) plus a 10-year
+  yield near 4.80% — a genuine headwind for long-duration/high-multiple
+  tech and, directly, for held SPHY's high-yield-credit exposure.
+- APA's mandatory two-week thesis-broken exit is due at Tuesday's
+  market-open, execute regardless of P&L — the current oil tailwind does not
+  override the mechanical watchlist rule.
+- U.S. midterm primaries Tue 9/8 add near-term political-uncertainty
+  background risk (Gemini-sourced only).
+- No held position is near its hard-cut: APA (+0.38% today per last mark),
+  MNKD (+1.5%), RIGL (+16.3%), all well clear of -7%/-15%; income sleeve
+  stops all intact.
+- Cash 20.23%, at/above the 20% floor — no sweep action needed this session.
+
+### Decision
+**HOLD.** No core or satellite trade sourced or executed — this pre-market
+workflow doesn't place trades regardless, and the next session is Tuesday
+9/8 (Monday is a market holiday). Valid per the Patience Rule. Top items for
+Tuesday: (1) execute APA's mandatory thesis-broken exit at market-open
+regardless of P&L, (2) re-verify VLO/MPC/PSX and CRWD/WDAY momentum/spread
+live before any entry — weekend price-target commentary is not a substitute
+for the buy-side gate, (3) monitor the Iran/Hormuz conflict and Fed-hike-odds
+backdrop for further escalation into CPI (9/11) and the FOMC (9/15-16), (4)
+watch RIGL's continued approach toward its +25% satellite tighten threshold,
+(5) no action needed on SPHY yet, but keep watching credit-spread-widening
+risk given the rate backdrop.
+
+### Notification sent
+Sent one email per STEP 5 (major geopolitical event: active Iran/Hormuz
+conflict, oil +9%/wk, rising Fed-hike odds) — ASCII-only subject, no other
+positions at/near a hard-cut.
