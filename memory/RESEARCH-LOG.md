@@ -4840,3 +4840,27 @@ Sending one email per STEP 5 (major geopolitical event: direct Iran missile
 attack on US Navy vessels near the Strait of Hormuz, strait effectively
 closed to commercial shipping, oil sustained +9%/wk) — ASCII-only subject.
 No held position at/near a hard-cut.
+
+### 11 AM Session Note
+- **Market holiday confirmed — Labor Day, no trading session today.** `alpaca.sh
+  account`/`positions`/`orders` all reflect Friday 9/4's close (`balance_asof:
+  2026-09-04`, every open position's `change_today: 0`) — no live market data,
+  consistent with pre-market's holiday flag. No "### Approved Trades (verified)"
+  section exists in today's RESEARCH-LOG (pre-market's Decision was HOLD, no-trade,
+  holiday) and none is possible today regardless — per STEP 3, no buys placed.
+- **No cuts.** All 6 positions unchanged from Friday's close: APA +0.38% (core, well
+  clear of -7%), MNKD +1.5%, RIGL +16.3% (satellite, both well clear of -15%). No
+  price movement to evaluate since the market hasn't opened.
+- **No stop tightening.** No position crossed a gain-based threshold since Friday's
+  close (RIGL still below its +25% satellite tighten level). No stop moved down.
+  All 6 GTC trailing stops confirmed live via `alpaca.sh orders` (APA 10%/$40.6125,
+  MNKD 15%/$3.74, RIGL 15%/$42.415, EDGX 5%/$25.9825, SPHY 5%/$22.23, SGOV 5%/
+  $95.4465 on 193 covered sh) — none missing.
+- **Thesis check:** nothing to re-check beyond pre-market's findings — no new data
+  exists intraday on a holiday. APA's mandatory two-week thesis-broken exit (off
+  the core watchlist 8/28 and 9/4) remains queued for Tue 9/8 market-open, per
+  pre-market. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23),
+  industrials 0/2.
+- **Lesson:** none new — same holiday-driven no-op as flagged at pre-market. No
+  Gemini call this window (nothing moved, market closed). Cash 20.23%, at/above the
+  20% floor, no sweep needed.
