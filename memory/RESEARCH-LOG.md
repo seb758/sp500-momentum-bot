@@ -4864,3 +4864,39 @@ No held position at/near a hard-cut.
 - **Lesson:** none new — same holiday-driven no-op as flagged at pre-market. No
   Gemini call this window (nothing moved, market closed). Cash 20.23%, at/above the
   20% floor, no sweep needed.
+
+### 3 PM Session Note
+- **Market holiday confirmed — Labor Day, no trading session today.** `alpaca.sh
+  account`/`positions`/`orders` still reflect Friday 9/4's close (all 6 positions'
+  `change_today: 0`; account `balance_asof: 2026-09-04`), consistent with
+  pre-market's and 11am's holiday flag — no new price data this window either.
+  No "### Approved Trades (verified)" section exists in today's RESEARCH-LOG and
+  none is possible today regardless — per STEP 3, no buys placed.
+- **No risk-sweep action.** No position at/beyond its sleeve hard-cut (APA +0.38%
+  core vs. -7% cut; MNKD +1.5%, RIGL +16.3% satellite vs. -15% cut) — unchanged
+  from pre-market/11am since no price movement occurred. All 6 open positions
+  (APA, MNKD, RIGL, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops
+  via `alpaca.sh orders`, none missing. No satellite catalyst inside the
+  1-2-trading-day gap-risk window (next trading day is Tue 9/8; RIGL's Citi 9/9/
+  Cantor 9/10 appearances remain non-binary IR events, outside the window measured
+  from 9/8). No thesis break to act on — nothing new since 11am's check.
+- **No stop tightening.** No position crossed a gain-based threshold since
+  Friday's close (RIGL +16.3%, still below its +25% satellite tighten level). No
+  stop moved down.
+- **No TRADE-LOG snapshot this window** — equity, positions, and stops are
+  identical to Friday 9/4's already-logged 3pm snapshot (no trading occurred to
+  produce a distinct "today"); logging a duplicate snapshot would misstate Day
+  P&L continuity for tomorrow's calc rather than preserve it. Tomorrow's (Tue
+  9/8) market-open session should compute Day P&L against the Sep 4 3pm snapshot,
+  the last date on which the market actually traded.
+- **Risky positions closed today: none** (none possible — market closed). Cash
+  20.23%, at/above the 20% floor, no sweep needed. 2-strike sub-sector tracker
+  unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- Top items for Tuesday 9/8 (unchanged from pre-market/11am): (1) execute APA's
+  mandatory two-week thesis-broken exit at market-open regardless of P&L; (2)
+  resume full core-watchlist momentum/FCF re-verification (today's Gemini gap
+  left all 24 names unscreened); (3) monitor the escalating Iran/Hormuz conflict
+  (direct missile exchange with US Navy vessels, strait effectively closed to
+  commercial shipping) for open-gap risk; (4) continue watching RIGL's approach
+  toward its +25% satellite tighten threshold; (5) track GNK's new poison-pill/
+  takeover-defense development (expires 9/30) ahead of the next screen refresh.
