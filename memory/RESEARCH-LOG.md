@@ -4789,3 +4789,54 @@ risk given the rate backdrop.
 Sent one email per STEP 5 (major geopolitical event: active Iran/Hormuz
 conflict, oil +9%/wk, rising Fed-hike odds) — ASCII-only subject, no other
 positions at/near a hard-cut.
+
+## 2026-09-07 — Pre-market Research
+
+### Account
+- Equity: $94,169.47 | Cash: $19,051.41 (20.23%) | Buying power: $282,589.88 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned)
+- Core exposure: $5,175.17 (5.50%: APA) | Satellite exposure: $10,481.28 (11.13%: MNKD $4,932.90 / RIGL $5,548.38) | Income exposure: $59,461.61 (63.14%: EDGX $20,171.54 / SGOV $19,465.10 / SPHY $19,824.96)
+- All 6 open positions (APA, MNKD, RIGL, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stop orders via `alpaca.sh orders`, none missing: APA 10%/$40.6125 (hwm $45.125), MNKD 15%/$3.74 (hwm $4.40), RIGL 15%/$42.415 (hwm $49.90), EDGX 5%/$25.9825 (hwm $27.35), SPHY 5%/$22.23 (hwm $23.40), SGOV 5%/$95.4465 on 193 covered sh (hwm $100.47; the 0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74 dust flagged every prior sweep, not a new gap). No auth errors on account/positions/orders calls.
+- **Market holiday today** (Labor Day, confirmed by the 09-06 entry and unchanged since) — no session until Tue 9/8. This week's counters (Aug 31 start) closed Fri 9/4 at core 1/6 (HPE 8/31, since stopped out), satellite 0/4; next week's 0/6, 0/4 counters start fresh Tue 9/8.
+
+### Data-quality flag — Gemini truncated again (missing sections 1-3, most of 4)
+The consolidated Gemini Deep Research call completed (exit 0) but the captured output **opens directly on the tail of the satellite catalyst-window audit** ("Non-Catalyst Satellite Updates and Status Check") and a closing "Conclusion" — sections 1 (S&P futures/VIX), 2 (weekly catalyst/economic calendar), 3 (held-ticker overnight-news check for APA/MNKD/RIGL/EDGX/SGOV/SPHY), and the core-watchlist half of section 4 (all 24 core tickers) never arrived. Same recurring truncation pattern flagged repeatedly in this log since July. Per the data-quality guard, nothing below is fabricated from a source not actually returned — the market-context and held-position gaps were filled via native WebSearch fallback (see below); the **24 core watchlist tickers were not addressed by either source this session and are logged as data-unavailable, not screened** (immaterial today since markets are closed and no trade action is possible regardless; tomorrow's fresh pre-market run will re-cover them).
+
+### Market Context (WebSearch fallback — Gemini's Section 1 never arrived)
+- **VIX:** confirmed close of **14.32 on 9/4** (WebSearch, Yahoo Finance) — below the ~16.25-16.75 range seen in the two prior sessions' fallback checks. Gemini's own closing "Conclusion" paragraph (the one part of top-of-document material that did come through) asserts "elevated volatility (VIX ~19)" expected for the Tuesday open — this is Gemini's own forward synthesis, not a confirmed print, and is **not independently corroborated**; flagged as lower-confidence pending Tuesday's actual open.
+- **Independently confirmed, real escalation over the weekend, materially beyond what last session (9/6) reported:** US and Iran engaged in direct tit-for-tat strikes — Iran's IRGC fired **ballistic missiles at a US aircraft carrier and destroyer** patrolling near the Strait of Hormuz (Iran also claims to have struck a US-linked vessel; the US military denies this specific claim as "a total lie"); the US targeted three more Iranian oil tankers, with CENTCOM reporting one Iranian vessel sunk. The strait is now **effectively closed to commercial shipping** — US forces have redirected 92 commercial vessels, disabled 3, and boarded 2. Corroborated across Al Jazeera, ABC News, Fox News, and Deseret News. This is a direct-attack escalation (missiles at US Navy vessels), not just a tanker/shipping-lane story — a step up in severity from prior weeks.
+- **Oil:** Brent/WTI-adjacent crude ~$91-92/bbl as of 9/6 (TradingEconomics), up ~9% for the week — consistent with the trend already logged 9/6, not a new spike, but the trend has not reversed.
+- **OPEC+ Oct output:** held unchanged (independently confirmed this session, resolving 9/6's "Gemini-only, not independently re-verified" flag on the same fact).
+- No same-day economic-release calendar or explicit numeric S&P futures level was recoverable from either source this session — flagged as a gap, not fabricated.
+
+### Held-Position Thesis Check (WebSearch fallback — Gemini's Section 3 never arrived)
+- **APA (core, held):** No new company-specific news found beyond the already-logged 9/2 Raymond James PT raise to $54. Oil-price tailwind (Brent +9%/wk, ongoing Hormuz disruption) remains squarely on-thesis and, if anything, strengthens fundamentally. **Unchanged from prior sessions: this does not override the mechanical exit.** APA has been off the core watchlist two consecutive Fridays (8/28, 9/4) — the thesis-broken exit is queued for Tue 9/8 market-open, to execute regardless of P&L. Unrealized +0.38% ($19.36), well clear of the -7% hard-cut.
+- **MNKD, RIGL, CGEM (satellite, held/watched):** Gemini's satellite section (the part of the report that did come through cleanly) confirms **no material weekend corporate developments, SEC filings, or press releases** for any of the three. MNKD (+1.5% unrealized) and RIGL (+16.3% unrealized) both remain well clear of the -15% satellite hard-cut; RIGL continues approaching (not yet at) the +25% tighten threshold. Neither has a catalyst inside the 5-trading-day window (next trading days run through Tue 9/8 - Fri 9/11 window per Gemini's audit — RIGL's Citi 9/9/Cantor 9/10 conference appearances remain non-binary IR events, unchanged from the 9/4 finding).
+- **EDGX / SGOV / SPHY (income, held):** No idiosyncratic ETF-level news found; not thesis-screened per TRADING-STRATEGY.md. SGOV's thesis (short-duration T-bill, benefits from a higher-for-longer rate backdrop) is unaffected. SPHY's standing risk flag (rising yields + oil-driven inflation risk tend to widen high-yield credit spreads) is unchanged, no issuer-specific news; currently modestly negative unrealized, well inside its 5% trailing stop.
+
+### New data points flagged for the next screen refresh (not actionable today — GNK/ZYME not held)
+- **GNK (satellite watchlist, not held):** Genco Shipping adopted a limited-duration shareholder rights plan ("poison pill," 15% ownership trigger) defending against a hostile takeover attempt by Diana Shipping; expires **Sept 30, 2026**. This is a real governance/corporate-action development, not directly a thesis break for GNK's existing dividend-declaration catalyst (still expected ~early Nov, unchanged) — worth tracking at the next refresh given the takeover-defense context, not actionable this session (GNK is not held, and this workflow does not source new candidates outside a fresh momentum check).
+- **ZYME (satellite watchlist, not held):** Confirmed conference appearances — Wells Fargo (9/8), Citi (9/9), Morgan Stanley (9/14) — all non-binary IR events, consistent with ZYME's catalyst already having resolved 8/25 per the standing watchlist note.
+- **PLPC, SHIP (satellite watchlist, not held):** No catalyst inside the 5-trading-day window per Gemini's audit (PLPC's next event, CIPAL trade fair, is 9/23-24; SHIP's next industry appearance is the Saudi Maritime & Logistics Congress 9/16-17) — no change from the 9/4 refresh.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None — markets are closed today (Labor Day) and this is a research-only, no-trade workflow regardless. Gemini's report did not address any of the 24 core watchlist tickers this session (truncation gap, logged above as data-unavailable, not screened). No substitute WebSearch sweep was run across all 24 names given the holiday (no trade is possible today either way) — full fresh momentum/FCF/spread re-verification resumes with tomorrow's Tue 9/8 pre-market run.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+None. MNKD and RIGL (held) have no new entry signal (see Held-Position Thesis Check). GNK's new poison-pill data point (see above) is informational, not an entry signal — GNK is not held. CGEM, PLPC, SHIP, ZYME: no catalyst inside the 5-day window, no new entry signal for any.
+
+### Risk Factors
+- **Direct US-Iran military escalation, materially beyond last session's report:** Iran fired ballistic missiles at a US carrier and destroyer near the Strait of Hormuz; the US reports sinking an Iranian vessel; the strait remains effectively closed to commercial shipping (92 vessels redirected, 3 disabled, 2 boarded). A real, live, escalating conflict — not a one-day headline.
+- Elevated Fed rate-hike risk into the 9/15-16 FOMC (per prior sessions' independently-corroborated ~60-66% hike odds) compounds with sustained oil-driven inflation pressure — a genuine headwind for long-duration tech and, directly, for held SPHY's high-yield-credit exposure.
+- **APA's mandatory two-week thesis-broken exit is due at Tuesday's (9/8) market-open, execute regardless of P&L** — unchanged, oil tailwind does not override the mechanical watchlist rule.
+- No held position is near its hard-cut: APA +0.38%, MNKD +1.5%, RIGL +16.3%, all well clear of -7%/-15%; income sleeve stops all intact.
+- Cash 20.23%, at/above the 20% floor — no sweep action needed.
+- Gemini's report this session was missing sections 1-3 and the entire core-watchlist half of section 4 — market-context and held-position gaps filled via WebSearch, core-ticker gap logged as unscreened (immaterial today, no trade possible).
+
+### Decision
+**HOLD.** Markets closed today (Labor Day) — no trade possible regardless. No core or satellite candidate sourced or actionable. Valid per the Patience Rule. Top items for Tuesday 9/8: (1) **execute APA's mandatory thesis-broken exit at market-open regardless of P&L**; (2) resume full core-watchlist momentum/FCF re-verification (today's Gemini gap left all 24 names unscreened); (3) monitor the escalating Iran/Hormuz conflict — a direct missile attack on US Navy vessels is a meaningfully more severe development than prior weeks and could gap risk assets at Tuesday's open; (4) continue watching RIGL's approach toward its +25% satellite tighten threshold; (5) track GNK's new poison-pill/takeover-defense development (expires 9/30) ahead of the next screen refresh.
+
+### Notification sent
+Sending one email per STEP 5 (major geopolitical event: direct Iran missile
+attack on US Navy vessels near the Strait of Hormuz, strait effectively
+closed to commercial shipping, oil sustained +9%/wk) — ASCII-only subject.
+No held position at/near a hard-cut.
