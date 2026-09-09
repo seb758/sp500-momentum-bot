@@ -2252,3 +2252,50 @@ items worth a first look, not pre-approved); watch RIGL's continued approach tow
 its +25% satellite tighten threshold; MNKD's Cantor conference (9/10) is now 1 trading
 day out — confirm no adverse pre-conference news; monitor the Iran/Hormuz
 corridor-deal situation for resolution either direction.
+
+## Sep 9 — 3pm Snapshot (Day 46, Wednesday)
+**Portfolio:** $93,789.37 | **Cash:** $19,083.81 (20.35%) | **Day P&L:** -$487.91 (-0.52%) | **Phase P&L:** -$6,210.63 (-6.21%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $10,245.74 (10.93% of equity) | **Income exposure:** $64,459.82 (68.73% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $4.005 | -3.73% | +$6.08 (+0.13%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $47.19 | -0.38% | +$609.90 (+12.79%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.65 | -0.61% | -$96.98 (-0.49%) | 5% trailing ($25.9825) |
+| SGOV | income | 246.740468683 | $100.459626 | $100.48 | +0.00% | +$5.03 (+0.02%) | 5% trailing ($95.4655, 246 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.115 | -0.11% | -$209.72 (-1.05%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite trades this window (or all session) — no "Approved
+Trades (verified)" list existed in today's RESEARCH-LOG at any window (pre-market,
+9:30am, 11am, 3pm all HOLD), so per STEP 3 the buy side was HOLD all day; this week
+(Sep 8 start) closes at core 0/6, satellite 0/4 new trades — valid per the Patience
+Rule. No account activity today at all (no buys, no sells, no sweeps) — 9:30am
+checked 7 core candidates (DELL, CRWD, DXCM, NTAP, MPC, VLO, PSX) and skipped all 7
+on wide/stale bid-ask spreads at the open, none reached this window as a live
+candidate. Risk sweep (3pm): core has 0 open positions, nothing to check; satellite
+MNKD +0.13% and RIGL +12.79%, both well clear of the -15% hard-cut; income EDGX
+-0.49% and SPHY -1.05%, both well inside the 5% stop. All 5 open positions confirmed
+via `alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing
+(SGOV's 0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74
+dust flagged every prior sweep, not a new gap). No stop moved down. Fresh WebSearch
+thesis check on MNKD and RIGL found no adverse news — MNKD's only item is tomorrow's
+(9/10) Cantor Global Healthcare Conference (confirmed non-binary IR, same pattern as
+every prior appearance); RIGL's CFO presented today at Citi's Biopharma Back to
+School Conference (also non-binary IR). Gap-risk check: MNKD's Cantor conference is
+1 trading day out (inside the 1-2-day window) but non-binary, so the binary-catalyst
+sizing rule doesn't apply — holding through is valid, stated explicitly per STEP 4.
+No stop tightening this window — RIGL (+12.79%) still below the satellite +25%
+threshold; MNKD not in meaningful gain; Income sleeve has no gain-based schedule.
+2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+Cash 20.35%, at/above the 20% floor, no sweep needed. Risky positions closed today:
+none. Day P&L (-0.52%) driven mainly by MNKD's intraday pullback (-3.73%) and SPHY's
+modest decline, partly offset by RIGL/SGOV holding roughly flat-to-positive. Phase
+P&L now -6.21% since Day 0 ($100,000 -> $93,789.37). Core exposure remains 0.00% (0
+of 6 slots open) — rebuilding core exposure from a fresh momentum/FCF/rating-
+qualified candidate stays the top priority; satellite steady at 10.93% (2 of 4
+slots: MNKD, RIGL). Tomorrow: re-verify momentum/FCF/rating live at the buy-side
+gate for DELL/CRWD/DXCM/NTAP/MPC/VLO/PSX after a fresh liquidity check post-open;
+MNKD's Cantor conference (9/10) is the top event to monitor (non-binary, no sizing
+action expected); continue watching RIGL's approach toward its +25% satellite
+tighten threshold; monitor the Iran/Hormuz corridor-deal situation and today's
+ADP/10-Year auction read-through into the 9/15-16 FOMC.
