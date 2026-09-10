@@ -2,3 +2,19 @@
 ---
 ## 2026-09-10 (fallback — SendGrid returned 401 Unauthorized, not a missing-credential case)
 Pre-market alert 2026-09-10: Brent crude broke 100 dollars/bbl (first time since July) on escalating US-Iran military strikes near the Strait of Hormuz; VIX up to 16.36. No held position (MNKD, RIGL, EDGX, SGOV, SPHY) is near its hard-cut. Core sleeve remains at 0 open positions. No trade action taken; HOLD per Patience Rule.
+
+---
+## 2026-09-10 3PM (fallback — SendGrid still returning 401 Unauthorized)
+3PM Sep 10
+Portfolio: $93,303.45 (-0.52% day, -6.70% phase)
+Core: $0 (0%) | Satellite: $9,911.19 (10.62%) | Cash: $19,083.81 (20.45%)
+Trades today: none
+Risky positions closed: none
+Open positions:
+  MNKD (sat) -5.75% (stop $3.74)
+  RIGL (sat) +11.76% (stop $42.415)
+  EDGX (inc) -0.78% (stop $25.9825)
+  SGOV (inc) +0.03% (stop $95.475)
+  SPHY (inc) -1.52% (stop $22.23)
+This week: core 0/6, satellite 0/4
+Tomorrow: re-check core candidates post-open; monitor Iran/Brent
