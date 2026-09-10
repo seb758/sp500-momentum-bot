@@ -2299,3 +2299,51 @@ MNKD's Cantor conference (9/10) is the top event to monitor (non-binary, no sizi
 action expected); continue watching RIGL's approach toward its +25% satellite
 tighten threshold; monitor the Iran/Hormuz corridor-deal situation and today's
 ADP/10-Year auction read-through into the 9/15-16 FOMC.
+
+## Sep 10 — 3pm Snapshot (Day 47, Thursday)
+**Portfolio:** $93,303.45 | **Cash:** $19,083.81 (20.45%) | **Day P&L:** -$485.92 (-0.52%) | **Phase P&L:** -$6,696.55 (-6.70%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $9,911.19 (10.62% of equity) | **Income exposure:** $64,308.45 (68.93% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| MNKD | satellite | 1215 | $4.00 | $3.77 | -4.32% | -$279.45 (-5.75%) | 15% trailing ($3.74) |
+| RIGL | satellite | 114 | $41.84 | $46.76 | -0.97% | +$560.88 (+11.76%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.57 | -0.52% | -$156.66 (-0.78%) | 5% trailing ($25.9825) |
+| SGOV | income | 246.740468683 | $100.459626 | $100.49 | +0.00% | +$7.49 (+0.03%) | 5% trailing ($95.475, 246 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.005 | -0.45% | -$303.88 (-1.52%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite trades this window (or all session) — no "Approved
+Trades (verified)" list existed in today's RESEARCH-LOG at any window (pre-market,
+9:30am, 11am, 3pm all HOLD), so per STEP 3 the buy side was HOLD all day; this week
+(Sep 8 start) closes at core 0/6, satellite 0/4 new trades — valid per the Patience
+Rule. No account activity today at all (no buys, no sells, no sweeps). Risk sweep
+(3pm): no core positions to check (0 of 6 slots open); satellite MNKD -5.75% and
+RIGL +11.76%, both well clear of the -15% hard-cut; income EDGX -0.78% and SPHY
+-1.52%, both well inside the 5% stop; SGOV flat. All 5 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing
+(SGOV's 0.740468683-sh fractional remainder stays unstopped, same immaterial ~$74
+dust flagged every prior sweep, not a new gap). No stop moved down. MNKD's Cantor
+Global Healthcare Conference (11:30am ET) resolved during the session as a standard
+non-binary IR appearance, consistent with every prior conference appearance for
+this name — no adverse news, no gap-risk sizing action triggered. Thesis check:
+MNKD/RIGL both intact, no adverse news found today. No stop tightening this window
+— RIGL (+11.76%) still below the satellite +25% threshold; MNKD underwater, no
+gain-based tightening applies; Income sleeve has no gain-based schedule.
+2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+Cash 20.45%, at/above the 20% floor, no sweep needed. Risky positions closed today:
+none. Day P&L (-0.52%) driven mainly by continued softness in MNKD and SPHY, with
+RIGL and EDGX modestly negative too, against a broader risk-off tape (Brent crude
+above $100/bbl on fresh US-Iran military escalation, flagged pre-market). Phase P&L
+now -6.70% since Day 0 ($100,000 -> $93,303.45). Core exposure remains 0.00% (0 of
+6 slots open) — rebuilding core exposure from a fresh momentum/FCF/rating-qualified
+candidate stays the top priority once one clears the live buy-side gate (7 names —
+DELL, CRWD, DXCM, NTAP, MPC, VLO, PSX — failed on wide/stale opening spreads two
+sessions running, 9/9 and 9/10); satellite steady at 10.62% (2 of 4 slots: MNKD,
+RIGL). SendGrid remains broken (401 Unauthorized on this window's live send too, first
+flagged pre-market today) — not a missing-credential case, the key itself appears
+invalid/expired; content preserved in `DAILY-SUMMARY.md`'s local fallback; owner
+action needed to rotate the key. Tomorrow: re-verify momentum/FCF/rating live at the buy-side
+gate for the same 7 core candidates with a fresh liquidity check post-open; watch
+whether the US-Iran/Brent-crude escalation continues or de-escalates; continue
+watching RIGL's approach toward its +25% satellite tighten threshold; escalate the
+SendGrid key rotation to the owner if not yet resolved.
