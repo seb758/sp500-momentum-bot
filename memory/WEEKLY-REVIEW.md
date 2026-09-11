@@ -1402,3 +1402,249 @@ review added a reconciliation step the daily sessions don't currently run.
 Grade reflects that mix: strong process and a genuinely productive,
 on-schedule screen refresh, offset by a losing week and a new logging gap
 that needs a standing fix, not just this week's one-time catch.
+
+---
+
+## Week ending 2026-09-11
+
+**Coverage note — this entry covers a single market week (2026-09-08 through
+2026-09-11, a 4-day week — Monday 2026-09-07 was the Labor Day holiday).**
+The 09-04 review's refresh landed on time, and this refresh is also running
+on schedule (fourth Friday in a row on time) — WATCHLIST.md's "Current"
+section was still dated "Week of 2026-09-04" going into this session,
+correctly current for the full period.
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $94,167.29 (per week-ending-2026-09-04 review) |
+| Ending portfolio | $93,457.24 |
+| Week return | -$710.05 (-0.75%) |
+| S&P 500 week | -0.62% (7,718.60 -> 7,671.08, via Gemini Deep Research; note: last week's review cited a 7,719.38 close for 09-04 vs. this week's report citing 7,718.60 for the same date — a ~0.01% discrepancy, immaterial, flagged per the data-quality guard rather than silently picking one) |
+| Bot vs S&P | -0.13pp (bot underperformed) |
+| Core trades | 1 (W:1 / L:0 / open:0) |
+| Satellite trades | 1 (W:0 / L:1 / open:0; RIGL held throughout, not a new trade this period) |
+| Win rate (closed trades) | 50% (1/2) |
+| Best trade | APA +3.92% (core) |
+| Worst trade | MNKD -6.50% (satellite) |
+| Profit factor | 0.64 (gross profit $202.19 / gross loss $315.90) |
+
+Income sleeve (SGOV/SPHY/EDGX) is not included in the trade/win-rate stats
+above — it's not momentum/catalyst-screened and isn't subject to the weekly
+trade caps. This period's income activity was two sweep-backs after
+Core/Satellite exits (09-08 after APA, 53 sh; 09-11 after MNKD, 48.249 sh),
+both restoring cash to just above the 20% floor per the sweep-first-to-SGOV
+rule. No floor breaches this period.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| APA | core | $42.61 | blended $44.281818 (45 sh @ $44.08 + 76 sh @ $44.40) | +$202.19 (+3.92%) | Thesis-broken exit (off the core watchlist two consecutive Fridays, 08-28 and 09-04), executed 09-08 regardless of P&L per TRADING-STRATEGY.md's mandatory rule. Execution anomaly: the market sell order partially filled (45/121 sh) then stalled indefinitely with no further progress — a new failure mode, first occurrence in this account's history; `alpaca.sh orders` (open list) also returned stale data during the stall (a second, distinct data-quality issue). Resolved by canceling the stalled remainder and resubmitting, which filled completely ~60s later. Flagged for owner awareness as a platform/wrapper execution issue, not a strategy or gate failure |
+| MNKD | satellite | $4.00 | $3.74 | -$315.90 (-6.50%) | 15% GTC trailing stop, filled 2026-09-11T15:51:06Z (11:51am ET), trail from hwm $4.40. No thesis break, no adverse news found in pre-market/9:30am/11am checks that day (Cantor conference 09-10 was non-binary, resolved cleanly). **Second consecutive biotech-sub-sector satellite loss (after OCUL, 2026-07-23), with no intervening biotech close between them — triggers the 2-strike sub-sector cooldown: no new satellite biotech entries until 2026-09-25.** Industrials sub-sector unaffected (0 strikes) |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| RIGL | satellite | $41.84 | $47.24 | +$615.60 (+12.91%) | 15% trailing, trigger $42.415 (hwm $49.90) |
+| EDGX | income | $26.78 | $26.7476 | -$24.17 (-0.12%) | 5% trailing, trigger $25.9825 (hwm $27.35) |
+| SGOV | income | $100.469501 | $100.5197 | +$14.81 (+0.05%) | 5% trailing, trigger $95.48925 (hwm $100.515, 294 of 294.989473856 sh covered) |
+| SPHY | income | $23.36 | $23.00 | -$308.16 (-1.54%) | 5% trailing, trigger $22.23 (hwm $23.40) |
+
+All 4 open positions confirmed carrying live GTC trailing stop orders via
+`alpaca.sh orders open`, none missing. Week-end exposure (equity
+$93,457.24): core $0.00 (0.00%), satellite $5,385.36 (5.76%), income
+$69,293.96 (74.14%), cash $18,777.92 (20.09%, above the 20% floor). Core
+sleeve has been at 0 open positions since APA's 09-08 exit — 7 candidates
+(DELL, CRWD, DXCM, NTAP, MPC, VLO, PSX) failed on wide/stale opening
+spreads two sessions running (09-09, 09-10), the single biggest blocker to
+rebuilding core exposure this week.
+
+**Trade-log reconciliation (per last review's adjustment):** `alpaca.sh
+orders closed` for this period (09-04 through 09-11) shows exactly 4 fills
+— APA sell (two partial fills, 09-08), SGOV buy (09-08), MNKD sell
+(09-11), SGOV buy (09-11) — all four match TRADE-LOG.md entries exactly.
+No logging gap this period, unlike the 09-04 review's XYZ finding.
+
+### Watchlist Refresh
+- **Core: 24 names (was 24, composition changed).** Full 503-name universe
+  re-screened via fresh Alpaca bars (S&P 500 list via direct `curl` against
+  a GitHub-hosted dataset, no WebFetch summarization risk). FMP
+  402'd/errored on 47 of 55 shortlisted names — only MRNA, AMD, HOOD, TGT,
+  MSFT, BAC, JPM, AAPL returned usable data; the rest came from Gemini Deep
+  Research, batched ~9 tickers/query. New this week (7): HPE, MU, STX,
+  GPC, BBY, BNY, MET. Retained (17): DELL, HUM, MPC, ZBRA, CRWD, VLO, CRL,
+  NTAP, VEEV, PSX, IQV, HOOD, STT, WDAY, CRM, ABNB, RVTY. Dropped from the
+  prior 24-name list (7): CNC and DASH (both fell below their 50-day MA — a
+  real momentum reversal, not a fundamentals fail), INCY/DXCM/ADP (still
+  pass fundamentals, cut-line alternates this week), MRK (Sell lean jumped
+  from 0% to a meaningful 12.5% week-over-week — a genuine deterioration,
+  not noise), TRV (23% Sell lean, fails fundamentals). Full ticker-by-ticker
+  audit, including 13 names that failed fundamentals this week and 3 with
+  insufficient/ambiguous data, is in WATCHLIST.md.
+- **Sector-cap enforcement bumped two names this week for the first time in
+  several refreshes:** GEN and ANET both cleared momentum + fundamentals
+  inside the top-24 cut, but Information Technology was already at 9/24
+  (37.5%) without them — both moved to sector-capped alternates rather than
+  pushing IT over the ~40% cap. The cap did what it's designed to do.
+- **Gemini reliability was the best since 08-28**: 6 of 7 initial
+  submissions (5 fundamentals batches + the satellite candidate query)
+  completed clean on the first try. One batch (RVTY/APA/MET/IVZ/EXPD/
+  LITE/INCY/TMO/MRK) came back containing only its citation list — a new
+  truncation variant ("citations only, no body"). A same-query resubmit ran
+  20+ minutes then failed outright (`curl: 500`); splitting it into two
+  smaller sub-batches succeeded cleanly on the first try. No figure below
+  traces to an incomplete report.
+- **Satellite: 5 names (was 7, -2 net, no new adds).** Retained RIGL
+  (held), CGEM, PLPC, SHIP, GNK — all momentum-confirmed clean. Dropped
+  **MNKD** (mechanical stop-out today, see Closed Trades) and **ZYME** (real
+  momentum reversal — 6M relative return turned negative for the first time
+  since it was added, even though still above both MAs). **No new
+  candidates were added or even screened for fundamentals/catalyst this
+  week**: MNKD's stop-out put the biotech sub-sector at its second
+  consecutive loss, triggering the 2-strike cooldown (no new biotech
+  entries through 2026-09-25) — this week's 8 Gemini-sourced biotech
+  candidates (XERS, OCUL, CUE, ZNTL, CAPR, FATE, SVRA, AVXL) were skipped
+  outright per STEP 7e rather than researched and discarded. On the
+  industrials side, 6 candidates (RCAT, LUNR, EOSE, RDW, NSSC, MLR) were
+  sourced with real catalysts but all failed either the momentum gate
+  (RCAT/LUNR/EOSE/RDW/NSSC, -3.7pp to -49pp 3M relative return) or the
+  sector-fit check (MLR classifies as Consumer Cyclical/Auto Parts via
+  `fmp.sh profile`, not Industrials, despite narrative framing) — the same
+  "structured source beats narrative" pattern flagged in prior weeks.
+- **Core sector mix (24 names):** semis/AI-hardware cluster (DELL, HPE, MU,
+  STX, NTAP) 5/24 (20.8%), well under the 40% cap. Information Technology
+  is the largest GICS grouping at 9/24 (37.5%, right at the cap after GEN
+  and ANET were bumped to alternates), followed by Health Care 5,
+  Financials 4, Energy 3, Consumer Discretionary 3 — 5 distinct sectors.
+  Full breakdown and the complete failed-fundamentals/alternates audit are
+  in WATCHLIST.md.
+
+### What Worked
+- **Mechanical stop and thesis-broken discipline both fired exactly as
+  designed.** APA's mandatory two-week thesis-broken exit executed at the
+  first available session after the triggering refresh (09-08), regardless
+  of P&L, and happened to close for a gain (+3.92%) — this week's fresh
+  fundamentals check on APA (13% meaningful Sell lean) independently
+  confirms the exit call was correct, not just rule-compliant. MNKD's stop
+  fired mechanically with no override.
+- **The 2-strike sub-sector cooldown fired correctly on its second-ever
+  trigger** (biotech, after OCUL in July) — the mechanism was designed for
+  exactly this scenario and worked without any session needing to
+  improvise: MNKD's stop-out was immediately recognized as the second
+  consecutive biotech loss, and this week's screen refresh correctly
+  skipped researching any new biotech candidates rather than screening them
+  and then discarding them for the cooldown after the fact.
+- **The weekly screen refresh ran on schedule for a fourth consecutive
+  Friday**, and this week's Gemini reliability was the cleanest since
+  08-28 — only one of seven initial submissions needed a resubmit, versus
+  multiple resubmits/failures in most prior weeks.
+- **The trade-log reconciliation step (added as a standing check after the
+  09-04 review's XYZ gap) found a clean match this week** — all 4 Alpaca
+  fills for the period trace to their own TRADE-LOG.md entry, with no
+  reconstruction needed.
+- Cash floor discipline held all week (20.07%-20.45%, never breached);
+  every open position confirmed carrying a live GTC trailing stop at every
+  session; the SGOV-first, never-SPHY/EDGX funding-sweep rule was followed
+  correctly on both sweep-backs this period.
+
+### What Didn't Work
+- **Core sleeve spent the entire period at 0 open positions** (5.5% of
+  equity at the start, falling to 0% after APA's exit and staying there) —
+  a direct result of 7 live-momentum-passing candidates (DELL, CRWD, DXCM,
+  NTAP, MPC, VLO, PSX) failing on wide/stale opening-auction spreads on
+  both 09-09 and 09-10. This is now a multi-week-running pattern first
+  flagged in the 08-21 and 08-28 reviews, and it directly cost the sleeve
+  its entire target allocation for the back half of this period.
+- **A new, first-of-its-kind execution anomaly on APA's exit**: the market
+  sell order partially filled (45 of 121 shares) then stalled indefinitely
+  with no further progress for several minutes — every prior market order
+  in this account's history has filled instantly and completely. Compounded
+  by a second, distinct issue: `alpaca.sh orders` (the open-orders list
+  endpoint) showed the order as unfilled while a direct per-order query
+  correctly showed the partial fill — a stale-cache problem layered on top
+  of the fill anomaly. Both resolved without loss (cancel + resubmit), but
+  neither has occurred before in this account.
+- **SendGrid has now been returning 401 Unauthorized since 2026-09-10,
+  unresolved through the end of this period** — not a missing-credential
+  case (the env-var check at the top of this session confirms
+  SENDGRID_API_KEY etc. are all set), the key itself appears invalid or
+  expired. Every notification since 09-10 has gone to the local
+  DAILY-SUMMARY.md fallback instead of email. This needs owner action
+  (rotate the SendGrid API key) — no session-level fix is possible.
+- **MRK's Sell lean moved from 0% to a meaningful 12.5% in a single week**
+  with no change in the underlying FCF/growth story — a reminder that a
+  "pass with a flag" name can lose its qualifying status on live analyst
+  sentiment alone, independent of the fundamentals theme that earned it the
+  flag in the first place.
+
+### Key Lessons
+- **A recurring wide/stale-spread pattern that blocks core entries for
+  multiple sessions running is now a structural cost, not noise.** This
+  period it left the core sleeve at 0% of equity — its full 85% target —
+  for the entire back half of the week. Prior reviews (08-21, 08-28)
+  flagged this as "worth escalating... rather than re-flagging as a fresh
+  observation each week"; this week is the clearest evidence yet that it
+  materially affects deployment, not just occasionally blocking one or two
+  names.
+- **The 2-strike cooldown's design — block the sub-sector before spending
+  research effort on it, not after — paid off exactly as intended this
+  week.** Skipping fundamentals/catalyst research on 8 biotech candidates
+  that could never have been traded regardless of how well they screened
+  saved real session time versus researching them and discarding the
+  results, which is what would have happened under a less careful reading
+  of STEP 7e.
+- **A platform-level execution anomaly (partial-fill stall + stale
+  order-list cache) is a new risk category distinct from the previously
+  logged session-persistence gaps and Gemini reliability issues** — this
+  is the paper-trading engine itself behaving unexpectedly, not a workflow
+  or research-pipeline problem. Worth a standing watch item: if a market
+  order doesn't fill completely within ~1 minute, treat it as anomalous and
+  verify with a direct per-order GET rather than trusting the open-orders
+  list.
+
+### Adjustments for Next Week
+- Rebuild core exposure — down to 0 of 6 slots — from this week's freshly
+  re-screened watchlist once spread/liquidity checks actually clear at
+  market-open; DELL, CRWD, DXCM, NTAP, MPC, VLO, and PSX are the live
+  momentum-passing names to re-check first.
+- Escalate the SendGrid 401 to the owner explicitly in this review's email
+  attempt and PR description — this is now 2+ days unresolved and needs a
+  key rotation outside any session's ability to fix.
+- No new satellite biotech entries before 2026-09-25 (2-strike cooldown) —
+  don't re-screen the sub-sector until then regardless of how the market
+  moves.
+- Watch RIGL's continued approach toward its +25% satellite tighten
+  threshold (currently +12.91%, easing back from a recent high).
+- If the wide/stale-spread pattern blocks core entries for a third
+  consecutive week, treat it as a standing infrastructure item warranting
+  its own investigation (per Key Lessons above) rather than a per-session
+  anomaly — it has now materially affected deployment for multiple weeks
+  running.
+- No core risk-cap changes (sleeve %, stop widths, tighten thresholds,
+  sector-cap threshold) this week — this period's shortfalls were a
+  spread/liquidity access problem, a platform execution anomaly, and a
+  correctly-functioning 2-strike cooldown reducing satellite's opportunity
+  set, not evidence the risk parameters themselves are miscalibrated.
+
+### Overall Grade: B-
+Every mechanical and rule-driven system that was tested this week worked
+exactly as designed: APA's thesis-broken exit fired on schedule and turned
+out to be fundamentally correct on re-verification, MNKD's stop protected
+capital with no override, and the 2-strike sub-sector cooldown triggered
+and was immediately respected by this same session's own screen refresh —
+its first real test since the mechanism was added in July. The screen
+refresh itself ran on time for a fourth straight Friday with the cleanest
+Gemini data-quality picture since 08-28. Against that: the core sleeve
+spent essentially the entire period at 0% deployed against an 85% target,
+driven by a spread/liquidity pattern that has now recurred for multiple
+weeks without a fix, and a genuinely new execution anomaly (a stalling
+partial fill paired with a stale order-status cache) surfaced for the
+first time in this account's history. Both are real operational costs, but
+neither reflects a broken control — they were caught, worked around, and
+documented rather than causing a bad trade or an unlogged position. A
+persistently broken SendGrid integration is the other loose end carried
+into next week, needing owner action rather than a session-level fix.
+Grade reflects a week where every risk control did its job under real
+pressure (including a first-time trigger of the cooldown mechanism), offset
+by a costly, recurring execution-access problem still unresolved and one
+new platform-level surprise.
