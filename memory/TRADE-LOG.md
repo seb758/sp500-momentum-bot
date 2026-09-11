@@ -2347,3 +2347,59 @@ gate for the same 7 core candidates with a fresh liquidity check post-open; watc
 whether the US-Iran/Brent-crude escalation continues or de-escalates; continue
 watching RIGL's approach toward its +25% satellite tighten threshold; escalate the
 SendGrid key rotation to the owner if not yet resolved.
+
+### 2026-09-11 — SELL MNKD (satellite) — trailing stop
+Shares: 1215 | Exit: $3.74 | Realized P&L: -$315.90 (-6.50%) | Reason: 15% GTC trailing stop filled automatically at 2026-09-11T15:51:06Z (11:51am ET), trail from hwm $4.40, trigger $3.74. Filled between the 11am and 3pm sessions — neither caught it live; the 11am note had MNKD at -5.38% (not yet at the stop), and no session ran in between. Mechanical stop protection working as designed, no thesis break found (no adverse MNKD news in today's pre-market/9:30am/11am checks — Cantor conference 9/10 was non-binary and resolved cleanly). **Second consecutive biotech-sub-sector satellite loss (after OCUL, 2026-07-23) with no intervening biotech close between them — triggers the 2-strike sub-sector cooldown: no new satellite biotech entries until 2026-09-25.** Industrials sub-sector unaffected (0 strikes).
+
+### 2026-09-11 — BUY SGOV (income) — cash-floor sweep-back after MNKD stop-out
+Shares: 48.249005173 | Entry: $100.52 (market) | Stop: 5% trailing GTC on the combined 294 whole shares (canceled the standing 246-share stop, replaced with one 294-share stop, trigger $95.48925, hwm $100.515; 0.989473856-sh fractional remainder stays unstopped, same immaterial dust pattern as every prior sweep, ~$99) | Target: n/a | R:R: n/a
+Thesis: Income sleeve sweep-back rule (TRADING-STRATEGY.md — sweep freed cash above the 20% floor into SGOV first after a Core/Satellite sell).
+Funding reason (income only): MNKD's stop-out freed cash to $23,627.91 (25.25% of $93,552.33 equity) vs. the 20% floor (~$18,710.47). Swept $4,850 (48.249 sh) into SGOV, leaving cash at $18,777.92 (20.07% of $93,551.80 post-trade equity) — a small buffer above the floor, consistent with prior sweep sizing.
+
+**Post-exit sleeve state:** Satellite down to 1 open position (RIGL, +13.53%, 1 of 4 slots). Core unchanged (0 of 6 slots, since APA's 9/8 exit). This week (Sep 8 start, last session of the week): core 0/6 new trades, satellite 0/4 new trades — a stop-out doesn't count against the weekly new-entry cap. Biotech satellite sub-sector now under a 2-week cooldown (through 2026-09-25) per the 2-strike rule above; industrials remains open (0 strikes). All remaining open positions (RIGL, EDGX, SGOV, SPHY) confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none missing.
+
+## Sep 11 — 3pm Snapshot (Day 48, Friday)
+**Portfolio:** $93,551.80 | **Cash:** $18,777.92 (20.07%) | **Day P&L:** +$248.35 (+0.27%) | **Phase P&L:** -$6,448.20 (-6.45%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,415.00 (5.79% of equity) | **Income exposure:** $69,358.88 (74.13% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $47.50 | +0.47% | +$645.24 (+13.53%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.825 | +0.93% | +$33.57 (+0.17%) | 5% trailing ($25.9825) |
+| SGOV | income | 294.989473856 | $100.469501 | $100.515 | +0.02% | +$13.42 (+0.05%) | 5% trailing ($95.48925, 294 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.01 | +0.00% | -$299.60 (-1.50%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite buys this window or all session — no "Approved Trades
+(verified)" list existed in today's RESEARCH-LOG at any window, so per STEP 3 the buy
+side was HOLD all day; this week (Sep 8 start) closes at core 0/6, satellite 0/4 new
+trades — valid per the Patience Rule. Only account activity today: MNKD's 15% GTC
+trailing stop filled mechanically at 11:51am ET ($3.74, realized -$315.90/-6.50%,
+1215 sh) between the 11am and 3pm sessions — no adverse news, mechanical protection
+working as designed, and the resulting SGOV cash-floor sweep-back (48.249 sh,
+restoring cash from 25.25% to 20.07%). **This is the second consecutive biotech-
+sub-sector satellite loss (after OCUL, 7/23), triggering the 2-strike cooldown: no
+new satellite biotech entries until 2026-09-25.** Industrials sub-sector unaffected
+(0 strikes). Risk sweep (3pm): satellite down to 1 open position (RIGL, +13.53%,
+well clear of the -15% hard-cut and below the +25% tighten threshold, no action);
+core has 0 open positions; income EDGX +0.17% and SPHY -1.50%, both well inside the
+5% stop; SGOV flat. All 4 remaining open positions (RIGL, EDGX, SGOV, SPHY)
+confirmed via `alpaca.sh positions`/`orders` carrying live GTC trailing stops, none
+missing. No stop moved down. No satellite catalyst inside the 1-2 trading-day
+gap-risk window for RIGL. Thesis check: RIGL intact, no adverse news since 11am.
+Cash 20.07%, at/above the 20% floor after this session's sweep. Risky positions
+closed today: MNKD (mechanical stop-out, not a discretionary risk-sweep catch).
+Day P&L (+0.27%) driven by RIGL's continued gain and EDGX's uptick, partly offset by
+SPHY's modest decline and the MNKD realized loss already reflected in this morning's
+equity. Phase P&L now -6.45% since Day 0 ($100,000 -> $93,551.80). Core exposure
+remains 0.00% (0 of 6 slots open) — rebuilding core exposure from a fresh
+momentum/FCF/rating-qualified candidate stays the top priority once one clears the
+live buy-side gate; satellite down to 5.79% (1 of 4 slots: RIGL only, biotech
+sub-sector now in a 2-week cooldown, industrials still open). This week (Sep 8
+start): core 0/6, satellite 0/4 new trades — valid per the Patience Rule. Tomorrow
+(next session Mon 9/14 pre-market, weekend ahead): Friday's weekly-review/
+watchlist screen-refresh (4pm today, after this window) is the top item — CGEM's
+confirmed 9/14 catalyst date needs reflecting; re-verify momentum/FCF/rating live at
+the buy-side gate for a core rebuild candidate; watch RIGL's approach toward its
++25% satellite tighten threshold; monitor the Middle East/Hormuz oil-shock situation
+into the weekend; escalate the SendGrid key rotation to the owner if this window's
+send confirms it is still broken.
