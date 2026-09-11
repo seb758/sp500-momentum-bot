@@ -18,3 +18,19 @@ Open positions:
   SPHY (inc) -1.52% (stop $22.23)
 This week: core 0/6, satellite 0/4
 Tomorrow: re-check core candidates post-open; monitor Iran/Brent
+
+---
+## 2026-09-11 3PM (fallback — SendGrid still returning 401 Unauthorized)
+3PM Sep 11
+Portfolio: $93,551.80 (+0.27% day, -6.45% phase)
+Core: $0 (0%) | Satellite: $5,415 (5.79%) | Cash: $18,777.92 (20.07%)
+Trades today: MNKD stop-out (satellite, -6.50%), SGOV sweep-back (income)
+Risky positions closed: MNKD (mechanical 15% trailing stop, not thesis)
+Open positions:
+  RIGL (sat) +13.5% (stop $42.415)
+  EDGX (inc) +0.2% (stop $25.98)
+  SGOV (inc) +0.1% (stop $95.49)
+  SPHY (inc) -1.5% (stop $22.23)
+This week: core 0/6, satellite 0/4
+Note: 2nd consecutive biotech satellite loss (OCUL, MNKD) - biotech cooldown to 9/25
+Tomorrow: weekly-review 4pm; rebuild core from a qualifying candidate
