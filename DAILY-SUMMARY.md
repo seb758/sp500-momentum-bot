@@ -34,3 +34,15 @@ Open positions:
 This week: core 0/6, satellite 0/4
 Note: 2nd consecutive biotech satellite loss (OCUL, MNKD) - biotech cooldown to 9/25
 Tomorrow: weekly-review 4pm; rebuild core from a qualifying candidate
+
+---
+## 2026-09-11 Weekly Review (fallback — SendGrid still returning 401 Unauthorized)
+Week ending Sep 11
+Portfolio: $93457.24 (-0.75% week, -6.54% phase)
+vs S&P 500: -0.13%
+Core trades: 1 (W:1/L:0) | Satellite trades: 1 (W:0/L:1)
+Best: APA +3.92% (core) Worst: MNKD -6.50% (satellite)
+Watchlist: core 24 names, satellite 5 names for next week
+Biotech cooldown active thru 09-25 (2nd consecutive loss)
+SendGrid still 401 since 09-10 - needs key rotation
+Grade: B-
