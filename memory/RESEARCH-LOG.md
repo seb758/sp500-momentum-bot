@@ -5188,3 +5188,55 @@ None. MNKD and RIGL (held) — see Held-Position Thesis Check, no new entry sign
 - **Cash-floor sweep:** MNKD's stop-out freed cash to 25.25% of equity, above the 20% floor — swept $4,850 (48.249 sh) into SGOV per the sweep-back rule, restoring cash to 20.07%. Cancel-then-replace stop pattern applied to SGOV (now 294 whole sh covered, trigger $95.48925).
 - Pattern lesson for Friday's review: two consecutive daily sessions now (9/10, 9/11) where a mechanical stop-out fired between scheduled windows and wasn't caught until the next session — worth flagging whether an intraday stop-fill check between windows is warranted, though GTC trailing stops already execute mechanically regardless of session cadence, so the risk is book-keeping lag, not unprotected exposure.
 - SendGrid still flagged broken (401, first caught 9/10) — this window's EOD send will confirm whether it's resolved; owner action to rotate the key remains outstanding otherwise.
+
+## 2026-09-12 — Pre-market Research
+
+**Scheduling note:** today (Saturday 2026-09-12) is a non-trading day — confirmed via `date`. CLAUDE.md documents five scheduled runs per *trading* day; this session fired anyway per the cloud scheduler. Since this workflow is research-only (never places trades) there's no downside to running it, but flagging the weekend firing as a scheduler-config item worth the owner's attention. Treating this entry as prep for the next trading session (Mon 2026-09-14 pre-market/open), not as "today's" market open.
+
+### Account (live, `alpaca.sh account`/`positions`/`orders`, as of Fri 9/11 close — market closed today)
+- Equity: $93,456.98 | Cash: $18,777.57 (20.09%, at/above the 20% floor) | No auth errors.
+- Core exposure: $0.00 (0.00% — 0 of 6 slots open, unchanged since APA's 9/8 thesis-broken exit).
+- Satellite exposure: $5,385.36 (5.76% — RIGL only, 114 sh, +12.90% unrealized: $41.84 → $47.24).
+- Income exposure: $69,294.05 (74.14% — EDGX $19,953.71/-0.12%, SGOV $29,652.34/+0.05%, SPHY $19,688.00/-1.54%).
+- All 4 open positions (RIGL, EDGX, SGOV, SPHY) confirmed via `alpaca.sh orders` carrying live GTC trailing stops, none missing: RIGL 15%/$42.415 (hwm $49.90), EDGX 5%/$25.9825 (hwm $27.35), SPHY 5%/$22.23 (hwm $23.40), SGOV 5%/$95.494 on 294 covered sh (hwm $100.52; 0.989473856-sh fractional remainder stays unstopped, same immaterial ~$99 dust flagged every prior sweep, not a new gap).
+- This week (Sep 8 start) closed Friday at core 0/6, satellite 0/4 new trades (MNKD's 9/11 stop-out doesn't count against the cap). New week (Sep 14 start) resets both counters to 0.
+- Biotech satellite 2-strike cooldown remains ACTIVE through 2026-09-25 (OCUL 7/23, MNKD 9/11) — no new satellite biotech entries regardless of screen results. Industrials sub-sector unaffected (0 strikes).
+
+### Data-quality notes
+The single consolidated Gemini Deep Research call returned but **the captured output is truncated and starts mid-document** — it opens partway through the satellite catalyst-proximity check (PLPC's entry, already past sections 1-3) and is missing sections 1 (S&P futures/VIX), 2 (top catalysts/econ releases), 3 (held-ticker overnight news for EDGX/RIGL/SGOV/SPHY), and nearly all of section 4's core-watchlist news — only the satellite catalyst checks for PLPC/SHIP/GNK and a closing synthesis/sources list came through intact. Per STEP 3's data-quality guard, no figure for the missing sections was taken from Gemini; independently filled the gap via WebSearch instead (see Market Context / Held-Position Thesis Check / Core Trade Ideas below). No RIGL- or CGEM-specific catalyst-proximity confirmation came through from Gemini either — both independently re-verified via WebSearch.
+
+### Market Context
+- **VIX 17.84** (9/11 close, WebSearch-confirmed, down ~2.00 pts on the day), **S&P 500 futures (ESU26) +0.35%** intraday 9/11 (WebSearch-confirmed) — Gemini's own (visible) synthesis notes the S&P "closed higher despite a violent spike in bond yields," consistent with the futures read.
+- **FOMC Wed 9/16 (2pm):** CME FedWatch/Polymarket-sourced odds of a rate hike at ~88-90% as of 9/11 (WebSearch-confirmed, consistent with Gemini's 88% figure) — a genuine hawkish repricing off Friday's CPI print, per Gemini's synthesis. Headwind for long-duration/rate-sensitive names (core software cluster: CRM, WDAY, CRWD, VEEV; also pressures held SPHY's high-yield credit), tailwind for held SGOV.
+- **Middle East / Strait of Hormuz — ongoing, not a new discrete escalation this weekend:** Brent remains above $100/bbl; Gemini's synthesis describes continuing kinetic conflict providing "an artificial floor for energy prices." Same story already notified 9/10, continuation only — no fresh overnight/weekend escalation event found via WebSearch.
+- **BRICS summit joint declaration** (per Gemini's synthesis, not independently WebSearch-verified this session) — described as a long-term dedollarization-friction item, not an immediate trading trigger for any held or watchlist name.
+- Gemini's synthesis flagged **CGEM's Phase 3 lung cancer data readout** as a "pure, binary, thesis-defining event" in "the next 48 hours" — independently verified and expanded below (Satellite Trade Ideas).
+
+### Held-Position Thesis Check
+- **RIGL (satellite, held, +12.90% unrealized):** No adverse news via WebSearch — only scheduled item is CFO Dean Schorno's H.C. Wainwright 28th Annual Global Investment Conference presentation Tue 9/15 (10am ET), same non-binary IR pattern as every prior conference appearance (Citi 9/9, Cantor 9/10). Thesis intact. Continuing to approach (not yet at) the satellite +25% tighten threshold.
+- **EDGX (income, held, -0.12% unrealized):** No idiosyncratic news, no thesis break.
+- **SGOV (income, held, +0.05% unrealized):** Thesis reinforced — flight-to-safety/short-duration positioning favored by the FOMC hike odds and ongoing geopolitical risk.
+- **SPHY (income, held, -1.54% unrealized):** Thesis intact, well inside its 5% stop. Standing watch item unchanged: a hawkish FOMC outcome Wed 9/16 would pressure high-yield credit spreads — not yet a break.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None sourced as approved — this workflow does not place trades regardless, and Gemini's per-ticker section for the 24-name core list did not come through (see Data-quality notes). Spot-checked one name flagged in recent sessions as having "imminent" earnings: **CRWD** already reported Q2 FY27 on 8/26 (next report not expected until ~late Nov/early Dec) — that item is stale/resolved, not a live risk. No other individual core names were checked via WebSearch this session given the truncated Gemini section and the 24-name scope; full live momentum/FCF/rating reverification at the buy-side gate remains required before any entry regardless, and none is pre-approved.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+- **RIGL** (held) — see Held-Position Thesis Check, no new entry signal.
+- **CGEM — important, not held, cannot be newly entered regardless:** WebSearch confirms the Phase 3 REZILIENT3 trial (zipalertinib + chemotherapy, EGFR exon20ins NSCLC) **met its primary PFS endpoint** at a planned interim analysis. Full data presents at IASLC WCLC 2026's Presidential Symposium 2 in Seoul on **Sunday 2026-09-13** (tomorrow), with a company investor/analyst call **Monday 2026-09-14, 8am ET** — a real, near-dated, price-moving catalyst, materially different from WATCHLIST.md's currently-documented "target action Feb 27, 2027, not imminent" framing (last updated at the 9/4 screen). **However, the active biotech 2-strike sub-sector cooldown (through 2026-09-25) blocks any new satellite biotech entry regardless of how this data reads** — flagging for market-open Monday's awareness (in case of a large favorable move prompting owner questions) and for the next screen refresh to update the documented catalyst, not sourcing as an approved idea.
+- **PLPC, SHIP, GNK** — Gemini confirms none has a catalyst inside the 5-trading-day window (PLPC: no scheduled events; SHIP: next catalyst is Q3 earnings 11/12, nearest corporate action is the 9/25 ex-dividend, 13 days out; GNK: no scheduled catalyst). WebSearch found no adverse news for any of the three this weekend.
+
+### Risk Factors
+- FOMC Wed 9/16 carries ~88-90% hike odds off Friday's CPI print — headwind for core's long-duration/software cluster and held SPHY; tailwind for held SGOV.
+- Middle East/Hormuz conflict continues (Brent >$100/bbl) — same ongoing story already notified 9/10, no new discrete escalation found this weekend.
+- **CGEM's Phase 3 REZILIENT3 data presents this weekend (Sun 9/13) with a Monday 9/14 investor call** — real binary event, but CGEM is not held and the biotech cooldown blocks any new entry regardless; watch for market reaction Monday for awareness only.
+- No held position is near its hard-cut: RIGL +12.90% (vs -15% satellite cut), EDGX -0.12%, SGOV +0.05%, SPHY -1.54% (all vs -5% income cut).
+- Cash 20.09%, at/above the 20% floor — no sweep action needed.
+- Gemini's report was truncated (sections 1-3 and most of section 4 missing) — filled critical gaps via WebSearch per the data-quality guard; core-watchlist per-ticker coverage is thinner than a normal session as a result (see Core Trade Ideas).
+- SendGrid was flagged broken (401 Unauthorized) as of 9/10-9/11 — not re-tested this session since no urgent trigger requires a send (see Notification below); owner action to rotate the key remains outstanding if still broken Monday.
+
+### Decision
+**HOLD.** No core or satellite trade sourced this session — valid per the Patience Rule; core exposure remains at 0% (all 6 slots open) and rebuilding it from a fresh momentum/FCF/rating-qualified candidate stays the top priority once Monday's live buy-side gate can be run, but this research-only workflow does not place trades regardless. Top items for Monday's pre-market/market-open sessions: (1) run a full live momentum/FCF/rating recheck at the buy-side gate for core watchlist names — Gemini's truncated section left this week's pre-market pass thinner than usual; (2) watch CGEM's Sunday WCLC data presentation and Monday investor call for market reaction (informational only — cooldown blocks entry regardless); (3) FOMC (Wed 9/16) is the week's dominant scheduled event — monitor positioning into it; (4) continue watching RIGL's approach toward its +25% satellite tighten threshold; (5) re-test SendGrid and escalate to the owner if still broken.
+
+### Notification
+**Not sent.** No held position is near its hard-cut, no satellite catalyst resolved negatively (CGEM's readout is real and near-dated but not yet held or acted upon, and isn't due until Sunday/Monday), and the Middle East/oil situation remains a continuation of the already-notified 9/10 story rather than a fresh discrete escalation. Per STEP 5, staying silent this session; will re-notify immediately if a position approaches its hard-cut, a satellite catalyst resolves negatively, or a genuinely new discrete escalation emerges.
