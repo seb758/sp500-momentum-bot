@@ -46,3 +46,7 @@ Watchlist: core 24 names, satellite 5 names for next week
 Biotech cooldown active thru 09-25 (2nd consecutive loss)
 SendGrid still 401 since 09-10 - needs key rotation
 Grade: B-
+
+---
+## 2026-09-14 Pre-market (fallback — SendGrid still returning 401 Unauthorized, 5th session running since 9/10)
+Pre-market alert 2026-09-14: Saudi Arabia's East-West pipeline (approx 5% of global oil supply, main Hormuz-bypass route) shut since Fri 9/11 after drone attacks; Brent above 107 dollars/bbl (+9% last week), plus a fatal vessel strike in the Strait of Hormuz over the weekend (1 killed, 4 injured). S&P futures -0.8%, Nasdaq -1.8% (also hit by an AI-development-slowdown selloff in chip names after Anthropic's CEO called for a pause). No held position (RIGL, EDGX, SGOV, SPHY) is near its hard-cut. Core sleeve remains at 0 open positions. FOMC Wed 9/16, hike odds approx 87%. No trade action taken; HOLD per Patience Rule.
