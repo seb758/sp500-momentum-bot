@@ -2403,3 +2403,59 @@ the buy-side gate for a core rebuild candidate; watch RIGL's approach toward its
 +25% satellite tighten threshold; monitor the Middle East/Hormuz oil-shock situation
 into the weekend; escalate the SendGrid key rotation to the owner if this window's
 send confirms it is still broken.
+
+## Sep 14 — 3pm Snapshot (Day 51, Monday)
+**Portfolio:** $93,158.76 | **Cash:** $18,777.57 (20.16%) | **Day P&L:** -$393.04 (-0.42%) | **Phase P&L:** -$6,841.24 (-6.84%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,165.93 (5.55% of equity) | **Income exposure:** $69,215.26 (74.31% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $45.3152 | -4.08% | +$396.17 (+8.31%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.64 | -0.40% | -$104.44 (-0.52%) | 5% trailing ($25.9825) |
+| SGOV | income | 294.989473856 | $100.469501 | $100.525 | +0.01% | +$16.37 (+0.06%) | 5% trailing ($95.5035, 294 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.00 | +0.00% | -$308.16 (-1.54%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite trades this window (or all session) — no "Approved
+Trades (verified)" list existed in today's RESEARCH-LOG at any window (pre-market,
+9:30am, 11am, 3pm all HOLD), so per STEP 3 the buy side was HOLD all day; this week
+(Sep 14 start) closes at core 0/6, satellite 0/4 new trades — valid per the Patience
+Rule. No account activity today at all (no buys, no sells, no sweeps, no tightens).
+Risk sweep (3pm): core has 0 open positions, nothing to check; satellite RIGL
++8.31%, well clear of the -15% hard-cut; income EDGX -0.52% and SPHY -1.54%, both
+well inside the 5% stop; SGOV flat/positive. All 4 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing
+(SGOV's 0.989473856-sh fractional remainder stays unstopped, same immaterial ~$99
+dust flagged every prior sweep, not a new gap). No stop moved down. Fresh WebSearch
+thesis check on RIGL found no adverse news — VEPPANU launch on track, guidance
+reaffirmed, 8 consecutive profitable quarters; today's -4.08% intraday pullback
+reads as broad market risk-off (Saudi pipeline shutdown/Strait-of-Hormuz escalation
+pushing Brent above $107/bbl, plus a fresh AI-development-pause chip selloff, both
+flagged pre-market), not an idiosyncratic break. Gap-risk check: RIGL's H.C.
+Wainwright conference (9/15, tomorrow) is inside the 1-2 trading-day window but is a
+non-binary IR appearance (VEPPANU's own binary PDUFA event already resolved 8/13) —
+the binary-catalyst sizing rule doesn't apply, holding through at standard sizing is
+valid, stated explicitly per STEP 4. No stop tightening this window — RIGL (+8.31%)
+still well below the satellite +25% threshold; Income sleeve has no gain-based
+schedule. 2-strike sub-sector tracker unchanged: biotech 2/2 cooldown active through
+2026-09-25 (OCUL 7/23, MNKD 9/11); industrials 0/2. Cash 20.16%, at/above the 20%
+floor, no sweep needed. Risky positions closed today: none. Day P&L (-0.42%,
+measured vs. Friday 9/11's 3pm snapshot since Sat/Sun were non-trading days) driven
+by RIGL's broad-tape-driven pullback and SPHY's modest decline, partly offset by
+SGOV and EDGX holding roughly flat. Phase P&L now -6.84% since Day 0 ($100,000 ->
+$93,158.76). Core exposure remains 0.00% (0 of 6 slots open, 6 consecutive sessions
+since APA's 9/8 exit) — rebuilding core exposure from a fresh momentum/FCF/rating-
+qualified candidate stays the top priority once the research workflow surfaces an
+"Approved Trades (verified)" list, which has not happened in 3 sessions running due
+to repeated Gemini truncation (flagged for Friday's weekly review). Satellite steady
+at 5.55% (1 of 4 slots: RIGL only; biotech sub-sector cooldown active through
+9/25, industrials still open). SendGrid remains broken (401 Unauthorized, 8th
+consecutive window / 5th session unresolved since first caught 9/10) — owner action
+to rotate the key remains overdue and is escalated again this window; content
+preserved via local fallback. Tomorrow (9/15): RIGL's H.C. Wainwright conference
+(10am ET) is the top item to monitor for any R289 forward guidance (non-binary, no
+sizing action expected); re-verify momentum/FCF/rating live at the buy-side gate for
+a core rebuild candidate, with extra caution on the semis/AI-hardware cluster given
+this week's AI-pause selloff; FOMC Wed 9/16 (hike odds ~87%) is the week's dominant
+scheduled event; monitor the Saudi pipeline/Strait-of-Hormuz situation for further
+escalation or the Iran-Oman shipping-route signing as a partial offset; escalate the
+SendGrid key rotation to the owner if not yet resolved.
