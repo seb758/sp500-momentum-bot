@@ -50,3 +50,18 @@ Grade: B-
 ---
 ## 2026-09-14 Pre-market (fallback — SendGrid still returning 401 Unauthorized, 5th session running since 9/10)
 Pre-market alert 2026-09-14: Saudi Arabia's East-West pipeline (approx 5% of global oil supply, main Hormuz-bypass route) shut since Fri 9/11 after drone attacks; Brent above 107 dollars/bbl (+9% last week), plus a fatal vessel strike in the Strait of Hormuz over the weekend (1 killed, 4 injured). S&P futures -0.8%, Nasdaq -1.8% (also hit by an AI-development-slowdown selloff in chip names after Anthropic's CEO called for a pause). No held position (RIGL, EDGX, SGOV, SPHY) is near its hard-cut. Core sleeve remains at 0 open positions. FOMC Wed 9/16, hike odds approx 87%. No trade action taken; HOLD per Patience Rule.
+
+---
+## 2026-09-14 3PM (fallback — SendGrid still returning 401 Unauthorized, 8th consecutive window)
+3PM Sep 14
+Portfolio: $93158.76 (-0.42% day, -6.84% phase)
+Core: $0.00 (0.0%) | Satellite: $5165.93 (5.5%) | Cash: $18777.57 (20.2%)
+Trades today: none
+Risky positions closed: none
+Open positions:
+  RIGL (sat) +8.3% (stop $42.415)
+  EDGX (inc) -0.5% (stop $25.9825)
+  SGOV (inc) +0.1% (stop $95.5035)
+  SPHY (inc) -1.5% (stop $22.23)
+This week: core 0/6, satellite 0/4
+Tomorrow: RIGL HC Wainwright conf (non-binary); FOMC Wed 9/16 (hike odds ~87%); oil-shock/Hormuz watch; SendGrid key rotation still overdue
