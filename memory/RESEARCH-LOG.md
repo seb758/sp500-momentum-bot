@@ -5419,3 +5419,9 @@ None sourced as approved — this workflow does not place trades regardless, and
 
 ### Notification
 **Silent — no urgent condition met.** Per STEP 5, notification is silent unless a held position is already below its hard-cut pre-market, a satellite catalyst resolved negatively overnight, or a major geopolitical event occurred. None applies: all 4 positions are well clear of their stops (closest is SPHY at -1.67% vs. a -5% cut), RIGL's only near-term item is a non-binary IR conference, and the oil/Hormuz situation is easing today, not escalating, versus the already-notified 9/10 and 9/14 developments. No email sent this session.
+
+### 9:30 AM Session Note
+- **HELD, no new trades.** Pre-market research sourced no Core or Satellite candidate (Gemini's report truncated again, no per-ticker news with dates/sources) — buy-side gate had nothing to evaluate this window; core stays at 0/6 open (8th consecutive session since APA's 9/8 exit), satellite at 1/4 (RIGL only).
+- Live re-check at open confirms pre-market figures: equity $93,068.15, cash $18,777.57 (20.18%, at/above the 20% floor, no sweep needed), all 4 GTC trailing stops (RIGL 15%, EDGX/SGOV/SPHY 5%) confirmed live via `alpaca.sh orders` with correct hwm/trigger levels, none missing or moved down.
+- RIGL +7.97% unrealized, well below the +25% satellite tighten threshold; no held position near a hard-cut. No account activity this window (no buys, sells, sweeps, or tightens).
+- Pattern to flag for Friday's review: Gemini Deep Research has now truncated or errored in every session for two straight weeks (9/12-9/15 truncated, 9/13 failed outright), and core exposure has sat at 0% for 8 consecutive sessions with no qualified candidate surfacing — worth checking whether the truncation itself (losing the per-ticker news section) is starving core-candidate generation, not just a data-quality nuisance.
