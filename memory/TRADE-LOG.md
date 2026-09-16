@@ -2471,39 +2471,54 @@ SendGrid key rotation to the owner if not yet resolved.
 | SGOV | income | 294.989473856 | $100.469501 | $100.535 | +0.01% | +$19.32 (+0.07%) | 5% trailing ($95.513, 294 sh covered) |
 | SPHY | income | 856 | $23.36 | $22.945 | -0.11% | -$355.24 (-1.78%) | 5% trailing ($22.23) |
 
-**Notes:** No Core/Satellite trades this window (or all session) — no "Approved Trades
-(verified)" list existed in today's RESEARCH-LOG at any window (pre-market, 9:30am,
-11am, 3pm all HOLD), so per STEP 3 the buy side was HOLD all day; this week (Sep 14
-start) closes at core 0/6, satellite 0/4 new trades — valid per the Patience Rule.
-No account activity today at all (no buys, sells, sweeps, or tightens). Risk sweep
-(3pm): core has 0 open positions, nothing to check; satellite RIGL +6.92%, well
-clear of the -15% hard-cut; income EDGX -0.90% and SPHY -1.78%, both well inside the
-5% stop; SGOV flat. All 4 open positions confirmed via `alpaca.sh positions`/`orders`
-carrying live GTC trailing stops, none missing (SGOV's 0.989473856-sh fractional
-remainder stays unstopped, same immaterial ~$99 dust flagged every prior sweep, not
-a new gap). No stop moved down. Fresh WebSearch thesis check on RIGL post-H.C.-
-Wainwright conference (10am ET) found no adverse news — VEPPANU launch tracking (>$1B
-potential per Rigel's own framing), 8 consecutive profitable quarters, FY26 guidance
-reaffirmed $285-295M, R289 data still guided for later this year; today's pullback
-from +7.72% (11am) to +6.92% reads as broad-tape drift into tomorrow's FOMC decision,
-not idiosyncratic. No stop tightening this window — RIGL (+6.92%) still well below
-the satellite +25% threshold; Income sleeve has no gain-based schedule. 2-strike
-sub-sector tracker unchanged: biotech 2/2 cooldown active through 2026-09-25 (OCUL
-7/23, MNKD 9/11); industrials 0/2. Cash 20.19%, at/above the 20% floor, no sweep
-needed. Risky positions closed today: none. Day P&L (-0.20%) driven by RIGL's
-intraday pullback and SPHY/EDGX modest softness, partly offset by SGOV holding flat.
-Phase P&L now -7.03% since Day 0 ($100,000 -> $92,973.81). Core exposure remains
-0.00% (0 of 6 slots open, 8 consecutive sessions since APA's 9/8 exit) — rebuilding
-core exposure from a fresh momentum/FCF/rating-qualified candidate stays the top
-priority once the research workflow surfaces an "Approved Trades (verified)" list,
-which has not happened in 4 sessions running due to repeated Gemini truncation
-(9/12-9/15 all truncated, 9/13 failed outright — flagged again for Friday's weekly
-review). Satellite steady at 5.49% (1 of 4 slots: RIGL only; biotech sub-sector
-cooldown active through 9/25, industrials still open). Tomorrow (9/16): FOMC rate
-decision, dot plot, and press conference at 2:00/2:30pm ET (hike odds ~86-87%) is
-the dominant scheduled event — headwind risk for SPHY's high-yield credit exposure,
-tailwind for SGOV if realized; also Retail Sales (August) and the EIA Weekly
-Petroleum Status Report both release tomorrow; re-verify momentum/FCF/rating live at
-the buy-side gate for a core rebuild candidate; continue monitoring RIGL's approach
-toward its +25% satellite tighten threshold; recheck SendGrid key status (was 401
-Unauthorized for 8 consecutive windows / 5 sessions as of yesterday's close).
+## Sep 16 — 3pm Snapshot (Day 53, Wednesday)
+**Portfolio:** $93,001.44 | **Cash:** $18,777.57 (20.19%) | **Day P&L:** +$27.63 (+0.03%) | **Phase P&L:** -$6,998.56 (-7.00%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,100.36 (5.48% of equity) | **Income exposure:** $69,123.51 (74.33% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $44.74 | +0.86% | +$330.60 (+6.93%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.575 | +0.34% | -$152.93 (-0.77%) | 5% trailing ($25.9825) |
+| SGOV | income | 294.989473856 | $100.469501 | $100.54 | +0.01% | +$20.80 (+0.07%) | 5% trailing ($95.5225, 294 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.9443 | +0.11% | -$355.84 (-1.78%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite trades this window (or all session) — no "Approved
+Trades (verified)" list existed in today's RESEARCH-LOG at any window (pre-market,
+9:30am, 11am, 3pm all HOLD), so per STEP 3 the buy side was HOLD all day; this week
+(Sep 14 start) closes the week's midweek session at core 0/6, satellite 0/4 new
+trades so far — valid per the Patience Rule. No account activity today at all (no
+buys, sells, sweeps, or tightens). Risk sweep (3pm): core has 0 open positions,
+nothing to check; satellite RIGL +6.93%, well clear of the -15% hard-cut, no
+gap-risk catalyst inside the 1-2 trading-day window (Wainwright conference already
+resolved 9/15, non-binary); income EDGX -0.77% and SPHY -1.78%, both well inside
+the 5% stop; SGOV +0.07%. All 4 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing
+(SGOV's 0.989473856-sh fractional remainder stays unstopped, same immaterial ~$99
+dust flagged every prior sweep, not a new gap). No stop moved down. Today's dominant
+event: FOMC hiked 25bp to 3.75%-4.00% (first hike since 2023, 12-0 vote), updated
+dot plot shows 16 of 18 participants expecting at least one more hike this year —
+priced macro outcome, not idiosyncratic to any position; SPHY (high-yield credit)
+and SGOV (front-end yield) are the two names structurally exposed but neither shows
+a thesis break, both remain well inside their 5% stop. No stop tightening this
+window — RIGL (+6.93%) still well below the satellite +25% threshold; Income sleeve
+has no gain-based schedule. 2-strike sub-sector tracker unchanged: biotech 2/2
+cooldown active through 2026-09-25 (OCUL 7/23, MNKD 9/11); industrials 0/2. Cash
+20.19%, at/above the 20% floor, no sweep needed. Risky positions closed today: none.
+Day P&L (+0.03%) essentially flat — RIGL's modest gain roughly offset by EDGX/SPHY's
+modest softness and SGOV's small gain. Phase P&L now -7.00% since Day 0 ($100,000 ->
+$93,001.44). Core exposure remains 0.00% (0 of 6 slots open, 9 consecutive sessions
+since APA's 9/8 exit) — rebuilding core exposure from a fresh momentum/FCF/rating-
+qualified candidate stays the top priority; today's pre-market research was fully
+clean (non-truncated) for the first time in 5 sessions but still sourced no core
+candidate to the live buy-side gate. Satellite steady at 5.48% (1 of 4 slots: RIGL
+only; biotech sub-sector cooldown active through 9/25, industrials still open).
+This week (Sep 14 start): core 0/6, satellite 0/4 new trades so far — valid per the
+Patience Rule. Tomorrow (9/17): post-FOMC market reaction is the top item to watch,
+particularly SPHY's high-yield credit sensitivity to the hawkish hike/dot-plot
+outcome and SGOV's yield capture; EDGX's declared $0.0463/share dividend (ex-date
+9/14, already passed) pays 9/17 and reinvests to SGOV per the Income sleeve's fixed
+rule; re-verify momentum/FCF/rating live at the buy-side gate for a core rebuild
+candidate; continue monitoring RIGL's approach toward its +25% satellite tighten
+threshold; recheck SendGrid key status (was 401 Unauthorized for 8 consecutive
+windows / 5 sessions as of 9/15's close).
+
