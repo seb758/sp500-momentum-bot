@@ -5496,3 +5496,8 @@ None sourced as approved — this research-only workflow does not place trades r
 
 ### Notification
 **Silent — no urgent condition met.** Per STEP 5, notification is silent unless a held position is already below its hard-cut pre-market, a satellite catalyst resolved negatively overnight, or a major geopolitical event occurred. None applies: all 4 positions are well clear of their stops, no satellite catalyst is inside its 5-day window let alone resolved negatively, and today's dominant story (a synchronized global bond-yield spike into the FOMC) is a broad macro/rates event, not a discrete geopolitical shock. No email sent this session.
+
+### 9:30 AM Session Note
+- No core or satellite "Approved Trades (verified)" list existed in today's pre-market entry above, so the buy-side gate had nothing to run against — HOLD, no new trades this window. Re-verified live via `alpaca.sh account`/`positions`: equity $93,010.28, cash $18,777.57 (20.19%, at/above the 20% floor), positions unchanged (RIGL, EDGX, SGOV, SPHY) matching pre-market — no drift.
+- Core sleeve remains at 0/6 open (9th consecutive session since APA's 9/8 exit); satellite steady at 1/4 (RIGL only, biotech cooldown active through 9/25). No sweep needed, no stop changes.
+- Pattern to flag for Friday's review: core has now gone 9 straight sessions with zero qualifying candidates reaching an "Approved Trades" list even on a clean (non-truncated) research day — worth checking whether this is genuinely "no name clears the bar" or a gap in how research-stage candidates get promoted to the live buy-side gate.
