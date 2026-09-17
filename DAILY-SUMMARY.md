@@ -95,3 +95,18 @@ Open positions:
   SPHY (inc) -1.8% (stop $22.23)
 This week: core 0/6, satellite 0/4
 Tomorrow: post-FOMC reaction watch (25bp hike to 3.75-4.00%, hawkish dot plot); EDGX dividend pays 9/17 (reinvests to SGOV); re-verify buy-side gate for core rebuild candidate; SendGrid key rotation still overdue
+
+---
+## 2026-09-17 3PM (fallback — SendGrid still returning 401 Unauthorized, 11th consecutive window / 8th session since 9/10)
+3PM Sep 17
+Portfolio: $93366.36 (+0.39% day, -6.63% phase)
+Core: $0.00 (0.0%) | Satellite: $5249.13 (5.6%) | Cash: $18777.57 (20.1%)
+Trades today: none
+Risky positions closed: none
+Open positions:
+  RIGL (sat) +10.1% (stop $42.415)
+  EDGX (inc) -0.1% (stop $25.9825)
+  SGOV (inc) +0.1% (stop $95.532)
+  SPHY (inc) -1.4% (stop $22.23)
+This week: core 0/6, satellite 0/4
+Tomorrow: reverify buy-side gate for core rebuild (MU angle ahead of 9/30 earnings); watch RIGL's approach to +25% satellite tighten threshold and SPHY's distribution-decline/technical-breakdown flag; Friday's weekly-review/watchlist screen-refresh next; SendGrid key rotation still overdue (11 windows now)
