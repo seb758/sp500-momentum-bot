@@ -2522,3 +2522,56 @@ candidate; continue monitoring RIGL's approach toward its +25% satellite tighten
 threshold; recheck SendGrid key status (was 401 Unauthorized for 8 consecutive
 windows / 5 sessions as of 9/15's close).
 
+## Sep 17 — 3pm Snapshot (Day 54, Thursday)
+**Portfolio:** $93,366.36 | **Cash:** $18,777.57 (20.11%) | **Day P&L:** +$364.92 (+0.39%) | **Phase P&L:** -$6,633.64 (-6.63%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,249.13 (5.62% of equity) | **Income exposure:** $69,339.01 (74.27% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $46.045 | +3.52% | +$479.37 (+10.05%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.76 | +1.40% | -$14.92 (-0.07%) | 5% trailing ($25.9825) |
+| SGOV | income | 294.989473856 | $100.469501 | $100.554 | +0.00% | +$24.93 (+0.08%) | 5% trailing ($95.532, 294 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.03 | +0.31% | -$282.48 (-1.41%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite trades this window (or all session) — no "Approved
+Trades (verified)" list existed in today's RESEARCH-LOG at any window (pre-market,
+9:30am, 11am, 3pm all HOLD), so per STEP 3 the buy side was HOLD all day; this week
+(Sep 14 start) closes today at core 0/6, satellite 0/4 new trades so far — valid
+per the Patience Rule. No account activity today at all (no buys, sells, sweeps, or
+tightens). Risk sweep (3pm): core has 0 open positions, nothing to check; satellite
+RIGL +10.05%, well clear of the -15% hard-cut and still below the +25% tighten
+threshold, no gap-risk catalyst inside the 1-2 trading-day window (RIGL's own
+binary PDUFA event resolved 8/13, no new near-term event today); income EDGX
+-0.07% and SPHY -1.41%, both well inside the 5% stop; SGOV +0.08%. All 4 open
+positions confirmed via `alpaca.sh positions`/`orders` carrying live GTC trailing
+stops, none missing (SGOV's 0.989473856-sh fractional remainder stays unstopped,
+same immaterial ~$99 dust flagged every prior sweep, not a new gap). No stop moved
+down. Thesis check: RIGL intact, no adverse news found today, continued intraday
+strength since 11am; EDGX/SGOV/SPHY have no thesis to break under Income sleeve
+rules — SPHY's distribution-decline/technical-breakdown watch item (flagged
+pre-market: distributions declining every month in 2026 vs. prior-year comps,
+price below its 50-day MA since 9/10) persists as a watch item, not a break, well
+inside its 5% stop. 2-strike sub-sector tracker unchanged: biotech 2/2 cooldown
+active through 2026-09-25 (OCUL 7/23, MNKD 9/11); industrials 0/2. Cash 20.11%,
+at/above the 20% floor, no sweep needed. Risky positions closed today: none. Day
+P&L (+0.39%) driven mainly by RIGL's continued gain, modestly offset by SPHY's
+softness, against a broadly calmer post-FOMC tape (VIX ~17, S&P futures +0.3%
+pre-market) than the prior two sessions. Phase P&L now -6.63% since Day 0
+($100,000 -> $93,366.36). Core exposure remains 0.00% (0 of 6 slots open, 12
+consecutive sessions since APA's 9/8 exit) — rebuilding core exposure from a fresh
+momentum/FCF/rating-qualified candidate stays the top priority; today's pre-market
+research flagged MU (India fab live, HBM ramp, Sept 30 earnings ahead) as a
+potential fresh core research angle but sourced no approved candidate to the live
+buy-side gate. Satellite steady at 5.62% (1 of 4 slots: RIGL only; biotech
+sub-sector cooldown active through 9/25, industrials still open). This week (Sep
+14 start): core 0/6, satellite 0/4 new trades — valid per the Patience Rule.
+Tomorrow (9/18): re-verify momentum/FCF/rating live at the buy-side gate for a
+core rebuild candidate, with MU as a specific angle ahead of its 9/30 earnings;
+continue monitoring RIGL's approach toward its +25% satellite tighten threshold
+and SPHY's distribution-decline/technical-breakdown watch item; Friday's
+weekly-review/watchlist screen-refresh is the next major workflow, with the
+12-consecutive-session core drought as a standing discussion item; recheck
+SendGrid key status (was 401 Unauthorized for 8 consecutive windows / 5 sessions
+as of 9/15's close, not retested since — no send attempted 9/16 or so far today
+until STEP 9 below).
+
