@@ -138,7 +138,228 @@ not re-checked this week (already confirmed core-ineligible and
 satellite-sector-mismatched six refreshes running; no new information would
 change that).
 
-## Current — Week of 2026-09-11
+**Rechecked 2026-09-18:** AMZN, CIEN, SNDK all **still fail** the momentum
+gate on fresh Alpaca bars (AMZN 3M rel. +2.8%, positive but above only the
+200-day MA, below the 50-day — the gate requires both MAs; CIEN 3M rel.
+-24.1%, below both MAs; SNDK 3M rel. -20.5%, negative despite a strong
++98.9% 6M rel. — and its price level, $1,614.39, remains implausible,
+consistent with the unresolved bar-series corporate-action artifact) —
+nine consecutive refreshes now without a clean reversal on any of the
+three. LITE (Lumentum) was also spot-checked given its recent oscillation
+between passing and failing: fails again this week (3M rel. -0.2%,
+essentially flat, though still above both MAs) — not re-added, consistent
+with its alternates-bench treatment since 08-28. CRDO/VICR/SEZL/DAVE/PACS/
+STRL not re-checked this week (already confirmed core-ineligible and
+satellite-sector-mismatched seven refreshes running; no new information
+would change that).
+
+## Current — Week of 2026-09-18
+
+Ninth weekly screen refresh (weekly-review workflow, run 2026-09-18 for the
+market week ending Fri 2026-09-18 — fifth consecutive Friday on time). Full
+503-name universe re-screened via fresh Alpaca bars (S&P 500 constituent list
+sourced via direct `curl` against a GitHub-hosted dataset). Momentum
+shortlist (top 58 by combined 3M/6M relative-return score, SNDK excluded —
+see corporate-action note below) was validated by trying FMP first: its
+free-tier `limit` parameter turned out to be capped at 5 (not the 8
+`scripts/fmp.sh` defaults to) — passing `limit=5` explicitly got 3 names
+through (AMD, INTC, MRNA) before the account's full daily quota hit a hard
+`429`/"Limit Reach" wall for every remaining call, including a
+1.2s-delayed retry round. Per the standing fallback, all remaining
+fundamentals (55 tickers) were sourced from 6 parallel Gemini Deep Research
+batches (~10 tickers/batch) instead — all 6 completed cleanly on the first
+try (best fundamentals-batch reliability yet). The session's container
+restarted mid-poll partway through this run, but all 6 batches had already
+completed and their results, along with the rest of this session's working
+files, survived on disk.
+
+**FMP tooling note for next session:** the free-tier per-symbol `limit`
+cap appears to be 5, not the 8 `scripts/fmp.sh` defaults to — pass an
+explicit `5` (e.g. `fmp.sh cashflow SYM quarter 5`) to get real data before
+the daily quota exhausts, rather than assuming every call will 402.
+
+**Corporate-action guard:** SNDK still carries an implausible price level
+($1,614.39, unchanged bar-series artifact) and now also fails the momentum
+gate outright on a negative 3M relative return (-20.5pp) despite a strong
++98.9pp 6M — excluded regardless, see the History recheck below. Six
+shortlisted names flagged a >20% single-day move within the 6M lookback
+window this week (DELL 05-29 +32.8%, CRWD 08-27 +20.5%, NTAP 05-29 +22.4%,
+ZBRA 08-04 +26.5% — all previously verified real in prior weeks' reviews;
+MRVL 06-02 +32.5% and INTC 04-24 +23.6% are new this week, both isolated,
+moderate-magnitude, earnings-season-dated moves with no stitching/spinoff
+signature — treated as real per the guard, not excluded).
+
+**Two-strike sub-sector cooldown for biotech remains ACTIVE (through
+2026-09-25):** unchanged since 09-11 (OCUL 07-23, MNKD 09-11). Per STEP 7e,
+no biotech candidates were sourced or screened this week — the satellite
+Gemini search this week was scoped to industrials only from the outset.
+Existing held/listed biotech names (RIGL, CGEM) are unaffected. Industrials
+remains at 0 strikes.
+
+### Core (S&P 500 momentum + FCF)
+
+| Ticker | Momentum Rank | 3M Rel. Return vs SPY | FCF Trend | Analyst Rating | Notes |
+|---|---|---|---|---|---|
+| DELL | 1 | +37.4% | Rapidly improving (FY26 $8.6B, +357.6% YoY) | Buy (29% SB, 48% B, 24% H, 0 Sell) | Rev +57.7%, record AI-server orders. Flagged 32.8% move (05-29) — verified real, prior weeks |
+| HPE | 2 | +23.7% | Strengthening (Q3 FY26 record $958M, FY26 guide >=$3.5B) | Moderate Buy/Buy (~59% SB, 6% B, 35% H, 0 Sell) | Rev +34%, AI-networking synergies |
+| AMD | 3 | +3.4% | Sharply expanding ($8.4B TTM, +107.8% YoY) | Strong Buy (45% SB, 39% B, 16% H, 0 Sell) | Rev +50.1%, Data Center +107% YoY |
+| CRWD | 4 | +41.0% | Highly positive ($377.4M Q2 record, TTM ~$1.6B) | Buy (42% SB, 42% B, 16% H, 0 Sell) | Rev +26%, ARR momentum. Flagged 20.5% move (08-27) — verified real, prior weeks |
+| MRVL | 5 | -19.8% | Stable/improving ($1.72B TTM, +12.6% YoY) | Buy (48% SB, 38% B, 14% H, 0 Sell) | Rev +37%, custom-silicon data-center demand. Flagged 32.5% move (06-02) — isolated earnings-reaction move, no artifact pattern, treated as real |
+| PANW | 6 | +30.0% | Steadily growing ($4.1B FY26, +18.6% YoY) | Moderate Buy (74% SB, 6% B, 20% H, 0 Sell) | Rev +34% YoY |
+| MPC | 7 | +69.6% | Robust TTM ($12.9B) but Q1 2026 sequential dip to $208M on margin compression | Moderate Buy (23% SB, 54% B, 23% H, 0 Sell) | Rev +53.5%, refining crack-spread windfall. Near-term FCF volatility flag, not a trend break |
+| VLO | 8 | +69.1% | Structurally improving ($10.12B TTM, $5.23B Q2) | Moderate Buy (24% SB, 35% B, 35% H, 6% Sell minor) | Rev +48.8% |
+| CRL | 9 | +51.6% | Improving ($149M Q2, recovery from -$15M Q1; TTM $370.6M) | Buy (9 SB, 4 B, 2 H, 1 Sell) | Rev -2.7% (divestiture-driven), EPS +47% seq |
+| HUM | 10 | +3.3% | Surging (+58.5% YoY Q2 to $1.83B, TTM ~$1.3B) | Hold-leaning-Buy (15 B, 48 H, 4 Sell minor) | Rev +0.72% weak, EPS +21.4% |
+| INTC | 11 | -13.1% | Volatile/improving (Q2 $4.4B from -$2.5B Q1, TTM $2.8B; heavy capex) | Hold (1 SB, 19 B, 28 H, 3 Sell minor) | Rev +25.2%. Flagged 23.6% move (04-24) — isolated earnings-reaction move, treated as real |
+| PSX | 12 | +61.1% | Accelerating ($6.4B LTM, +329.7% YoY) | Moderate Buy (13 B, 6 H, 2 Sell ~10%) | Rev +48.8%, refining recovery |
+| RVTY | 13 | +47.1% | Stable ($181M Q2, TTM $558.1M) | Hold (6 SB, 12 H, 0 Sell) | Rev -1.3% (organic +3% ex-divestiture), EPS +19.5% |
+| NTAP | 14 | +24.3% | Headwinds (component-cost/inventory-driven margin compression) | Hold (1 SB, 6 B, 10 H, 0 Sell) | Rev +29.9%. Flagged 22.4% move (05-29) — verified real, prior weeks. Same reinvestment-driven flag as DELL |
+| IQV | 15 | +55.0% | Improving ($360M Q2, +23% YoY) | Moderate/Strong Buy (1 SB, 13 B, 3 H, 0 Sell) | Rev +8.7%, record $34.2B backlog |
+| ZBRA | 16 | +46.4% | Stabilizing | Moderate Buy (9 B, 3 H, 0 Sell) | Organic growth all regions. Flagged 26.5% move (08-04) — verified real, prior weeks |
+| VEEV | 17 | +67.4% | Accelerating ($1.64-1.66B TTM, +23.4% YoY) | Moderate Buy/Buy (19 B, 8-11 H, 1-2 Sell minor) | Rev +17.6%, Vault CRM |
+| CNC | 18 | +7.7% | Reversal (+709% YoY to $8.74B TTM) | Hold (10 B, 9 H, 2 Sell minor) | Rev +9.9%, Medicaid margin improving |
+| TMO | 19 | +39.7% | Improving ($7.32B TTM, +18.6% YoY) | Buy (22 B, 5 H, 1 Sell) | Rev +10.5% |
+| NUE | 20 | +2.0% | Improving (Q2 rebound $829M, TTM $1.16B) | Buy (80% B, 20% H, 0 Sell) | Rev +23%, EPS +94.6%, record steel shipments |
+| INCY | 21 | +26.0% | Stable ($1.18B TTM) | Moderate Buy (45% B, 55% H, 0 Sell) | Rev +38%, EPS +96% |
+| WST | 22 | +10.4% | Stable ($436.9M TTM) | Strong Buy (88% B, 12% H, 0 Sell) | Rev +14%, EPS +19% |
+| STT | 23 | +4.1% | Healthy ($7.22/share TTM) | Moderate Buy (10 SB, 2 B, 6 H, 0 Sell) | Rev +18%, NI +63% |
+| CPAY | 24 | +11.5% | Robust ($1.30B TTM) | Strong Buy (12 SB, 2 B, 4 H, 0 Sell) | Rev +21.5%; NI dip is an isolated $100M FTC settlement charge, not operational |
+
+**Sector-concentration cap:** semis + AI-hardware cluster (DELL, HPE, AMD,
+MRVL, INTC, NTAP) is 6 of 24 names (25.0%), well under the ~40% cap.
+Information Technology is the largest single GICS grouping at 9 of 24
+(37.5% — DELL, HPE, AMD, CRWD, MRVL, PANW, INTC, NTAP, ZBRA), right at the
+cap — **momentum ranked ten more IT names (WDAY, MU, DDOG, CRM, GEN, STX,
+ANET, NOW, MSFT, PLTR) inside what would otherwise be the top 24, but all
+were held out by the cap and moved to sector-capped alternates below**.
+Health Care is likewise at its own 9-of-24 cap (37.5% — CRL, HUM, RVTY, IQV,
+VEEV, CNC, TMO, INCY, WST), holding out WAT, A, MRK, DXCM, DGX the same way.
+Other groupings: Energy 3 (MPC, VLO, PSX), Financials 2 (STT, CPAY),
+Materials 1 (NUE) — 5 distinct GICS sectors.
+
+**Sector-capped alternates** (passed momentum + fundamentals, held out only
+by a sector cap, not a fundamentals fail): **Information Technology** —
+WDAY (Hold, 20 B/18 H/2 Sell minor, rev +12.8%), MU (Strong Buy, 31-34 B/3-4
+H/0 Sell, FCF $26.17B TTM +1291% YoY), DDOG (Buy, 39-40 B/2-4 H/1-2 Sell
+minor, FCF +25.6% YoY), CRM (Moderate Buy, 32 B/14-15 H/3 Sell minor, FCF
++21.3% YoY), GEN (Hold, 20% B/80% H/0 Sell, FCF +26.3% YoY), STX (Buy, 91%
+B/9% H/0 Sell, FCF +279.6% YoY), ANET (Strong Buy, 100% B/0 Sell, FCF +29.7%
+YoY), NOW (Strong Buy, 88% B/6% H/6% Sell minor, FCF +20.5% YoY), MSFT
+(Strong Buy, ~42 B/5 H/0 Sell, FCF $66.99B TTM), PLTR (Buy, 21 B/9 H/2 Sell
+minor, FCF $1.22B Q2, explosive growth). **Health Care** — WAT (Buy, 17 B/7
+H/0 Sell, FCF improving), A (Buy, 41% SB/47% B/12% H/0 Sell, FCF $1.15B TTM
+stable), MRK (Moderate Buy, 17 SB/2 B/9 H/0 Sell, FCF $16.1B TTM recovering
+— note the Sell lean that triggered 09-11's exclusion, 12.5%, reads as 0%
+in this week's consolidated report; flagging the swing rather than silently
+trusting either figure), DXCM (Buy, 55% SB/32% B/9% H/5% Sell minor, FCF
+accelerating), DGX (Hold, 9% SB/27% B/64% H/0 Sell, FCF $910M stable). All
+14 would otherwise have ranked inside the top 24 on momentum alone.
+
+**Other cut-line alternates** (below the top-24 cut on momentum ranking,
+sector not at cap, fundamentals otherwise clean): MET (Buy, 11 SB/1 B/7
+H/0 Sell, FCF $23.51/share), HOOD (Moderate Buy, 2 SB/23 B/3 H/0 Sell, FCF
+$696M TTM surging), ADP (Hold, 4 SB/13 H/1 Sell/1 SSell minor ~10.5%, FCF
+$4.78B +8.7% YoY — same "not meaningful" treatment as 09-11).
+
+**Failed fundamentals this week (momentum passed, FCF/growth/rating did
+not):**
+- **MRNA** — real momentum (still the #1 momentum score in the full
+  universe) but FCF declining (-$1.2B TTM) and a Hold rating with a 28%
+  combined Sell/Strong-Sell lean (21% Sell + 7% Strong Sell) — fails both
+  FCF and rating, same treatment as every prior week.
+- **HPQ** — Hold with a severe 41% combined Sell/Strong-Sell lean (33%
+  Sell + 8% Strong Sell).
+- **FTNT** — Hold with a meaningful 14% Sell lean (5 of 36), same
+  "priced-for-perfection" concern flagged 09-11, unresolved.
+- **SWKS** — revenue declining -3.1% YoY, Hold with a borderline Sell lean,
+  pending Qorvo-merger debt overhang — fails on growth, not just rating.
+- **BBY** — FCF trend flipped to declining (FY26 annual FCF -9.6% YoY)
+  after being called "improving" as recently as 09-11 — a genuine
+  week-over-week reversal in the underlying cash generation, not a data
+  inconsistency.
+- **SMCI** — FCF severely negative (-$6.97B TTM, -550% YoY) despite
+  explosive revenue growth — fails FCF outright.
+- **TECH (Bio-Techne)** — stalled 1% revenue growth, Hold pinned to the
+  pending Merck KGaA acquisition price — same M&A-arb exclusion as every
+  prior week.
+- **FFIV** — Hold with a meaningful 14.3% Sell lean.
+- **TGT** — Hold with a 10.5% Sell lean (4 of 38); FCF is actually
+  recovering sharply (+51.4% YoY) this week, but the Sell lean and
+  Hold-heavy consensus keep it excluded, consistent with prior weeks'
+  caution on this name specifically.
+- **IT (Gartner)** — FCF declining -14.73% YoY, Hold with a meaningful
+  13.3% Sell lean.
+- **APA** (currently exited, thesis-broken 09-08) — Hold with a
+  meaningful 12.9% Sell lean (4 of 31) — confirms the exit was correctly
+  called; still fails fresh this week.
+- **FDS** — Hold/Reduce with a severe 31.6% Sell/Strong-Sell lean (6 of
+  19) — the most consistently Sell-leaning name checked again this week.
+- **BAX** — Hold with a meaningful 15.4% Sell lean (2 of 13).
+- **GPC** — FCF trend declining (FY26 guide $550-700M, down from prior
+  levels) on pricing-not-volume growth; net income -11% YoY.
+- **GPN** — Hold with a "tangible... over 10% Sell lean" (3 of 29) per
+  this week's own report language, tied to Worldpay-integration and
+  travel-portfolio concerns — same basis as 09-11's exclusion.
+- **TRV** — Hold with a Sell contingent this week's report itself
+  characterizes as "meaningful" (3 of 33, ~9%), despite otherwise
+  excellent FCF (accelerating to $11B TTM).
+
+**Not confirmed / insufficient data this week:** none — FMP's daily quota
+was exhausted almost immediately, but the 6 Gemini fundamentals batches
+covering the full 58-name shortlist all completed without truncation, so
+every shortlisted name got a clean pass/fail rather than a data-unavailable
+call.
+
+### Satellite (small-cap biotech / industrials)
+
+| Ticker | Sub-sector | YoY Growth | Analyst Rating | Catalyst | Catalyst Date | Max Loss If Catalyst Fails | Notes |
+|---|---|---|---|---|---|---|---|
+| RIGL | Biotech | Positive (Q2 record rev $78.7M beat, FY26 guide raised) | Hold-to-Buy, consensus not Sell | VEPPANU commercial launch resolved 08-13 | Resolved | Not a single near-dated binary -> standard 7.5% cap | **Held position**, +11.5% unrealized. Momentum clean (+34.5pp 3M, +64.9pp 6M rel., above both MAs). Still well below the +25% satellite tighten threshold |
+| CGEM | Biotech | Growth is a judgment call — pre-revenue, same treatment as prior weeks | Strong Buy/Moderate Buy | zipalertinib NDA FDA-accepted, target action Feb 27, 2027 (confirmed, not imminent) | Not inside the 5-day window | Not a single near-dated binary -> standard 7.5% cap | **Retained.** Momentum clean (+45.0pp 3M, +47.4pp 6M rel., above both MAs). **Biotech sub-sector remains under the 2-strike cooldown (through 2026-09-25) — cannot be newly entered until it lifts.** |
+| PLPC | Industrials | Positive (Q2 rev +25% YoY, record; EPS beat) | Strong Buy | Delta Star acquisition integration; $1.4T grid-capex super-cycle | Resolved (Q2 print) | Not a single near-dated binary -> standard 7.5% cap | **Retained.** Momentum clean (+10.5pp 3M, +45.9pp 6M rel., above both MAs). Flagged 30.0% move (07-30) — verified real, prior weeks |
+| SHIP | Industrials | Positive (Q2 rev +49% YoY) | Strong Buy | Dry-bulk Capesize rate strength; dividend ex-date 09-25 | Ex-date 09-25 (not binary-regulatory) | Not a single near-dated binary -> standard 7.5% cap | **Retained.** Momentum clean (+20.7pp 3M, +31.2pp 6M rel., above both MAs) |
+| GNK | Industrials | Positive (Q2 voyage revenue +68.5% YoY) | Moderate Buy | Q3 dividend declaration, >$1.00/share guided | Expected declaration ~early Nov 2026 | Not a single near-dated binary -> standard 7.5% cap | **Retained.** Momentum clean (+17.5pp 3M, +8.1pp 6M rel., above both MAs) |
+| ALNT | Industrials | Positive (Q2 rev +10.1% YoY, NI +85% YoY, gross margin 34.9%) | Buy (5 Buy, 1 Hold, 0 Sell) | Q2 earnings beat; STAN program restructuring execution; grid/aerospace-defense demand | Resolved (Q2 print) | Not a single near-dated binary -> standard 7.5% cap | **New.** Momentum clean (+2.9pp 3M, +46.5pp 6M rel., above both MAs) |
+| FEIM | Industrials | Positive (Q1 FY27 rev +69.8% YoY, NI +565% YoY) | Moderate Buy (2 Buy, 2 Hold, 0 Sell) | Q1 FY27 earnings beat (09-10); record $129M backlog, 1.76x book-to-bill; new lunar-PNT and Assured-PNT defense contract wins | Resolved (09-10 print); backlog-driven, not a single near-dated binary | Not a single near-dated binary -> standard 7.5% cap | **New.** Momentum clean (+16.4pp 3M, +81.9pp 6M rel., above both MAs). Flagged 42.4% move (09-11) — verified real, the Sept 10 earnings-beat reaction |
+
+**Dropped this week:** none — RIGL, CGEM, PLPC, SHIP, GNK all re-confirmed
+clean on fresh momentum this week; no positions stopped out or exited.
+
+**Added this week:** ALNT (Allient) and FEIM (Frequency Electronics), both
+sourced from this week's industrials-only Gemini candidate search (biotech
+excluded outright per the active cooldown) and confirmed on momentum,
+growth, rating, and a dated catalyst.
+
+**Considered and skipped this week (biotech cooldown — STEP 7e):** none
+sourced — this week's satellite Gemini query was scoped to industrials only
+from the outset, since the cooldown was already known to be active going
+in; no research spend was made on biotech candidates.
+
+**Considered and dropped this week (industrials — fail momentum):**
+- **WLDN (Willdan)** — real Q2 beat and KCS data-center-power acquisition
+  catalyst, but fails the momentum gate (below the 200-day MA, -16.6pp 3M
+  relative return).
+- **BBCP (Concrete Pumping Holdings)** — real Q3 beat, new 5.6% dividend
+  initiation, and data-center-driven demand, but fails the momentum gate
+  (below the 50-day MA, -13.7pp 3M relative return).
+- **DCO (Ducommun)** — real PAC-3 missile-defense contract award and
+  record backlog, but fails the momentum gate (below the 50-day MA, -1.0pp
+  3M relative return, essentially flat).
+- **KFRC (Kforce)** — real Q2 beat and tech-consulting pivot, positive
+  relative returns on both windows (+7.5pp 3M, +84.5pp 6M), but still fails
+  the momentum gate on the MA-position leg (below the 50-day MA) — a
+  reminder that a positive relative return alone doesn't clear the gate.
+- **GRC (Gorman-Rupp)** — real data-center-cooling-pump demand story, but
+  fails the momentum gate (below the 50-day MA, -19.8pp 3M relative
+  return).
+
+**2-strike sub-sector cooldown status (unchanged since 09-11):** **Biotech
+remains at strike 2/2 — cooldown ACTIVE through 2026-09-25** (OCUL
+2026-07-23, MNKD 2026-09-11). Industrials remains at 0 strikes, unaffected.
+
+## History
+
+### Week of 2026-09-11
 
 Eighth weekly screen refresh (weekly-review workflow, run 2026-09-11 for the
 market week ending Fri 2026-09-11 — fourth consecutive Friday on time). Full
@@ -177,7 +398,7 @@ profile looks. Existing held/listed biotech names (RIGL, CGEM) are
 unaffected — the cooldown blocks new positions, not maintaining ones
 already screened and open. Industrials sub-sector remains at 0 strikes.
 
-### Core (S&P 500 momentum + FCF)
+#### Core (S&P 500 momentum + FCF)
 
 | Ticker | Momentum Rank | 3M Rel. Return vs SPY | FCF Trend | Analyst Rating | Notes |
 |---|---|---|---|---|---|
@@ -287,7 +508,7 @@ not carried onto any list):**
   200-day MA) — flagged per the data-quality guard as data-unavailable,
   not screened, not excluded on merits.
 
-### Satellite (small-cap biotech / industrials)
+#### Satellite (small-cap biotech / industrials)
 
 | Ticker | Sub-sector | YoY Growth | Analyst Rating | Catalyst | Catalyst Date | Max Loss If Catalyst Fails | Notes |
 |---|---|---|---|---|---|---|---|
@@ -351,8 +572,6 @@ at strike 2/2 — cooldown ACTIVE through 2026-09-25** (OCUL 2026-07-23,
 MNKD 2026-09-11, no intervening biotech close between them). No new
 satellite biotech positions may be opened before that date regardless of
 screen results. Industrials remains at 0 strikes, unaffected.
-
-## History
 
 ### Week of 2026-09-04
 
