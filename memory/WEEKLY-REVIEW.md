@@ -1648,3 +1648,248 @@ Grade reflects a week where every risk control did its job under real
 pressure (including a first-time trigger of the cooldown mechanism), offset
 by a costly, recurring execution-access problem still unresolved and one
 new platform-level surprise.
+
+---
+
+## Week ending 2026-09-18
+
+**Coverage note — this entry covers a single market week (2026-09-14
+through 2026-09-18, a normal 5-day week).** The 09-11 review's refresh
+landed on time, and this refresh is also running on schedule (fifth Friday
+in a row on time) — WATCHLIST.md's "Current" section was still dated "Week
+of 2026-09-11" going into this session, correctly current for the full
+period.
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $93,457.24 (per week-ending-2026-09-11 review) |
+| Ending portfolio | $93,429.73 |
+| Week return | -$27.51 (-0.03%) |
+| S&P 500 week | -0.39% (per Gemini Deep Research: a week dominated by a coordinated AI-development-pause call hitting semis/AI-capex names, a BOJ rate hike to a 31-year high pressuring the yen carry trade, Warren Buffett's retirement as Berkshire chairman, and a Nucor earnings-driven plunge) |
+| Bot vs S&P | +0.36pp (bot outperformed) |
+| Core trades | 0 (W:0 / L:0 / open:0) |
+| Satellite trades | 0 new (RIGL held throughout, not a new trade this period; 1 open) |
+| Win rate | n/a (no closed trades) |
+| Best trade | n/a (no closed trades) |
+| Worst trade | n/a (no closed trades) |
+| Profit factor | n/a (no closed trades) |
+
+Income sleeve (SGOV/SPHY/EDGX) is not included in the trade/win-rate stats
+above. No Income-sleeve activity this period at all — no Core/Satellite
+trade to trigger a sweep, and cash stayed at or above the 20% floor all
+week (20.09%-20.19%) with no price-drift breach to correct.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| — | — | — | — | — | No trades closed this period — core and satellite both stayed at 0 new trades all week, valid per the Patience Rule |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| RIGL | satellite | $41.84 | $46.64 | +$547.20 (+11.47%) | 15% trailing, trigger $42.415 (hwm $49.90) |
+| EDGX | income | $26.78 | $26.80 | +$14.92 (+0.07%) | 5% trailing, trigger $25.9825 (hwm $27.35) |
+| SGOV | income | $100.469501 | $100.585 | +$34.07 (+0.11%) | 5% trailing, trigger $95.5605 (hwm $100.59, 294 of 294.989473856 sh covered) |
+| SPHY | income | $23.36 | $22.98 | -$325.28 (-1.63%) | 5% trailing, trigger $22.23 (hwm $23.40) |
+
+All 4 open positions confirmed carrying live GTC trailing stop orders via
+`alpaca.sh orders open`, none missing (SGOV's 0.989473856-sh fractional
+remainder stays unstopped, the same immaterial ~$99 dust flagged every
+prior sweep). Week-end exposure (equity $93,429.73): core $0.00 (0.00%),
+satellite $5,316.96 (5.69%), income $69,335.20 (74.22%), cash $18,777.57
+(20.10%, above the 20% floor). Core sleeve has now been at 0 open
+positions for 16 consecutive trading sessions since APA's 09-08 exit — see
+"What Didn't Work" below.
+
+### Watchlist Refresh
+- **Core: 24 names (was 24, composition changed materially).** Full
+  503-name universe re-screened via fresh Alpaca bars. **A real tooling fix
+  this week: FMP's free-tier `cashflow`/`growth` endpoints were 402'ing
+  because `scripts/fmp.sh` defaults to `limit=8`, but the account's actual
+  plan caps `limit` at 5** — passing `limit=5` explicitly got 3 names
+  through (AMD, INTC, MRNA) before the account's full daily quota hit a
+  hard `429`/"Limit Reach" wall for the rest of the session, including a
+  1.2s-delayed retry round on the 55 remaining names. All 55 were instead
+  sourced from 6 parallel Gemini Deep Research batches (~10 tickers/batch),
+  all 6 of which completed cleanly on the first submission — the best
+  fundamentals-batch reliability of any refresh to date. New this week
+  (15): AMD, MRVL, PANW, INTC, RVTY, ZBRA, VEEV, CNC, TMO, NUE, INCY, WST,
+  STT, CPAY (14 actually new or promoted from prior alternates benches;
+  see WATCHLIST.md for the full per-ticker audit). Retained (9): DELL, HPE,
+  MPC, VLO, CRL, HUM, PSX, NTAP, IQV. Dropped from the prior 24-name list
+  on this week's momentum re-rank or fundamentals: MU, STX, WDAY, CRM, GPC,
+  BBY, ABNB, BNY, MET (all fell below the top-24 cut or a sector cap this
+  week — MU/STX/CRM/WDAY specifically bumped by the Information Technology
+  sector cap despite still passing fundamentals) — full ticker-by-ticker
+  audit, including 16 names that failed fundamentals this week and the
+  complete sector-capped/cut-line alternates benches, is in WATCHLIST.md.
+- **Sector-cap enforcement bound two sectors simultaneously for the first
+  time:** Information Technology and Health Care both landed exactly at
+  9/24 (37.5%), each holding out a bench of otherwise-qualifying names
+  (10 IT names including MU, STX, ANET, MSFT, PLTR; 5 Health Care names
+  including WAT, A, MRK, DXCM, DGX) — the cap did what it's designed to do
+  on both fronts at once, a first.
+- **Data-quality watch item:** MRK's analyst Sell lean, which triggered its
+  exclusion on 09-11 at a reported 12.5%, reads as 0% in this week's
+  consolidated Gemini report with no change in the underlying FCF/growth
+  story. Treated as a pass this week per the report in hand, but flagging
+  the swing itself — a rating this volatile between weekly refreshes, with
+  no news event to explain it, is a reason for continued skepticism rather
+  than confidence in either figure.
+- **Corporate-action guard:** SNDK still carries an implausible price level
+  ($1,614.39) and now also fails the momentum gate outright (3M rel.
+  -20.5%); still excluded. Two new single-day-move flags this week (MRVL
+  +32.5% on 06-02, INTC +23.6% on 04-24) were sanity-checked as isolated,
+  moderate-magnitude, earnings-season-dated moves with no stitching/spinoff
+  signature, and treated as real rather than excluded.
+- **Satellite: 7 names (was 5, +2 net, no drops).** Retained RIGL (held),
+  CGEM, PLPC, SHIP, GNK — all momentum-confirmed clean. **Added ALNT
+  (Allient) and FEIM (Frequency Electronics)**, both industrials, both
+  clearing momentum, growth (+10.1%/+85% and +69.8%/+565% YoY
+  rev/earnings respectively), a Buy-side analyst consensus, and a dated
+  catalyst (Q2 earnings + STAN restructuring for ALNT; a Q1 FY27 earnings
+  beat plus a record $129M defense/space backlog for FEIM). Per STEP 7e,
+  **no biotech candidates were sourced or screened at all this week** —
+  the satellite Gemini query was scoped to industrials only from the
+  outset, since the 2-strike cooldown (active through 2026-09-25) was
+  already known going in. Five industrials candidates with real catalysts
+  (WLDN, BBCP, DCO, KFRC, GRC) were sourced and confirmed on sector fit but
+  all failed the momentum gate — full detail in WATCHLIST.md.
+- **Session note:** this session's container restarted mid-run, partway
+  through polling the 6 Gemini fundamentals batches. All 6 had already
+  completed and their results — along with the rest of the session's
+  working files (bars, momentum calcs, satellite research) — survived on
+  disk, so no research was lost or had to be redone; only the in-flight
+  polling loop itself needed restarting.
+
+### What Worked
+- **A real, actionable tooling bug was found and fixed this session**: FMP
+  free-tier accounts cap the `limit` query parameter at 5, and
+  `scripts/fmp.sh` was defaulting to 8, causing every `cashflow`/`growth`
+  call to 402 regardless of the per-symbol allowlist question flagged in
+  prior weeks. Passing `limit=5` explicitly got 3 real names through before
+  the day's quota was separately exhausted — a partial win, but a genuine
+  root-cause fix rather than another documented workaround.
+- Mechanical risk controls had nothing to test this week (zero trades, one
+  held satellite position) but performed a clean no-op: RIGL's stop never
+  came close to triggering, no stop was tightened prematurely, the 2-strike
+  cooldown tracker was checked and correctly left unchanged every single
+  session, and the cash floor never dipped below 20% at any point.
+- The screen refresh ran on schedule for a fifth consecutive Friday, with
+  the cleanest Gemini fundamentals-batch completion rate of any refresh to
+  date (6 of 6 batches complete on the first submission, zero resubmits).
+- The satellite screen correctly respected the biotech cooldown by not
+  spending any research budget on biotech candidates at all this week,
+  rather than sourcing and then discarding them — the same discipline the
+  09-11 review noted paid off the first time the cooldown was tested.
+- The session's container restart mid-run was a real resilience test this
+  workflow hadn't faced before, and it passed: all completed research
+  (bars, fundamentals batches, satellite report) persisted on disk and
+  nothing had to be redone.
+
+### What Didn't Work
+- **Core sleeve has now been at 0 open positions for 16 consecutive trading
+  sessions (over 3 calendar weeks) since APA's 09-08 exit**, against an 85%
+  target allocation. Unlike the wide/stale-opening-spread pattern flagged
+  in the 08-21/08-28/09-11 reviews as the blocker, this week's daily
+  session notes (09-14 through 09-17) point at a different, arguably worse
+  symptom: several sessions explicitly recorded that no "Approved Trades
+  (verified)" list was ever produced by the research pipeline at any
+  window, even on 09-16 when that day's pre-market research was described
+  as "fully clean (non-truncated) for the first time in 5 sessions." A
+  clean research pass that still doesn't produce an approved candidate is
+  a distinct failure mode from a truncated one, and it's now the proximate
+  cause blocking a 16-session-and-counting core drought. This lives in the
+  daily workflow logic (`.claude/commands/market-open.md` /
+  `routines/market-open.md` and related), outside this weekly-review
+  session's file scope to fix (STEP 11 only commits `memory/` files) — see
+  Key Lessons and Adjustments.
+- **SendGrid has now been returning 401 Unauthorized for 12+ consecutive
+  notification windows across 9 sessions since it was first caught on
+  2026-09-10** — more than a full week unresolved. This session will
+  attempt the send again per STEP 10 and fall back to the local file if it
+  still fails; either way, this is now overdue for owner action (a key
+  rotation) that no session can perform.
+- MRK's analyst Sell lean swinging from a reported 12.5% (09-11) to 0%
+  (this week) with no underlying news is a reminder that single-week
+  analyst-consensus figures from Gemini's aggregation carry real
+  week-to-week noise, independent of the truncation/fabrication failure
+  modes already tracked — worth treating any borderline Sell-lean call as
+  provisional rather than definitive.
+
+### Key Lessons
+- **A clean, non-truncated research pass is necessary but not sufficient
+  for the daily workflow to actually surface a trade candidate.** Prior
+  reviews (08-21, 08-28, 09-11) diagnosed the core drought as a
+  spread/liquidity access problem; this week's session notes suggest the
+  research-to-approved-candidate pipeline itself may be the more
+  proximate blocker on at least some of these 16 sessions, since a
+  "fully clean" research pass (09-16) still produced no approved
+  candidate. These are not necessarily competing explanations — both
+  could be true on different days — but the second one hasn't been
+  investigated with the same rigor and needs to be, since it points at a
+  different fix (the buy-side candidate-approval logic, not the
+  open-auction spread check).
+- **Fixing a tool's actual constraint (FMP's `limit<=5` cap) beats
+  documenting another workaround.** Every prior review's FMP notes
+  described *symptoms* (402s, an inferred per-symbol allowlist, a daily
+  quota) without isolating that the shortlist calls were tripping a
+  parameter limit the wrapper script itself was violating by default.
+  Isolating and passing the correct parameter got real data through for
+  3 names this week that would otherwise have gone to Gemini by default
+  assumption — worth checking whether other FMP endpoints in
+  `scripts/fmp.sh` carry similar undocumented parameter caps.
+- Sector-cap enforcement binding on two GICS sectors in the same week
+  (Information Technology and Health Care both at exactly 9/24) confirms
+  the cap mechanism scales correctly as momentum concentrates in more than
+  one place at once, not just the semis/AI-hardware cluster it was
+  originally designed around.
+
+### Adjustments for Next Week
+- **Escalate the core-drought root cause explicitly**: the next session
+  with access to the daily workflow files should investigate why a
+  "fully clean" research pass (09-16) still failed to produce an
+  "Approved Trades (verified)" list, as a distinct question from the
+  wide-spread pattern already being tracked. 16 consecutive sessions at
+  0% core exposure against an 85% target is no longer a one-off — it is
+  the single largest unexplained gap in this account's operating history.
+- **Escalate the SendGrid key rotation to the owner again**, now that it
+  has passed the one-week mark unresolved — this is squarely outside any
+  session's ability to fix and needs explicit owner action.
+- Re-verify the momentum/FCF/rating buy-side gate fresh at the next
+  session using this week's rebuilt 24-name core list; DELL, HPE, AMD,
+  CRWD, MRVL, PANW top the list by momentum and are the first names to
+  re-check once/if the candidate-approval blocker above is resolved.
+- No new satellite biotech entries before 2026-09-25 (2-strike cooldown
+  still active) — ALNT and FEIM (industrials) are now available for
+  satellite entry subject to the normal buy-side gate.
+- Watch RIGL's continued unrealized gain (+11.47%) against the +25%
+  satellite tighten threshold — still a meaningful distance away.
+- Carry forward the FMP `limit=5` fix as institutional knowledge: try
+  `fmp.sh cashflow/growth SYM period 5` before assuming 402/429 means "no
+  data available," and only fall back to Gemini once the daily quota is
+  confirmed exhausted (a `429` after a `limit=5` retry, or an explicit
+  "Limit Reach" body).
+- No core risk-cap changes (sleeve %, stop widths, sector-cap threshold)
+  this week — this period's shortfall is a workflow/tooling reliability
+  question (why the daily pipeline isn't producing approved candidates,
+  and a still-broken notification integration), not evidence the risk
+  parameters themselves are miscalibrated.
+
+### Overall Grade: C+
+A quiet week by trade count (zero trades, one held position) that still
+produced real value: a genuine root-cause fix to the FMP `limit` parameter
+bug, the cleanest Gemini fundamentals-batch run to date, two new
+well-documented satellite names, and a mid-session container restart that
+the workflow's on-disk persistence absorbed without losing any completed
+research. Every mechanical risk control that had something to check
+(RIGL's stop, the cash floor, the 2-strike cooldown) did its job correctly
+because there was nothing to get wrong. But the core sleeve's drought has
+now reached 16 consecutive sessions against an 85% target with a newly
+surfaced, more specific symptom (clean research still not producing an
+approved candidate) that no session has yet investigated, and SendGrid has
+now been broken for more than a full week without owner action. Grade
+reflects a week of solid, if modest, process wins offset by two compounding
+operational gaps that are each now overdue for a fix outside this session's
+own file scope.
