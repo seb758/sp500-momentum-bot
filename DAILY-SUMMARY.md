@@ -125,3 +125,15 @@ Open positions:
   SPHY (inc) -1.6% (stop $22.23)
 This week: core 0/6, satellite 0/4
 Tomorrow: reverify buy-side gate for core rebuild (MU angle ahead of 9/30 earnings); watch RIGL's continued approach to +25% satellite tighten threshold; SHIP's 9/25 dividend ex-date is the next satellite item to watch; Friday's weekly-review/watchlist screen-refresh next; SendGrid key rotation still overdue (12 windows now)
+
+---
+## 2026-09-18 Weekly Review (fallback -- SendGrid still returning 401 Unauthorized, 13th consecutive window / 9th session since 9/10)
+Week ending Sep 18
+Portfolio: $93,429.73 (-0.03% week, -6.57% phase)
+vs S&P 500: +0.36pp
+Core trades: 0 (W:0/L:0) | Satellite trades: 0 (W:0/L:0)
+Best: n/a Worst: n/a
+Watchlist: core 24 names, satellite 7 names (+ALNT +FEIM) for next week
+Grade: C+
+ALERT: Core sleeve at 0 positions for 16 sessions vs 85% target - needs investigation
+ALERT: SendGrid still 401 for 9 sessions/12+ windows - owner key rotation overdue
