@@ -2575,3 +2575,55 @@ SendGrid key status (was 401 Unauthorized for 8 consecutive windows / 5 sessions
 as of 9/15's close, not retested since — no send attempted 9/16 or so far today
 until STEP 9 below).
 
+## Sep 18 — 3pm Snapshot (Day 55, Friday)
+**Portfolio:** $93,300.19 | **Cash:** $18,777.57 (20.13%) | **Day P&L:** -$66.17 (-0.07%) | **Phase P&L:** -$6,699.81 (-6.70%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,249.70 (5.63% of equity) | **Income exposure:** $69,272.89 (74.25% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $46.05 | +0.44% | +$479.94 (+10.06%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.705 | -0.04% | -$55.95 (-0.28%) | 5% trailing ($25.9825) |
+| SGOV | income | 294.989473856 | $100.469501 | $100.585 | +0.03% | +$34.07 (+0.11%) | 5% trailing ($95.5605, 294 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.99 | -0.17% | -$316.72 (-1.58%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite trades this window (or all session) — no "Approved
+Trades (verified)" list existed in today's RESEARCH-LOG at any window (pre-market,
+9:30am, 11am, 3pm all HOLD), so per STEP 3 the buy side was HOLD all day; this week
+(Sep 14 start) closes the week at core 0/6, satellite 0/4 new trades — valid per the
+Patience Rule. No account activity today at all (no buys, sells, sweeps, or
+tightens). Risk sweep (3pm): core has 0 open positions, nothing to check; satellite
+RIGL +10.06%, well clear of the -15% hard-cut and still below the +25% tighten
+threshold, no gap-risk catalyst inside the 1-2 trading-day window (RIGL's own
+binary PDUFA event resolved 8/13; SHIP's 9/25 dividend ex-date is informational
+only — SHIP is not a held position); income EDGX -0.28% and SPHY -1.58%, both well
+inside the 5% stop; SGOV +0.11%. All 4 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing
+(SGOV's 0.989473856-sh fractional remainder stays unstopped, same immaterial ~$99
+dust flagged every prior sweep, not a new gap). No stop moved down. Thesis check:
+RIGL intact, no adverse news since 11am; EDGX/SGOV/SPHY have no thesis to break
+under Income sleeve rules — SPHY's distribution-decline/technical-breakdown watch
+item persists as a watch item, not a break, well inside its 5% stop. 2-strike
+sub-sector tracker unchanged: biotech 2/2 cooldown active through 2026-09-25 (OCUL
+7/23, MNKD 9/11); industrials 0/2. Cash 20.13%, at/above the 20% floor, no sweep
+needed. Risky positions closed today: none. Day P&L (-0.07%) a modest pullback
+versus yesterday's snapshot — RIGL's continued gain was more than offset by
+SPHY/EDGX softness on the day. Phase P&L now -6.70% since Day 0 ($100,000 ->
+$93,300.19). Core exposure remains 0.00% (0 of 6 slots open, 16 consecutive
+sessions since APA's 9/8 exit) — rebuilding core exposure from a fresh
+momentum/FCF/rating-qualified candidate stays the top priority; MU (flagged 9/17,
+Sept 30 earnings ahead) remains the standing angle for the next research window.
+Satellite steady at 5.63% (1 of 4 slots: RIGL only; biotech sub-sector cooldown
+active through 9/25, industrials still open). This week (Sep 14 start) closes at
+core 0/6, satellite 0/4 new trades — valid per the Patience Rule. Tomorrow/next
+session: re-verify momentum/FCF/rating live at the buy-side gate for a core
+rebuild candidate; watch RIGL's continued approach toward its +25% satellite
+tighten threshold; SHIP's 9/25 dividend ex-date is the next satellite item worth a
+closer look (industrials unaffected by the biotech cooldown); Friday's
+weekly-review/watchlist screen-refresh is the next major workflow, with the
+16-consecutive-session core drought as a standing discussion item; SendGrid
+remains broken (401 Unauthorized, 12th consecutive window / 9th session since
+first caught 9/10) — owner action to rotate the key remains overdue and is
+escalated again this window; content preserved via manual local fallback
+(DAILY-SUMMARY.md, since the script only auto-falls-back on missing creds, not
+an API-level 401).
+
