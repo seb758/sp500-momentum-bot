@@ -5640,3 +5640,8 @@ None sourced as approved — this research-only workflow does not place trades r
 
 ### Notification
 **Silent — no urgent condition met.** Per STEP 5, notification is silent unless a held position is already below its hard-cut pre-market, a satellite catalyst resolved negatively overnight, or a major geopolitical event occurred. None applies: all 4 positions are well clear of their stops, no satellite catalyst resolved negatively (SHIP's ex-date is upcoming, not resolved, and not itself a binary-thesis catalyst), and no fresh geopolitical shock occurred overnight — today's dominant story is a broad, constructive risk-on tape. No email sent this session.
+
+### 9:30 AM Session Note
+- **HOLD, no trades.** Live `alpaca.sh account`/`positions` reconfirmed pre-market snapshot (equity $93,334.89, cash 20.12%, positions RIGL/EDGX/SGOV/SPHY unchanged). Core has no candidate (0/6 slots, 14th consecutive session since APA's 9/8 exit); RIGL (satellite, held) has no new entry signal; CGEM blocked by the active biotech 2-strike cooldown (through 09-25); PLPC/GNK unchanged, no new signal.
+- **Checked SHIP live per pre-market's flag** (ex-div 09-25 inside the 5-day catalyst window, industrials unaffected by the cooldown) — live quote showed bid $15.91 / ask $21.39, a ~29% spread on a ~$18-20 name. Skipped per STEP 2's illiquid/wide-spread rule; did not proceed to the buy-side gate. No other satellite/core ticker was in play this window.
+- **Pattern for Friday's review:** core sleeve's 0%-exposure streak is now 14 consecutive sessions (since 09-08) — worth discussing whether the momentum+FCF+rating gate is too tight given market conditions, or whether this is simply the Patience Rule working as intended.
