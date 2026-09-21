@@ -129,3 +129,18 @@ Tomorrow: reverify buy-side gate for core rebuild (MU angle ahead of 9/30 earnin
 ---
 ## 2026-09-19 Pre-market (fallback — SendGrid still returning 401 Unauthorized, 13th consecutive window / 10th session since 9/10)
 Pre-market alert 2026-09-19 (Saturday, market closed): Houthi attack on Saudi oil infrastructure, tanker on fire, Brent crude above $102/bbl, refining crack spreads near a record ~$70/bbl. No held position threatened (RIGL +11.5%, EDGX +0.1%, SGOV +0.1%, SPHY -1.6%). Bullish/neutral context for core watchlist refiners VLO/MPC/PSX; 10-year yield grinding toward 5% remains a watch item for SPHY's credit-spread exposure. Core sleeve still at 0% (16 consecutive trading sessions since APA's 9/8 exit). No trade action possible or taken today (non-trading Saturday); HOLD per Patience Rule. SendGrid key rotation still overdue (13 windows now).
+
+---
+## 2026-09-21 3PM (fallback — SendGrid still returning 401 Unauthorized, 14th consecutive window tested / 11th session since 9/10)
+3PM Sep 21
+Portfolio: $93625.35 (+0.35% day, -6.37% phase)
+Core: $0.00 (0.0%) | Satellite: $5338.62 (5.7%) | Cash: $18777.57 (20.1%)
+Trades today: none
+Risky positions closed: none
+Open positions:
+  RIGL (sat) +11.9% (stop $42.415)
+  EDGX (inc) +0.7% (stop $25.9825)
+  SGOV (inc) +0.1% (stop $95.57)
+  SPHY (inc) -1.4% (stop $22.23)
+This week: core 0/6, satellite 0/4
+Tomorrow: re-verify momentum/FCF/rating live at the buy-side gate for a core rebuild candidate (DELL/HPE/MRVL/PANW/CRWD standing angles); take a closer live look at SHIP ahead of its 9/25 dividend ex-date; continue monitoring SPHY's high-yield-credit-outflow watch item and RIGL's approach to +25% satellite tighten threshold; SendGrid key rotation still overdue (14 windows now, 401 Unauthorized reconfirmed this session) — owner action needed.

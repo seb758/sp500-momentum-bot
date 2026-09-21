@@ -2627,3 +2627,57 @@ escalated again this window; content preserved via manual local fallback
 (DAILY-SUMMARY.md, since the script only auto-falls-back on missing creds, not
 an API-level 401).
 
+## Sep 21 — 3pm Snapshot (Day 56, Monday)
+**Portfolio:** $93,625.35 | **Cash:** $18,777.57 (20.06%) | **Day P&L:** +$325.16 (+0.35%) | **Phase P&L:** -$6,374.65 (-6.37%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,338.62 (5.70% of equity) | **Income exposure:** $69,509.16 (74.24% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $46.83 | +0.41% | +$568.86 (+11.93%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.97 | +0.63% | +$141.74 (+0.71%) | 5% trailing ($25.9825) |
+| SGOV | income | 294.989473856 | $100.469501 | $100.60 | +0.01% | +$38.50 (+0.13%) | 5% trailing ($95.57, 294 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.0299 | +0.22% | -$282.57 (-1.41%) | 5% trailing ($22.23) |
+
+**Notes:** No Core/Satellite trades this window (or all session) — no "Approved
+Trades (verified)" list existed in today's RESEARCH-LOG at any window (pre-market,
+9:30am, 11am, 3pm all HOLD), so per STEP 3 the buy side was HOLD all day; this week
+(Sep 21 start, new week) opens at core 0/6, satellite 0/4 new trades so far — valid
+per the Patience Rule. No account activity today at all (no buys, sells, sweeps, or
+tightens). Risk sweep (3pm): core has 0 open positions, nothing to check; satellite
+RIGL +11.93%, well clear of the -15% hard-cut and still below the +25% tighten
+threshold, no gap-risk catalyst inside the 1-2 trading-day window (VEPPANU launch
+resolved 8/13, no new near-term binary event); income EDGX +0.71% and SPHY -1.41%,
+both well inside the 5% stop; SGOV +0.13%. All 4 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing
+(SGOV's 0.989473856-sh fractional remainder stays unstopped, same immaterial ~$99
+dust flagged every prior sweep, not a new gap). No stop moved down. Thesis check:
+RIGL intact, no adverse news since 11am; EDGX/SGOV/SPHY have no thesis to break
+under Income sleeve rules — SPHY's high-yield-credit-outflow watch item (OAS
+compression, declining distributions, sharpened again in this morning's research)
+persists as a watch item, not a break, well inside its 5% stop. 2-strike sub-sector
+tracker unchanged: biotech 2/2 cooldown active through 2026-09-25 (OCUL 7/23, MNKD
+9/11), lifts Friday; industrials 0/2. Cash 20.06%, at/above the 20% floor, no sweep
+needed. Risky positions closed today: none. Day P&L (+0.35%) driven mainly by
+RIGL's continued gain plus a broad-based AI-infrastructure rally (DELL's blowout Q2
+led sympathy moves across HPE/MRVL/PANW/CRWD), partly offset by SPHY's continued
+softness. Phase P&L now -6.37% since Day 0 ($100,000 -> $93,625.35). Core exposure
+remains 0.00% (0 of 6 slots open, 18 consecutive sessions since APA's 9/8 exit) —
+rebuilding core exposure from a fresh momentum/FCF/rating-qualified candidate stays
+the top standing priority; today's pre-market research flagged DELL/HPE
+(AI-infrastructure momentum) and MRVL/PANW/CRWD (custom-silicon deal, beat-and-raise,
+AI-conviction spillover) as the freshest color, but the 9:30am live spread check
+failed on every polled core/satellite name (recurring wide/flickering-spread
+data-feed anomaly, now flagged 4-5 times for Friday's review) so no buy was placed.
+Satellite steady at 5.70% (1 of 4 slots: RIGL only; biotech sub-sector cooldown
+active through 9/25, industrials still open). This week (Sep 21 start): core 0/6,
+satellite 0/4 new trades so far — valid per the Patience Rule. Tomorrow (9/22):
+re-verify momentum/FCF/rating live at the buy-side gate for a core rebuild
+candidate, with DELL/HPE/MRVL/PANW/CRWD as the standing angles from today's
+research; take a closer live look at SHIP ahead of its 9/25 dividend ex-date
+(industrials unaffected by the biotech cooldown, which itself lifts Friday);
+continue monitoring SPHY's high-yield-credit-outflow watch item and RIGL's approach
+toward its +25% satellite tighten threshold; recheck SendGrid key status (last
+confirmed broken, 401 Unauthorized, as of 9/18's 3pm test — 13+ day outage of the
+account's only owner-facing alert channel, owner action to rotate the key remains
+overdue).
+
