@@ -2681,3 +2681,55 @@ confirmed broken, 401 Unauthorized, as of 9/18's 3pm test — 13+ day outage of 
 account's only owner-facing alert channel, owner action to rotate the key remains
 overdue).
 
+### 2026-09-22 — SELL SGOV (income) — cash-floor pre-funding sweep for HPE buy
+Shares: 93 | Exit: $100.60 | Realized P&L: ~+$12.14 (0.13%) | Reason: pre-trade
+cash-floor sweep (income only) — Income sleeve rule requires selling SGOV first
+whenever a pending Core/Satellite buy would push post-trade cash below the 20%
+floor. Pre-trade cash was $18,777.57 = 20.04% of $93,720.74 equity, essentially at
+the floor with no room to fund a ~10%-of-equity core buy from literal cash alone.
+Mechanics: canceled the standing 294-share 5% trailing stop, sold 93 sh market/day
+($9,355.80 proceeds), re-placed a fresh 5% trailing GTC stop on the remaining 201
+whole shares (trigger $95.57285, hwm $100.603; 0.989473856-sh fractional remainder
+stays unstopped, same immaterial ~$99 dust flagged every prior sweep) — same
+cancel-then-replace pattern as every prior sweep. Post-sale cash $28,133.37 =
+30.02% of equity, sized to cover the planned HPE buy with a small buffer.
+
+### 2026-09-22 — BUY HPE (core)
+Shares: 150 | Entry: $62.78 | Stop: 10% trailing GTC, trigger $56.439 (hwm $62.71)
+| Target: n/a — no firm consensus PT at this momentum-continuation stage; exit
+governed by the trailing stop / gain-based tightening schedule | R:R: n/a
+Thesis: Core watchlist momentum name (2026-09-18 weekly screen rank 2, +23.7% 3M
+rel. return vs SPY per that screen). Recomputed live from fresh Alpaca daily bars
+(2025-03-22 to 2026-09-21 close) at this window: last close $61.75 above both the
+50-day MA ($52.73) and 200-day MA ($35.12); 3M relative return vs SPY +23.7pp
+(stock +27.6% vs SPY +3.9%), 6M relative return +165.4pp (stock +184.7% vs SPY
++19.3%) — momentum gate cleanly passes on live data, no >20% single-day move in
+the 6M lookback window. FCF trend "Strengthening" (Q3 FY26 record $958M, FY26
+guide >=$3.5B) and analyst rating Moderate Buy/Buy (~59% Strong Buy, 6% Buy, 35%
+Hold, 0% Sell) per the 09-18 screen, both still current (no adverse HPE news in
+today's pre-market research). Live quote at entry: spread flickered between tight
+(~0.2-0.3%) and wide (~4%) across three checks in the same minute — a recurring
+opening-auction data-feed anomaly flagged repeatedly in recent sessions' reviews
+(most recently 9/21) — executed only once a tight, stable read (bid $62.50/ask
+$62.62) confirmed. No PDT/daytrade concern (new position, no same-day round trip).
+Gate: core positions after fill 1/6, core trades this week 1/6 (first core trade
+since APA's 9/8 exit — 20 consecutive prior sessions at 0% core exposure), cost
+$9,417.00 = 10.05% of pre-trade equity ($93,720.74) — within the 20% single-
+position cap. Cost funded from cash post-SGOV-sweep above (pre-trade cash
+$28,133.37, well above the $9,417 cost). Ticker confirmed on WATCHLIST.md core
+list (2026-09-18 refresh).
+Other candidates checked this window: CRWD (also cleanly passes the momentum gate
+live — above both MAs, 3M rel. +43.8pp, 6M rel. +124.6pp, its flagged 8/27 +20.5%
+move already verified real in prior weeks) was skipped this window on the
+patience principle — one measured core entry rather than forcing two in the same
+session, given cash was right at the 20% floor and a single SGOV sweep/buy pair
+is simpler to fund and verify cleanly; a good candidate to revisit at 11am/3pm if
+the funding math and spread still work. DELL, MRVL, PANW, NUE, RVTY all skipped —
+wide/illiquid live spreads at market-open (5.6%-13.3%), consistent with the
+recurring thin-opening-liquidity pattern; DELL/MRVL/PANW/NUE remain standing
+momentum candidates to recheck at 11am/3pm once spreads normalize. SHIP
+(satellite, industrials) skipped — live spread ~32.8% (bid $15.48/ask $20.55),
+grossly wide even for the opening-auction pattern; re-check at 11am/3pm given its
+9/25 dividend-ex-date catalyst is inside the window and industrials is unaffected
+by the active biotech cooldown.
+
