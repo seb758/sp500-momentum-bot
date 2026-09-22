@@ -144,3 +144,19 @@ Open positions:
   SPHY (inc) -1.4% (stop $22.23)
 This week: core 0/6, satellite 0/4
 Tomorrow: re-verify momentum/FCF/rating live at the buy-side gate for a core rebuild candidate (DELL/HPE/MRVL/PANW/CRWD standing angles); take a closer live look at SHIP ahead of its 9/25 dividend ex-date; continue monitoring SPHY's high-yield-credit-outflow watch item and RIGL's approach to +25% satellite tighten threshold; SendGrid key rotation still overdue (14 windows now, 401 Unauthorized reconfirmed this session) — owner action needed.
+
+---
+## 2026-09-22 9:30 AM Market-Open (fallback — SendGrid still returning 401 Unauthorized, 15th consecutive window tested / 12th session since 9/10)
+BUY HPE (core): 150 sh @ $62.78 ($9,417.00, 10.05% of equity). First core trade in 20 consecutive sessions (since APA's 9/8 exit). 10% trailing GTC stop set, trigger $56.439. Live momentum re-confirmed from fresh Alpaca bars: above both 50-day/200-day MA, 3M rel. return vs SPY +23.7pp, 6M rel. +165.4pp. FCF/rating carried from the 09-18 weekly screen (Strengthening FCF, Moderate Buy/Buy). Funded via a pre-trade SGOV sweep (93 sh sold, $9,355.80) to protect the 20% cash floor, which was already at the line pre-trade.
+CRWD also cleanly passed the live momentum gate (above both MAs, 3M rel. +43.8pp, 6M rel. +124.6pp) but held back this window on the Patience Rule — one core entry, not two.
+Skipped on wide/illiquid opening spreads: DELL, MRVL, PANW, NUE, RVTY (5.6%-13.3%), SHIP (satellite, ~32.8%) — candidates to recheck at 11am/3pm once spreads normalize.
+Portfolio: $93,707.64 equity | Cash: $18,716.37 (19.97%, momentary dip from same-window buy funding, not a standing breach)
+Core: $9,363.00 (9.99%) | Satellite: $5,386.50 (5.75%) | Income: $60,205.78 (64.25%)
+Open positions:
+  HPE (core) new, stop $56.439
+  RIGL (sat) +12.9% (stop $42.415)
+  EDGX (inc) +0.9% (stop $25.9825)
+  SGOV (inc) +0.1% (stop $95.57285)
+  SPHY (inc) -1.4% (stop $22.23)
+This week (Sep 21 start): core 1/6, satellite 0/4
+Tomorrow/next window: recheck CRWD, DELL, MRVL, PANW, NUE, RVTY, SHIP with fresh live spreads; verify cash floor has recovered to >=20% from today's momentary dip; SendGrid key rotation still overdue (15 windows now, 401 Unauthorized reconfirmed this session) — owner action needed.

@@ -5909,3 +5909,24 @@ None approved — this pre-market research workflow does not run a live buy-side
 
 ### Notification
 **Silent — no urgent condition met.** Per STEP 5, notification is silent unless a held position is already below its hard-cut pre-market, a satellite catalyst resolved negatively overnight, or a major geopolitical event occurred. None applies: all 4 positions are well clear of their stops, no satellite catalyst resolved negatively (SHIP's ex-date is upcoming, not resolved; CGEM's ambiguous Sept 14 readout does not confirm a negative resolution), and overnight geopolitical developments (Russia-Ukraine) are a continuation of existing risk, not a new discrete shock. No email sent this session.
+
+### 9:30 AM Session Note
+- **Bought HPE (core), 150 sh @ $62.78 ($9,417, 10.05% of equity)** — first core
+  entry in 20 consecutive sessions (since APA's 9/8 exit). Live bars re-confirmed
+  the momentum gate cleanly (above both MAs, 3M rel. +23.7pp, 6M rel. +165.4pp),
+  FCF/rating carried from the 09-18 screen, unchanged. 10% trailing GTC stop
+  placed immediately (trigger $56.439). Funded via a pre-trade SGOV sweep (93 sh
+  sold) per the Income sleeve's floor-protection rule — cash was right at the 20%
+  floor going in, so the sweep-first sequencing (not sweep-after) mattered here.
+- **CRWD also cleanly passed the live momentum gate** (above both MAs, 3M rel.
+  +43.8pp, 6M rel. +124.6pp) but was held back this window on the Patience Rule —
+  one measured core entry, not two, given the funding math involved. Candidate for
+  11am/3pm if it's still clean.
+- **Pattern worth flagging for Friday's review:** live bid/ask spreads at
+  market-open were unusually unreliable this session — HPE's own quote flickered
+  between ~0.2% and ~4% across three checks within the same minute, and
+  DELL/MRVL/PANW/NUE/RVTY/SHIP all read wide-to-very-wide (5.6%-32.8%) on a single
+  check and were skipped rather than retried. This is the same opening-auction
+  data-feed anomaly flagged 9/21 and in prior weeks — worth deciding at Friday's
+  review whether market-open should routinely re-poll a skipped name once before
+  discarding it, rather than skipping on one wide read.
