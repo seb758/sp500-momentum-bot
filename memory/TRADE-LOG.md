@@ -2733,3 +2733,54 @@ grossly wide even for the opening-auction pattern; re-check at 11am/3pm given it
 9/25 dividend-ex-date catalyst is inside the window and industrials is unaffected
 by the active biotech cooldown.
 
+## Sep 22 — 3pm Snapshot (Day 57, Tuesday)
+**Portfolio:** $93,679.07 | **Cash:** $18,716.37 (19.98%) | **Day P&L:** +$53.72 (+0.06%) | **Phase P&L:** -$6,320.93 (-6.32%)
+**Core exposure:** $9,181.50 (9.80% of equity) | **Satellite exposure:** $5,542.68 (5.92% of equity) | **Income exposure:** $60,238.52 (64.30% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HPE | core | 150 | $62.78 | $61.21 | -0.87% | -$235.50 (-2.50%) | 10% trailing ($56.70) |
+| RIGL | satellite | 114 | $41.84 | $48.62 | +3.25% | +$772.92 (+16.20%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $27.0999 | +0.27% | +$238.65 (+1.19%) | 5% trailing ($25.9825) |
+| SGOV | income | 201.989473856 | $100.469501 | $100.605 | +0.01% | +$27.37 (+0.14%) | 5% trailing ($95.5795, 201 sh covered) |
+| SPHY | income | 856 | $23.36 | $23.015 | -0.07% | -$295.32 (-1.48%) | 5% trailing ($22.23) |
+
+**Notes:** First core trade in 20 consecutive sessions — bought HPE at market-open
+this morning (9:30am window, funded via a pre-trade SGOV sweep for the cash-floor
+rule); no further Core/Satellite trades this session. Buy-side HOLD at 9:30am (post
+-buy), 11am, and 3pm — no "### Approved Trades (verified)" list existed anywhere in
+today's RESEARCH-LOG at any window, so per STEP 3 the 11am/3pm buy side traded
+nothing further even though CRWD was flagged clean at 9:30am (a protocol gap: the
+9:30am buy's own live-gate re-verification was never written up as a formal
+Approved-Trades section, so 11am/3pm couldn't act on it) — standing item for
+Friday's review. This week (Sep 21 start) closes at core 1/6 (HPE), satellite 0/4
+new trades — valid per the Patience Rule. Risk sweep (3pm): no closes, no tightens.
+HPE (core) -2.50%, well inside the -7% hard-cut, no adverse news, momentum/FCF/
+rating thesis intact. RIGL (satellite) +16.20%, climbing but still below the +25%
+tighten threshold, no gap-risk catalyst in the 1-2 trading-day window (its own
+binary event resolved 8/13). Income EDGX +1.19%, SGOV +0.14%, SPHY -1.48%, all well
+inside their 5% stops, no thesis to break under Income sleeve rules. All 5 open
+positions confirmed via `alpaca.sh positions`/`orders` carrying live GTC trailing
+stops, none missing (SGOV's 0.989473856-sh fractional remainder stays unstopped,
+same immaterial ~$99 dust flagged every prior sweep). No stop moved down. 2-strike
+sub-sector tracker unchanged: biotech cooldown active through 2026-09-25 (lifts
+Friday), industrials 0/2. Risky positions closed today: none. Cash 19.98%, a hair
+under the 20% floor from normal intraday price drift, same drift first observed at
+11am today (not yet a 3-consecutive-session pattern, so no standalone sweep
+triggered) — re-check next session. Day P&L +0.06% ($53.72) driven by RIGL's
+continued strength and a modest EDGX gain, mostly offset by HPE's pullback and
+SPHY's continued softness. Phase P&L now -6.32% since Day 0 ($100,000 ->
+$93,679.07). Core exposure 9.80% (1 of 6 slots: HPE only) — 19 consecutive
+sessions at 0% ended today with HPE's entry; CRWD remains the standing next
+candidate for a future window if the Approved-Trades protocol gap gets fixed.
+Satellite steady at 5.92% (1 of 4 slots: RIGL only; biotech sub-sector cooldown
+active through 9/25, industrials still open). This week (Sep 21 start): core 1/6,
+satellite 0/4 new trades. Tomorrow (9/23): re-verify CRWD (and DELL/HPE/MRVL/PANW
+cluster) live at the buy-side gate for a possible second core entry, and start
+writing a formal Approved-Trades section from market-open going forward per the
+protocol-gap fix; take a closer live look at SHIP ahead of its 9/25 dividend
+ex-date; continue monitoring RIGL's approach toward its +25% satellite tighten
+threshold, SPHY's high-yield-credit-outflow watch item, and the sub-20%-floor cash
+drift; SendGrid status retested this session via the mandatory 3pm send (see
+below).
+

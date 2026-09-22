@@ -160,3 +160,19 @@ Open positions:
   SPHY (inc) -1.4% (stop $22.23)
 This week (Sep 21 start): core 1/6, satellite 0/4
 Tomorrow/next window: recheck CRWD, DELL, MRVL, PANW, NUE, RVTY, SHIP with fresh live spreads; verify cash floor has recovered to >=20% from today's momentary dip; SendGrid key rotation still overdue (15 windows now, 401 Unauthorized reconfirmed this session) — owner action needed.
+
+---
+## 2026-09-22 3PM Trade + Risk Sweep (fallback — SendGrid still returning 401 Unauthorized, 16th consecutive window tested / 13th session since 9/10)
+3PM Sep 22
+Portfolio: $93679.07 (+0.06% day, -6.32% phase)
+Core: $9181.50 (9.80%) | Satellite: $5542.68 (5.92%) | Cash: $18716.37 (19.98%)
+Trades today: HPE buy (core, market-open) + SGOV sweep sell (income)
+Risky positions closed: none
+Open positions:
+  HPE (core) -2.50% (stop $56.70)
+  RIGL (sat) +16.20% (stop $42.415)
+  EDGX (inc) +1.19% (stop $25.9825)
+  SGOV (inc) +0.14% (stop $95.5795)
+  SPHY (inc) -1.48% (stop $22.23)
+This week: core 1/6, satellite 0/4
+Tomorrow: recheck CRWD/AI cluster live; SHIP ex-div 9/25; SendGrid key rotation still overdue (16 windows now, 401 Unauthorized reconfirmed this session) — owner action needed.
