@@ -190,3 +190,24 @@ MRVL/INTC (failed live momentum gate, one window negative)
 Post-trade cash: ~$18,854.51 (~20.10% of equity)
 SendGrid key rotation still overdue (17 windows now, 401 Unauthorized reconfirmed
 this session) — owner action needed.
+
+---
+## 2026-09-23 3PM Trade + Risk Sweep (fallback — SendGrid still returning 401 Unauthorized, 18th consecutive window tested / 14th session since 9/10)
+3PM Sep 23
+Portfolio: $93303.51 (-0.40% day, -6.70% phase)
+Core: $18522.30 (19.85%) | Satellite: $5415.00 (5.80%) | Cash: $18854.51 (20.21%)
+Trades today: AMD buy (core, market-open) + SGOV sweep sell (income)
+Risky positions closed: none
+Open positions:
+  AMD (core) -1.27% (stop $558.90)
+  HPE (core) -1.02% (stop $57.024)
+  RIGL (sat) +13.53% (stop $42.415)
+  EDGX (inc) +0.52% (stop $25.9825)
+  SGOV (inc) +0.15% (stop $95.589)
+  SPHY (inc) -2.16% (stop $22.23)
+This week: core 2/6, satellite 0/4
+Tomorrow: recheck CRWD/DELL live; SHIP ex-div 9/25 (1 trading day out); biotech
+cooldown lifts Friday 9/25; SendGrid key rotation now 18 windows / 13+ days
+overdue (401 Unauthorized reconfirmed every session since 9/18) — this is the
+account's only owner-facing alert channel and remains the top standing risk item
+for owner action.

@@ -6044,3 +6044,40 @@ None approved — this pre-market research workflow does not run a live buy-side
   muted), RIGL: no adverse news since the 9:30am window. Income sleeve (EDGX
   +0.64%, SGOV +0.16%, SPHY -1.88%) all within 5% stops, no thesis-break
   triggers. Cash $18,854.51 = 20.19% of equity, back above the 20% floor.
+
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists
+  anywhere in today's RESEARCH-LOG (pre-market, 9:30am, or 11am) — per STEP 3
+  no buys placed this window. Core stays 2/6 positions (HPE 9/22, AMD 9/23),
+  2/6 trades this week; satellite stays 0/4 new trades (RIGL held). Same
+  standing Approved-Trades protocol gap flagged 9/22 and again at 11am today
+  — AMD's own 9:30am entry came from direct live-gate re-verification, not a
+  formal Approved list; unresolved, standing item for Friday's review.
+- **Risk sweep — no closes.** Hard-cut check: AMD -1.27% core (vs -7% cut),
+  HPE -1.02% core (vs -7% cut), RIGL +13.53% satellite (vs -15% cut) — none
+  close. All 6 open positions (AMD, HPE, RIGL, EDGX, SGOV, SPHY) confirmed
+  via `alpaca.sh orders` carrying live GTC trailing stops, none missing
+  (SGOV's 0.989473856-sh fractional remainder stays unstopped, same
+  immaterial ~$99 dust flagged every prior sweep). No satellite catalyst
+  inside the next 1-2 trading days (RIGL's next pipeline readout not until
+  year-end) — gap-risk rule not triggered. Fresh WebSearch on HPE (today's
+  Q3 FY26 print: record $12.2B revenue +34%, FY26/FY27 guidance raised,
+  AI-backlog at a new high) and AMD (broad semis-cluster pullback/
+  consolidation after AMD's 9/22 $1T-market-cap milestone, no company-
+  specific adverse news) confirm both theses intact — the AMD/HPE softness
+  today reads as post-rally consolidation, not a break. RIGL thesis intact
+  per 11am note, no new development. Risky positions closed today: none.
+- **No stop tightening.** AMD and HPE both currently underwater (no
+  gain-based tighten applies); RIGL at +13.53% remains below the satellite
+  +25% tighten threshold. No stop moved down.
+- **2-strike sub-sector tracker unchanged:** biotech cooldown active through
+  2026-09-25 (lifts Friday, OCUL 7/23, MNKD 9/11); industrials 0/2.
+- Cash $18,854.51 = 20.21% of equity, above the 20% floor — no funding
+  sweep needed (no trade this window).
+- Pattern for Friday's review: (1) the recurring wide/flickering opening-
+  auction spread anomaly (flagged repeatedly this week); (2) the standing
+  Approved-Trades protocol gap — 9:30am windows keep trading off direct
+  live-gate checks rather than a written Approved list, which then blocks
+  11am/3pm from acting on the same setups; (3) SendGrid still unconfirmed
+  since 9/18 (18+ day suspected outage) — retested by this session's
+  mandatory send below.
