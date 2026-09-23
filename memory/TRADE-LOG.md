@@ -2839,3 +2839,56 @@ industrials) not attempted this window — no live spread check run; flagged in
 pre-market research as informational only (ex-div date 09-25 now 2 trading days
 out), not an approved candidate for this window.
 
+## Sep 23 — 3pm Snapshot (Day 58, Wednesday)
+**Portfolio:** $93,303.51 | **Cash:** $18,854.51 (20.21%) | **Day P&L:** -$375.56 (-0.40%) | **Phase P&L:** -$6,696.49 (-6.70%)
+**Core exposure:** $18,522.30 (19.85% of equity) | **Satellite exposure:** $5,415.00 (5.80% of equity) | **Income exposure:** $50,511.70 (54.14% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| AMD | core | 15 | $621.28 | $613.42 | -1.66% | -$117.90 (-1.27%) | 10% trailing ($558.90) |
+| HPE | core | 150 | $62.78 | $62.14 | +1.82% | -$96.00 (-1.02%) | 10% trailing ($57.024) |
+| RIGL | satellite | 114 | $41.84 | $47.50 | -2.70% | +$645.24 (+13.53%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.92 | -0.43% | +$104.44 (+0.52%) | 5% trailing ($25.9825) |
+| SGOV | income | 107.989473856 | $100.463541 | $100.6163 | +0.01% | +$16.50 (+0.15%) | 5% trailing ($95.589, 107 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.855 | -0.76% | -$432.28 (-2.16%) | 5% trailing ($22.23) |
+
+**Notes:** First core trade of the day was AMD, bought at 9:30am market-open via
+direct live-gate re-verification (no formal Approved-Trades list existed — same
+standing protocol gap flagged 9/22 and at 11am today). No further Core/Satellite
+trades this window — buy-side HOLD at 3pm, no "### Approved Trades (verified)"
+section anywhere in today's RESEARCH-LOG. This week (Sep 21 start) closes at core
+2/6 (HPE 9/22, AMD 9/23), satellite 0/4 new trades — valid per the Patience Rule.
+Risk sweep (3pm): no closes, no tightens. AMD -1.27% and HPE -1.02% (both core,
+well inside the -7% hard-cut) read as normal post-rally consolidation, not a
+thesis break — fresh WebSearch confirmed HPE's Q3 FY26 print beat and raised
+guidance (record $12.2B revenue +34% YoY, FY26/FY27 outlook both raised, AI
+backlog at a new high) and AMD's pullback is broad semis-sector profile-taking
+after its 9/22 $1T-market-cap milestone, no company-specific adverse news. RIGL
+(satellite) +13.53%, still below the +25% tighten threshold, no gap-risk catalyst
+in the 1-2 trading-day window (next pipeline readout not until year-end). Income
+EDGX +0.52%, SGOV +0.15%, SPHY -2.16%, all well inside their 5% stops, no thesis
+to break under Income sleeve rules. All 6 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none missing
+(SGOV's 0.989473856-sh fractional remainder stays unstopped, same immaterial ~$99
+dust flagged every prior sweep). No stop moved down. 2-strike sub-sector tracker
+unchanged: biotech cooldown active through 2026-09-25 (lifts Friday, OCUL 7/23,
+MNKD 9/11), industrials 0/2. Cash 20.21%, above the 20% floor, no sweep needed.
+Risky positions closed today: none. Day P&L (-0.40%) driven mainly by AMD/HPE's
+modest pullback from post-rally highs, partly offset by EDGX's small gain; RIGL
+and SGOV roughly flat, SPHY continuing its slow high-yield-credit-outflow drift.
+Phase P&L now -6.70% since Day 0 ($100,000 -> $93,303.51). Core exposure 19.85%
+(2 of 6 slots: HPE, AMD) — CRWD/DELL remain the standing next core candidates,
+both cleanly passing momentum live but repeatedly skipped on wide/unstable
+opening-auction spreads this week. Satellite steady at 5.80% (1 of 4 slots: RIGL
+only; biotech sub-sector cooldown lifts 9/25, industrials still open). This week
+(Sep 21 start): core 2/6, satellite 0/4 new trades. Tomorrow (9/24): re-verify
+CRWD/DELL (and the broader AI-hardware cluster) live at the buy-side gate for a
+possible third core entry once spreads normalize; take a closer live look at SHIP
+ahead of its 9/25 dividend ex-date (1 trading day out); watch RIGL's approach
+toward its +25% satellite tighten threshold and SPHY's continued high-yield-
+credit-outflow softness; the biotech 2-strike cooldown lifts Friday 9/25,
+reopening CGEM as a possible new entry subject to a fresh catalyst-window check;
+fix the standing Approved-Trades protocol gap so 11am/3pm windows can act on
+live-gate setups verified at market-open; SendGrid status retested this session
+via the mandatory 3pm send (see below).
+
