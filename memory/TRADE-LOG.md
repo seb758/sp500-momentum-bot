@@ -2784,3 +2784,58 @@ threshold, SPHY's high-yield-credit-outflow watch item, and the sub-20%-floor ca
 drift; SendGrid status retested this session via the mandatory 3pm send (see
 below).
 
+### 2026-09-23 — SELL SGOV (income) — cash-floor pre-funding sweep for AMD buy
+Shares: 94 | Exit: ~$100.61 (market/day) | Reason: pre-trade cash-floor sweep
+(income only) — Income sleeve rule requires selling SGOV first whenever a pending
+Core/Satellite buy would push post-trade cash below the 20% floor. Pre-trade cash
+was $18,716.37 = 19.97% of ~$93,727.84 equity, already a hair under the floor with
+no room to fund a ~10%-of-equity core buy from literal cash alone. Mechanics:
+canceled the standing 201-share 5% trailing stop (trigger $95.589, hwm $100.62),
+sold 94 sh market/day, re-placed a fresh 5% trailing GTC stop on the remaining 107
+whole shares (trigger $95.589, hwm $100.62; 0.989473856-sh fractional remainder
+stays unstopped, same immaterial ~$99 dust flagged every prior sweep) — same
+cancel-then-replace pattern as every prior sweep. Post-sale cash $28,173.71 =
+30.04% of equity, sized to cover the planned AMD buy with a buffer consistent with
+9/22's HPE sweep.
+
+### 2026-09-23 — BUY AMD (core)
+Shares: 15 | Entry: $621.28 avg | Stop: 10% trailing GTC, trigger $558.4005 (hwm
+$620.445) | Target: n/a — no firm consensus PT at this momentum-continuation
+stage; exit governed by the trailing stop / gain-based tightening schedule | R:R:
+n/a
+Thesis: Core watchlist momentum name (2026-09-18 weekly screen rank 3, Strong Buy
+45% SB/39% B/16% H/0% Sell, FCF sharply expanding $8.4B TTM +107.8% YoY, Rev
++50.1%, Data Center +107% YoY). Recomputed live from fresh Alpaca daily bars
+(2025-08-19 to 2026-09-22 close) at this window: last close $623.77 above both the
+50-day MA ($498.79) and 200-day MA ($358.66); 3M relative return vs SPY +14.56pp,
+6M relative return vs SPY +189.76pp — momentum gate cleanly passes on live data.
+Analyst rating and FCF trend both current per the 09-18 screen, no adverse AMD
+news in today's pre-market research (which flagged AMD as part of the standing
+AI-hardware cluster color — "crossed $1T market cap, +35.7% in September alone,
+on hyperscaler diversification demand"). Live quote at entry: spread flickered
+between tight (~0.19%-0.45%, two consecutive fresh polls) and wider (~0.6%-0.7%)
+across several checks — a milder instance of the recurring opening-auction
+data-feed anomaly flagged repeatedly in recent sessions — executed once a tight,
+stable read (bid $620.51/ask $624.98, ~0.7%) confirmed after two prior fresh polls
+under 0.5%. No PDT/daytrade concern (new position, no same-day round trip). Gate:
+core positions after fill 2/6 (HPE, AMD), core trades this week 2/6, cost
+$9,319.20 = 9.94% of pre-trade equity (~$93,727.84) — within the 20% single-
+position cap. Cost funded from cash post-SGOV-sweep above (pre-trade cash
+$28,173.71, well above the $9,319.20 cost); post-buy cash ~$18,854.51 = ~20.10% of
+equity, back at/above the 20% floor. Ticker confirmed on WATCHLIST.md core list
+(2026-09-18 refresh).
+Other candidates checked this window: CRWD (also on watchlist, momentum still
+clean live — above both MAs, 3M rel. +41.47pp, 6M rel. +124.0pp) skipped this
+window — live spread persistently wide (~4.1%-5.3% across 5 polls over ~1 minute,
+never converged to a tight read, unlike AMD/HPE's flicker-to-tight pattern).
+DELL (also on watchlist, momentum still clean live — above both MAs, 3M rel.
++22.89pp, 6M rel. +215.5pp) skipped this window — live spread persistently wide
+(~5.3%-10.3% across 5 polls, never converged). MRVL skipped — fails the momentum
+gate live (3M rel. -11.4pp despite +172.99pp 6M and above both MAs — one window
+negative). INTC skipped — fails the momentum gate live (3M rel. -11.79pp despite
++163.43pp 6M and above both MAs — same one-window failure pattern as MRVL, tight
+spread (~0.03%) was moot since momentum failed first). SHIP (satellite,
+industrials) not attempted this window — no live spread check run; flagged in
+pre-market research as informational only (ex-div date 09-25 now 2 trading days
+out), not an approved candidate for this window.
+
