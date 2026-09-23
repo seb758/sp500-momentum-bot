@@ -6005,3 +6005,25 @@ None approved — this pre-market research workflow does not run a live buy-side
 
 ### Notification
 **Silent — no urgent condition met.** Per STEP 5, notification is silent unless a held position is already below its hard-cut pre-market, a satellite catalyst resolved negatively overnight, or a major geopolitical event occurred. None applies: all 5 positions are well clear of their stops (nearest is SPHY at -1.45% vs. a -5% stop), no satellite catalyst resolved negatively (CGEM's tracked catalyst is 17 months out; SHIP's ex-date is upcoming, not resolved), and the U.S.-China trade/summit risk is an ongoing background item, not a discrete overnight shock. HPE's earnings today is a real, dated event but is a known, already-scheduled item, not an overnight surprise, and the position is not near its hard-cut — does not meet the notification bar. No email sent this session.
+
+### 9:30 AM Session Note
+- **Traded: BUY AMD (core), 15 sh @ $621.28 avg**, funded by a 94-share SGOV
+  sweep (post-sale cash 30.04% of equity). Full live re-verification (momentum,
+  FCF/rating, spread) in TRADE-LOG.md. Core now 2/6 positions, 2/6 trades this
+  week (HPE 9/22, AMD 9/23).
+- CRWD and DELL both still clear the momentum gate live (checked fresh bars) but
+  were skipped this window — persistently wide bid/ask spreads (CRWD ~4-5%, DELL
+  ~5-10%) across 5 polls each, never converging to a tight read, unlike AMD which
+  flickered to a stable sub-0.5% spread after a few polls. Worth rechecking at
+  11am/3pm if the opening-auction liquidity pattern normalizes.
+- MRVL and INTC both skipped on a live momentum-gate fail (3M relative return
+  negative on both despite strong 6M and above-MA — the same "one window fails"
+  pattern the watchlist has flagged repeatedly for other names).
+- HPE's earnings reaction was muted as of this window (-1.27% unrelated, well
+  inside the -7% cut) — no thesis break, no action taken.
+- Pattern worth flagging for Friday's review: this is at least the 3rd session
+  (9/22 HPE, today's HPE re-check, now CRWD/DELL) where the opening-window spread
+  is wide/unstable for some names and tight for others in the same minute — the
+  standing "recurring wide/flickering-spread data-feed anomaly" note continues to
+  hold, and a short, deliberate multi-poll wait before confirming a fill remains
+  the working mitigation.

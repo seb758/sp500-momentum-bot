@@ -176,3 +176,17 @@ Open positions:
   SPHY (inc) -1.48% (stop $22.23)
 This week: core 1/6, satellite 0/4
 Tomorrow: recheck CRWD/AI cluster live; SHIP ex-div 9/25; SendGrid key rotation still overdue (16 windows now, 401 Unauthorized reconfirmed this session) — owner action needed.
+
+---
+## 2026-09-23 Market-Open Trade (fallback — SendGrid still returning 401 Unauthorized, 17th consecutive window tested / 14th session since 9/10)
+9:30 AM Sep 23
+Trade: BUY AMD (core), 15 sh @ $621.28 avg, 10% trailing stop GTC (trigger $558.4005)
+Funded by: SELL SGOV (income) 94 sh @ ~$100.61, cash-floor pre-funding sweep
+Thesis: 2026-09-18 watchlist core rank 3, Strong Buy, FCF sharply expanding. Live
+momentum re-verified: 3M rel. +14.56pp, 6M rel. +189.76pp vs SPY, above both MAs.
+Core now: 2/6 positions (HPE, AMD), 2/6 trades this week
+Skipped this window: CRWD/DELL (momentum clean, spreads persistently wide 4-10%),
+MRVL/INTC (failed live momentum gate, one window negative)
+Post-trade cash: ~$18,854.51 (~20.10% of equity)
+SendGrid key rotation still overdue (17 windows now, 401 Unauthorized reconfirmed
+this session) — owner action needed.
