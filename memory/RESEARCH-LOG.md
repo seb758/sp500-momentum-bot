@@ -6027,3 +6027,20 @@ None approved — this pre-market research workflow does not run a live buy-side
   standing "recurring wide/flickering-spread data-feed anomaly" note continues to
   hold, and a short, deliberate multi-poll wait before confirming a fill remains
   the working mitigation.
+
+### 11 AM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists anywhere
+  in today's RESEARCH-LOG entry (pre-market or 9:30am note) — per STEP 3, no buys
+  placed this window regardless of live setup quality. This is the same
+  Approved-Trades protocol gap flagged in 9/22's 3pm snapshot, still unresolved —
+  standing item for Friday's review. Core stays 2/6 positions, 2/6 trades this
+  week (HPE, AMD); satellite stays 0/4 new trades (RIGL held).
+- **No cuts.** AMD -0.88%, HPE -1.35% (both core, cut at -7%); RIGL +13.24%
+  (satellite, cut at -15%) — all well clear of hard-cut thresholds.
+- **No tightens.** No core position up >=15% (AMD/HPE both currently negative);
+  RIGL at +13.24% remains below the satellite +25% tighten threshold. No stop
+  moved down.
+- **Thesis intact across the board.** AMD, HPE (post-earnings reaction still
+  muted), RIGL: no adverse news since the 9:30am window. Income sleeve (EDGX
+  +0.64%, SGOV +0.16%, SPHY -1.88%) all within 5% stops, no thesis-break
+  triggers. Cash $18,854.51 = 20.19% of equity, back above the 20% floor.
