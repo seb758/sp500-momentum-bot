@@ -6147,3 +6147,72 @@ None approved — this pre-market workflow does not run a live buy-side gate; an
 
 ### Notification
 **Silent — no urgent condition met.** Per STEP 5, notification is silent unless a held position is already below its hard-cut pre-market, a satellite catalyst resolved negatively overnight, or a major geopolitical event occurred. None applies: all 6 positions are well clear of their stops (nearest is RIGL, but on the gain side, and SPHY at -2.18% vs a -5% stop), no satellite catalyst resolved negatively (CGEM's disputed Q3 items haven't resolved either way; RIGL's next catalyst is months out), and the 10-year-yield/rate-shock backdrop, while a real market-wide risk factor, is a macro development already reflected in prices, not a discrete overnight geopolitical shock — does not meet the notification bar. No email sent this session.
+
+### 9:30 AM Session Note (RECONSTRUCTED post-hoc by the 11am session)
+- **Session-persistence gap:** the market-open session executed real trades on
+  Alpaca (fills + live stops, 13:34-13:36 UTC / 9:34-9:36am ET) but never
+  wrote this note, never appended to TRADE-LOG.md, and never committed — it
+  must have terminated right after placing the CRWD stop. The 11am session
+  discovered this via `alpaca.sh positions`/`orders closed` (no market-open
+  commit existed for today, only "pre-market research 2026-09-24 (#247)")
+  and reconstructed the trade log entries from Alpaca's order history; see
+  the "RECONSTRUCTED market-open entries" block in TRADE-LOG.md for full
+  detail and the gate-compliance check.
+- **What was decided (reconstructed):** bought CRWD (core, 35 sh @ $261.70,
+  9.84% of equity), funded by an 89-share SGOV sweep (post-sweep cash
+  $27,809.69, post-buy cash $18,650.19 = 20% floor confirmed by the live
+  account balance). A 10% trailing GTC stop was placed immediately (trigger
+  $237.411, hwm $263.79). Core now 3/6 positions, 3/6 trades this week (HPE
+  9/22, AMD 9/23, CRWD 9/24). No other Core/Satellite/Income activity found
+  in today's market-open order history.
+- **Pattern to flag for Friday's review:** same recurring session-persistence
+  gap seen on 2026-07-16, 07-17, and other prior instances — worth checking
+  whether the market-open routine's final append/commit steps are vulnerable
+  to truncation/timeout right after order placement. This is a separate
+  (if related) issue from the standing "Approved-Trades protocol gap"
+  flagged 9/22-9/23 — here the whole window's output was lost, not just the
+  formal Approved-Trades section.
+
+### 11 AM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists in
+  today's RESEARCH-LOG (pre-market was HOLD; the reconstructed 9:30am note
+  traded directly off a live-gate re-verification, not a formal Approved
+  list) — per STEP 3 no further buys placed this window. Core stays at 3/6
+  positions (HPE, AMD, CRWD — CRWD reconstructed above), 3/6 trades this
+  week; satellite stays 0/4 new trades (RIGL held). Week (Sep 21 start) cap
+  not hit on either sleeve.
+- **No cuts.** Live positions/P&L via `alpaca.sh positions`: AMD -1.42%, HPE
+  -0.97%, CRWD +0.08% (all core, cut at -7%); RIGL +13.53% (satellite, cut at
+  -15%) — all well clear of hard-cut thresholds.
+- **No tightens.** No core position up >=15% (AMD/HPE negative, CRWD
+  essentially flat); RIGL at +13.53% remains below the satellite +25%
+  tighten threshold. No stop moved down.
+- **Thesis intact across the board.** No adverse news since pre-market for
+  AMD, HPE, RIGL. CRWD's live-gate thesis (momentum, FCF, rating) was
+  verified fresh at this morning's reconstructed entry, still current — the
+  10-year-yield-driven software/cybersecurity multiple-compression pressure
+  flagged in today's pre-market research is a sector-wide macro backdrop, not
+  a company-specific break, and CRWD is essentially flat (+0.08%) despite it.
+  Income sleeve (EDGX, SGOV, SPHY) unchanged since pre-market, no
+  thesis-break triggers (Income has none). All 7 open positions confirmed
+  via `alpaca.sh orders` carrying live GTC trailing stops, none missing
+  (SGOV's 0.989473856-sh fractional remainder stays unstopped, same
+  immaterial ~$100 dust flagged every prior sweep).
+- **2-strike sub-sector tracker unchanged:** biotech cooldown active through
+  2026-09-25 (lifts tomorrow, OCUL 7/23, MNKD 9/11); industrials 0/2.
+- Cash $18,650.19 = 20.01% of equity ($93,214.08 per `alpaca.sh account`), at
+  the floor — no further sweep needed this window (this morning's CRWD sweep
+  already sized to land here).
+- No sharp unexplained moves in the book this window — STEP 7's optional
+  Gemini call skipped.
+- **Notification attempted (action taken: CRWD reconstruction) — SendGrid
+  still broken.** `scripts/sendgrid.sh` returned `curl: (22)` / HTTP 401
+  Unauthorized again, same failure mode as every retest since first caught
+  9/10 — this is day 14 of the outage, unresolved across every session in
+  between (9/14 escalation, 9/15, 9/18, 9/22, 9/23 x2). No local fallback
+  file was written either — a 401 with credentials present doesn't hit the
+  script's documented "missing credentials" fallback path, it's a hard
+  failure; this session's content is preserved here in the log instead. The
+  account's only owner-facing alert channel remains fully non-functional;
+  owner action to rotate the SendGrid API key remains overdue and is the top
+  operational item for Friday's review.
