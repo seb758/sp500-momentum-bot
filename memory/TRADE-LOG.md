@@ -2961,3 +2961,63 @@ No other fills found in today's order history besides this sweep+buy pair and
 the two associated stop cancel/replace actions — no other Core/Satellite or
 Income activity happened at market-open today.
 
+## Sep 24 — 3pm Snapshot (Day 59, Thursday)
+**Portfolio:** $93,895.15 | **Cash:** $18,650.19 (19.86%) | **Day P&L:** +$591.64 (+0.63%) | **Phase P&L:** -$6,104.85 (-6.10%)
+**Core exposure:** $28,299.66 (30.14% of equity) | **Satellite exposure:** $5,451.48 (5.81% of equity) | **Income exposure:** $41,493.81 (44.19% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| AMD | core | 15 | $621.28 | $625.48 | +1.77% | +$63.00 (+0.68%) | 10% trailing ($566.0055) |
+| CRWD | core | 35 | $261.70 | $263.5775 | +0.41% | +$65.71 (+0.72%) | 10% trailing ($237.474) |
+| HPE | core | 150 | $62.78 | $64.615 | +3.67% | +$275.25 (+2.92%) | 10% trailing ($58.93182) |
+| RIGL | satellite | 114 | $41.84 | $47.82 | -0.64% | +$681.72 (+14.29%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.904 | -0.17% | +$92.50 (+0.46%) | 5% trailing ($25.9825) |
+| SGOV | income | 18.989473856 | $100.494751 | $100.63 | +0.01% | +$2.57 (+0.14%) | 5% trailing ($95.5985, 18 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.795 | -0.24% | -$483.64 (-2.42%) | 5% trailing ($22.23) |
+
+**Notes:** No buys this window — no "### Approved Trades (verified)" list
+existed anywhere in today's RESEARCH-LOG (pre-market HOLD, 9:30am traded
+directly off a live-gate re-verification rather than a formal list, 11am
+HOLD), so per STEP 3 the 3pm window held too. Core stays at 3/6 positions
+(AMD 9/23, HPE 9/22, CRWD 9/24, the last reconstructed from a market-open
+session-persistence gap — see the reconstruction block above), 3/6 trades
+this week (Sep 21 start); satellite 0/4 new trades (RIGL held). Risk sweep:
+no closes, no tightens. All three core names improved since 11am (AMD/HPE
+swung from slightly negative to positive, CRWD ticked from flat to
+positive) on no idiosyncratic news, despite today's dominant macro driver
+(10-year yield >5.12% per pre-market research) — sector-wide rate pressure,
+not a thesis break, and it did not translate into afternoon weakness for
+this book. RIGL +14.29%, still below the +25% satellite tighten threshold,
+no gap-risk catalyst in the 1-2 trading-day window (next pipeline readout
+not until 2H26/year-end, next earnings ~Nov 3). Income EDGX +0.46%, SGOV
++0.14%, SPHY -2.42%, all well inside their 5% stops, no thesis to break
+under Income sleeve rules. All 7 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none
+missing (SGOV's 0.989473856-sh fractional remainder stays unstopped, same
+immaterial ~$100 dust flagged every prior sweep). No stop moved down (the
+higher stop-trigger prices vs entry-day values are Alpaca's own trailing
+mechanic tracking new highs, not a manual tighten). 2-strike sub-sector
+tracker unchanged: biotech cooldown active through 2026-09-25 (lifts
+Friday, OCUL 7/23, MNKD 9/11), industrials 0/2. Cash 19.86%, a hair under
+the 20% floor for the first session this week (11am 20.01%, pre-market
+20.25%, yesterday's 3pm 20.21%) — deficit ~0.14pp of equity (~$132), under
+the 1%-of-equity materiality bar and not yet a >3-consecutive-session
+persistence, so no same-day SGOV sale per the price-drift guard; watch next
+session. Risky positions closed today: none. Day P&L (+0.63%) driven by
+HPE's continued post-earnings strength (+2.92% unrealized) plus small gains
+on AMD/CRWD/RIGL/EDGX/SGOV, partly offset by SPHY's continuing high-yield-
+credit-outflow drift. Phase P&L now -6.10% since Day 0 ($100,000 ->
+$93,895.15). Core exposure 30.14% (3 of 6 slots: AMD, HPE, CRWD). Satellite
+steady at 5.81% (1 of 4 slots: RIGL only; biotech sub-sector cooldown lifts
+9/25, industrials still open). This week (Sep 21 start): core 3/6,
+satellite 0/4 new trades. Tomorrow (9/25): biotech 2-strike cooldown lifts,
+reopening CGEM as a possible new satellite entry subject to a fresh
+catalyst-window check (today's disputed Q3-pipeline framing needs
+independent verification first, per the pending-catalyst guard); watch the
+cash floor for a possible SGOV top-up if the sub-20% drift persists;
+independently verify SHIP's actual 09-25 ex-dividend timing given the
+pre-market report/WATCHLIST.md conflict; watch RIGL's continued approach
+toward its +25% satellite tighten threshold and SPHY's continued softness;
+SendGrid status retested this session via the mandatory 3pm send (see
+below).
+

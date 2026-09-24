@@ -6216,3 +6216,55 @@ None approved — this pre-market workflow does not run a live buy-side gate; an
   account's only owner-facing alert channel remains fully non-functional;
   owner action to rotate the SendGrid API key remains overdue and is the top
   operational item for Friday's review.
+
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists
+  anywhere in today's RESEARCH-LOG (pre-market HOLD; 9:30am traded directly
+  off a live-gate re-verification, not a formal list; 11am HOLD) — per STEP
+  3 no buys placed this window. Core stays at 3/6 positions (AMD, HPE,
+  CRWD), 3/6 trades this week (Sep 21 start); satellite stays 0/4 new
+  trades (RIGL held). Neither weekly cap hit.
+- **Risk sweep: no closes.** Live P&L via `alpaca.sh positions`: AMD
+  +0.68%, CRWD +0.72%, HPE +2.92% (all core, vs -7% hard-cut); RIGL +14.29%
+  (satellite, vs -15% hard-cut) — all well clear, and all improved since
+  11am (AMD/HPE swung from slightly negative to positive, CRWD ticked up
+  from flat). No idiosyncratic adverse news since 11am for any held name;
+  today's dominant macro driver (10-year yield >5.12%, per pre-market
+  research) did not translate into afternoon weakness for the book. No
+  thesis break. RIGL's next catalyst (R289 dose-expansion data, guided
+  2H26/year-end; next earnings ~Nov 3) remains outside the 1-2 trading-day
+  gap-risk window, so no gap-risk close applies. All 7 open positions
+  confirmed carrying live GTC trailing stops via `alpaca.sh orders`, none
+  missing (SGOV's 0.989473856-sh fractional remainder stays unstopped, same
+  immaterial ~$100 dust flagged every prior sweep). Risky positions closed
+  today: none.
+- **No tightens.** Core: none up >=15% (max HPE +2.92%). Satellite: RIGL
+  +14.29%, still below the +25% tighten threshold. No stop moved down.
+  (Note: AMD/HPE/CRWD/RIGL/EDGX/SPHY/SGOV stop trigger prices shown in
+  `orders` have drifted up from their entry-day values purely from Alpaca's
+  own trailing-stop mechanic tracking each new high-water mark — not a
+  manual tighten action.)
+- **Cash floor:** $18,650.19 / $93,895.15 equity = 19.86%, a hair under the
+  20% floor (11am was 20.01%, pre-market 20.25%, yesterday's 3pm 20.21%) —
+  first session this week showing sub-floor. Per TRADING-STRATEGY.md's
+  price-drift guard: the deficit is ~0.14pp of equity (~$132), well under
+  the 1%-of-equity materiality bar, and this is the first session showing
+  it (not the >3-consecutive-session persistence trigger) — no same-day
+  SGOV sale forced. Watch at the next session; sell SGOV to restore the
+  floor if it persists past 3 consecutive sessions.
+- **2-strike sub-sector tracker unchanged:** biotech cooldown active
+  through 2026-09-25 (lifts tomorrow, OCUL 7/23, MNKD 9/11); industrials
+  0/2.
+- Day P&L: +$591.64 (+0.63%) vs yesterday's 3pm equity ($93,303.51). Phase
+  P&L: -$6,104.85 (-6.10%) vs Day 0 ($100,000). Core exposure 30.14%,
+  satellite 5.81%, income 44.19%, cash 19.86%.
+- **Notification: mandatory 3pm send attempted — SendGrid still broken.**
+  `scripts/sendgrid.sh` returned `curl: (22)` / HTTP 401 Unauthorized again,
+  same failure mode as every retest since first caught 9/10 — day 15 of the
+  outage now, unresolved across every session in between (9/14 escalation,
+  9/15, 9/18, 9/22, 9/23 x2, 9/24 11am). No local fallback file was written
+  either — a 401 with credentials present doesn't hit the script's
+  documented "missing credentials" fallback path. This session's report
+  content is preserved in the TRADE-LOG.md 3pm snapshot instead. Owner
+  action to rotate the SendGrid API key remains overdue and is the top
+  operational item for Friday's review.
