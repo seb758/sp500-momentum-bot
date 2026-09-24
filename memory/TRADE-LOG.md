@@ -2892,3 +2892,72 @@ fix the standing Approved-Trades protocol gap so 11am/3pm windows can act on
 live-gate setups verified at market-open; SendGrid status retested this session
 via the mandatory 3pm send (see below).
 
+## 2026-09-24 — RECONSTRUCTED market-open entries (session-persistence gap)
+
+The 9:30am market-open session executed real fills and a live stop order on
+Alpaca between 13:34-13:36 UTC (9:34-9:36am ET) today but never reached its
+own TRADE-LOG append, RESEARCH-LOG session note, or commit/push steps — no
+record of these trades existed in this repo when the 11am session started;
+`git log` showed only today's pre-market commit ("pre-market research
+2026-09-24 (#247)") and RESEARCH-LOG.md had no "9:30 AM Session Note" or
+"### Approved Trades (verified)" section for today. Same recurring
+session-persistence gap documented previously (2026-07-16, 07-17, and
+others flagged in Friday reviews). The 11am session found the live
+positions/orders via `alpaca.sh positions`/`orders closed` and is
+reconstructing the log below from that order history so the audit trail
+matches reality. The entry thesis draws on yesterday's (9/23) 9:30 AM
+Session Note, which already flagged CRWD as clearing the momentum gate live
+but blocked on a wide/unstable opening-auction spread — consistent with
+today's trade, not fabricated.
+
+### 2026-09-24 — SELL SGOV (income) — cash-floor pre-funding sweep for CRWD buy
+Shares: 89 | Exit: $100.62 (market/day) | Realized P&L: ~$0.00 (0.00%) | Reason:
+pre-trade cash-floor sweep (income only) — Income sleeve rule requires selling
+SGOV first whenever a pending Core/Satellite buy would push post-trade cash
+below the 20% floor. Pre-trade cash was $18,854.51 = 20.25% of $93,108.53
+equity (per this morning's pre-market snapshot) — not enough headroom to fund
+a ~9.8%-of-equity core buy from literal cash alone while staying at/above the
+floor. Mechanics (reconstructed from order history): canceled the standing
+107-share 5% trailing stop (trigger $95.5985, hwm $100.63) at 13:34:36 UTC,
+sold 89 sh market/day at 13:34:47 UTC, re-placed a fresh 5% trailing GTC stop
+on the remaining 18 whole shares (trigger $95.5985, hwm $100.63;
+0.989473856-sh fractional remainder stays unstopped, same immaterial ~$100
+dust flagged every prior sweep) — same cancel-then-replace pattern as every
+prior sweep. Post-sale cash $27,809.69 (reconstructed), sized to cover the
+CRWD buy below.
+
+### 2026-09-24 — BUY CRWD (core)
+Shares: 35 | Entry: $261.70 avg | Stop: 10% trailing GTC, trigger $237.411
+(hwm $263.79) | Target: n/a — no firm consensus PT at this
+momentum-continuation stage; exit governed by the trailing stop / gain-based
+tightening schedule | R:R: n/a
+Thesis (reconstructed from yesterday's 9/23 9:30 AM Session Note and today's
+pre-market research, both already on record before this trade): Core
+watchlist momentum name (2026-09-18 weekly screen rank 4, Buy 42% SB/42%
+B/16% H/0% Sell, FCF highly positive $377.4M Q2 record/TTM ~$1.6B, Rev +26%,
+ARR momentum). Live momentum gate cleared repeatedly this week (above both
+50-day/200-day MA, 3M rel. return positive, 6M rel. return strongly
+positive per 9/23's re-verification) but blocked on 9/23 by a persistently
+wide/unstable opening-auction bid/ask spread (~4-5% across 5 polls) — today's
+pre-market research explicitly flagged CRWD as "the standing next core
+candidate" for live re-verification once spreads normalize. Today's fill at
+$261.70 with the stop's hwm settling to $263.79 within a minute of entry is
+consistent with the spread finally converging tight enough to execute, the
+same flicker-to-tight pattern AMD/HPE showed on their own entry days. No
+company-specific overnight news was flagged for CRWD today or yesterday —
+today's pre-market report cited only general rate-driven multiple-compression
+pressure on the software/cybersecurity group (CRWD, PANW), not a
+company-specific issue.
+Gate (reconstructed): core positions after fill 3/6 (HPE, AMD, CRWD), core
+trades this week 3/6 (HPE 9/22, AMD 9/23, CRWD 9/24) — week started 9/21, cap
+not hit. Cost $9,159.50 = 9.84% of pre-trade equity (~$93,108.53, this
+morning's pre-market mark) — within the 20% single-position cap. Cost funded
+from the SGOV sweep above (post-sweep cash $27,809.69, well above the
+$9,159.50 cost); post-buy cash $18,650.19 (confirmed live via `alpaca.sh
+account`) matches the reconstructed sweep math exactly, cross-checking the
+reconstruction. Ticker confirmed on WATCHLIST.md core list (2026-09-18
+refresh, momentum rank 4).
+No other fills found in today's order history besides this sweep+buy pair and
+the two associated stop cancel/replace actions — no other Core/Satellite or
+Income activity happened at market-open today.
+
