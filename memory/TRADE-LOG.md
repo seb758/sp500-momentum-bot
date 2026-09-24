@@ -2839,6 +2839,70 @@ industrials) not attempted this window — no live spread check run; flagged in
 pre-market research as informational only (ex-div date 09-25 now 2 trading days
 out), not an approved candidate for this window.
 
+### 2026-09-24 — SELL SGOV (income) — cash-floor pre-funding sweep for CRWD buy
+Shares: 89 | Exit: ~$100.62 (market/day) | Reason: pre-trade cash-floor sweep
+(income only) — pre-trade cash was $18,854.51 = 20.21% of ~$93,309.06 equity,
+only a ~$193 buffer above the 20% floor with no room to fund a ~10%-of-equity
+core buy from literal cash alone. Mechanics: canceled the standing 107-share 5%
+trailing stop (trigger $95.5985, hwm $100.63), sold 89 sh market/day, re-placed
+a fresh 5% trailing GTC stop on the remaining 18 whole shares (trigger
+$95.598405, hwm $100.6299; 0.989473856-sh fractional remainder stays unstopped,
+same immaterial ~$100 dust flagged every prior sweep) — same cancel-then-replace
+pattern as every prior sweep. Post-sale cash $27,809.69 = 29.78% of equity, sized
+to cover the planned CRWD buy with a buffer consistent with 9/22 (HPE) and 9/23
+(AMD)'s sweeps.
+
+### 2026-09-24 — BUY CRWD (core)
+Shares: 35 | Entry: $261.70 avg | Stop: 10% trailing GTC, trigger $235.143 (hwm
+$261.27) | Target: n/a — no firm consensus PT at this momentum-continuation
+stage; exit governed by the trailing stop / gain-based tightening schedule | R:R:
+n/a
+Thesis: Core watchlist momentum name (2026-09-18 weekly screen rank 4, Buy 42%
+SB/42% B/16% H/0% Sell, FCF highly positive $377.4M Q2 record, TTM ~$1.6B, Rev
++26% YoY, ARR momentum). Recomputed live from fresh Alpaca daily bars
+(2025-09-20 to 2026-09-22 close) at this window: last close $250.06 above both
+the 50-day MA ($209.57) and 200-day MA ($148.17); 3M relative return vs SPY
++41.47pp, 6M relative return vs SPY +124.0pp — momentum gate cleanly passes on
+live data, matching 9/23's live re-verification exactly. Analyst rating and FCF
+trend both current per the 09-18 screen, no adverse CRWD-specific news in
+today's pre-market research (generic rate-driven multiple-compression pressure
+on the whole software/cybersecurity cluster from the reported 10-year yield
+move above 5.12%, not an idiosyncratic development). Live quote at entry:
+spread flickered between tight (~0.50%-0.81%, three fresh polls) and one wider
+blip (~2.35%, single poll) — the same recurring opening-auction data-feed
+anomaly flagged repeatedly in recent sessions — executed once a tight, stable
+read (bid $260.88/ask $262.99, ~0.81%) reconfirmed on two consecutive polls. No
+PDT/daytrade concern (new position, no same-day round trip; account equity
+~$93.4k is also well above the $25k PDT threshold regardless). Gate: core
+positions after fill 3/6 (HPE, AMD, CRWD), core trades this week 3/6, cost
+$9,159.50 = 9.81% of pre-trade equity (~$93,399.08) — within the 20% single-
+position cap. Cost funded from cash post-SGOV-sweep above (pre-trade cash
+$27,809.69, well above the $9,159.50 cost); post-buy cash $18,650.19 = 19.96% of
+equity — a hair under the 20% floor by ~$42 (~0.04% of equity), immaterial
+price-drift per the sub-1% guard, not a 3-consecutive-session pattern, re-check
+next session. Ticker confirmed on WATCHLIST.md core list (2026-09-18 refresh,
+rank 4).
+Other candidates checked this window: DELL, PANW, MRVL, NTAP all skipped — live
+spreads wide and stuck across multiple polls (DELL ~10.9%-11.5%, PANW ~11.2%,
+MRVL ~3.8%, NTAP ~7.6%-10.8%, quotes essentially unmoving second-to-second,
+unlike CRWD's flicker-to-tight pattern) — none re-verified for momentum given
+the spread already disqualified them. No satellite entries this window — RIGL
+(held) has no new-entry signal; biotech cooldown remains active through
+2026-09-25 (lifts tomorrow), blocking CGEM regardless; industrials candidates
+(PLPC, SHIP, GNK, ALNT, FEIM) have no catalyst confirmed inside the 5-day
+window per today's pre-market research — SHIP's non-binary 09-25 ex-dividend
+date is informational only, consistent with 9/22-9/23's treatment, so no
+satellite buy-side gate was run this window. Note: all three core holdings
+(HPE, AMD, CRWD) now sit in Information Technology — not a documented hard
+rule violation (the sector cap applies only to weekly-screen candidate
+selection, not live position concentration), but flagged as a sector-
+concentration watch item for Friday's review.
+**SendGrid retested this window (trade notification triggered a real send
+attempt): still 401 Unauthorized** — same standing outage first confirmed
+9/18's 3pm test, now 6+ days / 14th+ consecutive failed window across
+sessions. Owner action to rotate the key remains overdue; trade summary
+recorded here in TRADE-LOG.md in lieu of the email.
+
 ## Sep 23 — 3pm Snapshot (Day 58, Wednesday)
 **Portfolio:** $93,303.51 | **Cash:** $18,854.51 (20.21%) | **Day P&L:** -$375.56 (-0.40%) | **Phase P&L:** -$6,696.49 (-6.70%)
 **Core exposure:** $18,522.30 (19.85% of equity) | **Satellite exposure:** $5,415.00 (5.80% of equity) | **Income exposure:** $50,511.70 (54.14% of equity)
