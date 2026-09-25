@@ -255,3 +255,18 @@ watch RIGL toward +25% tighten threshold and SPHY's continued softness.
 SendGrid key rotation still overdue (21+ windows now, 401 Unauthorized
 reconfirmed this session) — owner action needed; this is the account's only
 owner-facing alert channel.
+
+---
+## 2026-09-25 21:07 UTC (fallback - SendGrid not configured/401 Unauthorized, weekly review)
+Week ending Sep 25
+Portfolio: $93,469.47 (+0.04% week, -6.53% phase)
+vs S&P 500: -1.23% (S&P +1.27% this week, narrow mega-cap-led rally)
+Core trades: 3 (W:0/L:0/open:3) | Satellite trades: 0 (W:0/L:0)
+Best/worst: n/a, no trades closed this week
+16-session core drought ended: HPE, AMD, CRWD opened. CRWD -3.6% unrealized, AMD/HPE positive.
+Watchlist: core 24 names, satellite 7 names for next week
+Biotech cooldown lifted; XNCR is first new biotech satellite entry
+ALERT: Income sleeve badly skewed - SGOV down to 4% of sleeve vs 50% target (repeated buy-funding sweeps, no replenishment rule). Needs owner/next-session action.
+Gemini truncation recurred (citations-only, 2nd time) - resolved via smaller batches, cost session time
+SendGrid still down (401 Unauthorized) - key rotation overdue
+Grade: B-
