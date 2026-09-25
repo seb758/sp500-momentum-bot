@@ -1893,3 +1893,271 @@ now been broken for more than a full week without owner action. Grade
 reflects a week of solid, if modest, process wins offset by two compounding
 operational gaps that are each now overdue for a fix outside this session's
 own file scope.
+
+---
+
+## Week ending 2026-09-25
+
+**Coverage note — this entry covers a single market week (2026-09-21 through
+2026-09-25, a normal 5-day week).** The 09-18 review's refresh landed on
+time, and this refresh is also running on schedule (sixth Friday in a row
+on time) — WATCHLIST.md's "Current" section was still dated "Week of
+2026-09-18" going into this session, correctly current for the full period.
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $93,429.73 (per week-ending-2026-09-18 review) |
+| Ending portfolio | $93,469.47 |
+| Week return | +$39.74 (+0.04%) |
+| S&P 500 week | +1.27% (computed from SPY close-to-close, $761.69 -> ~$771.34; Gemini Deep Research's benchmark report gave rich qualitative color — a narrow, mega-cap-led advance masking broad-based weakness, 8 of 11 sectors negative, driven by a Friday rally on Iran-conflict de-escalation news after a historic mid-week Treasury-yield spike (10Y to 5.225%, 30Y to 5.502%) — but never stated an explicit headline weekly percent change or index close despite being asked for one; flagging this gap per the data-quality guard rather than silently trusting a number that wasn't actually given) |
+| Bot vs S&P | -1.23pp (bot underperformed) |
+| Core trades | 3 (W:0 / L:0 / open:3) |
+| Satellite trades | 0 new (RIGL held throughout, not a new trade this period; 1 open) |
+| Win rate | n/a (no closed trades) |
+| Best trade | n/a (no closed trades) |
+| Worst trade | n/a (no closed trades) |
+| Profit factor | n/a (no closed trades) |
+
+Income sleeve (SGOV/SPHY/EDGX) is not included in the trade/win-rate stats
+above. This period's income activity was three SGOV sales: two pre-trade
+funding sweeps (09-22 for the HPE buy, 09-23 for the AMD buy) and one
+standalone price-drift-guard sweep (09-25, cash had drifted 0.09-0.16pp
+below the 20% floor for 4 consecutive sessions purely from price movement) —
+all three executed exactly as TRADING-STRATEGY.md specifies. See "What
+Didn't Work" below for a structural gap this activity has now exposed in
+the Income sleeve's internal composition.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| — | — | — | — | — | No trades closed this period — valid per the Patience Rule, and notable given three new core positions opened (see below) |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| AMD | core | $621.28 | $630.85 | +$143.55 (+1.54%) | 10% trailing, trigger $575.055 (hwm $638.95) |
+| CRWD | core | $261.70 | $252.25 | -$330.80 (-3.61%) | 10% trailing, trigger $237.474 (hwm $263.86) |
+| HPE | core | $62.78 | $62.94 | +$24.00 (+0.26%) | 10% trailing, trigger $59.085 (hwm $65.65) |
+| RIGL | satellite | $41.84 | $48.18 | +$722.76 (+15.15%) | 15% trailing, trigger $42.415 (hwm $49.90) |
+| EDGX | income | $26.78 | $27.06 | +$205.37 (+1.03%) | 5% trailing, trigger $25.9825 (hwm $27.35) |
+| SGOV | income | $100.52 | $100.655 | +$2.29 (+0.13%) | 5% trailing, trigger $95.627 (hwm $100.66, 16 of 16.99 sh covered) |
+| SPHY | income | $23.36 | $22.78 | -$496.48 (-2.48%) | 5% trailing, trigger $22.23 (hwm $23.40) |
+
+All 7 open positions confirmed carrying live GTC trailing stop orders via
+`alpaca.sh orders open`, none missing (SGOV's fractional remainder stays
+unstopped, the same immaterial ~$100 dust flagged every prior sweep).
+Week-end exposure (equity $93,469.47): core $27,904.89 (29.85%), satellite
+$5,492.52 (5.88%), income $41,392.78 (44.28%), cash $18,851.49 (20.17%,
+above the 20% floor after this morning's standalone sweep).
+
+### Watchlist Refresh
+- **Core: 24 names (was 24, composition changed materially).** Full
+  503-name universe re-screened via fresh Alpaca bars (S&P 500 list
+  cross-validated against a second GitHub-hosted source — the second
+  source proved a year stale on inspection and was used only as a sanity
+  check, not the source of record; a handful of unfamiliar tickers in the
+  primary list, notably "P"/Everpure, checked out as legitimate, actively
+  traded constituents with clean bar-series history, not data artifacts).
+  FMP's `limit=5` fix (found 09-18) got 10 of 60 shortlisted names through
+  directly before the daily per-symbol allowlist wall hit; the remaining
+  50 came from Gemini Deep Research, batched 10/batch. New this week (9):
+  P, VEEV, WDAY, IQV, HOOD, PSX, A, META, CPAY. Retained (7): CRWD, DELL,
+  AMD, PANW, HPE, MPC, VLO. Promoted from prior weeks' sector-capped
+  alternates bench (2): ZBRA, DDOG, plus RVTY, TMO, WST, DXCM, MET, INCY
+  re-confirmed. Dropped from the prior 24-name list on this week's momentum
+  re-rank or fundamentals: MRVL, INTC, CRL, HUM, CNC, NUE, STT — see
+  WATCHLIST.md for the full ticker-by-ticker audit, including 14 names
+  that failed fundamentals this week (MRNA, ILMN, FTNT, CRL, HPQ, SWKS,
+  BBY, IT/Gartner, WAT, TGT, ABBV, PFG, SMCI, SOLV) and 8
+  sector-capped Information Technology alternates.
+- **Data-quality incident this week: a second occurrence of the
+  "citations-only, zero-body-text" Gemini failure mode** (first documented
+  09-11), this time on a 10-ticker fundamentals batch (NOW, NTAP, P, PFG,
+  PSX, PANW, RVTY, SMCI, SOLV, SWKS). A same-size resubmit failed the exact
+  same way a second time; splitting into a 5-ticker sub-batch, then a
+  3-ticker sub-batch, then individual single-ticker queries for the last
+  few names (NOW/NTAP/PFG together, PSX alone, "P" alone) finally got real
+  content for all 10. No figures were taken from either failed response
+  per the data-quality guard — this cost real wall-clock time but produced
+  a fully verified table with zero data-unavailable gaps.
+- **Core sector mix (24 names):** Information Technology 9/24 (37.5%,
+  right at the ~40% cap — 8 more IT names, including NTAP, PLTR, CRM, NOW,
+  ANET, MSFT, FFIV, AAPL, held out as sector-capped alternates), Health
+  Care 8/24 (33.3%), Energy 3 (MPC, VLO, PSX), Financials 3 (HOOD, CPAY,
+  MET), Communication Services 1 (META) — 5 distinct sectors. The semis +
+  AI-hardware cluster specifically (DELL, AMD, HPE) is only 3/24 (12.5%),
+  well under its cap — MRVL, INTC, STX, MU all either failed the momentum
+  gate this week or were separately IT-sector-capped.
+- **Satellite: 7 names (was 7, composition changed).** Retained RIGL
+  (held), PLPC, SHIP, ALNT, FEIM. Dropped **CGEM** — a real, negative
+  catalyst development (CLN-978 trial-data release delayed to December,
+  confirmed via WebSearch, stock -22% on 09-23) that also failed the
+  momentum gate outright; and **GNK** — a narrow momentum-gate miss (6M
+  relative return turned marginally negative, no adverse catalyst). Added
+  **TH** (Target Hospitality, industrials) and **XNCR** (Xencor,
+  biotech) — XNCR is the first new biotech satellite name since the
+  2-strike cooldown lifted today.
+- **Biotech 2-strike cooldown LIFTED today (2026-09-25)** after two weeks
+  (OCUL 07-23, MNKD 09-11). This week's satellite screen sourced both
+  biotech and industrials candidates for the first time since the trigger.
+  Of 13 fresh candidates sourced (6 industrials, 7 biotech), only 3
+  (RDW, TH, XNCR) cleared the momentum gate — the other 10, several with
+  genuinely strong fundamentals and real catalysts (LUNR, DYN, MESO, VCEL,
+  VERA), were excluded purely on price action, underscoring that the
+  research agent's candidate list is a starting point, not a pass. RDW
+  itself cleared momentum and cap/sector but was held off on a conflicting
+  analyst-rating read (one source "Hold" with a meaningful ~18% Sell lean,
+  another "Buy") — treated as unconfirmed rather than picking the
+  favorable number.
+
+### What Worked
+- **The 16-consecutive-session core drought ended this week.** Three new
+  core positions (HPE 09-22, AMD 09-23, CRWD 09-24) were opened, filling
+  half the sleeve's 6-slot cap and using 3 of the week's 6-trade budget —
+  the first core buys since APA's 09-08 exit. The 09-18 review's escalated
+  "Key Lesson" (clean research passes weren't producing approved
+  candidates) appears to have resolved itself, though no session log
+  explicitly documents what changed in the buy-side gate logic — worth
+  confirming this wasn't a one-week coincidence.
+- The data-quality guard caught a real, live-money-relevant issue for the
+  second time in as many months: CGEM's disputed "unverified Q4 2026
+  catalyst claims" (flagged in yesterday's 3pm note) turned out to be a
+  genuine negative development (a trial-data delay), not a fabrication —
+  the guard correctly forced independent verification before either
+  keeping or dropping the name, and the WebSearch confirmation resolved it
+  cleanly within this session.
+- Mechanical stop discipline had nothing to test this week (no closes) but
+  the risk sweep was clean every session: all 7 positions carried live GTC
+  stops throughout, no stop was tightened prematurely, and the 2-strike
+  cooldown tracker was correctly left unchanged until it mechanically
+  lifted today.
+- The Income sleeve's price-drift guard (added 08-07) fired correctly and
+  automatically on 09-25 — a standalone SGOV sale restored cash to 20.14%
+  after 4 sessions of sub-floor drift, exactly as the rule specifies.
+- The screen refresh landed on schedule for a sixth consecutive Friday,
+  and this week's Gemini truncation incident, while a real recurrence, was
+  fully resolved within the session (see "What Didn't Work") rather than
+  producing a data-unavailable gap in the final table.
+
+### What Didn't Work
+- **The Income sleeve's internal composition has drifted far from its
+  target split without anyone tracking it.** As of today: SGOV $1,710
+  (4.1% of the sleeve) vs. a 50% target (~$20,700), SPHY $19,500 (47.1%)
+  vs. a 25% target, EDGX $20,183 (48.8%) vs. a 25% target. This is the
+  direct, cumulative result of every buy-funding sweep correctly drawing
+  from SGOV first (per the rule) with no offsetting mechanism that ever
+  tops SGOV back up — the strategy document specifies SGOV as "the
+  designated funding source" and the dividend-reinvestment target, but has
+  no rule for replenishing it after repeated draws. This is not a rule
+  violation (every individual sweep followed TRADING-STRATEGY.md exactly)
+  but it is a real, growing structural gap: SGOV is meant to be the
+  sleeve's most liquid, lowest-risk component and is now its smallest by a
+  wide margin. This week's scheduled task did not include an Income-sleeve
+  rebalance step (Part C, as described in TRADING-STRATEGY.md and
+  routines/weekly-review.md, was not part of this run's instructions), so
+  no rebalancing trade was placed — flagging this explicitly rather than
+  taking an unrequested rebalancing action outside this session's given
+  scope. This needs either an explicit rebalance this week's follow-up
+  session, or the standing weekly-review scope to be reconciled with
+  TRADING-STRATEGY.md's documented Part C.
+- **A second occurrence of Gemini's "citations-only" truncation failure**
+  (first seen 09-11) cost real wall-clock time this session — a same-size
+  resubmit failed identically before progressively smaller resubmits (5
+  tickers, then 3, then individual) finally worked. This is now a
+  confirmed recurring failure mode, not a one-off, and it scales with
+  batch size in a way this session had to discover by trial and error
+  rather than by a documented threshold.
+- SPHY continues its multi-week high-yield-credit-outflow drift
+  (-2.48% unrealized this week, -1% to -2.5% every week since mid-August)
+  — still well inside its 5% stop, not a break, but a persistent enough
+  pattern that it's now a standing watch item across six consecutive
+  reviews.
+- CRWD's entry (09-24) is the week's weakest new position (-3.61%
+  unrealized), pulling back after a strong run on sector-wide
+  rate-pressure/valuation-reset dynamics per this week's daily notes — no
+  company-specific news, well inside the -7% hard cut, not a thesis break.
+- SendGrid remains broken: a direct connectivity test run as part of this
+  session (`bash scripts/sendgrid.sh`) still returns `401 Unauthorized`.
+  This is now several weeks unresolved and squarely outside any session's
+  ability to fix — see Adjustments below.
+
+### Key Lessons
+- **A sweep-side rule that only ever draws down one component of a
+  multi-asset sleeve needs an explicit replenishment mechanism, or the
+  sleeve's composition will monotonically drift toward the rule's own
+  blind spot.** The Income sleeve's SGOV-first funding rule is correct in
+  isolation (it protects SPHY/EDGX's thinner liquidity) but nothing in
+  TRADING-STRATEGY.md currently restores SGOV's share after a string of
+  draws — after roughly ten weeks of live trading, SGOV has gone from the
+  sleeve's largest component by design to its smallest by an order of
+  magnitude. The same category of gap (a rule correct for a single event
+  but with no accumulation-aware complement) is what produced the 08-07
+  cash-floor price-drift issue; this is the same root pattern showing up
+  in a different rule.
+- **A truncation failure mode confirmed once should be assumed to recur,
+  and its remediation path (split size) should be recorded rather than
+  rediscovered.** This week needed three rounds of shrinking batch size
+  to work around the same "citations-only" failure documented 09-11 — a
+  standing note on roughly what batch size tends to survive would save a
+  round or two of resubmits next time this happens.
+- The satellite screen's low hit rate this week (3 of 13 sourced
+  candidates cleared momentum) is a healthy sign the momentum gate is
+  doing its job, not a process problem — several excluded names had
+  genuinely strong fundamentals and real catalysts, reinforcing that
+  Gemini's candidate list is correctly treated as a sourcing tool, not a
+  pre-screened shortlist.
+- Ending a 16-session core drought without a clear record of *why* the
+  buy-side gate started producing approved candidates again is a gap in
+  its own right — if the fix was incidental (e.g. spreads simply
+  normalized) rather than a deliberate change, the same drought could
+  recur without warning.
+
+### Adjustments for Next Week
+- **Escalate the Income sleeve composition gap**: either run an explicit
+  Part C-style rebalance in the next session that has the mandate to do
+  so, trimming SPHY/EDGX back toward the 25%/25% target and restoring
+  SGOV toward 50%, or formally reconcile this workflow's scope with
+  TRADING-STRATEGY.md and routines/weekly-review.md so future Friday runs
+  know whether the Income rebalance is in or out of scope. Flagging this
+  in this week's email and PR description as the single highest-priority
+  open item.
+- Record the Gemini batch-size finding from this session (10-ticker
+  batches have now failed citations-only twice; smaller batches recovered
+  cleanly) as institutional knowledge for the next weekly-review run.
+- Re-verify DELL live at the next buy-side gate opportunity — it has
+  failed the opening-auction spread check three straight sessions (09-22,
+  09-23, 09-25) despite clean live momentum every time, per this week's
+  daily notes; also revisit RDW's conflicting rating data with a fresh
+  source before the next satellite screen.
+- Continue monitoring CRWD's pullback (-3.61%, no thesis break yet), RIGL's
+  approach toward its +25% satellite tighten threshold, and SPHY's
+  multi-week softness.
+- Escalate SendGrid's continued outage to the owner again — this has now
+  been broken across multiple consecutive weekly reviews with no session
+  able to self-resolve it.
+- No core risk-cap changes (sleeve %, stop widths, sector-cap threshold)
+  this week — the drought ending and the Income-sleeve composition gap are
+  both process/mechanics findings, not evidence the risk parameters
+  themselves are miscalibrated.
+
+### Overall Grade: B-
+The headline result was a modest, roughly flat week (+0.04%) that
+underperformed a narrow, mega-cap-led S&P 500 rally by about 1.2 points —
+unremarkable on its own. But the more consequential story is structural:
+the 16-session core drought that dominated the last several reviews'
+grading ended cleanly, with three new positions opened inside normal risk
+limits and no forced trades. The satellite screen handled a real
+data-quality test correctly (CGEM's disputed catalyst turned out to be a
+genuine deterioration, caught and acted on before this week's list was
+finalized), and the newly-reopened biotech cooldown was exercised with
+real discipline (10 of 13 fresh candidates rejected on price action alone,
+one held back on ambiguous rating data rather than a convenient read).
+Set against that: this session surfaced a real, multi-week-old structural
+gap in the Income sleeve's internal composition that nobody had been
+tracking, and Gemini's citations-only truncation recurred for a second
+time, costing real session time to route around. Grade reflects a week
+where the process fundamentals (buy-side gate, momentum discipline,
+data-quality verification) worked better than they have in over a month,
+offset by one newly-discovered and one already-recurring operational gap
+that both need explicit follow-up.
