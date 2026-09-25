@@ -211,3 +211,17 @@ cooldown lifts Friday 9/25; SendGrid key rotation now 18 windows / 13+ days
 overdue (401 Unauthorized reconfirmed every session since 9/18) — this is the
 account's only owner-facing alert channel and remains the top standing risk item
 for owner action.
+
+---
+## 2026-09-25 11AM Trade + Risk Sweep (fallback — SendGrid still returning 401 Unauthorized)
+11am 2026-09-25: HOLD on buys, no "Approved Trades" list existed today (DELL/CGEM
+both failed the spread/liquidity check at market-open). Risk sweep: no cuts, no
+tightens — AMD +1.86%, CRWD -1.51%, HPE +2.20% (core), RIGL +14.22% (satellite),
+EDGX +0.41%, SGOV +0.13%, SPHY -2.59% (income) — none near a hard-cut, none
+crossed a tightening threshold. Standalone SGOV cash-floor sweep executed
+(price-drift guard, 4th consecutive session under the 20% floor): sold 2 sh SGOV,
+cash restored from 19.91% to 20.13% of equity ($18,851.49 / $93,633.31).
+This week: core 3/6 (AMD, HPE, CRWD), satellite 0/4 new trades (RIGL held).
+SendGrid key rotation still overdue (20+ windows now, 401 Unauthorized
+reconfirmed this session) — owner action needed; this is the account's only
+owner-facing alert channel.

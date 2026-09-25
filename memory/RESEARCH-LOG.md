@@ -6540,3 +6540,37 @@ condition — logged above, not emailed. No email sent this session.
   the buy-side workflow should retry later in the same session (11am/3pm)
   rather than only at market-open, since CRWD's own entry pattern shows the
   spread can tighten within the same trading day.
+
+### 11 AM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists
+  anywhere in today's RESEARCH-LOG (pre-market and 9:30am both returned
+  zero qualifying candidates — DELL/CGEM failed the spread/liquidity
+  check at market-open) — per STEP 3, no buys this window. Core stays
+  3/6 positions (AMD, HPE, CRWD), satellite stays 0/4 new trades, 1 held
+  (RIGL).
+- **Risk sweep: no cuts, no tightens.** All 7 positions checked against
+  hard-cuts via live `alpaca.sh positions` — AMD +1.86%, CRWD -1.51%,
+  HPE +2.20% (all vs -7% core cut), RIGL +14.22% (vs -15% satellite cut,
+  still below the +25% tighten threshold), EDGX +0.41%, SGOV +0.13%,
+  SPHY -2.59% (all vs -5% income cut) — none near a hard-cut, none
+  crossed a gain-based tightening threshold. All positions confirmed
+  carrying live GTC trailing stops via `alpaca.sh orders`, none missing
+  (SGOV's fractional dust excepted, same as every prior session). No
+  stop moved down. No thesis breaks — nothing in today's research flags
+  a reversal on AMD/CRWD/HPE, and RIGL has no catalyst inside the
+  1-2-trading-day window.
+- **Standalone SGOV cash-floor sweep executed** (not tied to a pending
+  buy): cash had sat below the 20% floor for 4 consecutive sessions
+  (9/24 3pm 19.86%, 9/25 pre-market 19.84%, 9/25 9:30am 19.89%, this
+  session 19.91% pre-sweep) purely from price drift, tripping
+  TRADING-STRATEGY.md's price-drift-floor-breach guard part (b) — each
+  individual deficit was immaterial (<1% of equity) but the
+  >3-consecutive-session persistence trigger requires action regardless.
+  Sold 2 sh SGOV market/day, canceled and re-placed the 5% trailing stop
+  on the remaining 16 whole shares. Post-sale cash $18,851.49 / equity
+  $93,633.31 = 20.13%, restored above the floor. Full mechanics and
+  realized P&L logged in TRADE-LOG.md.
+- 2-strike sub-sector tracker unchanged: biotech cooldown lifted today
+  (through 09-25, now expired — CGEM newly eligible per pre-market note,
+  no catalyst inside the window yet); industrials 0/2. This week (Sep 21
+  start): core 3/6, satellite 0/4 — valid per the Patience Rule.

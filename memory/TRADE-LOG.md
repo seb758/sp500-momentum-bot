@@ -3021,3 +3021,7 @@ toward its +25% satellite tighten threshold and SPHY's continued softness;
 SendGrid status retested this session via the mandatory 3pm send (see
 below).
 
+### 2026-09-25 — SELL SGOV (income) — standalone cash-floor sweep (price-drift guard)
+Shares: 2 | Exit: $100.6507 (market/day) | Realized P&L: ~+$0.26 (0.13%) | Reason: TRADING-STRATEGY.md's price-drift-floor-breach guard, part (b) — cash sat below the 20% floor for more than 3 consecutive sessions purely from price drift, with no Core/Satellite trade pending to trigger the normal pre-trade sweep (9/24 3pm 19.86%, 9/25 pre-market 19.84%, 9/25 9:30am 19.89%, 9/25 11am 19.91% pre-sweep — 4th consecutive session under floor). Each individual deficit was <1% of equity (immaterial under part (a) alone), but the persistence trigger in part (b) requires a standalone SGOV sale regardless once >3 consecutive sessions is crossed.
+Mechanics: canceled the standing 18-share 5% trailing stop (41b2e4eb..., trigger $95.627, hwm $100.66), sold 2 sh market/day, re-placed a fresh 5% trailing GTC stop on the remaining 16 whole shares (trigger $95.62225, hwm $100.655; 0.989473856-sh fractional remainder stays unstopped, same immaterial ~$100 dust flagged every prior sweep) — same cancel-then-replace pattern as every prior sweep. Post-sale cash $18,851.49 / equity $93,633.31 = 20.13%, restored above the floor with a small buffer.
+
