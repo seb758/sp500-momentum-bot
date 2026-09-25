@@ -6268,3 +6268,250 @@ None approved — this pre-market workflow does not run a live buy-side gate; an
   content is preserved in the TRADE-LOG.md 3pm snapshot instead. Owner
   action to rotate the SendGrid API key remains overdue and is the top
   operational item for Friday's review.
+
+## 2026-09-25 — Pre-market Research
+
+Friday, a live trading day (confirmed via `date`). Day 60. Also the biotech
+satellite 2-strike cooldown lifts today (OCUL 7/23, MNKD 9/11) and Friday's
+weekly-review/screen-refresh runs separately from this pre-market session.
+
+### Account
+- Equity: $94,021.42 | Cash: $18,650.19 (19.84%) | Buying power: $285,640.21
+  (margin-inflated by the standing 4x multiplier — no margin/leverage used or
+  planned). `account`/`positions`/`orders` all returned cleanly, no auth
+  errors.
+- Core exposure: $28,425.53 (30.23%: AMD 15 sh $9,630.23/+3.34% unrealized,
+  CRWD 35 sh $9,120.30/-0.43% unrealized, HPE 150 sh $9,675.00/+2.74%
+  unrealized) | Satellite exposure: $5,459.46 (5.81%: RIGL 114 sh, +14.46%
+  unrealized) | Income exposure: $41,486.25 (44.12%: EDGX $20,058.15/+0.40%,
+  SGOV $1,911.30/+0.13%, SPHY $19,516.80/-2.40%)
+- Cash 19.84%, a hair under the 20% floor for the second straight session
+  (9/24 3pm was 19.86%). Deficit ~$150 (~0.16pp of equity), well under the
+  1%-of-equity materiality bar and only 2 sessions running (not yet the
+  >3-consecutive-session persistence trigger) — no same-day SGOV sale forced
+  per the price-drift guard. Watch next session.
+- All 7 open positions confirmed via `alpaca.sh orders` carrying live GTC
+  trailing stops, none missing: AMD 10%/$567.72 (hwm $630.80), CRWD
+  10%/$237.474 (hwm $263.86), HPE 10%/$58.93182 (hwm $65.4798), RIGL
+  15%/$42.415 (hwm $49.90), EDGX 5%/$25.9825 (hwm $27.35), SPHY 5%/$22.23
+  (hwm $23.40), SGOV 5%/$95.5985 on 18 covered sh (hwm $100.63;
+  0.989473856-sh fractional remainder stays unstopped, same immaterial ~$100
+  dust flagged every prior sweep). No stop moved down.
+- This week (Sep 21 start) stands at core 3/6 (HPE 9/22, AMD 9/23, CRWD
+  9/24), satellite 0/4 new trades (RIGL held) — valid per the Patience
+  Rule. This pre-market workflow does not execute trades regardless of what
+  it surfaces.
+- **Biotech satellite 2-strike cooldown lifts today, 2026-09-25** (OCUL
+  7/23, MNKD 9/11) — CGEM becomes newly eligible for entry subject to a
+  fresh catalyst-window check (see below). Industrials sub-sector remains
+  unaffected (0 strikes).
+
+### Data-quality notes
+**This session's Gemini report is materially incomplete — missing Section 1
+entirely (S&P futures / VIX) and most of Section 3 (held-ticker overnight
+news).** Confirmed via full-text search of the captured output: zero
+mentions of "VIX" or "futures" anywhere in the report — no numeric or even
+qualitative market-context figure was returned this time (worse than 9/24's
+partial miss, which at least had a qualitative VIX mention). Per the
+data-quality guard: **no VIX level or S&P futures direction is stated in
+this log.**
+- Of the 7 held tickers requested for overnight-news coverage, only CRWD got
+  any mention — and only as an indirect read-through off PANW's earnings
+  commentary ("this dynamic provides vital read-throughs for CrowdStrike"),
+  not CRWD-specific news. **AMD, HPE, EDGX, SGOV, and SPHY are not
+  mentioned anywhere in the report by name or ticker** — confirmed via
+  targeted search, not just absent from a summary table. Treated as "no
+  coverage obtained," not "confirmed clean" — per the data-quality guard, no
+  overnight-news claim is made for these five names below.
+- The output otherwise reads as coherent, cited paragraphs (core-sector
+  commentary, satellite catalyst verification) rather than a mid-sentence
+  cutoff — this looks like a narrow-scope miss on the specific market-context
+  and held-ticker tasking (points 1 and 3) rather than a general truncation,
+  consistent with 9/24's "partial-coverage gap" pattern, but broader this
+  time (a full missing section vs. partial).
+- Add to the standing Gemini reliability/coverage-gap log for the next
+  weekly-review discussion (9/11, 9/18-9/21, 9/22, 9/23, 9/24 all logged
+  distinct coverage/framing issues; 9/25 is now a full missing-section
+  instance).
+
+### Market Context
+- **VIX / S&P futures: no data available this session — see Data-quality
+  notes above.** No fallback WebSearch was run per STEP 3's single-
+  consolidated-query guidance (avoiding a serial loop of small queries);
+  flagged as a gap rather than fabricated.
+- **AI capex supercycle remains the dominant structural narrative:** MRVL
+  shipped 5M+ coherent photonic ICs to hyperscalers (with Tower
+  Semiconductor) and is set to join the S&P 500 (replacing Pool Corp,
+  forced index-fund buying expected) — a tailwind read-through for the
+  broader hardware/AI-infra cluster (DELL, NTAP, INTC — watchlist core, none
+  held; no company-specific news for any of the three). MRVL itself is not
+  on the current watchlist.
+- **PANW (watchlist core, not held) beat-and-sold-off:** Q4 FY26 revenue
+  $3.41B (+34.5% YoY), NGS ARR +60% to $8.1B, RPO +36% to $18.4B — but stock
+  fell ~9% post-earnings on valuation-reset/"sell-the-news" dynamics (had
+  roughly doubled YTD). Report frames this as a read-through confirming
+  robust enterprise cybersecurity spend for CRWD (held, core), not a
+  CRWD-specific data point.
+- **CRL (watchlist core, not held):** divesting its Cell & Gene Therapy CDMO
+  and Cell Solutions businesses to GI Partners, and selling European
+  Discovery Services assets to IQV (watchlist core, not held) for ~$145M —
+  strategic pivot toward core discovery services, ~$200M 2026 revenue
+  reduction expected but framed as margin-accretive.
+- **RVTY (watchlist core, not held):** +9.1% to a 52-week high ($140.19) on
+  heavy volume, driven by AI-research-tools demand commentary and the Human
+  Cell Design acquisition (GLP-1/obesity research angle).
+- **VEEV (watchlist core, not held):** launched "Falcon Router" agentic-AI
+  tool for biopharma case routing/safety reporting; Vault CRM win-backs from
+  Biogen and Regeneron, now on 12 of top 20 biopharma companies' platforms.
+- **CPAY (watchlist core, not held):** FTC settlement ($100M, no wrongdoing
+  admission, no personal CEO liability) confirmed resolved — consistent with
+  9/24's "incrementally de-risking" read, now finalized.
+- **New regulatory risk reaffirmed for CNC (watchlist core, not held):**
+  report states loss of a $3.6B Medicare Part D subsidy triggered a 3%
+  after-hours drop — consistent with, and now more concrete than, 9/24's
+  qualitative "structural margin threat" flag. Still not held; caution item
+  for any future entry.
+- **ZBRA (watchlist core, not held):** Connected Frontline segment +25.9%,
+  Asset Visibility +13.5% YoY; FY26 FCF guidance raised to >$1B; $568M
+  buybacks executed H1.
+- **Diesel export-ban risk reiterated for MPC, VLO (watchlist core, neither
+  held)** per the report's conclusion section, though no new detail beyond
+  9/22-9/23's standing flag was given in-body.
+- **ZBRA/NUE/STT/INCY/TMO/WST (watchlist core, none held):** no
+  ticker-specific overnight catalysts beyond the sector color above; NUE
+  keyed to today's Atlanta Fed GDPNow/durable-goods prints, STT a
+  higher-for-longer-rates beneficiary.
+- **No held-position-specific overnight news obtained for AMD, HPE, EDGX,
+  SGOV, or SPHY** — see Data-quality notes; not treated as "confirmed
+  clean."
+
+### CGEM cooldown lift / catalyst-window check (pending-catalyst guard
+applies)
+Biotech cooldown lifts today, making CGEM newly eligible for a satellite
+entry subject to the standard screen. Today's report claims CGEM's "catalyst
+status has fundamentally changed overnight" based on a Stifel fireside chat
+(09-24) and a Form 8-K citing **new** Q4 2026 milestones: CLN-978 Phase 1
+data (Dec 2026), CLN-049 dose-escalation data (Dec 2026), and a velinotamig
+China rheumatology presentation (Nov 2026) — explicitly **none within the
+next 5 trading days**. This does not match WATCHLIST.md's tracked catalyst
+(zipalertinib NDA target action, Feb 27, 2027) and is a newly-surfaced claim,
+not the operative catalyst. Per TRADING-STRATEGY.md's pending-catalyst
+guard — reinforced by Gemini's repeated history of mis-framing biotech
+catalysts as more live/imminent than they are (8/21, 9/24) — this Q4 2026
+milestone set is logged as unverified and requires independent confirmation
+before any future CGEM entry could rely on it; it is not adopted into
+WATCHLIST.md from this log alone, and regardless, none of it clears the
+5-trading-day binary-catalyst window this report itself describes. RIGL
+(held) and PLPC (not held) both confirmed with no near-term catalyst.
+
+### Held-Position Thesis Check
+- **AMD (core, held, +3.34% unrealized):** No company-specific overnight
+  news obtained this session (see Data-quality notes). Not a thesis break;
+  well inside the -7% hard-cut.
+- **CRWD (core, held, -0.43% unrealized):** No CRWD-specific overnight news;
+  only an indirect sector read-through via PANW's earnings (enterprise
+  cybersecurity spend framed as robust despite PANW's own post-earnings
+  selloff). Not a thesis break; well inside the -7% hard-cut.
+- **HPE (core, held, +2.74% unrealized):** No company-specific overnight
+  news obtained this session (see Data-quality notes). Not a thesis break;
+  well inside the -7% hard-cut.
+- **RIGL (satellite, held, +14.46% unrealized):** Confirmed no catalyst
+  inside the next 5 trading days (FDA calendar/trial-registry review, this
+  report). Continuing to approach but still below the +25% satellite
+  tighten threshold.
+- **EDGX (income, held, +0.40% unrealized):** No overnight news obtained
+  (see Data-quality notes). No thesis-break exit exists under Income sleeve
+  rules.
+- **SGOV (income, held, +0.13% unrealized):** No overnight news obtained.
+  Stable, well inside its 5% stop.
+- **SPHY (income, held, -2.40% unrealized):** No overnight news obtained.
+  Still well inside its 5% stop. No thesis-break exit exists under Income
+  sleeve rules.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None approved — this pre-market workflow does not run a live buy-side gate;
+any entry requires full live momentum/FCF/rating re-verification at a trade
+window. Freshest color: CNC's Medicare Part D subsidy loss is a real,
+now-priced regulatory hazard (not held, caution item only); PANW's
+post-earnings selloff is a valuation reset, not a fundamentals break, and is
+read as constructive for CRWD (held); CRL/RVTY/VEEV/ZBRA/CPAY all posted
+genuine positive developments (none held). Core sleeve at 3/6 slots (AMD,
+HPE, CRWD) — a fourth entry remains a live-trade-window decision, not this
+workflow's to make.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+- **RIGL** (held) — see Held-Position Thesis Check, no new entry signal.
+- **CGEM** — cooldown lifts today, newly eligible for entry, but no
+  catalyst inside the 5-trading-day window per this report (see discrepancy
+  note above) — any future entry would size at the standard 7.5% cap, not
+  the binary-hold 5% cap, and requires independent verification of the
+  cited Q4 2026 milestones before relying on them. Informational for a live
+  trade-window look, not an approved trade.
+- **PLPC** — no catalyst inside the window; next event Q3 earnings
+  (~Oct 28-Nov 2).
+- **GNK** — no catalyst inside the window; broke out to a 52-week high
+  ($27.96) on heavy volume, 11.4% annualized dividend yield; next earnings
+  Nov 4. Not held, no catalyst-window action.
+- **SHIP** — no catalyst inside the window per this report (no mention of
+  the previously-tracked 09-25 ex-dividend date one way or the other — that
+  date has now passed as of today's session; not independently re-verified
+  this session).
+- **ALNT** — no catalyst inside the window; an insider Section 16(b)
+  short-swing technicality (401(k) rollover mechanics) was resolved/repaid
+  same-day, a governance non-event, not a thesis item. $298M backlog, +49%
+  order growth intact.
+- **FEIM** — no catalyst inside the window; next earnings ~Dec 10.
+
+### Risk Factors
+- No held position is near its hard-cut: AMD +3.34% (vs -7% core cut), CRWD
+  -0.43% (vs -7% core cut), HPE +2.74% (vs -7% core cut), RIGL +14.46% (vs
+  -15% satellite cut, approaching but still below the +25% tighten
+  threshold), EDGX +0.40%, SGOV +0.13%, SPHY -2.40% (all vs -5% income cut).
+- **This session's Gemini report is missing Section 1 entirely (no VIX/
+  futures data) and most of Section 3 (AMD/HPE/EDGX/SGOV/SPHY overnight
+  news uncovered)** — treat broad market-wide volatility/direction as
+  unknown this session, not as calm; add to the standing reliability-gap log
+  for the next weekly review.
+- **CGEM's newly-cited Q4 2026 catalyst claims are unverified** (see
+  discrepancy note) — do not act on them without independent confirmation;
+  moot for today regardless since none falls inside the 5-day window.
+- **CNC regulatory risk (Medicare Part D subsidy loss, ~3% after-hours
+  drop)** is now more concrete than 9/24's qualitative flag — caution item
+  for any future core entry, not currently held.
+- Cash at 19.84%, a hair under the 20% floor for a second consecutive
+  session — immaterial deficit, watch for a 3rd consecutive session per the
+  price-drift guard.
+- SendGrid status: last confirmed broken (401 Unauthorized) as of 9/24's
+  3pm mandatory send — not retested this session since no urgent condition
+  requires a notification (see below); still a standing operational item,
+  19+ days outstanding, owner action to rotate the key remains overdue.
+
+### Decision
+**HOLD.** This pre-market research workflow does not execute trades
+regardless of what it surfaces. Core stays at 3/6 (AMD, HPE, CRWD) pending
+any live-gate-verified fourth entry at a trade window. Satellite stays at
+0/4 new trades this week, 1 held (RIGL) — CGEM is now cooldown-eligible but
+has no catalyst inside the 5-day window per this report, and its newly-cited
+Q4 milestones are unverified; any entry decision is a live-trade-window call,
+not this workflow's. Top items for the next trade window: (1) this session's
+Gemini report has a significant coverage gap (no VIX/futures, no AMD/HPE/
+EDGX/SGOV/SPHY-specific news) — treat market-wide risk as unknown, re-verify
+independently if a trade is being considered; (2) CGEM is newly
+cooldown-eligible — if pursuing an entry, independently verify the Q4 2026
+catalyst claims and confirm no near-term binary event exists before sizing
+at the standard 7.5% cap; (3) watch RIGL's continued approach toward the
++25% satellite tighten threshold; (4) watch the cash floor for a possible
+SGOV top-up if the sub-20% drift persists a 3rd consecutive session; (5) log
+today's Gemini coverage gap for the weekly-review reliability discussion.
+
+### Notification
+**Silent — no urgent condition met.** Per STEP 5, notification is silent
+unless a held position is already below its hard-cut pre-market, a
+satellite catalyst resolved negatively overnight, or a major geopolitical
+event occurred. None applies: all 7 positions are well clear of their stops
+(nearest is RIGL, but on the gain side; SPHY at -2.40% vs a -5% stop), no
+satellite catalyst resolved negatively (CGEM's newly-cited items are
+forward-looking and unverified, not a resolution), and no geopolitical shock
+was reported. The Gemini coverage gap (missing VIX/futures, missing most
+held-ticker news) is a data-quality issue, not itself an urgent trading
+condition — logged above, not emailed. No email sent this session.
