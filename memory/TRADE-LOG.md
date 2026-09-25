@@ -3025,3 +3025,66 @@ below).
 Shares: 2 | Exit: $100.6507 (market/day) | Realized P&L: ~+$0.26 (0.13%) | Reason: TRADING-STRATEGY.md's price-drift-floor-breach guard, part (b) — cash sat below the 20% floor for more than 3 consecutive sessions purely from price drift, with no Core/Satellite trade pending to trigger the normal pre-trade sweep (9/24 3pm 19.86%, 9/25 pre-market 19.84%, 9/25 9:30am 19.89%, 9/25 11am 19.91% pre-sweep — 4th consecutive session under floor). Each individual deficit was <1% of equity (immaterial under part (a) alone), but the persistence trigger in part (b) requires a standalone SGOV sale regardless once >3 consecutive sessions is crossed.
 Mechanics: canceled the standing 18-share 5% trailing stop (41b2e4eb..., trigger $95.627, hwm $100.66), sold 2 sh market/day, re-placed a fresh 5% trailing GTC stop on the remaining 16 whole shares (trigger $95.62225, hwm $100.655; 0.989473856-sh fractional remainder stays unstopped, same immaterial ~$100 dust flagged every prior sweep) — same cancel-then-replace pattern as every prior sweep. Post-sale cash $18,851.49 / equity $93,633.31 = 20.13%, restored above the floor with a small buffer.
 
+## Sep 25 — 3pm Snapshot (Day 60, Friday)
+**Portfolio:** $93,593.74 | **Cash:** $18,851.49 (20.14%) | **Day P&L:** -$301.41 (-0.32%) | **Phase P&L:** -$6,406.26 (-6.41%)
+**Core exposure:** $27,875.19 (29.78% of equity) | **Satellite exposure:** $5,501.64 (5.88% of equity) | **Income exposure:** $41,365.42 (44.19% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| AMD | core | 15 | $621.28 | $630.449 | +0.19% | +$137.54 (+1.48%) | 10% trailing ($575.055) |
+| CRWD | core | 35 | $261.70 | $253.815 | -2.26% | -$275.98 (-3.01%) | 10% trailing ($237.474) |
+| HPE | core | 150 | $62.78 | $63.5662 | +0.07% | +$117.93 (+1.25%) | 10% trailing ($59.085) |
+| RIGL | satellite | 114 | $41.84 | $48.26 | +0.77% | +$731.88 (+15.34%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $27.0299 | +0.53% | +$186.43 (+0.93%) | 5% trailing ($25.9825) |
+| SGOV | income | 16.989473856 | $100.52 | $100.65 | +0.03% | +$2.21 (+0.13%) | 5% trailing ($95.627, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.77 | -0.13% | -$505.04 (-2.53%) | 5% trailing ($22.23) |
+
+**Notes:** No buys this window — no "### Approved Trades (verified)" list
+existed anywhere in today's RESEARCH-LOG (pre-market HOLD, 9:30am DELL/CGEM
+both failed the opening-auction spread/liquidity check, 11am HOLD), so per
+STEP 3 the 3pm window held too. Core stays at 3/6 positions (HPE 9/22,
+AMD 9/23, CRWD 9/24), 3/6 trades this week (Sep 21
+start); satellite 0/4 new trades (RIGL held). Risk sweep: no closes, no
+tightens — all 7 positions checked live against hard-cuts (AMD +1.48%, CRWD
+-3.01%, HPE +1.25% vs -7% core cut; RIGL +15.34% vs -15% satellite cut,
+still below the +25% tighten threshold; EDGX +0.93%, SGOV +0.13%, SPHY
+-2.53% vs -5% income cut), none close, none crossed a gain-based tighten
+threshold. CRWD continued its intraday slide from 11am's -1.51% to -3.01%
+on no idiosyncratic news found this session — read as the same sector-wide
+rate-pressure/valuation-reset dynamic flagged in pre-market (PANW's
+post-earnings selloff), not a thesis break; still well inside the -7% cut.
+AMD/HPE both modestly positive on the day. RIGL +15.34%, gap-risk check
+clean (no catalyst inside 1-2 trading days; next pipeline readout
+2H26/year-end, earnings ~Nov 3). Income book: EDGX +0.93%, SGOV +0.13%,
+SPHY -2.53%, all well inside their 5% stops, no thesis to break under
+Income sleeve rules. All 7 open positions confirmed via
+`alpaca.sh positions`/`orders` carrying live GTC trailing stops, none
+missing (SGOV's 0.989473856-sh fractional remainder stays unstopped, same
+immaterial ~$100 dust flagged every prior sweep). No stop moved down.
+2-strike sub-sector tracker unchanged: biotech cooldown lifted today
+(CGEM newly eligible, no catalyst inside window yet, unverified Q4 2026
+milestone claims per the pending-catalyst guard); industrials 0/2. Cash
+$18,851.49 = 20.14%, back above the 20% floor following 11am's standalone
+SGOV sweep (price-drift guard) — no further action needed this session.
+Trades today: SELL SGOV 2sh (income, 11am standalone cash-floor sweep,
++$0.26 realized) — no core/satellite buys or sells. Risky positions closed
+today: none. Day P&L (-0.32%) driven by CRWD's intraday slide and SPHY's
+continued high-yield-credit-outflow softness, partly offset by RIGL/AMD/
+HPE/EDGX gains. Phase P&L now -6.41% since Day 0 ($100,000 -> $93,593.74).
+Core exposure 29.78% (3 of 6 slots: AMD, HPE, CRWD). Satellite steady at
+5.88% (1 of 4 slots: RIGL only; biotech sub-sector cooldown lifted today,
+industrials still open). This week (Sep 21 start): core 3/6, satellite 0/4
+new trades. Tomorrow: weekend — next live session Monday 9/28; Friday's
+separate weekly-review/screen-refresh workflow runs later today
+(watchlist refresh, Income sleeve Part C rebalance) independent of this
+3pm window. Carry into Monday: re-verify DELL (failed the opening-auction
+spread check three straight sessions — 9/22, 9/23, 9/25 — despite clean
+live momentum each time, a pattern flagged for weekly review) and CGEM
+(cooldown-eligible, needs independent verification of its newly-cited Q4
+2026 catalyst claims before any entry) at the buy-side gate; watch RIGL's
+continued approach toward its +25% satellite tighten threshold; watch SPHY's
+continued softness and the cash floor for drift; log today's Gemini
+coverage gap (missing VIX/futures, missing most held-ticker news) for the
+weekly review; SendGrid status retested this session via the mandatory 3pm
+send (see below).
+
