@@ -6515,3 +6515,28 @@ forward-looking and unverified, not a resolution), and no geopolitical shock
 was reported. The Gemini coverage gap (missing VIX/futures, missing most
 held-ticker news) is a data-quality issue, not itself an urgent trading
 condition — logged above, not emailed. No email sent this session.
+
+### 9:30 AM Session Note
+- **HOLD, no trades.** DELL (core, standing candidate carried over from
+  9/22-9/23) and CGEM (satellite, biotech cooldown lifted today) were the
+  only two live candidates; both failed the spread/liquidity check —
+  DELL's ask/bid gapped ~8-10% and CGEM's ~25%, neither converging across 5
+  polls over ~50 seconds (CGEM's quote timestamp barely moved, consistent
+  with a thin/stale opening-auction book). No other core or satellite name
+  was flagged in this morning's pre-market research. Skipped per STEP 2's
+  wide/illiquid-spread rule before either reached the buy-side gate.
+- Live account re-verified: equity $93,767.99, cash $18,650.19 (19.89%) —
+  still a hair under the 20% floor (3rd consecutive session: 9/24 3pm
+  19.86%, 9/25 pre-market 19.84%, now 19.89%) but deficit remains <1% of
+  equity (immaterial) and not yet the >3-consecutive-session persistence
+  trigger — no SGOV sale forced this window, per TRADING-STRATEGY.md's
+  price-drift guard. All 7 positions confirmed carrying live GTC trailing
+  stops via `alpaca.sh orders`, none missing, none near a hard-cut. Core
+  stays 3/6 positions (AMD, HPE, CRWD), 3/6 trades this week; satellite
+  stays 0/4 new trades, 1 held (RIGL).
+- Pattern flag for Friday's weekly-review: DELL has now failed the
+  opening-auction liquidity check on three separate sessions (9/22, 9/23,
+  9/25) despite clean live momentum each time — worth discussing whether
+  the buy-side workflow should retry later in the same session (11am/3pm)
+  rather than only at market-open, since CRWD's own entry pattern shows the
+  spread can tighten within the same trading day.
