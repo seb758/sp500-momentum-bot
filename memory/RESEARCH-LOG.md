@@ -6574,3 +6574,34 @@ condition — logged above, not emailed. No email sent this session.
   (through 09-25, now expired — CGEM newly eligible per pre-market note,
   no catalyst inside the window yet); industrials 0/2. This week (Sep 21
   start): core 3/6, satellite 0/4 — valid per the Patience Rule.
+
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists
+  anywhere in today's RESEARCH-LOG (pre-market, 9:30am, and 11am all
+  returned zero qualifying candidates) — per STEP 3, no buys this window.
+  Core stays 3/6 positions (AMD, HPE, CRWD), satellite stays 0/4 new
+  trades, 1 held (RIGL).
+- **Risk sweep: no cuts, no tightens.** All 7 positions re-checked live via
+  `alpaca.sh positions`/`orders` against hard-cuts: AMD +1.48% (core),
+  CRWD -3.01% (core, continued slide from 11am's -1.51% but still well
+  inside the -7% cut and no company-specific thesis break found — same
+  sector-wide rate-pressure read as pre-market), HPE +1.25% (core), RIGL
+  +15.34% (satellite, still below the +25% tighten threshold, no catalyst
+  inside 1-2 trading days), EDGX +0.93%, SGOV +0.13%, SPHY -2.53% (all
+  income, vs -5% cut). None near a hard-cut, none crossed a gain-based
+  tightening threshold. All 7 positions confirmed carrying live GTC
+  trailing stops, none missing (SGOV's 0.989473856-sh fractional remainder
+  stays unstopped, same immaterial dust flagged every prior session). No
+  stop moved down.
+- **Satellite gap-risk check:** RIGL's next pipeline readout is not until
+  2H26/year-end, next earnings ~Nov 3 — no binary catalyst inside the next
+  1-2 trading days, no action required.
+- **Thesis check:** no breaks on AMD/HPE/CRWD (today's research found no
+  idiosyncratic negative news for any of the three); RIGL catalyst intact
+  (VEPPANU launch already resolved positively 08-13).
+- Cash $18,851.49 = 20.14% of equity, back above the 20% floor (11am's
+  standalone SGOV sweep holding) — no further action needed.
+- 2-strike sub-sector tracker unchanged: biotech cooldown lifted today
+  (CGEM newly eligible, no catalyst inside window); industrials 0/2. This
+  week (Sep 21 start): core 3/6, satellite 0/4 — valid per the Patience
+  Rule. Risky positions closed today: none.

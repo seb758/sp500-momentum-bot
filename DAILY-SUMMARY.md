@@ -225,3 +225,33 @@ This week: core 3/6 (AMD, HPE, CRWD), satellite 0/4 new trades (RIGL held).
 SendGrid key rotation still overdue (20+ windows now, 401 Unauthorized
 reconfirmed this session) — owner action needed; this is the account's only
 owner-facing alert channel.
+
+---
+## 2026-09-25 3PM Trade + Risk Sweep + Summary (fallback — SendGrid still returning 401 Unauthorized)
+3pm 2026-09-25: HOLD on buys, no "Approved Trades" list existed today (pre-market,
+9:30am, 11am all returned zero qualifying candidates). Risk sweep: no cuts, no
+tightens — AMD +1.48%, CRWD -3.01%, HPE +1.25% (core), RIGL +15.34% (satellite),
+EDGX +0.93%, SGOV +0.13%, SPHY -2.53% (income) — none near a hard-cut, none
+crossed a tightening threshold. CRWD's continued slide (-1.51% at 11am to -3.01%
+now) read as sector-wide rate/valuation pressure (PANW post-earnings selloff
+read-through), not a thesis break — still well inside the -7% cut.
+Portfolio: $93,593.74 (-0.32% day, -6.41% phase)
+Core: $27,875.19 (29.78%) | Satellite: $5,501.64 (5.88%) | Cash: $18,851.49 (20.14%)
+Trades today: SGOV sweep 2sh (income, 11am) | none core/sat
+Risky positions closed: none
+Open positions:
+  AMD (core) +1.48% (stop $575.06)
+  CRWD (core) -3.01% (stop $237.47)
+  HPE (core) +1.25% (stop $59.09)
+  RIGL (sat) +15.34% (stop $42.42)
+  EDGX (inc) +0.93% (stop $25.98)
+  SGOV (inc) +0.13% (stop $95.63)
+  SPHY (inc) -2.53% (stop $22.23)
+This week: core 3/6, satellite 0/4
+Tomorrow: weekend - weekly review/screen-refresh runs later today separately;
+re-verify DELL (failed opening-auction spread 3 straight sessions: 9/22, 9/23,
+9/25) and CGEM (cooldown-eligible, unverified Q4 2026 catalyst claims) Monday;
+watch RIGL toward +25% tighten threshold and SPHY's continued softness.
+SendGrid key rotation still overdue (21+ windows now, 401 Unauthorized
+reconfirmed this session) — owner action needed; this is the account's only
+owner-facing alert channel.
