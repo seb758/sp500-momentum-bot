@@ -6605,3 +6605,235 @@ condition — logged above, not emailed. No email sent this session.
   (CGEM newly eligible, no catalyst inside window); industrials 0/2. This
   week (Sep 21 start): core 3/6, satellite 0/4 — valid per the Patience
   Rule. Risky positions closed today: none.
+
+## 2026-09-26 — Pre-market Research
+
+Saturday (confirmed via `date`) — markets closed, not a live trading day.
+Run from a fresh cloud session per the scheduled pre-market routine; no
+`.env` file, keys read directly from process env vars (all 10 required vars
+confirmed present before any wrapper call). Account/position/order snapshot
+below reflects Friday 2026-09-25's close (Day 60) — no new fills, stop
+changes, or cash movement have occurred since Friday's 3pm session.
+
+### Account
+- Equity: $93,462.10 | Cash: $18,851.49 (20.17%) | Buying power: $284,315.68
+  (margin-inflated by the standing 4x multiplier — no margin/leverage used or
+  planned). `account`/`positions`/`orders` all returned cleanly, no auth
+  errors.
+- Core exposure: $27,725.00 (29.66%: AMD 15 sh $9,459.45/+1.51% unrealized,
+  CRWD 35 sh $8,824.55/-3.66% unrealized, HPE 150 sh $9,441.00/+0.26%
+  unrealized) | Satellite exposure: $5,492.52 (5.88%: RIGL 114 sh,
+  +15.15% unrealized) | Income exposure: $41,393.09 (44.28%: EDGX
+  $20,183.25/+1.03%, SGOV $1,710.16/+0.14%, SPHY $19,499.68/-2.48%)
+- Cash 20.17%, back above the 20% floor (unchanged from Friday 3pm's
+  20.14%; the small uptick is a rounding/price artifact on a no-trade
+  weekend, not a new sweep).
+- All 7 open positions confirmed via `alpaca.sh orders` carrying live GTC
+  trailing stops, none missing: AMD 10%/$575.055 (hwm $638.95), CRWD
+  10%/$237.474 (hwm $263.86), HPE 10%/$59.085 (hwm $65.65), RIGL
+  15%/$42.415 (hwm $49.90), EDGX 5%/$25.9825 (hwm $27.35), SPHY 5%/$22.23
+  (hwm $23.40), SGOV 5%/$95.627 on 16 covered sh (hwm $100.66;
+  0.989473856-sh fractional remainder stays unstopped, same immaterial
+  ~$100 dust flagged every prior sweep). No stop moved down — unchanged
+  since Friday, no orders placed over the weekend.
+- This week (Sep 21-25) closed at core 3/6 (HPE 9/22, AMD 9/23, CRWD 9/24),
+  satellite 0/4 new trades (RIGL held) — valid per the Patience Rule. Next
+  week (Sep 28 start) resets the weekly trade-count budget; this pre-market
+  workflow does not execute trades regardless of what it surfaces.
+- **Biotech satellite 2-strike cooldown remains LIFTED** (since 2026-09-25,
+  OCUL 7/23, MNKD 9/11) — XNCR was added as the first new biotech satellite
+  name at Friday's weekly screen refresh; CGEM remains cooldown-eligible
+  pending independent verification of its Q4 2026 catalyst claims (unchanged
+  standing item, see 9/25 entry). Industrials sub-sector remains unaffected
+  (0 strikes).
+
+### Data-quality notes
+**This session's Gemini report is truncated — it starts mid-document**,
+with the captured text beginning directly at a "### Refining and Downstream
+Energy" subsection and no preceding title or Section 1/2 content. Confirmed
+via full-text search of the captured output: zero mentions of "VIX" or
+"futures" anywhere in the report — **no S&P futures direction or VIX level
+is stated in this log, per the data-quality guard.** No explicit
+Section-2-style economic-calendar rundown was returned either (only
+scattered macro color inside the sector commentary — see Market Context).
+- Of the 7 held tickers requested for overnight-news coverage, only CRWD
+  got an indirect mention (grouped into a generic synthesis sentence about
+  AI-infra/cybersecurity demand, not CRWD-specific news). **AMD, HPE, RIGL,
+  EDGX, SGOV, and SPHY are not mentioned anywhere in the report by name or
+  ticker** — confirmed via targeted search. Treated as "no coverage
+  obtained," not "confirmed clean" — no overnight-news claim is made for
+  these six names below.
+- **Ticker-mismatch flag on SHIP:** the report's "SHIP" section discusses
+  "Shell Catalysts & Technologies" (a private Shell decarbonization/SAF
+  technology unit), not our satellite holding-candidate SHIP (a publicly
+  traded dry-bulk shipping company) — an entity mismatch, not real coverage
+  of our ticker. Treated as no data for SHIP, not acted on.
+- The rest of the output otherwise reads as coherent, cited paragraphs
+  (refining-sector commentary, financials commentary, satellite catalyst
+  verification) rather than a garbled cutoff — this looks like the
+  beginning of the report (title + Sections 1-2 + most of Section 3) was
+  dropped in capture, not a general truncation mid-sentence. Consistent
+  with 9/24's and 9/25's partial-coverage-gap pattern, now a third
+  consecutive session with a materially incomplete report, and the first
+  with a missing-from-the-start structural gap rather than a within-section
+  omission — add to the standing Gemini reliability/coverage-gap log for
+  the next weekly review.
+- Per STEP 3, no fallback WebSearch loop was run to backfill the missing
+  sections (avoiding a serial small-query loop); the gap is logged, not
+  filled in.
+
+### Market Context
+- **VIX / S&P futures: no data available this session — see Data-quality
+  notes above.**
+- **Macro-rates backdrop (from sector commentary, not a dedicated macro
+  section): the 10-year Treasury yield is reported above 5.1%**, described
+  as punishing leveraged/cyclical names and rewarding cash-rich, FCF-strong
+  businesses — directionally consistent with the sleeve's FCF-first core
+  criteria, but this single data point could not be cross-checked against a
+  dedicated Section 1/2 and is not treated as a confirmed, complete picture
+  of market-wide conditions this weekend.
+- **Refining sector (MPC, VLO, PSX — watchlist core, none held):** sharp,
+  contradictory volatility this week. MPC and VLO surged 3-4%+ on tight
+  refined-product inventories and a Middle-East-driven crack-spread premium,
+  but Jefferies downgraded **both MPC and VLO from Buy to Hold**, warning
+  current valuations price in peak midcycle margins through 2030. PSX fell
+  3.8% as early reports of restored Middle East crude flows compressed
+  crack-spread premiums. A new regulatory risk surfaced: Treasury Secretary
+  Bessent floated a possible U.S. diesel-export ban to combat domestic fuel
+  prices, which would structurally collapse refining margins if enacted.
+  None of MPC/VLO/PSX are held; the Jefferies downgrades are Hold, not Sell,
+  so they would not by themselves fail Core Entry Criterion 5 if any were a
+  live candidate, but the valuation/regulatory setup is a caution item.
+- **HOOD (watchlist core, not held):** Q2 platform assets hit a record
+  $369B (+262% YoY), diversifying into gold/banking/retirement products;
+  stock dipped 1.76% to $115.28 this week despite the strong metrics and a
+  recent $1.4B convertible-note refinancing. No thesis-altering news.
+- **MET (watchlist core, not held):** pre-announced strong Q3 variable
+  investment income (>=$600M pre-tax, tracking well against $1.6B full-year
+  guidance) ahead of its November print; Group Benefits earnings +25% YoY.
+  Constructive, not currently held.
+- **CPAY (watchlist core, not held):** no idiosyncratic news this period,
+  trading in line with sector.
+- **INCY (watchlist core, not held) — new risk flag:** report's synthesis
+  section references an "imminent FDA decision" for INCY without further
+  detail (no specific drug/date given in the captured text). Not held,
+  not a satellite name, so no gap-risk sizing implication — logged as an
+  unverified item to watch, not confirmed via a second source this session.
+- No other watchlist core tickers (CRWD, DELL, AMD, PANW, HPE, P, VEEV,
+  ZBRA, DDOG, WDAY, IQV, RVTY, A, META, TMO, WST, DXCM) received any
+  overnight coverage in the captured text.
+
+### Satellite Catalyst-Window Check
+Report explicitly states none of RIGL, PLPC, SHIP, ALNT, FEIM, TH, or XNCR
+carry a documented clinical/regulatory/earnings catalyst within the next 5
+trading days:
+- **XNCR** — ESMO Phase 1 (XmAb819, ccRCC) oral presentation confirmed for
+  Oct 23-27, 2026 (abstracts Oct 18) — outside the 5-day window. $105M
+  Alexion settlement already banked, runway secured through 2028
+  (consistent with WATCHLIST.md).
+- **PLPC** — ex-dividend date (Thu 9/24, $0.21/sh) already passed; next
+  event is Q3 earnings (~Oct 28-Nov 2). No catalyst inside the window.
+- **SHIP** — no usable data this session; see the ticker-mismatch flag
+  above. Not independently re-verified.
+- **RIGL, ALNT, FEIM, TH** — report states zero material news flow or
+  documented event dates within the immediate monitoring period, consistent
+  with WATCHLIST.md's own findings for each at Friday's screen refresh.
+
+### Held-Position Thesis Check
+- **AMD (core, held, +1.51% unrealized):** No company-specific overnight
+  news obtained this session (see Data-quality notes). Not a thesis break;
+  well inside the -7% hard-cut.
+- **CRWD (core, held, -3.66% unrealized):** No CRWD-specific overnight
+  news; only a generic sector-level mention (AI-infra/cybersecurity demand)
+  in the report's synthesis, not new information. Not a thesis break; well
+  inside the -7% hard-cut.
+- **HPE (core, held, +0.26% unrealized):** No company-specific overnight
+  news obtained this session (see Data-quality notes). Not a thesis break;
+  well inside the -7% hard-cut.
+- **RIGL (satellite, held, +15.15% unrealized):** Confirmed no catalyst
+  inside the next 5 trading days (see Satellite Catalyst-Window Check
+  above). Still below the +25% satellite tighten threshold.
+- **EDGX (income, held, +1.03% unrealized):** No overnight news obtained
+  (see Data-quality notes). No thesis-break exit exists under Income sleeve
+  rules.
+- **SGOV (income, held, +0.14% unrealized):** No overnight news obtained.
+  Stable, well inside its 5% stop.
+- **SPHY (income, held, -2.48% unrealized):** No overnight news obtained.
+  Still well inside its 5% stop. No thesis-break exit exists under Income
+  sleeve rules.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None approved — this pre-market workflow does not run a live buy-side gate;
+any entry requires full live momentum/FCF/rating re-verification at a trade
+window (and today is a non-trading day regardless). Freshest color: MPC/VLO
+carry fresh Jefferies Hold downgrades and diesel-export-ban regulatory risk
+(neither held); HOOD/MET/CPAY posted no thesis-altering news (none held).
+Core sleeve closed the week at 3/6 slots (AMD, HPE, CRWD) — a fourth entry
+remains a live-trade-window decision for Monday, not this workflow's.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+- **RIGL** (held) — see Held-Position Thesis Check, no new entry signal.
+- **XNCR** — new this week (first biotech satellite name since the
+  cooldown lifted); confirmed no catalyst inside the 5-day window (ESMO
+  presentation is Oct 23-27). No entry signal for Monday from this report.
+- **PLPC, SHIP, ALNT, FEIM, TH** — no catalyst inside the window for any
+  (see Satellite Catalyst-Window Check); SHIP's section returned unusable
+  data (ticker mismatch). No entry signal for Monday from this report.
+
+### Risk Factors
+- No held position is near its hard-cut: AMD +1.51%, CRWD -3.66% (both vs
+  -7% core cut, CRWD's continued softness from Friday's slide but still
+  well clear), HPE +0.26% (vs -7% core cut), RIGL +15.15% (vs -15%
+  satellite cut, still below the +25% tighten threshold), EDGX +1.03%,
+  SGOV +0.14%, SPHY -2.48% (all vs -5% income cut).
+- **This session's Gemini report is structurally truncated (missing
+  Section 1 entirely, no Section 2 economic-calendar rundown, and no
+  overnight-news coverage for 6 of 7 held tickers)** — treat broad
+  market-wide volatility/direction as unknown, not calm; third consecutive
+  session with a materially incomplete report (9/24, 9/25, 9/26) — flag
+  for the next weekly-review reliability discussion as a possible pattern,
+  not just a one-off.
+- **SHIP ticker-mismatch** in this session's report (see Data-quality
+  notes) — no real coverage obtained for this name; re-verify independently
+  before any Monday trade-window action.
+- **INCY "imminent FDA decision"** referenced in the report's synthesis
+  with no supporting detail — not held, not currently a satellite name, but
+  worth an independent check before treating INCY as clean if it were ever
+  considered for entry.
+- Cash at 20.17%, back above the 20% floor — no drift concern carried into
+  the weekend.
+- SendGrid status: last confirmed broken (401 Unauthorized) as of 9/24's
+  3pm mandatory send, not retested since (no urgent condition has required
+  a send in the interim) — still a standing operational item, now 20+ days
+  outstanding, owner action to rotate the key remains overdue.
+
+### Decision
+**HOLD.** Non-trading day (Saturday) in addition to this workflow never
+executing trades regardless of what it surfaces. Core stays at 3/6 (AMD,
+HPE, CRWD), satellite at 1/4 (RIGL held, 0 new this past week) heading into
+Monday. Top items for Monday's pre-market/market-open windows: (1) this
+session's Gemini report is structurally truncated (no VIX/futures, no
+economic calendar, no overnight news for 6 of 7 held names) — re-verify
+market context and held-position news independently before any trade
+decision; (2) MPC/VLO carry fresh Jefferies Hold downgrades and a live
+diesel-export-ban regulatory risk — caution item, neither held; (3) SHIP's
+research section this session was a ticker mismatch (unrelated Shell
+business unit) — re-verify independently if considering any SHIP action;
+(4) INCY's referenced "imminent FDA decision" is unverified and lacks
+detail — check independently if INCY is ever considered for entry; (5) log
+this session's coverage gap (third consecutive materially incomplete
+report) for the weekly-review reliability discussion.
+
+### Notification
+**Silent — no urgent condition met.** Per STEP 5, notification is silent
+unless a held position is already below its hard-cut pre-market, a
+satellite catalyst resolved negatively overnight, or a major geopolitical
+event occurred. None applies: all 7 positions are well clear of their stops
+(nearest on the loss side is SPHY at -2.48% vs a -5% stop; CRWD -3.66% vs a
+-7% stop), no satellite catalyst resolved negatively (XNCR/RIGL both
+confirmed clear of any near-term event, PLPC/ALNT/FEIM/TH likewise), and no
+major geopolitical shock was reported (the Middle-East supply-chain
+commentary is an ongoing, already-known dynamic, not a fresh shock). The
+Gemini report's structural coverage gap is a data-quality issue, not itself
+an urgent trading condition — logged above, not emailed. No email sent this
+session.
