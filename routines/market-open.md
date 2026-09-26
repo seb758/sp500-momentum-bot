@@ -91,3 +91,4 @@ wrote a session note):
   git push origin main
 Skip commit if neither a trade fired nor a session note was written. On
 push failure: rebase and retry, never force-push.
+BRANCH HYGIENE (after the push succeeds): git fetch origin; BR=$(git branch --show-current). If $BR is not "main": git cherry origin/main $BR must show no lines starting with "+" (else the branch holds unique work — leave it and note it in the summary); then git push origin --delete $BR. Never delete main.
