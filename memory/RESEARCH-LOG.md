@@ -6837,3 +6837,250 @@ commentary is an ongoing, already-known dynamic, not a fresh shock). The
 Gemini report's structural coverage gap is a data-quality issue, not itself
 an urgent trading condition — logged above, not emailed. No email sent this
 session.
+
+---
+
+### Backfilled 2026-09-26 — recovered from stranded branch claude/inspiring-dijkstra-h8u19f (session 2026-07-12)
+
+## 2026-07-12 — Pre-market Research
+
+### Account
+- Equity: $100,000 | Cash: $100,000 | Buying power: $400,000 | Daytrade count: 0 (no trades placed to date)
+- Core exposure: 0% | Satellite exposure: 0% (no open positions, no open orders)
+
+### Market Context
+- **Major overnight geopolitical shock:** per Gemini Deep Research, the US-Iran truce has reportedly dissolved and the Strait of Hormuz is reported closed — a severe crude supply disruption with stagflationary risk for broader equities. Report did not return an explicit SPX futures level or VIX print for today — treat as an elevated-volatility open pending confirmation at the bell.
+- Energy: crack spreads/Brent whipsawed on ceasefire rumors last week, now reversing hard on the Hormuz closure — bullish setup for refiners (MPC, VLO), bearish/uncertain for broader risk assets if the Fed stays hawkish into an inflation shock.
+- Sector read (Gemini synthesis): AI capex cycle still supports mega-cap hardware names (HPE, FLEX, WDC) but showing exhaustion signs — notable insider selling flagged in ANET, CRWD; KLAC/MRVL flagged as highly sentiment-sensitive at current valuations.
+- **Data gap:** Gemini did not return dedicated news checks for DELL, MU, STX, PANW, LRCX beyond the synthesis mentions above — treat as unconfirmed/no fresh news, not a thesis break.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+No new entries recommended today — several names have fresh news that argues for caution, not signal:
+1. **MPC / VLO** — bullish geopolitical tailwind (Hormuz closure reversing last week's ceasefire-driven pullback), but this is an event-driven spike, not the steady momentum+FCF setup the strategy screens for. Wait for the open to see how crack spreads actually react before treating as an entry signal.
+2. **DDOG** — Bernstein downgrade to Market Perform (from Outperform), though price target raised to $226 — mixed signal, avoid new entry until it settles.
+3. **DAL** — vendor IT outage forced 600+ flight cancellations over the weekend; operational/reputational overhang unrelated to the momentum thesis but a reason to skip entry this week.
+- No other watchlist core names have a specific fresh catalyst confirmed today.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+1. **OCUL** — catalyst window is now active and confirmed within 5 trading days: OIS Retina presentation Jul 14, **Phase 3 SOL-1 data unblinding at ASRS on Jul 16 (the binary event)**, HC Wainwright fireside Jul 22. Per TRADING-STRATEGY.md gap-risk rule, do not enter fresh ahead of a binary readout — a trailing stop will not protect against the Jul 16 gap. No position currently held, so no immediate action required. Recommend no new entry until after data reads out and the market has priced it in; if data is positive and momentum reconfirms post-readout, re-evaluate then (cap at 5% of equity per binary-catalyst rule, not the standard 7.5%, given proximity to the event). Max loss if catalyst fails: single-asset Phase 3 readouts commonly gap 30-70%+ on a miss — not sized in since no position exists.
+
+### Risk Factors
+- Elevated macro/geopolitical risk: Strait of Hormuz closure + US-Iran truce collapse — energy supply shock with stagflationary implications; could pressure broader equities via Fed hawkishness even as it lifts refiners.
+- OCUL binary readout Jul 16 — high-volatility week for the only satellite name on the watchlist; do not enter ahead of it.
+- Company-specific overhangs on two core watchlist names: DDOG rating downgrade, DAL operational crisis.
+- Data gap: no explicit SPX futures/VIX levels or dedicated news checks returned for DELL, MU, STX, PANW, LRCX today.
+
+### Decision
+**HOLD.** Geopolitical shock argues for waiting to see how the open actually trades before committing new capital in either sleeve; OCUL's imminent binary event rules out a fresh satellite entry regardless. Revisit at market-open.
+
+### Backfilled 2026-09-26 — recovered from stranded branch claude/epic-volta-2ft3e4 (session 2026-07-13)
+
+### 9:30 AM Session Note — ANOMALY: unauthorized off-strategy positions found
+
+- Live account check at market-open found 3 open positions and 2 pending
+  buy orders that this bot did **not** place: **EDGX** (155 sh @ $26.79,
+  order for 200 placed 12:41 UTC), **SPHY** (84 sh @ $23.32, order for 300
+  placed 12:40 UTC), **O**/Realty Income (100 sh @ $63.70, filled 13:33
+  UTC), plus a pending SGOV order (50 sh, unfilled). None of these tickers
+  are on memory/WATCHLIST.md core or satellite lists — SPHY and SGOV are
+  bond/T-bill ETFs, O is a REIT, none fit either sleeve's mandate at all.
+  Nothing about these orders exists anywhere in this repo (no TRADE-LOG
+  entry, no RESEARCH-LOG entry, no commit) — they were placed directly
+  against the Alpaca paper account by some process outside this bot's
+  documented workflow, between 12:39-12:41 UTC today, before this session
+  started.
+- This is a direct violation of the hard rule "never trade a ticker that
+  isn't on the current watchlist" (CLAUDE.md, PROJECT-CONTEXT.md) and of
+  "every trade must be documented in RESEARCH-LOG.md before execution."
+- **Action taken (protective, reversible):** canceled the unfilled
+  remainder of all open buy orders (EDGX, SPHY, O, SGOV) to stop further
+  accumulation. Did **not** sell the 3 positions that had already filled
+  (EDGX 155sh / O 100sh / SPHY 84sh, combined ~$12.5k / ~12.5% of equity)
+  — liquidating is itself a trade decision and the origin of these
+  positions needs owner review first, not a unilateral unwind.
+- No legitimate core/satellite trade was planned or executed today —
+  pre-market research already called HOLD on macro-risk grounds (Hormuz
+  escalation, hawkish Fed repricing, CPI/testimony this week), independent
+  of this anomaly. Decision stands: HOLD.
+- **Flagged for owner:** investigate what placed these orders (another
+  session, a stray script, manual test?) and decide whether to unwind
+  EDGX/O/SPHY or keep them (paper account, low real-world stakes, but the
+  strategy's discipline is the whole point).
+
+### Backfilled 2026-09-26 — recovered from stranded branch claude/epic-volta-k6d26j (session 2026-07-16)
+
+### 9:30 AM Session Note
+- Traded: BUY AMD/HPE/KLAC (core, 10% trailing stops) + BUY OCUL (satellite,
+  15% trailing stop). First Core/Satellite trades since bot launch. Funded
+  via an SGOV sell sweep (income sleeve, designated funding source) since
+  cash was sitting at the 20% floor. Full detail/thesis in TRADE-LOG.md.
+- Why: a market-wide bid/ask anomaly made most of the 24-name core
+  watchlist untradeable on spread (10 names checked before finding tight
+  ones — DELL/PANW/CRWD/DDOG/VLO/STX/MRVL/FTNT/DVA/AMAT/NTAP/GLW/CNC/TXN/
+  LRCX/MPC/CAT/GEV all 3.5-13% wide, skipped per the spread-check rule).
+  AMD/HPE/KLAC had tight sub-1% spreads and, re-verified live, are still
+  above their 50-day MA. MU/WDC/CSCO by contrast broke below their 50-day
+  MA live today, confirming pre-market's "hardware complex" thesis-risk
+  flag — correctly excluded despite being on the watchlist. OCUL's binary
+  Phase 3 SOL-1 readout resolved positive this morning (statistically
+  significant vs. aflibercept, clean safety); entered post-data at the
+  standard 7.5% satellite cap, not pre-resolution.
+- Pattern for Friday's review: today's spread anomaly hit ~18 of 24 core
+  names simultaneously — worth checking whether this was a data-feed
+  artifact vs. a real liquidity event before trusting tomorrow's quotes at
+  face value.
+- **Process lesson:** the initial SGOV funding sweep was sized only against
+  the immediate order-cost shortfall, not against keeping cash >= the 20%
+  floor *after* all four buys landed — cash dipped to 0.4% of equity for a
+  few minutes before being caught and corrected with a second SGOV sale.
+  Fix for next multi-position session: size the funding sweep against
+  total planned spend + the floor target up front, not order-by-order.
+
+### Backfilled 2026-09-26 — recovered from stranded branch claude/epic-volta-mqh54d (session 2026-07-17)
+
+### 9:30 AM Session Note
+- Live re-check: equity $97,609.33, cash $20,184.25 (20.68%, just above the
+  20% floor), buying power $297,527.23 (margin; unused). Positions
+  unchanged from pre-market (AMD, HPE, KLAC, OCUL, SGOV, SPHY, EDGX), all 7
+  confirmed carrying live GTC trailing stops in `orders`, none missing.
+- Risk check on the four Core/Satellite holdings — none at/near a hard-cut
+  or stop trigger: AMD -6.49% (stop $466.479 vs $479.05), HPE -5.05% (stop
+  $42.714 vs $44.885), KLAC -5.12% (stop $205.90191 vs $209.115), OCUL
+  -9.10% (stop $8.38525 vs $8.99). No thesis breaks, no tightening
+  eligible (all four underwater). No action taken.
+- **Evaluated MNKD as today's flagged satellite candidate** (FUROSCIX PDUFA
+  target action date Sun 2026-07-26; effective decision date Fri 2026-07-24
+  — within the 5-trading-day window as of today):
+  - Quote: bid $3.97 / ask $3.98 (200x300 sh), spread ~0.25% — liquid,
+    tradeable.
+  - `fmp.sh rating`/`growth` both 402'd (expected per the documented
+    per-symbol allowlist restriction) — used native WebSearch fallback per
+    strategy rule.
+  - Analyst rating: consensus **Buy** (7 analysts: 29% Strong Buy, 57% Buy,
+    14% Hold, 0% Sell/Strong Sell; PT $9.11) — passes criterion 4. One
+    analyst's Hold downgrade (citing unclear post-TYVASO-DPI cash
+    generation) directly echoes the Tresmi royalty-erosion concern flagged
+    2026-07-12/13, but doesn't move the consensus off Buy.
+  - YoY growth: Q1 2026 revenue $90.2M, **+15% YoY** — passes criterion 3
+    (revenue growth; GAAP net income swung to a loss on +116% SG&A/+56% R&D
+    from the scPharma deal and commercial launch prep, but the rule is
+    revenue OR earnings growth).
+  - Catalyst: FUROSCIX PDUFA, well-documented, matches WATCHLIST.md's
+    "pending FDA regulatory decisions on pipeline" catalyst family —
+    passes criterion 5. Per gap-risk rule, holding through this date means
+    **5% cap, not 7.5%**: 5% of equity = $4,880.47 → ~1,226 sh @ ~$3.98 ≈
+    $4,879.48. Max loss if the PDUFA disappoints: comparable biotech PDUFA
+    misses gap -30/-50%, so ~$1.46-2.44k (1.5-2.5% of equity).
+  - **Buy-side gate FAILED on funding, not thesis.** Post-trade cash would
+    be ~$20,184 - $4,879 = ~$15,305 (15.7% of equity) — breaches the 20%
+    account-wide cash floor ($19,521.87). Per the Income-sleeve rule, a
+    cash shortfall should be covered by an SGOV-first sweep before the
+    buy — but SGOV is already depleted to $2,815.96 (28 sh, from two
+    funding sweeps on 2026-07-16) and can't cover the ~$4,217 shortfall on
+    its own; SPHY/EDGX are explicitly off-limits as a funding source
+    regardless of shortfall size. Skipped rather than force an undersized
+    partial entry or breach the cash floor.
+  - **Skipped, logged, no trade placed.** All other buy-side gate checks
+    (position count 1/4 satellite before this trade, sleeve exposure room,
+    weekly trade count, watchlist membership, PDT n/a) would otherwise have
+    passed.
+- No Core buy candidates today (WDC/STX/MU/AMAT/LRCX momentum-gate status
+  still unconfirmed post-selloff per pre-market; no other Core signal).
+- **Flag for owner:** SGOV's depletion is now an active blocker on new
+  Core/Satellite entries, not just a stale-target cosmetic issue — it
+  blocked a rule-qualifying MNKD entry this morning. Today is Friday, so
+  the standing weekly-review rebalance (Part C) should replenish it; if
+  that runs today, MNKD (or another qualifying idea) could be
+  re-evaluated at midday/3pm with restored SGOV liquidity. PDUFA effective
+  date (Fri Jul 24) leaves runway into next week if not entered today.
+- No trades placed this window. This week (Jul 13 start): core 3/6,
+  satellite 1/4 — unchanged. No notification sent (no trade fired).
+
+### Backfilled 2026-09-26 — recovered from stranded branch claude/epic-volta-egme6k (session 2026-07-20)
+
+### 9:30 AM Session Note
+- No "Approved Trades (verified)" list existed in pre-market — HOLD stands, no buy-side gate run, no orders placed.
+- Live re-check: equity $97,379.95, cash $19,489.51 (20.02%, at floor), 0 daytrades. All 5 positions (HPE, OCUL, SGOV, SPHY, EDGX) confirmed carrying live GTC trailing stops (`orders`), none missing, none replaced since last session.
+- Risk sweep: HPE -2.60% (vs -7% cut), OCUL -8.65% (vs -15% cut) — neither near hard-cut; both theses intact per pre-market (HPE's Hold downgrade is a watch item, not a break). No stop tightening (neither in gain).
+- MNKD checked live: tight spread ($4.05/$4.07, liquid) and PDUFA window active, but pre-market only flagged it "for evaluation" — didn't clear an entry recommendation, and the 07-12 royalty-erosion caution (UTHR's competing Tresmi formulation) was never revisited/resolved in any subsequent research entry. Declined to originate a satellite buy on an unresolved caution flag; not treated as a missed opportunity.
+- New trading week (Jul 20 start): core 0/6, satellite 0/4 — no trades this window, valid per the Patience Rule.
+
+### Backfilled 2026-09-26 — recovered from stranded branch claude/epic-volta-w61mbh (session 2026-07-30)
+### 9:30 AM Session Note
+- **Account/positions/stops:** Equity $94,957.56, cash $19,116.70 (20.13%, at/above the 20% floor — no funding sweep needed). 4 open positions unchanged from pre-market (MNKD satellite, EDGX/SGOV/SPHY income), all 4 confirmed carrying live GTC trailing stops via `alpaca.sh orders` — none missing. Core sleeve still flat (0/6), satellite 1/4 (MNKD only). This week (Jul 27 start): core 0/6 trades, satellite 0/4 trades.
+- **Core: live momentum-gate recheck on the pre-market-flagged ambiguous names, informational + one clean pass, no entry.** Fresh Alpaca daily bars vs SPY (3M +3.6%/6M +6.9%): AMD, MU, STX, WDC, AMAT all now fail outright — every one is below its 50-day MA (AMD $454.62 vs MA50 $509.57; MU $820.53 vs $958.21; STX $747.30 vs $886.31; WDC $463.51 vs $558.43; AMAT $476.46 vs $539.81) despite all remaining above their 200-day MA and positive on 6M relative return — the chip-sector rout continues to bind. DELL, DDOG, PANW, and FTNT all still cleanly clear the momentum gate (above both 50d/200d MA, positive 3M/6M relative return, no fresh >20% single-day artifact in the lookback). Live spread check: DELL (~9.6%), DDOG (~10.3%), and FTNT (~10.2%) all tripped the wide/illiquid-spread skip rule at the open; only PANW quoted tight (bid $319.01/ask $320.72, ~0.5%). No entry initiated on PANW despite the clean momentum+spread pass: yesterday's (7/29) 9:30 AM Session Note explicitly deferred acting on DELL/DDOG/PANW/FTNT's live-passing status to Friday's (7/31) weekly review, given the standing sector-concentration caution from 3 consecutive mechanical core stop-outs in the AI-hardware/growth-tech cluster (MU 7/24, MU 7/27, HPE 7/28) — respecting that explicit one-day-out deferral rather than re-litigating it ad hoc today, consistent with the Patience Rule. Flagging PANW's continued clean pass for tomorrow's review alongside DELL/DDOG/FTNT.
+- **HUM/CNC/CVS** — not evaluated for entry; fresh Medicare Part D subsidy-termination headwind from pre-market is a new consideration for a future screen, not an entry signal today.
+- **Satellite: both in-window candidates skipped on spread again; CVLG also has an unresolved data gap.** RIGL (Aug 4 earnings, 3 trading days out) quoted bid $31.85/ask $45.59 (~35.5% spread); CGEM (Aug 6 earnings edge-of-window, plus the standing inconsistent zipalertinib NDA-timing flag) quoted bid $14.80/ask $20.00 (~29.9% spread). Both fail the wide/illiquid-spread skip rule — same recurring thin-opening-liquidity pattern flagged every session since 7/27. CVLG quoted bid $36.31/ask $50.02 (~31.8% spread, also fails) and its Jul 29 AMC earnings result remains unverified per pre-market's data-gap flag — doubly disqualified, not just a spread skip. No satellite entry.
+- **Risk sweep:** no position near a hard-cut — MNKD -2.63% (cut -15%), EDGX -3.10% and SPHY -0.535% (both income, cut -5%), SGOV +0.05%. No stop tightening (no position in gain past a threshold; income sleeve has no gain-based schedule). No stops missing, none moved down. 2-strike sub-sector tracker unchanged: biotech 1/2 (OCUL 7/23), industrials 0/2.
+- **Decision: HOLD both sleeves this window.** No trade placed — no notification sent (per STEP 8, notify only on a fill). This week (Jul 27 start) stays at core 0/6, satellite 0/4. Handoff: decide explicitly at tomorrow's (7/31) weekly review on DELL/DDOG/PANW/FTNT (all four now live-passing momentum two sessions running) vs. the sector-concentration caution; re-check RIGL/CGEM/CVLG spreads intraday if reconsidered before their catalyst windows close.
+
+### Backfilled 2026-09-26 — recovered from stranded branch claude/epic-volta-ka4qq4 (session 2026-08-14)
+
+### 9:30 AM Session Note
+- Fresh spread check on the 20-name core candidate list: DELL, CRWD, NTAP, CRL, FFIV, URI, NUE, VLO, MPC, STT all still show the ongoing multi-session wide/erratic-spread anomaly (3.6%-11.2% bid/ask) — skipped per the standing skip rule. ANET, ZBRA, PYPL, XYZ, MET, GEN, CNC, GRMN, CSCO, PANW cleared with normal spreads (<1%, PANW tightest at 0.25%).
+- **Traded: BUY PANW (core), 19 sh @ $387.45, 7.64% of equity.** Top-ranked clean-spread candidate (rank #2) with no standing caution flag, vs. ANET (valuation/supply-chain caution) and XYZ (insider-selling caution) — both legitimate but not preferred over a flag-free name when one clears. PYPL stays excluded on the standing M&A-price-spike judgment. Funded via a 74-share SGOV sweep (cash was 20.15%, only ~$140 of floor headroom); post-trade cash confirmed 20.23%, at/above the floor. 10% trailing stop placed (trigger $348.264).
+- Pattern to flag for Friday's review: the DELL/PANW/ANET/CRWD/CSCO-cluster wide-spread anomaly first flagged 5+ sessions ago is clearly ticker-dependent rather than a blanket feed outage — PANW itself and ANET were clean today while DELL/CRWD stayed wide, worth a closer look at what differentiates the affected names (liquidity tier, exchange routing) rather than treating it as one undifferentiated bug.
+
+### Backfilled 2026-09-26 — recovered from stranded branch claude/relaxed-ritchie-uzi9n4 (session 2026-09-14)
+
+
+## 2026-09-14 — Pre-market Research
+
+### Account
+- Equity: $93,440.72 | Cash: $18,777.57 (20.09%) | Buying power: $284,167.09 (margin-inflated by the standing 4x multiplier flag — no margin/leverage used or planned)
+- Core exposure: $0.00 (0.00% — 0 of 6 slots open, unchanged since APA's 9/8 thesis-broken exit) | Satellite exposure: $5,385.36 (5.76%: RIGL, 114 sh, +12.91% unrealized) | Income exposure: $69,277.79 (74.14%: EDGX $19,953.71/-0.12%, SGOV $29,653.20/+0.05%, SPHY $19,670.88/-1.63%)
+- Cash 20.09%, at/above the 20% floor — no sweep needed.
+- All 4 open positions (RIGL, EDGX, SGOV, SPHY) confirmed via `alpaca.sh orders` carrying live GTC trailing stops, none missing: RIGL 15%/$42.415 (hwm $49.90), EDGX 5%/$25.9825 (hwm $27.35), SPHY 5%/$22.23 (hwm $23.40), SGOV 5%/$95.494 on 294 covered sh (hwm $100.52; 0.989473856-sh fractional remainder stays unstopped, same immaterial ~$99 dust flagged every prior sweep, not a new gap). No auth errors on account/positions/orders calls.
+- This week (Sep 14 start) resets both counters to 0: core 0/6, satellite 0/4 new trades.
+- Biotech satellite 2-strike cooldown remains ACTIVE through 2026-09-25 (OCUL 7/23, MNKD 9/11) — no new satellite biotech entries regardless of screen results. Industrials sub-sector unaffected (0 strikes).
+
+### Data-quality notes
+The single consolidated Gemini Deep Research call completed (confirmed via submit+poll, ~11 min) but **the captured report is truncated and starts mid-document** — it opens directly at an "Imminent Catalysts" section covering only RIGL and CGEM, then a non-imminent section covering PLPC/SHIP/GNK, then a conclusion and sources. Sections 1 (S&P futures/VIX), 2 (top catalysts/econ releases), 3 (held-ticker overnight news for EDGX/RIGL/SGOV/SPHY specifically), and nearly all of section 4 (individual news for the 24-name core watchlist) never came through. Per STEP 3's data-quality guard, no figure for the missing sections was taken from Gemini; independently filled the gap via WebSearch instead (see Market Context / Held-Position Thesis Check / Core Trade Ideas below). This is the third consecutive session with a Gemini data-quality failure (9/12 truncated, 9/13 failed outright, 9/14 truncated again).
+- Tooling note (not a Gemini-side issue): my own first attempt to capture this session's report was separately truncated by a mishandled shell pipe on my end (`tail -c 6000` kept only the citation-list tail). Caught it, resubmitted via `submit`+`poll`, and captured the full report above — flagging only so a future session doesn't misdiagnose this specific failure mode as Gemini's.
+
+### Market Context
+- **S&P 500 futures -0.8%, Nasdaq-100 futures -1.8%, Dow futures -135pts (-0.3%)** pre-market Monday 9/14 (Bloomberg/CNBC, WebSearch-confirmed) — driven by the oil shock below plus a fresh AI-hardware selloff (see below).
+- **VIX:** closed 15.84 on Fri 9/11 (down sharply after an intraday spike near 18.82, its first move above 17 in 28 sessions, before fading into the close); VIX futures trading ~19 this Monday morning, reflecting the weekend's fresh escalation (WebSearch-confirmed, two separate sources — noting for the record these two reads are consistent with each other, not contradictory, despite coming from different data points).
+- **Oil / Saudi pipeline — a genuinely new escalation, not a continuation of the story already notified 9/10:** Saudi Arabia shut its East-West Crude Oil Pipeline (its main Hormuz-bypass export route, normally carrying 4-5M bbl/day, ~4-5% of global supply) on Fri 9/11 after multiple drone attacks from Iraq struck Riyadh and Medina provinces. Brent spiked to ~$110/bbl before settling near $105 Friday, and remains above $107/bbl this morning (+9% over the past week alone; WTI >$102).
+- **Strait of Hormuz — fresh weekend escalation:** an Iranian commercial vessel was struck late Saturday 9/12 near Qeshm Island inside the Strait — 1 killed, 4 injured, fire onboard. Traffic through the Strait remains ~90% below pre-conflict levels. Partial offset: Iran, Oman, and Gulf officials are meeting in Muscat today (Mon 9/14) to sign an Iran-Oman shipping-route agreement — a possible partial workaround, not a resolution, and not yet signed as of this writing.
+- **FOMC Wed 9/16:** hike odds ~86.7% (CME FedWatch) / ~81% for a 25bp move (Kalshi) after Friday's August CPI print (headline +0.4% m/m / 3.4% y/y; core +0.3% m/m, a tenth above the 0.2% consensus; core y/y 2.4%, in line) — a genuine, escalating hawkish repricing off a real data surprise, not a one-day blip.
+- **New this session — AI-hardware selloff:** Anthropic CEO Dario Amodei published an essay urging the AI industry to slow frontier-model development; semiconductor names sold off broadly pre-market Monday (Intel, AMD both -4%+, SOXX -2.8%; NVDA and SNDK also weak per WebSearch). Direct headwind for the core watchlist's semis/AI-hardware cluster (DELL, HPE, MU, STX, NTAP — 5 of this week's 24 core names), a fresh story not present in any session this week through 9/13.
+- Gemini's (truncated but internally consistent) conclusion independently corroborates the same rotation: out of extended semis/server names (MU, DELL, HPE) and into refiners (VLO, MPC, PSX), which have pristine balance sheets, no AI-capex exposure, and stand to capture wider crack spreads from the oil-supply shock.
+
+### Held-Position Thesis Check
+- **RIGL (satellite, held, +12.91% unrealized: $41.84 → $47.24):** No adverse news. Gemini confirms CFO Dean Schorno presents at the H.C. Wainwright 28th Annual Global Investment Conference **Tue 9/15, 10:00am ET** — same non-binary IR pattern as every prior conference appearance (Citi 9/9, Cantor 9/10, H.C. Wainwright itself flagged last week too), but investors will be watching for R289 Phase 1b (relapsed/refractory lower-risk MDS) dose-expansion/RP2D commentary given H2 2026 guidance — worth a closer look Tuesday, not a thesis break today. Thesis intact. Continuing to approach (not yet at) the satellite +25% tighten threshold.
+- **EDGX, SGOV, SPHY (income, held):** Gemini's held-ticker section (3) did not come through at all this session — a genuine coverage gap, not a confirmed-clean read. Independent WebSearch found no idiosyncratic news for any of the three. EDGX -0.12% unrealized, no thesis to break (Income sleeve has none). SGOV +0.05%, thesis (flight-to-safety/short-duration) reinforced by the oil shock and elevated-rate backdrop. SPHY -1.63%, well inside its 5% stop; standing watch item unchanged — the FOMC's near-certain hike Wed 9/16 plus the oil-driven inflation backdrop pressures high-yield credit spreads, not yet a break.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None sourced as approved — this workflow does not place trades regardless, and Gemini's per-ticker section for the 24-name core list did not come through (see Data-quality notes), so no individual-name spot checks were run beyond the macro-cluster read above (the 24-name scope exceeds this session's WebSearch budget). The semis/AI-hardware cluster (DELL, HPE, MU, STX, NTAP) faces a real, fresh headwind from this morning's AI-pause chip selloff; the refiner cluster (MPC, VLO, PSX) continues to benefit from the oil-supply-shock crack-spread tailwind, consistent with every prior session this week. Full live momentum/FCF/rating reverification at the buy-side gate remains required before any entry regardless — none is pre-approved.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+- **RIGL** (held) — see Held-Position Thesis Check, no new entry signal.
+- **CGEM — important, not held, cannot be newly entered regardless (biotech cooldown active through 2026-09-25):** Gemini confirms Cullinan Therapeutics is hosting a virtual analyst/investor event **today, 9/14, 8:00am ET**, to discuss the Phase 3 REZILIENT3 data (zipalertinib + chemo, first-line EGFR exon20ins NSCLC) presented yesterday (Sun 9/13) at IASLC WCLC 2026's Presidential Symposium 2 in Seoul — the trial met its primary PFS endpoint at the planned interim analysis. This is a real, near-dated, price-moving catalyst landing **today**. Flagging for market-open awareness only (cooldown blocks any new entry regardless of market reaction) and, again, for the next screen refresh — WATCHLIST.md still documents "target action Feb 27, 2027, not imminent," a discrepancy that has now persisted multiple consecutive sessions and should be corrected at the next refresh.
+- **PLPC** — Gemini confirms no catalyst inside the 5-day window. Flags notable insider selling by a 10%-owner (5,000 sh 9/8, 142 sh 9/4) and a rich 48x trailing P/E (vs. 33x industry / 28.2x peer average) despite a strong Q2 beat that still saw the stock fall >4% post-earnings — a valuation/sentiment overhang, not a new adverse catalyst. No entry-signal change.
+- **SHIP, GNK** — Gemini confirms neither has a company-specific catalyst inside the 5-day window (GNK's Q3 earnings ~early Nov; SHIP's Q3 earnings est. 11/12). The Baltic Dry Index, which spiked to a multi-year high of 3,628 on 9/4 on Capesize strength, has since cooled to 3,507 by 9/11 (a one-week low) as Capesize rates pulled back — the sector tailwind flagged in prior sessions is now moderating, not a fresh signal either way. No entry-signal change for either name.
+
+### Risk Factors
+- **Major, fresh Middle East/oil escalation — genuinely new, not a continuation of the 9/10 story:** Saudi Arabia's primary Hormuz-bypass export pipeline (~4-5% of global oil supply) has been offline since Friday, and a fatal attack struck a vessel inside the Strait of Hormuz itself over the weekend. Brent >$107/bbl, +9% over the past week alone.
+- FOMC Wed 9/16: hike odds ~87% after Friday's hotter-than-expected core CPI — a real, escalating hawkish repricing, headwind for core's long-duration/software cluster and held SPHY's high-yield credit exposure, tailwind for held SGOV.
+- **New this session:** an AI-industry "development pause" call from Anthropic's CEO triggered a broad chip-stock selloff (Intel, AMD -4%+, SOXX -2.8%, NVDA/SNDK also weak) — a fresh headwind specifically for the core watchlist's semis/AI-hardware cluster (DELL, HPE, MU, STX, NTAP).
+- No held position is near its hard-cut: RIGL +12.91% (vs -15% satellite cut), EDGX -0.12%, SGOV +0.05%, SPHY -1.63% (all vs -5% income cut).
+- Cash 20.09%, at/above the 20% floor — no sweep action needed.
+- CGEM's confirmed, near-dated (today, 9/14) satellite catalyst remains unreflected in WATCHLIST.md — flagged again for the next screen refresh.
+- Gemini's report was truncated again this session (see Data-quality notes) — third consecutive session with a data-quality failure. Filled critical gaps via WebSearch; no fabricated figures used.
+- **SendGrid remains broken (401 Unauthorized) — 5th consecutive session unresolved since first caught 9/10.** This session's urgent notification (see below) could not be delivered live; content preserved in DAILY-SUMMARY.md's fallback. Owner action to rotate the key is now overdue and should be escalated.
+
+### Decision
+**HOLD.** No core or satellite trade sourced this session — valid per the Patience Rule; core exposure remains at 0% and rebuilding it from a fresh momentum/FCF/rating-qualified candidate stays the top priority once today's live buy-side gate can run, but this research-only workflow does not place trades regardless. Top items for today's market-open session: (1) run a full live momentum/FCF/rating recheck at the buy-side gate for core watchlist names, with extra caution on the semis/AI-hardware cluster (DELL, HPE, MU, STX, NTAP) given this morning's AI-pause selloff; (2) watch CGEM's market reaction to today's 8am ET investor call for awareness only (cooldown blocks entry regardless); (3) FOMC Wed 9/16 is the week's dominant scheduled event, hike odds ~87% and climbing — monitor positioning into it; (4) continue watching RIGL's approach toward its +25% satellite tighten threshold and its Tue 9/15 conference presentation for any R289 forward guidance; (5) monitor the Saudi pipeline/Strait of Hormuz situation for further escalation, and today's Iran-Oman shipping-route signing as a possible partial offset; (6) escalate SendGrid key rotation to the owner — 5 sessions unresolved now; (7) update WATCHLIST.md's CGEM catalyst date at the next screen refresh.
+
+### Notification
+**Sent, via local fallback only (SendGrid 401 again — see Risk Factors).** Qualifies as a "major geopolitical event" under STEP 5's urgent bar: Saudi Arabia's main Hormuz-bypass pipeline (~5% of global oil supply) has been shut since Friday, plus a fresh fatal attack on a vessel inside the Strait of Hormuz itself over the weekend — both materially new discrete developments beyond the already-notified 9/10 story, driving a real pre-market equity selloff (S&P futures -0.8%, Nasdaq -1.8%) alongside a separate, also-new AI-pause chip selloff. Message: "Pre-market alert 2026-09-14: Saudi Arabia's East-West pipeline (approx 5% of global oil supply, main Hormuz-bypass route) shut since Fri 9/11 after drone attacks; Brent above 107 dollars/bbl (+9% last week), plus a fatal vessel strike in the Strait of Hormuz over the weekend (1 killed, 4 injured). S&P futures -0.8%, Nasdaq -1.8% (also hit by an AI-development-slowdown selloff in chip names after Anthropic's CEO called for a pause). No held position (RIGL, EDGX, SGOV, SPHY) is near its hard-cut. Core sleeve remains at 0 open positions. FOMC Wed 9/16, hike odds approx 87%. No trade action taken; HOLD per Patience Rule." Delivery mechanism failed (SendGrid 401) — content preserved in DAILY-SUMMARY.md and this log entry; owner should be notified of the escalation and the still-broken email pipeline through this session's own notification channel.
+
+### Backfilled 2026-09-26 — recovered from stranded branch claude/epic-volta-ric7l8 (session 2026-09-24)
+
+### 9:30 AM Session Note
+- **Traded:** bought CRWD (core), 35 sh @ $261.70 avg, funded via a pre-trade SGOV sweep (89 sh sold) to keep post-buy cash at/above the 20% floor — same mechanics as 9/22 (HPE) and 9/23 (AMD). Core now 3/6 (HPE, AMD, CRWD), core trades this week 3/6. Full live-gate re-verification and thesis in TRADE-LOG.md.
+- CRWD's momentum matched yesterday's live numbers exactly (3M +41.47pp, 6M +124.0pp rel. to SPY) and its spread finally converged to a stable tight read (~0.81%) after three days of being blocked by wide/unstable opening-auction quotes — DELL/PANW/MRVL/NTAP remained wide and stuck this window, so no second core entry attempted.
+- No satellite trade this window — RIGL (held) has no new-entry signal, biotech cooldown still active (lifts tomorrow), and no industrials candidate has a catalyst confirmed inside the 5-day window (SHIP's ex-date remains non-binary/informational).
+- **Pattern worth flagging for Friday:** all three core holdings (HPE, AMD, CRWD) are now Information Technology — not a rule violation, but worth a sector-diversification discussion given a 4th core slot could be filled soon (DELL is watchlist-clean on momentum but still spread-blocked).
+
