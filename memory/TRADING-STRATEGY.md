@@ -25,7 +25,7 @@ Beat the S&P 500 on a risk-adjusted basis using three sleeves in one Alpaca
 - Instruments: stocks only — no options, no leverage, ever
 - PDT limit: 3 day trades / 5 rolling business days if equity < $25k
 - Combined target 75-85% of total capital deployed across Core + Satellite.
-  Whatever remains, above the 20% account-wide cash floor, sits in the
+  Whatever remains, above the 12% account-wide cash floor, sits in the
   Income sleeve rather than idle cash (see "Income / Cash-Parking Sleeve").
 
 ## Sleeve Targets
@@ -73,27 +73,30 @@ explicit owner instruction):**
   on the S&P 500, ~9% target annualized distribution; launched Feb 2026,
   short track record — watch liquidity/spread before sizing up).
 
-**Account-wide cash floor:** at least 20% of equity is always held as
+**Account-wide cash floor:** at least 12% of equity is always held as
 literal, uninvested cash — senior to and separate from the Income sleeve,
-never swept into SGOV/SPHY/EDGX. This is a steady-state target re-checked
+never swept into SGOV/SPHY/EDGX. (Recalibrated 2026-09-26, owner
+instruction: was 20%. Paper account with no withdrawals — 12%, roughly
+$11k at current equity, is ample buffer, and the freed ~8% goes to
+deployment.) This is a steady-state target re-checked
 at each rebalance touch (weekly, and immediately after any Core/Satellite
 sell), not an instant-by-instant constraint — a momentary dip while funding
 a same-moment buy (see below) is expected and not a violation.
 
 **Sizing:** whatever equity is not in a Core or Satellite position, above
-the 20% cash floor, is deployed to the Income sleeve. Split within the
+the 12% cash floor, is deployed to the Income sleeve. Split within the
 sleeve (owner default, revisit only on explicit instruction): **SGOV 50% /
 SPHY 25% / EDGX 25%**.
 
 **Rebalance cadence:** weekly by default (folded into the weekly-review
 workflow, Part C). Adjusted intraday/daily when:
-- A Core or Satellite position is sold: sweep the freed cash above the 20%
+- A Core or Satellite position is sold: sweep the freed cash above the 12%
   floor back into the Income sleeve (SGOV first) at that session's
   close-out step.
 - A new Core or Satellite buy is being placed and **post-trade cash (literal
   cash per `alpaca.sh account`, minus the order cost) would fall below the
-  20% floor:** sell enough SGOV (market, day) to keep cash at/above the
-  floor, *before* placing the buy. Check this pre-trade against the 20%
+  12% floor:** sell enough SGOV (market, day) to keep cash at/above the
+  floor, *before* placing the buy. Check this pre-trade against the 12%
   floor specifically — **not** merely whether literal cash is short of the
   order cost outright. A buy that literal cash can fully cover can still
   push post-trade cash below the floor; checking only "is cash short of the
@@ -106,7 +109,7 @@ workflow, Part C). Adjusted intraday/daily when:
   like any other Income-sleeve trade.
 - **Price-drift floor breaches with no pending trade (added 2026-08-07):**
   the two triggers above only fire around a Core/Satellite trade — they do
-  nothing when cash drifts below the 20% floor purely from price
+  nothing when cash drifts below the 12% floor purely from price
   appreciation on existing Income/Satellite positions while no buy or sell
   is happening. This gap let cash sit below the floor for roughly a week
   (2026-08-04 through 2026-08-07, 19.89%-19.98%) with no session correcting
@@ -115,10 +118,21 @@ workflow, Part C). Adjusted intraday/daily when:
   is immaterial and requires no action — don't force a same-day SGOV sale
   over a few basis points; (b) if that drift persists for more than 3
   consecutive trading sessions, the next daily session (any window) sells
-  enough SGOV to restore cash to at/above the 20% floor as a standalone
+  enough SGOV to restore cash to at/above the 12% floor as a standalone
   action, independent of whether a Core/Satellite trade is pending. This is
-  a mechanics fix to close the pre-trade-only gap, not a change to the 20%
+  a mechanics fix to close the pre-trade-only gap, not a change to the 12%
   floor itself or to risk tolerance.
+
+**SGOV replenishment (added 2026-09-26, owner instruction):** SGOV is the
+sleeve's liquidity base and the sole funding source for cash-floor sweeps
+and buy funding — repeated sweeps without replenishment bleed it toward
+zero (observed: ~4% of sleeve vs 50% target, Sep 2026). After any SGOV sale
+(cash-floor restoration sweep or pre-buy funding sale), the next session's
+close-out step buys back enough SGOV to restore the sleeve toward its
+50/25/25 split, funded from literal cash above the 12% floor. The weekly
+review's Part C sleeve rebalance is mandatory every week, not advisory —
+log all replenishment trades to TRADE-LOG.md like any other Income-sleeve
+trade.
 
 **Dividends:** all distributions from SGOV, SPHY, and EDGX reinvest into
 SGOV — not split pro-rata, not reinvested in the paying ticker.
@@ -208,6 +222,34 @@ and the sweep-to-fund-a-buy mechanic are its only exit paths.
 - Ticker is on the current memory/WATCHLIST.md for the relevant sleeve.
 - All sleeve-specific entry criteria above are satisfied and documented in
   today's RESEARCH-LOG entry.
+
+### Quote validation — tiered spread rule (added 2026-09-26, owner instruction)
+
+Replaces the old naive "skip anything with a wide spread" check. Root
+cause of the old rule's failure: the Alpaca/IEX feed prints flickering,
+wide bid/ask quotes during the opening auction even on mega-cap S&P 500
+names with deep real liquidity (observed 4-5 weeks running, Aug-Sep 2026 —
+DELL, MRVL, CRWD, PANW and others vetoed repeatedly despite clean live
+momentum). A wide print at 9:31am is a feed artifact until proven
+otherwise, not a liquidity signal.
+
+Procedure at execution time, per candidate ticker:
+1. Poll the bid/ask quote 3 times, ~30-45 seconds apart. Compute spread %
+   = (ask - bid) / midpoint for each poll.
+2. Pull the ticker's 20-day average daily dollar volume (Alpaca bars).
+3. **Genuinely illiquid — SKIP and log:** all 3 polls show spread > 0.30%
+   AND 20-day avg dollar volume < $50M. This is real thin-book risk.
+4. **Feed artifact — DO NOT SKIP:** any poll shows spread ≤ 0.30%, OR the
+   ticker is an S&P 500 constituent with 20-day avg dollar volume > $100M.
+   Treat the wide prints as opening-auction feed noise.
+5. On a feed-artifact name, never use a market order — place a **limit
+   order at the best observed midpoint** (or better) instead. The limit
+   price is the protection the spread check was trying to provide.
+6. Log the verdict per ticker (skip-with-reason or artifact-with-limit) in
+   the session note. If the same S&P 500 name gets vetoed as "genuinely
+   illiquid" 3 sessions running, flag it in the session summary as a
+   suspected feed/data issue for the weekly review — do not keep silently
+   skipping a liquid name.
 
 ## Sell-Side Rules (evaluated at midday and opportunistically)
 
