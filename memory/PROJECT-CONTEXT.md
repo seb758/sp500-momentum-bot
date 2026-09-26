@@ -12,7 +12,7 @@
 - Fundamentals/screening: Financial Modeling Prep
 - Research: Gemini Deep Research (background agent — see CLAUDE.md for its
   submit/poll usage pattern; it is NOT a fast synchronous search API)
-- Notifications: email via Twilio SendGrid
+- Notifications: email via Gmail SMTP (`scripts/gmail_smtp.sh`, Google app password)
 
 ## Known Risk Notes (do not remove — these are load-bearing)
 
