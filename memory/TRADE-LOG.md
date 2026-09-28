@@ -3335,3 +3335,33 @@ environment, not a Gmail-side credential issue. Trade summary recorded here
 in TRADE-LOG.md in lieu of the email, consistent with prior sessions'
 SendGrid-outage handling.
 
+
+## Sep 28 — 3pm Snapshot (Day 61, Monday)
+**Portfolio:** $93,510.15 | **Cash:** $11,246.89 (12.03%) | **Day P&L:** -$83.59 (-0.09%) | **Phase P&L:** -$6,489.85 (-6.49%)
+**Core exposure:** $35,467.36 (37.93% of equity) | **Satellite exposure:** $5,654.40 (6.05% of equity) | **Income exposure:** $41,141.50 (44.00% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| AMD | core | 15 | $621.28 | $607.04 | -3.74% | -$213.54 (-2.29%) | 10% trailing ($575.055) |
+| CRWD | core | 35 | $261.70 | $259.20 | +2.80% | -$87.50 (-0.96%) | 10% trailing ($237.474) |
+| HPE | core | 150 | $62.78 | $62.75 | -0.30% | -$4.50 (-0.05%) | 10% trailing ($59.085) |
+| PANW | core | 20 | $380.23 | $393.86 | +5.10% | +$272.60 (+3.59%) | 10% trailing ($355.05) |
+| RIGL | satellite | 114 | $41.84 | $49.60 | +2.95% | +$884.64 (+18.55%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.85 | -0.76% | +$52.22 (+0.26%) | 5% trailing ($25.9825) |
+| SGOV | income | 16.989473856 | $100.52 | $100.66 | 0.00% | +$2.38 (+0.14%) | 5% trailing ($95.6365, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.665 | -0.51% | -$594.92 (-2.98%) | 5% trailing ($22.23) |
+
+**Notes:** No buys this window - no "### Approved Trades (verified)" list
+in today's RESEARCH-LOG (9:30 traded PANW; 11am HOLD), so per STEP 3 the 3pm
+window held. Core 4/6 positions, 1/6 trades this week (Sep 28 start);
+satellite 0/4 (RIGL held). Risk sweep: no closes, no tightens. All positions
+clear of hard-cuts (AMD -2.29%, CRWD -0.96%, HPE -0.05%, PANW +3.59% vs -7%
+core cut; RIGL +18.55% vs -15% satellite cut, below +25% tighten; income
+names inside 5% stops). All positions carry live GTC trailing stops
+(SGOV's 0.989-sh fractional remainder unstopped, immaterial dust). No stop
+moved down. RIGL gap-risk check clean: no catalyst inside 1-2 trading days
+(next readout 2H26, earnings ~Nov 3). Cash $11,246.89 = 12.03%, at/above
+the 12% floor by ~$27; no action needed. Sector-concentration watch: all
+four core names are Information Technology. Trades today: BUY PANW (core,
+9:30am). Risky positions closed: none. Gmail SMTP status: see RESEARCH-LOG
+3 PM note.
