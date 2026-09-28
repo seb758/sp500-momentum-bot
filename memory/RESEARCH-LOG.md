@@ -7318,3 +7318,253 @@ stop); no satellite catalyst resolved negatively (all seven confirmed >5
 trading days from their next event); and this weekend's geopolitical news
 (Strait of Hormuz de-escalation diplomacy, Trump-Xi truce extension) is
 de-escalatory/positive, not a shock. No email sent this session.
+
+## 2026-09-28 — Pre-market Research
+
+Monday (confirmed via `date`) — live trading day. Run from a fresh cloud
+session per the scheduled pre-market routine; no `.env` file, all 10
+required env vars confirmed present before any wrapper call. This workflow
+never executes trades regardless of findings — that's the 9:30am
+market-open workflow's job; this is research only.
+
+### Account
+- Equity: $92,882.52 | Cash: $18,851.49 (20.29%) | Buying power: $282,692.84
+  (margin-inflated by the standing 4x multiplier — no margin/leverage used or
+  planned). `account`/`positions`/`orders` all returned cleanly, no auth
+  errors.
+- Core exposure: $27,162.45 (29.24%: AMD 15 sh $9,200.25/-1.28% unrealized,
+  CRWD 35 sh $8,725.20/-4.74% unrealized, HPE 150 sh $9,237.00/-1.91%
+  unrealized) | Satellite exposure: $5,492.52 (5.91%: RIGL 114 sh, +15.15%
+  unrealized) | Income exposure: $41,376.06 (44.55%: EDGX $20,183.25/+1.03%,
+  SGOV $1,710.25/+0.14%, SPHY $19,482.56/-2.57%)
+- Cash 20.29%, at/above both the 12% floor (TRADING-STRATEGY.md,
+  owner-recalibrated 2026-09-26) and the still-20% figure in WATCHLIST.md —
+  that file/strategy discrepancy remains unreconciled, flagged again below.
+- All 7 open positions confirmed via `alpaca.sh orders` carrying live GTC
+  trailing stops, none missing, all unchanged since Friday: AMD 10%/$575.055
+  (hwm $638.95), CRWD 10%/$237.474 (hwm $263.86), HPE 10%/$59.085 (hwm
+  $65.65), RIGL 15%/$42.415 (hwm $49.90), EDGX 5%/$25.9825 (hwm $27.35), SPHY
+  5%/$22.23 (hwm $23.40), SGOV 5%/$95.627 on 16 covered sh (hwm $100.66;
+  0.989473856-sh fractional remainder stays unstopped, same immaterial dust
+  flagged every prior sweep). No stop moved down.
+- Week of Sep 28 opens fresh: core 0/6, satellite 0/4 new trades used so
+  far. This pre-market workflow places no trades regardless.
+
+### Data-quality notes
+The single consolidated STEP 3 call came back **truncated, starting
+mid-document at Section 3.1** (mid-paragraph on Pure Storage/"Everpure") —
+confirmed via full-text search: zero mentions of "VIX" or "futures" in a
+dedicated data section, and none of AMD, CRWD, HPE, SGOV, SPHY, or EDGX
+were covered by name anywhere in the output. Section 4 (satellite catalyst
+table) and most of Section 3 (core watchlist overnight news) came through
+complete.
+
+Per the data-quality guard, submitted **one narrowed retry** scoped to
+futures/VIX + explicit per-ticker overnight news for the 7 held names. The
+retry returned complete, well-cited data for both requested items — no
+truncation, explicit "NO THESIS-BREAKING NEWS" verdicts for all 7 tickers.
+Combining both calls gives full coverage of the original four sections; no
+WebSearch fallback was needed. Fifth consecutive session with an initially
+incomplete first-call report (9/24 through 9/28) — the narrowed-retry
+mechanic has now closed the gap cleanly in every one of the last two
+sessions, consistent with 9/27's note that this is a working mitigation,
+not just a standing problem.
+
+**Numeric discrepancy flagged, not resolved:** the (truncated) main call's
+closing synthesis section stated VIX "17.85" and referenced a "64%
+probability of an October rate hike," while the dedicated retry — which
+directly targeted the VIX/futures question — gave VIX 16.11 (prior close
+15.67, recent low 14.87, 50-day MA 16.771, 200-day MA 17.535) and instead
+described an 84.7%-priced **December rate cut** (not an October hike),
+consistent with the already-known Sept 16 Fed hike. The retry figures are
+treated as authoritative below since that call was purpose-built for this
+question; the main call's synthesis paragraph is judged the less reliable
+of the two, not fabricated over. Flagging rather than silently picking one,
+per the data-quality guard.
+
+### Market Context
+- **S&P 500 futures down 0.4% (~7,770.75)** heading into Monday's open;
+  Nasdaq-100 futures -0.7%. **VIX 16.11**, roughly flat vs. Friday's close
+  of 15.67, still well below its own 50-day (16.771) and 200-day (17.535)
+  moving averages — options markets are not pricing outsized near-term risk
+  despite the futures dip (see numeric-discrepancy note above).
+- **Geopolitical:** the U.S. administration rejected a proposed Middle East
+  ceasefire overnight, reintroducing a geopolitical risk premium into oil —
+  Brent +3.73% to $108.21, WTI +3.41% to $95.56. No held or watchlist
+  position has direct energy exposure beyond MPC/VLO/PSX (watchlist core,
+  none held).
+- **Rates:** 10-year Treasury yield surged to 5.209%, a level not seen
+  since 2007; 30-year at its highest since 2004; 2-year up ~17bp. UK 10-year
+  5.3593%, German 10-year 3.6210% — a global, not just US, move. Market
+  still prices an 84.7% probability of a 25bp Fed cut in December (per the
+  retry; see discrepancy note above).
+- **US-China:** a summit on trade/tariffs/Taiwan/AI is upcoming; market is
+  processing a new 15% US tariff on Japanese autos and a Chinese threat to
+  curb US film/agricultural imports.
+- **DELL (watchlist core, not held):** closed +32.76% after 88% YoY revenue
+  growth (AI server revenue +757% to $16.1B); added to the S&P 500
+  replacing American Airlines.
+- **META (watchlist core, not held):** unveiled new hardware and the "Muse"
+  AI agent at Meta Connect 2026, driving a ~13% weekly gain.
+- **WDAY (watchlist core, not held):** shareholder-rights firm SBS Law
+  circulating fraud/fiduciary-duty investigation headlines; strong Q2
+  ($2.75 adj. EPS, $2.65B revenue, new $4.0B buyback) clouded by both the
+  litigation headline risk and a "SaaSpocalypse" framing — analysts warn
+  OpenAI DevDay (today, 9/29) agentic-workflow announcements could erode
+  Workday's per-seat model. Caution item, not held.
+- **PANW (watchlist core, not held):** launched "Unit 42 Continuous
+  Frontier AI Defense," an agentic-security subscription — reinforces the
+  cybersecurity-as-infrastructure thesis also supporting CRWD (held).
+- **P / "Everpure" (watchlist core, not held — Pure Storage rebrand):**
+  caution flagged — trades ~100x forward earnings/9.9x sales, heavy insider
+  selling (John Colgrove, ~$19.4M), negative FCF from strategic NAND
+  purchases.
+- **DDOG (watchlist core, not held):** +4.36% intraday-strength note despite
+  broader market weakness.
+- **VLO (watchlist core, not held):** flagged by analysts as potentially
+  45% overvalued despite strong recent earnings — crack-spread/margin
+  tailwind may be fading.
+- **CPAY (watchlist core, not held):** +5.45% momentum note.
+- **INCY (watchlist core, not held) — reconfirmed:** FDA approval of
+  Atebrioz (zilurgisertib) for FOP, in partnership with Mirum, reconfirmed
+  this session — same genuine positive catalyst flagged 9/27, now
+  independently corroborated twice.
+- **VEEV, ZBRA, RVTY, TMO, A, WST, DXCM, IQV, MET, HOOD, MPC, PSX (watchlist
+  core, none held):** no material, thesis-altering overnight news for any.
+
+### Satellite Catalyst-Window Check
+Main call explicitly confirms **zero** of RIGL, PLPC, SHIP, ALNT, FEIM, TH,
+or XNCR are within 5 trading days of a documented catalyst (window: Sep 28
+- Oct 2, 2026) — consistent with 9/27's check:
+
+| Ticker | Catalyst Type | Documented Date/Window | Within 5 Trading Days? |
+|---|---|---|---|
+| RIGL | Post-launch commercial execution (VEPPANU) | No near-dated binary | No |
+| PLPC | Q3 2026 earnings | Oct 28-Nov 2, 2026 (est.) | No |
+| SHIP | Q3 2026 earnings | Nov 12-18, 2026 (est.) | No |
+| ALNT | Q3 2026 earnings | Nov 4, 2026 (est.) | No |
+| FEIM | Next earnings | Several months out (Q1 FY27 reported 9/10) | No |
+| TH | Q3 2026 earnings | Nov 4-5, 2026 (est.) | No |
+| XNCR | ESMO 2026 Phase 1 data (XmAb819, ccRCC) | Abstract Oct 18; presentation Oct 23-27 | No |
+
+XNCR remains the name to watch — abstract release Oct 18 is now under 4
+weeks out, still not actionable from this workflow. XNCR also secured a
+$105M Alexion royalty settlement ($52.5M received Aug 2026), extending its
+cash runway into mid-2028.
+
+### Held-Position Thesis Check
+Per the narrowed retry, explicit verdict for all 7 held positions:
+**NO THESIS-BREAKING NEWS.**
+- **AMD (core, held, -1.28% unrealized):** Thesis reinforced. Crossed $1.03T
+  market cap; data-center revenue +107% YoY to $6.7B; BofA PT raised
+  $620→$720 on agentic-AI CPU demand; named commitments from Microsoft
+  (Helios/Azure), Anthropic (2GW of MI450 GPUs), OpenAI, Meta. Pre-market
+  dip (~-2.5%) is sector-wide (yields), not AMD-specific. Well inside the
+  -7% core cut.
+- **CRWD (core, held, -4.74% unrealized):** Thesis de-risked. DOJ formally
+  closed its Carahsoft/IRS criminal and civil probe with no charges,
+  removing a real federal-contracting overhang. Identity ARR +34% YoY to
+  $585M; Gartner Customers' Choice. Morgan Stanley PT to $254, Stephens to
+  $280. Insider sales flagged as routine (Kurtz/Sentonas), not a signal.
+  Well inside the -7% core cut.
+- **HPE (core, held, -1.91% unrealized):** Thesis intact. Record Q3 revenue
+  $12.21B (+34% YoY), adj. EPS $1.11 beat by >20%, record $7.6B AI backlog,
+  FY26 guidance raised to 29-33% revenue growth. Only flagged headwind is a
+  DDR5/NAND supply-chain bottleneck constraining fulfillment, not demand —
+  a deferred-revenue reservoir, not a thesis break. Well inside the -7%
+  core cut.
+- **RIGL (satellite, held, +15.15% unrealized):** Thesis intact. Q2 revenue
+  $78.7M beat, EPS $0.88 vs. $0.09 consensus; TAVALISSE +18% YoY, REZLIDHIA
+  +27% YoY; eighth consecutive profitable quarter. VEPPANU commercial ramp
+  ongoing (~20K-patient addressable population); CFO Form 4 showed an
+  option exercise retained (not sold), a conviction signal. Still below the
+  +25% satellite tighten threshold, well inside the -15% satellite cut.
+- **SGOV (income, held, +0.14% unrealized):** Thesis intact. NAV stable at
+  $100.65; 30-day SEC yield 3.67%. Net assets >$111.7B; heavy overseas
+  (South Korean) inflows into SGOV specifically reinforce its safe-haven
+  role amid elevated yields. Well inside the -5% income cut.
+- **SPHY (income, held, -2.57% unrealized):** Thesis intact. Monthly
+  dividend $0.1404/sh maintained, trailing yield 7.18%. Bearish technical
+  crossover (10dma below 50dma, negative MACD) is a mechanical symptom of
+  the broad fixed-income selloff from rising yields, not a credit-spread
+  widening or default signal. Well inside the -5% income cut.
+- **EDGX (income, held, +1.03% unrealized):** Thesis intact. Dividend
+  $0.0467/sh maintained (slight increase). A same-ticker "Cboe EDGX"
+  24-hour-trading headline is an unrelated exchange-infrastructure item,
+  explicitly not the Global X ETF — no bearing on this holding.
+
+### Core Trade Ideas (from current WATCHLIST.md core list)
+None approved by this workflow — pre-market research never runs the live
+buy-side gate; that's the 9:30am market-open workflow's job. Items worth a
+fresh live-gate look this morning: (1) INCY's FDA approval is now
+twice-confirmed, a genuine positive catalyst; (2) PANW's new Unit 42
+agentic-security launch reinforces its momentum thesis; (3) DELL's
++32.76% move and S&P 500 addition are strong but the position would need a
+fresh spread/momentum check given the size of the move; (4) WDAY carries a
+real litigation + SaaSpocalypse caution flag — not core-held, no action
+needed, just noted. Core sleeve stays at 3/6 (AMD, HPE, CRWD) heading into
+the open — a 4th slot is a live trade-window decision, not this workflow's.
+
+### Satellite Trade Ideas (from current WATCHLIST.md satellite list)
+- **RIGL** (held) — no new-entry signal, see Held-Position Thesis Check.
+- **XNCR** — confirmed no catalyst inside the 5-day window (ESMO abstract
+  Oct 18, presentation Oct 23-27). Not actionable from this workflow.
+- **PLPC, SHIP, ALNT, FEIM, TH** — no catalyst inside the window for any.
+
+### Risk Factors
+- No held position is near its hard-cut: AMD -1.28%, CRWD -4.74% (both vs.
+  -7% core cut — CRWD is the closest of the three but still has ~2.3pp of
+  room), HPE -1.91% (vs. -7% core cut), RIGL +15.15% (vs. -15% satellite
+  cut, below the +25% tighten threshold), EDGX +1.03%, SGOV +0.14%, SPHY
+  -2.57% (all vs. -5% income cut).
+- Rates/oil shock: 10-year yield at its highest since 2007, Brent/WTI both
+  up >3% on Middle East ceasefire-rejection news — real macro pressure, but
+  VIX remains low (16.11) and no held position has direct energy exposure.
+  Worth tracking through the open, not itself an urgent condition.
+- CRWD's -4.74% unrealized is the largest drawdown among held core
+  positions and closest (of the three) to its -7% cut — still well clear,
+  but flagging for the 9:30am session to watch price action at the open
+  given today's broader software-sector, yield-driven pressure noted in
+  9/24's entry.
+- **WATCHLIST.md's Income section still states a 20% account-wide cash
+  floor; TRADING-STRATEGY.md was recalibrated to 12% on 2026-09-26 (owner
+  instruction).** Current cash (20.29%) clears both thresholds so this is
+  not an active discrepancy today, but the two files still disagree and
+  should be reconciled at the next weekly review — now carried forward
+  three sessions running (9/26, 9/27, 9/28).
+- Numeric discrepancy between this session's two Gemini calls on VIX level
+  and Fed rate-path direction (see Data-quality notes) — used the
+  purpose-built retry's figures, flagged rather than silently resolved.
+- Gemini reliability: fifth consecutive session with an initially
+  incomplete first-call report (9/24-9/28); the narrowed-retry mechanic has
+  now fully closed the gap two sessions running (9/27, 9/28) — worth
+  carrying into the weekly-review reliability discussion as a working, not
+  just standing, mitigation.
+
+### Decision
+**HOLD** (this workflow places no trades regardless of findings — that's
+the 9:30am market-open workflow's job). Core stays at 3/6 (AMD, HPE, CRWD),
+satellite at 1/4 (RIGL) heading into the open. Top items for the 9:30am
+session: (1) INCY's twice-confirmed FDA approval — worth a full live-gate
+look if considered as a core entry; (2) PANW's new agentic-security product
+launch — momentum reinforcement, worth a look; (3) CRWD is the closest-held
+core name to its stop (-4.74% vs. -7%) — watch price action at the open
+given today's rates/oil-driven macro pressure; (4) XNCR's Oct 18 abstract
+release keeps approaching, still not actionable; (5) reconcile
+WATCHLIST.md's stale 20% cash-floor text against the owner-recalibrated 12%
+— now three sessions overdue; (6) carry the Gemini narrowed-retry mitigation
+and this session's VIX/Fed-rate numeric discrepancy into the weekly
+reliability discussion.
+
+### Notification
+**Silent — no urgent condition met.** Per STEP 5, notification is silent
+unless a held position is already below its hard-cut pre-market, a
+satellite catalyst resolved negatively overnight, or a major geopolitical
+event. None applies: all 7 positions are well clear of their stops (nearest
+is CRWD -4.74% vs. a -7% stop); no satellite catalyst resolved negatively
+(all seven confirmed >5 trading days from their next event); and while the
+Middle East ceasefire rejection and rate/oil moves are real macro
+developments, they fall short of the "major geopolitical event" /
+hard-cut-breach bar this workflow's silent-by-default rule is calibrated
+to — VIX itself remains low and no held position carries direct energy
+exposure. No email sent this session.
