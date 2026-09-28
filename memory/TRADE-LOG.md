@@ -3279,3 +3279,59 @@ attempt): still 401 Unauthorized** — same standing outage first confirmed
 sessions. Owner action to rotate the key remains overdue; trade summary
 recorded here in TRADE-LOG.md in lieu of the email.
 
+### 2026-09-28 — BUY PANW (core)
+Shares: 20 | Entry: $380.23 avg | Stop: 10% trailing GTC, trigger $341.7885
+(hwm $379.765) | Target: n/a — no firm consensus PT tied to this
+momentum-continuation entry; exit governed by the trailing stop / gain-based
+tightening schedule | R:R: n/a
+Thesis: Core watchlist momentum name (2026-09-25 weekly screen rank 4 of 24,
+3M rel. return +28.6%, FCF record $4.1B FY26, Buy consensus 37 B/13 H/2 Sell
+of 52 ~4% not meaningful, rev +34% YoY Q4 FY26). Today's pre-market research
+flagged PANW's new "Unit 42 Continuous Frontier AI Defense" agentic-security
+launch as a fresh momentum reinforcement, consistent with the same
+cybersecurity-as-infrastructure theme already supporting held CRWD. No
+thesis-breaking news. INCY (also flagged pre-market, twice-confirmed FDA
+approval catalyst) was considered but not traded this window: weaker
+relative signal (momentum rank 24/24, Hold-heavy 10 SB/2 B/15 H/1 SS rating
+vs. PANW's clean Buy consensus and rank 4) and cash-floor headroom this
+session (SGOV depleted to ~$1.7k, insufficient to fund two buys without
+tapping the sleeve's liquidity base) only supported one full-size core buy
+from literal cash without an SGOV sweep — PANW was the stronger of the two
+candidates. INCY remains on the current watchlist core list for a future
+window.
+Quote-validation: both INCY and PANW opened with wide flickering spreads
+(PANW 3.6%-11.9% across repeated polls over ~17 minutes) — per the tiered
+spread rule, PANW is an S&P 500 constituent with 20-day avg dollar volume
+~$2.56B (>>$100M threshold), so treated as feed-artifact, not genuinely
+illiquid; never used a market order. Placed a limit order at the observed
+midpoint, repriced twice as the quote drifted while unfilled (initial
+$369.61, then $377.45, then $385.02), filled at $380.23 avg — near the
+final midpoint, better than the wide asks quoted throughout (up to $397.43).
+Unusually slow resolution vs. prior sessions' opening-auction artifact
+(typically clears in a few minutes; this one flickered for ~17 minutes) —
+flagging for the weekly review as a data-quality watch item, not treated as
+a halt (SPY's own quote was tight and live-updating throughout, confirming
+the feed was functioning normally elsewhere; PANW's own quote timestamp was
+also updating, just wide, consistent with a slow-clearing artifact, not a
+frozen/halted book).
+Gate: core positions after fill 4/6 (AMD, HPE, CRWD, PANW), core trades this
+week 1/6, cost $7,604.60 = 8.18% of pre-trade equity ($93,018.07) — well
+under the 20% single-position cap. Cost funded from literal cash, no SGOV
+sweep needed: pre-trade cash $18,851.49 (20.27%), post-trade cash $11,246.89
+= 12.11% of equity ($92,856.96) — at/above the 12% floor by a thin ~$84.72
+(0.09% of equity) margin, consistent with prior weeks' tight-but-compliant
+funding pattern. No daytrade/PDT concern (new position, account equity well
+above the $25k PDT threshold). Ticker confirmed on WATCHLIST.md core list
+(2026-09-25 refresh, rank 4).
+No satellite entries this window: pre-market research confirmed zero of the
+seven satellite watchlist names (RIGL held, PLPC, SHIP, ALNT, FEIM, TH,
+XNCR) are within 5 trading days of a documented catalyst — no satellite
+buy-side gate was run. This week: core 1/6, satellite 0/4 used.
+**Gmail SMTP notification failed this window:** `gmail_smtp.sh` timed out —
+`curl: (28) Failed to connect to smtp.gmail.com port 465 after 134151 ms`.
+Not a missing-credentials case (all GMAIL_* vars confirmed set in STEP 0);
+reads as an outbound network restriction on raw SMTP in this session's
+environment, not a Gmail-side credential issue. Trade summary recorded here
+in TRADE-LOG.md in lieu of the email, consistent with prior sessions'
+SendGrid-outage handling.
+
