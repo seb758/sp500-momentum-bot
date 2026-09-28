@@ -7589,3 +7589,32 @@ exposure. No email sent this session.
   slow-clearing feed artifact specific to lower-volume names at the open,
   not a broader data outage — but the duration itself is a new data point
   worth tracking if it recurs.
+
+### 11 AM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" section exists
+  anywhere in today's RESEARCH-LOG — per STEP 3 this window trades from
+  that list only, so no buys placed. This week (Sep 28 start) stays at
+  core 1/6 (PANW), satellite 0/4.
+- **No cuts, no tightening.** All four core positions well clear of the
+  -7% hard cut (AMD -3.48%, CRWD -2.23%, HPE -1.87%, PANW +1.02%); none
+  near the +15%/+20% tighten thresholds. RIGL (satellite) +15.32%, clear
+  of the -15% cut and below the +25% tighten threshold. Income names
+  (EDGX -0.30%, SGOV +0.14%, SPHY -2.93%) all well inside their 5% stops.
+  All 7 core/satellite/income trailing stops confirmed present via
+  `orders` (AMD, CRWD, HPE, PANW, RIGL, EDGX, SPHY) — SGOV's stop also
+  present (16 covered sh; 0.989473856-sh fractional remainder stays
+  unstopped, same immaterial dust flagged every prior sweep). No stop
+  moved down.
+- **AMD's -4.9% intraday move checked, not a thesis break:** live price
+  ($599.69) still sits well above both its 50-day MA ($504.71) and 200-day
+  MA ($364.75) on fresh Alpaca daily bars — momentum thesis intact. The
+  drop is consistent with the sector-wide, yield-driven pressure already
+  documented in today's pre-market entry (10-year Treasury at its highest
+  since 2007), not an idiosyncratic AMD development, so no Gemini STEP 7
+  query was needed — cause already known and consolidated notification
+  would add nothing.
+- No new satellite catalyst-window entries this window: unchanged from
+  pre-market's check, all seven satellite watchlist names remain outside
+  the 5-trading-day catalyst window.
+- No pattern worth flagging for Friday's review beyond what pre-market/9:30
+  already logged (PANW's slow-clearing opening-auction spread artifact).
