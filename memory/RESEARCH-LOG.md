@@ -7568,3 +7568,24 @@ developments, they fall short of the "major geopolitical event" /
 hard-cut-breach bar this workflow's silent-by-default rule is calibrated
 to — VIX itself remains low and no held position carries direct energy
 exposure. No email sent this session.
+
+### 9:30 AM Session Note
+- **Traded: BUY PANW (core), 20 sh @ $380.23 avg, 10% trailing GTC stop.**
+  Stronger of the two pre-market ideas (rank 4/24 momentum, clean Buy
+  consensus, fresh Unit 42 agentic-security catalyst reinforcing the same
+  cybersecurity theme as held CRWD). Core now 4/6, 1/6 trades this week.
+- **INCY not traded** despite the twice-confirmed FDA catalyst: weaker core
+  signal (rank 24/24, Hold-heavy rating) than PANW, and this session's cash
+  headroom (SGOV depleted to ~$1.7k) only supported one full-size buy from
+  literal cash without dipping below the 12% floor. Stays on watchlist for
+  a future window.
+- No satellite trades: all seven satellite names confirmed >5 trading days
+  from their next catalyst.
+- **Pattern worth flagging for Friday's review:** PANW's opening-auction
+  spread artifact took ~17 minutes to clear (spreads flickering 3.6%-11.9%
+  across three limit reprices) — much slower than prior sessions' version
+  of this same artifact, which typically resolved in a few minutes. SPY's
+  own quote stayed tight and live throughout, so this reads as a
+  slow-clearing feed artifact specific to lower-volume names at the open,
+  not a broader data outage — but the duration itself is a new data point
+  worth tracking if it recurs.
