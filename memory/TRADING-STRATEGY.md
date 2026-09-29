@@ -7,15 +7,16 @@ Beat the S&P 500 on a risk-adjusted basis using three sleeves in one Alpaca
 
 - **Core (target 85% of equity when deployed):** S&P 500 constituents
   selected on price momentum + free cash flow strength.
-- **Satellite (target 15% of equity when deployed, hard cap 20%):**
+- **Satellite (target 15% of equity when deployed, hard cap 25%):**
   small-cap biotech and industrials selected on momentum, analyst ratings,
   YoY growth, and a documented catalyst — technicals, news, government or
   regulatory approval (e.g. FDA decisions, contract awards), or a confirmed
   price jump with volume.
-- **Income (cash-parking / dividend, added 2026-07-15):** a fixed roster of
-  SGOV / SPHY / EDGX. Not momentum- or catalyst-screened — the point is
-  yield on equity that isn't currently deployed in Core or Satellite,
-  instead of sitting fully idle. See "Income / Cash-Parking Sleeve" below.
+- **Income (cash-parking / dividend, added 2026-07-15, capped 2026-09-29):**
+  a fixed roster of SGOV / SPHY / EDGX, hard-capped at 15% of equity. Not
+  momentum- or catalyst-screened — the point is yield on tactical cash that
+  isn't currently deployed in Core or Satellite, instead of sitting fully
+  idle. See "Income / Cash-Parking Sleeve" below.
 
 ## Capital & Constraints
 
@@ -24,25 +25,27 @@ Beat the S&P 500 on a risk-adjusted basis using three sleeves in one Alpaca
 - Research: Gemini Deep Research (background agent), WebSearch fallback
 - Instruments: stocks only — no options, no leverage, ever
 - PDT limit: 3 day trades / 5 rolling business days if equity < $25k
-- Combined target 75-85% of total capital deployed across Core + Satellite.
-  Whatever remains, above the 12% account-wide cash floor, sits in the
-  Income sleeve rather than idle cash (see "Income / Cash-Parking Sleeve").
+- Combined target 80-95% of total capital deployed across Core + Satellite.
+  Whatever remains, above the 5% account-wide cash floor and within the 15%
+  Income sleeve cap, sits in the Income sleeve rather than idle cash (see
+  "Income / Cash-Parking Sleeve"). (Aggressive recalibration 2026-09-29,
+  owner instruction: was 75-85% target, 12% floor, uncapped Income.)
 
 ## Sleeve Targets
 
 | | Core | Satellite |
 |---|---|---|
 | Target allocation | 85% of equity | 15% of equity |
-| Hard cap | — (bounded by position/count limits) | 20% of equity |
-| Max open positions | 6 | 4 |
-| Max position size | 20% of equity | 7.5% of equity (5% if holding through a known binary catalyst date) |
-| Max new trades/week | 6 | 4 |
+| Hard cap | — (bounded by position/count limits) | 25% of equity |
+| Max open positions | 8 | 5 |
+| Max position size | 25% of equity | 10% of equity (7.5% if holding through a known binary catalyst date) |
+| Max new trades/week | 8 | 5 |
 | Default trailing stop | 10% | 15% |
 | Hard loss cut | -7% | -15% |
 | Tighten stop | 7% at +15%, 5% at +20% | 10% at +25%, 7% at +40% |
 | Never tighten within | 3% of price | 5% of price |
 
-Combined max new trades per week across both sleeves: 10. (The Income
+Combined max new trades per week across both sleeves: 13. (The Income
 sleeve is not subject to this cap — see below, it isn't a momentum/catalyst
 strategy with "new trades" in the same sense.)
 
@@ -52,13 +55,18 @@ trade+close). Matches each sleeve's max-open-position count, so in
 principle every slot could turn over once in a week — the weekly cap is no
 longer the binding constraint at 3 windows/day, the buy-side gate and
 "patience > activity" judgment are. Watch the weekly-review win rate after
-this change; if trade quality drops, tighten back down.
+this change; if trade quality drops, tighten back down. (Raised again to
+8/5, combined 13, on 2026-09-29 — aggressive recalibration, owner
+instruction.)
 
 ## Income / Cash-Parking Sleeve (added 2026-07-15, owner instruction)
 
 **Purpose:** yield on equity not currently deployed in Core or Satellite,
 instead of sitting fully idle. Capital preservation and income first — not
-a momentum or catalyst play, and not screened for either.
+a momentum or catalyst play, and not screened for either. Tactical parking
+only: the sleeve is hard-capped at 15% of equity (capped 2026-09-29, owner
+instruction — was uncapped and had drifted to ~44% of equity, working
+against the beat-the-market mandate).
 
 **Roster (fixed — not part of the weekly screen-refresh; changes only on
 explicit owner instruction):**
@@ -73,30 +81,30 @@ explicit owner instruction):**
   on the S&P 500, ~9% target annualized distribution; launched Feb 2026,
   short track record — watch liquidity/spread before sizing up).
 
-**Account-wide cash floor:** at least 12% of equity is always held as
+**Account-wide cash floor:** at least 5% of equity is always held as
 literal, uninvested cash — senior to and separate from the Income sleeve,
-never swept into SGOV/SPHY/EDGX. (Recalibrated 2026-09-26, owner
-instruction: was 20%. Paper account with no withdrawals — 12%, roughly
-$11k at current equity, is ample buffer, and the freed ~8% goes to
-deployment.) This is a steady-state target re-checked
-at each rebalance touch (weekly, and immediately after any Core/Satellite
-sell), not an instant-by-instant constraint — a momentary dip while funding
-a same-moment buy (see below) is expected and not a violation.
+never swept into SGOV/SPHY/EDGX. (Recalibrated 2026-09-29, owner
+instruction: was 12%. Aggressive posture — 5%, roughly $4.7k at current
+equity, is the operating buffer; the freed ~7% goes to deployment.) This is
+a steady-state target re-checked at each rebalance touch (weekly, and
+immediately after any Core/Satellite sell), not an instant-by-instant
+constraint — a momentary dip while funding a same-moment buy (see below) is
+expected and not a violation.
 
 **Sizing:** whatever equity is not in a Core or Satellite position, above
-the 12% cash floor, is deployed to the Income sleeve. Split within the
-sleeve (owner default, revisit only on explicit instruction): **SGOV 50% /
-SPHY 25% / EDGX 25%**.
+the 5% cash floor, is deployed to the Income sleeve — up to a hard cap of
+15% of equity. Split within the sleeve (owner default, revisit only on
+explicit instruction): **SGOV 50% / SPHY 25% / EDGX 25%**.
 
 **Rebalance cadence:** weekly by default (folded into the weekly-review
 workflow, Part C). Adjusted intraday/daily when:
-- A Core or Satellite position is sold: sweep the freed cash above the 12%
-  floor back into the Income sleeve (SGOV first) at that session's
-  close-out step.
+- A Core or Satellite position is sold: sweep the freed cash above the 5%
+  floor back into the Income sleeve (SGOV first, respecting the 15% sleeve
+  cap) at that session's close-out step.
 - A new Core or Satellite buy is being placed and **post-trade cash (literal
   cash per `alpaca.sh account`, minus the order cost) would fall below the
-  12% floor:** sell enough SGOV (market, day) to keep cash at/above the
-  floor, *before* placing the buy. Check this pre-trade against the 12%
+  5% floor:** sell enough SGOV (market, day) to keep cash at/above the
+  floor, *before* placing the buy. Check this pre-trade against the 5%
   floor specifically — **not** merely whether literal cash is short of the
   order cost outright. A buy that literal cash can fully cover can still
   push post-trade cash below the floor; checking only "is cash short of the
@@ -109,7 +117,7 @@ workflow, Part C). Adjusted intraday/daily when:
   like any other Income-sleeve trade.
 - **Price-drift floor breaches with no pending trade (added 2026-08-07):**
   the two triggers above only fire around a Core/Satellite trade — they do
-  nothing when cash drifts below the 12% floor purely from price
+  nothing when cash drifts below the 5% floor purely from price
   appreciation on existing Income/Satellite positions while no buy or sell
   is happening. This gap let cash sit below the floor for roughly a week
   (2026-08-04 through 2026-08-07, 19.89%-19.98%) with no session correcting
@@ -118,9 +126,9 @@ workflow, Part C). Adjusted intraday/daily when:
   is immaterial and requires no action — don't force a same-day SGOV sale
   over a few basis points; (b) if that drift persists for more than 3
   consecutive trading sessions, the next daily session (any window) sells
-  enough SGOV to restore cash to at/above the 12% floor as a standalone
+  enough SGOV to restore cash to at/above the 5% floor as a standalone
   action, independent of whether a Core/Satellite trade is pending. This is
-  a mechanics fix to close the pre-trade-only gap, not a change to the 12%
+  a mechanics fix to close the pre-trade-only gap, not a change to the 5%
   floor itself or to risk tolerance.
 
 **SGOV replenishment (added 2026-09-26, owner instruction):** SGOV is the
@@ -129,7 +137,7 @@ and buy funding — repeated sweeps without replenishment bleed it toward
 zero (observed: ~4% of sleeve vs 50% target, Sep 2026). After any SGOV sale
 (cash-floor restoration sweep or pre-buy funding sale), the next session's
 close-out step buys back enough SGOV to restore the sleeve toward its
-50/25/25 split, funded from literal cash above the 12% floor. The weekly
+50/25/25 split, funded from literal cash above the 5% floor. The weekly
 review's Part C sleeve rebalance is mandatory every week, not advisory —
 log all replenishment trades to TRADE-LOG.md like any other Income-sleeve
 trade.
@@ -159,11 +167,13 @@ and the sweep-to-fund-a-buy mechanic are its only exit paths.
 2. Ticker appears in the current week's memory/WATCHLIST.md core list —
    i.e. it already passed the weekly momentum + FCF screen. Never trade a
    core name that isn't on the current watchlist.
-3. Free cash flow trend is positive/improving over trailing periods
-   (`scripts/fmp.sh cashflow`).
-4. Price momentum: positive relative strength vs S&P 500 over 3-month and
-   6-month lookback, price above 50-day and 200-day moving average
-   (computed from `scripts/alpaca.sh bars`).
+3. Free cash flow trend is not deteriorating over trailing periods —
+   positive/improving or stable (`scripts/fmp.sh cashflow`). (Loosened
+   2026-09-29, owner instruction: was positive/improving only.)
+4. Price momentum: positive relative strength vs S&P 500 over 3-month or
+   6-month lookback, price above 50-day moving average (computed from
+   `scripts/alpaca.sh bars`). (Loosened 2026-09-29, owner instruction: was
+   3-month AND 6-month, above 50- AND 200-day.)
 5. Analyst rating is not Sell/Strong Sell (`scripts/fmp.sh rating` /
    `upgrades`).
 6. Buy-side gate below passes.
@@ -185,8 +195,9 @@ and the sweep-to-fund-a-buy mechanic are its only exit paths.
 2. Ticker appears in the current week's memory/WATCHLIST.md satellite
    list.
 3. Positive YoY revenue or earnings growth (`scripts/fmp.sh growth`).
-4. Analyst rating Buy/Outperform or better, or a recent upgrade
-   (`scripts/fmp.sh rating` / `upgrades`).
+4. Analyst rating is not Sell/Strong Sell (`scripts/fmp.sh rating` /
+   `upgrades`). (Loosened 2026-09-29, owner instruction: was Buy/Outperform
+   or better, or a recent upgrade.)
 5. A specific, documented catalyst — named FDA/regulatory decision or
    approval, government contract award, notable price jump with volume
    confirmation, or material news — sourced via Gemini Deep Research or
@@ -205,18 +216,18 @@ and the sweep-to-fund-a-buy mechanic are its only exit paths.
   stocks move on FDA/approval news. If entering or holding a position
   through a known binary event date (PDUFA date, trial readout, contract
   decision), document the max-loss-if-catalyst-fails in the trade log and
-  cap that specific position at 5% of equity, not the standard 7.5%.
+  cap that specific position at 7.5% of equity, not the standard 10%.
 - 2-strike sub-sector rule, tracked separately for biotech and industrials:
   after 2 consecutive losing satellite trades in one sub-sector, stop
   opening new satellite positions in that sub-sector for 2 weeks.
 
 ## The Buy-Side Gate (both sleeves — every check must pass, or the trade is skipped and the reason logged)
 
-- Total open positions after fill: core ≤ 6, satellite ≤ 4.
-- Trades this week: core ≤ 6, satellite ≤ 4.
+- Total open positions after fill: core ≤ 8, satellite ≤ 5.
+- Trades this week: core ≤ 8, satellite ≤ 5.
 - Position cost ≤ the applicable sleeve position cap.
 - Position cost ≤ available cash.
-- Total satellite sleeve exposure after fill ≤ 20% of equity.
+- Total satellite sleeve exposure after fill ≤ 25% of equity.
 - PDT day-trade count leaves room (under 3 on a sub-$25k account).
 - Instrument is a stock — not an option, not anything else.
 - Ticker is on the current memory/WATCHLIST.md for the relevant sleeve.
@@ -246,10 +257,10 @@ Procedure at execution time, per candidate ticker:
    order at the best observed midpoint** (or better) instead. The limit
    price is the protection the spread check was trying to provide.
 6. Log the verdict per ticker (skip-with-reason or artifact-with-limit) in
-   the session note. If the same S&P 500 name gets vetoed as "genuinely
-   illiquid" 3 sessions running, flag it in the session summary as a
-   suspected feed/data issue for the weekly review — do not keep silently
-   skipping a liquid name.
+  the session note. If the same S&P 500 name gets vetoed as "genuinely
+  illiquid" 3 sessions running, flag it in the session summary as a
+  suspected feed/data issue for the weekly review — do not keep silently
+  skipping a liquid name.
 
 ## Sell-Side Rules (evaluated at midday and opportunistically)
 
@@ -361,4 +372,9 @@ tell you whether an event is still ahead of you or already behind you.
 ## Patience Rule
 
 A week with zero new trades in either sleeve is a valid outcome. Do not
-force a trade to "use" the weekly budget.
+force a trade to "use" the weekly budget. (Amended 2026-09-29, owner
+instruction: with loosened entry criteria, sustained low deployment is no
+longer patience — if combined Core+Satellite deployment stays below 60% of
+equity for 2 consecutive weeks, flag it at the weekly review as a
+malfunction and loosen further or redeploy. Heavy cash is now a bug, not
+discipline.)
