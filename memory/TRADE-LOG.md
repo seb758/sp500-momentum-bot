@@ -3365,3 +3365,27 @@ the 12% floor by ~$27; no action needed. Sector-concentration watch: all
 four core names are Information Technology. Trades today: BUY PANW (core,
 9:30am). Risky positions closed: none. Gmail SMTP status: see RESEARCH-LOG
 3 PM note.
+
+
+## Sep 29 — 3pm Snapshot (Day 62, Tuesday)
+**Portfolio:** $93,044.69 | **Cash:** $11,246.89 (12.09%) | **Day P&L:** -$465.46 (-0.50%) | **Phase P&L:** -$6,955.31 (-6.96%)
+**Core exposure:** $35,186.50 (37.82% of equity) | **Satellite exposure:** $5,597.97 (6.02% of equity) | **Income exposure:** $41,013.17 (44.08% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| AMD | core | 15 | $621.28 | $609.555 | +0.28% | -$175.88 (-1.89%) | 10% trailing ($575.055) |
+| CRWD | core | 35 | $261.70 | $260.925 | +0.65% | -$27.13 (-0.30%) | 10% trailing ($237.474) |
+| HPE | core | 150 | $62.78 | $61.56 | -1.71% | -$183.00 (-1.94%) | 10% trailing ($59.085) |
+| PANW | core | 20 | $380.23 | $383.84 | -2.10% | +$72.20 (+0.95%) | 10% trailing ($355.05) |
+| RIGL | satellite | 114 | $41.84 | $49.105 | -0.52% | +$828.21 (+17.36%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.735 | +0.13% | -$33.57 (-0.17%) | 5% trailing ($25.9825) |
+| SGOV | income | 16.989473856 | $100.52 | $100.675 | +0.01% | +$2.63 (+0.15%) | 5% trailing ($95.646, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.615 | -0.33% | -$637.72 (-3.19%) | 5% trailing ($22.23) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini
+429 outage), cash at the 12% floor anyway. Core 4/6 positions, 1/6 trades
+this week; satellite 0/4. Risk sweep: no closes, no tightens; all positions
+clear of hard-cuts, all carry live GTC trailing stops (SGOV 0.989-sh dust
+unstopped, immaterial), none moved down. RIGL: no catalyst within 1-2
+trading days. Income sleeve 44.08% vs new 15% cap - flagged for Friday
+rebalance. Trades today: none. Risky positions closed: none.
