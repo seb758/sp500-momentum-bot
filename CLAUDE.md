@@ -12,7 +12,7 @@ Three sleeves, one account:
   documented catalyst (technicals, news, government/regulatory approval,
   price jump).
 - **Income (cash-parking/dividend, added 2026-07-15):** fixed roster SGOV /
-  SPHY / EDGX. Fills equity not deployed in Core/Satellite, above a 20%
+  SPHY / EDGX. Fills equity not deployed in Core/Satellite, above a 5%
   account-wide cash floor. Not momentum-screened. Full rules in
   memory/TRADING-STRATEGY.md.
 
@@ -43,10 +43,10 @@ folded into Friday's review, plus ad-hoc helpers.
 
 - NO OPTIONS, no leverage — ever.
 - Never trade a ticker that isn't on the current memory/WATCHLIST.md.
-- Core: max 6 open positions, max 20% of equity each, max 6 new trades/week.
-- Satellite: max 4 open positions, max 7.5% of equity each (5% if holding
-  through a known binary catalyst date), max 20% total sleeve exposure,
-  max 4 new trades/week.
+- Core: max 8 open positions, max 25% of equity each, max 8 new trades/week.
+- Satellite: max 5 open positions, max 10% of equity each (7.5% if holding
+  through a known binary catalyst date), max 25% total sleeve exposure,
+  max 5 new trades/week.
 - Core stop: 10% trailing GTC. Cut at -7%. Tighten to 7%/5% at +15%/+20%.
 - Satellite stop: 15% trailing GTC. Cut at -15%. Tighten to 10%/7% at
   +25%/+40%. Wider than core because these names are more volatile.
@@ -62,7 +62,7 @@ folded into Friday's review, plus ad-hoc helpers.
 - Patience > activity. A week with zero new trades in either sleeve is a
   valid outcome — do not force a trade to "use" the weekly budget.
 - Income sleeve: fixed roster SGOV/SPHY/EDGX only — never add another
-  ticker without owner instruction. Account cash floor always >= 20% of
+  ticker without owner instruction. Account cash floor always >= 5% of
   equity. 5% trailing stop each. Buy-funding shortfalls draw from SGOV
   first, never SPHY/EDGX. Dividends reinvest to SGOV.
 
