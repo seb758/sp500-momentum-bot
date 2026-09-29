@@ -7,11 +7,11 @@ in writing, recorded in memory/PROJECT-CONTEXT.md.
 Three sleeves, one account:
 - **Core (target 85% of equity):** S&P 500 constituents, selected on price
   momentum + free cash flow strength.
-- **Satellite (target 15% of equity, hard cap 20%):** small-cap biotech and
+- **Satellite (target 15% of equity, hard cap 25%):** small-cap biotech and
   industrials, selected on momentum, analyst ratings, YoY growth, and a
   documented catalyst (technicals, news, government/regulatory approval,
   price jump).
-- **Income (cash-parking/dividend, added 2026-07-15):** fixed roster SGOV /
+- **Income (cash-parking/dividend, added 2026-07-15, capped at 15% of equity 2026-09-29):** fixed roster SGOV /
   SPHY / EDGX. Fills equity not deployed in Core/Satellite, above a 5%
   account-wide cash floor. Not momentum-screened. Full rules in
   memory/TRADING-STRATEGY.md.
