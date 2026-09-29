@@ -7660,3 +7660,8 @@ Tuesday, live trading day. Fresh cloud session; all 10 env vars present. Researc
 - HELD: no "Approved Trades (verified)" list in today's research (Gemini 429, WebSearch fallback only) and cash $11,246.89 (12.06% of $93,267.17) is at the floor - no buy funding without a sale. No trades placed; no email.
 - Live check: 8 positions intact, no stops changed; all clear of hard-cuts (AMD -1.66%, CRWD -0.77%, HPE -0.75%, PANW +1.88%, RIGL +18.50%).
 - Flag for Friday: repeated Gemini rate-limit outages; cash floor stated as 12% in log vs 20% in CLAUDE.md - reconcile.
+
+### 11 AM Session Note (2026-09-29)
+- HELD: no "### Approved Trades (verified)" list today (Gemini 429 outage, 9:30 HELD) - no buys. Equity $92,905.68, cash $11,246.89 (12.10%).
+- Risk sweep: no cuts, no tightens. AMD -1.03%, CRWD -1.04%, HPE -2.71%, PANW +0.35% (core, vs -7% cut); RIGL +16.52% (satellite, below +25% tighten). All GTC trailing stops live, none moved down. No thesis breaks; no sharp unexplained movers (HPE -2.5% intraday, within norms) - no Gemini call.
+- Flag for Friday: Income sleeve ~44% of equity vs new 15% cap (2026-09-29 recalibration) - weekly Part C must rebalance/redeploy to Core; cash 12.1% vs new 5% floor.
