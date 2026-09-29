@@ -7625,3 +7625,33 @@ exposure. No email sent this session.
 - Equity $93,510.15 (Day -0.09%, Phase -6.49%). Cash 12.03%, at the 12% floor by ~$27 - watch for drift breach tomorrow (sub-1% drift needs no action per rule).
 - Risky positions closed today: none.
 - Gmail SMTP failed again (curl 28 timeout to smtp.gmail.com:465); EOD report recorded in TRADE-LOG in lieu of email.
+
+## 2026-09-29 — Pre-market Research
+
+Tuesday, live trading day. Fresh cloud session; all 10 env vars present. Research only, no trades.
+
+### Account
+- Equity: $93,528.15 | Cash: $11,246.89 (12.02%, at the 12% floor by ~$25) | `account`/`positions`/`orders` clean.
+- Core: $35,603.05 (38.07%: AMD -1.15%, CRWD -0.72%, HPE +0.03%, PANW +3.59%) | Satellite: $5,627.04 (6.02%: RIGL +17.97%) | Income: $41,051.17 (43.89%: EDGX -0.30%, SGOV +0.15%, SPHY -2.87%).
+- All 8 positions carry live GTC trailing stops (AMD $575.055, CRWD $237.474, HPE $59.085, PANW $355.05, RIGL $42.415, EDGX $25.9825, SPHY $22.23, SGOV $95.6365 on 16 sh). None moved down. All clear of hard-cuts.
+- Week of Sep 28: core 1/6 (PANW), satellite 0/4.
+
+### Data-quality notes
+- **Gemini Deep Research FAILED: HTTP 429 (rate limit) on two attempts** (full query, then narrowed futures/VIX + held-ticker retry). No Gemini output obtained. Fell back to WebSearch (labelled fallback data); coverage is thin: no per-ticker overnight news for watchlist names, and no per-ticker catalyst-date confirmation from research.
+- A WebSearch snippet quoted RIGL at $38.29; contradicts Alpaca ($49.36) - discarded as unreliable. VIX "previous close 14.87" in a snippet conflicts with 09-28's 16.11 - treated as unreliable.
+
+### Market Context (WebSearch fallback)
+- 9/28 session: S&P 500 -0.44% to a 4-week low, Nasdaq-100 -0.96%. Drivers: oil at a 3-month high on Middle East tensions, hot US core inflation, expectations of continued global central bank tightening. No confirmed figures for today's futures or VIX level (gap - not invented).
+- Cybersecurity/AI-infra held up well on 9/28 per a thematic market report (CRWD, PANW, HPE, AMD bounced off short EMAs). No thesis-breaking news found for any held name. RIGL: new CMO appointment only; next readout 2H26 / earnings ~Nov 3.
+
+### Core trade ideas
+- None actionable: cash at the floor (~$25 headroom), no room for a buy without selling; no verified research on watchlist names. Sector concentration: all 4 core names are IT.
+
+### Satellite trade ideas
+- None. Catalyst dates not re-confirmed this session (Gemini down); last logged status: all names >5 trading days from catalysts. RIGL held, no catalyst within 1-2 days.
+
+### Risk factors
+- Oil/rates/inflation pressure, 10y yield ~5.2%, S&P at 4-week low. Cash at the floor. Core all-IT concentration. Gemini rate-limit outage.
+
+### Decision: HOLD
+- No urgent condition (no position near hard-cut, no catalyst resolved negatively per available data). No email sent.
