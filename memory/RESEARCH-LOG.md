@@ -7655,3 +7655,8 @@ Tuesday, live trading day. Fresh cloud session; all 10 env vars present. Researc
 
 ### Decision: HOLD
 - No urgent condition (no position near hard-cut, no catalyst resolved negatively per available data). No email sent.
+
+### 9:30 AM Session Note (2026-09-29)
+- HELD: no "Approved Trades (verified)" list in today's research (Gemini 429, WebSearch fallback only) and cash $11,246.89 (12.06% of $93,267.17) is at the floor - no buy funding without a sale. No trades placed; no email.
+- Live check: 8 positions intact, no stops changed; all clear of hard-cuts (AMD -1.66%, CRWD -0.77%, HPE -0.75%, PANW +1.88%, RIGL +18.50%).
+- Flag for Friday: repeated Gemini rate-limit outages; cash floor stated as 12% in log vs 20% in CLAUDE.md - reconcile.
