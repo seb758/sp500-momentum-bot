@@ -7701,3 +7701,8 @@ Wednesday, live trading day. Fresh cloud session; all 10 env vars present. Resea
 
 ### Decision: HOLD
 - No urgent condition (no position near hard-cut, no catalyst resolved negatively). No email sent.
+
+### 9:30 AM Session Note
+- HELD: no trades. Pre-market research decision was HOLD (no verified research on watchlist names; Gemini 429 outage day 3).
+- Live check: equity $93,911, cash $11,247 (12.0%); all 8 positions carry live GTC trailing stops; no position near hard-cut. HPE +6.4% intraday.
+- Flag for Friday: Income sleeve ~44% vs 15% cap (rebalance); core all-IT concentration.
