@@ -7711,3 +7711,10 @@ Wednesday, live trading day. Fresh cloud session; all 10 env vars present. Resea
 - HELD: no "### Approved Trades (verified)" list today (pre-market HOLD, 9:30 held) -> no buys per STEP 3. No cuts, no tightens.
 - Risk sweep: equity $94,148, cash $11,247 (11.9%). Core AMD -2.9%, CRWD +2.3%, HPE +4.5%, PANW +6.3% (vs -7% cut / +15% tighten); satellite RIGL +17.1% (vs -15% cut / +25% tighten). All 8 positions carry live GTC trailing stops; none moved down.
 - Flag for Friday: cash ~11.9% vs 5% floor and Core+Sat deployment ~48% (<60% malfunction threshold) while Gemini outage blocks approvals; Income 44% vs 15% cap rebalance still pending.
+
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" list today (pre-market HOLD, Gemini 429 outage day 3; 9:30/11am HELD). No buys. This week: core 1/6, satellite 0/4.
+- **Risk sweep: no cuts, no tightens.** AMD -1.55%, CRWD +1.72%, HPE +3.37%, PANW +4.95% (core vs -7% cut / +15% tighten); RIGL +15.94% (sat vs -15% cut / +25% tighten; no catalyst within 1-2 days). All GTC trailing stops present, none moved down (SGOV 0.989-sh dust unstopped, immaterial).
+- Equity $94,080.85 (Day +1.11%, Phase -5.92%). Pattern for Friday: cash 11.95% vs 5% floor and Core+Sat deployment ~44% (<60% threshold); Income 43.7% vs 15% cap rebalance pending; all-IT core.
+- Risky positions closed today: none.
+- Gmail SMTP failed again (curl 28); EOD report recorded in TRADE-LOG in lieu of email.
