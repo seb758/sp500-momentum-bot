@@ -3389,3 +3389,29 @@ clear of hard-cuts, all carry live GTC trailing stops (SGOV 0.989-sh dust
 unstopped, immaterial), none moved down. RIGL: no catalyst within 1-2
 trading days. Income sleeve 44.08% vs new 15% cap - flagged for Friday
 rebalance. Trades today: none. Risky positions closed: none.
+
+
+## Sep 30 — 3pm Snapshot (Day 63, Wednesday)
+**Portfolio:** $94,080.85 | **Cash:** $11,246.89 (11.95%) | **Day P&L:** +$1,036.16 (+1.11%) | **Phase P&L:** -$5,919.15 (-5.92%)
+**Core exposure:** $36,207.33 (38.48% of equity) | **Satellite exposure:** $5,530.14 (5.88% of equity) | **Income exposure:** $41,096.58 (43.68% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| AMD | core | 15 | $621.28 | $611.675 | +0.68% | -$144.08 (-1.55%) | 10% trailing ($575.055) |
+| CRWD | core | 35 | $261.70 | $266.19 | +1.31% | +$157.15 (+1.72%) | 10% trailing ($242.055) |
+| HPE | core | 150 | $62.78 | $64.895 | +5.54% | +$317.25 (+3.37%) | 10% trailing ($60.391) |
+| PANW | core | 20 | $380.23 | $399.065 | +2.74% | +$376.70 (+4.95%) | 10% trailing ($364.219) |
+| RIGL | satellite | 114 | $41.84 | $48.51 | -0.78% | +$760.38 (+15.94%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.87 | +0.86% | +$67.14 (+0.34%) | 5% trailing ($25.9825) |
+| SGOV | income | 16.989473856 | $100.52 | $100.69 | +0.01% | +$2.89 (+0.17%) | 5% trailing ($95.6555, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.5945 | -0.20% | -$655.27 (-3.28%) | 5% trailing ($22.23) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini
+429 outage day 3), so 3pm held. Core 4/8 positions, 1/6 trades this week;
+satellite 0/4 (RIGL held). Risk sweep: no closes, no tightens; all positions
+clear of hard-cuts and below tighten thresholds (HPE +3.37%, PANW +4.95%,
+RIGL +15.94% vs +25%). All positions carry live GTC trailing stops (SGOV
+0.989-sh dust unstopped, immaterial); none moved down. RIGL: no catalyst
+within 1-2 trading days (earnings ~Nov 3). Flags: Income 43.68% vs 15% cap,
+Core+Sat deployment ~44% (<60%) - Friday rebalance. Trades today: none.
+Risky positions closed: none.
