@@ -7672,3 +7672,32 @@ Tuesday, live trading day. Fresh cloud session; all 10 env vars present. Researc
 - Equity $93,044.69 (Day -0.50%, Phase -6.96%). Pattern for Friday: Income 44.1% vs new 15% cap - rebalance to Core; all-IT core concentration.
 - Risky positions closed today: none.
 - Gmail SMTP failed again (curl 28); EOD report recorded in TRADE-LOG in lieu of email.
+
+## 2026-09-30 — Pre-market Research
+
+Wednesday, live trading day. Fresh cloud session; all 10 env vars present. Research only, no trades.
+
+### Account
+- Equity: $92,991.63 | Cash: $11,246.89 (12.09%; above the 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $35,207.33 (37.86%: AMD -2.35%, CRWD +0.37%, HPE -2.37%, PANW +1.52%) | Satellite: $5,573.46 (5.99%: RIGL +16.85%) | Income: $40,963.95 (44.05%: EDGX -0.52%, SGOV +0.17%, SPHY -3.08%) - vs 15% cap, flagged for Friday rebalance.
+- All 8 positions carry live GTC trailing stops (AMD $575.055, CRWD $240.921, HPE $59.085, PANW $355.05, RIGL $42.415, EDGX $25.9825, SPHY $22.23, SGOV $95.646 on 16 sh). None moved down. All clear of hard-cuts.
+- Week of Sep 28: core 1/6 (PANW), satellite 0/4.
+
+### Data-quality notes
+- **Gemini Deep Research FAILED: HTTP 429 (rate limit)** on the full query and on the narrowed futures/VIX + held-ticker retry (third consecutive day of outage). No Gemini output. Used WebSearch fallback (labelled fallback data); no per-ticker overnight news for watchlist names and no per-ticker catalyst-date confirmation (gap - not invented).
+
+### Market Context (WebSearch fallback)
+- S&P futures ~+0.1% (ES ~7,740), Nasdaq-100 futures ~+0.2%; VIX ~15.98. Treasury yields at fresh multi-decade highs; investors await PCE inflation data (key release).
+- 9/29 thematic report: CRWD followed through, PANW inside day, HPE pulled back to 10 EMA, AMD inside day. No thesis-breaking news found for any held name. RIGL: FY26 guide $275-290M revenue; Lilly license terminated (effective 6/15); no new negative news.
+
+### Core trade ideas
+- None actionable: no verified research on watchlist names; all 4 core holdings are IT (concentration). Watchlist candidates not re-checked overnight.
+
+### Satellite trade ideas
+- None. Catalyst dates not re-confirmed (Gemini down); last logged status: no satellite names inside the 5-trading-day window. RIGL held, no catalyst within 1-2 days (next: earnings ~Nov 3).
+
+### Risk factors
+- Yields at multi-decade highs, PCE print, S&P near 4-week lows, Income sleeve 44% vs 15% cap, all-IT core, Gemini outage.
+
+### Decision: HOLD
+- No urgent condition (no position near hard-cut, no catalyst resolved negatively). No email sent.
