@@ -7756,3 +7756,10 @@ Thursday, live trading day. Fresh cloud session; all 10 env vars present. Resear
 - HELD: no "### Approved Trades (verified)" list today (Gemini 429 outage), so no buys. Core 1/6, satellite 0/4 trades this week.
 - Risk sweep: no cuts, no tightens. AMD -2.29%, CRWD +1.53%, HPE +0.64%, PANW +3.60% (core, vs -7% cut / +15% tighten); RIGL +15.39% (satellite, vs +25% tighten; no catalyst inside 1-2 days). All stops live, none moved down. SPHY -4.28% (income, stop $22.23 ~0.6% below $22.36) - watch.
 - Flag for Friday: Income ~43% vs 15% cap; core all-IT; Gemini outage day 5.
+
+### 3 PM Session Note
+- **Buy-side: HOLD.** No "### Approved Trades (verified)" list today (pre-market HOLD, Gemini 429 outage; 9:30/11am HELD). No buys. This week: core 1/6, satellite 0/4.
+- **Risk sweep: no cuts, no tightens.** AMD -0.66%, CRWD +1.78%, HPE +3.12%, PANW +3.22% (core vs -7% cut / +15% tighten); RIGL +12.29% (sat vs -15% cut / +25% tighten; no catalyst within 1-2 days, earnings ~Nov 3). All GTC trailing stops present, none moved down (SGOV 0.989-sh dust unstopped, immaterial). SPHY -3.83% (income) stop $22.23 ~1.0% below $22.465 - watch.
+- Equity $93,573.78 (Day -0.54%, Phase -6.43%). Pattern for Friday: cash 12.0% vs 5% floor, Core+Sat deployment ~44%; Income 43.6% vs 15% cap rebalance pending; all-IT core; Gemini outage day 5.
+- Risky positions closed today: none.
+- Gmail SMTP failed/timed out again 3pm; EOD report recorded in TRADE-LOG in lieu of email.

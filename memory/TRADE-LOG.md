@@ -3415,3 +3415,21 @@ RIGL +15.94% vs +25%). All positions carry live GTC trailing stops (SGOV
 within 1-2 trading days (earnings ~Nov 3). Flags: Income 43.68% vs 15% cap,
 Core+Sat deployment ~44% (<60%) - Friday rebalance. Trades today: none.
 Risky positions closed: none.
+
+
+## Oct 1 — 3pm Snapshot (Day 64, Thursday)
+**Portfolio:** $93,573.78 | **Cash:** $11,246.89 (12.02%) | **Day P&L:** -$507.07 (-0.54%) | **Phase P&L:** -$6,426.22 (-6.43%)
+**Core exposure:** $36,141.55 (38.62% of equity) | **Satellite exposure:** $5,355.72 (5.72% of equity) | **Income exposure:** $40,831.62 (43.64% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| AMD | core | 15 | $621.28 | $617.20 | +0.89% | -$61.20 (-0.66%) | 10% trailing ($575.055) |
+| CRWD | core | 35 | $261.70 | $266.37 | +0.61% | +$163.45 (+1.78%) | 10% trailing ($242.37) |
+| HPE | core | 150 | $62.78 | $64.74 | +1.33% | +$294.00 (+3.12%) | 10% trailing ($60.391) |
+| PANW | core | 20 | $380.23 | $392.48 | -1.22% | +$245.00 (+3.22%) | 10% trailing ($364.219) |
+| RIGL | satellite | 114 | $41.84 | $46.98 | -2.43% | +$585.96 (+12.29%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $26.67 | -0.15% | -$82.06 (-0.41%) | 5% trailing ($25.9825) |
+| SGOV | income | 16.989473856 | $100.52 | $100.40 | -0.28% | -$2.02 (-0.12%) | 5% trailing ($95.6555, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.465 | -0.55% | -$766.12 (-3.83%) | 5% trailing ($22.23) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini 429 outage), so 3pm held. Core 4/8 positions, 1/6 trades this week; satellite 0/4 (RIGL held). Risk sweep: no closes, no tightens. All positions clear of hard-cuts and below tighten thresholds. All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped, immaterial); none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). SPHY stop ~1.0% below price - watch. Flags: Income 43.64% vs 15% cap, Core+Sat deployment ~44% - Friday rebalance. Trades today: none. Risky positions closed: none.
