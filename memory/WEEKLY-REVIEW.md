@@ -2161,3 +2161,97 @@ where the process fundamentals (buy-side gate, momentum discipline,
 data-quality verification) worked better than they have in over a month,
 offset by one newly-discovered and one already-recurring operational gap
 that both need explicit follow-up.
+
+
+---
+
+## Week ending 2026-10-02
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $93,469.47 (per 09-25 review) |
+| Ending portfolio | $95,103.67 |
+| Week return | +$1,634.20 (+1.75%) |
+| S&P 500 week | -0.21% (SPY close 09-25 $771.35 -> 10-02 last quote ~$769.7; Gemini benchmark query unavailable, 429 — computed from Alpaca) |
+| Bot vs S&P | +1.96pp |
+| Core trades | 1 (W:0 / L:0 / open:1) — PANW 09-28 |
+| Satellite trades | 0 new (RIGL held; open:1) |
+| Win rate | n/a (no closed trades) |
+| Best trade | HPE +10.43% (core, open) |
+| Worst trade | SPHY -3.77% (income, open); worst core: none negative |
+| Profit factor | n/a |
+
+Phase P&L: -4.90% vs $100k start. Income sleeve excluded from trade stats;
+no Income trades this week.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| — | — | — | — | — | None closed |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| AMD | core | $621.28 | $633.75 | +$187.05 (+2.01%) | 10% trailing |
+| CRWD | core | $261.70 | $270.60 | +$311.50 (+3.40%) | 10% trailing |
+| HPE | core | $62.78 | $69.33 | +$982.50 (+10.43%) | 10% trailing |
+| PANW | core | $380.23 | $403.20 | +$459.40 (+6.04%) | 10% trailing |
+| RIGL | satellite | $41.84 | $47.15 | +$605.34 (+12.69%) | 15% trailing |
+| EDGX | income | $26.78 | $26.93 | +$113.91 (+0.57%) | 5% trailing |
+| SGOV | income | $100.52 | $100.43 | -$1.53 (-0.09%) | 5% trailing |
+| SPHY | income | $23.36 | $22.48 | -$753.28 (-3.77%) | 5% trailing (~1% away) |
+
+Exposure (equity $95,103.67): core $37,440.75 (39.4%), satellite $5,375.10
+(5.7%), income $41,040.83 (43.2%), cash $11,246.89 (11.8%).
+
+### Watchlist Refresh
+- Core: 2 added (MU, STX), 6 dropped: CPAY/MET/INCY (below 50-day MA)
+  and DDOG/ZBRA/WDAY (sector cap -> alternates). 20 names. Fundamentals for
+  retained names carried from 09-25; MU/STX/LITE verified via WebSearch
+  (Gemini 429, FMP 402 wall). Unverifiable new names left off ("data
+  unavailable").
+- Satellite: 0 added, 2 dropped (PLPC, SHIP — below 50-day MA). 5 names.
+  No new candidates sourced (Gemini outage) — WATCHLIST.md.
+- **Core sector mix (20):** IT 8 (40%), Health Care 7, Energy 3,
+  Financials 1, Comm Services 1.
+
+### What Worked
+- +1.75% vs S&P -0.21%: HPE (+8.5% on 10-02), AMD, PANW, CRWD all green.
+- PANW entry 09-28 (+6.0%) was the stronger pick over INCY, which has now
+  fallen below its 50-day MA.
+- Momentum gate again dropped fading names (CPAY, MET, INCY, PLPC, SHIP).
+
+### What Didn't Work
+- **Deployment malfunction flag (Patience Rule):** Core+Satellite ~45% of
+  equity this week and ~35.7% last week — below 60% for 2 consecutive weeks.
+  Income sleeve is 43.2% vs its 15% cap and cash 11.8% vs 5% floor; ~$30k of
+  excess Income/cash is idle relative to target. Only 1 core buy all week;
+  Gemini 429 meant no "Approved Trades" list daily since ~09-26, so buy
+  windows held.
+- Gemini Deep Research 429 outage (6+ days) blocked benchmark, fundamentals
+  batches and satellite sourcing; FMP 402 on every symbol tried.
+- SPHY -3.77%, stop ~1% below price.
+- Income sleeve composition still unrebalanced (SGOV ~4%); Part C not in
+  this run's scope.
+
+### Key Lessons
+- A single-provider dependency (Gemini) for the "Approved Trades" gate
+  starved deployment; there is no fallback that lets sessions approve
+  watchlist buys when it is down.
+- Carrying forward verified fundamentals + WebSearch for new names is a
+  workable degraded mode, but cannot source new satellite catalysts.
+
+### Adjustments for Next Week
+- Owner action: restore/raise Gemini quota; and authorize either an Income
+  rebalance (trim SPHY/EDGX to the 15% sleeve cap, redeploy ~$25k into
+  Core/Satellite) or a WebSearch-based approval fallback so deployment
+  reaches the 60%+ target. Flagged as malfunction per Patience Rule; no
+  rule change made (risk caps untouched).
+- SPHY/EDGX stop orders expire 2026-10-13 — renew.
+- Re-run satellite sourcing once Gemini is back; RDW and DELL re-verify.
+
+### Overall Grade: B
+Beat the S&P by ~2pp with all core names green, but deployment is stuck
+well under target, the Income sleeve breaches its cap, and the research
+tooling was down most of the week.
