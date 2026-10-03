@@ -48,16 +48,22 @@ STEP 2 — Pull live account state:
   bash scripts/alpaca.sh positions
   bash scripts/alpaca.sh orders
 
-STEP 3 — One consolidated research call via Gemini Deep Research:
+STEP 3 — Morning research, two sources:
+3a. Overnight ticker news via Alpaca (Benzinga feed — structured, no Gemini
+  quota spent). One call for held tickers, one for the watchlist:
+  bash scripts/alpaca.sh news "<held tickers from STEP 2, comma-separated>" 18
+  bash scripts/alpaca.sh news "<core+satellite tickers from WATCHLIST.md, comma-separated>" 18
+  Read the headlines/summaries for anything that breaks a thesis. For
+  satellite tickers, note any news touching their documented catalyst or
+  catalyst date.
+3b. Market context via Gemini 2.5 Flash (free tier, answers in under a
+  minute):
   bash scripts/gemini_research.sh research "Today is $DATE. Give me: (1) S&P
   500 futures direction and VIX level, (2) top market-moving catalysts and
-  economic releases today, (3) for these currently-held tickers <list from
-  STEP 2>, any overnight news that would break the thesis, (4) for these
-  watchlist tickers <list core+satellite tickers from WATCHLIST.md>, any
-  overnight news, and for satellite tickers specifically confirm whether any
-  are within 5 trading days of their documented catalyst date." standard
-If this exits 3 (no GEMINI_API_KEY), fall back to native WebSearch for the
-same four points and note the fallback in the log entry.
+  economic releases today." standard
+If the Gemini call exits 3 (no GEMINI_API_KEY) or 4 (API failure /
+free-tier quota exhausted), fall back to native WebSearch for the same two
+points and note the fallback in the log entry.
 
 STEP 4 — Write a dated entry to memory/RESEARCH-LOG.md per its template:
 - Account snapshot, core/satellite exposure %

@@ -58,6 +58,6 @@ a day instead of 2 — see memory/TRADING-STRATEGY.md for the reasoning.
 - Hit "Run now" on each routine after creating it and watch the logs before
   trusting the schedule. Verify the expected memory file was written,
   committed, and pushed.
-- The weekly-review routine runs materially longer than the others (it
-  dispatches several Gemini Deep Research tasks in parallel and polls them)
-  — don't assume a stall if it takes 20-40 minutes.
+- The weekly-review routine makes more Gemini calls than the others (it
+  batches candidate research into several consolidated prompts) — don't
+  assume a stall if it takes 10-20 minutes.

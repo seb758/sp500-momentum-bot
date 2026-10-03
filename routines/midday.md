@@ -80,13 +80,14 @@ STEP 6 — Thesis check on every remaining position:
   it.
 
 STEP 7 — Optional: if something is moving sharply with no obvious cause,
-one consolidated Gemini Deep Research call (not one per ticker):
+check Alpaca news first (structured, no Gemini quota spent):
+  bash scripts/alpaca.sh news "<ticker symbols, comma-separated>" 8
+If the wire doesn't explain it and the move is actionable, one consolidated
+Gemini call for deeper digging:
   bash scripts/gemini_research.sh research "Today is $DATE. These tickers
   moved sharply intraday with no obvious pre-market cause: <list>. What
   happened?" standard
-This can take several minutes — only do it if something is actually
-actionable, not as a routine check. Append findings as an afternoon
-addendum to RESEARCH-LOG.md if material.
+Append findings as an afternoon addendum to RESEARCH-LOG.md if material.
 
 STEP 8 — Learn: append a short "### 11 AM Session Note" addendum under
 today's memory/RESEARCH-LOG.md entry, 2-4 bullets max — same spirit as

@@ -68,20 +68,23 @@ folded into Friday's review, plus ad-hoc helpers.
 
 ## API Wrappers
 
-- `bash scripts/alpaca.sh` — trading + price bars. Never curl Alpaca directly.
+- `bash scripts/alpaca.sh` — trading + price bars + news. Never curl Alpaca directly.
+  `news SYM1,SYM2 [hours] [limit]` pulls the Benzinga news feed — use it for
+  ticker-level overnight/intraday news instead of spending Gemini quota.
 - `bash scripts/fmp.sh` — per-symbol fundamentals: FCF, growth, ratings.
   Free tier does NOT include the S&P 500 list or a sector/market-cap
-  screener (paid-plan-only) — those are sourced via WebFetch/Gemini Deep
-  Research instead during the weekly screen refresh; see
+  screener (paid-plan-only) — those are sourced via WebFetch/Gemini instead
+  during the weekly screen refresh; see
   TRADING-STRATEGY.md.
-- `bash scripts/gemini_research.sh` — Deep Research agent for catalyst/news
-  research. **This is a background agent, not a fast search API — a single
-  task takes 5-20 minutes.** Use `research` for one consolidated blocking
-  query; use `submit` + `poll` to run several catalyst lookups in parallel
-  (this is how the weekly satellite screen works). Never call `research` in
-  a tight serial loop for many small questions — you will blow the workflow's
-  time budget. Exits 3 if GEMINI_API_KEY is unset; fall back to native
-  WebSearch and flag the fallback in the log.
+- `bash scripts/gemini_research.sh` — Gemini 2.5 Flash (free tier: 20 req/day)
+  for market context and Friday candidate-discovery research with Google
+  Search grounding. Synchronous, answers in under a minute. Use `research`
+  for one consolidated blocking query; use `submit` + `poll` to run several
+  batched catalyst lookups in parallel (this is how the weekly satellite
+  screen works) — submissions are auto-spaced ~15s apart, and tickers must
+  be batched (~5-15 per prompt), never one query per ticker. Exits 3 if
+  GEMINI_API_KEY is unset, 4 on API failure/quota exhaustion; fall back to
+  native WebSearch and flag the fallback in the log.
 - `bash scripts/gmail_smtp.sh` — email notifications via Gmail SMTP (Google app password).
   Falls back to a local file if credentials are missing; never crashes on
   missing notification creds.

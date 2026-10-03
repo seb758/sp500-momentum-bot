@@ -14,12 +14,12 @@ FMP_API_KEY and GEMINI_API_KEY; NO .env file, do not create one]
 
 IMPORTANT — PERSISTENCE: fresh clone, MUST commit and push at STEP 9.
 
-IMPORTANT — RESEARCH LATENCY: this workflow submits MANY Gemini Deep
-Research tasks (one per satellite candidate). Submit them ALL first with
-`submit`, collect the interaction ids, THEN poll each in a loop — do not
-call blocking `research` in a per-candidate loop, that would run serially
-for hours. Budget this workflow real wall-clock time (20-40 min total is
-normal); it runs Friday afternoon with no tight downstream deadline.
+IMPORTANT — RESEARCH QUOTA: Gemini research runs on the FREE tier
+(gemini-2.5-flash, 20 requests/day, ~15s spacing between submits enforced
+by the script). Batch tickers into CONSOLIDATED prompts (10-15 tickers per
+prompt) instead of one query per ticker — per-ticker submits would blow the
+daily quota. Each call answers in under a minute. If a call exits 4 (quota
+exhausted), fall back to native WebSearch for that batch and note it.
 
 === PART A — PERFORMANCE REVIEW ===
 
@@ -55,7 +55,7 @@ NOTE — FMP free-tier gap: `sp500-constituent` and the sector/market-cap
 screener are paid-plan-only (confirmed "Restricted Endpoint" on the free
 tier). `scripts/fmp.sh` only exposes the per-symbol endpoints that work
 free. STEP 6a and STEP 7a below route around this using WebFetch and
-Gemini Deep Research for candidate sourcing, then use FMP only to validate
+Gemini (free tier) for candidate sourcing, then use FMP only to validate
 specific tickers' fundamentals. If FMP is later upgraded to a paid plan,
 swap STEP 6a back to `bash scripts/fmp.sh sp500` and STEP 7a back to
 `bash scripts/fmp.sh screener '...'`.
@@ -65,8 +65,8 @@ run): even the documented per-symbol endpoints 402 for a large, seemingly
 arbitrary subset of individual symbols — not a rate limit, an allowlist.
 Hit ~40% of large-cap names tested (ORCL, LLY, MRK, HD, MCD, CAT, PG, ...)
 and 11/12 small/mid-caps tested. Treat any FMP 402/error as "data
-unavailable," not "failed the fundamentals check" — fall back to Gemini
-Deep Research per STEP 6c/STEP 7b below instead of dropping the candidate.
+unavailable," not "failed the fundamentals check" — fall back to a consolidated Gemini
+prompt per STEP 6c/STEP 7b below instead of dropping the candidate.
 
 NOTE — corporate-action guard: a spinoff/split-adjustment can produce a
 single-day price move that swamps the momentum calc without being a real
@@ -93,17 +93,21 @@ c. Take the top ~40-60 by momentum score. ONLY for this shortlist:
    bash scripts/fmp.sh rating SYM
    Keep names with a positive/improving FCF trend over the trailing
    quarters and a rating that isn't Sell/Strong Sell. For any name FMP
-   402s/errors on, don't drop it — batch those into a parallel Gemini Deep
-   Research submit/poll round (one query per ticker, submitted together)
-   asking for recent FCF trend, YoY growth, and analyst sentiment, and use
-   that instead of the FMP fields.
+   402s/errors on, don't drop it — batch those tickers into consolidated
+   Gemini prompts (~10-15 tickers per prompt, submitted together via
+   `submit` then polled) asking for recent FCF trend, YoY growth, and
+   analyst sentiment per ticker, and use that instead of the FMP fields.
+   Example: bash scripts/gemini_research.sh submit "For each of these
+   tickers <list>: (1) recent free-cash-flow trend, (2) YoY revenue/earnings
+   growth, (3) current analyst sentiment (buy/hold/sell, recent upgrades or
+   downgrades). Cite sources." standard
 d. Rank the survivors; keep the strongest ~15-25 as the new core watchlist.
 
 STEP 7 — Satellite screen (small-cap biotech + industrials):
-a. Use Gemini Deep Research / WebSearch to propose specific small-cap
+a. Use Gemini (consolidated prompt) / WebSearch to propose specific small-cap
    ($300M-$3B) biotech and industrials tickers currently showing price
-   momentum, positive YoY growth, and a documented catalyst — the research
-   agent names candidates directly since FMP can't bulk-screen on this
+   momentum, positive YoY growth, and a documented catalyst — the model
+   names candidates directly since FMP can't bulk-screen on this
    plan.
 b. For each proposed candidate, try FMP per-symbol first:
    bash scripts/fmp.sh growth SYM
@@ -112,10 +116,10 @@ b. For each proposed candidate, try FMP per-symbol first:
    upgrade via `bash scripts/fmp.sh upgrades SYM`). Expect this to 402 for
    most small/mid-caps (confirmed 11/12 in testing) — when it does, don't
    drop the candidate here; fold the growth/sentiment check into the STEP 8
-   Gemini Deep Research catalyst query instead (one consolidated prompt per
-   candidate, not a second API call). Drop anything that doesn't check out
-   quantitatively (from FMP or from the STEP 8 report) — the research
-   agent's list is a starting point, not a pass.
+   Gemini catalyst query instead (one consolidated prompt per batch,
+   not a second API call). Drop anything that doesn't check out
+   quantitatively (from FMP or from the STEP 8 report) — the model's candidate list is
+   a starting point, not a pass.
 c. Cross-check recent price action: bash scripts/alpaca.sh bars SYM 1Day —
    prioritize names with a confirmed momentum/volume signal, not just a
    fundamentals pass.
@@ -123,30 +127,32 @@ d. Shortlist to ~10-15 candidates total across both sub-sectors.
 e. Skip any sub-sector currently under the 2-strike cooldown noted in
    memory/WATCHLIST.md or this week's TRADE-LOG.
 
-STEP 8 — Catalyst confirmation for the satellite shortlist, IN PARALLEL:
-a. For each shortlisted candidate, submit one task (do not block). If STEP
-   7b's FMP growth/rating check 402'd for this ticker, extend the query to
-   also ask for growth/sentiment (second variant below); otherwise the
-   plain catalyst-only query is enough since FMP already confirmed those.
-   id_TICKER=$(bash scripts/gemini_research.sh submit "Is there a specific,
-   near-term catalyst for TICKER (small-cap biotech or industrials)? Look
-   for: FDA/PDUFA decision dates, other regulatory approvals, government
-   contract awards, major trial readouts, or a confirmed recent price jump
-   with volume and its cause. Give the catalyst, its date if known, and
-   sources." standard)
-   -- or, if FMP couldn't validate fundamentals for this ticker --
-   id_TICKER=$(bash scripts/gemini_research.sh submit "For TICKER (small-cap
-   biotech or industrials): (1) Is there a specific, near-term catalyst? Look
-   for FDA/PDUFA decision dates, other regulatory approvals, government
-   contract awards, major trial readouts, or a confirmed recent price jump
-   with volume and its cause. (2) What is recent YoY revenue/earnings growth?
-   (3) What is current analyst sentiment (buy/hold/sell, recent upgrades or
-   downgrades)? Give catalyst date if known and cite sources for all three."
-   standard)
-   Record each id alongside its ticker.
+STEP 8 — Catalyst confirmation for the satellite shortlist, IN BATCHES:
+a. Group the shortlisted candidates into batches of ~5-8 tickers. For each
+   batch, submit ONE consolidated task (do not block; submit all batches,
+   then poll). If STEP 7b's FMP growth/rating check 402'd for tickers in
+   the batch, extend the query to also ask for growth/sentiment (second
+   variant below); otherwise the plain catalyst-only query is enough since
+   FMP already confirmed those.
+   id_BATCH=$(bash scripts/gemini_research.sh submit "For each of these
+   small-cap biotech/industrials tickers <list>: is there a specific,
+   near-term catalyst? Look for: FDA/PDUFA decision dates, other regulatory
+   approvals, government contract awards, major trial readouts, or a
+   confirmed recent price jump with volume and its cause. Give the catalyst,
+   its date if known, and sources per ticker." standard)
+   -- or, if FMP couldn't validate fundamentals for tickers in this batch --
+   id_BATCH=$(bash scripts/gemini_research.sh submit "For each of these
+   small-cap biotech/industrials tickers <list>: (1) Is there a specific,
+   near-term catalyst? Look for FDA/PDUFA decision dates, other regulatory
+   approvals, government contract awards, major trial readouts, or a
+   confirmed recent price jump with volume and its cause. (2) What is recent
+   YoY revenue/earnings growth? (3) What is current analyst sentiment
+   (buy/hold/sell, recent upgrades or downgrades)? Give catalyst date if
+   known and cite sources per ticker." standard)
+   Record each id alongside its tickers.
 b. Poll every id in a loop (sleep between rounds) until each is completed
    or failed, then extract results:
-   bash scripts/gemini_research.sh poll "$id_TICKER"
+   bash scripts/gemini_research.sh poll "$id_BATCH"
 c. Drop any candidate with no confirmed, specific catalyst — "momentum
    only" is not sufficient for the satellite sleeve, that's what the core
    sleeve is for.

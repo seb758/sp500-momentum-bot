@@ -10,8 +10,11 @@
   swap in live keys, without explicit written sign-off from the account
   owner recorded right here (date, who approved it, why).
 - Fundamentals/screening: Financial Modeling Prep
-- Research: Gemini Deep Research (background agent — see CLAUDE.md for its
-  submit/poll usage pattern; it is NOT a fast synchronous search API)
+- Research: Alpaca news feed (Benzinga) for ticker-level overnight/intraday
+  news; Gemini 2.5 Flash via generateContent with Google Search grounding
+  (free tier: 20 req/day, ~15s between submits; synchronous, answers in
+  under a minute — see CLAUDE.md) for market context and Friday candidate
+  discovery
 - Notifications: email via Gmail SMTP (`scripts/gmail_smtp.sh`, Google app password)
 
 ## Known Risk Notes (do not remove — these are load-bearing)
@@ -21,10 +24,12 @@
   overnight or pre-market gaps, which is exactly how these events resolve.
   This is why satellite position caps are smaller, stops are wider, and
   every satellite entry through a known binary date must document max loss.
-- Gemini Deep Research tasks take 5-20 minutes each. Daily workflows should
-  use one consolidated `research` call, not many small ones. The weekly
-  satellite catalyst screen uses `submit` + `poll` to parallelize across
-  candidates instead of blocking serially.
+- Gemini research calls are synchronous and answer in under a minute.
+  Free-tier quota is 20 requests/day with ~15s spacing between submits
+  (enforced by the script). Daily workflows should use one consolidated
+  `research` call; the weekly satellite catalyst screen batches tickers
+  (~5-8 per prompt) and uses `submit` + `poll` across batches. If a call
+  exits 4 (quota exhausted), fall back to native WebSearch.
 - FMP free-tier rate limits are why fundamentals are refreshed weekly
   (Friday), not daily. Daily workflows read the standing WATCHLIST.md
   rather than re-screening the universe.

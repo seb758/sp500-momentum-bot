@@ -69,7 +69,7 @@ case "$cmd" in
     ;;
   sp500|screener)
     echo "ERROR: '$cmd' requires a paid FMP plan (Restricted Endpoint on free tier)." >&2
-    echo "See TRADING-STRATEGY.md 'Weekly Screen Refresh' for the free-tier workaround (WebFetch + Gemini Deep Research for candidate sourcing, this script only for per-symbol fundamentals validation)." >&2
+    echo "See TRADING-STRATEGY.md 'Weekly Screen Refresh' for the free-tier workaround (WebFetch + Gemini for candidate sourcing, this script only for per-symbol fundamentals validation)." >&2
     exit 5
     ;;
   *)

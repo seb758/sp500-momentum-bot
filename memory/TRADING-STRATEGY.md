@@ -22,7 +22,10 @@ Beat the S&P 500 on a risk-adjusted basis using three sleeves in one Alpaca
 
 - Platform: Alpaca — **PAPER** (see memory/PROJECT-CONTEXT.md for mode)
 - Fundamentals/screening: Financial Modeling Prep (FMP)
-- Research: Gemini Deep Research (background agent), WebSearch fallback
+- Research: Alpaca news feed (Benzinga) for ticker-level overnight/intraday
+  news — structured, no quota; Gemini 2.5 Flash via generateContent with
+  Google Search grounding (free tier: 20 req/day, ~15s between submits) for
+  market context and Friday candidate discovery; WebSearch fallback
 - Instruments: stocks only — no options, no leverage, ever
 - PDT limit: 3 day trades / 5 rolling business days if equity < $25k
 - Combined target 80-95% of total capital deployed across Core + Satellite.
@@ -200,7 +203,7 @@ and the sweep-to-fund-a-buy mechanic are its only exit paths.
    or better, or a recent upgrade.)
 5. A specific, documented catalyst — named FDA/regulatory decision or
    approval, government contract award, notable price jump with volume
-   confirmation, or material news — sourced via Gemini Deep Research or
+   confirmation, or material news — sourced via Gemini (free tier) or
    WebSearch fallback, cited in memory/RESEARCH-LOG.md with links.
 6. Buy-side gate below passes.
 
@@ -295,8 +298,8 @@ rate limit, an allowlist. It hit ~40% of large-cap S&P 500 names tested
 (ORCL, LLY, MRK, HD, MCD, CAT, PG, and others all failed) and essentially
 all small/mid-caps tested (11/12, including every satellite candidate
 tried). Treat any FMP 402/error as "data unavailable," never as "failed
-the fundamentals check" — and fall back to Gemini Deep Research per step 3a
-/ 6a below rather than silently dropping the candidate.
+the fundamentals check" — and fall back to a consolidated Gemini
+prompt per step 3a / 6a below rather than silently dropping the candidate.
 
 **Corporate-action guard:** spinoff/split-adjustment artifacts can produce
 a single-day price move that swamps the momentum calc without being a real
@@ -338,9 +341,10 @@ tell you whether an event is still ahead of you or already behind you.
    (`scripts/fmp.sh cashflow` / `growth` / `rating`) — bounds the API
    budget to the shortlist size, not all 500 names.
    a. For any shortlisted name FMP 402s/errors on, don't drop it — submit a
-      Gemini Deep Research query for that subset in parallel (submit all,
-      then poll each) asking for recent FCF trend, YoY growth, and current
-      analyst sentiment, and use that in place of the FMP fields.
+      consolidated Gemini query for that subset (batch ~10-15 tickers per
+      prompt: submit all batches, then poll each) asking for recent FCF
+      trend, YoY growth, and current analyst sentiment, and use that in
+      place of the FMP fields.
 4. Rank and select the qualifying core watchlist: positive FCF trend +
    momentum + not-a-sell rating.
 5. Generate small-cap biotech + industrials candidates via Gemini Deep
@@ -354,14 +358,14 @@ tell you whether an event is still ahead of you or already behind you.
    (`scripts/fmp.sh growth` / `rating`) first, but expect it to 402 for
    most small/mid-caps.
    a. Given FMP's near-total small-cap coverage gap, fold the YoY growth
-      and analyst-sentiment check into the same Gemini Deep Research
+      and analyst-sentiment check into the same consolidated Gemini
       catalyst query in step 7 rather than a separate FMP call — one
-      consolidated prompt per candidate, not two API calls. Drop anything
+      consolidated prompt per batch, not two API calls. Drop anything
       that doesn't check out (from FMP where it works, from the Gemini
       report otherwise) — the research agent's candidate list is a
       starting point, not a pass.
-7. Submit a Gemini Deep Research task per surviving satellite candidate in
-   parallel (`scripts/gemini_research.sh submit`, then poll each) asking
+7. Submit consolidated Gemini tasks per batch of ~5-8 surviving satellite candidates
+   (`scripts/gemini_research.sh submit`, then poll each) asking
    for: a documented catalyst (FDA/PDUFA calendar, government contracts,
    recent news, or price-jump reasoning) AND recent YoY revenue/earnings
    growth AND current analyst sentiment (per step 6a). Drop any candidate
