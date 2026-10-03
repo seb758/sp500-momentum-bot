@@ -7809,3 +7809,32 @@ Friday, live trading day. Fresh cloud session; all 10 env vars present. Research
 - Equity $94,966.69 (Day +1.49%, Phase -5.03%). Friday pattern: cash 11.8% vs 5% floor, Core+Sat deployment ~45%; Income 43.2% vs 15% cap rebalance pending (weekly review); all-IT core; Gemini outage day 6.
 - Risky positions closed today: none.
 - Gmail SMTP timed out again at 3pm (port 465 unreachable); EOD report recorded in TRADE-LOG in lieu of email.
+
+## 2026-10-03 — Pre-market Research
+
+Saturday, market closed (no trading session; research only). Fresh cloud session; all 10 env vars present.
+
+### Account
+- Equity: $95,087.44 | Cash: $11,246.89 (11.83%; above 5% floor) | `account`/`positions`/`orders` clean (balance as of 10-02 close).
+- Core: $37,424.35 (39.36%: AMD +2.03%, CRWD +3.19%, HPE +10.43%, PANW +6.05%) | Satellite: $5,375.10 (5.65%: RIGL +12.69%) | Income: $41,041.00 (43.16%: EDGX +0.57%, SGOV -0.08%, SPHY -3.77%) - vs 15% cap, rebalance still pending.
+- All 8 positions carry live GTC trailing stops (AMD $580.914, CRWD $246.182, HPE $63.261, PANW $368.451, RIGL $42.415, EDGX $25.9825, SPHY $22.23, SGOV $95.6555 on 16 sh). None near hard-cut. SPHY $22.48 vs stop $22.23 (~1.1% buffer) - watch. EDGX/SPHY stop orders expire 2026-10-13 - renew.
+
+### Data-quality notes
+- **Gemini Deep Research FAILED: HTTP 429** (outage day 7; no interaction id returned). No Gemini output. WebSearch fallback used (labelled fallback data); no per-ticker overnight news for most watchlist names and no satellite catalyst-date confirmation (gap - not invented).
+
+### Market Context (WebSearch fallback)
+- Fri 10-02: Sept payrolls +29K, unemployment 4.2% (weak); futures +0.8% on lower Fed-hike odds; S&P +0.7% on day, -0.3% week; Dow -1.3% wk, Nasdaq +0.6% wk. Fed Oct hold odds ~72%. VIX not captured (gap).
+- Week ahead: light calendar; Q3 earnings start ~Oct 13; oil and Treasury yields the main drivers.
+- Held names: AMD +3% (HPE $1.2B Vultr Helios order, World Labs deal); HPE +3.9% same deal; CRWD +1.5%, strong ARR; RIGL only RSU inducement grants; PANW no news. No thesis-breaking news.
+
+### Core trade ideas
+- None actionable: no verified research on watchlist names; core holdings all IT (concentration).
+
+### Satellite trade ideas
+- None. Catalyst dates not re-confirmed (Gemini down). XNCR ESMO 2026 data "near-term" (date unverified). RIGL held, next catalyst earnings ~Nov 3. Max loss if fails: n/a (no new entry).
+
+### Risk factors
+- Fed path/yields, oil, Income 43% vs 15% cap, all-IT core, SPHY near stop, Gemini outage, stop expiries 10-13.
+
+### Decision: HOLD
+- No urgent condition. No email sent.
