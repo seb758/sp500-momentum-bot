@@ -7838,3 +7838,32 @@ Saturday, market closed (no trading session; research only). Fresh cloud session
 
 ### Decision: HOLD
 - No urgent condition. No email sent.
+
+## 2026-10-04 — Pre-market Research
+
+Sunday, market closed (no trading session; research only). Fresh cloud session; all 10 env vars present.
+
+### Account
+- Equity: $95,087.44 | Cash: $11,246.89 (11.83%; above 5% floor) | `account`/`positions`/`orders` clean (balance as of 10-02 close; unchanged vs 10-03).
+- Core: $37,424.35 (39.36%: AMD +2.03%, CRWD +3.19%, HPE +10.43%, PANW +6.05%) | Satellite: $5,375.10 (5.65%: RIGL +12.69%) | Income: $41,041.00 (43.16%: EDGX +0.57%, SGOV -0.08%, SPHY -3.77%) - vs 15% cap, rebalance still pending.
+- All 8 positions carry live GTC trailing stops (AMD $580.914, CRWD $246.182, HPE $63.261, PANW $368.451, RIGL $42.415, EDGX $25.9825, SPHY $22.23, SGOV $95.6555 on 16 sh). None near hard-cut. SPHY $22.48 vs stop $22.23 (~1.1% buffer) - watch. EDGX/SPHY stop orders expire 2026-10-13 - renew.
+
+### Data-quality notes
+- **Gemini Deep Research FAILED: HTTP 429** (outage day 8; no interaction id returned). No Gemini output. WebSearch fallback used (labelled fallback data); no per-ticker overnight news and no satellite catalyst-date confirmation (gap - not invented).
+
+### Market Context (WebSearch fallback)
+- Weekend: no new session data. VIX 15.31 at 10-02 close (one source cites 16.38 intramonth; treat ~15-16). Futures indicated higher for Mon 10-05 (not tradeable-open yet).
+- Week ahead: ISM Services PMI Mon 10:00 ET; light calendar before Q3 earnings; oil and Treasury yields main drivers. Earnings: STZ/RPM 10-06, LEVI/APLD 10-07, PEP 10-08.
+- Held names: no new weekend news found; no thesis-breaking news (last: AMD/HPE Vultr Helios order).
+
+### Core trade ideas
+- None actionable: no verified research on watchlist names; core holdings all IT (concentration).
+
+### Satellite trade ideas
+- None. Catalyst dates not re-confirmed (Gemini down). RIGL held, next catalyst earnings ~Nov 3. Max loss if fails: n/a (no new entry).
+
+### Risk factors
+- Oil/yields, Income 43% vs 15% cap, all-IT core, SPHY near stop, Gemini outage day 8, stop expiries 10-13.
+
+### Decision: HOLD
+- No urgent condition. No email sent.
