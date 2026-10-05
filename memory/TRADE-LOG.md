@@ -3451,3 +3451,21 @@ Risky positions closed: none.
 | SPHY | income | 856 | $23.36 | $22.46 | -0.04% | -$770.40 (-3.85%) | 5% trailing ($22.23) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini 429 outage day 6), so 3pm held. Core 4/8 positions, 1/6 trades this week; satellite 0/4 (RIGL held). Risk sweep: no closes, no tightens. All positions clear of hard-cuts and below tighten thresholds (HPE +11.64% vs +15%, RIGL +11.14% vs +25%). All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped, immaterial); none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). SPHY stop ~1.0% below price - watch; EDGX/SPHY stop orders expire 2026-10-13, renew. Flags: Income 43.18% vs 15% cap, Core+Sat deployment ~45% - weekly-review rebalance. Trades today: none. Risky positions closed: none.
+
+
+## Oct 5 — 3pm Snapshot (Day 66, Monday)
+**Portfolio:** $95,256.35 | **Cash:** $11,246.89 (11.81%) | **Day P&L:** +$289.66 (+0.31%) | **Phase P&L:** -$4,743.65 (-4.74%)
+**Core exposure:** $37,393.72 (39.26% of equity) | **Satellite exposure:** $5,478.84 (5.75% of equity) | **Income exposure:** $41,136.15 (43.18% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| AMD | core | 15 | $621.28 | $630.80 | -0.49% | +$142.80 (+1.53%) | 10% trailing ($580.914) |
+| CRWD | core | 35 | $261.70 | $272.632 | +0.96% | +$382.62 (+4.18%) | 10% trailing ($246.807) |
+| HPE | core | 150 | $62.78 | $68.30 | -1.49% | +$828.00 (+8.79%) | 10% trailing ($63.261) |
+| PANW | core | 20 | $380.23 | $407.23 | +0.99% | +$540.00 (+7.10%) | 10% trailing ($368.451) |
+| RIGL | satellite | 114 | $41.84 | $48.06 | +1.93% | +$709.08 (+14.87%) | 15% trailing ($42.415) |
+| EDGX | income | 746 | $26.78 | $27.06 | +0.47% | +$208.88 (+1.05%) | 5% trailing ($25.9825) |
+| SGOV | income | 16.989473856 | $100.52 | $100.445 | +0.00% | -$1.27 (-0.08%) | 5% trailing ($95.6555, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.48 | 0.00% | -$753.28 (-3.77%) | 5% trailing ($22.23) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini 429 outage day 9), so 3pm held. Core 4/8 positions, 0/8 trades this week; satellite 0/5 (RIGL held). Risk sweep: no closes, no tightens; all positions clear of hard-cuts and below tighten thresholds. All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped, immaterial); none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). SPHY stop ~1.1% below price - watch; EDGX/SPHY stop orders expire 2026-10-13, renew. Flags: Income 43.18% vs 15% cap, Core+Sat deployment ~45% - weekly-review rebalance. Trades today: none. Risky positions closed: none.
