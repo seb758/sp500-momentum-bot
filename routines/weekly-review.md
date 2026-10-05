@@ -174,9 +174,11 @@ STEP 10 — Rebalance the Income sleeve per TRADING-STRATEGY.md's "Income /
 Cash-Parking Sleeve" rules:
 a. Pull current account/positions: `bash scripts/alpaca.sh account` /
    `positions`.
-b. Compute target state: literal cash = 20% of equity (floor); remaining
-   equity not in a Core/Satellite position splits SGOV 50% / SPHY 25% /
-   EDGX 25%.
+b. Compute target state per the current strategy (aggressive recalibration
+   2026-09-29): 5% of equity as literal cash (account-wide floor, held
+   separate from the sleeve and never swept into it); Income sleeve
+   hard-capped at 15% of equity, split within the sleeve SGOV 50% /
+   SPHY 25% / EDGX 25%.
 c. Compare to actual holdings. If drift is material, rebalance with market
    day-TIF orders (trim overweight names, add to underweight) — buy/sell
    just enough to realign, not a full liquidate-and-rebuild. Re-place any
