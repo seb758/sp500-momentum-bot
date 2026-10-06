@@ -7912,3 +7912,32 @@ Monday. Fresh cloud session; all 10 env vars present.
 - Risk sweep: no closes, no tightens. AMD +1.53%, CRWD +4.18%, HPE +8.79%, PANW +7.10% (core); RIGL +14.87% (sat) - all below tighten thresholds. All stops live, none moved down. RIGL: no catalyst within 1-2 days (earnings ~Nov 3).
 - Flags: Income 43.18% vs 15% cap (rebalance pending); EDGX/SPHY stops expire 10-13 - renew; SPHY $22.48 vs stop $22.23 (~1.1%).
 - Risky positions closed today: none.
+
+## 2026-10-06 — Pre-market Research
+
+Tuesday. Fresh cloud session; all 10 env vars present.
+
+### Account
+- Equity: $95,849.49 | Cash: $11,246.89 (11.73%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $37,664 (39.3%: AMD +3.13%, CRWD +6.20%, HPE +10.70%, PANW +9.14%) | Satellite: $5,425 (5.7%: RIGL +13.74%) | Income: $41,114 (42.9%: EDGX +0.85%, SGOV -0.07%, SPHY -3.68%) - vs 15% cap, rebalance still pending.
+- All 8 positions carry live GTC trailing stops (AMD $580.914, CRWD $246.807, HPE $63.261, PANW $368.451, RIGL $42.415, EDGX $25.9825, SPHY $22.23, SGOV $95.6555 on 16 sh). None near hard-cut or tighten threshold. SPHY $22.50 vs stop $22.23 (~1.2% buffer) - watch. EDGX/SPHY stop orders expire 2026-10-13 - renew.
+
+### Data-quality notes
+- **Gemini research FAILED: HTTP 404** - new failure mode (was 429 through day 9): model `gemini-2.5-flash` "no longer available to new users", API recommends `gemini-3.8-flash`. scripts/gemini_research.sh needs a model update (owner action; not changed in this run). WebSearch + Alpaca news fallback used (labelled fallback data); no per-ticker overnight news for watchlist names beyond below and no satellite catalyst-date confirmation (gap - not invented).
+
+### Market Context (fallback)
+- VIX 15.31 at 10-02 close; VIX futures Oct ~17.2 / Nov ~17.9. S&P/Nasdaq futures direction for 10-06: not found (gap - not invented).
+- Economic releases today: not confirmed (gap).
+- Held names (Alpaca/Benzinga): AMD - Lisa Su says demand exceeds supply, supply to rise substantially in 2027 (supportive). Other news: Morgan Stanley AI-power-shortfall note (MU/NVDA/AVGO), Tom Lee AI-debt commentary. No thesis-breaking news for AMD/CRWD/HPE/PANW/RIGL in the last 18h. No news returned for MU/STX/XNCR/TH.
+
+### Core trade ideas
+- None actionable: no verified research on watchlist names; core holdings all IT (concentration).
+
+### Satellite trade ideas
+- None. Catalyst dates not re-confirmed (Gemini down). RIGL held, next catalyst earnings ~Nov 3. Max loss if fails: n/a (no new entry).
+
+### Risk factors
+- Income 43% vs 15% cap (rebalance pending), all-IT core, SPHY near stop, Gemini unavailable (404 model retired), stop expiries 10-13, AI-capex/yield sensitivity.
+
+### Decision: HOLD
+- No urgent condition. No email sent.
