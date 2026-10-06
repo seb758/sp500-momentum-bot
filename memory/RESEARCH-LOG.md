@@ -7951,3 +7951,9 @@ Tuesday. Fresh cloud session; all 10 env vars present.
 - Held, no trades: no "Approved Trades (verified)" list today (Gemini 404, model retired), so no buys. Core 4/8, satellite 1/5, 0 new trades this week.
 - Risk sweep: no cuts, no tightens. Equity $96,772.63, cash $11,246.89 (11.6%). AMD +5.9%, CRWD +7.7%, HPE +12.4%, PANW +11.1%, RIGL +13.1% - all below tighten thresholds; all carry live GTC trailing stops, none moved down. SPHY $22.59 vs stop $22.23 - watch.
 - Flags for Friday: Income ~42% vs 15% cap (rebalance pending), Core+Sat deployment ~45%, EDGX/SPHY stops expire 10-13, Gemini model needs owner update.
+
+### 3 PM Session Note (2026-10-06)
+- Held, no trades: no "Approved Trades (verified)" list today (Gemini 404, model retired), so no buys. Core 4/8, satellite 1/5, 0 new trades this week.
+- Risk sweep: no cuts, no tightens. Equity $96,536.25. AMD +5.50%, CRWD +6.67%, HPE +13.00% (tighten at +15%), PANW +10.26%, RIGL +11.31% (no catalyst within 2 days; earnings ~Nov 3). All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped), none moved down.
+- Flags for Friday: Income 42.8% vs 15% cap, Core+Sat deployment ~45%, EDGX/SPHY stops expire 10-13 (renew), Gemini model needs owner update.
+- Risky positions closed today: none.
