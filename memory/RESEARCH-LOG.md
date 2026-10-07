@@ -7957,3 +7957,33 @@ Tuesday. Fresh cloud session; all 10 env vars present.
 - Risk sweep: no cuts, no tightens. Equity $96,536.25. AMD +5.50%, CRWD +6.67%, HPE +13.00% (tighten at +15%), PANW +10.26%, RIGL +11.31% (no catalyst within 2 days; earnings ~Nov 3). All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped), none moved down.
 - Flags for Friday: Income 42.8% vs 15% cap, Core+Sat deployment ~45%, EDGX/SPHY stops expire 10-13 (renew), Gemini model needs owner update.
 - Risky positions closed today: none.
+
+## 2026-10-07 — Pre-market Research
+
+Wednesday. Fresh cloud session; all 10 env vars present.
+
+### Account
+- Equity: $95,877.65 | Cash: $11,246.89 (11.73%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $37,679 (39.3%: AMD +2.92%, CRWD +5.66%, HPE +11.04%, PANW +9.86%) | Satellite: $5,257 (5.5%: RIGL +10.21%) | Income: $41,295 (43.1%: EDGX +1.45%, SGOV -0.06%, SPHY -3.38%) - vs 15% cap, rebalance still pending.
+- All 8 positions carry live GTC trailing stops (AMD $592.668, CRWD $258.291, HPE $64.098, PANW $389.0925, RIGL $42.415, EDGX $25.9825, SPHY $22.23, SGOV $95.6555 on 16 sh). None near hard-cut or tighten threshold (HPE +11.04% vs +15%). SPHY $22.57 vs stop $22.23 (~1.5% buffer) - watch. EDGX/SPHY stop orders expire 2026-10-13 - renew.
+
+### Data-quality notes
+- **Gemini research FAILED**: default model `gemini-2.5-flash` HTTP 404 (retired); retry with `GEMINI_RESEARCH_MODEL=gemini-3.8-flash` HTTP 429 (free-tier quota exhausted). scripts/gemini_research.sh default model still needs owner update (not changed in this run). WebSearch + Alpaca news fallback used (labelled fallback data). No satellite catalyst-date confirmation (gap - not invented).
+
+### Market Context (fallback)
+- S&P 500 and Nasdaq 100 closed at record highs 10-06 (Benzinga); breadth narrow (15 of 504 stocks at highs; top-10 names ~41% of index). 10-yr yield retreating from a 24-year high.
+- S&P futures direction and VIX level for 10-07: not found (gap - not invented). Economic releases today: not confirmed (gap).
+- Held names (Alpaca/Benzinga, last 18h): AMD - Su exploring memory/foundry opportunities with Samsung, investing tens of billions across supply chain; Citi Buy, PT $800 (supportive). CRWD - Ives names as top 2027 tech play (supportive). PANW/HPE - no company-specific news. RIGL - none. No thesis-breaking news.
+- Watchlist names: MU/STX/(SNDK) down pre-market on Toshiba HDD/storage capacity fears (Cantor calls it a buying opportunity); MU settles Netlist patent suit for $600M. No news for XNCR/TH/DELL.
+
+### Core trade ideas
+- None actionable: no verified research on watchlist names; MU/STX weak pre-market on Toshiba news. Core holdings all IT (concentration).
+
+### Satellite trade ideas
+- None. Catalyst dates not re-confirmed (Gemini down). RIGL held, next catalyst earnings ~Nov 3. Max loss if fails: n/a (no new entry).
+
+### Risk factors
+- Income 43% vs 15% cap (rebalance pending), all-IT core, narrow-breadth record-high market, SPHY near stop, Gemini unavailable, stop expiries 10-13, AI-capex/yield sensitivity.
+
+### Decision: HOLD
+- No urgent condition. No email sent.
