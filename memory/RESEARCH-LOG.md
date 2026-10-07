@@ -7992,3 +7992,9 @@ Wednesday. Fresh cloud session; all 10 env vars present.
 - HELD - no trades. Pre-market decision HOLD; no "Approved Trades (verified)" list (Gemini 404/429 outage continues), so no buys.
 - Live check: equity $95,769.89, cash $11,246.89 (11.7%); 8 positions unchanged, all stops live. Core 4/8, sat 1/5 (RIGL), 0 new trades this week.
 - Flag for Friday: fix Gemini default model in scripts/gemini_research.sh; Income 43% vs 15% cap rebalance; EDGX/SPHY stops expire 10-13.
+
+### 3 PM Session Note
+- HELD - no buys: no "Approved Trades (verified)" list today (Gemini outage), so no new entries.
+- Risk sweep: no hard-cut breaches, all 8 positions carry live GTC trailing stops; HPE (+15.5%) already tightened to 7% trail (stop $68.048); no other tighten triggers (RIGL +14.0% vs +25%).
+- Friday flags: fix Gemini model in scripts/gemini_research.sh; Income 43% vs 15% cap rebalance; EDGX/SPHY stops expire 10-13 (SPHY ~1.4% above stop - watch); CRWD -5.0% on day.
+- Risky positions closed today: none.
