@@ -7987,3 +7987,8 @@ Wednesday. Fresh cloud session; all 10 env vars present.
 
 ### Decision: HOLD
 - No urgent condition. No email sent.
+
+### 9:30 AM Session Note
+- HELD - no trades. Pre-market decision HOLD; no "Approved Trades (verified)" list (Gemini 404/429 outage continues), so no buys.
+- Live check: equity $95,769.89, cash $11,246.89 (11.7%); 8 positions unchanged, all stops live. Core 4/8, sat 1/5 (RIGL), 0 new trades this week.
+- Flag for Friday: fix Gemini default model in scripts/gemini_research.sh; Income 43% vs 15% cap rebalance; EDGX/SPHY stops expire 10-13.
