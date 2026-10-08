@@ -7998,3 +7998,32 @@ Wednesday. Fresh cloud session; all 10 env vars present.
 - Risk sweep: no hard-cut breaches, all 8 positions carry live GTC trailing stops; HPE (+15.5%) already tightened to 7% trail (stop $68.048); no other tighten triggers (RIGL +14.0% vs +25%).
 - Friday flags: fix Gemini model in scripts/gemini_research.sh; Income 43% vs 15% cap rebalance; EDGX/SPHY stops expire 10-13 (SPHY ~1.4% above stop - watch); CRWD -5.0% on day.
 - Risky positions closed today: none.
+
+## 2026-10-08 — Pre-market Research
+
+Thursday. Fresh cloud session; all 10 env vars present.
+
+### Account
+- Equity: $95,216.46 (last close) | Cash: $11,246.89 (11.81%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $37,366 (39.2%: AMD +2.03%, CRWD +0.81%, HPE +12.39%, PANW +5.73%) | Satellite: $5,358 (5.6%: RIGL +12.33%) | Income: $41,246 (43.3%: EDGX +1.29%, SGOV -0.04%, SPHY -3.47%) - vs 15% cap, rebalance still pending.
+- All 8 positions carry live GTC trailing stops (AMD $592.668, CRWD $258.291, HPE $68.048 @7%, PANW $389.0925, RIGL $42.415, EDGX $25.9825, SPHY $22.23, SGOV $95.6555 on 16 sh). None near hard-cut. CRWD $263.82 only ~2.1% above stop - watch. SPHY $22.55 ~1.4% above stop - watch. EDGX/SPHY stop orders expire 2026-10-13 - renew.
+
+### Data-quality notes
+- **Gemini research FAILED**: default `gemini-2.5-flash` HTTP 404 (retired); retry with `GEMINI_RESEARCH_MODEL=gemini-3.8-flash` HTTP 429 (quota exhausted). Script default still needs owner update. Alpaca/Benzinga news + WebSearch fallback used (labelled fallback data). WebSearch returned no 10-08 report: VIX level and futures % not found (gap - not invented). No satellite catalyst-date confirmation (gap).
+
+### Market Context (fallback)
+- Benzinga 10-08: S&P/Dow/Nasdaq-100 futures lower after Wednesday's lower close (Dow -0.66% to 51,179.87); Pentagon reportedly preparing potential strikes on Iran; Treasury yields ~5.3-5.35%, oil >$91 - pressure on tech. Pepsi earnings today. Economic releases: only Wholesale Inventories (10:00) found; UMich sentiment Fri 10-09.
+- Held names: AMD - no new adverse news (Samsung strong Q3 guide on AI memory demand; supportive). CRWD - linked AI-assisted bank hacks to suspected Chinese hacker (neutral/positive for demand); fell 4% Wed on tech cool-off. HPE - 52-week high 10-07 on AMD-powered servers; no adverse news. PANW, RIGL - none. No thesis-breaking news.
+- Watchlist: MU in focus (Samsung guide supportive, tech yield pressure). No news found for STX/XNCR/TH/DELL.
+
+### Core trade ideas
+- None actionable: no verified research (Gemini down); geopolitical/yield risk-off tone; core already all IT.
+
+### Satellite trade ideas
+- None. Catalyst dates not re-confirmed. RIGL held, next catalyst earnings ~Nov 3. Max loss if fails: n/a (no new entry).
+
+### Risk factors
+- Iran strike risk + 5.3%+ yields + oil >$91 (gap-down risk; trailing stops don't cover gaps), Income 43% vs 15% cap, all-IT core, CRWD/SPHY near stops, stop expiries 10-13, Gemini outage.
+
+### Decision: HOLD
+- No held position below hard-cut; no satellite catalyst resolved negatively. Geopolitical event is potential, not realized. No email sent.
