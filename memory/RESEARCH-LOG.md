@@ -8072,3 +8072,8 @@ Friday. Fresh cloud session; all 10 env vars present.
 
 ### Decision: HOLD
 - No held position below hard-cut; no satellite catalyst resolved negatively; no realized major geopolitical event. No email sent.
+
+### 9:30 AM Session Note (2026-10-09)
+- HELD - no trades. Pre-market decision HOLD; no "Approved Trades (verified)" list (Gemini outage continues).
+- Live check: equity $95,818.39, cash $11,246.89 (11.7%); 8 positions unchanged (AMD +0.52%, CRWD +2.21%, HPE +16.28%, PANW +6.82% core; RIGL +17.66% sat). Core 4/8, sat 1/5, 0 new trades this week.
+- Flag for Friday review: fix Gemini model in scripts/gemini_research.sh; Income 43% vs 15% cap rebalance; EDGX/SPHY stops expire 10-13; SPHY ~1.4% above stop.
