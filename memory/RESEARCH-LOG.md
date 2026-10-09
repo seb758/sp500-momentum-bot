@@ -8043,3 +8043,32 @@ Thursday. Fresh cloud session; all 10 env vars present.
 - Risk sweep: no hard-cut breaches (AMD -1.09%, CRWD +0.48%, HPE +12.36%, PANW +4.82% core; RIGL +15.79% sat); all 8 positions carry live GTC trailing stops; no tighten triggers (HPE already 7% trail, RIGL +15.8% vs +25%).
 - Friday flags: fix Gemini model in scripts/gemini_research.sh; Income 43% vs 15% cap rebalance; EDGX/SPHY stops expire 10-13; CRWD ~1.8% above stop, SPHY ~1.4% - watch.
 - Risky positions closed today: none.
+
+## 2026-10-09 — Pre-market Research
+
+Friday. Fresh cloud session; all 10 env vars present.
+
+### Account
+- Equity: $95,508.94 | Cash: $11,246.89 (11.8%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $37,584 (39.4%: AMD +1.47%, CRWD +1.57%, HPE +14.64%, PANW +5.59%) | Satellite: $5,524 (5.8%: RIGL +15.82%) | Income: $41,154 (43.1%: EDGX +0.87%, SGOV -0.02%, SPHY -3.51%) - vs 15% cap, rebalance pending.
+- All 8 positions carry live GTC trailing stops (AMD $592.668, CRWD $258.291, HPE $68.048 @7%, PANW $389.0925, RIGL $42.415, EDGX $25.9825, SPHY $22.23, SGOV $95.6555 on 16 sh). None near hard-cut. SPHY $22.54 ~1.4% above stop; CRWD ~2.9% above. **EDGX/SPHY stop orders expire 2026-10-13 - renew.**
+
+### Data-quality notes
+- **Gemini research FAILED**: default `gemini-2.5-flash` HTTP 404 (retired); `gemini-3.8-flash` HTTP 429 (quota exhausted). Script default still needs owner update. Alpaca/Benzinga news used. WebSearch returned no 10-09 report: VIX level and futures % not found (gap - not invented). No satellite catalyst-date confirmation (gap).
+
+### Market Context (fallback, Benzinga)
+- 10-09: S&P/Dow/Nasdaq-100 futures higher after Thursday's mixed close; oil cooling; Q3 earnings season begins. Bessent: US "starving Iran's regime"; NYT: Pentagon drew new Iran strike plans, Trump hesitating. Pimco (FT): 10Y yield risks 6%. OpenAI run-rate ~$50B (~$20B below prior reports) hit AI names Thursday. Memory selloff Thursday (Samsung revenue miss; Cantor/Mirae call fears overdone); MU up pre-market.
+- Held names: CRWD - Needham Buy, PT $310 (supportive). AMD - Ark sold shares Thursday; no thesis-breaking news. HPE, PANW, RIGL - none. No thesis-breaking news.
+- Watchlist: MU positive pre-market (D.A. Davidson valuation gap); DELL added to Ives AI 30. No news on STX/XNCR/TH.
+
+### Core trade ideas
+- None actionable: no verified research (Gemini down); core already all IT, yield/geopolitical risk.
+
+### Satellite trade ideas
+- None. Catalyst dates not re-confirmed. RIGL held, next catalyst earnings ~Nov 3. Max loss if fails: n/a (no new entry).
+
+### Risk factors
+- Iran strike risk, 10Y yields 5.3%+ (Pimco 6% warning), AI-revenue doubts (gap-down risk; trailing stops don't cover gaps), Income 43% vs 15% cap, all-IT core, SPHY/CRWD near stops, EDGX/SPHY stop expiry 10-13, Gemini outage. Friday: weekly review/screen refresh due.
+
+### Decision: HOLD
+- No held position below hard-cut; no satellite catalyst resolved negatively; no realized major geopolitical event. No email sent.
