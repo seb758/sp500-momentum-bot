@@ -8082,3 +8082,9 @@ Friday. Fresh cloud session; all 10 env vars present.
 - HELD - no buys: no "### Approved Trades (verified)" list (Gemini outage continues). Core 4/8, sat 1/5, 0 new trades this week.
 - Risk sweep: no cuts, no tightens. AMD -1.27%, CRWD +2.55%, HPE +14.34% (already 7% trail), PANW +8.16% (core); RIGL +17.04% (sat, <+25%). All carry live GTC trailing stops; none moved down. No sharp unexplained moves - no Gemini call.
 - Flag for Friday review: fix Gemini model in scripts/gemini_research.sh; Income 43% vs 15% cap rebalance; EDGX/SPHY stops expire 10-13 (renew).
+
+### 3 PM Session Note (2026-10-09)
+- HELD - no buys: no "### Approved Trades (verified)" list (Gemini outage continues). Core 4/8, sat 1/5, 0 new trades this week.
+- Risk sweep: no cuts, no tightens. AMD -1.77% (core, stop $592.67), CRWD +4.54%, HPE +16.47% (already 7% trail, stop $68.17), PANW +9.86%; RIGL +18.01% (sat, <+25%, no catalyst until ~Nov 3). All carry live GTC trailing stops; none moved down.
+- Friday review flags: fix Gemini model in scripts/gemini_research.sh; Income 42.9% vs 15% cap rebalance; EDGX/SPHY stops expire 10-13 (renew Monday); weekly screen refresh due.
+- Risky positions closed today: none.
