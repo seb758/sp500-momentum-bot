@@ -2255,3 +2255,90 @@ Exposure (equity $95,103.67): core $37,440.75 (39.4%), satellite $5,375.10
 Beat the S&P by ~2pp with all core names green, but deployment is stuck
 well under target, the Income sleeve breaches its cap, and the research
 tooling was down most of the week.
+
+---
+
+## Week ending 2026-10-09
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $95,103.67 (per 10-02 review) |
+| Ending portfolio | $96,243.99 |
+| Week return | +$1,140.32 (+1.20%) |
+| S&P 500 week | +1.16% (SPY close 10-02 $769.64 -> 10-09 $778.57; Gemini benchmark unavailable, computed from Alpaca) |
+| Bot vs S&P | +0.04pp |
+| Core trades | 0 (W:0 / L:0 / open:0 new; 4 positions held) |
+| Satellite trades | 0 (RIGL held; open:1) |
+| Win rate | n/a (no closed trades) |
+| Best trade | HPE +16.94% (core, open) |
+| Worst trade | SPHY -3.43% (income, open); worst core: AMD -2.16% (open) |
+| Profit factor | n/a |
+
+Phase P&L: -3.76% vs $100k start. No trades of any sleeve this week.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| — | — | — | — | — | None closed |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| AMD | core | $621.28 | $607.87 | -$201.18 (-2.16%) | 10% trailing |
+| CRWD | core | $261.70 | $274.67 | +$453.95 (+4.96%) | 10% trailing |
+| HPE | core | $62.78 | $73.42 | +$1,595.33 (+16.94%) | 7% trailing |
+| PANW | core | $380.23 | $418.33 | +$762.00 (+10.02%) | 10% trailing |
+| RIGL | satellite | $41.84 | $49.08 | +$825.36 (+17.30%) | 15% trailing |
+| EDGX | income | $26.78 | $27.18 | +$294.67 (+1.48%) | 5% trailing |
+| SGOV | income | $100.52 | $100.51 | -$0.11 (-0.01%) | 5% trailing |
+| SPHY | income | $23.36 | $22.56 | -$684.80 (-3.43%) | 5% trailing (~1.5% away) |
+
+Exposure (equity $96,243.99): core $38,110.40 (39.6%), satellite $5,595.12
+(5.8%), income $41,291.58 (42.9%), cash $11,246.89 (11.7%).
+
+### Watchlist Refresh
+- Core: 1 added (ABBV, WebSearch-verified), 3 dropped: STX/DXCM (below
+  50-day MA), META (rank 118, 6M negative). 18 names. Fundamentals for
+  retained names carried (Gemini quota 429 / model 404, FMP 402 wall).
+- Satellite: 0 added, 1 dropped (XNCR — below 50-day MA). 4 names. No new
+  candidates sourced (Gemini down) — WATCHLIST.md.
+- **Core sector mix (18):** IT 7 (39%), Health Care 7, Energy 3, Financials 1
+  (4 sectors; Comm Services dropped with META).
+
+### What Worked
+- +1.20% in line with S&P +1.16%; HPE +16.9% (7% trail active), PANW +10.0%,
+  RIGL +17.3%.
+- Momentum gate dropped fading names (STX, DXCM, META, XNCR) without
+  discretion.
+- Zero forced trades; no stops hit.
+
+### What Didn't Work
+- **Deployment malfunction flag (Patience Rule), 3rd consecutive week:**
+  Core+Satellite ~45% of equity (<60%). Income 42.9% vs 15% cap; cash 11.7%
+  vs 5% floor. Zero trades all week because no "Approved Trades (verified)"
+  list was produced (Gemini outage, now ~2 weeks).
+- Gemini: `gemini-2.5-flash` retired (404); `gemini-3.8-flash` via
+  GEMINI_RESEARCH_MODEL reaches the API but free-tier quota is exhausted
+  (429). FMP 402 on nearly all names. No new satellite sourcing again.
+- AMD slipped to -2.2%; SPHY -3.4%, stop ~1.5% below price.
+
+### Key Lessons
+- Single-provider Gemini dependency has now starved the buy gate for 2+
+  weeks. The wrapper default model needs updating (scripts/gemini_research.sh
+  line 56) and quota/billing needs owner attention.
+- Degraded mode (Alpaca bars + WebSearch for new names) keeps the screen
+  honest but cannot source satellite catalysts.
+
+### Adjustments for Next Week
+- Owner action: (1) Gemini billing/quota + change default model to a live one
+  (e.g. gemini-3.8-flash); (2) authorize Income rebalance (trim SPHY/EDGX to
+  15% cap, redeploy ~$25k) or a WebSearch-based approval fallback.
+- SPHY/EDGX stop orders expire 2026-10-13 — renew (Monday).
+- Re-run satellite sourcing once Gemini is back; re-verify DELL, MRVL, LITE.
+- No rule or risk-cap changes (parameters not the cause).
+
+### Overall Grade: B-
+Matched the S&P and held all winners with no stop-outs, but the third straight
+week of sub-60% deployment, an Income-cap breach, and research tooling still
+down keep this from a higher grade.

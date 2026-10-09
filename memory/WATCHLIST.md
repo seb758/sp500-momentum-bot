@@ -169,7 +169,86 @@ CRDO/VICR/SEZL/DAVE/PACS/STRL not re-checked this week (already confirmed
 core-ineligible and satellite-sector-mismatched eight refreshes running; no
 new information would change that).
 
-## Current — Week of 2026-10-02
+## Current — Week of 2026-10-09
+
+Twelfth weekly screen refresh (weekly-review workflow, run 2026-10-09). Full
+503-name universe re-screened via fresh Alpaca bars (S&P 500 list from the
+GitHub-hosted constituents dataset; bars through 2026-10-09 close; 3M/6M
+relative to SPY, 50/200-day MA). **Data-source degradation continues:**
+Gemini `gemini-2.5-flash` is retired (HTTP 404); overriding with
+`GEMINI_RESEARCH_MODEL=gemini-3.8-flash` gets past the 404 but returns 429
+(free-tier quota exhausted). FMP per-symbol 402'd for NTAP, TWLO, FTNT, ILMN,
+CRL, ANET, FFIV, NOW, MU-class names (MSFT returned A-). Per the data-quality
+guard: no Gemini output used; fundamentals for retained names carry forward
+from the 09-25/10-02 verified lists; the one new name (ABBV) was verified via
+WebSearch only (TIKR/TickerLeague: FCF ~$17.8B 2025 -> ~$24.6B proj. 2026,
+Buy consensus, 0-1 Sell). EL searched but trend unverifiable -> data
+unavailable. **No new satellite candidates were sourced** (catalyst sourcing
+and STEP 8 need Gemini); satellite list is retained names re-checked on
+momentum only.
+
+**Corporate-action guard:** >20% single-day moves in the 6M window: MRNA
+(+177%, verified real prior weeks; negative FCF -> excluded), DELL, MRVL, PTC,
+BE, FLEX (+40%), NTAP, TWLO, DDOG, ZBRA, SMCI, PLTR, CRM, INTC, SNDK
+(stitched-series artifact, held off). PTC +35% in the last week alone — not
+added (unverified). Active names DELL/CRWD verified real previously.
+
+### Core (S&P 500 momentum + FCF)
+
+| Ticker | Momentum Rank | 3M Rel. Return vs SPY | FCF Trend | Analyst Rating | Notes |
+|---|---|---|---|---|---|
+| DELL | 2 | +33.3% | Declining (reinvestment/AI backlog — carried flag) | Buy (0 Sell) | Carried. Failed opening-spread check previously — see feed-artifact rule |
+| P | 3 | +101.1% | Negative qtr (capex, carried) | Buy-leaning (1 Sell of 21) | Pure Storage |
+| HPE | 4 | +51.6% | Massive acceleration (carried) | Moderate Buy (0 Sell) | **Held position** (+16.9%) |
+| CRWD | 5 | +42.4% | Improving (carried) | Buy | **Held position** |
+| PANW | 6 | +22.9% | Record (carried) | Buy | **Held position** |
+| AMD | 12 | +9.9% | Strong (carried) | B | **Held position** |
+| MPC | 13 | +49.3% | Volatile/cyclical (carried) | Unanimous Buy | Energy |
+| MU | 14 | +5.9% | Surging (LTM levered FCF ~$26.2B) | Strong Buy | 6M rel. +130.1%. Memory/AI-hardware cluster |
+| VEEV | 15 | +46.5% | Improving (carried) | Buy | Health Care (software) |
+| VLO | 18 | +42.7% | Strong (carried) | Buy/Hold (10% Sell — watch) | Energy |
+| PSX | 22 | +36.4% | Strong (carried) | Moderate Buy | Energy |
+| RVTY | 23 | +34.8% | Stabilizing (carried) | Unanimous | |
+| IQV | 31 | +21.3% | Improving (carried) | Unanimous Buy | |
+| A | 34 | +23.3% | Stable (carried) | Buy | |
+| TMO | 43 | +20.6% | Improving (carried) | Buy | |
+| HOOD | 44 | -4.7% (6M +43.0%) | Recovering (carried) | C+ FMP | Passes on 6M leg + above 50-day (loosened rule) |
+| ABBV | 58 | +7.6% (6M +18.4%) | Rising (~$17.8B 2025 -> ~$24.6B proj. 2026) | Buy (21 Buy/8 Hold/1 Sell; BofA upgrade) | **New.** Above both MAs. Verified via WebSearch only (FMP/Gemini unavailable) |
+| WST | 59 | -2.2% (6M +28.1%) | Improving (carried) | Unanimous | Thin 3M margin — 6M leg carries it |
+
+**Sector mix (18 names):** Information Technology 7 (DELL, P, HPE, CRWD,
+PANW, AMD, MU = 39%, under the cap), Health Care 7 (VEEV, RVTY, IQV, A, TMO,
+WST, ABBV), Energy 3 (MPC, VLO, PSX), Financials 1 (HOOD) — 4 sectors (below
+the 4-5 target: Comm Services dropped with META, no verifiable replacement).
+Semis + AI-hardware cluster (DELL, HPE, AMD, MU) = 4/18 = 22%.
+
+**Sector-capped alternates** (not active): MSFT (FMP A-; rank 30, 3M +32.9%,
+IT would be 44%), DDOG, ZBRA, WDAY, LITE, NTAP, PLTR, CRM, NOW, ANET, FFIV.
+
+**Dropped from 10-02 list:** STX (below 50-day MA, 3M rel. -12.9%), DXCM
+(below 50-day MA), META (rank 118, 3M +5.5%/6M -0.5%). **Failed/excluded:**
+MRNA (negative FCF), ILMN, FTNT, HPQ (below 50-day), SWKS, CRL, HUM, CNC,
+SNDK (artifact), EL (data unavailable), PTC (+35% in one week, unverified).
+
+### Satellite (small-cap biotech / industrials)
+
+| Ticker | Sub-sector | YoY Growth | Analyst Rating | Catalyst | Catalyst Date | Max Loss If Catalyst Fails | Notes |
+|---|---|---|---|---|---|---|---|
+| RIGL | Biotech | Positive (carried) | Hold-to-Buy | VEPPANU launch (resolved); next earnings ~Nov 3 | Resolved | Standard 7.5% cap | **Held position** (+17.3%). 3M +14.9pp, 6M +53.5pp rel., above both MAs |
+| ALNT | Industrials | Positive (carried) | Buy | STAN restructuring; grid/defense demand | Resolved | Standard 7.5% cap | 3M +22.0pp, 6M +36.3pp, above both MAs. -7.1% this week |
+| FEIM | Industrials | Positive (carried) | Moderate Buy | Record backlog, PNT contract wins | Resolved | Standard 7.5% cap | 3M +33.9pp, 6M +22.4pp, above both MAs. -12.7% this week — watch |
+| TH | Industrials | Guidance raised (carried) | Moderate Buy | ~$250M hyperscaler contract | Signed | Standard 7.5% cap | 3M +6.1pp, 6M +12.7pp, above both MAs |
+
+**Dropped this week:** XNCR (below 50-day MA; ESMO catalyst unverified —
+momentum gate requires above both MAs). **No new names sourced** (Gemini
+quota) — flagged.
+
+**2-strike sub-sector status:** biotech 0 strikes, industrials 0 strikes.
+
+## History
+
+### Week of 2026-10-02
+
 
 Eleventh weekly screen refresh (weekly-review workflow, run 2026-10-02).
 Full 503-name universe re-screened via fresh Alpaca bars (S&P 500 list from
@@ -255,7 +334,6 @@ unscreened; none qualify without verification.
 **2-strike sub-sector status:** biotech 0 strikes (cooldown lifted 09-25),
 industrials 0 strikes.
 
-## History
 
 ### Week of 2026-09-25
 
