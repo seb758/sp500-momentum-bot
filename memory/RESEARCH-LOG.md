@@ -8088,3 +8088,32 @@ Friday. Fresh cloud session; all 10 env vars present.
 - Risk sweep: no cuts, no tightens. AMD -1.77% (core, stop $592.67), CRWD +4.54%, HPE +16.47% (already 7% trail, stop $68.17), PANW +9.86%; RIGL +18.01% (sat, <+25%, no catalyst until ~Nov 3). All carry live GTC trailing stops; none moved down.
 - Friday review flags: fix Gemini model in scripts/gemini_research.sh; Income 42.9% vs 15% cap rebalance; EDGX/SPHY stops expire 10-13 (renew Monday); weekly screen refresh due.
 - Risky positions closed today: none.
+
+## 2026-10-10 — Pre-market Research
+
+Saturday - market closed; no trading window. Env vars all present.
+
+### Account
+- Equity: $96,276.03 | Cash: $11,246.89 (11.7%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $38,143 (39.6%: AMD -2.12%, CRWD +5.10%, HPE +17.01%, PANW +10.14%) | Satellite: $5,595 (5.8%: RIGL +17.30%) | Income: $41,292 (42.9%: EDGX +1.48%, SGOV -0.01%, SPHY -3.43%) - vs 15% cap, rebalance pending.
+- All positions carry live GTC trailing stops. SPHY $22.56 ~1.5% above stop $22.23. **EDGX/SPHY stop orders expire 2026-10-13 - renew Monday.**
+
+### Data-quality notes
+- **Gemini FAILED**: default `gemini-2.5-flash` HTTP 404 (retired); `gemini-3.8-flash` HTTP 429 (quota). Script default still needs owner update. Used Benzinga + WebSearch fallback.
+
+### Market Context (fallback)
+- Futures/VIX: no current reading found (gap - not invented). Last found (10-06): 10Y 5.34%, 30Y 5.70%, oil/inflation pressure.
+- Next week: Sep CPI Wed 10-14 (8:30 ET); Q3 earnings start ~10-13 (JPM, unconfirmed).
+- Held names: CRWD - Needham Buy PT $310; CRWD advised holders not to tender into Tutanota $260 mini-tender (no thesis impact). AMD/HPE/PANW/RIGL - no thesis-breaking news.
+
+### Core trade ideas
+- None: no verified research; market closed; core all-IT, yield risk.
+
+### Satellite trade ideas
+- None. Catalyst dates unconfirmed. RIGL held; next catalyst earnings ~Nov 3.
+
+### Risk factors
+- CPI 10-14, 10Y >5.3%, Iran headlines (gap risk; trailing stops don't cover gaps), Income 43% vs 15% cap, all-IT core, SPHY near stop, EDGX/SPHY stop expiry 10-13, Gemini outage.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email sent.
