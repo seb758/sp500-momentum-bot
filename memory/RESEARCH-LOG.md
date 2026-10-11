@@ -8117,3 +8117,32 @@ Saturday - market closed; no trading window. Env vars all present.
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email sent.
+
+## 2026-10-11 — Pre-market Research
+
+Sunday - market closed; no trading window. Env vars all present.
+
+### Account
+- Equity: $96,276.03 | Cash: $11,246.89 (11.7%; above 5% floor) | `account`/`positions`/`orders` clean; unchanged since Fri close.
+- Core: $38,143 (39.6%: AMD -2.12%, CRWD +5.10%, HPE +17.01%, PANW +10.14%) | Satellite: $5,595 (5.8%: RIGL +17.30%) | Income: $41,292 (42.9%: EDGX +1.48%, SGOV -0.01%, SPHY -3.43%) - vs 15% cap, rebalance pending.
+- All positions carry live GTC trailing stops. SPHY $22.56 ~1.5% above stop $22.23. **EDGX/SPHY stop orders expire 2026-10-13 - renew Monday.**
+
+### Data-quality notes
+- **Gemini FAILED** again: `gemini-2.5-flash` HTTP 404 (retired); script default still needs update to `gemini-3.8-flash`. Used Benzinga news only; no WebSearch figures captured.
+
+### Market Context (fallback)
+- Futures/VIX: not available (gap - not invented).
+- Week ahead (from prior logs): Sep CPI Wed 10-14; Q3 earnings start ~10-13 (unconfirmed).
+- Held names (Benzinga, 48h): CRWD advises holders not to tender into Tutanota $260 mini-tender (no thesis impact); AMD retail-buzz/whale-alert items only; HPE CNBC Halftime pick. PANW/RIGL - none. No thesis-breaking news.
+
+### Core trade ideas
+- None: no verified research; market closed; core all-IT, yield risk.
+
+### Satellite trade ideas
+- None. Catalyst dates unconfirmed. RIGL held; next catalyst earnings ~Nov 3.
+
+### Risk factors
+- CPI 10-14, 10Y >5.3%, Iran headlines (gap risk; trailing stops don't cover gaps), Income 43% vs 15% cap, all-IT core, SPHY near stop, EDGX/SPHY stop expiry 10-13, Gemini outage.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email sent.
