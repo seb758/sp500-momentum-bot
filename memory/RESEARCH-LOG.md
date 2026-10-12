@@ -8146,3 +8146,32 @@ Sunday - market closed; no trading window. Env vars all present.
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email sent.
+
+## 2026-10-12 — Pre-market Research
+
+Monday - trading day. Env vars all present.
+
+### Account
+- Equity: $96,368.30 (last_equity $96,276.03) | Cash: $11,246.89 (11.7%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $38,235 (39.7%: AMD -2.62%, CRWD +6.23%, HPE +17.17%, PANW +10.40%) | Satellite: $5,595 (5.8%: RIGL +17.30%) | Income: $41,292 (42.9%: EDGX +1.48%, SGOV 0%, SPHY -3.43%) - vs 15% cap, rebalance pending.
+- All positions carry live GTC trailing stops (SGOV 0.989-sh dust unstopped). SPHY $22.56 ~1.5% above stop $22.23. **EDGX/SPHY stop orders expire 2026-10-13 (tomorrow) - renew today.**
+
+### Data-quality notes
+- **Gemini FAILED**: `gemini-3.8-flash` override HTTP 429 (free-tier quota exhausted). WebSearch fallback returned nothing for 10-12 (no figures captured). Benzinga 24h: only an AMD/TSLA weekly roundup, no thesis news.
+
+### Market Context (fallback)
+- Futures/VIX: not available (gap - not invented).
+- Week ahead (prior logs, unconfirmed): Sep CPI Wed 10-14; Q3 earnings start ~10-13.
+- Held names: no thesis-breaking news for AMD/CRWD/HPE/PANW/RIGL.
+
+### Core trade ideas
+- None: no verified research; core all-IT, yield risk.
+
+### Satellite trade ideas
+- None. No catalyst-date confirmation available. RIGL held; next catalyst earnings ~Nov 3. Max loss on any new entry: standard 7.5% cap.
+
+### Risk factors
+- CPI 10-14, 10Y >5.3%, Iran headlines (gap risk; trailing stops don't cover gaps), Income 43% vs 15% cap, all-IT core, SPHY near stop, EDGX/SPHY stop expiry 10-13, Gemini outage.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email sent.
