@@ -8175,3 +8175,7 @@ Monday - trading day. Env vars all present.
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email sent.
+
+### 9:30 AM Session Note (2026-10-12)
+- HELD: no "### Approved Trades (verified)" list (Gemini outage), so no buys. Core 4/8 positions, 0 trades this week; satellite 1/5, 0 trades. Live check: cash $11,246.89 (11.7%), 8 positions, all with live GTC trailing stops (SGOV 0.989-sh dust unstopped).
+- **Rule conflict, owner decision needed:** EDGX/SPHY stop orders expire 2026-10-13 20:00Z. Cancel-then-replace resets the trail high-water mark to the current price, which would lower the stop. SPHY would go from $22.23 to about $21.41; EDGX from $25.98 to about $25.9. That conflicts with "never move a stop down". Not renewed at the open. Options: fixed GTC stops at the current levels ($22.23 / $25.9825), or accept the reset. Resolve at the 11am or 3pm window, or by owner instruction, before the 10-13 close.
