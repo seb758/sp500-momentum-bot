@@ -3541,3 +3541,19 @@ Risky positions closed: none.
 
 ### 2026-10-12 — SELL AMD (core)
 Shares: 15 | Exit: $593.63 | Realized P&L: -$414.75 (-4.45%) | Reason: stop hit (10% trailing GTC filled 13:33Z at open gap). Core now 3/8 positions; 0 new trades this week.
+
+## Oct 12 — 3pm Snapshot (Day 71, Monday)
+**Portfolio:** $94,665.31 | **Cash:** $20,151.34 (21.29%) | **Day P&L:** -$1,571.88 (-1.63%) | **Phase P&L:** -$5,334.69 (-5.33%)
+**Core exposure:** $27,693.85 (29.25% of equity) | **Satellite exposure:** $5,582.01 (5.90% of equity) | **Income exposure:** $41,237.46 (43.56% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| CRWD | core | 35 | $261.70 | $263.07 | -4.35% | +$47.95 (+0.52%) | 10% trailing ($258.291) |
+| HPE | core | 150 | $62.78 | $70.03 | -4.67% | +$1,087.50 (+11.55%) | 7% trailing ($68.4108) |
+| PANW | core | 20 | $380.23 | $399.095 | -4.70% | +$377.30 (+4.96%) | 10% trailing ($389.0925) |
+| RIGL | satellite | 114 | $41.84 | $48.965 | -0.23% | +$812.25 (+17.03%) | 15% trailing ($42.916) |
+| EDGX | income | 746 | $26.78 | $27.085 | -0.33% | +$227.68 (+1.14%) | 5% trailing ($25.9825) |
+| SGOV | income | 16.989473856 | $100.52 | $100.515 | +0.00% | -$0.08 (-0.00%) | 5% trailing ($95.6555, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.575 | +0.07% | -$671.96 (-3.36%) | 5% trailing ($22.23) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 3/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no closes by me (AMD stopped out at the open, -$414.75); no hard-cut breaches, no tightens needed (HPE already 7% trail). All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped, immaterial). RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). CRWD ~1.8% above stop - watch. EDGX/SPHY stop orders expire 2026-10-13 20:00Z; trail-reset vs never-move-down conflict still unresolved, needs owner call. Flags: Cash 21.3%, Core+Sat ~35% deployed, Income 43.6% vs 15% cap. Trades today: none (AMD stop fill). Risky positions closed: none.
