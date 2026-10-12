@@ -8186,3 +8186,10 @@ Monday - trading day. Env vars all present.
 - Risk sweep: CRWD +1.5%, HPE +11.9% (7% trail), PANW +6.9%, RIGL +17.3% - no cuts, no tightens, no thesis breaks. Gemini not used.
 - Still open: EDGX/SPHY stop orders expire 2026-10-13 20:00Z; trail-reset vs "never move a stop down" conflict unresolved. Not touched at 11am; resolve at 3pm (fixed GTC stops at current levels is the safer fit).
 - Pattern: Core+Sat deployment now ~34% and Gemini outage is blocking approved lists; flag for Friday review (cash-heavy is a bug per Patience Rule).
+
+### 3 PM Session Note (2026-10-12)
+- HELD: no "### Approved Trades (verified)" list (Gemini outage), so no buys. Core 3/8 positions, 0 trades this week; satellite 1/5, 0 trades.
+- Risk sweep: no hard-cut breaches, no tightens (HPE +11.5% already on 7% trail; RIGL +17.0%; CRWD +0.5%, PANW +5.0%). All have live GTC trailing stops. RIGL: no catalyst within 1-2 days (earnings ~Nov 3).
+- Pattern: broad IT selloff today (CRWD/HPE/PANW -4.4% to -4.7%); CRWD stop 1.8% away, gap-risk. Cash 21.3% idle + Gemini outage blocking approved lists - flag for Friday review.
+- OPEN, needs owner/9:30 decision tomorrow: EDGX/SPHY stop orders expire 2026-10-13 20:00Z; trail-reset would lower stops (conflict with never-move-down). Not touched at 3pm.
+- Risky positions closed today: AMD (core, trailing stop filled at open gap, -4.45%).
