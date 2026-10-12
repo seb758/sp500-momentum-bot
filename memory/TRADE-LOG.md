@@ -3538,3 +3538,6 @@ Risky positions closed: none.
 | SPHY | income | 856 | $23.36 | $22.5546 | +0.07% | -$689.42 (-3.45%) | 5% trailing ($22.23) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 4/8 positions, 0/8 trades this week; satellite 1/5 positions, 0/5 trades. Risk sweep: no closes, no tightens; no hard-cut breaches. HPE +16.47% already on 7% trail (stop ~6.8% below price); none moved down. All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped, immaterial). RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). SPHY ~1.4% above stop - watch; EDGX/SPHY stop orders expire 2026-10-13, renew. Flags: Income 42.92% vs 15% cap, Core+Sat deployment ~45% - weekly-review rebalance. Trades today: none. Risky positions closed: none.
+
+### 2026-10-12 — SELL AMD (core)
+Shares: 15 | Exit: $593.63 | Realized P&L: -$414.75 (-4.45%) | Reason: stop hit (10% trailing GTC filled 13:33Z at open gap). Core now 3/8 positions; 0 new trades this week.

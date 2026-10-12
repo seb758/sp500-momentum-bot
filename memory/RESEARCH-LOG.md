@@ -8179,3 +8179,10 @@ Monday - trading day. Env vars all present.
 ### 9:30 AM Session Note (2026-10-12)
 - HELD: no "### Approved Trades (verified)" list (Gemini outage), so no buys. Core 4/8 positions, 0 trades this week; satellite 1/5, 0 trades. Live check: cash $11,246.89 (11.7%), 8 positions, all with live GTC trailing stops (SGOV 0.989-sh dust unstopped).
 - **Rule conflict, owner decision needed:** EDGX/SPHY stop orders expire 2026-10-13 20:00Z. Cancel-then-replace resets the trail high-water mark to the current price, which would lower the stop. SPHY would go from $22.23 to about $21.41; EDGX from $25.98 to about $25.9. That conflicts with "never move a stop down". Not renewed at the open. Options: fixed GTC stops at the current levels ($22.23 / $25.9825), or accept the reset. Resolve at the 11am or 3pm window, or by owner instruction, before the 10-13 close.
+
+### 11 AM Session Note (2026-10-12)
+- HELD: no "### Approved Trades (verified)" list (Gemini outage), so no buys. Core 3/8 positions, 0 trades this week; satellite 1/5, 0 trades.
+- AMD 10% trailing stop filled at $593.63 (15 sh, -$414.75, -4.45%) at the open; logged to TRADE-LOG. Cash now $20,151 (21.2%). Income already over its 15% cap, so no sweep; cash sits idle until a verified buy list exists.
+- Risk sweep: CRWD +1.5%, HPE +11.9% (7% trail), PANW +6.9%, RIGL +17.3% - no cuts, no tightens, no thesis breaks. Gemini not used.
+- Still open: EDGX/SPHY stop orders expire 2026-10-13 20:00Z; trail-reset vs "never move a stop down" conflict unresolved. Not touched at 11am; resolve at 3pm (fixed GTC stops at current levels is the safer fit).
+- Pattern: Core+Sat deployment now ~34% and Gemini outage is blocking approved lists; flag for Friday review (cash-heavy is a bug per Patience Rule).
