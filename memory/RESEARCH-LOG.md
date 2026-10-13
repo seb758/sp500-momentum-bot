@@ -8223,3 +8223,8 @@ Tuesday - trading day. Env vars all present.
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. Urgent email sent re stop expiry.
+
+### 9:30 AM Session Note
+- HELD: no "### Approved Trades (verified)" list (Gemini outage) - no buys, per rule never trade without documented research.
+- HPE stopped out at open (150 @ $67.59, +$721.50). Cash $30.3k (~32%); core now CRWD, PANW only.
+- Flag for Friday: Gemini model retired (404) + quota; fix script. EDGX/SPHY stops expire today 20:00Z, still need owner call. Two core stop-outs in 2 days on gap-downs.

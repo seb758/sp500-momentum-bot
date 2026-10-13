@@ -3557,3 +3557,6 @@ Shares: 15 | Exit: $593.63 | Realized P&L: -$414.75 (-4.45%) | Reason: stop hit 
 | SPHY | income | 856 | $23.36 | $22.575 | +0.07% | -$671.96 (-3.36%) | 5% trailing ($22.23) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 3/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no closes by me (AMD stopped out at the open, -$414.75); no hard-cut breaches, no tightens needed (HPE already 7% trail). All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped, immaterial). RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). CRWD ~1.8% above stop - watch. EDGX/SPHY stop orders expire 2026-10-13 20:00Z; trail-reset vs never-move-down conflict still unresolved, needs owner call. Flags: Cash 21.3%, Core+Sat ~35% deployed, Income 43.6% vs 15% cap. Trades today: none (AMD stop fill). Risky positions closed: none.
+
+### 2026-10-13 — SELL HPE (core)
+Shares: 150 | Exit: $67.59 | Realized P&L: +$721.50 (+7.66%) | Reason: stop hit (7% trailing GTC filled 13:31Z at open gap). Core now 3/8 positions (CRWD, PANW + none new); 0 new trades this week.
