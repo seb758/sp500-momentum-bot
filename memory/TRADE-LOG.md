@@ -3560,3 +3560,18 @@ Shares: 15 | Exit: $593.63 | Realized P&L: -$414.75 (-4.45%) | Reason: stop hit 
 
 ### 2026-10-13 — SELL HPE (core)
 Shares: 150 | Exit: $67.59 | Realized P&L: +$721.50 (+7.66%) | Reason: stop hit (7% trailing GTC filled 13:31Z at open gap). Core now 3/8 positions (CRWD, PANW + none new); 0 new trades this week.
+
+## Oct 13 — 3pm Snapshot (Day 72, Tuesday)
+**Portfolio:** $94,007.41 | **Cash:** $30,289.64 (32.22%) | **Day P&L:** -$657.90 (-0.69%) | **Phase P&L:** -$5,992.59 (-5.99%)
+**Core exposure:** $17,186.90 (18.28% of equity) | **Satellite exposure:** $5,399.61 (5.74% of equity) | **Income exposure:** $41,131.26 (43.75% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| CRWD | core | 35 | $261.70 | $262.00 | -0.38% | +$10.50 (+0.12%) | 10% trailing ($258.291) |
+| PANW | core | 20 | $380.23 | $400.845 | -0.74% | +$412.30 (+5.42%) | 10% trailing ($389.0925) |
+| RIGL | satellite | 114 | $41.84 | $47.365 | -2.96% | +$629.85 (+13.21%) | 15% trailing ($42.916) |
+| EDGX | income | 746 | $26.78 | $27.0001 | -0.33% | +$164.19 (+0.82%) | 5% trailing ($25.9825) |
+| SGOV | income | 16.989473856 | $100.52 | $100.5201 | 0.00% | +$0.00 (0.00%) | 5% trailing ($95.6555, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.525 | -0.29% | -$714.76 (-3.57%) | 5% trailing ($22.23) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 2/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no closes (HPE stopped out at open earlier, +$721.50); no hard-cut breaches, no tightens. All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped, immaterial); none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). CRWD ~1.4% above stop - gap risk. URGENT: EDGX/SPHY stop orders expire today 20:00Z - ~$39.4k unprotected overnight pending owner call. Flags: Cash 32.2%, Core+Sat ~24% deployed, Income 43.75% vs 15% cap. Trades today: none (HPE stop fill). Risky positions closed: none.
