@@ -3578,3 +3578,6 @@ Shares: 150 | Exit: $67.59 | Realized P&L: +$721.50 (+7.66%) | Reason: stop hit 
 
 ### 2026-10-14 — SELL PANW (core)
 Shares: 20 | Exit: $373.36 | Realized P&L: -$137.40 (-1.81%) | Reason: stop hit (10% trailing GTC filled 13:31Z at open gap, CPI day). Core now 1/8 positions (CRWD); 0 new trades this week.
+
+### 2026-10-14 — SELL CRWD (core)
+Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit (10% trailing GTC filled 13:32Z at open gap, CPI day). Core now 0/8 positions; 0 new trades this week.
