@@ -8280,3 +8280,9 @@ Wednesday - trading day. Env vars all present.
 - HELD, no buys: no "### Approved Trades (verified)" list (Gemini outage). Core 0/8, satellite 1/5; 0 new trades this week.
 - CRWD also stopped out at open gap ($250.76, -$382.92, -4.18%); Core now fully in cash. No hard-cut breaches; RIGL +14.0% (below +25% tighten), catalyst intact (earnings ~Nov 3), stop live.
 - Flags for Friday: EDGX/SPHY stops still missing (~$39k unprotected, owner call pending); cash ~50% (equity $92.9k), Income 43% vs 15% cap; both CPI-day core stops filled at gap.
+
+### 3 PM Session Note
+- HELD: no "### Approved Trades (verified)" list (Gemini outage) - no buys. Core 0/8, satellite 1/5 (RIGL +10.9%, stop live), 0 trades this week. Cash $46.5k (50.2%).
+- Risk sweep: placed new 5% trailing GTC stops on EDGX ($25.346) and SPHY ($21.332) - were unprotected after expiry; new orders, nothing moved down. No tightens.
+- Friday: core stopped out twice on CPI gap-downs, 0% core, Income 44% vs 15% cap, fix Gemini.
+- Risky positions closed today: none.

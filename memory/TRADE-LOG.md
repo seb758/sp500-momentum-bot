@@ -3581,3 +3581,16 @@ Shares: 20 | Exit: $373.36 | Realized P&L: -$137.40 (-1.81%) | Reason: stop hit 
 
 ### 2026-10-14 — SELL CRWD (core)
 Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit (10% trailing GTC filled 13:32Z at open gap, CPI day). Core now 0/8 positions; 0 new trades this week.
+
+## Oct 14 — 3pm Snapshot (Day 73, Wednesday)
+**Portfolio:** $92,655.75 | **Cash:** $46,533.29 (50.22%) | **Day P&L:** -$1,351.66 (-1.44%, vs Oct 13 3pm) | **Phase P&L:** -$7,344.25 (-7.34%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,289.60 (5.71% of equity) | **Income exposure:** $40,833.00 (44.07% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $46.40 | -1.57% | +$519.84 (+10.90%) | 15% trailing ($42.916) |
+| EDGX | income | 746 | $26.78 | $26.68 | -1.33% | -$74.60 (-0.37%) | 5% trailing ($25.346, NEW) |
+| SGOV | income | 16.989473856 | $100.52 | $100.535 | 0.00% | +$0.25 (+0.00%) | 5% trailing ($95.6555, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.455 | -0.33% | -$774.68 (-3.87%) | 5% trailing ($21.33225, NEW) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 (PANW, CRWD stopped out at open gap on CPI), 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches; RIGL no catalyst within 1-2 days (earnings ~Nov 3). EDGX/SPHY had NO stop (expired 10-13): per the no-stop-overnight rule, placed fresh 5% trailing GTC stops on both (new orders, no existing stop moved down; expire 2027-01-12). Flags: Cash 50.2%, Core 0%, Income 44.07% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none (2 stop fills + 2 new Income stops). Risky positions closed: none.
