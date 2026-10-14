@@ -8240,3 +8240,33 @@ Tuesday - trading day. Env vars all present.
 - Risk sweep: no hard-cut breaches (CRWD +0.12%, PANW +5.42%, RIGL +13.2%); no tightens (below +15%/+25%). All positions carry live GTC trailing stops, none moved down. RIGL: no catalyst within 1-2 days (earnings ~Nov 3). CRWD ~1.4% above stop (gap risk).
 - OPEN/URGENT: EDGX/SPHY stops expire today 20:00Z; ~$39.4k (42% of equity) unprotected overnight unless owner decides on renewal (trail-reset vs never-move-down). Not renewed by bot (duplicate qty would be rejected before expiry).
 - Risky positions closed today: none (HPE stopped out at open).
+
+## 2026-10-14 — Pre-market Research
+
+Wednesday - trading day. Env vars all present.
+
+### Account
+- Equity: $93,782.10 (last_equity $93,911.63) | Cash: $30,289.42 (32.3%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $16,953 (18.1%: CRWD -1.05%, PANW +3.75%) | Satellite: $5,374 (5.7%: RIGL +12.67%) | Income: $41,165 (43.9%: EDGX +0.97%, SGOV 0%, SPHY -3.55%) - vs 15% cap, rebalance pending.
+- **EDGX and SPHY trailing stops are GONE from open orders (expired 10-13 20:00Z). ~$39.5k (42% of equity) unprotected; owner call on trail-reset vs never-move-down still unresolved.**
+- **CRWD $258.95 is only ~0.26% above its stop $258.29 (hwm 286.99); stop-out risk at open.** PANW $394.50 ~1.4% above stop $389.09. RIGL stop $42.92 (~9% below).
+- Remaining live GTC trailing stops: CRWD, PANW, RIGL, SGOV (16 sh).
+
+### Data-quality notes
+- **Gemini FAILED again**: default model HTTP 404 (retired), gemini-3.8-flash override HTTP 429 (quota). WebSearch fallback only; no same-day futures/VIX found (gap - not invented). Benzinga 24h: BTIG CRWD Buy PT $312 (10-14), Wells Fargo PTs raised CRWD $300 / PANW $525 (10-13). No thesis-breaking news for CRWD/PANW/RIGL.
+
+### Market Context (fallback data)
+- Futures/VIX: not available.
+- Sep CPI releases today 8:30 ET (forecast headline ~3.6-3.7% y/y vs 3.4% prior; core ~2.4%). Hot print raises odds of another Fed hike at Oct 27-28 FOMC. Hormuz/oil headlines pushing inflation expectations (WebSearch, unverified).
+
+### Core trade ideas
+- None: no verified research (Gemini down), CPI event risk, all-IT core.
+
+### Satellite trade ideas
+- None. No catalyst confirmation possible. RIGL held; next catalyst earnings ~Nov 3 (not within 5 days). Max loss on any new entry: standard 7.5% cap.
+
+### Risk factors
+- CPI today (gap risk, trailing stops don't cover gaps), CRWD ~0.3% from stop, EDGX/SPHY unprotected, Income 43.9% vs 15% cap, Gemini outage.
+
+### Decision: HOLD
+- No hard-cut breaches (CRWD -1.05%); no catalyst resolved negatively. Urgent email sent re unprotected income positions / CRWD near stop.
