@@ -8275,3 +8275,8 @@ Wednesday - trading day. Env vars all present.
 - HELD, no buys: no "### Approved Trades (verified)" list (Gemini outage), nothing on watchlist plan.
 - PANW stopped out at open gap ($373.36, -$137.40) on CPI day; CRWD still open near stop ($250.18 vs stop $258.29 - stop pending/gap-through risk, order status "new"). Core 1/8, satellite 1/5.
 - Flag for Friday: EDGX/SPHY stops still missing (~$39k unprotected); Income ~44% vs 15% cap.
+
+### 11 AM Session Note
+- HELD, no buys: no "### Approved Trades (verified)" list (Gemini outage). Core 0/8, satellite 1/5; 0 new trades this week.
+- CRWD also stopped out at open gap ($250.76, -$382.92, -4.18%); Core now fully in cash. No hard-cut breaches; RIGL +14.0% (below +25% tighten), catalyst intact (earnings ~Nov 3), stop live.
+- Flags for Friday: EDGX/SPHY stops still missing (~$39k unprotected, owner call pending); cash ~50% (equity $92.9k), Income 43% vs 15% cap; both CPI-day core stops filled at gap.
