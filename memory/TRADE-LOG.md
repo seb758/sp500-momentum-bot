@@ -3575,3 +3575,6 @@ Shares: 150 | Exit: $67.59 | Realized P&L: +$721.50 (+7.66%) | Reason: stop hit 
 | SPHY | income | 856 | $23.36 | $22.525 | -0.29% | -$714.76 (-3.57%) | 5% trailing ($22.23) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 2/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no closes (HPE stopped out at open earlier, +$721.50); no hard-cut breaches, no tightens. All carry live GTC trailing stops (SGOV 0.989-sh dust unstopped, immaterial); none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). CRWD ~1.4% above stop - gap risk. URGENT: EDGX/SPHY stop orders expire today 20:00Z - ~$39.4k unprotected overnight pending owner call. Flags: Cash 32.2%, Core+Sat ~24% deployed, Income 43.75% vs 15% cap. Trades today: none (HPE stop fill). Risky positions closed: none.
+
+### 2026-10-14 — SELL PANW (core)
+Shares: 20 | Exit: $373.36 | Realized P&L: -$137.40 (-1.81%) | Reason: stop hit (10% trailing GTC filled 13:31Z at open gap, CPI day). Core now 1/8 positions (CRWD); 0 new trades this week.
