@@ -8286,3 +8286,33 @@ Wednesday - trading day. Env vars all present.
 - Risk sweep: placed new 5% trailing GTC stops on EDGX ($25.346) and SPHY ($21.332) - were unprotected after expiry; new orders, nothing moved down. No tightens.
 - Friday: core stopped out twice on CPI gap-downs, 0% core, Income 44% vs 15% cap, fix Gemini.
 - Risky positions closed today: none.
+
+## 2026-10-15 — Pre-market Research
+
+Thursday - trading day. Env vars all present.
+
+### Account
+- Equity: $92,548.40 (last_equity $92,751.24) | Cash: $46,532.94 (50.3%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $0 (0%, 0/8) | Satellite: $5,152 (5.6%: RIGL +8.0%, 3.5% down yday) | Income: $40,864 (44.2%: EDGX -0.11%, SGOV +0.02%, SPHY -3.98%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92, ~5% below price), EDGX 5% ($25.41), SPHY 5% ($21.34), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED again**: default model HTTP 404 (retired). WebSearch fallback found no same-day futures/VIX/PPI/retail-sales data (gap - not invented). Benzinga 24h used for ticker news.
+
+### Market Context (fallback data)
+- Futures/VIX: not available.
+- Indices ended lower Wed (Dow -0.09% to 51,621). Hot Sep CPI, AI-financing concerns, OpenAI revenue reset weigh on tech (Benzinga). Rate-hike odds for Oct 27-28 FOMC elevated (WebSearch, older data).
+- Held: no RIGL news in 24h; no thesis-breaking news for EDGX/SGOV/SPHY.
+- Watchlist: MU -4% pre-mkt (down ~25% from peak; China competition, AI weakness); DELL -11% Wed on Barclays downgrade; AMD falling on CPI/AI-financing worries. Tech weakness broad.
+
+### Core trade ideas
+- None: no verified research (Gemini down), tech sell-off, rate/inflation risk.
+
+### Satellite trade ideas
+- None. No catalyst confirmation possible. RIGL held; next catalyst earnings ~Nov 3 (not within 5 days). ALNT/FEIM/TH catalysts resolved/signed, none within 5 days. Max loss on any new entry: standard 7.5% cap.
+
+### Risk factors
+- Gap risk (trailing stops don't cover gaps), tech weakness, FOMC hike risk, Income 44% vs 15% cap, Gemini outage, 0% core deployed, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
