@@ -8316,3 +8316,8 @@ Thursday - trading day. Env vars all present.
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+### 9:30 AM Session Note (2026-10-15)
+- HELD - no buys. Pre-market research = HOLD (no core/satellite ideas; Gemini still down, no verified catalysts). Equity $92,826, cash $46,533 (50.1%).
+- Live check: RIGL (satellite) $47.47 +13.5%, stop $42.92 intact; EDGX/SPHY/SGOV stops live. Core 0/8, 0 trades this week; satellite 1/5, 0 trades.
+- Flag for Friday: Gemini default model 404 (retired) - fix script model; Income 44% vs 15% cap needs rebalance; core 0% deployed.
