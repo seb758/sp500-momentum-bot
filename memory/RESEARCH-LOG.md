@@ -8332,3 +8332,33 @@ Thursday - trading day. Env vars all present.
 - Risk sweep: no hard-cut breaches, all stops live (EDGX $25.41, SPHY $21.41, SGOV 16 sh $95.66), no tightens (RIGL below +25%); no catalyst within 1-2 days (earnings ~Nov 3).
 - Friday: core 0% deployed, Income 44% vs 15% cap, Gemini model 404 needs fix.
 - Risky positions closed today: none.
+
+## 2026-10-16 — Pre-market Research
+
+Friday - trading day. Env vars all present.
+
+### Account
+- Equity: $92,900.28 (last_equity $92,891.29) | Cash: $46,532.94 (50.1%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $0 (0%, 0/8) | Satellite: $5,386.50 (5.8%: RIGL +12.9%) | Income: $40,981 (44.1%: EDGX flat, SGOV flat, SPHY -3.5%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92), EDGX 5% ($25.46), SPHY 5% ($21.41), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED again**: HTTP 404 (gemini-2.5-flash retired; script default unchanged). WebSearch fallback returned no dated 10-16 futures/VIX (gap - not invented). Benzinga 24h feed used for ticker news.
+
+### Market Context (fallback data)
+- Futures/VIX: not available.
+- Benzinga: Thu 10-15 Dow >52,000 while chips bled on hot-inflation / Fed rate-hike bets; SOXX 8-session losing streak; memory makers (MU, SNDK, SK Hynix) lost ~$1T since Oct 2; AI-financing fears. DELL fell on Barclays downgrade. TSMC Q3 rev $46.7B, AI demand > supply (10-16 AM).
+- Held: no RIGL/EDGX/SPHY/SGOV news in 24h; no thesis breaks.
+- Watchlist: tech/semis weak (MU, AMD, DELL); no news on satellite ALNT/FEIM/TH.
+
+### Core trade ideas
+- None: no verified research (Gemini down), semis/tech sell-off, rate-hike risk.
+
+### Satellite trade ideas
+- None. No catalyst confirmation possible. RIGL held; next catalyst earnings ~Nov 3 (not within 5 days). ALNT/FEIM/TH catalysts resolved/signed, none within 5 days. Max loss on any new entry: standard 7.5% cap.
+
+### Risk factors
+- Gap risk (trailing stops don't cover gaps), semis drawdown, FOMC Oct 27-28 hike risk, Income 44% vs 15% cap, Gemini outage (set GEMINI_RESEARCH_MODEL / fix script default), 0% core deployed, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
