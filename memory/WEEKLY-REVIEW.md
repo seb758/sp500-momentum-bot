@@ -2342,3 +2342,91 @@ Exposure (equity $96,243.99): core $38,110.40 (39.6%), satellite $5,595.12
 Matched the S&P and held all winners with no stop-outs, but the third straight
 week of sub-60% deployment, an Income-cap breach, and research tooling still
 down keep this from a higher grade.
+
+---
+
+## Week ending 2026-10-16
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $96,243.99 (per 10-09 review) |
+| Ending portfolio | $92,416.36 |
+| Week return | -$3,827.63 (-3.98%) |
+| S&P 500 week | -0.87% (SPY close 10-09 $778.57 -> 10-15 $771.79; Gemini unavailable, computed from Alpaca; 10-16 daily bar not yet served) |
+| Bot vs S&P | -3.11pp |
+| Core trades | 4 closed, 0 new entries (W:1 / L:3) |
+| Satellite trades | 0 (RIGL held; open:1) |
+| Win rate | 25% (1 of 4 closed) |
+| Best trade | HPE +7.66% / +$721.50 (core, stopped) |
+| Worst trade | AMD -4.45% / -$414.75 (core, stopped); worst open: SPHY -3.93% (income) |
+| Profit factor | 0.77 (gross win $721.50 / gross loss $935.07) |
+
+Phase P&L: -7.58% vs $100k start. Realized net on closed trades: -$213.57.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| AMD | core | $621.28 | $593.63 | -$414.75 (-4.45%) | 10% trail, open gap 10-12 |
+| HPE | core | $62.78 | $67.59 | +$721.50 (+7.66%) | 7% trail, open gap 10-13 (was +16.9% at 10-09) |
+| PANW | core | $380.23 | $373.36 | -$137.40 (-1.81%) | 10% trail, open gap 10-14 (CPI) |
+| CRWD | core | $261.70 | $250.76 | -$382.92 (-4.18%) | 10% trail, open gap 10-14 (CPI) |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| RIGL | satellite | $41.84 | $45.97 | +$470.82 (+9.87%) | 15% trailing ($42.916) |
+| EDGX | income | $26.78 | $26.43 | -$261.10 (-1.31%) | 5% trailing |
+| SGOV | income | $100.52 | $100.58 | +$1.07 (+0.06%) | 5% trailing |
+| SPHY | income | $23.36 | $22.45 | -$778.96 (-3.90%) | 5% trailing |
+
+Exposure (equity $92,416.36): core $0 (0%), satellite $5,240.58 (5.7%),
+income $40,642.83 (44.0%), cash $46,532.94 (50.4%).
+
+### Watchlist Refresh
+- Core: 0 added by screen, MSFT promoted from alternates (FMP A-); 7 dropped:
+  DELL, HPE, PANW, MU, HOOD (below 50-day MA), WST, ABBV (HC sector cap ->
+  alternates). 12 names. Fundamentals for retained names carried (Gemini
+  429/404, FMP 402 wall).
+- Satellite: 0 added, 3 dropped (ALNT, FEIM, TH — below 50-day MA). 1 name
+  (RIGL). No catalyst sourcing possible (Gemini down).
+- **Core sector mix (12):** IT 4 (P, CRWD, AMD, MSFT = 33%), Health Care 5
+  (VEEV, RVTY, IQV, A, TMO = 42%), Energy 3 (MPC, VLO, PSX = 25%) - 3 sectors.
+
+### What Worked
+- Trailing stops did their job in a sharp tech/AI selloff: all four core exits
+  were small (-1.8% to -4.5%) or a locked gain (HPE +7.7%); no hard-cut
+  breaches; RIGL held +9.9%.
+- Momentum gate pruned fading names (DELL, HPE, MU, PANW, ALNT, FEIM, TH).
+
+### What Didn't Work
+- **Deployment malfunction flag (Patience Rule), 4th consecutive week:** Core
+  0%, Core+Sat 5.7% of equity; cash 50.4%, Income 44.0% vs 15% cap. Zero new
+  entries again - no "Approved Trades (verified)" list (Gemini outage ~3
+  weeks).
+- Sequence of gap-open stop-outs (10-12 to 10-14) cost -$935 on three losers;
+  stops cannot protect against open gaps (known).
+- Underperformed S&P by 3.1pp; ~half the book is cash/Income that earns little
+  and SPHY -3.9% drags.
+- Gemini still 404/429; FMP 402 on nearly all names.
+
+### Key Lessons
+- Tech/AI-hardware concentration (4 of 4 core names in IT) turned a sector
+  selloff into a fully-flat core in 3 sessions; the sector-cap rule counted
+  IT at 39% of names but held positions were 100% IT.
+- The single-provider Gemini gate has now idled deployment for weeks; losing
+  the gate is costing opportunity as well as risk.
+
+### Adjustments for Next Week
+- Owner action (repeat): restore Gemini quota + set default model to a live
+  one (gemini-3.8-flash in scripts/gemini_research.sh line 56), and authorize
+  Income rebalance (trim SPHY/EDGX to 15% cap) and/or a WebSearch-based
+  approval fallback so Core can redeploy.
+- Watchlist now diversified toward Health Care/Energy; when buys resume,
+  prefer non-IT names first to avoid re-concentrating in one sector.
+- Re-run satellite sourcing once Gemini returns.
+- No rule or risk-cap changes (stops behaved as designed).
+
+### Overall Grade: C-
+Stops contained losses, but -4.0% vs S&P -0.9%, core fully stopped out with
+no redeployment path, and research tooling still down.
