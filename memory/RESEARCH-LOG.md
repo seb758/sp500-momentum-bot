@@ -8362,3 +8362,8 @@ Friday - trading day. Env vars all present.
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+### 9:30 AM Session Note
+- HELD: no "### Approved Trades (verified)" list in today's research (Gemini outage) - no buys, no orders placed.
+- Live check: equity $92,811 | cash $46,533 (50.1%) | Core 0/8, Satellite 1/5 (RIGL +12.7%), Income ~44% vs 15% cap. Stops intact.
+- Flag for Friday review: fix Gemini script default model (404) and Income-cap rebalance still pending.
