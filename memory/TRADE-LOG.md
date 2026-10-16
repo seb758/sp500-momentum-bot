@@ -3607,3 +3607,16 @@ Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit
 | SPHY | income | 856 | $23.36 | $22.53 | +0.36% | -$710.48 (-3.55%) | 5% trailing ($21.413) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +13.15% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). Flags: Cash 50.1%, Core 0%, Income 44.09% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
+
+## Oct 16 — 3pm Snapshot (Day 75, Friday)
+**Portfolio:** $92,427.27 | **Cash:** $46,532.94 (50.35%) | **Day P&L:** -$444.28 (-0.48%, vs Oct 15 3pm) | **Phase P&L:** -$7,572.73 (-7.57%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,243.99 (5.67% of equity) | **Income exposure:** $40,650.34 (43.98% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $45.9999 | -2.65% | +$474.23 (+9.94%) | 15% trailing ($42.916) |
+| EDGX | income | 746 | $26.78 | $26.45 | -1.23% | -$246.18 (-1.23%) | 5% trailing ($25.46) |
+| SGOV | income | 16.989473856 | $100.52 | $100.59 | +0.04% | +$1.19 (+0.07%) | 5% trailing ($95.6555, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.4412 | -0.39% | -$786.49 (-3.93%) | 5% trailing ($21.413) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +9.94% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). Flags: Cash 50.4%, Core 0%, Income 43.98% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
