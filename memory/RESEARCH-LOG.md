@@ -8367,3 +8367,8 @@ Friday - trading day. Env vars all present.
 - HELD: no "### Approved Trades (verified)" list in today's research (Gemini outage) - no buys, no orders placed.
 - Live check: equity $92,811 | cash $46,533 (50.1%) | Core 0/8, Satellite 1/5 (RIGL +12.7%), Income ~44% vs 15% cap. Stops intact.
 - Flag for Friday review: fix Gemini script default model (404) and Income-cap rebalance still pending.
+
+### 11 AM Session Note (2026-10-16)
+- HELD: no "### Approved Trades (verified)" list (Gemini outage) - no buys. Equity $92,779 | cash $46,533 (50.2%) | Core 0/8, satellite 1/5 (RIGL +11.3%, 15% trail $42.92 live), 0 trades this week.
+- Risk sweep: no hard-cut breaches, no tightens (RIGL below +25%), no thesis breaks (earnings ~Nov 3). Income stops live (EDGX $25.46, SPHY $21.41, SGOV 16 sh $95.66).
+- Friday review: fix Gemini model 404; Income 44% vs 15% cap rebalance pending.
