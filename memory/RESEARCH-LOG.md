@@ -8378,3 +8378,32 @@ Friday - trading day. Env vars all present.
 - Risk sweep: no hard-cut breaches, no tightens (RIGL below +25%), all positions carry live GTC trailing stops (SGOV 0.989-sh dust unstopped), no thesis breaks; RIGL earnings ~Nov 3 (not within 1-2 days).
 - Friday review: Gemini model 404 fix; Income 44% vs 15% cap rebalance; 0% core deployed.
 - Risky positions closed today: none.
+
+## 2026-10-17 — Pre-market Research
+
+Saturday - market closed; no orders possible until Mon 10-19. Env vars all present.
+
+### Account
+- Equity: $92,416.47 | Cash: $46,532.94 (50.4%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $0 (0%, 0/8) | Satellite: $5,240.58 (5.7%: RIGL +9.9%) | Income: $40,642.95 (44.0%: EDGX -1.3%, SGOV flat, SPHY -3.9%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92), EDGX 5% ($25.46), SPHY 5% ($21.41), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash HTTP 404 (retired; message points to gemini-3.8-flash). Retry with GEMINI_RESEARCH_MODEL=gemini-3.8-flash -> HTTP 429 (free-tier quota exhausted). Script default still needs fixing.
+- WebSearch fallback: no 10-16 close, futures or VIX found (gap - not invented). Benzinga 48h feed: no news for RIGL/EDGX/SPHY/SGOV.
+
+### Market Context (fallback data)
+- Futures/VIX: not available (weekend).
+- Last verified close found: Fri 10-09 S&P 500 7,811.54 (+0.6%), 10Y 5.24%. Prior notes (10-16): semis sell-off, rate-hike risk, FOMC Oct 27-28.
+
+### Core trade ideas
+- None: no verified research (Gemini down), market closed.
+
+### Satellite trade ideas
+- None. RIGL held; next catalyst earnings ~Nov 3 (not within 5 days). No catalyst confirmation possible.
+
+### Risk factors
+- Gap risk over weekend/Monday open, FOMC hike risk, Income 44% vs 15% cap, Gemini outage/quota, 0% core deployed, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
