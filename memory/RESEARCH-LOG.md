@@ -8465,3 +8465,8 @@ Monday. Env vars all present.
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+### 9:30 AM Session Note (2026-10-19)
+- HELD, no buys: pre-market logged no verified Core/Satellite ideas (Gemini 404/429 outage), so nothing on the plan to execute. Core 0/8, 0/8 trades this week; satellite 1/5 (RIGL), 0/5.
+- Live check 13:32Z: equity $92,575, cash $46,533 (50.3%); RIGL +10.5%, EDGX -0.7%, SPHY -3.9%, SGOV flat. All live GTC trailing stops intact, none breached.
+- Flag for review: Gemini outage leaves 0% core deployed and Income ~44% vs 15% cap; needs a fixed GEMINI_RESEARCH_MODEL / quota before the watchlist can yield approved trades.
