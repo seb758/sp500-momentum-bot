@@ -8436,3 +8436,32 @@ Sunday - market closed; no orders possible until Mon 10-19. Env vars all present
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+## 2026-10-19 — Pre-market Research
+
+Monday. Env vars all present.
+
+### Account
+- Equity: $92,416.47 | Cash: $46,532.94 (50.4%; above 5% floor) | `account`/`positions`/`orders` clean (balance as of 10-16 close).
+- Core: $0 (0%, 0/8) | Satellite: $5,240.58 (5.7%: RIGL +9.9%) | Income: $40,642.95 (44.0%: EDGX -1.3%, SGOV flat, SPHY -3.9%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92), EDGX 5% ($25.46), SPHY 5% ($21.41), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash HTTP 404 (retired); GEMINI_RESEARCH_MODEL=gemini-3.8-flash HTTP 429 (quota exhausted). Script default still needs fixing.
+- WebSearch fallback: no Oct 19 2026 futures/VIX found (only undated/older pages) - gap, not invented. Benzinga 72h feed: no news for RIGL/EDGX/SPHY/SGOV.
+
+### Market Context (fallback data)
+- Futures/VIX: not available.
+- Last notes (10-16): tech/AI-hardware sell-off, rate-hike risk, FOMC Oct 27-28.
+
+### Core trade ideas
+- None: no verified research (Gemini down).
+
+### Satellite trade ideas
+- None. RIGL held; next catalyst earnings ~Nov 3 (not within 5 days). Watchlist satellite = RIGL only.
+
+### Risk factors
+- Monday open gap risk, FOMC hike risk, Income 44% vs 15% cap, Gemini outage/quota, 0% core deployed, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
