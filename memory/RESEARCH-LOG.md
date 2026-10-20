@@ -8515,3 +8515,8 @@ Tuesday. Env vars all present.
 - HELD, no buys: pre-market logged no "### Approved Trades (verified)" list (Gemini 404/429 outage persists), so nothing to execute. Core 0/8, 0/8 trades this week; satellite 1/5 (RIGL), 0/5.
 - Live check: equity $92,583, cash $46,533 (50.3%); RIGL +11.7%, EDGX -0.75%, SPHY -4.1%, SGOV flat. All GTC trailing stops live, none breached.
 - Flag for Friday: fix Gemini model/quota; Core 0% and Income ~44% vs 15% cap still need rebalance.
+
+### 11 AM Session Note (2026-10-20)
+- HELD, no buys: no "### Approved Trades (verified)" list today (Gemini outage persists). Core 0/8, 0/8 trades this week; satellite 1/5, 0/5.
+- Risk sweep 15:15Z: equity $92,817, cash $46,533 (50.1%). RIGL +14.7% (no tighten vs +25%); EDGX -0.4%, SPHY -3.9%, SGOV flat. No hard-cut breaches; all GTC trailing stops live, none moved down. RIGL catalyst (earnings ~Nov 3) unresolved.
+- Flag for Friday: fix Gemini model/quota; Core 0%, Income ~44% vs 15% cap still need rebalance.
