@@ -3633,3 +3633,16 @@ Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit
 | SPHY | income | 856 | $23.36 | $22.4401 | -0.04% | -$787.43 (-3.94%) | 5% trailing ($21.413) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +11.83% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). Flags: Cash 50.2%, Core 0%, Income 44.0% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
+
+## Oct 20 — 3pm Snapshot (Day 77, Tuesday)
+**Portfolio:** $92,776.93 | **Cash:** $46,532.94 (50.15%) | **Day P&L:** +$156.01 (+0.17%, vs Oct 19 3pm) | **Phase P&L:** -$7,223.07 (-7.22%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,404.74 (5.83% of equity) | **Income exposure:** $40,839.25 (44.02% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $47.41 | +1.48% | +$634.98 (+13.31%) | 15% trailing ($42.916) |
+| EDGX | income | 746 | $26.78 | $26.71 | +0.49% | -$52.22 (-0.26%) | 5% trailing ($25.46) |
+| SGOV | income | 16.989473856 | $100.52 | $100.605 | +0.01% | +$1.44 (+0.09%) | 5% trailing ($95.6555, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.435 | -0.02% | -$791.80 (-3.96%) | 5% trailing ($21.413) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +13.31% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). Flags: Cash 50.2%, Core 0%, Income 44.02% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
