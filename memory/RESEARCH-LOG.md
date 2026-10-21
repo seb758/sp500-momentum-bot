@@ -8555,3 +8555,8 @@ Wednesday. Env vars all present.
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+### 9:30 AM Session Note
+- HELD - no trades. Pre-market plan = HOLD (no verified core/satellite research; Gemini down, FMP 402). Rule: no trade without documented research.
+- Live: equity $92,825 | cash $46,533 (50%) | RIGL +14.7% (satellite), EDGX/SPHY/SGOV unchanged. Income ~$40.8k vs 15% cap still pending rebalance.
+- Flag for Friday: Core 0% deployed for days due to data-source outages (Gemini model 404/429, FMP 402) - fix script defaults/quota.
