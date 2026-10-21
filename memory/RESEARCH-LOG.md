@@ -8526,3 +8526,32 @@ Tuesday. Env vars all present.
 - Risk sweep: no hard-cut breaches; all positions carry live GTC trailing stops, none moved down; no tightens (RIGL +13.31% vs +25%). RIGL catalyst (earnings ~Nov 3) not within 1-2 days.
 - Flag for Friday: fix Gemini model/quota; Core 0%, Income ~44% vs 15% cap, cash 50% still need rebalance.
 - Risky positions closed today: none
+
+## 2026-10-21 — Pre-market Research
+
+Wednesday. Env vars all present.
+
+### Account
+- Equity: $92,810.02 | Cash: $46,532.94 (50.1%; above 5% floor) | `account`/`positions`/`orders` clean (balance as of 10-20 close).
+- Core: $0 (0%, 0/8) | Satellite: $5,484.54 (5.9%: RIGL +15.0%) | Income: $40,792.54 (44.0%: EDGX -0.5%, SGOV flat, SPHY -4.0%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92), EDGX 5% ($25.46), SPHY 5% ($21.41), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash HTTP 404 (retired); GEMINI_RESEARCH_MODEL=gemini-3.8-flash HTTP 429 (quota exhausted). Script default still needs fixing.
+- WebSearch fallback: no Oct 21 2026 futures/VIX found (latest item ~Oct 8) - gap, not invented. Benzinga feed: nothing on RIGL/EDGX/SPHY/SGOV in 18h. Core watchlist news (18h): TMO Q3 beat (adj EPS $6.68 vs $6.40 est, rev $12.14B); AMD/Vultr India MI355X deal; CRWD in NVIDIA OpenShell reference arch; MSFT UK CMA proposed Strategic Market Status; Trump data-center "dividend" comments (MSFT/META/ORCL). Nothing thesis-breaking.
+
+### Market Context (fallback data)
+- Futures/VIX: not available.
+- Last known: tech/AI-hardware sell-off, rate-hike risk, FOMC Oct 27-28.
+
+### Core trade ideas
+- None: no verified research (Gemini down, FMP 402). TMO beat noted, but unverified fundamentals - no approved trade.
+
+### Satellite trade ideas
+- None. RIGL held; next catalyst earnings ~Nov 3 (not within 5 days). Watchlist satellite = RIGL only.
+
+### Risk factors
+- Gap risk, FOMC hike risk (Oct 27-28), Income 44% vs 15% cap, Gemini outage/quota, 0% core deployed, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
