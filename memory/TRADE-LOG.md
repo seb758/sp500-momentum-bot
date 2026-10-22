@@ -3659,3 +3659,16 @@ Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit
 | SPHY | income | 856 | $23.36 | $22.44 | +0.05% | -$787.52 (-3.94%) | 5% trailing ($21.413) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +15.89% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). Flags: Cash 50.0%, Core 0%, Income 44.01% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
+
+## Oct 22 — 3pm Snapshot (Day 79, Thursday)
+**Portfolio:** $92,761.13 | **Cash:** $46,532.94 (50.16%) | **Day P&L:** -$226.00 (-0.24%, vs Oct 21 3pm) | **Phase P&L:** -$7,238.87 (-7.24%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,553.51 (5.99% of equity) | **Income exposure:** $40,674.68 (43.85% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $48.715 | -0.34% | +$783.75 (+16.43%) | 15% trailing ($42.916) |
+| EDGX | income | 746 | $26.78 | $26.4201 | -1.43% | -$268.49 (-1.34%) | 5% trailing ($25.517) |
+| SGOV | income | 16.989473856 | $100.52 | $100.625 | +0.01% | +$1.78 (+0.10%) | 5% trailing ($95.6555, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.495 | +0.11% | -$740.44 (-3.70%) | 5% trailing ($21.413) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +16.43% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: no catalyst within 1-2 trading days (earnings ~Nov 3). Flags: Cash 50.2%, Core 0%, Income 43.85% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
