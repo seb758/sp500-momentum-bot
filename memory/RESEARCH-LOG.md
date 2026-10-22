@@ -8571,3 +8571,33 @@ Wednesday. Env vars all present.
 - Risk sweep: no hard-cut breaches; all positions carry live GTC trailing stops, none moved down; no tightens (RIGL +15.89% vs +25%). RIGL catalyst (earnings ~Nov 3) not within 1-2 days.
 - Flag for Friday: fix Gemini model/quota; Core 0%, Income ~44% vs 15% cap, cash 50% still need rebalance.
 - Risky positions closed today: none
+
+## 2026-10-22 — Pre-market Research
+
+Thursday. Env vars all present.
+
+### Account
+- Equity: $92,944.02 | Cash: $46,532.94 (50.1%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $0 (0%, 0/8) | Satellite: $5,472 (5.9%: RIGL +14.7%) | Income: $40,939 (44.0%: EDGX +0.1%, SGOV flat, SPHY -3.8%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92), EDGX 5% ($25.52), SPHY 5% ($21.41), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash HTTP 404 (retired); GEMINI_RESEARCH_MODEL=gemini-3.8-flash HTTP 429 (quota exhausted). Script default still needs fixing.
+- WebSearch fallback: no Oct 22 2026 futures/VIX found (latest item ~Oct 8) - gap, not invented.
+- Benzinga feed (18h): nothing on RIGL/EDGX/SPHY/SGOV. Core watchlist: TMO Q3 beat + raised FY26 guide, PT raises (TD Cowen, Stifel, GS, Barclays); VLO Q3 adj EPS $23.90 vs $21.01 est, sales $46.1B vs $39.5B; MSFT: data-center trade jitters (NextDC -44%), China-aligned ConnectWise supply-chain attack report, Anthropic IPO filing possibly Friday. Benzinga sentiment wrap: Nasdaq +1%+ prior session, Fear zone. Nothing thesis-breaking.
+
+### Market Context (fallback data)
+- Futures/VIX: not available.
+- Last known: tech/AI-hardware sell-off, rate-hike risk, FOMC Oct 27-28.
+
+### Core trade ideas
+- None: no verified research (Gemini down, FMP 402). TMO/VLO beats noted but fundamentals unverified - no approved trade.
+
+### Satellite trade ideas
+- None. RIGL held; next catalyst earnings ~Nov 3 (not within 5 days). Max loss on RIGL gap: stop-based ~15% from HWM. Watchlist satellite = RIGL only.
+
+### Risk factors
+- Gap risk, FOMC hike risk (Oct 27-28), Income 44% vs 15% cap, Gemini outage/quota, 0% core deployed, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
