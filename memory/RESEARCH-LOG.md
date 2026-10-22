@@ -8611,3 +8611,9 @@ Thursday. Env vars all present.
 - HELD: no "Approved Trades (verified)" list today (Gemini/FMP outage) - no buys. Core 0/8, Satellite 1/5; weekly counts 0/8, 0/5.
 - Risk sweep: RIGL (satellite) +17.7% - no cut, no tighten (<+25%); catalyst intact (earnings ~Nov 3). EDGX -1.0%, SPHY -3.8%, SGOV flat; all GTC trailing stops live, none moved down.
 - Flag for Friday: data-outage-driven 0% core / 50% cash persists; Income ~44% vs 15% cap rebalance pending.
+
+### 3 PM Session Note
+- HELD, no buys: no "### Approved Trades (verified)" list today (Gemini/FMP outage). Core 0/8, 0/8 trades this week; satellite 1/5, 0/5.
+- Risk sweep: no hard-cut breaches; all positions carry live GTC trailing stops, none moved down; no tightens (RIGL +16.4% vs +25%). RIGL catalyst (earnings ~Nov 3) not within 1-2 days.
+- Flag for Friday: fix Gemini model/quota; Core 0%, Income ~44% vs 15% cap, cash 50% still need rebalance.
+- Risky positions closed today: none
