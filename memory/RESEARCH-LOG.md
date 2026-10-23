@@ -8652,3 +8652,8 @@ Friday. Env vars all present.
 - HELD: no buys. Pre-market lists no approved trades (Gemini 404/429, FMP unverifiable); no trade without documented research.
 - Live: equity $92,759, cash $46,567 (50%), Core 0/8, Satellite 1/5 (RIGL +15.9%), Income ~44% vs 15% cap. No stops breached.
 - Flag for Friday: fix Gemini model default/quota before weekly screen; 0% core/50% cash is outage-driven.
+
+### 11 AM Session Note (2026-10-23)
+- HELD: no "Approved Trades (verified)" list today (Gemini outage) - no buys. Core 0/8, 0/8 wk; Satellite 1/5, 0/5 wk.
+- Risk sweep: equity $92,683, cash $46,567 (50.2%). RIGL (satellite) +14.6% vs +25% tighten - no cut/tighten. All 4 GTC trailing stops live, none moved. No hard-cut breaches; thesis intact (earnings ~Nov 3).
+- Flag for Friday review: Income ~44% vs 15% cap rebalance pending; fix Gemini model/quota before screen refresh.
