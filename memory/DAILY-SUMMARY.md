@@ -16,3 +16,8 @@ Tomorrow: hold; Friday review - Gemini fix, Income rebalance vs 15% cap
 Portfolio: $92,427.27 (-0.48% day, -7.57% phase) | Core $0 (0%) | Satellite $5,243.99 (5.7%) | Cash $46,532.94 (50.3%) | Income $40,650.34 (44.0%)
 Trades: none | Risky closed: none | RIGL (sat) +9.9% stop $42.92; EDGX/SPHY/SGOV income stops live | Week: core 0/6, sat 0/4
 Tomorrow: weekend; Friday review - Gemini fix, Income rebalance vs 15% cap
+
+## 3PM OCT 23 (email not sent - SMTP hung; fallback)
+Portfolio: $92,682.04 (-0.09% day, -7.32% phase) | Core $0 (0%) | Satellite $5,451 (5.9%) | Cash $46,567 (50.2%) | Income $40,663 (43.9%)
+Trades: none | Risky closed: none | RIGL (sat) +14.3% stop $42.92; EDGX -1.4% ($25.52), SPHY -3.7% ($21.41), SGOV +0.1% ($95.66) income stops live | Week: core 0/6, sat 0/4
+Tomorrow: weekend; Gemini fix, Income rebalance vs 15% cap
