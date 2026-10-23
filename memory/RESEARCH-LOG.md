@@ -8647,3 +8647,8 @@ Friday. Env vars all present.
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+### 9:30 AM Session Note (2026-10-23)
+- HELD: no buys. Pre-market lists no approved trades (Gemini 404/429, FMP unverifiable); no trade without documented research.
+- Live: equity $92,759, cash $46,567 (50%), Core 0/8, Satellite 1/5 (RIGL +15.9%), Income ~44% vs 15% cap. No stops breached.
+- Flag for Friday: fix Gemini model default/quota before weekly screen; 0% core/50% cash is outage-driven.
