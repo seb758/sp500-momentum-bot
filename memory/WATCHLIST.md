@@ -169,7 +169,71 @@ CRDO/VICR/SEZL/DAVE/PACS/STRL not re-checked this week (already confirmed
 core-ineligible and satellite-sector-mismatched eight refreshes running; no
 new information would change that).
 
-## Current — Week of 2026-10-16
+## Current — Week of 2026-10-23
+
+Fourteenth weekly screen refresh (weekly-review workflow, run 2026-10-23).
+Full 500-name universe re-screened via fresh Alpaca bars (constituents from
+the GitHub-hosted dataset; bars through 2026-10-22 close, 10-23 bar not yet
+served; 3M/6M relative to SPY, 50/200-day MA; 141 names passed the gate).
+**Data-source degradation continues:** Gemini 404 (retired default) / 429
+(`gemini-3.8-flash` quota exhausted); FMP per-symbol 402 on all names tried
+except MSFT (A-) and ABBV (C). Per the data-quality guard: no Gemini output
+used; fundamentals for retained names carry forward from prior verified
+lists. One new name (ADP) verified via WebSearch only (StockAnalysis: FY26
+FCF ~$5.2B, +~10% YoY; consensus Hold, no Sell skew). No satellite catalysts
+could be confirmed (needs Gemini).
+
+**Corporate-action guard:** >20% single-day moves in the 6M window: MRNA
+(+177%, negative FCF, excluded), CRWD (20%, verified real previously), NTAP,
+FTNT, IT, ZBRA, PTC, PLTR, CRM, CDW (all fundamentals unverified, not added).
+
+### Core (S&P 500 momentum + FCF)
+
+| Ticker | Momentum Rank | 3M Rel. Return vs SPY | FCF Trend | Analyst Rating | Notes |
+|---|---|---|---|---|---|
+| VEEV | 2 | +62.5% | Improving (carried) | Buy | Health Care (software) |
+| MPC | 4 | +43.7% | Volatile/cyclical (carried) | Unanimous Buy | Energy |
+| CRWD | 6 | +28.7% (6M +105.4%) | Improving (carried) | Buy | 20% single-day move in window (verified real) |
+| P | 7 | +60.0% | Negative qtr (capex, carried) | Buy-leaning | Pure Storage. -9.1% this week |
+| RVTY | 8 | +42.2% | Stabilizing (carried) | Unanimous | Health Care |
+| VLO | 11 | +36.4% | Strong (carried; Q3 EPS beat 10-22) | Buy/Hold | Energy |
+| PSX | 17 | +33.6% | Strong (carried) | Moderate Buy | Energy |
+| IQV | 19 | +27.2% | Improving (carried) | Unanimous Buy | Health Care |
+| ADP | 27 | +17.4% (6M +49.7%) | Positive, ~+10% FY26 FCF (WebSearch) | Hold (no Sell skew) | NEW. Industrials; WebSearch-verified only |
+| A | 28 | +22.7% | Stable (carried) | Buy | Health Care |
+| TMO | 33 | +17.5% | Improving (carried; Q3 beat + raised guide) | Buy | Health Care |
+| MSFT | 40 | +30.6% (6M +15.7%) | Strong (FMP A-) | FMP A- | IT |
+
+**Sector mix (12 names):** Health Care 5 (VEEV, RVTY, IQV, A, TMO = 42%, at
+the ~40% cap), Energy 3 (MPC, VLO, PSX = 25%), Information Technology 3 (P,
+CRWD, MSFT = 25%), Industrials 1 (ADP = 8%) - 4 sectors. Semis +
+AI-hardware cluster: 0/12.
+
+**Sector-capped alternates** (not active): CRL, WAT, MTD, BIIB, LLY, ABBV
+(Health Care cap); NOW, WDAY, ACN, CTSH (IT / fundamentals unverified).
+
+**Dropped from 10-16 list:** AMD (below 50-day MA, $507.93 vs $541.60).
+**Failed/excluded:** MRNA (negative FCF), ILMN, FTNT, HUM, CNC, SWKS, HPQ,
+NTAP, ZBRA, PTC, PLTR, CRM, IT (fundamentals unverified or corp-action
+flag); EL, FDS (data unavailable / Hold with 6 Sell of 16).
+
+### Satellite (small-cap biotech / industrials)
+
+| Ticker | Sub-sector | YoY Growth | Analyst Rating | Catalyst | Catalyst Date | Max Loss If Catalyst Fails | Notes |
+|---|---|---|---|---|---|---|---|
+| RIGL | Biotech | Positive (carried) | Hold-to-Buy | Q3 earnings; VEPPANU launch (resolved) | ~2026-11-03 | Standard 7.5% cap | **Held position** (+15%). 3M +30.7% abs., above 50-day MA ($48.86 vs $46.88) |
+
+**Binary watch only (NOT tradeable; pre-revenue, fails growth gate, momentum
+unchecked):** Capricor (deramiocel, PDUFA 2026-11-22), Savara (molgramostim,
+2026-11-22) - per WebSearch calendars, dates unverified.
+
+**No new satellite names sourced** (Gemini quota) - list is 1 name; flagged.
+**2-strike sub-sector status:** biotech 0 strikes, industrials 0 strikes.
+
+
+## History
+
+### Week of 2026-10-16
 
 Thirteenth weekly screen refresh (weekly-review workflow, run 2026-10-16).
 Full 500-name universe re-screened via fresh Alpaca bars (constituents from
@@ -236,9 +300,6 @@ below 50-day MA; EL (data unavailable).
 sourced** (Gemini quota) — satellite list is 1 name; flagged.
 
 **2-strike sub-sector status:** biotech 0 strikes, industrials 0 strikes.
-
-
-## History
 
 ### Week of 2026-10-09
 
