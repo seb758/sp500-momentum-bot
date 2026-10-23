@@ -8617,3 +8617,33 @@ Thursday. Env vars all present.
 - Risk sweep: no hard-cut breaches; all positions carry live GTC trailing stops, none moved down; no tightens (RIGL +16.4% vs +25%). RIGL catalyst (earnings ~Nov 3) not within 1-2 days.
 - Flag for Friday: fix Gemini model/quota; Core 0%, Income ~44% vs 15% cap, cash 50% still need rebalance.
 - Risky positions closed today: none
+
+## 2026-10-23 — Pre-market Research
+
+Friday. Env vars all present.
+
+### Account
+- Equity: $92,802.45 | Cash: $46,532.94 (50.1%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $0 (0%, 0/8) | Satellite: $5,570 (6.0%: RIGL +16.8%) | Income: $40,700 (43.9%: EDGX -1.2%, SGOV flat, SPHY -3.7%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92), EDGX 5% ($25.52), SPHY 5% ($21.41), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED again**: default gemini-2.5-flash HTTP 404 (retired); GEMINI_RESEARCH_MODEL=gemini-3.8-flash HTTP 429 (free-tier quota exhausted). Script default still needs fixing.
+- WebSearch fallback used for futures/VIX (figures indicative, untimed snapshots). Benzinga feed (18h) for held names: nothing on RIGL/EDGX/SPHY/SGOV.
+
+### Market Context (fallback data)
+- VIX ~19.2-19.3 (Cboe/Yahoo snapshots). S&P 500 futures ~7,696, -0.1%; Dow fut. ~-0.5%; Nasdaq fut. up. Prior cash close S&P ~7,663 (-1.2%).
+- Backdrop: AI/tech sell-off (Nasdaq worst week since late June), Brent ~$110-114, staples rally, global PMI data today, Anthropic IPO buzz, FOMC Oct 27-28 (hike risk).
+- Benzinga: Treasury proposed outbound-investment rule adds biotechnology (COINS Act) - sector headline, not RIGL-specific.
+
+### Core trade ideas
+- None: no verified research (Gemini down, FMP 402 previously). No approved trade.
+
+### Satellite trade ideas
+- None. RIGL held; next catalyst earnings ~Nov 3 (not within 5 days). Max loss on gap: stop-based ~15% from HWM. Watchlist satellite = RIGL only.
+
+### Risk factors
+- Gap risk, FOMC Oct 27-28, oil ~$110+, tech sell-off, Income 44% vs 15% cap, Gemini outage/quota, 0% core deployed, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
