@@ -8663,3 +8663,31 @@ Friday. Env vars all present.
 - Risk sweep: no hard-cut breaches; all 4 positions carry live GTC trailing stops (none moved). RIGL (satellite) +14.29% vs +25% tighten; earnings ~Nov 3, no catalyst within 1-2 days.
 - Friday review: Income 43.9% vs 15% cap rebalance; fix Gemini model/quota before screen refresh; 0% core/50% cash is outage-driven.
 - Risky positions closed today: none.
+
+## 2026-10-24 — Pre-market Research
+
+Saturday - US markets closed; no trading window until Mon 10-26. Env vars all present.
+
+### Account
+- Equity: $92,695 | Cash: $46,567 (50.2%; above 5% floor) | `account`/`positions`/`orders` clean.
+- Core: $0 (0%, 0/8) | Satellite: $5,487 (5.9%: RIGL +15.0%) | Income: $40,642 (43.8%: EDGX -1.5%, SGOV flat, SPHY -3.7%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92), EDGX 5% ($25.52), SPHY 5% ($21.41), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash HTTP 404 (retired; error says use gemini-3.8-flash). Script default still unfixed. WebSearch fallback returned nothing usable for week of 10-26 (no futures/VIX figures) - none invented.
+- Benzinga feed (48h) for RIGL/EDGX/SPHY/SGOV: no news.
+
+### Market Context
+- Data gap: no verified futures/VIX today (weekend). Last log context (10-23): VIX ~19, tech sell-off, Brent ~$110+. FOMC Oct 27-28 (hike risk) per prior log.
+
+### Core trade ideas
+- None: no verified research. No approved trade.
+
+### Satellite trade ideas
+- None. RIGL held; earnings ~Nov 3 (not within 5 days). Max loss on gap: stop-based ~15% from HWM.
+
+### Risk factors
+- Gap risk, FOMC Oct 27-28, oil, tech sell-off, Income 44% vs 15% cap, Gemini outage, 0% core, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
