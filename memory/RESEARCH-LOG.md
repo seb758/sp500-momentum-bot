@@ -8720,3 +8720,34 @@ Sunday - US markets closed; no trading window until Mon 10-26. Env vars all pres
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+## 2026-10-26 — Pre-market Research
+
+Monday. Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $92,695 | Cash: $46,567 (50.2%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,487 (5.9%: RIGL +15.0%) | Income: $40,642 (43.8%: EDGX -1.5%, SGOV flat, SPHY -3.7%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92), EDGX 5% ($25.52), SPHY 5% ($21.41), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash 404 (retired); override gemini-3.8-flash returns HTTP 429 (quota exhausted). WebSearch fallback returned no dated 10-26 futures/VIX figures - none invented (undated Barchart snippets ignored).
+- Benzinga feed (72h) for held + core watchlist names (VEEV, MPC, CRWD, MSFT, TMO, VLO, RIGL, EDGX, SPHY, SGOV): no thesis-breaking news. TMO: Citi Buy, PT $685->$800. VLO: Citi Neutral, PT $490. MSFT: routine (Seagate/Azure).
+
+### Market Context (Benzinga headlines; no verified futures/VIX)
+- Data gap: no verified futures level or VIX for today.
+- Fri 10-24 headlines: S&P 500/Nasdaq 100 slipped on AI-bubble fears and ~$117 oil. Prior log: VIX ~20.
+- Polymarket 69% odds S&P opens higher (Benzinga 10-26 05:52 UTC), citing cooling oil.
+- Week: Big Tech earnings (MSFT, GOOGL, AMZN, META), FOMC Oct 28 (~92% hold per prior log; Dec hike risk), Core PCE/GDP/jobs. Intel and SanDisk implied ~10%+ earnings moves.
+
+### Core trade ideas
+- None: no verified research; Core watchlist names show no news change but momentum/FCF recheck unavailable. No approved trade.
+
+### Satellite trade ideas
+- None. RIGL held; earnings ~Nov 3 (not within 5 days). Max loss on gap: stop-based ~15% from HWM.
+
+### Risk factors
+- Gap risk, FOMC Oct 28, Big Tech earnings week, oil ~$117, VIX ~20, Income 44% vs 15% cap, Gemini outage, 0% core, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
