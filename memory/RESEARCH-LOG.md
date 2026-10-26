@@ -8751,3 +8751,8 @@ Monday. Env vars all present. `account`/`positions`/`orders` clean (no auth erro
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+### 9:30 AM Session Note
+- HELD: no trades. Pre-market decision HOLD; no verified research (Gemini outage), so no approved trades.
+- Re-validated: equity $92,918, cash $46,567 (50.1%); RIGL +16.8%, no stop/cut triggers. Core 0/8, satellite 1/5.
+- Flag for Friday: Gemini model 404/quota outage persists; Income 44% vs 15% cap needs rebalance; Core 0%.
