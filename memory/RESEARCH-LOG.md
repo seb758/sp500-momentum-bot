@@ -8761,3 +8761,9 @@ Monday. Env vars all present. `account`/`positions`/`orders` clean (no auth erro
 - HELD: no "Approved Trades (verified)" list today (Gemini outage) - no buys. No cuts, no tightens.
 - Equity $92,931, cash $46,567 (50.1%). RIGL +17.7% (satellite, vs +25% tighten); EDGX -1.2%, SPHY -3.4% (income). All GTC trailing stops live.
 - Flag for Friday: Gemini outage persists; Income 44% vs 15% cap, Core 0% - rebalance/redeploy.
+
+### 3 PM Session Note
+- HELD: no "Approved Trades (verified)" list today (Gemini outage) - no buys. No cuts, no tightens.
+- Equity $93,007, cash $46,567 (50.1%). RIGL +18.4% (satellite, vs +25% tighten); EDGX -0.9%, SPHY -3.5% (income). All GTC trailing stops live; none moved down.
+- Flag for Friday: Gemini outage persists; Income 43.9% vs 15% cap, Core 0% - rebalance/redeploy.
+- Risky positions closed today: none.
