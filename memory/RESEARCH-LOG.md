@@ -8767,3 +8767,33 @@ Monday. Env vars all present. `account`/`positions`/`orders` clean (no auth erro
 - Equity $93,007, cash $46,567 (50.1%). RIGL +18.4% (satellite, vs +25% tighten); EDGX -0.9%, SPHY -3.5% (income). All GTC trailing stops live; none moved down.
 - Flag for Friday: Gemini outage persists; Income 43.9% vs 15% cap, Core 0% - rebalance/redeploy.
 - Risky positions closed today: none.
+
+## 2026-10-27 — Pre-market Research
+
+Tuesday. Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $93,021 | Cash: $46,567 (50.1%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,689 (6.1%: RIGL +19.3%) | Income: $40,765 (43.8%: EDGX -1.0%, SGOV flat, SPHY -3.6%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($42.92), EDGX 5% ($25.52), SPHY 5% ($21.45), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash 404 (retired); gemini-3.8-flash override 429 (quota exhausted). WebSearch fallback returned no dated 10-27 futures/VIX - none invented.
+- Benzinga feed (24-48h) for held + core watchlist names: no thesis-breaking news. VEEV: Baird Outperform, PT $350. VLO: JPM Buy, PT $439->$447. MSFT: earnings imminent (EPS est $4.72, rev $90.69B). MPC/PSX: Raskin warning on Russian diesel deal (headline risk only). RIGL/EDGX/SPHY/SGOV: no news.
+
+### Market Context (Benzinga headlines; no verified futures/VIX)
+- Data gap: no verified futures level or VIX for today.
+- Mon 10-26 close: Dow +0.28% to 52,361.58 (Benzinga).
+- Themes: AI-bubble warnings (Warren), Anthropic IPO filing headlines, Big Tech earnings week (MSFT today), FOMC Oct 28 (prior log: ~92% hold; Dec hike risk), Core PCE/GDP/jobs.
+
+### Core trade ideas
+- None: no verified research; momentum/FCF recheck unavailable. No approved trade.
+
+### Satellite trade ideas
+- None. RIGL held; earnings ~Nov 3 (not within 5 days). Max loss on gap: stop-based ~15% from HWM.
+
+### Risk factors
+- Gap risk, MSFT earnings, FOMC Oct 28, VIX ~20 (prior log), Income 44% vs 15% cap, Gemini outage, 0% core, cash 50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
