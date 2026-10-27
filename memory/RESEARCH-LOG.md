@@ -8797,3 +8797,8 @@ Tuesday. Env vars all present. `account`/`positions`/`orders` clean (no auth err
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+### 9:30 AM Session Note (2026-10-27)
+- HELD: no "### Approved Trades (verified)" list (Gemini outage: 2.5-flash 404, override 429). No buys, no stops changed.
+- Live check: equity $93,024, cash $46,567 (50.1%); RIGL +18.7%, no stop breaches.
+- Pattern for Friday: Gemini outage now blocking core deployment for 2+ weeks (Core 0%, Income ~44% vs 15% cap) - fix model/quota path or approve WebSearch-based screen.
