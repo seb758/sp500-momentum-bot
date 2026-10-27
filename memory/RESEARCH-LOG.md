@@ -8802,3 +8802,8 @@ Tuesday. Env vars all present. `account`/`positions`/`orders` clean (no auth err
 - HELD: no "### Approved Trades (verified)" list (Gemini outage: 2.5-flash 404, override 429). No buys, no stops changed.
 - Live check: equity $93,024, cash $46,567 (50.1%); RIGL +18.7%, no stop breaches.
 - Pattern for Friday: Gemini outage now blocking core deployment for 2+ weeks (Core 0%, Income ~44% vs 15% cap) - fix model/quota path or approve WebSearch-based screen.
+
+### 11 AM Session Note (2026-10-27)
+- HELD: no "### Approved Trades (verified)" list (Gemini outage persists). No buys, cuts, or tightens.
+- Risk sweep: RIGL (satellite) +19.66% < +25% tighten trigger; no hard-cut breaches; all GTC trailing stops live, none moved down. Equity $93,212, cash $46,567 (50.0%).
+- Pattern for Friday: unchanged - Core 0%, Income ~44% vs 15% cap; Gemini fix/WebSearch screen approval still needed.
