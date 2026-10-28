@@ -8813,3 +8813,33 @@ Tuesday. Env vars all present. `account`/`positions`/`orders` clean (no auth err
 - Risk sweep: RIGL (satellite) +19.40% < +25% tighten trigger; no catalyst within 1-2 trading days (earnings ~Nov 3); no hard-cut breaches; all positions carry live GTC trailing stops, none moved down.
 - Pattern for Friday: unchanged - Core 0%, Income ~43.9% vs 15% cap, cash ~50%; Gemini fix/WebSearch screen approval still needed.
 - Risky positions closed today: none.
+
+## 2026-10-28 — Pre-market Research
+
+Wednesday. Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $93,339 | Cash: $46,567 (49.9%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,763 (6.2%: RIGL +20.8%) | Income: $41,009 (43.9%: EDGX -0.4%, SGOV flat, SPHY -3.0%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($43.10), EDGX 5% ($25.52), SPHY 5% ($21.54), SGOV 16 sh ($95.66). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: gemini-2.5-flash still 404 (retired). No Gemini output used. WebSearch fallback returned no dated 10-28 US futures/VIX/FOMC result - none invented.
+- Benzinga feed (24h) for held + core watchlist names: no thesis-breaking news. CRWD: CEO Kurtz sold 20k sh (10-23 filing, routine). VLO: $1.20 dividend declared. MPC/PSX/VLO: refiners had worst day since Apr 2025 on 10-27 (Iran talks, Russian diesel) - price headline, watch. MSFT/GOOGL earnings after close today. RIGL/EDGX/SPHY/SGOV: no news.
+
+### Market Context (Benzinga headlines; no verified futures/VIX)
+- Data gap: no verified futures level or VIX.
+- Tue 10-27: Nasdaq +1.18% on chip strength; Fear & Greed 34 (Fear). Polymarket ~55% S&P opens up; futures described as mixed.
+- Themes: FOMC decision today (10-28), MSFT/GOOGL/GEV earnings, AI capex/financing concerns.
+
+### Core trade ideas
+- None: no verified research; momentum/FCF recheck unavailable. Refiners (MPC/VLO/PSX) under pressure. No approved trade.
+
+### Satellite trade ideas
+- None. RIGL held; earnings ~Nov 3 (not within 5 days). Max loss on gap: stop-based ~15% from HWM.
+
+### Risk factors
+- Gap risk, FOMC + Big Tech earnings today, Income 44% vs 15% cap, Gemini outage (2+ weeks), 0% core, cash ~50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
