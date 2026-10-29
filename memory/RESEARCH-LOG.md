@@ -8900,3 +8900,9 @@ Thursday. Env vars all present. `account`/`positions`/`orders` clean (no auth er
 - HELD: no "Approved Trades (verified)" list today (Gemini 404 outage) -> no buys. Core 0/8, 0/8 trades wk; satellite 1/5, 0/5.
 - Risk sweep: no cuts (RIGL satellite +21.77% vs -15%), no tightens (RIGL below +25%); all GTC trailing stops live, none moved down. RIGL earnings ~Nov 3, no resolved catalyst.
 - Flag for Friday: Income 43.9% vs 15% cap, core 0%, cash ~50% - owner decision / weekly rebalance still pending.
+
+### 3 PM Session Note (2026-10-29)
+- HELD: no "Approved Trades (verified)" list today (Gemini 404 outage) -> no buys. Core 0/8, 0/8 trades wk; satellite 1/5, 0/5.
+- Risk sweep: no hard-cut breaches (RIGL satellite +21.63%), no tightens (RIGL below +25%); all positions carry live GTC trailing stops, none moved down. RIGL earnings ~Nov 3 (3 trading days): not within 1-2 day window; held, stop-based max loss ~15% from HWM $51.49 -> $43.77.
+- Flag for Friday: Income 43.85% vs 15% cap, core 0%, cash ~50%, Gemini outage - rebalance/owner decision pending.
+- Risky positions closed today: none.
