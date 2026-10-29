@@ -8895,3 +8895,8 @@ Thursday. Env vars all present. `account`/`positions`/`orders` clean (no auth er
 - HELD: no trades. Pre-market research approved no core/satellite idea (no verified momentum/FCF data; Gemini 404 outage continues).
 - Account unchanged: equity $93,444, cash $46,567 (49.8%); RIGL +22.7% (stop 15% trailing intact); Income $41,023 (43.9%) still over 15% cap.
 - Flag for Friday: Gemini outage 2+ weeks, core sleeve 0% deployed, Income over cap - needs owner/review decision.
+
+### 11 AM Session Note (2026-10-29)
+- HELD: no "Approved Trades (verified)" list today (Gemini 404 outage) -> no buys. Core 0/8, 0/8 trades wk; satellite 1/5, 0/5.
+- Risk sweep: no cuts (RIGL satellite +21.77% vs -15%), no tightens (RIGL below +25%); all GTC trailing stops live, none moved down. RIGL earnings ~Nov 3, no resolved catalyst.
+- Flag for Friday: Income 43.9% vs 15% cap, core 0%, cash ~50% - owner decision / weekly rebalance still pending.
