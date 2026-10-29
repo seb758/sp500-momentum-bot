@@ -8859,3 +8859,34 @@ Wednesday. Env vars all present. `account`/`positions`/`orders` clean (no auth e
 - Risk sweep: equity $93,422, cash $46,567 (49.8%); RIGL (satellite) +22.37% < +25% tighten trigger; no hard-cut breaches; all positions carry live GTC trailing stops (RIGL 15% $43.656, EDGX/SPHY/SGOV 5%). RIGL earnings ~Nov 3 not within 1-2 trading days.
 - Pattern for Friday: unchanged - Core 0%, Income ~43.9% vs 15% cap; Gemini fix/WebSearch screen approval still needed.
 - Risky positions closed today: none.
+
+## 2026-10-29 — Pre-market Research
+
+Thursday. Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $93,419 | Cash: $46,567 (49.9%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,825 (6.2%: RIGL +22.1%) | Income: $41,027 (43.9%: EDGX -0.3%, SGOV flat, SPHY -3.0%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($43.656), EDGX 5% ($25.517), SPHY 5% ($21.565), SGOV 16 sh ($95.665). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: gemini-2.5-flash still 404 (retired). No Gemini output used. WebSearch fallback returned no dated 10-29 futures/VIX result - none invented.
+- Benzinga feed (24h) used for held + core watchlist names (fallback data).
+
+### Market Context (Benzinga headlines; no verified futures level/VIX)
+- Data gap: no verified futures level or VIX.
+- Fed kept rates unchanged (10-28); Dow/S&P/Nasdaq-100 futures mixed pre-open.
+- MSFT +3% pre-mkt on Q1 beat (cloud/AI); Piper PT $650. GOOGL missed, ~-10%. AMZN, LLY, CAT report today.
+- Held/watchlist: MPC raised dividend 10% to $1.10 (payable 12-10). No thesis-breaking news for RIGL/EDGX/SPHY/SGOV or other core names surfaced.
+
+### Core trade ideas
+- None: no verified research; momentum/FCF recheck unavailable. No approved trade. (MSFT/MPC: positive headlines only, not a trade basis.)
+
+### Satellite trade ideas
+- None. RIGL held; Q3 earnings ~Nov 3 (within 5 trading days - 3 trading days). Max loss on gap: stop-based ~15% from HWM ($51.36 -> $43.656).
+
+### Risk factors
+- Gap risk into RIGL earnings ~Nov 3, big-tech/AMZN earnings today, Income 44% vs 15% cap, Gemini outage (2+ weeks), 0% core, cash ~50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
