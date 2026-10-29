@@ -8890,3 +8890,8 @@ Thursday. Env vars all present. `account`/`positions`/`orders` clean (no auth er
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+### 9:30 AM Session Note (2026-10-29)
+- HELD: no trades. Pre-market research approved no core/satellite idea (no verified momentum/FCF data; Gemini 404 outage continues).
+- Account unchanged: equity $93,444, cash $46,567 (49.8%); RIGL +22.7% (stop 15% trailing intact); Income $41,023 (43.9%) still over 15% cap.
+- Flag for Friday: Gemini outage 2+ weeks, core sleeve 0% deployed, Income over cap - needs owner/review decision.
