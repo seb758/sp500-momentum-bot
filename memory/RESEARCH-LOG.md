@@ -8937,3 +8937,8 @@ Friday. Env vars all present. `account`/`positions`/`orders` clean (no auth erro
 
 ### Decision: HOLD
 - No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
+
+### 9:30 AM Session Note (2026-10-30)
+- HELD: pre-market research approved no trades (Gemini 404 outage, no verified momentum/FCF recheck) -> no buys. Core 0/8, 0/8 trades wk; satellite 1/5, 0/5.
+- Account: equity $93,162, cash $46,601 (50%); all positions (RIGL sat, EDGX/SPHY/SGOV income) carry live GTC trailing stops. RIGL +21.9%, earnings ~Nov 3.
+- Flag for Friday review: Gemini outage 2+ weeks blocks screen refresh; Income 44% vs 15% cap, core 0% - owner decision pending.
