@@ -2507,3 +2507,79 @@ income $40,641.08 (43.8%), cash $46,567.11 (50.2%).
 ### Overall Grade: C
 Beat the S&P by 1.3pp with no losses, but fifth straight week of ~6%
 Core+Satellite deployment and research tooling still down.
+
+---
+
+## Week ending 2026-10-30
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $92,695.01 (per 10-23 review) |
+| Ending portfolio | $93,052.91 (Alpaca equity, post-close) |
+| Week return | +$357.90 (+0.39%) |
+| S&P 500 week | +1.24% (SPY close 10-23 $759.97 -> 10-29 $769.36; Gemini unavailable, computed from Alpaca; 10-30 bar not yet served) |
+| Bot vs S&P | -0.85pp |
+| Core trades | 0 (no closes, no entries) |
+| Satellite trades | 0 (RIGL held; open:1) |
+| Win rate | n/a (0 closed) |
+| Best trade | n/a; best open: RIGL +22.6% (satellite) |
+| Worst trade | n/a; worst open: SPHY -3.3% (income) |
+| Profit factor | n/a |
+
+Phase P&L: -6.95% vs $100k start. Realized this week: $0.
+
+### Closed Trades
+None.
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| RIGL | satellite | $41.84 | $51.31 | +$1,079.58 (+22.63%) | 15% trailing ($44.714, HWM $52.605) |
+| EDGX | income | $26.78 | $26.20 | -$432.46 (-2.17%) | 5% trailing ($25.517) |
+| SGOV | income | $100.52 | $100.73 | +$3.64 (+0.21%) | 5% trailing |
+| SPHY | income | $23.36 | $22.60 | -$650.56 (-3.25%) | 5% trailing ($21.565) |
+
+Exposure (equity $93,052.91): core $0 (0%), satellite $5,849.34 (6.3%),
+income $40,602.42 (43.6%), cash $46,601.13 (50.1%).
+
+### Watchlist Refresh
+- Core: 0 added, 2 dropped (VLO below 50-day MA; TMO Health Care sector cap).
+  10 names. **Abbreviated refresh:** Gemini 404/429 and FMP 402 persist, so no
+  full 500-name re-screen and no new names; the 10-23 list was re-checked on
+  fresh Alpaca bars only. Fundamentals carried.
+- Satellite: 0 added, 0 dropped. 1 name (RIGL). No catalyst sourcing possible.
+  Capricor/Savara (PDUFA 11-22) binary watch only. See WATCHLIST.md.
+- **Core sector mix (10):** Health Care 4 (VEEV, RVTY, A, IQV = 40%), IT 3
+  (P, CRWD, MSFT = 30%), Energy 2 (MPC, PSX = 20%), Industrials 1 (ADP =
+  10%) - 4 sectors.
+
+### What Worked
+- RIGL +22.6% held, no tighten needed (<+25%); stop trails HWM $52.605.
+- No stop-outs or gap damage; positive week.
+
+### What Didn't Work
+- **Deployment malfunction flag (Patience Rule), 6th consecutive week:** Core
+  0%, Core+Sat 6.3% of equity; cash 50.1%, Income 43.6% vs 15% cap. Zero new
+  entries - no "Approved Trades (verified)" list (Gemini outage 5+ weeks).
+- Lagged S&P by 0.85pp (first lag in the idle-capital stretch; tape rose).
+- Screen refresh degraded again: Gemini 404/429, FMP 402; no new sourcing.
+- SPHY -3.3% and EDGX -2.2% drag.
+
+### Key Lessons
+- Idle capital now costs in up tapes; benchmark gap will keep widening
+  while Core is undeployed.
+- Sector cap math: with 11 names, 5 HC = 45% breaches ~40% cap - trimmed TMO.
+
+### Adjustments for Next Week
+- Owner action (repeat, urgent): (1) Gemini billing/quota + set default model
+  to gemini-3.8-flash (scripts/gemini_research.sh line 56, or env
+  GEMINI_RESEARCH_MODEL); (2) authorize Income rebalance (trim SPHY/EDGX to
+  15% cap) and/or a WebSearch-based approval fallback so Core can redeploy.
+- RIGL earnings ~11-03 (gap risk, stop-based max loss ~15% from HWM).
+- Watch ADP (3M rel only +4.4%, -7% wk) and MPC/PSX (energy rolling over).
+- No rule or risk-cap changes.
+
+### Overall Grade: C-
+Small gain but lagged S&P by 0.85pp; sixth straight week of ~6%
+Core+Satellite deployment and research tooling still down.
