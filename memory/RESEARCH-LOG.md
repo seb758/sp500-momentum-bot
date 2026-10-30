@@ -8906,3 +8906,34 @@ Thursday. Env vars all present. `account`/`positions`/`orders` clean (no auth er
 - Risk sweep: no hard-cut breaches (RIGL satellite +21.63%), no tightens (RIGL below +25%); all positions carry live GTC trailing stops, none moved down. RIGL earnings ~Nov 3 (3 trading days): not within 1-2 day window; held, stop-based max loss ~15% from HWM $51.49 -> $43.77.
 - Flag for Friday: Income 43.85% vs 15% cap, core 0%, cash ~50%, Gemini outage - rebalance/owner decision pending.
 - Risky positions closed today: none.
+
+## 2026-10-30 — Pre-market Research
+
+Friday. Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $93,240 | Cash: $46,601 (50.0%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,670 (6.1%: RIGL +18.9%) | Income: $40,969 (43.9%: EDGX -0.5%, SGOV flat, SPHY -3.1%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($43.86, HWM $51.60), EDGX 5% ($25.517), SPHY 5% ($21.565), SGOV 16 sh ($95.6745). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: gemini-2.5-flash still 404 (retired). No Gemini output used. WebSearch fallback returned nothing dated 10-30 for futures/VIX/releases - none invented.
+- Benzinga feed (24h) used for held + core watchlist names (fallback data).
+
+### Market Context (Benzinga headlines; no verified futures level/VIX)
+- Data gap: no verified futures level, VIX, or econ-release calendar.
+- Benzinga 10-30 06:21 UTC: broad tech selloff pre-open, GOOGL ~-10% post-earnings, oil rising; Polymarket "S&P opens up" odds 14%.
+- MSFT FQ1 beat ($92.28B rev, Azure +48%); Bernstein PT $722.
+- Held/watchlist: VLO to buy LYB Houston refinery site for $320.5M (neutral/positive). CRWD CEO Kurtz sold $5.3M of shares (routine insider sale, not thesis-breaking). No news for RIGL/EDGX/SPHY/SGOV or other core names.
+
+### Core trade ideas
+- None: no verified research; momentum/FCF recheck unavailable. No approved trade.
+
+### Satellite trade ideas
+- None. RIGL held; Q3 earnings ~Nov 3 (within 5 trading days - 2 trading days after today's session, next Mon). Max loss on gap: stop-based ~15% from HWM ($51.60 -> $43.86).
+
+### Risk factors
+- Tech selloff pre-open, gap risk into RIGL earnings ~Nov 3, Income 44% vs 15% cap, Gemini outage (2+ weeks), 0% core, cash ~50%. Friday weekly review/screen refresh due.
+
+### Decision: HOLD
+- No hard-cut breaches; no catalyst resolved negatively. No email (not urgent).
