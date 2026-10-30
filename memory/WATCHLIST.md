@@ -169,7 +169,58 @@ CRDO/VICR/SEZL/DAVE/PACS/STRL not re-checked this week (already confirmed
 core-ineligible and satellite-sector-mismatched eight refreshes running; no
 new information would change that).
 
-## Current — Week of 2026-10-23
+## Current — Week of 2026-10-30
+
+Fifteenth weekly screen refresh (weekly-review workflow, run 2026-10-30).
+**Abbreviated refresh:** Gemini still down (404 default / 429 on
+`gemini-3.8-flash`), FMP 402 wall. No full 500-name re-screen and no new names
+(none verifiable); the 10-23 list was re-checked on fresh Alpaca bars (through
+10-29 close; 10-30 bar not served) for 50/200-day MA and 3M/6M vs SPY.
+Fundamentals carried from prior verified lists. Per data-quality guard: no
+Gemini output used.
+
+**Corporate-action guard:** max 1-day move in 6M window: CRWD 20% (verified
+real previously), A 17%, MSFT 16%, VEEV/P 15%, IQV 14% - all real earnings
+moves, no impossible series.
+
+### Core (S&P 500 momentum + FCF)
+
+| Ticker | Momentum Rank | 3M Rel. Return vs SPY | FCF Trend | Analyst Rating | Notes |
+|---|---|---|---|---|---|
+| VEEV | 2 | +49.3% (6M +91.9%) | Improving (carried) | Buy | Health Care (software) |
+| P | 7 | +74.8% (6M +85.0%) | Negative qtr (capex, carried) | Buy-leaning | IT. +13% this week |
+| RVTY | 8 | +44.3% (6M +84.3%) | Stabilizing (carried) | Unanimous | Health Care |
+| MPC | 4 | +33.7% (6M +67.1%) | Volatile/cyclical (carried) | Unanimous Buy | Energy. -5.8% wk, still above 50-day |
+| CRWD | 6 | +33.8% (6M +127.3%) | Improving (carried) | Buy | IT. 20% 1-day move verified real |
+| A | 28 | +27.9% (6M +49.7%) | Stable (carried) | Buy | Health Care |
+| PSX | 17 | +26.3% (6M +45.7%) | Strong (carried) | Moderate Buy | Energy |
+| IQV | 19 | +14.0% (6M +66.6%) | Improving (carried) | Unanimous Buy | Health Care |
+| MSFT | 40 | +11.1% (6M +23.0%) | Strong (FMP A-) | FMP A- | IT |
+| ADP | 27 | +4.4% (6M +27.9%) | ~+10% FY26 FCF (WebSearch) | Hold | Industrials. Momentum fading (-7% wk); above 50-day $277.0 - watch |
+
+**Sector mix (10 names):** Health Care 4 (VEEV, RVTY, A, IQV = 40%), IT 3 (P,
+CRWD, MSFT = 30%), Energy 2 (MPC, PSX = 20%), Industrials 1 (ADP = 10%) - 4
+sectors (<5 target; no verifiable new sector names). Semis/AI-hardware 0/10.
+
+**Dropped:** VLO (below 50-day MA, $384.57 vs $396.4; -9.8% wk), TMO (Health
+Care cap: 5/11 = 45% > 40%, lowest-ranked HC name).
+**Sector-capped alternates** (not active): TMO, CRL, WAT, MTD, BIIB, LLY, ABBV.
+
+### Satellite (small-cap biotech / industrials)
+
+| Ticker | Sub-sector | YoY Growth | Analyst Rating | Catalyst | Catalyst Date | Max Loss If Catalyst Fails | Notes |
+|---|---|---|---|---|---|---|---|
+| RIGL | Biotech | Positive (carried) | Hold-to-Buy | Q3 earnings; VEPPANU launch | ~2026-11-03 | Standard 7.5% cap; stop-based ~15% from HWM | **Held position** (+22.6%). 3M rel +36.8%, above 50-day ($51.45 vs $47.6) |
+
+**Binary watch only (NOT tradeable):** Capricor (deramiocel), Savara
+(molgramostim), PDUFA 2026-11-22, per WebSearch calendars, unverified.
+**No new satellite names sourced** (Gemini quota) - list is 1 name; flagged.
+**2-strike sub-sector status:** biotech 0 strikes, industrials 0 strikes.
+
+
+## History
+
+### Week of 2026-10-23
 
 Fourteenth weekly screen refresh (weekly-review workflow, run 2026-10-23).
 Full 500-name universe re-screened via fresh Alpaca bars (constituents from
@@ -230,8 +281,6 @@ unchecked):** Capricor (deramiocel, PDUFA 2026-11-22), Savara (molgramostim,
 **No new satellite names sourced** (Gemini quota) - list is 1 name; flagged.
 **2-strike sub-sector status:** biotech 0 strikes, industrials 0 strikes.
 
-
-## History
 
 ### Week of 2026-10-16
 
