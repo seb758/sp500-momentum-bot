@@ -3738,3 +3738,16 @@ Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit
 | SPHY | income | 856 | $23.36 | $22.6199 | -0.22% | -$633.53 (-3.17%) | 5% trailing ($21.565) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +21.63% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: earnings ~Nov 3 (3 trading days), outside 1-2 day window; held. Flags: Cash 49.9%, Core 0%, Income 43.85% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
+
+## Oct 30 — 3pm Snapshot (Day 85, Friday)
+**Portfolio:** $92,857.61 | **Cash:** $46,601.13 (50.19%) | **Day P&L:** -$413.20 (-0.44%, vs Oct 29 3pm) | **Phase P&L:** -$7,142.39 (-7.14%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,780.58 (6.22% of equity) | **Income exposure:** $40,475.90 (43.59% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $50.7068 | -1.45% | +$1,010.82 (+21.19%) | 15% trailing ($44.714) |
+| EDGX | income | 746 | $26.78 | $26.065 | -2.18% | -$533.39 (-2.67%) | 5% trailing ($25.517) |
+| SGOV | income | 16.989473856 | $100.52 | $100.7385 | +0.03% | +$3.71 (+0.22%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.57 | -0.31% | -$676.24 (-3.38%) | 5% trailing ($21.565) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +21.19% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: earnings ~Nov 3 (2 trading days) - routine earnings, 6.2% of equity within 7.5% cap, stop-based max loss ~15% from HWM; held through deliberately. Flags: Cash 50.2%, Core 0%, Income 43.59% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
