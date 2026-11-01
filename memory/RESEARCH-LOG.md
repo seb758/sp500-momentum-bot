@@ -8985,3 +8985,31 @@ Env vars all present. `account`/`positions`/`orders` clean. Weekend: no session,
 
 ### Decision: HOLD
 - No hard-cut breaches; nothing resolved negatively. No email (not urgent).
+
+## 2026-11-01 — Pre-market Research (Sunday, market closed)
+
+Env vars all present. `account`/`positions`/`orders` clean. Weekend: no session, no trades possible. Positions unchanged since Fri 10-30 close.
+
+### Account
+- Equity: $93,053 | Cash: $46,601 (50.1%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,849 (6.3%: RIGL +22.6%) | Income: $40,602 (43.6%: EDGX -2.2%, SGOV flat, SPHY -3.3%) - vs 15% cap, rebalance pending.
+- Live GTC trailing stops: RIGL 15% ($44.714, HWM $52.605), EDGX 5% ($25.517), SPHY 5% ($21.565), SGOV 16 sh ($95.703). None breached.
+
+### Data-quality notes
+- **Gemini FAILED** (retry this run): gemini-2.5-flash still HTTP 404; API recommends models/gemini-3.8-flash. Script model name needs owner update - not changed here. No Gemini output used. No WebSearch run (weekend).
+- Benzinga 72h feed: only RIGL earnings-date PR (Nov 5). Nothing for EDGX/SPHY/SGOV.
+
+### Market Context
+- Data gap: no verified futures, VIX, or calendar figures. Markets closed. None invented.
+
+### Core trade ideas
+- None: no verified research.
+
+### Satellite trade ideas
+- None. RIGL held through Q3 earnings Nov 5 (routine, 6.3% of equity, within 7.5% cap; stop-based max loss ~15% from HWM, gap risk not protected).
+
+### Risk factors
+- RIGL earnings gap risk Nov 5; Income 43.6% vs 15% cap; Gemini outage 2+ weeks (blocks screen refresh); 0% core; cash ~50%. Owner decision pending.
+
+### Decision: HOLD
+- No hard-cut breaches; no negative catalyst resolution. No email (not urgent).
