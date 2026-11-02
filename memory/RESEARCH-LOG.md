@@ -9013,3 +9013,32 @@ Env vars all present. `account`/`positions`/`orders` clean. Weekend: no session,
 
 ### Decision: HOLD
 - No hard-cut breaches; no negative catalyst resolution. No email (not urgent).
+
+## 2026-11-02 — Pre-market Research (Monday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $92,790 | Cash: $46,601 (50.2%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,660 (6.1%: RIGL 114 sh, +18.7% at $49.65) | Income: $40,529 (43.7%: EDGX -2.2%, SGOV flat, SPHY -3.6%) - vs 15% cap, rebalance pending owner decision.
+- Live GTC trailing stops: RIGL 15% ($44.714, HWM $52.605), EDGX 5% ($25.517), SPHY 5% ($21.565), SGOV 16 sh ($95.703). None breached; none near hard-cut.
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash HTTP 404 (retired); retry with GEMINI_RESEARCH_MODEL=gemini-3.8-flash -> HTTP 429 quota exhausted. No Gemini output used.
+- **WebSearch fallback (labelled fallback):** returned no verified 11-02 futures/VIX/calendar data (only undated pages). None invented.
+- Benzinga 72h feed (RIGL, EDGX, SPHY, SGOV): no news in window.
+
+### Market Context
+- Data gap: no verified futures level, VIX, or econ calendar for today.
+
+### Core trade ideas
+- None: no verified research; core 0% remains a flagged gap.
+
+### Satellite trade ideas
+- None new. RIGL: Q3 earnings after close Thu Nov 5 (company-confirmed via WebSearch; third-party sites list Nov 3 as estimate). Routine earnings, not a single binary; 6.1% of equity within 7.5% cap. Max loss if it fails: gap below stop, ~15% from HWM ($52.605 -> $44.71) or worse on a gap = roughly $0.9k-$1.2k vs entry-basis gain; stop does not protect overnight gaps. RIGL showed -3.2% intraday move vs prior close in positions feed; no news found.
+
+### Risk factors
+- RIGL earnings gap risk Nov 5; Income 43.7% vs 15% cap; Gemini outage 2+ weeks (model rename + quota) blocks screen refresh; 0% core; cash ~50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no negative catalyst resolution. No email (not urgent).
