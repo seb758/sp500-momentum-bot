@@ -3751,3 +3751,16 @@ Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit
 | SPHY | income | 856 | $23.36 | $22.57 | -0.31% | -$676.24 (-3.38%) | 5% trailing ($21.565) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +21.19% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: earnings ~Nov 3 (2 trading days) - routine earnings, 6.2% of equity within 7.5% cap, stop-based max loss ~15% from HWM; held through deliberately. Flags: Cash 50.2%, Core 0%, Income 43.59% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
+
+## Nov 2 — 3pm Snapshot (Day 86, Monday)
+**Portfolio:** $92,922.93 | **Cash:** $46,601.13 (50.15%) | **Day P&L:** +$65.32 (+0.07%, vs Oct 30 3pm) | **Phase P&L:** -$7,077.07 (-7.08%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,752.44 (6.19% of equity) | **Income exposure:** $40,569.28 (43.66% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $50.46 | -1.66% | +$982.68 (+20.60%) | 15% trailing ($44.714) |
+| EDGX | income | 746 | $26.78 | $26.335 | +0.51% | -$331.97 (-1.66%) | 5% trailing ($25.517) |
+| SGOV | income | 16.989473856 | $100.52 | $100.425 | -0.30% | -$1.61 (-0.10%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.45 | -0.66% | -$778.96 (-3.90%) | 5% trailing ($21.565) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +20.60% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: earnings Nov 5 (3 trading days), outside 1-2 day window; held. RIGL stop order expires 2026-11-09 - renew. Flags: Cash 50.2%, Core 0%, Income 43.66% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
