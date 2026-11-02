@@ -9047,3 +9047,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Held: no "Approved Trades (verified)" list in today's research (Gemini outage, no verified core/satellite ideas) - no buys.
 - Live check: equity $93,401, cash $46,601 (49.9%); RIGL +18.7% ($49.65, -3.2% today), stops intact, no hard-cut breaches. Core 0/8, satellite 1/5, 0 trades this week.
 - Flag for Friday: Gemini outage persists; Income 43% vs 15% cap; core 0%.
+
+### 11 AM Session Note (2026-11-02)
+- Held: no "Approved Trades (verified)" list today - no buys. Core 0/8, satellite 1/5, 0 trades this week.
+- Risk sweep: equity $92,890, cash 50.2%. RIGL +21.26% ($50.735) vs +25% tighten trigger - no tighten; no hard-cut breaches (EDGX -2.2%, SPHY -3.6%, income); all GTC trailing stops live, none moved down. RIGL earnings Nov 5 (company-confirmed) - outside 1-2 day window, held.
+- Flags: Gemini outage persists; Income ~43% vs 15% cap; core 0%.
