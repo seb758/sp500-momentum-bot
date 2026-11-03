@@ -9058,3 +9058,32 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Risk sweep: equity $92,923, cash 50.2%. RIGL +20.60% ($50.46) vs +25% tighten trigger - no tighten; EDGX -1.7%, SPHY -3.9% (income) - no breaches; all 4 GTC trailing stops live, none moved down. RIGL earnings Nov 5 (3 trading days) - outside 1-2 day window.
 - Flags for Friday: Gemini outage; Income ~43.7% vs 15% cap; core 0%; RIGL stop order expires 2026-11-09 (GTC 90-day) - renew before then.
 - Risky positions closed today: none.
+
+## 2026-11-03 — Pre-market Research (Tuesday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $92,704 | Cash: $46,601 (50.3%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,760 (6.2%: RIGL 114 sh, +20.8% at $50.53) | Income: $40,342 (43.5%: EDGX -2.7%, SGOV flat, SPHY -4.0%) - vs 15% cap, rebalance pending owner decision.
+- Live GTC trailing stops: RIGL 15% ($44.714, HWM $52.605; order expires 2026-11-09 - renew), EDGX 5% ($25.517), SPHY 5% ($21.565), SGOV 16 sh ($95.703). None breached; none near hard-cut.
+
+### Data-quality notes
+- **Gemini FAILED**: default model HTTP 404 (retired); gemini-3.8-flash -> HTTP 429 quota exhausted. No Gemini output used.
+- **WebSearch fallback (labelled fallback):** pre-market S&P 500 futures about -0.17% (one report ~+0.1%, conflicting); Mon cash session S&P -0.51%, Nasdaq -1.07% (tech rotation). VIX: only unverified 16.97 reading (timestamp unclear) - not relied on.
+- Benzinga 48h feed (RIGL, EDGX, SPHY, SGOV): no news.
+
+### Market Context
+- US midterm election day/results overnight; US-Iran ceasefire/oil headlines; busy earnings. Econ calendar not verified. VIX unverified.
+
+### Core trade ideas
+- None: no verified research; core 0% remains a flagged gap.
+
+### Satellite trade ideas
+- None new. RIGL: Q3 earnings Nov 5 (3 days prior note; company-confirmed). Routine earnings, 6.2% of equity within 7.5% cap. Max loss if it fails: gap below stop, ~15% from HWM ($52.605 -> $44.71) or worse on a gap, ~$0.9k-$1.2k vs entry-basis gain; stop does not protect overnight gaps.
+
+### Risk factors
+- Election-night volatility; RIGL earnings gap risk Nov 5 and stop expiry Nov 9; Income 43.5% vs 15% cap; Gemini outage 2+ weeks blocks screen refresh; 0% core; cash ~50%.
+
+### Decision: HOLD
+- No hard-cut breaches; no negative catalyst resolution. No email (not urgent).
