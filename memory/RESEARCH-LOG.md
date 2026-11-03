@@ -9087,3 +9087,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 
 ### Decision: HOLD
 - No hard-cut breaches; no negative catalyst resolution. No email (not urgent).
+
+### 9:30 AM Session Note (2026-11-03)
+- HELD: no trades. Today's research has no verified trade ideas (Gemini outage, WebSearch fallback only) - no planned orders to validate.
+- Live check: equity $92,700, cash $46,601 (50.3%); RIGL $50.50 (+20.7%), all GTC stops live. Core 0/8, satellite 1/5, 0 trades this week.
+- Flag for Friday: Gemini outage blocks screen refresh; core 0% / Income 43.5% vs 15% cap still pending rebalance; RIGL stop expires 2026-11-09 (renew), earnings Nov 5.
