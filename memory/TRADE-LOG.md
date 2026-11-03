@@ -3764,3 +3764,16 @@ Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit
 | SPHY | income | 856 | $23.36 | $22.45 | -0.66% | -$778.96 (-3.90%) | 5% trailing ($21.565) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +20.60% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: earnings Nov 5 (3 trading days), outside 1-2 day window; held. RIGL stop order expires 2026-11-09 - renew. Flags: Cash 50.2%, Core 0%, Income 43.66% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
+
+## Nov 3 — 3pm Snapshot (Day 87, Tuesday)
+**Portfolio:** $92,571.34 | **Cash:** $46,601.13 (50.34%) | **Day P&L:** -$351.59 (-0.38%, vs Nov 2 3pm) | **Phase P&L:** -$7,428.66 (-7.43%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,566.62 (6.01% of equity) | **Income exposure:** $40,407.61 (43.65% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $48.83 | -3.36% | +$796.86 (+16.71%) | 15% trailing ($44.714) |
+| EDGX | income | 746 | $26.78 | $26.13 | +0.30% | -$484.90 (-2.43%) | 5% trailing ($25.517) |
+| SGOV | income | 16.989473856 | $100.52 | $100.43 | 0.00% | -$1.53 (-0.09%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.4397 | +0.04% | -$787.78 (-3.94%) | 5% trailing ($21.565) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +16.71% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: earnings after close Nov 5 (gap Nov 6, 3 trading days) - outside 1-2 day window; 6.0% of equity within 7.5% cap, max loss ~15% from HWM documented; held. RIGL stop order expires 2026-11-09 - renew. Flags: Cash 50.3%, Core 0%, Income 43.65% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.

@@ -9097,3 +9097,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - HELD: no "### Approved Trades (verified)" list today (Gemini outage) - no buys. Core 0/8, satellite 1/5, 0 trades this week.
 - Risk sweep: equity $92,665, cash $46,601 (50.3%). RIGL $50.10 (+19.7%) - no cut, no tighten (<+25%); EDGX -2.6%, SPHY -4.1%, SGOV flat (income, stops live). All GTC stops live, none moved.
 - Flag for Friday: RIGL earnings Nov 5 (routine, 6.2% equity), stop expires 2026-11-09 - renew; Income 43.5% vs 15% cap pending rebalance; Gemini outage persists.
+
+### 3 PM Session Note (2026-11-03)
+- HELD: no "### Approved Trades (verified)" list today (Gemini outage) - no buys. Core 0/8, satellite 1/5, 0 trades this week.
+- Risk sweep: equity $92,571, cash $46,601 (50.3%). RIGL $48.83 (+16.7%, -3.4% today) - no cut, no tighten (<+25%); EDGX -2.4%, SPHY -3.9%, SGOV flat (income). All 4 GTC trailing stops live, none moved down. RIGL earnings after close Nov 5 (gap Nov 6, 3 trading days out), 6.0% equity within 7.5% cap, max loss documented - held.
+- Flags for Friday: Gemini outage; Income ~43.7% vs 15% cap; core 0%; RIGL stop expires 2026-11-09 - renew.
+- Risky positions closed today: none.
