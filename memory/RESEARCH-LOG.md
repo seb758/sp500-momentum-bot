@@ -9103,3 +9103,33 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Risk sweep: equity $92,571, cash $46,601 (50.3%). RIGL $48.83 (+16.7%, -3.4% today) - no cut, no tighten (<+25%); EDGX -2.4%, SPHY -3.9%, SGOV flat (income). All 4 GTC trailing stops live, none moved down. RIGL earnings after close Nov 5 (gap Nov 6, 3 trading days out), 6.0% equity within 7.5% cap, max loss documented - held.
 - Flags for Friday: Gemini outage; Income ~43.7% vs 15% cap; core 0%; RIGL stop expires 2026-11-09 - renew.
 - Risky positions closed today: none.
+
+## 2026-11-04 — Pre-market Research (Wednesday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $92,582 | Cash: $46,601 (50.3%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,570 (6.0%: RIGL 114 sh, +16.8% at $48.86) | Income: $40,411 (43.6%: EDGX -2.4%, SGOV flat, SPHY -3.9%) - vs 15% cap, rebalance pending owner decision.
+- Live GTC trailing stops: RIGL 15% ($44.714, HWM $52.605; order expires 2026-11-09 - renew), EDGX 5% ($25.517), SPHY 5% ($21.565), SGOV 16 sh ($95.703). None breached; none near hard-cut.
+
+### Data-quality notes
+- **Gemini FAILED**: default model HTTP 404 (gemini-2.5-flash retired for new users); prior sessions found gemini-3.8-flash quota-exhausted (429). No Gemini output used.
+- **WebSearch fallback (labelled fallback):** returned only prior-cycle (2016-2024) election articles - NO verified 2026-11-04 futures or VIX data. Not fabricated; market context is a data gap.
+- RIGL: search shows conflicting Q3 earnings dates (Nov 2/3/5); prior logs record company-confirmed Nov 5 after close. No new RIGL news found.
+- Benzinga 48h feed (RIGL, EDGX, SPHY, SGOV): only a generic bond-ETF inflow article (SGOV mention); nothing thesis-breaking.
+
+### Market Context
+- Futures/VIX/econ calendar: unverified (data gap). Midterm election results context per prior log.
+
+### Core trade ideas
+- None: no verified research; core 0% remains a flagged gap.
+
+### Satellite trade ideas
+- None new. RIGL: Q3 earnings after close Thu Nov 5 (3 trading days incl. today -> gap Nov 6). Routine earnings, 6.0% of equity within 7.5% cap. Max loss if it fails: gap below stop, ~15% from HWM ($52.605 -> $44.71) or worse on a gap, ~$0.9k-$1.2k vs entry-basis gain; stop does not protect overnight gaps.
+
+### Risk factors
+- RIGL earnings gap risk Nov 5/6 and stop expiry Nov 9; Income 43.6% vs 15% cap; Gemini outage 2+ weeks blocks screen refresh; 0% core; cash ~50%; no market-context data today.
+
+### Decision: HOLD
+- No hard-cut breaches; no negative catalyst resolution. No email (not urgent).
