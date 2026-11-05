@@ -9149,3 +9149,32 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Risk sweep: equity $93,247, cash $46,601 (50.0%). RIGL $50.815 (+21.45%) - no cut, no tighten (<+25%). All 4 GTC trailing stops live, none moved.
 - RIGL earnings after close Nov 5 (gap Nov 6) - inside 1-2 day window; 6.2% of equity within 7.5% cap, max loss ~15% from HWM ($52.605 -> $44.71) documented; held deliberately. Stop expires 2026-11-09 - renew.
 - Risky positions closed today: none
+
+## 2026-11-05 — Pre-market Research (Thursday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $93,245 | Cash: $46,601 (50.0%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,814 (6.2%: RIGL 114 sh, +21.9% at $51.00) | Income: $40,830 (43.8%: EDGX -1.0%, SGOV flat, SPHY -3.3%) - vs 15% cap, rebalance pending owner decision.
+- Live GTC trailing stops: RIGL 15% ($44.714, HWM $52.605; order expires 2026-11-09 - renew), EDGX 5% ($25.517), SPHY 5% ($21.565), SGOV 16 sh ($95.703). None breached; none near hard-cut.
+
+### Data-quality notes
+- **Gemini FAILED**: HTTP 404 (gemini-2.5-flash unavailable to new users). No Gemini output used.
+- **WebSearch fallback (labelled fallback):** no coverage dated 2026-11-05; futures/VIX unverified. Not fabricated.
+- Benzinga 48h feed (RIGL, EDGX, SPHY): RIGL announced ASH oral presentation of R289 Phase 1b data in lower-risk MDS (Nov 4 22:32 UTC) - mildly positive/neutral. Nothing thesis-breaking.
+
+### Market Context
+- Futures/VIX/econ calendar: unverified (data gap).
+
+### Core trade ideas
+- None: no verified research; core 0% remains a flagged gap.
+
+### Satellite trade ideas
+- None new. RIGL: Q3 earnings after close today Nov 5 (gap Nov 6; 1 trading day). Catalyst: routine earnings + ASH data. 6.2% of equity within 7.5% cap. Max loss if it fails: gap below stop, ~15% from HWM ($52.605 -> $44.71) or worse on a gap, ~$1.0k gain at risk plus ~$0.9k below entry-basis on a severe gap; stop does not protect overnight gaps.
+
+### Risk factors
+- RIGL earnings gap risk tonight and stop expiry Nov 9; Income 43.8% vs 15% cap; Gemini outage blocks screen refresh; 0% core; cash ~50%; no market-context data.
+
+### Decision: HOLD
+- No hard-cut breaches; no negative catalyst resolution. No email (not urgent).
