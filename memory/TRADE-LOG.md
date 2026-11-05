@@ -3790,3 +3790,18 @@ Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit
 | SPHY | income | 856 | $23.36 | $22.585 | +0.65% | -$663.40 (-3.32%) | 5% trailing ($21.565) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. Risk sweep: no hard-cut breaches, no tightens (RIGL +21.45% vs +25%); all positions carry live GTC trailing stops, none moved down. RIGL: earnings after close Nov 5 (gap Nov 6, 2 trading days) - within window but 6.2% of equity within 7.5% cap, max loss ~15% from HWM documented; held through deliberately. RIGL stop order expires 2026-11-09 - renew. Flags: Cash 50.0%, Core 0%, Income 43.81% vs 15% cap - weekly-review rebalance; Gemini outage. Trades today: none. Risky positions closed: none.
+
+## Nov 5 — EDGX stop fill (income)
+**SELL EDGX** | income | 746 sh @ $25.45 | 5% trailing stop triggered (~1:49pm ET) | P&L ~-$992 (-4.96%) vs $26.78 entry | Roster stays fixed; no re-buy without owner/rebalance decision.
+
+## Nov 5 — 3pm Snapshot (Day 89, Thursday)
+**Portfolio:** $91,951.48 | **Cash:** $65,586.83 (71.33%) | **Day P&L:** -$1,295.67 (-1.39%, vs Nov 4 3pm) | **Phase P&L:** -$8,048.52 (-8.05%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $5,406.45 (5.88% of equity) | **Income exposure:** $20,958.21 (22.79% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| RIGL | satellite | 114 | $41.84 | $47.425 | -7.54% | +$636.69 (+13.35%) | 15% trailing ($44.714) |
+| SGOV | income | 16.989473856 | $100.52 | $100.455 | +0.00% | -$1.10 (-0.07%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.4901 | -0.49% | -$744.63 (-3.72%) | 5% trailing ($21.565) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. EDGX (income) stopped out @ $25.45 (~-$992). Risk sweep: no hard-cut breaches, no tightens; all remaining positions carry live GTC trailing stops, none moved down. RIGL: earnings after close today (gap Nov 6, 1 trading day) - 5.9% of equity within 7.5% cap, max loss ~15% from HWM documented; held through deliberately. RIGL stop order expires 2026-11-09 - renew. Flags: Cash 71.3%, Core 0%, Income 22.79% vs 15% cap; Gemini outage. Trades today: EDGX stop fill (income). Risky positions closed: none.
