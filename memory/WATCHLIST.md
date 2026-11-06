@@ -169,7 +169,55 @@ CRDO/VICR/SEZL/DAVE/PACS/STRL not re-checked this week (already confirmed
 core-ineligible and satellite-sector-mismatched eight refreshes running; no
 new information would change that).
 
-## Current — Week of 2026-10-30
+## Current — Week of 2026-11-06
+
+Sixteenth weekly screen refresh (weekly-review workflow, run 2026-11-06).
+**Abbreviated refresh:** Gemini still down (404 default), FMP 402 wall. No
+full re-screen and no new names (none verifiable); the 10-30 list was
+re-checked on fresh Alpaca bars (through 11-05 close; 11-06 bar not served)
+for 50/200-day MA and 3M/6M vs SPY. Fundamentals carried. No Gemini output
+used. Market: SPY -3.0% week, -4.4% on 11-05.
+
+**Corporate-action guard:** max 1-day move in 6M window: CRWD 20% (verified
+real previously), A 17%, MSFT/P 16%, VEEV 15%, IQV 14% - all real earnings
+moves, no impossible series.
+
+### Core (S&P 500 momentum + FCF)
+
+| Ticker | Momentum Rank | 3M Rel. Return vs SPY | FCF Trend | Analyst Rating | Notes |
+|---|---|---|---|---|---|
+| VEEV | 1 | +39.8% (6M +84.1%) | Improving (carried) | Buy | Health Care (software). Above 50-day ($310.1 vs $288.7) |
+| RVTY | 2 | +36.8% (6M +52.4%) | Stabilizing (carried) | Unanimous | Health Care. Above 50-day |
+| ADP | 3 | +18.4% (6M +43.3%) | ~+10% FY26 FCF (WebSearch) | Hold | Industrials. +4.5% wk, above 50-day |
+| MSFT | 4 | +12.4% (6M +27.2%) | Strong (FMP A-) | FMP A- | IT. Above 50-day |
+
+**Sector mix (4 names):** Health Care 2 (VEEV, RVTY = 50%), IT 1 (MSFT =
+25%), Industrials 1 (ADP = 25%) - 3 sectors (<5 target; no verifiable new
+sector names). HC >40% only due to small-list rounding (2 of 4). Semis/AI-
+hardware 0/4.
+
+**Dropped:** P (-26% wk, below 50-day, 3M rel only +9%), MPC, PSX (energy
+below 50-day), CRWD (below 50-day), IQV (below 50-day), all momentum-gate
+fails; A (Health Care sector cap).
+**Sector-capped alternates** (not active): A, TMO, CRL, WAT, MTD, BIIB, LLY,
+ABBV.
+
+### Satellite (small-cap biotech / industrials)
+
+| Ticker | Sub-sector | YoY Growth | Analyst Rating | Catalyst | Catalyst Date | Max Loss If Catalyst Fails | Notes |
+|---|---|---|---|---|---|---|---|
+| (none) | - | - | - | - | - | - | No verifiable candidates (Gemini outage). RIGL removed: stopped out 11-06 (-3.92%) |
+
+**Binary watch only (NOT tradeable):** Capricor (deramiocel), Savara
+(molgramostim), PDUFA 2026-11-22, per WebSearch calendars, unverified.
+**2-strike sub-sector status:** biotech 2 strikes (MNKD 09-11 -6.50%, RIGL
+11-06 -3.92%) - new biotech satellite entries blocked to 2026-11-20;
+industrials 0 strikes.
+
+
+## History
+
+### Week of 2026-10-30
 
 Fifteenth weekly screen refresh (weekly-review workflow, run 2026-10-30).
 **Abbreviated refresh:** Gemini still down (404 default / 429 on
@@ -216,9 +264,6 @@ Care cap: 5/11 = 45% > 40%, lowest-ranked HC name).
 (molgramostim), PDUFA 2026-11-22, per WebSearch calendars, unverified.
 **No new satellite names sourced** (Gemini quota) - list is 1 name; flagged.
 **2-strike sub-sector status:** biotech 0 strikes, industrials 0 strikes.
-
-
-## History
 
 ### Week of 2026-10-23
 
