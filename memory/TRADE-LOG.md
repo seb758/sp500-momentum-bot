@@ -3805,3 +3805,10 @@ Shares: 35 | Exit: $250.762 | Realized P&L: -$382.92 (-4.18%) | Reason: stop hit
 | SPHY | income | 856 | $23.36 | $22.4901 | -0.49% | -$744.63 (-3.72%) | 5% trailing ($21.565) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 1/5, 0/5. EDGX (income) stopped out @ $25.45 (~-$992). Risk sweep: no hard-cut breaches, no tightens; all remaining positions carry live GTC trailing stops, none moved down. RIGL: earnings after close today (gap Nov 6, 1 trading day) - 5.9% of equity within 7.5% cap, max loss ~15% from HWM documented; held through deliberately. RIGL stop order expires 2026-11-09 - renew. Flags: Cash 71.3%, Core 0%, Income 22.79% vs 15% cap; Gemini outage. Trades today: EDGX stop fill (income). Risky positions closed: none.
+
+### 2026-11-06 — SELL RIGL (satellite) — trailing stop (post-earnings gap)
+Shares: 114 | Exit: $40.20 | Realized P&L: -$186.96 (-3.92%) vs $41.84 entry | Reason: 15% GTC trailing stop (trigger $44.714, HWM $52.605) filled at open 2026-11-06T14:32Z after Q3 earnings (EPS miss, guidance below consensus) gapped it through the stop; gap fill ~$4.5 below trigger. Catalyst resolved negatively.
+2-strike: biotech - 2nd consecutive losing biotech satellite exit (MNKD 2026-09-11 -6.50%, RIGL -3.92%) per available log; new biotech satellite entries blocked 2 weeks (to 2026-11-20). Industrials unaffected. Flagged in WATCHLIST.md.
+
+## Nov 6 — 11am Note
+No buys (no Approved Trades list - Gemini outage). RIGL stop-out logged above. Satellite 0/5, core 0/8. Cash ~77% of equity; Income ~22.9% vs 15% cap (no sweep; no buy). SPHY -3.49% (income, stop live $21.565), SGOV flat.

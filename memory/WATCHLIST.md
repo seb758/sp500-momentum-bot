@@ -2369,3 +2369,5 @@ $3B cap and classified Technology, not Industrials). No industrials name
 cleared cap + sector + momentum + catalyst together.
 
 _(no prior real weeks before 2026-07-11 — the bot launched that week)_
+
+**2-strike sub-sector cooldown status (updated 2026-11-06 11am):** BIOTECH blocked for new satellite entries until 2026-11-20 (MNKD -6.50% then RIGL -3.92%). Industrials: none.
