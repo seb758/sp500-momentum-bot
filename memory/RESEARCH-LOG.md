@@ -9223,3 +9223,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 
 ### Decision: HOLD
 - No hard-cut breach (RIGL above -15% from entry); no discretionary action. Stop order handles RIGL. No email (not urgent).
+
+### 9:30 AM Session Note
+- HOLD, no buys: no verified "Approved Trades" list (Gemini outage, 404); research-first rule blocks trading. Core 0/8, satellite 1/5; cash ~72%.
+- RIGL (satellite) gapped down post-earnings (~$41 vs stop $44.714, qty_available 0 = stop order working/triggered); 15% trailing stop handles exit, no discretionary action.
+- Flag for Friday review: Gemini model 404 blocks screen refresh; Core 0% and Income above 15% cap persist.
