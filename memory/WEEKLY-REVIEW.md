@@ -2583,3 +2583,91 @@ income $40,602.42 (43.6%), cash $46,601.13 (50.1%).
 ### Overall Grade: C-
 Small gain but lagged S&P by 0.85pp; sixth straight week of ~6%
 Core+Satellite deployment and research tooling still down.
+
+---
+
+## Week ending 2026-11-06
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $93,052.91 (per 10-30 review) |
+| Ending portfolio | $91,323.35 (Alpaca equity, 11-06 live) |
+| Week return | -$1,729.56 (-1.86%) |
+| S&P 500 week | -3.01% (SPY close 10-30 $755.72 -> 11-05 $733.00; Gemini unavailable, computed from Alpaca; 11-06 bar not yet served; 11-05 alone -4.4%) |
+| Bot vs S&P | +1.15pp |
+| Core trades | 0 (no closes, no entries) |
+| Satellite trades | 1 (W:0/L:1; RIGL stop-out) |
+| Win rate | 0% (0/1 closed satellite) |
+| Best trade | n/a (no winners); least bad: RIGL -3.92% (satellite) |
+| Worst trade | EDGX -4.96% (income stop, ~-$992); RIGL -3.92% (satellite, -$186.96) |
+| Profit factor | 0.00 (no winning closes) |
+
+Phase P&L: -8.68% vs $100k start. Realized this week: -$186.96 satellite, ~-$992 income.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Reason |
+|---|---|---|---|---|---|
+| RIGL | satellite | $41.84 | $40.20 | -$186.96 (-3.92%) | 15% trailing stop (trigger $44.714, HWM $52.605) gapped through at 11-06 open after Q3 earnings miss + weak guidance; fill ~$4.5 below trigger |
+| EDGX | income | $26.78 | $25.45 | ~-$992 (-4.96%) | 5% trailing stop 11-05; roster stays fixed, not re-bought |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| SPHY | income | $23.36 | $22.53 | -$710.48 (-3.55%) | 5% trailing ($21.565) |
+| SGOV | income | $100.52 | $100.49 | -$0.51 (-0.03%) | 5% trailing |
+
+Exposure (equity $91,323.35): core $0 (0%), satellite $0 (0%), income
+$20,993 (23.0%), cash $70,330 (77.0%).
+
+### Watchlist Refresh
+- Core: 0 added, 6 dropped (P, MPC, CRWD, PSX, IQV below 50-day MA; A
+  Health Care sector cap). 4 names. **Abbreviated refresh:** Gemini 404 and
+  FMP wall persist; 10-30 list re-checked on fresh Alpaca bars (through 11-05
+  close) only. Fundamentals carried.
+- Satellite: 0 added, 1 dropped (RIGL stopped out). 0 tradeable names.
+  Biotech 2-strike cooldown to 2026-11-20. Capricor/Savara (PDUFA 11-22)
+  binary watch only.
+- **Core sector mix (4):** Health Care 2 (VEEV, RVTY = 50%), IT 1 (MSFT = 25%),
+  Industrials 1 (ADP = 25%) - 3 sectors. HC >40% is a small-list rounding
+  artifact (2 of 4); A held as sector-capped alternate.
+
+### What Worked
+- Idle cash cushioned a -3.0% S&P week (11-05 -4.4% selloff): -1.86% vs -3.01%.
+- Stop discipline: EDGX and RIGL exits executed mechanically, no discretionary
+  panic.
+
+### What Didn't Work
+- **Deployment malfunction flag (Patience Rule), 7th consecutive week:** Core
+  0%, Core+Sat 0%; cash 77.0%, Income 23.0% vs 15% cap. Zero new entries - no
+  "Approved Trades (verified)" list (Gemini outage 6+ weeks).
+- RIGL held through earnings with +21% open gain; gap blew through the 15%
+  trailing stop, turning a +$1,000 position into -$187. Held deliberately
+  inside 7.5% cap, but there was no profit-protection step ahead of a known
+  binary date.
+- Momentum broke: 5 of 10 core names fell below 50-day MA this week (P -26%,
+  MPC -15%, CRWD -13%, PSX -13%).
+- EDGX -4.96% stop-out; SPHY -3.6% drag.
+
+### Key Lessons
+- Trailing stops do not protect through earnings gaps (rule already documented);
+  a satellite with a large open gain heading into earnings arguably warrants a
+  tightened stop or partial trim. Candidate rule - owner decision, NOT changed
+  here (one occurrence).
+- Core list is now thin (4 names) because the screen has no fundamental data
+  source; deployment cannot resume without a Gemini fix or an owner-approved
+  WebSearch fallback.
+
+### Adjustments for Next Week
+- Owner action (repeat, urgent): (1) Gemini billing/quota + set default model
+  to gemini-3.8-flash (scripts/gemini_research.sh line 56, or env
+  GEMINI_RESEARCH_MODEL); (2) authorize an Income rebalance (SPHY to cap)
+  and/or a WebSearch-based approval fallback so Core can redeploy; (3) decide
+  whether to re-add EDGX or leave Income roster at SGOV/SPHY.
+- Note: RIGL stop order expiry 11-09 is moot (position closed).
+- Biotech satellite entries blocked to 2026-11-20; industrials open.
+- No rule or risk-cap changes.
+
+### Overall Grade: C-
+Beat a down S&P by 1.15pp on idle cash only; satellite stopped out on gap,
+income stop hit, seventh straight week of no Core deployment.
