@@ -9233,3 +9233,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - No buys: no verified "Approved Trades" list (Gemini 404 outage persists). No cuts/tightens: only SPHY/SGOV (income) remain, stops live, none breached.
 - RIGL (satellite) stopped out at open @ $40.20 (-3.92%, -$187) after earnings gap through $44.714 trigger; 2nd consecutive biotech satellite loss (after MNKD) -> biotech cooldown 2 weeks to 2026-11-20.
 - Lesson for Friday review: trailing stops don't cap gap loss; ~$4.5 slippage below trigger on earnings gap. Cash ~77%, Core 0%: Gemini outage is blocking all deployment.
+
+### 3 PM Session Note (2026-11-06)
+- HELD: no "### Approved Trades (verified)" list today (Gemini outage) - no buys. Core 0/8, satellite 0/5, 0 discretionary trades this week.
+- Risk sweep: SPHY -3.57%, SGOV flat (income); stops live, no cuts/tightens. Equity $91,319, cash $70,330 (77.0%).
+- Pattern for Friday review: Gemini outage has kept core at 0% and cash ~77%; trailing stops did not cap RIGL earnings-gap loss.
+- Risky positions closed today: none
