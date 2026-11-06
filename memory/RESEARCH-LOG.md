@@ -9194,3 +9194,32 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - EDGX (income) 5% trailing stop filled 746 sh @ $25.45 (~1:49pm ET), ~-$992 vs $26.78 entry. Cash now $65,587 (71.3%); Income down to 22.8% vs 15% cap.
 - RIGL (satellite) $47.425 (+13.3%, -7.5% today) - no cut, no tighten. Earnings after close today (gap Nov 6): 5.9% of equity within 7.5% cap, max loss ~15% from HWM ($52.605 -> $44.71) documented; held deliberately. Stop expires 2026-11-09 - renew.
 - Risky positions closed today: none (EDGX was a stop fill, not a discretionary close)
+
+## 2026-11-06 — Pre-market Research (Friday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $91,805 | Cash: $65,748 (71.6%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $5,065 (5.5%: RIGL 114 sh, +6.2% at $44.43 pre-mkt) | Income: $20,993 (22.9%: SGOV flat, SPHY -3.6%; EDGX stopped out Nov 5) - vs 15% cap, still above.
+- Live GTC trailing stops: RIGL 15% ($44.714, HWM $52.605; order expires 2026-11-09 - renew), SPHY 5% ($21.565), SGOV 16 sh ($95.703). None breached; none near hard-cut.
+
+### Data-quality notes
+- **Gemini FAILED**: HTTP 404 (gemini-2.5-flash unavailable). No Gemini output used.
+- **WebSearch fallback (labelled fallback):** no coverage dated 2026-11-06 found; futures/VIX/econ releases unverified. Not fabricated.
+- Benzinga 48h feed: RIGL Q3 (Nov 5 AMC): revenue $80.9M beat ($80.1M est), EPS $0.65 missed ($0.86 est), FY26 sales guidance low end raised to $290-295M but below $305.7M consensus -> negative reaction likely. ASH R289 data announced Nov 4. Nothing on SPHY/SGOV.
+
+### Market Context
+- Futures/VIX/econ calendar: unverified (data gap).
+
+### Core trade ideas
+- None: no verified research; core 0% remains a flagged gap.
+
+### Satellite trade ideas
+- None new. RIGL catalyst (Q3 earnings) resolved mixed-to-negative: EPS miss, guidance below consensus. Pre-mkt $44.43 (-2.8% vs close $45.71) is below the $44.714 trailing stop -> stop likely triggers at open (market order, may fill lower). Loss vs entry $41.84 is not hit (still ~+6%); max loss from HWM ~15% (~$52.6 -> $44.7).
+
+### Risk factors
+- RIGL post-earnings gap/stop trigger today; stop expires Nov 9 (moot if filled); Income 22.9% vs 15% cap; Gemini outage blocks screen refresh; 0% core; cash ~72%; no market-context data.
+
+### Decision: HOLD
+- No hard-cut breach (RIGL above -15% from entry); no discretionary action. Stop order handles RIGL. No email (not urgent).
