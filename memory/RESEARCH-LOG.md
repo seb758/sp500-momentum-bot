@@ -9239,3 +9239,32 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Risk sweep: SPHY -3.57%, SGOV flat (income); stops live, no cuts/tightens. Equity $91,319, cash $70,330 (77.0%).
 - Pattern for Friday review: Gemini outage has kept core at 0% and cash ~77%; trailing stops did not cap RIGL earnings-gap loss.
 - Risky positions closed today: none
+
+## 2026-11-07 — Pre-market Research (Saturday, market closed)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). No trading possible today; next session Mon 2026-11-09.
+
+### Account
+- Equity: $91,323 | Cash: $70,330 (77.0%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $0 (0%, 0/5; RIGL stopped out 11-06) | Income: $20,993 (23.0%: SGOV flat, SPHY -3.55%) - vs 15% cap, still above.
+- Live GTC trailing stops: SPHY 5% ($21.565), SGOV 16 sh 5% ($95.703). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: HTTP 404 (gemini-2.5-flash no longer available; error suggests gemini-3.8-flash). No Gemini output used. Script model needs updating (owner action).
+- **WebSearch fallback (labelled fallback):** returned only 2025 coverage; no 2026-11-07 futures/VIX/econ data found. Not fabricated.
+- Benzinga 48h feed: MSFT - report Microsoft cutting some neocloud partners (watchlist core, minor); VEEV - Jefferies Buy, PT raised to $375 (positive). Nothing on RVTY/ADP/SPHY/SGOV seen (feed output partially read).
+
+### Market Context
+- Futures/VIX/econ calendar: unverified (data gap). Prior week: SPY -3.0%.
+
+### Core trade ideas
+- None verified. Watchlist core (VEEV, RVTY, ADP, MSFT) unchanged; no thesis-breaking news seen. No Approved Trades without market-context research.
+
+### Satellite trade ideas
+- None. Watchlist satellite empty. Biotech entries blocked to 2026-11-20 (2-strike). Binary watch only (not tradeable): Capricor, Savara PDUFA 2026-11-22.
+
+### Risk factors
+- Gemini outage blocks research/deployment; core 0%; cash 77%; Income 23% vs 15% cap; no market-context data.
+
+### Decision: HOLD
+- No breach; no email (not urgent).
