@@ -9268,3 +9268,32 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). No 
 
 ### Decision: HOLD
 - No breach; no email (not urgent).
+
+## 2026-11-08 — Pre-market Research (Sunday, market closed)
+
+Env vars all present. `account`/`positions`/`orders` clean. No trading possible; next session Mon 2026-11-09.
+
+### Account
+- Equity: $91,323 | Cash: $70,330 (77.0%; above 5% floor).
+- Core: $0 (0/8) | Satellite: $0 (0/5) | Income: $20,993 (23.0% vs 15% cap, still above): SGOV flat, SPHY -3.55%.
+- Live GTC trailing stops: SPHY 5% ($21.565), SGOV 16 sh 5% ($95.703). None breached.
+
+### Data-quality notes
+- **Gemini FAILED again**: HTTP 404 (gemini-2.5-flash unavailable; suggests gemini-3.8-flash). No Gemini output used. Owner action: update script model.
+- **WebSearch fallback (labelled):** no 2026-11-08 futures/VIX/econ data found (only 2023-2025 articles). Not fabricated.
+- Benzinga 48h feed: MSFT - reportedly cutting some neocloud partners / prioritizing own data centers (mild, mostly hits CRWV/IREN/ORCL); no thesis-break news seen for VEEV/RVTY/ADP/SPHY/SGOV (ADP hit was unrelated Adelphi Metals).
+
+### Market Context
+- Futures/VIX/econ calendar: unverified (data gap). Prior week: SPY -3.0%.
+
+### Core trade ideas
+- None verified. Watchlist core (VEEV, RVTY, ADP, MSFT) unchanged; no market-context research, so no Approved Trades.
+
+### Satellite trade ideas
+- None. Watchlist satellite empty; biotech entries blocked to 2026-11-20 (2-strike). Capricor/Savara PDUFA 2026-11-22 = watch only, not tradeable.
+
+### Risk factors
+- Gemini outage blocks research/deployment; core 0%; cash 77%; Income 23% vs 15% cap; no market-context data.
+
+### Decision: HOLD
+- No breach; no email (not urgent).
