@@ -9331,3 +9331,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - HELD: no "Approved Trades (verified)" list (Gemini outage/quota) - no buys in either sleeve. Core 0/8, satellite 0/5.
 - Account re-validated: equity $91,351, cash $70,330 (77%); SGOV/SPHY carry live GTC trailing stops; none breached.
 - Flag for Friday: Gemini model/quota fix needed to resume deployment; Income ~23% vs 15% cap.
+
+### 11 AM Session Note (2026-11-09)
+- HELD: no "Approved Trades (verified)" list - no buys. Core 0/8, satellite 0/5.
+- Risk sweep: SPHY -3.28%, SGOV flat (income, no cut/tighten rules apply); GTC trailing stops live (SPHY $21.565, SGOV $95.703). No cuts, no tightens.
+- Flag: Gemini outage still blocks deployment; cash 77%, Income ~23% vs 15% cap.
