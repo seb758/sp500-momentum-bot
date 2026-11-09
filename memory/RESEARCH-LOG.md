@@ -9297,3 +9297,32 @@ Env vars all present. `account`/`positions`/`orders` clean. No trading possible;
 
 ### Decision: HOLD
 - No breach; no email (not urgent).
+
+## 2026-11-09 — Pre-market Research (Monday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $91,323 | Cash: $70,330 (77.0%; above 5% floor).
+- Core: $0 (0/8) | Satellite: $0 (0/5) | Income: $20,993 (23.0% vs 15% cap, still above): SGOV flat, SPHY -3.55%.
+- Live GTC trailing stops: SPHY 5% ($21.565), SGOV 16 sh 5% ($95.703). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: default model gemini-2.5-flash HTTP 404 (retired); retry with GEMINI_RESEARCH_MODEL=gemini-3.8-flash got HTTP 429 (quota exhausted). No Gemini output used. Owner: set GEMINI_RESEARCH_MODEL=gemini-3.8-flash in env / update script default, check quota/billing.
+- **WebSearch fallback (labelled):** no 2026-11-09 futures/VIX/econ data found (stale results only). Not fabricated.
+- Benzinga 24h feed: VEEV - BTIG Buy, PT $340->$360 (positive); MSFT - only minor items (WSL/CachyOS, AI commentary, neocloud selloff context; no thesis break). Nothing on RVTY/ADP/SPHY/SGOV.
+
+### Market Context
+- Futures/VIX/econ calendar: unverified (data gap). Prior week: SPY -3.0%.
+
+### Core trade ideas
+- None verified. Watchlist core (VEEV, RVTY, ADP, MSFT) unchanged; VEEV news positive; no market-context research, so no Approved Trades.
+
+### Satellite trade ideas
+- None. Watchlist satellite empty; biotech entries blocked to 2026-11-20 (2-strike). Savara/Capricor PDUFA 2026-11-22 = watch only.
+
+### Risk factors
+- Gemini outage/quota blocks research and deployment; core 0%; cash 77%; Income 23% vs 15% cap; no market-context data.
+
+### Decision: HOLD
+- No breach; no email (not urgent).
