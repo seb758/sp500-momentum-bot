@@ -3823,3 +3823,14 @@ No buys (no Approved Trades list - Gemini outage). RIGL stop-out logged above. S
 | SPHY | income | 856 | $23.36 | $22.525 | -0.02% | -$714.76 (-3.57%) | 5% trailing ($21.565) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 0/5, 0/5 (RIGL stopped out at open, see above). Risk sweep: no hard-cut breaches, no tightens; both remaining positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech satellite entries blocked to 2026-11-20 (2-strike). Flags: Cash 77.0%, Core 0%, Income 22.98% vs 15% cap; Gemini outage blocks screen refresh/deployment. Trades today: RIGL stop fill (satellite). Risky positions closed: none (RIGL was a stop fill).
+
+## Nov 9 — 3pm Snapshot (Day 91, Monday)
+**Portfolio:** $91,374.33 | **Cash:** $70,330.29 (76.97%) | **Day P&L:** +$55.26 (+0.06%, vs Nov 6 3pm) | **Phase P&L:** -$8,625.67 (-8.63%)
+**Core exposure:** $0.00 (0.00% of equity) | **Satellite exposure:** $0.00 (0.00% of equity) | **Income exposure:** $21,044.04 (23.03% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| SGOV | income | 16.989473856 | $100.52 | $100.4989 | +0.01% | -$0.36 (-0.02%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.5895 | +0.26% | -$659.55 (-3.30%) | 5% trailing ($21.565) |
+
+**Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini outage/quota), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 0/5, 0/5. Risk sweep: no hard-cut breaches, no tightens; both positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech satellite entries blocked to 2026-11-20 (2-strike). Flags: Cash 77.0%, Core 0%, Income 23.03% vs 15% cap; Gemini outage blocks screen refresh/deployment. Trades today: none. Risky positions closed: none.
