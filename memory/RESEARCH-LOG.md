@@ -9342,3 +9342,32 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Risk sweep: no positions beyond hard-cut; no unprotected positions (SPHY/SGOV GTC trailing stops live); no tightens (income only); no satellite catalysts pending.
 - Pattern for Friday: Gemini model/quota fix still blocks deployment; cash 77%, Income ~23% vs 15% cap; biotech blocked to 2026-11-20.
 - Risky positions closed today: none.
+
+## 2026-11-10 — Pre-market Research (Tuesday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $91,375 | Cash: $70,330 (77.0%; above 5% floor).
+- Core: $0 (0/8) | Satellite: $0 (0/5) | Income: $21,045 (23.0% vs 15% cap, still above): SGOV flat, SPHY -3.30%.
+- Live GTC trailing stops: SPHY 5% ($21.565), SGOV 16 sh 5% ($95.703). None breached.
+
+### Data-quality notes
+- **Gemini FAILED**: gemini-3.8-flash HTTP 429 (free-tier quota exhausted, after retry). No Gemini output used. Owner: fix quota/billing + set GEMINI_RESEARCH_MODEL (default gemini-2.5-flash returns 404).
+- **WebSearch fallback (labelled):** no 2026-11-10 futures/VIX/econ data found (only 2025/stale results). Not fabricated.
+- Benzinga 24h feed: MSFT - Reuters: lobbying vs expected Trump ban on Chinese data-center tech; ESET Exchange malware report (not MSFT-specific thesis break). VEEV - Canaccord Hold PT $260->$315, BTIG/Truist PT updates (neutral/positive). Nothing on RVTY/ADP/SPHY/SGOV.
+
+### Market Context
+- Futures/VIX/econ calendar: unverified (data gap).
+
+### Core trade ideas
+- None verified. Watchlist core (VEEV, RVTY, ADP, MSFT) unchanged; no thesis-break news; no market-context research, so no Approved Trades.
+
+### Satellite trade ideas
+- None. Watchlist satellite empty; biotech entries blocked to 2026-11-20 (2-strike). Savara/Capricor PDUFA 2026-11-22 = watch only.
+
+### Risk factors
+- Gemini quota outage blocks research/deployment; core 0%; cash 77%; Income 23% vs 15% cap; no market-context data.
+
+### Decision: HOLD
+- No breach; no email (not urgent).
