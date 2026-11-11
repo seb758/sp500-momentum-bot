@@ -9387,3 +9387,40 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Risk sweep: only income held (SGOV flat, SPHY -3.64%); both carry live GTC 5% trailing stops, none breached/moved down. No satellite catalysts pending.
 - Pattern for Friday: 3rd straight week near-idle on research outage; core 0%, cash 77%, Income ~23% vs 15% cap - needs owner Gemini fix.
 - Risky positions closed today: none.
+
+## 2026-11-11 — Pre-market Research (Wednesday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $91,461 | Cash: $70,330 (76.9%; above 5% floor).
+- Core: $0 (0/8) | Satellite: $0 (0/5) | Income: $21,130 (23.1% vs 15% cap, still above): SGOV flat, SPHY -2.87%.
+- Live GTC trailing stops: SPHY 856 sh 5% ($21.565, hwm $22.70), SGOV 16 sh 5% ($95.703). None breached. (SGOV 0.99 fractional sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash HTTP 404 (retired); retry GEMINI_RESEARCH_MODEL=gemini-3.8-flash HTTP 429 (quota exhausted, after retry). No Gemini output used. Owner: fix quota/billing + update script default model.
+- **Benzinga feed used as fallback (labelled)** for market context. VIX level: not in feed - data gap, not fabricated.
+
+### Market Context (Benzinga fallback)
+- S&P/Dow/Nasdaq 100 futures higher Wed after Tue lower close; Bessent urging US-China "de-risk". Polymarket 83% odds of higher open.
+- Tue: hot Oct CPI pushed 10Y yield to ~5%; NVDA -6% (CEO scandal). Fed Paulson/Goolsbee hawkish - further gradual hikes; 50bp hike talk back on table.
+- Today: Veterans Day (bond market typically closed, equities open). Anthropic IPO pricing / AI-capex headlines driving tech. CRWV earnings in focus.
+- Futures direction: up. VIX: unverified.
+
+### Overnight news - held / watchlist
+- SGOV/SPHY: no thesis-break news. Rate-hike risk = pressure on SPHY (high-yield duration/credit); stop live.
+- MSFT: briefly overtook NVDA in mkt cap; OpenAI Q3 revenue $10B (The Information); IBM agent platform partnership. Positive/neutral.
+- ADP: released NER Pulse prelim Oct employment data (routine). No thesis break.
+- VEEV, RVTY: no items in 24h.
+
+### Core trade ideas
+- None verified. Watchlist core (VEEV, RVTY, ADP, MSFT) unchanged; no thesis breaks. No Gemini research + hawkish-Fed/5% 10Y backdrop -> no Approved Trades.
+
+### Satellite trade ideas
+- None. Watchlist satellite empty; biotech entries blocked to 2026-11-20 (2-strike). Savara/Capricor PDUFA 2026-11-22 = watch only.
+
+### Risk factors
+- Hot CPI / 10Y ~5% / Fed hike risk; Gemini outage blocks research/deployment (week 3); core 0%; cash 77%; Income 23% vs 15% cap.
+
+### Decision: HOLD
+- No breach; no email (not urgent).
