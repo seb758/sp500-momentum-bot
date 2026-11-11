@@ -31,3 +31,8 @@ Tomorrow: hold; no approved list (Gemini outage); RIGL tighten at +25%
 Portfolio: $91,951 (-1.39% day, -8.05% phase) | Core $0 (0%) | Satellite $5,406 (5.9%) | Cash $65,587 (71.3%) | Income $20,958 (22.8%)
 Trades: EDGX (income) stop fill 746 @ 25.45 (~-$992) | Risky closed: none | RIGL (sat) +13.3% stop $44.71 (earnings AMC today, gap risk); SPHY -3.7% ($21.57), SGOV -0.1% ($95.70) | Week: core 0/6, sat 0/4
 Tomorrow: watch RIGL gap; renew RIGL stop (exp Nov 9); Gemini outage persists
+
+## 3PM NOV 11 (email not sent - SMTP port 465 unreachable; fallback)
+Portfolio: $91,345 (+0.04% day, -8.65% phase) | Core $0 (0%) | Satellite $0 (0%) | Cash $70,330 (77.0%) | Income $21,015 (23.0%)
+Trades: none | Risky closed: none | SGOV (inc) 0.0% stop $95.70; SPHY (inc) -3.4% stop $21.57 | Week: core 0/6, sat 0/4
+Tomorrow: hold unless Gemini research restored (404 retired model + 429 quota) and approved list produced

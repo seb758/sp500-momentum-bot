@@ -9434,3 +9434,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - HELD: no "Approved Trades (verified)" list - no buys either sleeve. Core 0/8, satellite 0/5; no cuts/tightens (no core/satellite positions).
 - Income: equity $91,326, cash $70,330 (77%); SPHY -3.54% (stop $21.565), SGOV flat (stop $95.703) - live, none breached.
 - Flag for Friday: research outage week 3 keeps core at 0%; Income ~23% vs 15% cap unresolved.
+
+### 3 PM Session Note (2026-11-11)
+- HELD: no "Approved Trades (verified)" list - no buys either sleeve. Core 0/8, satellite 0/5; no cuts/tightens (no core/satellite positions).
+- Income: equity $91,345, cash $70,330 (77.0%); SPHY -3.45% (stop $21.565), SGOV flat (stop $95.703) - live GTC, none breached.
+- Pattern for Friday: research outage week 3 (Gemini 404/429) keeps core at 0%; Income ~23% vs 15% cap unresolved.
+- Risky positions closed today: none.
