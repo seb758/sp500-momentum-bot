@@ -36,3 +36,8 @@ Tomorrow: watch RIGL gap; renew RIGL stop (exp Nov 9); Gemini outage persists
 Portfolio: $91,345 (+0.04% day, -8.65% phase) | Core $0 (0%) | Satellite $0 (0%) | Cash $70,330 (77.0%) | Income $21,015 (23.0%)
 Trades: none | Risky closed: none | SGOV (inc) 0.0% stop $95.70; SPHY (inc) -3.4% stop $21.57 | Week: core 0/6, sat 0/4
 Tomorrow: hold unless Gemini research restored (404 retired model + 429 quota) and approved list produced
+
+## 3PM NOV 12 (email not sent - SMTP port 465 unreachable; fallback)
+Portfolio: $91,264 (-0.09% day, -8.74% phase) | Core $0 (0%) | Satellite $0 (0%) | Cash $70,330 (77.1%) | Income $20,934 (22.9%)
+Trades: none | Risky closed: none | SGOV (inc) 0.0% stop $95.70; SPHY (inc) -3.9% stop $21.57 | Week: core 0/6, sat 0/4
+Tomorrow: Friday review; hold unless Gemini research restored (404 retired model + 429 quota) and approved list produced
