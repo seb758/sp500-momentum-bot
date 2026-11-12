@@ -9478,3 +9478,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 
 ### Decision: HOLD
 - No breach; no email (not urgent - Hormuz headline unverified, oil falling).
+
+### 9:30 AM Session Note (2026-11-12)
+- HELD: no "Approved Trades (verified)" list (Gemini 404/429 outage, NVDA-led weak tech futures, hawkish Fed) - no buys either sleeve. Core 0/8, satellite 0/5.
+- Account re-validated: equity $91,307, cash $70,330 (77.0%); SGOV flat / SPHY -3.64% - 5% GTC trailing stops live, none breached.
+- Flag for Friday: research outage week 3 keeps core at 0% (<60% deployment 2+ weeks = malfunction per Patience Rule); Income ~23% vs 15% cap unresolved.
