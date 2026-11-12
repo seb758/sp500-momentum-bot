@@ -9440,3 +9440,41 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Income: equity $91,345, cash $70,330 (77.0%); SPHY -3.45% (stop $21.565), SGOV flat (stop $95.703) - live GTC, none breached.
 - Pattern for Friday: research outage week 3 (Gemini 404/429) keeps core at 0%; Income ~23% vs 15% cap unresolved.
 - Risky positions closed today: none.
+
+## 2026-11-12 — Pre-market Research (Thursday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $91,307 | Cash: $70,330 (77.0%; above 5% floor).
+- Core: $0 (0/8) | Satellite: $0 (0/5) | Income: $20,977 (23.0% vs 15% cap, still above): SGOV flat, SPHY -3.64%.
+- Live GTC trailing stops: SPHY 856 sh 5% ($21.565, hwm $22.70), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached. (SGOV 0.99 fractional sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED**: default gemini-2.5-flash HTTP 404 (retired); retry GEMINI_RESEARCH_MODEL=gemini-3.8-flash HTTP 429 (quota exhausted, after retry). No Gemini output used. Owner: fix quota/billing + update script default model.
+- **Benzinga feed used as fallback (labelled)** + 1 WebSearch (Hormuz check: no Nov 2026 coverage found, only Mar-Apr 2026). VIX level: not in feed - data gap, not fabricated.
+
+### Market Context (Benzinga fallback)
+- Futures mixed Thu after Wed higher close (Nasdaq 100 +2.8% Wed on CRWV/NVDA). Nasdaq/S&P futures lower pre-mkt on NVDA rout - board reportedly weighing Jensen Huang's future; WH not intervening. Polymarket odds of higher open 33%.
+- Oil reported falling. Iran: unverified "traders circulating" headline (Wed 20:05 UTC) of IRGC general claiming Hormuz closed - not confirmed by any dated source; Bessent moved to military housing after Iranian threats. Ongoing war context, not a new confirmed event.
+- In focus: CRWV, TTEK, FNV. Econ releases today: unverified (data gap). Backdrop: hot Oct CPI, 10Y ~5%, hawkish Fed (from 11-11 log).
+- Futures direction: mixed/lower (tech-led). VIX: unverified.
+
+### Overnight news - held / watchlist
+- SGOV/SPHY: no thesis-break news. Rate-hike risk still pressure on SPHY; stop live.
+- MSFT: slid Wed on Anthropic productivity-tools launch; warns on proposed China data-center tech ban. Negative-leaning, no thesis break.
+- VEEV: Wells Fargo Overweight, PT raised to $400. Positive.
+- ADP: dividend +12% ($1.50->$1.70); annual meeting. Positive.
+- RVTY: no items in 24h.
+
+### Core trade ideas
+- None verified. Watchlist core (VEEV, RVTY, ADP, MSFT) unchanged; no thesis breaks. No Gemini research + NVDA/tech-led weak futures + hawkish Fed -> no Approved Trades.
+
+### Satellite trade ideas
+- None. Watchlist satellite empty; biotech entries blocked to 2026-11-20 (2-strike). Capricor/Savara PDUFA 2026-11-22 = watch only.
+
+### Risk factors
+- NVDA leadership turmoil hitting tech futures; unverified Hormuz closure headline; hot CPI / 10Y ~5% / Fed hike risk; Gemini outage blocks research/deployment (week 3); core 0%; cash 77%; Income 23% vs 15% cap.
+
+### Decision: HOLD
+- No breach; no email (not urgent - Hormuz headline unverified, oil falling).
