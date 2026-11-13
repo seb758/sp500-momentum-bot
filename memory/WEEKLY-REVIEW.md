@@ -2671,3 +2671,100 @@ $20,993 (23.0%), cash $70,330 (77.0%).
 ### Overall Grade: C-
 Beat a down S&P by 1.15pp on idle cash only; satellite stopped out on gap,
 income stop hit, seventh straight week of no Core deployment.
+
+---
+
+## Week ending 2026-11-13
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $91,323.35 (per 11-06 review) |
+| Ending portfolio | $91,247.39 (Alpaca equity, 11-13 post-close) |
+| Week return | -$75.96 (-0.08%) |
+| S&P 500 week | +2.97% (SPY close 11-06 $735.29 -> 11-12 $757.12; Gemini unavailable, computed from Alpaca; 11-13 bar not served) |
+| Bot vs S&P | -3.05pp |
+| Core trades | 0 (no closes, no entries) |
+| Satellite trades | 0 (no closes, no entries) |
+| Win rate | n/a (0 closed) |
+| Best trade | n/a (no trades); best holding SGOV +0.04% (income) |
+| Worst trade | n/a (no trades); worst holding SPHY -3.94% unrealized (income) |
+| Profit factor | n/a |
+
+Phase P&L: -8.75% vs $100k start. Realized this week: $0.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| (none) | - | - | - | - | No closes |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| SPHY | income | $23.36 | $22.44 | -$787.52 (-3.94%) | 5% trailing ($21.565) |
+| SGOV | income | $100.52 | $100.56 | +$0.68 (+0.04%) | 5% trailing ($95.703, 16 sh covered) |
+
+Exposure (equity $91,247.39): core $0 (0%), satellite $0 (0%), income
+$20,917 (22.9%), cash $70,330 (77.1%).
+
+### Watchlist Refresh
+- Core: 15 added (ACN, MTD, BBY, TYL, ROP, BDX, ALLE, APA, CTAS, V, AMD,
+  CPAY + CRL, LLY, TMO back from alternates), 1 dropped (MSFT, rank 103, out of
+  shortlist). 18 names (was 4). **First full re-screen since 10-23:** 465
+  symbols ranked on fresh Alpaca bars; universe = watchlist history + internal
+  S&P roster (Wikipedia etc. blocked by network policy). Fundamentals via
+  WebSearch (FMP 402s ~95%, Gemini down). Failed FCF gate: CDW, SWKS. Rating
+  gate: FDS. Unverified: MA, ULTA, MCK. Held by corporate-action guard: MRNA,
+  PTC, PAYC, IDXX, EPAM.
+- Satellite: 1 added (FSTR, industrials: Q3 beat + raise, +14.2% on 3.4x
+  volume 11-04), 0 dropped. Biotech blocked to 2026-11-20. CAPR/SVRA (PDUFA
+  11-22) binary watch only. See WATCHLIST.md.
+- **Core sector mix (18):** Health Care 7 (RVTY, VEEV, CRL, MTD, TMO, LLY,
+  BDX = 38.9%), IT 4 (ACN, TYL, ROP, AMD = 22.2%), Industrials 3 (ALLE, ADP,
+  CTAS = 16.7%), Financials 2 (V, CPAY = 11.1%), Cons. Disc. 1 (BBY = 5.6%),
+  Energy 1 (APA = 5.6%) - 6 sectors. Semis/AI-hw 1/18. A + 13 HC names held as
+  sector-capped alternates.
+
+### What Worked
+- Full momentum re-screen ran without Gemini/FMP: Alpaca bars for 465 names +
+  WebSearch fundamentals. Watchlist back to 18 names / 6 sectors.
+- Avoided the NVDA/AI-hardware selloff (NVDA -11% wk, CEO exit) by holding no
+  semis.
+- Stops intact; no drawdown events.
+
+### What Didn't Work
+- **Deployment malfunction flag (Patience Rule), 8th consecutive week:** Core
+  0%, Core+Sat 0%; cash 77.1%, Income 22.9% vs 15% cap. Zero entries - daily
+  sessions kept treating the Gemini outage as "no Approved Trades" even though
+  WebSearch is the documented fallback.
+- Lagged S&P by 3.05pp in an up week; idle cash is now the main drag.
+- SPHY -3.9% unrealized; Income still over the 15% cap (no rebalance run).
+
+### Key Lessons
+- The research-tool outage became a de facto trading halt. A dependency on one
+  research source must not block a rules-based strategy that has a documented
+  fallback.
+- Momentum leadership has rotated hard to Health Care / tools / services and
+  away from semis/AI-hardware; the sector cap matters (HC filled 7 slots with
+  14 more qualifying).
+
+### Adjustments for Next Week
+- **Rule change (TRADING-STRATEGY.md, "Research-outage rule"):** Gemini down is
+  not grounds to withhold trades. Watchlist core names with Friday-verified
+  fundamentals are eligible if they are above the 50-day MA that day, have no
+  Benzinga/WebSearch thesis break, and pass the buy-side gate. Fixes the
+  8-week Patience Rule malfunction. No risk cap, stop, or position-limit
+  change.
+- Owner action (repeat): (1) Gemini billing/quota + default model ->
+  gemini-3.8-flash (scripts/gemini_research.sh line 56); (2) allow
+  en.wikipedia.org in session network settings for the constituent list;
+  (3) authorize Income trim to the 15% cap.
+- CPAY: re-check fundamentals before entry (stale, 09-25). MRNA: verify 177%
+  one-day move before it can rank.
+- Biotech satellite entries blocked to 2026-11-20; CAPR/SVRA PDUFA 11-22 is
+  watch-only.
+
+### Overall Grade: D+
+Flat in a +3% S&P week (-3.05pp); eighth straight week of 0% Core/Satellite
+deployment. The screen is rebuilt and the blocking rule is fixed, but no
+capital moved.
