@@ -237,6 +237,23 @@ and the sweep-to-fund-a-buy mechanic are its only exit paths.
 - All sleeve-specific entry criteria above are satisfied and documented in
   today's RESEARCH-LOG entry.
 
+### Research-outage rule (added 2026-11-13, weekly review)
+
+Gemini unavailability is NOT by itself grounds to withhold trades. Root
+cause: daily sessions treated "no Gemini call succeeded" as "no Approved
+Trades (verified)" for 8 straight weeks (2026-09-25 to 11-13), leaving
+Core+Satellite at ~0% deployment - the Patience Rule malfunction case. The
+documented fallback (Benzinga news feed + native WebSearch) is a full
+substitute for the daily check. A core name on the current WATCHLIST.md
+whose fundamentals were verified at the Friday screen (WebSearch- or
+FMP-sourced, or carried and labelled) is eligible for entry when, on the
+day: (a) it is still above its 50-day MA on fresh Alpaca bars, (b) the
+Benzinga/WebSearch overnight check shows no thesis break, and (c) the
+buy-side gate passes. Names marked "reverify before entry" need one
+WebSearch fundamentals check first. Satellite entries still need the
+catalyst re-confirmed (WebSearch acceptable). No change to any risk cap,
+stop width, or position limit.
+
 ### Quote validation — tiered spread rule (added 2026-09-26, owner instruction)
 
 Replaces the old naive "skip anything with a wide spread" check. Root
