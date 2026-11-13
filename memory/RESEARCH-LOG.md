@@ -9532,3 +9532,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 
 ### Decision: HOLD
 - No breach; no email (not urgent - no held position near hard cut, no satellite catalyst, no new geopolitical event).
+
+### 9:30 AM Session Note
+- HOLD, 0 trades. Pre-market had no Approved Trades (core: no verified ideas, Gemini down wk 3; satellite: watchlist empty, biotech 2-strike to 11-20). Live: equity $91,269, cash $70,330; SGOV/SPHY stops intact, none breached.
+- Live quotes: VEEV 288.49/302.13 and RVTY 146.43/155.75 spreads ~5-6% at open (thin early book); ADP/MSFT tight. Not acted on.
+- Friday review flag: Core+Satellite deployment 0% for 2+ wks -> Patience Rule malfunction (2026-09-29 amendment); loosen or redeploy. Gemini model/quota fix still blocks screen refresh.
