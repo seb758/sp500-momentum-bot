@@ -9494,3 +9494,41 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Risk sweep: no core/satellite positions; income SGOV +0.00% / SPHY -3.85% - 5% GTC trailing stops live (SPHY $21.565, SGOV $95.703), none breached, none moved. Equity $91,264, cash $70,330 (77.1%).
 - Pattern for Friday: research outage week 3 = core 0% deployment malfunction; Income ~23% vs 15% cap unresolved.
 - Risky positions closed today: none.
+
+## 2026-11-13 — Pre-market Research (Friday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
+
+### Account
+- Equity: $91,256 | Cash: $70,330 (77.1%; above 5% floor).
+- Core: $0 (0/8) | Satellite: $0 (0/5) | Income: $20,926 (22.9% vs 15% cap, still above): SGOV $1,708 (+0.04%), SPHY $19,217 (-3.90%).
+- Live GTC trailing stops: SPHY 856 sh 5% ($21.565, hwm $22.70; price $22.45, ~3.9% above stop), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached. (SGOV 0.99 fractional sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED (week 3)**: default gemini-2.5-flash HTTP 404 ("no longer available... use gemini-3.8-flash"); retry GEMINI_RESEARCH_MODEL=gemini-3.8-flash HTTP 429 quota exhausted (after 65s retry). No Gemini output used. Owner: fix quota/billing + update script default model.
+- **Benzinga feed used as fallback (labelled)** + 1 WebSearch (VIX/econ calendar: no 11-13-dated results). VIX level + today's econ releases: data gap, not fabricated.
+
+### Market Context (Benzinga fallback)
+- Futures mixed Fri after Thu lower close (Benzinga 09:59 UTC); Polymarket odds of higher open 55%; flat futures, easing oil (06:26 UTC).
+- NVDA: Jensen Huang resigned 11-12, CFO Kress interim CEO; Benzinga headline cites a 38% NVDA plunge; market-concentration / AI-capex contagion risk (Nebius cut guide, Nscale financing warning).
+- Fed: NY Fed Williams - inflation "stubbornly persistent," will need to act over time; growth resilient. Hawkish backdrop (hot Oct CPI, 10Y ~5% from prior logs). Gold < $4,000.
+- In focus: CSCO, AMAT, NU, CBRS (+19% pre-mkt on MSFT cloud deal).
+- Futures direction: mixed/flat. VIX: unverified.
+
+### Overnight news - held / watchlist
+- SGOV/SPHY: no thesis-break news. Fed hawkishness still a pressure on SPHY; stop live.
+- MSFT: major Microsoft 365 outage (Outlook/Teams/Copilot) overnight, partial patch, "not aware of malicious activity"; CBRS cloud deal. Negative-leaning headline risk, no thesis break.
+- VEEV: FQ3 results set for 2026-12-03. Neutral.
+- ADP, RVTY: no items in 24h.
+
+### Core trade ideas
+- None verified. Watchlist core (VEEV, RVTY, ADP, MSFT) unchanged; no thesis breaks. No Gemini research + NVDA-led tech turmoil + hawkish Fed -> no Approved Trades.
+
+### Satellite trade ideas
+- None. Watchlist satellite empty; biotech entries blocked to 2026-11-20 (2-strike). Watch only: CAPR (Q3 miss, 10% RIF, Jones upgrade to Buy $25) and SVRA (HCW Buy $10) - PDUFA 2026-11-22 per prior log, not re-verified.
+
+### Risk factors
+- NVDA leadership shock / AI-complex contagion; MSFT outage headline; hawkish Fed / 10Y ~5%; Gemini outage blocks research + Friday screen refresh (week 3); core 0% (<60% deployment 2+ wks = malfunction per Patience Rule); cash 77%; Income 22.9% vs 15% cap.
+
+### Decision: HOLD
+- No breach; no email (not urgent - no held position near hard cut, no satellite catalyst, no new geopolitical event).
