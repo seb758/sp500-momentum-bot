@@ -41,3 +41,8 @@ Tomorrow: hold unless Gemini research restored (404 retired model + 429 quota) a
 Portfolio: $91,264 (-0.09% day, -8.74% phase) | Core $0 (0%) | Satellite $0 (0%) | Cash $70,330 (77.1%) | Income $20,934 (22.9%)
 Trades: none | Risky closed: none | SGOV (inc) 0.0% stop $95.70; SPHY (inc) -3.9% stop $21.57 | Week: core 0/6, sat 0/4
 Tomorrow: Friday review; hold unless Gemini research restored (404 retired model + 429 quota) and approved list produced
+
+## 3PM NOV 13 (email not sent - SMTP port 465 unreachable; fallback)
+Portfolio: $91,261 (-0.00% day, -8.74% phase) | Core $0 (0%) | Satellite $0 (0%) | Cash $70,330 (77.1%) | Income $20,931 (22.9%)
+Trades: none | Risky closed: none | SGOV (inc) +0.0% stop $95.70; SPHY (inc) -3.9% stop $21.57 | Week: core 0/6, sat 0/4
+Tomorrow: weekend; Monday hold unless Gemini restored (404 retired model + 429 quota) and approved list produced
