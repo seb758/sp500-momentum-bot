@@ -9548,3 +9548,46 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors).
 - Income: SPHY $22.456 (-3.87%), stop $21.565 intact (~4.0% cushion); SGOV $100.559, stop $95.703 intact. No unstopped positions except SGOV 0.99 fractional sh (DRIP residue).
 - Friday review: Patience Rule malfunction (0% Core/Sat 2+ wks), Gemini model/quota fix (wk 3), Income 22.9% vs 15% cap.
 - Risky positions closed today: none.
+
+## 2026-11-14 — Pre-market Research (Saturday, market closed)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). No trading possible today; next session Mon 2026-11-16.
+
+### Account
+- Equity: $91,247 | Cash: $70,330 (77.1%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $0 (0%, 0/5) | Income: $20,917 (22.9% vs 15% cap, still above): SGOV $1,708 (+0.04%), SPHY $19,209 (-3.94%).
+- Live GTC trailing stops: SPHY 856 sh 5% ($21.565, hwm $22.70; price $22.44, ~3.9% above stop), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached. (SGOV 0.99 fractional sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED (week 3)**: default gemini-2.5-flash HTTP 404 ("no longer available... use gemini-3.8-flash"). No Gemini output used. Owner: update script default model + fix quota.
+- **Benzinga feed + Alpaca bars used as fallback (labelled).** VIX level / next-week econ calendar: data gap, not fabricated.
+
+### Market Context (Benzinga/Alpaca fallback)
+- SPY wk: $735.29 -> $754.37 (+2.6%); Fri -0.36%. Nasdaq 100 -1.7% Fri as chip rally unwound (AMD -10.5% intraday, 2x ETF headlines cite ~20% rout); SMCI DOJ-probe selloff. Consumer Staples led Fri.
+- Cooler PPI (Fri). Long non-dealer equity-futures positioning +$330B, 2nd-highest on record (crowding risk).
+- NVDA: no CEO search firm hired yet; Arm's Rene Haas reported contender.
+- Fri evening: FAA nationwide ground stop (ATC frequency issues; 6,575 delays); prelim not a cyberattack, FBI probing software update. Trump-Xi-Putin China meeting on nuclear arms reported (NY Post); first US-China Board of Trade meeting; shipping waiver for oil/fertilizer extended 90 days.
+- Futures direction: n/a (weekend). VIX: unverified.
+
+### Overnight news - held / watchlist
+- SGOV/SPHY: no thesis-break news.
+- AMD: -10.5% Fri + $5.1M insider sale. Watchlist core (semis bucket) - momentum likely damaged; re-check rank before any entry.
+- CTAS: UniFirst deal spread widened on report FTC near "last rites" meeting (deal risk). Watch.
+- V: OpenAI ChatGPT Wallet (with V/MA/AXP) - neutral/positive; JPM blocking some agentic purchases - minor.
+- APA: Barclays Hold/EW, PT $41->$48. Positive.
+- LLY: EMA contraception precaution for Mounjaro - minor label item; ACR data. No thesis break.
+- RVTY: Investor Day 11-13. TMO: UBS CEO call; contract-mfg deal. ACN: dividend declared. BBY: Secretlab retail spaces. Neutral.
+- VEEV, CRL, MTD, TYL, ROP, BDX, ALLE, ADP, CPAY, FSTR: no relevant items (CRL/ROP hits were unrelated Carel/Roche).
+
+### Core trade ideas
+- None verified for Monday. 18-name core list (refreshed 11-13) has no thesis breaks except AMD (Fri -10.5% - drop/re-rank) and CTAS (deal-risk headline). Candidates to re-check Monday on live bars/spreads: RVTY, VEEV, CRL, ACN, MTD, TMO, TYL (top momentum ranks). No market-context research (Gemini down) -> no Approved Trades yet.
+
+### Satellite trade ideas
+- FSTR (industrials): price-jump catalyst resolved 11-04; no pending binary date; Fri close $42.30 (-1.9%), still above 11-04 breakout. Eligible on Monday re-check; max loss = 15% stop (~$1,370 at 10% cap). Thin volume - limit orders only.
+- Biotech entries blocked to 2026-11-20 (2-strike). Capricor/Savara PDUFA 2026-11-22 = watch only.
+
+### Risk factors
+- Chip/AI-complex unwind (AMD, NVDA leadership shock, SMCI DOJ); record-crowded long futures positioning; FAA outage (likely transient); hawkish Fed backdrop; Gemini outage (week 3); core 0% (<60% deployment 2+ wks = Patience Rule malfunction); cash 77%; Income 22.9% vs 15% cap.
+
+### Decision: HOLD
+- Weekend - no session. No breach; no email (not urgent - no held position near hard cut, no satellite catalyst resolved negatively, FAA outage not a geopolitical event).
