@@ -9591,3 +9591,41 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). No 
 
 ### Decision: HOLD
 - Weekend - no session. No breach; no email (not urgent - no held position near hard cut, no satellite catalyst resolved negatively, FAA outage not a geopolitical event).
+
+## 2026-11-15 — Pre-market Research (Sunday, market closed)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). No trading possible today; next session Mon 2026-11-16. State unchanged vs 11-14 (balance_asof 11-13).
+
+### Account
+- Equity: $91,247 | Cash: $70,330 (77.1%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $0 (0%, 0/5) | Income: $20,917 (22.9% vs 15% cap, still above): SGOV $1,708 (+0.04%), SPHY $19,209 (-3.94%).
+- Live GTC trailing stops: SPHY 856 sh 5% ($21.565, hwm $22.70; price $22.44, ~3.9% above stop), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached. (SGOV 0.99 fractional sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED (week 3+)**: default gemini-2.5-flash HTTP 404 (retired, "use gemini-3.8-flash"); one retry with env override GEMINI_RESEARCH_MODEL=gemini-3.8-flash -> HTTP 429 quota exhausted. No Gemini output used. Owner: update script default model + check API quota/billing.
+- **Benzinga feed fallback (labelled).** Futures direction / VIX / next-week econ calendar: data gap, not fabricated.
+
+### Market Context (Benzinga fallback)
+- No new weekend macro items beyond 11-14 log. Sat headlines: "Traders bet on Fed hikes in December and January" as US bond yields rise (hawkish risk); VOO inflows strong despite risk-off S&P tone.
+- SPY wk +2.6% (to $754.37), Fri -0.36%; chip unwind (AMD) carried from Fri.
+- Futures direction: n/a (Sunday). VIX: unverified.
+
+### Overnight news - held / watchlist
+- SGOV/SPHY: no thesis-break news. Rising-yield headline = mild headwind for SPHY (stop ~3.9% away).
+- LLY: ObesityWeek 2026 data (Zepbound/retatrutide/orforglipron) - neutral/positive.
+- AMD/NVDA: weekend recap pieces only; NVDA successor search unchanged. AMD still drop/re-rank before any entry.
+- V: ChatGPT Wallet (repeat). TMO: CAPE EMS contract-mfg deal (repeat). Neutral.
+- CTAS, APA, RVTY, ACN, BBY, VEEV, CRL, MTD, TYL, ROP, BDX, ALLE, ADP, CPAY, FSTR: no new items.
+
+### Core trade ideas
+- Unchanged from 11-14: none verified. Monday re-check on live bars/spreads: RVTY, VEEV, CRL, ACN, MTD, TMO, TYL. AMD excluded pending re-rank; CTAS deal-risk watch.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date; eligible on Monday re-check; max loss = 15% stop (~$1,370 at 10% cap). Limit orders only (thin volume).
+- Biotech entries blocked to 2026-11-20 (2-strike). Capricor/Savara PDUFA 2026-11-22 = watch only.
+
+### Risk factors
+- Fed-hike repricing / rising yields; chip/AI-complex unwind; crowded long futures; Gemini outage; core 0% (<60% deployment 2+ wks = Patience Rule malfunction); cash 77%; Income 22.9% vs 15% cap.
+
+### Decision: HOLD
+- Weekend - no session. No breach; no email (no held position near hard cut, no satellite catalyst resolved, no major geopolitical event).
