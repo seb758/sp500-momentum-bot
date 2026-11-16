@@ -9629,3 +9629,46 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). No 
 
 ### Decision: HOLD
 - Weekend - no session. No breach; no email (no held position near hard cut, no satellite catalyst resolved, no major geopolitical event).
+
+## 2026-11-16 — Pre-market Research (Monday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Balance_asof 11-13 (pre-open).
+
+### Account
+- Equity: $91,248 | Cash: $70,330 (77.1%; above 5% floor).
+- Core: $0 (0%, 0/8) | Satellite: $0 (0%, 0/5) | Income: $20,917 (22.9% vs 15% cap, still above): SGOV $1,709 (+0.05%), SPHY $19,209 (-3.94%).
+- Live GTC trailing stops: SPHY 856 sh 5% ($21.565, hwm $22.70; price $22.44, ~3.9% above stop), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached. (SGOV 0.99 fractional sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED (week 4)**: default gemini-2.5-flash HTTP 404 (retired); retry with GEMINI_RESEARCH_MODEL=gemini-3.8-flash -> HTTP 429 quota exhausted. No Gemini output used. Owner: update script default model (scripts/gemini_research.sh:56) + check API quota/billing.
+- **Benzinga feed + WebSearch fallback (labelled).** VIX level: data gap (WebSearch found no 11-16 reading) - not fabricated. Econ calendar per WebSearch (thriveinmarkets/stockti, dates unconfirmed).
+
+### Market Context (Benzinga/WebSearch fallback)
+- Futures mixed (Benzinga 09:57 UTC); Polymarket odds of higher open 38% (06:27 UTC) -> soft/lower-leaning open.
+- NVDA: Bessent pressing Nvidia on China chips; WSJ: admin to name NVDA an AI "national champion"; Huang-exit fallout still digesting.
+- Fed: KC Fed Schmid (Sun) - inflation too high, moving wrong direction, Fed has more work to do. Hawkish; Dec/Jan hike bets (prior log).
+- Geopolitics: Xinhua - US/China/Russia heads-of-state meeting in Shenzhen 11-19 (scheduled, not a shock).
+- This week (unconfirmed dates): retail sales, NVDA earnings, FOMC minutes; WMT, TGT, PANW report.
+- Futures direction: mixed. VIX: unverified.
+
+### Overnight news - held / watchlist
+- SGOV/SPHY: no thesis-break news. Hawkish Fed = continued headwind for SPHY (stop ~3.9% away).
+- AMD: NVDA/China chip-control commentary (Chamath) - semis contagion risk persists; still drop/re-rank before entry.
+- LLY: $100M Seawolf Series A participation; ObesityWeek data (eloralintide/retatrutide). Neutral/positive.
+- BBY: Uber Eats partnership (Best Buy Canada). Neutral/positive.
+- V: ChatGPT Wallet (repeat); Bakong virtual cards. Neutral.
+- ROP: hit was Roche (unrelated).
+- RVTY, VEEV, CRL, ACN, MTD, TMO, TYL, BDX, ALLE, APA, ADP, CTAS, CPAY, FSTR: no items in 40h.
+
+### Core trade ideas
+- None verified pre-market. 18-name list (11-13) intact; no thesis breaks. Re-check at 9:30 on live bars/spreads: RVTY, VEEV, CRL, ACN, MTD, TMO, TYL. AMD excluded pending re-rank; CTAS deal-risk watch. Pre-open quotes are wide/stale (11-13 close prints) - limit orders only after the open settles.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date (catalyst resolved 11-04); not within 5 trading days of any documented catalyst. Eligible on 9:30 re-check; max loss = 15% stop (~$1,370 at 10% cap). Thin book (pre-open quote $36.55/$49.02) - limit only.
+- Biotech entries blocked to 2026-11-20 (2-strike). Capricor/Savara PDUFA 2026-11-22 = watch only (within 5 trading days, not tradeable).
+
+### Risk factors
+- Hawkish Fed / hike repricing; NVDA leadership + China chip-policy overhang ahead of NVDA earnings this week; crowded long futures; Gemini outage (wk 4); core 0% (<60% deployment 2+ wks = Patience Rule malfunction); cash 77%; Income 22.9% vs 15% cap.
+
+### Decision: HOLD
+- Default HOLD pending 9:30 live re-check; no Approved Trades list. No email (no held position near hard cut, no satellite catalyst resolved negatively, no major geopolitical event).
