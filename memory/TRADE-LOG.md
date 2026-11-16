@@ -3878,3 +3878,18 @@ No buys (no Approved Trades list - Gemini outage). RIGL stop-out logged above. S
 | SPHY | income | 856 | $23.36 | $22.4561 | +0.03% | -$773.74 (-3.87%) | 5% trailing ($21.565) |
 
 **Notes:** No buys - no "### Approved Trades (verified)" list today (Gemini 404/429 outage, week 3), so 3pm held. Core 0/8 positions, 0/8 trades this week; satellite 0/5, 0/5. Risk sweep: no hard-cut breaches, no tightens; both positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech satellite entries blocked to 2026-11-20 (2-strike). Flags: Cash 77.1%, Core 0%, Income 22.94% vs 15% cap; Gemini outage blocks screen refresh/deployment. Trades today: none. Risky positions closed: none.
+
+### 2026-11-16 — BUY V (core)
+Shares: 25 | Entry: $429.72 (limit $430.64, midpoint) | Stop: 10% trailing GTC ($386.60, hwm $429.56) | Target: $515.66 (+20%) | R:R: 2:1 (vs 10% trail)
+Thesis: Core watchlist 11-13 (rank 47, 3M rel +17.9%, 6M +29.1%); FQ4 FCF $6.9B; MS OW / TD Buy. Above 50-day (+9.1%, 11-13 close). Research-outage rule entry (Benzinga check clean; Samsung Scan-to-Pay news positive). Financials.
+
+### 2026-11-16 — BUY CRL (core)
+Shares: 32 | Entry: $334.16 (limit $342.19, midpoint of wide auction quote) | Stop: 10% trailing GTC ($298.98, hwm $332.20) | Target: $400.99 (+20%) | R:R: 2:1 (vs 10% trail)
+Thesis: Core watchlist 11-13 (rank 5, 3M rel +24.2%, 6M +113.0%); FCF improving (carried 09-18, TTM $371M); Buy (carried). Above 50-day (+8.6%). Research-outage rule entry; no news 40h+. Health Care.
+
+### 2026-11-16 — BUY TYL (core)
+Shares: 25 | Entry: $428.70 (limit $428.77, midpoint) | Stop: 10% trailing GTC ($385.28, hwm $428.09) | Target: $514.44 (+20%) | R:R: 2:1 (vs 10% trail)
+Thesis: Core watchlist 11-13 (rank 11, 3M rel +31.4%, 6M +40.4%); record Q3 FCF $277M +11.9%; Buy (Truist, Needham). Above 50-day (+17.0%). Research-outage rule entry; no news. IT (gov software).
+
+### 2026-11-16 — PENDING BUY MTD / ALLE (core) — unfilled day limits
+MTD 6 sh limit $1,732.87 (order 9731fcf0) and ALLE 56 sh limit $193.00 (order 7da5967a), day TIF, unfilled as of 14:41 UTC (ask above limit; not chased per midpoint-limit rule). **11am run: if either filled, place 10% trailing GTC immediately and log the BUY; else let expire.** Both on 11-13 core list, above 50-day (MTD +11.4%, ALLE +16.5%), no news.
