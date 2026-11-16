@@ -3902,3 +3902,19 @@ Thesis: Core watchlist 11-13; above 50-day (+11.4%); no news. Research-outage ru
 Shares: 56 | Entry: $193.00 (limit $193.00, filled 14:48 UTC) | Stop: 10% trailing GTC ($173.02, hwm $192.24; placed 11am run, order b8afa88e) | Target: $231.60 (+20%) | R:R: 2:1 (vs 10% trail)
 Thesis: Core watchlist 11-13; above 50-day (+16.5%); no news. Research-outage rule entry (9:30 day limit). Industrials. Note: filled ~88 min unstopped - stop attached at 11am.
 Core now 5/8 positions, 5 trades this week (gate <=6). Cash $16,972 (18.6%) > 5% floor.
+
+## Nov 16 — 3pm Snapshot (Day 96, Monday)
+**Portfolio:** $91,108.25 | **Cash:** $16,971.93 (18.63%) | **Day P&L:** -$152.84 (-0.17%, vs Nov 13 3pm) | **Phase P&L:** -$8,891.75 (-8.89%)
+**Core exposure:** $53,248.91 (58.44% of equity) | **Satellite exposure:** $0.00 (0.00% of equity) | **Income exposure:** $20,887.41 (22.93% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| CRL | core | 32 | $334.16 | $336.78 | -0.35% | +$83.84 (+0.78%) | 10% trailing ($304.38) |
+| MTD | core | 6 | $1,732.79 | $1,728.31 | -0.61% | -$26.88 (-0.26%) | 10% trailing ($1,560.66) |
+| ALLE | core | 56 | $193.00 | $191.39 | -0.31% | -$90.16 (-0.83%) | 10% trailing ($173.43) |
+| TYL | core | 25 | $428.70 | $427.87 | +0.90% | -$20.75 (-0.19%) | 10% trailing ($388.58) |
+| V | core | 25 | $429.72 | $427.50 | +0.41% | -$55.50 (-0.52%) | 10% trailing ($387.60) |
+| SGOV | income | 16.989473856 | $100.52 | $100.5758 | +0.02% | +$0.95 (+0.06%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.405 | -0.16% | -$817.48 (-4.09%) | 5% trailing ($21.565) |
+
+**Notes:** No 3pm buys - no "### Approved Trades (verified)" list today, so 3pm held. Today's core entries (V, CRL, TYL at 9:30; MTD, ALLE limit fills, stops attached 11am) came via the research-outage rule. Core 5/8 positions, 5 trades this week (gate 6); satellite 0/5, 0/4. Risk sweep: no hard-cut breaches, no tightens; all positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech satellite entries blocked to 2026-11-20 (2-strike). Flags: Cash 18.6%, Core 58.4% (below 85% target), Income 22.93% vs 15% cap; SPHY -4.09% (stop ~3.7% away); Gemini outage (wk 4). Trades today: BUY V, CRL, TYL, MTD, ALLE (core). Risky positions closed: none.
