@@ -9672,3 +9672,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 
 ### Decision: HOLD
 - Default HOLD pending 9:30 live re-check; no Approved Trades list. No email (no held position near hard cut, no satellite catalyst resolved negatively, no major geopolitical event).
+
+### 9:30 AM Session Note
+- **Traded (core, research-outage rule):** V 25 @ $429.72, CRL 32 @ $334.16, TYL 25 @ $428.70 - all ~11.7% of equity, 10% trailing GTC set. MTD (6 @ $1,732.87) + ALLE (56 @ $193.00) day limits working, unfilled -> 11am attaches stops if filled. Core 3/8 positions (5 if pending fill), 3 trades this week (gate: ≤6). Cash $38.2k (41.9%; ~18.6% if pending fill) > 5% floor - no SGOV sale needed. Ends 8-week 0% core malfunction.
+- **Quote verdicts:** V/MTD tight (<0.7%); CRL/TYL/ALLE wide IEX prints (5-13%) = feed artifact (S&P, >$100M/day) -> midpoint limits. **FSTR (satellite) SKIP - genuinely illiquid:** 3/3 polls 33% spread (stale 14:31 quote), 20d IEX $vol $1.7M < $50M. AMD below 50-day (-3.7%) - not eligible.
+- **Lesson:** SPY below its 50-day (-1.3%), NVDA earnings + hawkish Fed this week - deployed ~35% (55-58% with pending), not full; HC concentration capped at 2 names (CRL, MTD). Midday can add 1 core (gate cap 6) from ACN/TMO/BDX/ALLE alternates if tape holds.
