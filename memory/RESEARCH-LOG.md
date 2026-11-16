@@ -9677,3 +9677,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - **Traded (core, research-outage rule):** V 25 @ $429.72, CRL 32 @ $334.16, TYL 25 @ $428.70 - all ~11.7% of equity, 10% trailing GTC set. MTD (6 @ $1,732.87) + ALLE (56 @ $193.00) day limits working, unfilled -> 11am attaches stops if filled. Core 3/8 positions (5 if pending fill), 3 trades this week (gate: ≤6). Cash $38.2k (41.9%; ~18.6% if pending fill) > 5% floor - no SGOV sale needed. Ends 8-week 0% core malfunction.
 - **Quote verdicts:** V/MTD tight (<0.7%); CRL/TYL/ALLE wide IEX prints (5-13%) = feed artifact (S&P, >$100M/day) -> midpoint limits. **FSTR (satellite) SKIP - genuinely illiquid:** 3/3 polls 33% spread (stale 14:31 quote), 20d IEX $vol $1.7M < $50M. AMD below 50-day (-3.7%) - not eligible.
 - **Lesson:** SPY below its 50-day (-1.3%), NVDA earnings + hawkish Fed this week - deployed ~35% (55-58% with pending), not full; HC concentration capped at 2 names (CRL, MTD). Midday can add 1 core (gate cap 6) from ACN/TMO/BDX/ALLE alternates if tape holds.
+
+### 11 AM Session Note
+- **Stops attached (core):** MTD 6 (filled $1,732.79 @14:52) + ALLE 56 (filled $193.00 @14:48) - 10% trailing GTC placed ($1,551.42 / $173.02). All 7 positions now carry live GTC stops. Core 5/8, 5 trades this week; cash $16,972 (18.6%).
+- **No buys:** no "### Approved Trades (verified)" section today -> HOLD per 11am rule (6th core slot left unused). No cuts (all core within +/-0.5%; SPHY -4.1%, 5% trail $21.565 ~3.7% away). No tightens. No thesis breaks (no news triggers).
+- **Lesson:** day-limit entries that fill after the 9:30 run exits sit unstopped until 11am (~85 min here). Friday review: have market-open poll pending limits before exit, or submit fill-contingent protection (e.g. convert to market/OTO) so no core fill goes naked.
+

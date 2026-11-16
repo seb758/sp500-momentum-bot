@@ -3893,3 +3893,12 @@ Thesis: Core watchlist 11-13 (rank 11, 3M rel +31.4%, 6M +40.4%); record Q3 FCF 
 
 ### 2026-11-16 — PENDING BUY MTD / ALLE (core) — unfilled day limits
 MTD 6 sh limit $1,732.87 (order 9731fcf0) and ALLE 56 sh limit $193.00 (order 7da5967a), day TIF, unfilled as of 14:41 UTC (ask above limit; not chased per midpoint-limit rule). **11am run: if either filled, place 10% trailing GTC immediately and log the BUY; else let expire.** Both on 11-13 core list, above 50-day (MTD +11.4%, ALLE +16.5%), no news.
+
+### 2026-11-16 — BUY MTD (core)
+Shares: 6 | Entry: $1,732.79 (limit $1,732.87, filled 14:52 UTC) | Stop: 10% trailing GTC ($1,551.42, hwm $1,723.81; placed 11am run, order c80870b5) | Target: $2,079.35 (+20%) | R:R: 2:1 (vs 10% trail)
+Thesis: Core watchlist 11-13; above 50-day (+11.4%); no news. Research-outage rule entry (9:30 day limit). Health Care (2nd HC name w/ CRL - concentration cap reached). Note: filled ~84 min unstopped (9:30 run exited before fill) - stop attached at 11am.
+
+### 2026-11-16 — BUY ALLE (core)
+Shares: 56 | Entry: $193.00 (limit $193.00, filled 14:48 UTC) | Stop: 10% trailing GTC ($173.02, hwm $192.24; placed 11am run, order b8afa88e) | Target: $231.60 (+20%) | R:R: 2:1 (vs 10% trail)
+Thesis: Core watchlist 11-13; above 50-day (+16.5%); no news. Research-outage rule entry (9:30 day limit). Industrials. Note: filled ~88 min unstopped - stop attached at 11am.
+Core now 5/8 positions, 5 trades this week (gate <=6). Cash $16,972 (18.6%) > 5% floor.
