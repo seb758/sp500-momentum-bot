@@ -9683,3 +9683,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - **No buys:** no "### Approved Trades (verified)" section today -> HOLD per 11am rule (6th core slot left unused). No cuts (all core within +/-0.5%; SPHY -4.1%, 5% trail $21.565 ~3.7% away). No tightens. No thesis breaks (no news triggers).
 - **Lesson:** day-limit entries that fill after the 9:30 run exits sit unstopped until 11am (~85 min here). Friday review: have market-open poll pending limits before exit, or submit fill-contingent protection (e.g. convert to market/OTO) so no core fill goes naked.
 
+
+### 3 PM Session Note
+- **No buys:** no "### Approved Trades (verified)" section today -> HOLD (6th core slot unused; a 3pm entry ahead of NVDA earnings/hawkish Fed week = extra overnight gap risk anyway).
+- **Risk sweep:** no hard-cut breaches (core range -0.83% ALLE to +0.78% CRL; SPHY -4.09% vs 5% trail $21.565, ~3.7% away). All 7 positions carry live GTC trailing stops (SGOV 0.99 fractional sh residue unstopped, known). No satellite positions/catalysts. No thesis breaks. No tightens (none near +15%).
+- **Pattern for Friday:** first core deployment in 8 weeks done via research-outage rule (5 names, ~58% equity) - review whether Gemini fix (scripts/gemini_research.sh model default + quota) restores normal Approved Trades flow; Income 22.9% vs 15% cap still unresolved.
+- Risky positions closed today: none.
