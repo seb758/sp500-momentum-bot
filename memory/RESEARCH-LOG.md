@@ -9729,3 +9729,10 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 
 ### Decision: HOLD
 - No Approved Trades list (no market-context research). Re-check CRL at open vs real print. No email (no held position near hard cut, no satellite catalyst resolved negatively, no major geopolitical event).
+
+### 9:30 AM Session Note
+- Placed core ACN 50 sh day limit $244.43 (best observed midpoint; IEX quote $230.85/$258 opening = feed artifact, 20d $vol $1.4B). Unfilled at 14:38 UTC (bid $245.76) - not chased. Research-outage rule: above 50-day +13.7%, positive CNAM contract news, gate OK (core 6/6 trades, 6/8 positions, 13.5% < 20%).
+- If ACN fills, core weekly budget is exhausted (6/6) - no more core entries until Monday. 11am run must attach 10% trailing GTC on fill (repeat of 11-16 MTD/ALLE unstopped-fill gap - pattern for Friday: consider OTO/bracket or a fill-wait loop at 9:30).
+- Held: ALLE -1.5%, TYL -1.6%, V -1.4%, CRL +0.9%, MTD +0.2% (live marks); none near -7%. SPY -1.9% on 11-16; retail sales/NVDA risk this week.
+- Data gap: Alpaca 1Min SIP bars 403 (free feed) - intraday tape unverified.
+
