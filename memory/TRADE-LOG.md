@@ -3921,3 +3921,8 @@ Core now 5/8 positions, 5 trades this week (gate <=6). Cash $16,972 (18.6%) > 5%
 
 ### 2026-11-17 — PENDING BUY ACN (core) — unfilled day limit
 ACN 50 sh limit $244.43 (order 33a30739, day TIF, ~$12.2k = 13.5% of equity), unfilled as of 14:38 UTC (bid $245.76, above limit; not chased per midpoint-limit rule). **11am run: if filled, place 10% trailing GTC immediately and log the BUY (target +20%, R:R 2:1); else let expire.** Research-outage rule entry: on 11-13 core list (rank 6, 3M rel +43.8%, 6M +51.2%; FY26 FCF $11.6B +7%); above 50-day ($247.70 11-16 close vs SMA50 $217.91, +13.7%); Benzinga: Atos-Accenture CNAM DMP selection (positive), no thesis break. IT (3rd IT-ish name w/ TYL). Would be core trade 6/6 this week, position 6/8. Cash after fill ~$4.75k > 5% floor ($4.54k).
+
+### 2026-11-17 — BUY ACN (core)
+Shares: 50 | Entry: $244.18 (limit $244.43, filled 14:48 UTC) | Stop: 10% trailing GTC ($215.14, hwm $239.04; placed 11am run 16:13 UTC, order 9a243201) | Target: $293.02 (+20%) | R:R: 2:1 (vs 10% trail)
+Thesis: Core watchlist 11-13 (rank 6, 3M rel +43.8%, 6M +51.2%; FY26 FCF $11.6B +7%); above 50-day (+13.7%, 11-16 close); Atos-Accenture CNAM DMP selection (positive). Research-outage rule entry (9:30 day limit). IT. Note: filled ~85 min unstopped (3rd repeat of 9:30-exits-before-fill gap) - stop attached at 11am. Mark $239.16 (-2.1%) at 11am; ACN -3.4% on day.
+Core now 6/8 positions, 6 trades this week (gate <=6 - core weekly budget exhausted until Mon 11-23). Cash $4,763 (5.28%) > 5% floor ($4,507).
