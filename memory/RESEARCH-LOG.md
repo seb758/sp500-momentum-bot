@@ -9689,3 +9689,43 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - **Risk sweep:** no hard-cut breaches (core range -0.83% ALLE to +0.78% CRL; SPHY -4.09% vs 5% trail $21.565, ~3.7% away). All 7 positions carry live GTC trailing stops (SGOV 0.99 fractional sh residue unstopped, known). No satellite positions/catalysts. No thesis breaks. No tightens (none near +15%).
 - **Pattern for Friday:** first core deployment in 8 weeks done via research-outage rule (5 names, ~58% equity) - review whether Gemini fix (scripts/gemini_research.sh model default + quota) restores normal Approved Trades flow; Income 22.9% vs 15% cap still unresolved.
 - Risky positions closed today: none.
+
+## 2026-11-17 — Pre-market Research (Tuesday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Balance_asof 11-16.
+
+### Account
+- Equity: $90,354 (vs $90,926 last_equity; marks include thin pre-mkt prints) | Cash: $16,972 (18.8%; above 5% floor).
+- Core: $52,533 (58.1%, 5/8; 5 trades this week, gate 6) | Satellite: $0 (0%, 0/5) | Income: $20,849 (23.1% vs 15% cap, still above): SGOV $1,709 (+0.05%), SPHY $19,140 (-4.28%).
+- Core marks vs entry: ALLE -1.05%, CRL -3.33%, MTD -0.19%, TYL -2.03%, V -1.10%. None near -7% hard cut (CRL cut ~$310.77).
+- CRL/TYL marks ($323.02 / $420.00) are extended-hours prints vs 11-16 closes $335.52 / $425.98; CRL IEX quote $317.40/$354.24 (11% wide) = thin/stale feed - verify at open, not acted on.
+- Live GTC trailing stops: ALLE 10% ($173.43), CRL 10% ($304.38), MTD 10% ($1,560.66), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; price $22.36, ~3.6% above), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached. (SGOV 0.99 fractional sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED (week 4)**: default gemini-2.5-flash HTTP 404 (retired); retry with GEMINI_RESEARCH_MODEL=gemini-3.8-flash -> HTTP 429 quota exhausted. No Gemini output used. Owner: update scripts/gemini_research.sh default model + check API quota/billing.
+- **Benzinga feed + WebSearch fallback (labelled).** Futures direction + VIX level: data gap (WebSearch returned no 11-17 reading) - not fabricated.
+
+### Market Context (Benzinga/WebSearch fallback)
+- Futures direction: unverified. VIX: unverified.
+- Today: Oct retail sales 8:30 ET (Census advance). HD FQ3 (pre-open per most sources; one lists 4:05pm - unconfirmed).
+- This week: NVDA earnings (one source says Tue after close - date unconfirmed), WMT, TGT, LOW; FOMC minutes. Hawkish-Fed / Dec-Jan hike bets carried from prior logs.
+
+### Overnight news - held / watchlist
+- Held core: CRL - Jefferies healthcare conf. presentation (neutral). V - Samsung Scan-to-Pay, Visa Cargo (HK) (neutral/positive). ALLE, MTD, TYL: no items in 24h. No thesis breaks.
+- Income: SGOV/SPHY no news; rising yields = SPHY headwind (stop ~3.6% away).
+- Watchlist: LLY - Stipple Bio oncology licensing deal (neutral/positive). ACN - Atos-Accenture picked for French CNAM DMP project (positive). BBY - Telsey PT $95->$110, Circana program (positive). ADP - Dec 8 Nasdaq conf. AMD - ORNL Lux supercomputer live (neutral). CTAS - trades-shortage study (no deal update). ROP hits = Roche (unrelated).
+- RVTY, VEEV, TMO, BDX, APA, CPAY, FSTR: no items in 24h.
+
+### Core trade ideas
+- No new verified ideas. 1 core trade left under this week's gate (6). Alternates if tape holds at 9:30/11am re-check: ACN (positive contract news), TMO, BDX. HC already capped at 2 (CRL, MTD) -> RVTY/VEEV/TMO/LLY/BDX blocked by concentration unless a HC name exits. AMD excluded (below 50-day 11-16). CTAS deal-risk watch.
+- Bias: wait - retail sales + NVDA earnings binary risk this week; core already 58% after Monday's 5 entries.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date (catalyst resolved 11-04). SKIP stands - illiquid (33% spreads, 20d IEX $vol $1.7M < $50M per 11-16 check).
+- Biotech entries blocked to 2026-11-20 (2-strike). Capricor/Savara PDUFA 2026-11-22 = watch only (within 5 trading days, not tradeable).
+
+### Risk factors
+- NVDA earnings + AI-complex sentiment; retail sales/HD macro read; hawkish Fed / hike repricing; crowded longs; CRL/TYL soft extended-hours prints; Gemini outage (wk 4); Income 23.1% vs 15% cap; SPHY -4.3%.
+
+### Decision: HOLD
+- No Approved Trades list (no market-context research). Re-check CRL at open vs real print. No email (no held position near hard cut, no satellite catalyst resolved negatively, no major geopolitical event).
