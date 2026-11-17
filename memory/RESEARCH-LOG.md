@@ -9741,3 +9741,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - No "### Approved Trades (verified)" list -> no new buys. ACN 9:30 day limit filled 14:48 UTC @ $244.18 (50 sh, core); attached 10% trailing GTC at 16:13 UTC (stop $215.14, order 9a243201). Core 6/8 positions, 6/6 trades - weekly budget exhausted.
 - Risk sweep: no hard cuts (worst core TYL -2.9%, V -2.5%, ACN -2.1%), no tightens (nothing near +15%), no thesis breaks. SPHY -4.3% (stop $21.565, ~3.5% away). Cash $4,763 = 5.28%, just above 5% floor - no further buys possible without SGOV draw.
 - Pattern for Friday (3rd occurrence: MTD/ALLE 11-16, ACN 11-17): 9:30 limit fills land unstopped for ~85 min. Fix: OTO order (limit buy + trailing stop leg not supported by Alpaca for trailing - use fill-wait loop at 9:30 or move limit orders to plain market with immediate stop).
+
+### 3 PM Session Note
+- No "### Approved Trades (verified)" list -> no buys; core weekly budget exhausted anyway (6/6 to Mon 11-23). Cash $4,763 (5.29%) at floor.
+- Risk sweep: no hard cuts (worst core TYL -2.83%, V -2.52%, ALLE -2.37%), all 8 positions carry live GTC trailing stops, no tightens (nothing near +15%), no thesis breaks. No satellite positions/catalysts.
+- Pattern for Friday: all 6 core entries red within 2 sessions (broad tape weak, equity -1.18% day); SPHY -4.33%, stop ~3.5% away.
+- Risky positions closed today: none.

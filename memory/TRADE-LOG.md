@@ -3926,3 +3926,20 @@ ACN 50 sh limit $244.43 (order 33a30739, day TIF, ~$12.2k = 13.5% of equity), un
 Shares: 50 | Entry: $244.18 (limit $244.43, filled 14:48 UTC) | Stop: 10% trailing GTC ($215.14, hwm $239.04; placed 11am run 16:13 UTC, order 9a243201) | Target: $293.02 (+20%) | R:R: 2:1 (vs 10% trail)
 Thesis: Core watchlist 11-13 (rank 6, 3M rel +43.8%, 6M +51.2%; FY26 FCF $11.6B +7%); above 50-day (+13.7%, 11-16 close); Atos-Accenture CNAM DMP selection (positive). Research-outage rule entry (9:30 day limit). IT. Note: filled ~85 min unstopped (3rd repeat of 9:30-exits-before-fill gap) - stop attached at 11am. Mark $239.16 (-2.1%) at 11am; ACN -3.4% on day.
 Core now 6/8 positions, 6 trades this week (gate <=6 - core weekly budget exhausted until Mon 11-23). Cash $4,763 (5.28%) > 5% floor ($4,507).
+
+## Nov 17 — 3pm Snapshot (Day 97, Tuesday)
+**Portfolio:** $90,032.96 | **Cash:** $4,762.92 (5.29%) | **Day P&L:** -$1,075.29 (-1.18%, vs Nov 16 3pm) | **Phase P&L:** -$9,967.04 (-9.97%)
+**Core exposure:** $64,431.27 (71.56% of equity) | **Satellite exposure:** $0.00 (0.00% of equity) | **Income exposure:** $20,838.77 (23.15% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| ACN | core | 50 | $244.18 | $241.19 | -2.63% | -$149.50 (-1.22%) | 10% trailing ($218.01) |
+| CRL | core | 32 | $334.16 | $333.64 | -0.56% | -$16.64 (-0.16%) | 10% trailing ($307.25) |
+| MTD | core | 6 | $1,732.79 | $1,709.41 | -1.03% | -$140.28 (-1.35%) | 10% trailing ($1,569.00) |
+| ALLE | core | 56 | $193.00 | $188.43 | -1.33% | -$255.92 (-2.37%) | 10% trailing ($173.43) |
+| TYL | core | 25 | $428.70 | $416.57 | -2.21% | -$303.25 (-2.83%) | 10% trailing ($388.58) |
+| V | core | 25 | $429.72 | $418.90 | -1.77% | -$270.50 (-2.52%) | 10% trailing ($387.60) |
+| SGOV | income | 16.989473856 | $100.52 | $100.58 | 0.00% | +$1.02 (+0.06%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.3481 | -0.05% | -$866.19 (-4.33%) | 5% trailing ($21.565) |
+
+**Notes:** No 3pm buys - no "### Approved Trades (verified)" list today; ACN (9:30 limit, stop attached 11am) was today's only entry. Core 6/8 positions, 6/6 trades this week (budget exhausted to Mon 11-23); satellite 0/5, 0/4. Risk sweep: no hard-cut breaches (worst TYL -2.83% vs -7%), no tightens; all positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech satellite entries blocked to 2026-11-20 (2-strike). Flags: Cash 5.29% (at floor), Core 71.6% (below 85%), Income 23.15% vs 15% cap; SPHY -4.33% (stop ~3.5% away); Gemini outage (wk 4). Trades today: BUY ACN (core). Risky positions closed: none.
