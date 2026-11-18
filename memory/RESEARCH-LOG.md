@@ -9747,3 +9747,42 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - Risk sweep: no hard cuts (worst core TYL -2.83%, V -2.52%, ALLE -2.37%), all 8 positions carry live GTC trailing stops, no tightens (nothing near +15%), no thesis breaks. No satellite positions/catalysts.
 - Pattern for Friday: all 6 core entries red within 2 sessions (broad tape weak, equity -1.18% day); SPHY -4.33%, stop ~3.5% away.
 - Risky positions closed today: none.
+
+## 2026-11-18 — Pre-market Research (Wednesday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Balance_asof 11-17.
+
+### Account
+- Equity: $89,515 (vs $89,580 last_equity) | Cash: $4,763 (5.32%; floor 5% = $4,476 - ~$287 headroom, no buys without SGOV draw).
+- Core: $63,920 (71.4%, 6/8; 6/6 trades this week - budget exhausted to Mon 11-23) | Satellite: $0 (0%, 0/5) | Income: $20,832 (23.3% vs 15% cap, still above): SGOV $1,709 (+0.08%), SPHY $19,123 (-4.37%).
+- Core marks vs entry: TYL -4.78% ($408.20; -7% cut $398.69, ~2.3% away - closest to cut), ALLE -3.25% (cut $179.49), V -3.23% (cut $399.64), ACN -2.01%, MTD -1.23%, CRL -0.60%. None breached.
+- Live GTC trailing stops: ACN 10% ($218.01), ALLE 10% ($173.43), CRL 10% ($307.25), MTD 10% ($1,569.00), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; price $22.34, ~3.5% above), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached. (SGOV 0.99 fractional sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED (week 4)**: default gemini-2.5-flash HTTP 404 (retired, "use gemini-3.8-flash"); retry GEMINI_RESEARCH_MODEL=gemini-3.8-flash -> HTTP 429 quota exhausted. No Gemini output used. Owner: update scripts/gemini_research.sh:56 default model + check API quota/billing.
+- **Benzinga feed + WebSearch fallback (labelled).** Futures direction + VIX level: data gap (WebSearch returned no 11-18 reading) - not fabricated.
+
+### Market Context (Benzinga/WebSearch fallback)
+- Futures direction: unverified. VIX: unverified.
+- NVDA FQ3 FY27 reported 11-17 after close: revenue $115.8B, +103% YoY (GlobeNewswire via Benzinga). Separately 11-18: NVDA formed export-control/national-security committee and **delayed its 10-Q** (MarketWatch) - unusual; AI-complex sentiment risk at open.
+- AMD -5.58% 11-17 on new AI-chip export restrictions to SE Asia; AMD insider sale $5.06M.
+- Today (per financecalendar/TD/Fed calendar): Oct housing starts 8:30 ET (cons ~1.24M vs 1.221M prior), pending home sales 10:00, **FOMC minutes (Oct 27-28) 2:00pm ET** - hawkish-Fed / hike repricing risk.
+
+### Overnight news - held / watchlist
+- Held core: V - Alipay+ Scan-to-Pay interop, Agentic Ready expansion, Triple-A stablecoin prefunding; Visa/MA urging approval of $38B swipe-fee settlement (neutral/positive). ACN - joins Microsoft-led AI transparency initiative; Google DeepMind alliance expanded (positive). ALLE, CRL, MTD, TYL: no items in 24h. No thesis breaks.
+- Income: SGOV/SPHY no news; FOMC minutes = rates risk for SPHY (stop ~3.5% away).
+- Watchlist: AMD - export restrictions (negative; still excluded). BBY - Black Friday schedule, Segway/5th Wheel in-store, CaringBridge (neutral). LLY - Teladoc obesity partnership (neutral/positive). BDX - AiRISTA Alaris integration (neutral). CPAY - SVS gift-card deal (neutral). ADP - NER Pulse release (neutral). ROP hits = Roche (unrelated).
+- RVTY, VEEV, TMO, APA, CTAS, FSTR: no items in 24h.
+
+### Core trade ideas
+- None. Core weekly budget exhausted (6/6 to Mon 11-23) and cash at floor. Watch TYL vs -7% cut ($398.69) at open.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date (resolved 11-04); SKIP stands - illiquid (33% spreads, 20d IEX $vol $1.7M).
+- Biotech entries blocked to 2026-11-20 (2-strike). Capricor/Savara PDUFA 2026-11-22 = watch only (within 5 trading days, not tradeable; biotech blocked anyway).
+
+### Risk factors
+- NVDA post-earnings reaction + 10-Q delay / export-control overhang (AI complex, semis); FOMC minutes 2pm; TYL ~2.3% above hard cut; all 6 core entries red; cash at floor; Income 23.3% vs 15% cap; SPHY -4.4%; Gemini outage (wk 4).
+
+### Decision: HOLD
+- No budget, no cash, no Approved Trades list. No email (no held position below hard cut, no satellite catalyst resolved, no major geopolitical event).
