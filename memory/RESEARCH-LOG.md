@@ -9786,3 +9786,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 
 ### Decision: HOLD
 - No budget, no cash, no Approved Trades list. No email (no held position below hard cut, no satellite catalyst resolved, no major geopolitical event).
+
+### 9:30 AM Session Note
+- HELD - no trades. Core gate fails: 6/6 trades this week (budget exhausted to Mon 11-23); cash $4,763 (5.33% of $89,440 equity) ~ at 5% floor. Satellite: biotech 2-strike block to 11-20; FSTR illiquid skip stands. No Approved Trades list.
+- Live 09:32 ET: all 6 core red, none at -7% cut. Closest TYL -4.65% ($408.75 vs cut $398.69), ALLE -4.18% ($184.93 vs cut $179.49). Stops intact. SPHY -4.3%.
+- Flag for Friday: all 6 core entries from this week's research-outage-rule batch are underwater within 2 days - review entry timing/clustering under that rule.
