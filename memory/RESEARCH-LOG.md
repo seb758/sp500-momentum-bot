@@ -9791,3 +9791,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - HELD - no trades. Core gate fails: 6/6 trades this week (budget exhausted to Mon 11-23); cash $4,763 (5.33% of $89,440 equity) ~ at 5% floor. Satellite: biotech 2-strike block to 11-20; FSTR illiquid skip stands. No Approved Trades list.
 - Live 09:32 ET: all 6 core red, none at -7% cut. Closest TYL -4.65% ($408.75 vs cut $398.69), ALLE -4.18% ($184.93 vs cut $179.49). Stops intact. SPHY -4.3%.
 - Flag for Friday: all 6 core entries from this week's research-outage-rule batch are underwater within 2 days - review entry timing/clustering under that rule.
+
+### 11 AM Session Note
+- HELD - no buys (no Approved Trades list; core 6/6 budget exhausted to Mon 11-23; cash $4,763 = 5.34% of $89,202 equity, at floor). Satellite: biotech 2-strike block to 11-20; no approved names.
+- No cuts/tightens: all 6 core red, none at -7%. Live ~11:10 ET: TYL -5.07% ($406.99 vs cut $398.69, ~2.1% away), ACN -4.60% (slid from -2.0% at pre-mkt), ALLE -3.63%, V -3.45%, CRL -0.72%, MTD -0.19%. SPHY -4.35%. All 8 GTC stops intact.
+- Thesis check: TYL - Truist PT $440->$500 (Buy) + TD Cowen PT update, offset by CEO $12.8M share sale (30k sh); no break. V - agentic commerce/Alipay+ PRs (positive). ACN/ALLE no new items. FOMC minutes 2pm = rates risk into 3pm window.
