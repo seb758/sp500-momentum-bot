@@ -9796,3 +9796,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - HELD - no buys (no Approved Trades list; core 6/6 budget exhausted to Mon 11-23; cash $4,763 = 5.34% of $89,202 equity, at floor). Satellite: biotech 2-strike block to 11-20; no approved names.
 - No cuts/tightens: all 6 core red, none at -7%. Live ~11:10 ET: TYL -5.07% ($406.99 vs cut $398.69, ~2.1% away), ACN -4.60% (slid from -2.0% at pre-mkt), ALLE -3.63%, V -3.45%, CRL -0.72%, MTD -0.19%. SPHY -4.35%. All 8 GTC stops intact.
 - Thesis check: TYL - Truist PT $440->$500 (Buy) + TD Cowen PT update, offset by CEO $12.8M share sale (30k sh); no break. V - agentic commerce/Alipay+ PRs (positive). ACN/ALLE no new items. FOMC minutes 2pm = rates risk into 3pm window.
+
+### 3 PM Session Note
+- HELD - no buys (no Approved Trades list; core 6/6 budget exhausted to Mon 11-23; cash $4,763 = 5.32% of $89,452, at floor). No closes, no tightens. Run fired 14:01 ET (FOMC minutes release minute) - marks are as-of ~2pm ET.
+- Risk sweep: ACN now worst at -5.54% ($230.66, -3.6% on day; cut $227.09, ~1.5% away) - no ACN-specific news (sector/IT-services weakness), no thesis break, so held; GTC trail $218.01 sits below the -7% cut, so a gap through the cut overnight is uncovered by an order - pre-market must check ACN first. TYL recovered to -3.77%, MTD green +0.19%. All 8 GTC stops intact, none moved down.
+- Pattern for Friday: ACN slid from -2.0% (pre-mkt) to -5.5% intraday with no news - research-outage-rule entries clustered in one week are moving together (IT names ACN/TYL weakest); consider a manual -7% stop-limit vs relying on trail.
+- Risky positions closed today: none.

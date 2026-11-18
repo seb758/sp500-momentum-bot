@@ -3943,3 +3943,20 @@ Core now 6/8 positions, 6 trades this week (gate <=6 - core weekly budget exhaus
 | SPHY | income | 856 | $23.36 | $22.3481 | -0.05% | -$866.19 (-4.33%) | 5% trailing ($21.565) |
 
 **Notes:** No 3pm buys - no "### Approved Trades (verified)" list today; ACN (9:30 limit, stop attached 11am) was today's only entry. Core 6/8 positions, 6/6 trades this week (budget exhausted to Mon 11-23); satellite 0/5, 0/4. Risk sweep: no hard-cut breaches (worst TYL -2.83% vs -7%), no tightens; all positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech satellite entries blocked to 2026-11-20 (2-strike). Flags: Cash 5.29% (at floor), Core 71.6% (below 85%), Income 23.15% vs 15% cap; SPHY -4.33% (stop ~3.5% away); Gemini outage (wk 4). Trades today: BUY ACN (core). Risky positions closed: none.
+
+## Nov 18 — 3pm Snapshot (Day 98, Wednesday)
+**Portfolio:** $89,452.15 | **Cash:** $4,762.91 (5.32%) | **Day P&L:** -$580.81 (-0.65%, vs Nov 17 3pm) | **Phase P&L:** -$10,547.85 (-10.55%)
+**Core exposure:** $63,852.92 (71.38% of equity) | **Satellite exposure:** $0.00 (0.00% of equity) | **Income exposure:** $20,836.32 (23.29% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| ACN | core | 50 | $244.18 | $230.655 | -3.61% | -$676.25 (-5.54%) | 10% trailing ($218.01) |
+| CRL | core | 32 | $334.16 | $332.74 | +0.18% | -$45.44 (-0.42%) | 10% trailing ($307.25) |
+| MTD | core | 6 | $1,732.79 | $1,736.14 | +1.35% | +$20.10 (+0.19%) | 10% trailing ($1,569.72) |
+| ALLE | core | 56 | $193.00 | $188.025 | +0.67% | -$278.60 (-2.58%) | 10% trailing ($173.43) |
+| TYL | core | 25 | $428.70 | $412.56 | +0.76% | -$403.50 (-3.77%) | 10% trailing ($388.58) |
+| V | core | 25 | $429.72 | $416.49 | -0.07% | -$330.75 (-3.08%) | 10% trailing ($387.60) |
+| SGOV | income | 16.989473856 | $100.52 | $100.5916 | 0.00% | +$1.22 (+0.07%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.345 | +0.02% | -$868.84 (-4.34%) | 5% trailing ($21.565) |
+
+**Notes:** No 3pm buys - no "### Approved Trades (verified)" list today; HELD all day. Core 6/8 positions, 6/6 trades this week (budget exhausted to Mon 11-23); satellite 0/5, 0/4. Risk sweep: no hard-cut breaches - worst ACN -5.54% (cut $227.09, ~1.5% away; no ACN news, held, flagged for pre-market gap check since its trail $218.01 is below the cut); no tightens; all positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech satellite entries blocked to 2026-11-20 (2-strike). Snapshot taken ~2pm ET (run fired at FOMC-minutes release). Flags: Cash 5.32% (at floor), Core 71.4% (below 85%), Income 23.29% vs 15% cap; SPHY -4.34% (stop ~3.5% away); Gemini outage (wk 4). Trades today: none. Risky positions closed: none.

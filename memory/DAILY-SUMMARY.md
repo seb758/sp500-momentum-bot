@@ -56,3 +56,8 @@ Tomorrow: hold 5 core; 6th slot only via Approved list; fix Gemini model/quota
 Portfolio: $90,033 (-1.18% day, -9.97% phase) | Core $64,431 (71.6%) | Satellite $0 (0%) | Cash $4,763 (5.3%) | Income $20,839 (23.2%)
 Trades: BUY ACN (core) | Risky closed: none | ACN -1.2% stop $218.01; CRL -0.2% stop $307.25; MTD -1.3% stop $1,569.00; ALLE -2.4% stop $173.43; TYL -2.8% stop $388.58; V -2.5% stop $387.60; SPHY (inc) -4.3% stop $21.57; SGOV (inc) +0.1% stop $95.70 | Week: core 6/6, sat 0/4
 Tomorrow: hold; core budget exhausted to Mon 11-23, cash at 5% floor; monitor stops
+
+## 3PM NOV 18 (email not sent - SMTP port 465 unreachable; fallback)
+Portfolio: $89,452 (-0.65% day, -10.55% phase) | Core $63,853 (71.4%) | Satellite $0 (0%) | Cash $4,763 (5.3%) | Income $20,836 (23.3%)
+Trades: none | Risky closed: none | ACN -5.5% stop $218.01 (-7% cut $227.09, ~1.5% away); TYL -3.8% stop $388.58; V -3.1% stop $387.60; ALLE -2.6% stop $173.43; CRL -0.4% stop $307.25; MTD +0.2% stop $1,569.72; SPHY (inc) -4.3% stop $21.57; SGOV (inc) +0.1% stop $95.70 | Week: core 6/6, sat 0/4
+Tomorrow: hold; check ACN vs -7% cut at open; core budget exhausted to Mon 11-23, cash at 5% floor
