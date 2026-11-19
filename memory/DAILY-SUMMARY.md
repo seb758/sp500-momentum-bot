@@ -61,3 +61,8 @@ Tomorrow: hold; core budget exhausted to Mon 11-23, cash at 5% floor; monitor st
 Portfolio: $89,452 (-0.65% day, -10.55% phase) | Core $63,853 (71.4%) | Satellite $0 (0%) | Cash $4,763 (5.3%) | Income $20,836 (23.3%)
 Trades: none | Risky closed: none | ACN -5.5% stop $218.01 (-7% cut $227.09, ~1.5% away); TYL -3.8% stop $388.58; V -3.1% stop $387.60; ALLE -2.6% stop $173.43; CRL -0.4% stop $307.25; MTD +0.2% stop $1,569.72; SPHY (inc) -4.3% stop $21.57; SGOV (inc) +0.1% stop $95.70 | Week: core 6/6, sat 0/4
 Tomorrow: hold; check ACN vs -7% cut at open; core budget exhausted to Mon 11-23, cash at 5% floor
+
+## 3PM NOV 19 (email not sent - SMTP port 465 unreachable; fallback)
+Portfolio: $87,972 (-1.65% day, -12.03% phase) | Core $51,359 (58.4%) | Satellite $0 (0%) | Cash $15,772 (17.9%) | Income $20,841 (23.7%)
+Trades: SELL ACN (core, -7% cut @ $220.18, -$1,200) | Risky closed: ACN | V -6.3% stop $387.60 (-7% cut $399.64, ~0.75% away); TYL -5.4% stop $388.58; ALLE -3.4% stop $173.43; MTD -1.9% stop $1,574.15; CRL -1.6% stop $309.21; SPHY (inc) -4.3% stop $21.57; SGOV (inc) +0.1% stop $95.70 | Week: core 6/6, sat 0/4
+Tomorrow: V hard-cut check first at 9:30; no buys (core budget exhausted to Mon 11-23)
