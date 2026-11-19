@@ -9847,3 +9847,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - HELD - no trades. Core gate fails: 6/6 trades this week (budget exhausted to Mon 11-23); cash $4,763 (5.33% of $89,417 equity) ~ at 5% floor. Satellite: biotech 2-strike block to 11-20; FSTR illiquid skip stands. No Approved Trades list.
 - ACN hard-cut check (live 09:32 ET): $228.91 = -6.25% vs -7% cut $227.09 (~0.8% above) - NOT breached, no cut. IEX quote $214.70/$230.75 (7% wide) = feed artifact; position mark used. 11am run must re-check ACN first.
 - Others live: V -3.97%, TYL -3.86%, ALLE -3.27%, SPHY -4.22%; CRL +1.23%, MTD +0.50%. All 8 GTC stops intact (CRL trail ratcheted to $308.52, MTD $1,574.15), none moved down.
+
+### 11 AM Session Note
+- CUT ACN (core): -9.73% at 11:12 ET vs -7% cut; sold 50 @ $220.18, realized -$1,200.00 (-9.83%). No ticker news (Coupa partnership only) - IT-services slide continued (-3.7% day). Trail (cancelled) at $218.01 sat below the cut, so the -7% rule was only enforceable at run times.
+- No buys: no Approved Trades list; core budget 6/6 to Mon 11-23. Satellite: none held; biotech block to 11-20.
+- Held: V -6.03% (cut $399.64, live $403.81 ~1.0% above), TYL -5.90% (cut $398.69, live $403.42 ~1.2% above) - no thesis-breaking news; 3pm run re-check first. ALLE -3.22%, MTD -0.92%, CRL +0.55%, SPHY -4.22%. No tightens (none >= +15%). All 7 remaining GTC stops intact, none moved down.
+- Lesson for Friday: the -7% core cut sits inside the 10% trail band, so 2-hour gaps between runs let losers overshoot (ACN -9.8%). Consider a resting -7% stop (e.g. trailing until cut level, or a GTC stop at entry x 0.93 instead of 10% trail at entry). 5 of 6 Nov-16/17 entries now red - entry timing into a weak tape under the research-outage rule worth reviewing.
