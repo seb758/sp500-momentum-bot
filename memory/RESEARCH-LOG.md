@@ -9802,3 +9802,43 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - Risk sweep: ACN now worst at -5.54% ($230.66, -3.6% on day; cut $227.09, ~1.5% away) - no ACN-specific news (sector/IT-services weakness), no thesis break, so held; GTC trail $218.01 sits below the -7% cut, so a gap through the cut overnight is uncovered by an order - pre-market must check ACN first. TYL recovered to -3.77%, MTD green +0.19%. All 8 GTC stops intact, none moved down.
 - Pattern for Friday: ACN slid from -2.0% (pre-mkt) to -5.5% intraday with no news - research-outage-rule entries clustered in one week are moving together (IT names ACN/TYL weakest); consider a manual -7% stop-limit vs relying on trail.
 - Risky positions closed today: none.
+
+## 2026-11-19 — Pre-market Research (Thursday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Balance_asof 11-18.
+
+### Account
+- Equity: $89,309 (vs $89,223 last_equity) | Cash: $4,763 (5.33%; floor 5% = $4,465 - ~$298 headroom, no buys without SGOV draw).
+- Core: $63,705 (71.3%, 6/8; 6/6 trades this week - budget exhausted to Mon 11-23) | Satellite: $0 (0%, 0/5) | Income: $20,841 (23.3% vs 15% cap, still above): SGOV $1,709 (+0.08%), SPHY $19,132 (-4.32%).
+- Core marks vs entry: **ACN -6.63% ($228.00 pre-mkt; 11-18 close $227.49 = -6.83%; -7% cut $227.09 - ~0.4% away, NOT breached)**, TYL -4.28% (cut $398.69), V -3.53% (cut $399.64), ALLE -1.97%, CRL -0.27%, MTD +0.26%.
+- ACN IEX quote $213.75/$246.22 (stale 11-18 21:00 UTC, 14% wide) = feed artifact, not a real gap print.
+- Live GTC trailing stops: ACN 10% ($218.01), ALLE 10% ($173.43), CRL 10% ($307.25), MTD 10% ($1,569.72), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; price $22.35, ~3.5% above), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached. (SGOV 0.99 fractional sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED (week 4)**: default gemini-2.5-flash HTTP 404 (retired, "use gemini-3.8-flash"); narrowed retry GEMINI_RESEARCH_MODEL=gemini-3.8-flash -> HTTP 429 quota exhausted. No Gemini output used. Owner: update scripts/gemini_research.sh:56 default model + check API quota/billing.
+- **Benzinga feed + WebSearch fallback (labelled).** Futures direction + VIX level: data gap (WebSearch returned no 11-19 reading; only 2025-dated pages) - not fabricated.
+
+### Market Context (Benzinga/WebSearch fallback)
+- Futures direction: unverified. VIX: unverified.
+- Today (finviz/financecalendar): initial jobless claims 8:30 ET (wk ending 11-14; consensus not published), Nov Philly Fed mfg 8:30 (prior 20.9), 10Y TIPS auction 1pm, Fed balance sheet 4:30pm.
+- NVDA overhang: SEC investigation + delayed 10-Q (11-18, Benzinga), and AMD CEO commenting on an "Nvidia leadership transition" (11-19 03:01 UTC headline - details unverified). AI-complex/semis sentiment risk at open.
+- FOMC minutes (11-18 2pm) - hawkish-Fed backdrop carried from prior logs; no new read verified.
+
+### Overnight news - held / watchlist
+- Held core: ACN - Life Trends 2027 report (neutral; no thesis-relevant news - slide is sector/IT-services). V - iFAST multi-currency Visa debit, DRC Tap to Pay, Lianlian agentic B2B txn (neutral/positive). TYL - Truist PT $440->$500 / CEO $12.8M sale (carried). ALLE, CRL, MTD: no items in 24h. No thesis breaks.
+- Income: SGOV/SPHY no news.
+- Watchlist: LLY - Health Canada Mounjaro CV-risk approval, VitriVax Series C (positive). APA - Scotiabank PT $44->$47, Capital One Buy, MS PT $43->$44 (positive). BDX - TIME top manufacturers, AHA collab (neutral). AMD - Nvidia leadership comment, insider sale, OpenAI/Supermicro integrations (mixed; still excluded, below 50-day). TMO - Gibco VaxEvo launch (neutral). VEEV - ACTO integration (neutral). BBY - Linkind retail expansion (neutral).
+- RVTY, ROP, ADP, CTAS, CPAY, FSTR: no items in 24h.
+
+### Core trade ideas
+- None. Core weekly budget exhausted (6/6 to Mon 11-23) and cash at floor. **ACN: if it prints <= $227.09 (-7%) at/after open, 9:30 run must cut per rule** (GTC trail $218.01 sits below the cut - no order covers it).
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date (resolved 11-04); SKIP stands - illiquid (20d IEX $vol $1.7M).
+- Biotech entries blocked to 2026-11-20 (2-strike). Capricor/Savara PDUFA 2026-11-22 (unverified) = watch only (within 5 trading days; biotech blocked anyway).
+
+### Risk factors
+- ACN ~0.4% above hard cut; NVDA SEC probe/10-Q delay/leadership headline (AI complex); jobless claims + Philly Fed 8:30; all 5 of 6 core entries red; cash at floor; Income 23.3% vs 15% cap; SPHY -4.3%; Gemini outage (wk 4).
+
+### Decision: HOLD
+- No budget, no cash, no Approved Trades list. Only action pending: ACN hard-cut check at 9:30. No email (no held position below hard cut pre-market - ACN -6.63% vs -7%; no satellite catalyst resolved; no major geopolitical event).
