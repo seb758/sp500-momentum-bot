@@ -9842,3 +9842,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 
 ### Decision: HOLD
 - No budget, no cash, no Approved Trades list. Only action pending: ACN hard-cut check at 9:30. No email (no held position below hard cut pre-market - ACN -6.63% vs -7%; no satellite catalyst resolved; no major geopolitical event).
+
+### 9:30 AM Session Note
+- HELD - no trades. Core gate fails: 6/6 trades this week (budget exhausted to Mon 11-23); cash $4,763 (5.33% of $89,417 equity) ~ at 5% floor. Satellite: biotech 2-strike block to 11-20; FSTR illiquid skip stands. No Approved Trades list.
+- ACN hard-cut check (live 09:32 ET): $228.91 = -6.25% vs -7% cut $227.09 (~0.8% above) - NOT breached, no cut. IEX quote $214.70/$230.75 (7% wide) = feed artifact; position mark used. 11am run must re-check ACN first.
+- Others live: V -3.97%, TYL -3.86%, ALLE -3.27%, SPHY -4.22%; CRL +1.23%, MTD +0.50%. All 8 GTC stops intact (CRL trail ratcheted to $308.52, MTD $1,574.15), none moved down.
