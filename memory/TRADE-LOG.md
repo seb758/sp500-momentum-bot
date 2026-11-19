@@ -3964,3 +3964,19 @@ Core now 6/8 positions, 6 trades this week (gate <=6 - core weekly budget exhaus
 ### 2026-11-19 — SELL ACN (core) — -7% hard cut (11am run)
 Shares: 50 | Exit: $220.18 (market, filled 16:12:56 UTC) | Realized P&L: -$1,200.00 (-9.83%) vs $244.18 entry | Reason: core -7% hard cut ($227.09) breached - mark $220.43 (-9.73%) at 11am run (was -6.25% at 9:32 ET; slid ~3.7% on day with no ticker news - only Coupa partnership, positive). 10% GTC trail (9a243201, trigger $218.01) cancelled first; it sat below the cut so nothing covered the -7% to -10.7% band between runs. Overshoot vs cut ~$347.
 Core now 5/8 positions; weekly trades still 6/6 (exits don't refund budget). Cash ~$15.8k (~17.9%) - redeploy blocked by weekly budget to Mon 11-23.
+
+## Nov 19 — 3pm Snapshot (Day 99, Thursday)
+**Portfolio:** $87,972.07 | **Cash:** $15,771.91 (17.93%) | **Day P&L:** -$1,480.08 (-1.65%, vs Nov 18 3pm) | **Phase P&L:** -$12,027.93 (-12.03%)
+**Core exposure:** $51,359.25 (58.38% of equity) | **Satellite exposure:** $0.00 (0.00% of equity) | **Income exposure:** $20,840.91 (23.69% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| CRL | core | 32 | $334.16 | $328.70 | -1.37% | -$174.72 (-1.63%) | 10% trailing ($309.21) |
+| MTD | core | 6 | $1,732.79 | $1,700.34 | -2.13% | -$194.70 (-1.87%) | 10% trailing ($1,574.15) |
+| ALLE | core | 56 | $193.00 | $186.385 | -0.76% | -$370.44 (-3.43%) | 10% trailing ($173.43) |
+| TYL | core | 25 | $428.70 | $405.405 | -1.21% | -$582.38 (-5.43%) | 10% trailing ($388.58) |
+| V | core | 25 | $429.72 | $402.645 | -3.03% | -$676.88 (-6.30%) | 10% trailing ($387.60) |
+| SGOV | income | 16.989473856 | $100.52 | $100.6099 | +0.01% | +$1.53 (+0.09%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.35 | 0.00% | -$864.56 (-4.32%) | 5% trailing ($21.565) |
+
+**Notes:** No 3pm buys - no "### Approved Trades (verified)" list today. ACN cut at 11am (-7% hard cut, sold 50 @ $220.18, -$1,200.00 realized). Core 5/8 positions, 6/6 trades this week (budget exhausted to Mon 11-23); satellite 0/5, 0/4. Risk sweep: no new hard-cut breaches - V -6.30% (cut $399.64, ~0.75% away, no thesis-breaking news, held; trail $387.60 sits below the cut - pre-market gap check on V first), TYL -5.43% (~1.7% from cut); no tightens; all positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech satellite 2-strike block ends 2026-11-20. Snapshot ~2pm ET. Flags: Cash 17.9% (ACN proceeds, idle until 11-23), Core 58.4% (below 85%), Income 23.69% vs 15% cap; SPHY -4.32% (stop ~3.5% away); Gemini outage (wk 4). Trades today: SELL ACN (core). Risky positions closed: ACN.

@@ -9853,3 +9853,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - No buys: no Approved Trades list; core budget 6/6 to Mon 11-23. Satellite: none held; biotech block to 11-20.
 - Held: V -6.03% (cut $399.64, live $403.81 ~1.0% above), TYL -5.90% (cut $398.69, live $403.42 ~1.2% above) - no thesis-breaking news; 3pm run re-check first. ALLE -3.22%, MTD -0.92%, CRL +0.55%, SPHY -4.22%. No tightens (none >= +15%). All 7 remaining GTC stops intact, none moved down.
 - Lesson for Friday: the -7% core cut sits inside the 10% trail band, so 2-hour gaps between runs let losers overshoot (ACN -9.8%). Consider a resting -7% stop (e.g. trailing until cut level, or a GTC stop at entry x 0.93 instead of 10% trail at entry). 5 of 6 Nov-16/17 entries now red - entry timing into a weak tape under the research-outage rule worth reviewing.
+
+### 3 PM Session Note
+- HELD - no buys (no Approved Trades list; core budget 6/6 to Mon 11-23), no closes, no tightens. Run fired ~14:02 ET.
+- Risk sweep: V -6.30% ($402.65 vs -7% cut $399.64, ~0.75% above; V -3.0% on day, news only Visa Recurrent launch - no thesis break) - held, NOT breached. TYL -5.43% (cut $398.69, ~1.7% above; CHAMP Title Vault news, positive). ALLE -3.43%, MTD -1.87%, CRL -1.63%, SPHY -4.32%. All 7 GTC stops intact, none moved down. No satellite positions/catalysts.
+- Pattern for Friday: V/TYL repeat ACN setup - -7% cut sits inside 10% trail, so an overnight slide past $399.64 goes unenforced until 9:30. Pre-market must check V first. 5 of 5 remaining core entries red; day -1.65%, phase -12.03%.
+- Risky positions closed today: ACN (core, 11am -7% cut).
