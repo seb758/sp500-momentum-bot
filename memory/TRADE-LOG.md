@@ -3980,3 +3980,19 @@ Core now 5/8 positions; weekly trades still 6/6 (exits don't refund budget). Cas
 | SPHY | income | 856 | $23.36 | $22.35 | 0.00% | -$864.56 (-4.32%) | 5% trailing ($21.565) |
 
 **Notes:** No 3pm buys - no "### Approved Trades (verified)" list today. ACN cut at 11am (-7% hard cut, sold 50 @ $220.18, -$1,200.00 realized). Core 5/8 positions, 6/6 trades this week (budget exhausted to Mon 11-23); satellite 0/5, 0/4. Risk sweep: no new hard-cut breaches - V -6.30% (cut $399.64, ~0.75% away, no thesis-breaking news, held; trail $387.60 sits below the cut - pre-market gap check on V first), TYL -5.43% (~1.7% from cut); no tightens; all positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech satellite 2-strike block ends 2026-11-20. Snapshot ~2pm ET. Flags: Cash 17.9% (ACN proceeds, idle until 11-23), Core 58.4% (below 85%), Income 23.69% vs 15% cap; SPHY -4.32% (stop ~3.5% away); Gemini outage (wk 4). Trades today: SELL ACN (core). Risky positions closed: ACN.
+
+## Nov 20 — 3pm Snapshot (Day 100, Friday)
+**Portfolio:** $87,587.15 | **Cash:** $15,771.67 (18.01%) | **Day P&L:** -$384.92 (-0.44%, vs Nov 19 3pm) | **Phase P&L:** -$12,412.85 (-12.41%)
+**Core exposure:** $51,025.50 (58.26% of equity) | **Satellite exposure:** $0.00 (0.00% of equity) | **Income exposure:** $20,789.98 (23.74% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| CRL | core | 32 | $334.16 | $315.81 | -3.70% | -$587.20 (-5.49%) | 10% trailing ($309.21) |
+| MTD | core | 6 | $1,732.79 | $1,682.79 | -1.34% | -$300.00 (-2.89%) | 10% trailing ($1,574.15) |
+| ALLE | core | 56 | $193.00 | $185.64 | -0.18% | -$412.16 (-3.81%) | 10% trailing ($173.43) |
+| TYL | core | 25 | $428.70 | $410.13 | +1.48% | -$464.25 (-4.33%) | 10% trailing ($388.58) |
+| V | core | 25 | $429.72 | $406.95 | +1.17% | -$569.25 (-5.30%) | 10% trailing ($387.60) |
+| SGOV | income | 16.989473856 | $100.52 | $100.635 | +0.02% | +$1.95 (+0.11%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.29 | -0.22% | -$915.92 (-4.58%) | 5% trailing ($21.565) |
+
+**Notes:** No 3pm buys - no "### Approved Trades (verified)" list today; HELD all day. Core 5/8 positions, 6/6 trades this week (budget resets Mon 11-23); satellite 0/5, 0/4. Risk sweep: no hard-cut breaches - worst CRL -5.49% (cut $310.77, ~1.6% away; -3.7% on day, no ticker news, held; trail $309.21 sits below the cut - pre-market gap check on CRL Mon), V -5.30% (vendor cyberattack headline, not a thesis break); no tightens; all positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Biotech 2-strike block ended 2026-11-20. Snapshot ~2pm ET. Flags: Cash 18.0% (idle until 11-23), Core 58.3% (below 85%), Income 23.74% vs 15% cap; SPHY -4.58% (stop ~3.3% away); Gemini outage (wk 4). Trades today: none. Risky positions closed: none.

@@ -9910,3 +9910,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - Hard-cut check (16:13 UTC marks): CRL -5.15% ($316.96; cut $310.77), V -4.98% ($408.33; cut $399.64), TYL -3.01%, MTD -2.15%, ALLE -3.32%. None at -7%. No winners to tighten. All 7 GTC trails live, none moved.
 - Thesis check: V - third-party vendor cyberattack (V/JPM/MA, limited data) = headline risk, not thesis break; CRL - Baird PT $364->$365, slide vs open looks sector/tape, not stock-specific. No cuts.
 - Friday flag: CRL joined V in the -5% band (was -1.9% pre-market); 3pm must recheck CRL/V vs cut.
+
+### 3 PM Session Note
+- HELD - no buys (no Approved Trades list; core budget 6/6 to Mon 11-23; no tradeable satellite names). No closes, no tightens (all core red).
+- Hard-cut check (19:02 UTC marks): CRL -5.49% ($315.81; cut $310.77, ~1.6% above; -3.7% on day, no CRL news = tape/sector), V -5.30% ($406.95), TYL -4.33%, ALLE -3.81%, MTD -2.89%. None at -7%. All 7 GTC trails live, none moved. V cyberattack headline (third-party vendor) = not a thesis break.
+- Friday pattern: research-outage entries (5/5 core, wk of 11-16) all red, ACN cut -9.8%; 10% trails sit below the -7% cut, so the -7..-10% band is unprotected between runs and overnight - raise in weekly review.
+- Risky positions closed today: none.
