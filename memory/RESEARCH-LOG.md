@@ -9904,3 +9904,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - HELD - no trades. Core budget exhausted (6/6 to Mon 11-23); no tradeable satellite names (biotech block ends today, none on list).
 - Hard-cut check (14:32 UTC marks): V $405.55 (-5.63%, cut $399.64, ~1.5% above); TYL $405.93 (-5.31%, cut $398.69, ~1.8% above). Neither breached. IEX quotes wide opening-auction prints (V 395.23/405.84, TYL 403.85/428.40) = feed artifact, position marks used. All 7 GTC trails live, none moved.
 - Friday flag: V/TYL hovering 1.5-2% above -7% cut with 10% trails below the cut - unprotected band between runs; midday/3pm must recheck.
+
+### 11 AM Session Note
+- HELD - no trades. No Approved Trades list (core budget 6/6 to Mon 11-23; no tradeable satellite names).
+- Hard-cut check (16:13 UTC marks): CRL -5.15% ($316.96; cut $310.77), V -4.98% ($408.33; cut $399.64), TYL -3.01%, MTD -2.15%, ALLE -3.32%. None at -7%. No winners to tighten. All 7 GTC trails live, none moved.
+- Thesis check: V - third-party vendor cyberattack (V/JPM/MA, limited data) = headline risk, not thesis break; CRL - Baird PT $364->$365, slide vs open looks sector/tape, not stock-specific. No cuts.
+- Friday flag: CRL joined V in the -5% band (was -1.9% pre-market); 3pm must recheck CRL/V vs cut.
