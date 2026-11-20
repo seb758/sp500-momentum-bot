@@ -2768,3 +2768,123 @@ $20,917 (22.9%), cash $70,330 (77.1%).
 Flat in a +3% S&P week (-3.05pp); eighth straight week of 0% Core/Satellite
 deployment. The screen is rebuilt and the blocking rule is fixed, but no
 capital moved.
+
+---
+
+## Week ending 2026-11-20
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $91,247.39 (per 11-13 review) |
+| Ending portfolio | $87,026.75 (Alpaca equity, 11-20 post-close) |
+| Week return | -$4,220.64 (-4.63%) |
+| S&P 500 week | -5.10% (SPY close 11-13 $754.37 -> 11-19 $715.87; Gemini unavailable, WebSearch found no 11-20 wrap, computed from Alpaca; 11-20 bar not served) |
+| Bot vs S&P | +0.47pp (bot includes Fri, SPY through Thu) |
+| Core trades | 6 entries (V, CRL, TYL, MTD, ALLE, ACN); 1 closed (W:0/L:1, ACN), 5 open |
+| Satellite trades | 0 (no closes, no entries) |
+| Win rate | 0% (0/1 closed core) |
+| Best trade | n/a (no winners); best open MTD -3.80% (core) |
+| Worst trade | ACN -9.83% (core, -$1,200.00) |
+| Profit factor | 0.00 (no winning closes) |
+
+Phase P&L: -12.97% vs $100k start. Realized this week: -$1,200.00 core.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| ACN | core | $244.18 | $220.18 | -$1,200.00 (-9.83%) | -7% hard cut at 11am 11-19; 10% trail ($218.01) sat below the cut, ~$347 overshoot vs -7% |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| V | core | $429.72 | $401.87 | -$696.25 (-6.48%) | 10% trailing ($387.60); -7% cut $399.64 (~0.6% away) |
+| CRL | core | $334.16 | $314.32 | -$634.88 (-5.94%) | 10% trailing ($309.21); -7% cut $310.77 (~1.1% away) |
+| TYL | core | $428.70 | $404.44 | -$606.50 (-5.66%) | 10% trailing ($388.58) |
+| ALLE | core | $193.00 | $183.61 | -$525.84 (-4.87%) | 10% trailing ($173.43) |
+| MTD | core | $1,732.79 | $1,666.88 | -$395.46 (-3.80%) | 10% trailing ($1,574.15) |
+| SPHY | income | $23.36 | $22.25 | -$950.16 (-4.75%) | 5% trailing ($21.565, ~3.1% away) |
+| SGOV | income | $100.52 | $100.635 | +$1.95 (+0.11%) | 5% trailing ($95.703, 16 sh covered) |
+
+Exposure (equity $87,026.75): core $50,499 (58.0%), satellite $0 (0%),
+income $20,756 (23.9%), cash $15,772 (18.1%).
+
+### Watchlist Refresh
+- Core: 11 added (VLTO, HAS, REGN, LH, SWK, MAS, DLTR, BRK.B, PG, DIS,
+  AAPL), 6 dropped (RVTY, VEEV, ACN, APA, AMD below 50-day; CPAY rank 77). 23
+  names (was 18). **Full re-screen on the live S&P 500 table (503 symbols)**
+  parsed raw from the GitHub constituents CSV (Wikipedia blocked); 500 ranked
+  on Alpaca bars through 11-19. Fundamentals: FMP 4/60, rest WebSearch or
+  carried from 11-13. Failed FCF gate: CDW, MCK, CAH, BIIB, WAT, TSCO, A.
+  Mixed: MSI. Held by corporate-action guard: MRNA, OKTA, PTC, IDXX, TECH.
+  All 5 held core names stay on the list (no thesis-break clock).
+- Satellite: 0 added, 0 dropped. FSTR (industrials) stays - 1 tradeable
+  name. Rejected on momentum: VNDA, MLYS, COGT, OSS, PRAX. CAPR/SVRA (PDUFA
+  11-22) binary watch only. Biotech 2-strike cooldown ended 11-20.
+- **Core sector mix (23):** Health Care 7 (MTD, CRL, BDX, TMO, REGN, LH,
+  LLY = 30.4%), Industrials 6 (ALLE, VLTO, SWK, MAS, ADP, CTAS = 26.1%), IT 3
+  (ROP, TYL, AAPL = 13.0%), Cons. Disc. 2 (BBY, HAS = 8.7%), Cons. Staples 2
+  (DLTR, PG = 8.7%), Financials 2 (BRK.B, V = 8.7%), Comm. Services 1 (DIS =
+  4.3%) - 7 sectors. Semis/AI-hw 0/23. No sector over the 40% cap.
+
+### What Worked
+- Research-outage rule (added 11-13) ended the 8-week deployment stall: 6
+  core entries Mon/Tue, Core 0% -> 58%.
+- Hard-cut discipline: ACN cut mechanically at the 11am window once -7% was
+  breached; no averaging down.
+- Slight relative win (+0.47pp) in a -5.1% S&P week; no semis/AI-hardware
+  exposure while NVDA kept falling (rank 479/500).
+- Screen moved to a live constituent source (503 names, current through the
+  11-04 OKTA add) instead of an internal roster.
+
+### What Didn't Work
+- Timing: deployed ~$64k into the first days of a -5% week; all 5 open core
+  names are red (-3.8% to -6.5%), V and CRL within ~1% of the -7% cut.
+- **Weekly-cap mismatch:** daily routines (routines/market-open.md,
+  routines/midday.md) still enforce the old caps - core <= 6 positions / 6
+  trades / 20% size, satellite <= 4 / 4 / 7.5% - while TRADING-STRATEGY.md
+  says 8 / 8 / 25% and 5 / 5 / 10% (raised 09-29). Sessions logged "6/6,
+  budget exhausted", so ACN's ~$15.8k proceeds sat idle 11-19 to 11-20
+  (cash 18% vs 5% floor).
+- -7% cut overshoot: a 10% trail from entry sits below the -7% cut, so the
+  cut is enforced only at session windows. ACN overshot to -9.83% (~$347
+  past the cut); V and CRL have the same gap now.
+- 9:30 day-limit fills went unstopped ~85 min three times (MTD, ALLE, ACN)
+  because the market-open run exits before fills; stops attached at 11am.
+- Income still 23.9% vs 15% cap; SPHY -4.75%, stop ~3.1% away. No rebalance
+  run.
+- Deployment still below 60% (Core+Sat 58.0%) - Patience Rule flag, 9th
+  week, though now close.
+
+### Key Lessons
+- The research-outage rule did its job: one fallback-sourced week moved more
+  capital than the prior eight.
+- Routine files drift from the rulebook. A raised cap only takes effect once
+  the daily prompts that enforce it are updated too.
+- With a 10% trail and a -7% cut, the -7% band is not protected by any live
+  order between runs; the gap costs about 3% of position per breach.
+
+### Adjustments for Next Week
+- No TRADING-STRATEGY.md change (research-outage rule has 1 week of
+  evidence; keep and re-assess).
+- Owner action (new, high): sync routines/market-open.md, routines/midday.md
+  (and the cloud routine prompts) plus .claude/commands/trade.md to the
+  current caps: core 8 positions / 8 trades / 25%, satellite 5 / 5 / 10%
+  (7.5% binary), satellite sleeve 25%.
+- Owner decision (candidate rule, NOT changed): close the -7% cut gap -
+  e.g. replace the 10% entry trail with a fixed -7% stop until the position
+  is at +3%, then switch to the 10% trail. This changes stop mechanics, so
+  owner sign-off needed.
+- Process: market-open should re-poll unfilled 9:30 limits before exiting
+  (or use a bracket/OTO order) so fills are never unstopped.
+- Mon 11-23: pre-market gap check on V and CRL first (both ~1% from cut).
+  Weekly budget resets; core 5/8 positions, cash ~$11.4k above the 5% floor
+  available for 1 new core entry (fresh Benzinga/WebSearch check per
+  research-outage rule).
+- Owner action (repeat): Gemini model/quota (gemini-3.8-flash, script line
+  56); authorize Income trim to the 15% cap.
+
+### Overall Grade: C-
+Deployment finally resumed and beat a -5.1% S&P by 0.47pp, but timing was
+poor, one hard cut overshot to -9.8%, and stale routine caps left 18% cash
+idle.

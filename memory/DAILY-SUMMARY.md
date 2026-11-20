@@ -71,3 +71,10 @@ Tomorrow: V hard-cut check first at 9:30; no buys (core budget exhausted to Mon 
 Portfolio: $87,587 (-0.44% day, -12.41% phase) | Core $51,026 (58.3%) | Satellite $0 (0%) | Cash $15,772 (18.0%) | Income $20,790 (23.7%)
 Trades: none | Risky closed: none | CRL -5.5% stop $309.21 (-7% cut $310.77, ~1.6% away); V -5.3% stop $387.60; TYL -4.3% stop $388.58; ALLE -3.8% stop $173.43; MTD -2.9% stop $1,574.15; SPHY (inc) -4.6% stop $21.57; SGOV (inc) +0.1% stop $95.70 | Week: core 6/6, sat 0/4
 Tomorrow: Mon 11-23 core budget resets; pre-market gap check CRL/V vs -7% cut; screen refresh pending (Gemini down)
+
+## WEEKLY NOV 20 (email not sent - SMTP port 465 unreachable; fallback)
+Week ending Nov 20 | Portfolio: $87,026.75 (-4.63% week, -12.97% phase) | vs S&P 500: -5.10% (SPY thru Thu; bot +0.47pp)
+Core trades: 6 entries, 1 closed (W:0/L:1) | Satellite trades: 0 | Best: none closed (best open MTD -3.8%, core) | Worst: ACN -9.83% (core)
+Core 58.0% | Cash 18.1% | Income 23.9% (cap 15%) | V/CRL ~1% from -7% cut - Mon gap check
+Owner action: routines enforce old caps (core 6/6/20%, sat 4/4/7.5%) vs rulebook 8/8/25%, 5/5/10%
+Watchlist: core 23 names (7 sectors), satellite 1 name (FSTR) for next week | Grade: C-
