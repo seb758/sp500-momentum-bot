@@ -9899,3 +9899,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 
 ### Decision: HOLD
 - No core budget, no tradeable satellite names, no Approved Trades list. Only pending action: V/TYL hard-cut checks at 9:30. No email (no held position below hard cut pre-market; no satellite catalyst resolved; no major geopolitical event found).
+
+### 9:30 AM Session Note
+- HELD - no trades. Core budget exhausted (6/6 to Mon 11-23); no tradeable satellite names (biotech block ends today, none on list).
+- Hard-cut check (14:32 UTC marks): V $405.55 (-5.63%, cut $399.64, ~1.5% above); TYL $405.93 (-5.31%, cut $398.69, ~1.8% above). Neither breached. IEX quotes wide opening-auction prints (V 395.23/405.84, TYL 403.85/428.40) = feed artifact, position marks used. All 7 GTC trails live, none moved.
+- Friday flag: V/TYL hovering 1.5-2% above -7% cut with 10% trails below the cut - unprotected band between runs; midday/3pm must recheck.
