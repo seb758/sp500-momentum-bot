@@ -9859,3 +9859,43 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - Risk sweep: V -6.30% ($402.65 vs -7% cut $399.64, ~0.75% above; V -3.0% on day, news only Visa Recurrent launch - no thesis break) - held, NOT breached. TYL -5.43% (cut $398.69, ~1.7% above; CHAMP Title Vault news, positive). ALLE -3.43%, MTD -1.87%, CRL -1.63%, SPHY -4.32%. All 7 GTC stops intact, none moved down. No satellite positions/catalysts.
 - Pattern for Friday: V/TYL repeat ACN setup - -7% cut sits inside 10% trail, so an overnight slide past $399.64 goes unenforced until 9:30. Pre-market must check V first. 5 of 5 remaining core entries red; day -1.65%, phase -12.03%.
 - Risky positions closed today: ACN (core, 11am -7% cut).
+
+## 2026-11-20 — Pre-market Research (Friday)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Balance_asof 11-19.
+
+### Account
+- Equity: $87,990 (vs $87,907 last_equity) | Cash: $15,772 (17.92%; floor 5% = $4,400) - ACN proceeds, idle; core redeploy blocked by weekly budget to Mon 11-23.
+- Core: $51,385 (58.4%, 5/8; 6/6 trades this week - budget exhausted to Mon 11-23) | Satellite: $0 (0%, 0/5) | Income: $20,833 (23.7% vs 15% cap, still above): SGOV $1,710 (+0.12%), SPHY $19,123 (-4.37%).
+- Core marks vs entry (position current_price): **V -5.65% ($405.44; -7% cut $399.64, ~1.4% above)**, **TYL -5.72% ($404.16; cut $398.69, ~1.4% above)**, ALLE -3.61% ($186.03; cut $179.49), CRL -1.86%, MTD -1.57%. None breached.
+- IEX quotes for V ($381.47 bid) / TYL ($374.75 bid) / SPY are stale 11-19 21:00 UTC one-sided prints (ask 0) = feed artifacts, not real gaps. Position marks used.
+- Live GTC trailing stops: ALLE 10% ($173.43), CRL 10% ($309.21), MTD 10% ($1,574.15), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; price $22.34, ~3.5% above), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached, none moved down. (SGOV 0.99 sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED (week 4)**: default gemini-2.5-flash HTTP 404 (retired); narrowed retry GEMINI_RESEARCH_MODEL=gemini-3.8-flash -> HTTP 429 quota exhausted. No Gemini output used. Owner: update scripts/gemini_research.sh default model + check API quota/billing.
+- **Benzinga feed + WebSearch fallback (labelled).** Futures direction + VIX level: data gap (WebSearch returned no 11-20 reading) - not fabricated. `bars SPY` returned HTTP 400.
+
+### Market Context (Benzinga/WebSearch fallback)
+- Futures direction: unverified. VIX: unverified.
+- Today: UMich consumer sentiment (final Nov) 10:00 ET (financecalendar/WebSearch); no central-bank or major earnings events listed. Monthly opex (3rd Friday) - expect elevated volume/pin risk.
+- Week backdrop (carried): NVDA earnings/SEC-10-Q overhang, FOMC minutes 11-18, hawkish-Fed tone. Tape weak: phase P&L -12.0%, all 5 core entries red.
+
+### Overnight news - held / watchlist (Benzinga, 24h)
+- Held core: V - Visa Direct stablecoin funding APAC, Visa Recurrent launch (positive/neutral). TYL - MyArkansas app, CHAMP Title Vault WV (positive/neutral). CRL - M4K2009 research collab (neutral). ALLE, MTD: no items. No thesis breaks.
+- Income: SGOV/SPHY no news.
+- Watchlist: APA - Citi PT $44->$48 (positive). ADP - BofA PT $330->$345, acquires ZenBusiness (positive). VEEV - UBS PT $325->$310, Neutral (negative-lean). AMD - fell on Hunterbrook report alleging ties to sanctioned Chinese entities (negative; still excluded). CTAS - chairman reportedly met Trump re UniFirst deal regulatory status (neutral). LLY - LillyDirect GLP-1 provider add (neutral). BDX - Glens Falls anniversary (neutral). CPAY - Hull City FX deal (neutral). ROP hits = Roche (unrelated).
+- RVTY, BBY, TMO, FSTR: no items in 24h.
+
+### Core trade ideas
+- None. Core weekly budget exhausted (6/6 to Mon 11-23). **V/TYL each ~1.4% above -7% cut; 10% trails sit below the cut - 9:30 run must check both first and cut if <= cut.**
+- Mon 11-23 redeploy candidates (Friday screen refresh supersedes): APA, ADP (PT raises, no breaks). Avoid VEEV (PT cut, earnings 12-03), AMD (China-ties report).
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date (resolved 11-04); SKIP stands - illiquid.
+- Biotech 2-strike block ends today (2026-11-20); no biotech names on current satellite list -> none tradeable. Capricor/Savara PDUFA 2026-11-22 (Sun) = watch only, not on tradeable list; no positions.
+
+### Risk factors
+- V/TYL ~1.4% above hard cut (unprotected band between runs); opex Friday; futures/VIX unknown; 5/5 core red; Income 23.7% vs 15% cap; SPHY -4.4%; 17.9% idle cash; Gemini outage (wk 4).
+
+### Decision: HOLD
+- No core budget, no tradeable satellite names, no Approved Trades list. Only pending action: V/TYL hard-cut checks at 9:30. No email (no held position below hard cut pre-market; no satellite catalyst resolved; no major geopolitical event found).
