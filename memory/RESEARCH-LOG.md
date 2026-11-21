@@ -9916,3 +9916,44 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 - Hard-cut check (19:02 UTC marks): CRL -5.49% ($315.81; cut $310.77, ~1.6% above; -3.7% on day, no CRL news = tape/sector), V -5.30% ($406.95), TYL -4.33%, ALLE -3.81%, MTD -2.89%. None at -7%. All 7 GTC trails live, none moved. V cyberattack headline (third-party vendor) = not a thesis break.
 - Friday pattern: research-outage entries (5/5 core, wk of 11-16) all red, ACN cut -9.8%; 10% trails sit below the -7% cut, so the -7..-10% band is unprotected between runs and overnight - raise in weekly review.
 - Risky positions closed today: none.
+
+## 2026-11-21 — Pre-market Research (Saturday, market closed)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Balance_asof 11-20. No session today; next Mon 2026-11-23 (Thanksgiving week: Thu 11-26 closed, Fri 11-27 early close 1pm ET).
+
+### Account
+- Equity: $87,027 (Fri -$964 / -1.1% vs $87,991 Thu) | Cash: $15,772 (18.1%; floor 5% = $4,351) - idle; core budget resets Mon 11-23.
+- Core: $50,499 (58.0%, 5/8) | Satellite: $0 (0%, 0/5) | Income: $20,756 (23.9% vs 15% cap, still above): SGOV $1,710 (+0.12%), SPHY $19,046 (-4.75%).
+- Core Fri close vs entry: **V -6.48% ($401.87; -7% cut $399.64, ~0.56% above)**, CRL -5.94% ($314.32; cut $310.77, ~1.1% above), TYL -5.66% ($404.44; cut $398.69, ~1.4% above), ALLE -4.87% ($183.61; cut $179.49, ~2.2% above), MTD -3.80% ($1,666.88). None breached.
+- Live GTC trailing stops: ALLE 10% ($173.43), CRL 10% ($309.21), MTD 10% ($1,574.15), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; price $22.25, ~3.1% above), SGOV 16 sh 5% ($95.703, expires 2026-12-24). None breached, none moved down. (SGOV 0.99 sh unstopped - DRIP residue.)
+
+### Data-quality notes
+- **Gemini FAILED (week 4)**: default gemini-2.5-flash HTTP 404 (retired, "use gemini-3.8-flash"). No Gemini output used. No retry (429 quota on 3.8-flash per 11-20). Owner: update scripts/gemini_research.sh default model + check quota/billing.
+- **Benzinga feed + Alpaca bars + WebSearch fallback (labelled).** SPY figures = Alpaca bars (verified). VIX level = WebSearch only; sources disagree (35.89 vs ~37) - treat ~36, unverified. VIXY Fri close $25.95 (+13.4%, Alpaca).
+
+### Market Context (Alpaca bars / WebSearch fallback)
+- **SPY Fri 11-20: $715.87 -> $689.81 (-3.64%), volume 151.5M (~2x week avg).** Week: $754.37 (11-13) -> $689.81 = **-8.6%**. S&P/Dow reported in correction territory (WebSearch). Nasdaq ~-5.3% Fri (WebSearch).
+- Driver (WebSearch + Benzinga): NVDA ~-14% Fri - SEC probe reported (WebSearch, single recap), plus Congressional probe re China sales + California AG investigation (Benzinga). AI/semis unwind spreading to broad tape.
+- VIX ~36 (WebSearch; first close >30 since March per one source). Futures: n/a (weekend).
+- Next week: Thanksgiving holiday-shortened; econ calendar data gap (not fabricated).
+
+### Overnight news - held / watchlist (Benzinga, 30-40h)
+- Held core: V - third-party vendor cyberattack (V/JPM/MA, limited data; carried) + Cameroon Fintech Week sponsor (neutral). CRL - Baird PT $364->$365. TYL - MyArkansas app (neutral). ALLE, MTD: no items. No thesis breaks; drawdown = tape.
+- Income: SGOV/SPHY no news.
+- Watchlist: HAS - raised FY26 guide, doubled buyback target (positive). LH - Baird PT $396->$411 (positive). REGN - Argus PT $1,050 (positive). BBY - BofA PT $80->$83, margin concerns (mixed). PG - TD Cowen/Citi PT adj (direction unverified). DIS - insider sale; declined 2030/34 World Cup rights (neutral/minor). DLTR - Gates Foundation stake up (neutral+). AAPL - autonomous AI agent dev (neutral). DIS "Distil plc" + ROP "Roche" hits = unrelated.
+- VLTO, SWK, MAS, BRK.B, BDX, TMO, ADP, LLY, CTAS, FSTR: no items.
+
+### Core trade ideas
+- None for Monday open pending tape check. Budget resets Mon (0/8), 5/8 slots used, 18% idle cash - but VIX ~36 / SPY -8.6% wk = no new entries into a falling tape without confirmed momentum on fresh bars (rank was computed through 11-19, pre-Fri crash -> stale).
+- **Mon 9:30 priority: hard-cut checks V (0.56% above), CRL (1.1%), TYL (1.4%), ALLE (2.2%). Any gap-down Monday likely triggers V/CRL/TYL -7% cuts; 10% trails sit below cuts and won't fire first.**
+- If tape stabilizes: HAS, LH, REGN (fresh positive news) top re-check names; re-rank on post-crash bars first.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date; aging price-jump catalyst (11-04), "drop next week if no follow-through". SKIP - illiquid + risk-off tape.
+- Biotech: block ended 11-20, no biotech names on current list. CAPR/SVRA PDUFA 2026-11-22 (Sun) = watch only, not tradeable, no positions.
+
+### Risk factors
+- Broad risk-off: SPY -8.6% wk, correction, VIX ~36, NVDA probes. 4/5 core within 2.2% of -7% cut (V 0.56%); Monday gap risk past cut is unprotected (trails 10%). Income 23.9% vs 15% cap; SPHY 3.1% above its 5% trail (HY credit risk in selloff). Gemini outage wk 4. Thanksgiving-week thin liquidity.
+
+### Decision: HOLD
+- Weekend - no session. No breach (no held position below hard cut). Not an email trigger per STEP 5 (no satellite catalyst, no geopolitical event); owner push-notified re correction + V near cut.
