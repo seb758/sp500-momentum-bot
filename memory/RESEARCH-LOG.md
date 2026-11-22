@@ -9957,3 +9957,42 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 
 ### Decision: HOLD
 - Weekend - no session. No breach (no held position below hard cut). Not an email trigger per STEP 5 (no satellite catalyst, no geopolitical event); owner push-notified re correction + V near cut.
+
+## 2026-11-22 — Pre-market Research (Sunday, market closed)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Balance_asof 11-20 - unchanged vs Sat entry. Next session Mon 2026-11-23 (Thanksgiving week: Thu 11-26 closed, Fri 11-27 early close - verify 2026 schedule).
+
+### Account
+- Equity: $87,027 | Cash: $15,772 (18.1%; floor 5% = $4,351) - idle; core budget resets Mon 11-23 (0/8).
+- Core: $50,499 (58.0%, 5/8) | Satellite: $0 (0%, 0/5) | Income: $20,756 (23.9% vs 15% cap, still above): SGOV $1,710 (+0.12%), SPHY $19,046 (-4.75%).
+- Core Fri close vs entry (unchanged): **V -6.48% ($401.87; cut $399.64, ~0.56% above)**, CRL -5.94% ($314.32; cut $310.77, ~1.1%), TYL -5.66% ($404.44; cut $398.69, ~1.4%), ALLE -4.87% ($183.61; cut $179.49, ~2.2%), MTD -3.80%. None breached.
+- Live GTC trailing stops (all 7 "new", none moved): ALLE 10% ($173.43), CRL 10% ($309.21), MTD 10% ($1,574.15), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565), SGOV 16 sh 5% ($95.703). SGOV 0.99 sh unstopped (DRIP residue).
+
+### Data-quality notes
+- **Gemini FAILED (week 4)**: gemini-2.5-flash HTTP 404 (exit 4, "use gemini-3.8-flash"). No Gemini output used. Owner: update scripts/gemini_research.sh default model + check quota/billing.
+- **Fallback = Benzinga feed (36h) + WebSearch (labelled).** Futures: n/a (Sunday; Globex opens 6pm ET, after this run). VIX: no new reading (Fri ~36 per Sat entry, unverified). Week-ahead 2026 econ calendar: WebSearch returned only prior-year previews - data gap, not fabricated.
+
+### Market Context (fallback)
+- Carried from Sat (Alpaca bars): SPY Fri -3.64% to $689.81, week -8.6%; correction territory; NVDA probes driving AI/semis unwind.
+- Weekend (Benzinga): NVDA - stricter export compliance measures (follow-on to China-sales probes). No new macro headlines found.
+- Holiday week: thin liquidity; historical Thanksgiving-week seasonality mildly positive (WebSearch, Bespoke stat) - not a signal.
+
+### Overnight news - held / watchlist (Benzinga, 36h)
+- Held: V - Cameroon Fintech Week sponsor (neutral). CRL, TYL, ALLE, MTD, SGOV, SPHY: no items. No thesis breaks.
+- Watchlist: DIS - insider sale (carried, minor); "Distil plc" hit unrelated. BBY, VLTO, ROP, HAS, BDX, TMO, REGN, LH, SWK, MAS, DLTR, ADP, BRK.B, LLY, PG, CTAS, AAPL, FSTR: no items.
+- Binary watch (not tradeable, not held): **CAPR - FDA Complete Response Letter for deramiocel BLA (Benzinga 11-21 14:02 UTC)** = negative resolution. SVRA molgramostim (PDUFA 11-22): no decision found yet (WebSearch). Neither on the satellite list; no impact.
+
+### Core trade ideas
+- None pre-committed. Budget 0/8 Mon, 3 open slots, 18% idle cash - but no entries into a falling tape without fresh confirmation: rank computed on 11-19 bars (pre-crash) -> re-check 50-day MA on Mon bars before any buy (research-outage rule a-c).
+- **Mon 9:30 priority: hard-cut checks V (0.56% above), CRL (1.1%), TYL (1.4%), ALLE (2.2%).** Gap-down Monday likely triggers cuts; 10% trails sit below the -7% cuts.
+- Re-check order if tape stabilizes: HAS, LH, REGN (positive news Fri), then VLTO/BDX/TMO.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date; aging 11-04 price-jump catalyst; illiquid. SKIP.
+- Biotech: no names on list (CAPR/SVRA watch-only; CAPR CRL confirms exclusion was right).
+
+### Risk factors
+- Broad risk-off (SPY -8.6% wk, VIX ~36), 4/5 core within 2.2% of -7% cut; Monday gap risk past cut unprotected. Income 23.9% vs 15% cap; SPHY ~3.1% above its 5% trail (HY credit in selloff). Gemini outage wk 4. Holiday-thin liquidity.
+
+### Decision: HOLD
+- Weekend - no session. No held position below hard cut; no held/listed satellite catalyst resolved (CAPR CRL is watch-only); no major geopolitical event found. No email/notification (Sat already flagged V near cut; nothing new).
