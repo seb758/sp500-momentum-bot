@@ -10043,3 +10043,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Run
 - Hard-cut watch: TYL -6.16% ($402.30 vs cut $398.69, ~0.9% away; trail $388.58 sits below cut) - midday must check first. V -5.24%, ALLE -4.02%.
 - Pattern for Friday: prompt gate (6 pos / 6 trades / 20%) vs rulebook (8 / 8 / 25%) mismatch caps deployment at ~70% core; Income 23.6% > 15% cap with SPHY not swept - both block the 85% core target. Owner to reconcile routine prompt with TRADING-STRATEGY.md.
 
+
+### 11 AM Session Note
+- HOLD. No "### Approved Trades (verified)" list today -> no buys (HAS 9:30 fill was the only entry; core 6/8, prompt gate <=6 positions blocks more anyway). Equity $88,922 (+2.2% d/d), cash $5,027 (5.65%, floor $4,446).
+- No hard cuts: worst TYL -5.60% ($404.68 vs cut $398.69, ~1.5% away; flat on day), V -4.34%, ALLE -2.71%. CRL +7.8% on day (now +1.42%; broad rebound, only minor index-score PR - no Gemini call needed). MTD +0.02%, HAS +1.36%.
+- No tightens (nothing >= +15%). All 8 GTC trails live, none moved down (HAS trail ratcheted to $103.46). No satellite positions/catalysts.
+- Pattern: relief rally lifts all core names but TYL lags (flat vs SPX gap-up) - relative weakness + trail below cut; 3pm check first.
