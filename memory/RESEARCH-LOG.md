@@ -9996,3 +9996,44 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Bal
 
 ### Decision: HOLD
 - Weekend - no session. No held position below hard cut; no held/listed satellite catalyst resolved (CAPR CRL is watch-only); no major geopolitical event found. No email/notification (Sat already flagged V near cut; nothing new).
+
+## 2026-11-23 — Pre-market Research (Monday, Thanksgiving week)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Run ~06:35 ET. Holiday week: Thu 11-26 closed, Fri 11-27 early close.
+
+### Account
+- Equity: $87,438 (marks incl. ext-hours; last_equity $87,027) | Cash: $15,772 (18.0%; floor 5% = $4,372) - idle; **core weekly budget reset today (0/8)**, 5/8 slots used.
+- Core: $50,911 (58.2%, 5/8) | Satellite: $0 (0%, 0/5) | Income: $20,756 (23.7% vs 15% cap, still above): SGOV $1,710 (+0.12%), SPHY $19,046 (-4.75%).
+- Core marks vs entry (position current_price; V/CRL/TYL show ext-hours prints, ALLE/MTD = Fri close): V $408.00 (-5.05%; cut $399.64, ~2.1% above), CRL $318.00 (-4.84%; cut $310.77, ~2.3%), TYL $410.05 (-4.35%; cut $398.69, ~2.8%), ALLE $183.61 (-4.87%; cut $179.49, ~2.2%), MTD $1,666.88 (-3.80%). None breached.
+- Live GTC trailing stops (all 7 "new", none moved): ALLE 10% ($173.43), CRL 10% ($309.21), MTD 10% ($1,574.15), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; ~3.1% below price), SGOV 16 sh 5% ($95.703, exp 12-24). SGOV 0.99 sh unstopped (DRIP residue).
+
+### Data-quality notes
+- **Gemini FAILED (week 5)**: gemini-2.5-flash HTTP 404 (exit 4, "use gemini-3.8-flash"). No Gemini output used. Owner: update scripts/gemini_research.sh default model + check quota/billing.
+- **Fallback = Benzinga feed (60h) + WebSearch (labelled).** Alpaca IEX quotes stale (Fri 21:00 UTC, wide spreads) - not used.
+- Futures/VIX from WebSearch only (FXStreet, Beinsure/Reuters); sources differ slightly. Econ calendar for the week not checked - data gap, not fabricated.
+
+### Market Context (WebSearch fallback)
+- **ES futures +2.2% to +2.5%, NQ +3.1% to +3.3%** (rebound after brutal week; Reuters via Beinsure, FXStreet).
+- VIX: closed last week "just south of 40" (FXStreet; Sat entry had ~36 - unverified either way); cash VIX reportedly pulling back toward ~30 Mon AM; front-month VIX future ~25. Treat ~30, unverified.
+- Last week (Alpaca bars, verified): SPY -8.6% to $689.81; correction territory.
+- NVDA: Jensen Huang resigned as CEO (effective 11-12; 8-K; Colette Kress interim) - context for AI/semis unwind; Benzinga 11-23: Trump admin pushing for his reinstatement -> NVDA bouncing pre-market. Plus Congressional/CA AG probes, H200 China halt (carried). No semis held/listed.
+
+### Overnight news - held / watchlist (Benzinga, 60h)
+- Held: V - Cameroon Fintech Week sponsor (neutral). CRL, TYL, ALLE, MTD, SGOV, SPHY: no items. No thesis breaks.
+- Watchlist: PG - Morgan Stanley PT $185->$192, Neutral (mild +); autonomous manufacturing (neutral). DIS - Phillip Securities downgrade to Accumulate, PT $130 (mild -); insider sale (carried). LLY - acquires LoQus23 Therapeutics; Digbi joins Employer Connect (neutral). ROP "Roche" + DIS "Distil plc" hits unrelated.
+- BBY, VLTO, HAS, BDX, TMO, REGN, LH, SWK, MAS, DLTR, ADP, BRK.B, CTAS, AAPL, FSTR: no items.
+
+### Core trade ideas
+- None pre-committed. Budget 0/8, 3 open slots, 18% idle cash. Gap-up rally after a -8.6% week = do not chase the open; momentum rank is stale (11-19 bars, pre-crash). 9:30/11am may consider entries only after re-checking 50-day MA + rank on fresh Mon bars (research-outage rules a-c) and tape holding gains.
+- Re-check order: HAS, LH, REGN (positive news Fri), then VLTO/BDX/TMO (TMO was only +1.7% above 50-day on 11-19 - likely failed post-crash). Skip DIS (downgrade), BBY/DLTR (earnings gap risk late Nov/early Dec).
+- 9:30 priority still: hard-cut checks V/ALLE/CRL (~2.1-2.3% above cuts); 10% trails sit below -7% cuts.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date; aging 11-04 price-jump catalyst, illiquid. SKIP (drop at Fri refresh if no follow-through).
+- Biotech: no names on current list. CAPR (CRL 11-21) / SVRA (watch-only) not tradeable. No satellite catalysts within 5 trading days.
+
+### Risk factors
+- Relief-rally reversal risk (VIX still elevated ~30, correction); holiday-thin liquidity; 4/5 core within ~2.3% of -7% cut; Income 23.7% vs 15% cap; SPHY ~3.1% above 5% trail; idle cash 18%; Gemini outage wk 5.
+
+### Decision: HOLD
+- Default HOLD pre-market; entries only if fresh-bar momentum confirms at/after 9:30. No email (no held position below hard cut; no satellite catalyst resolved; no major geopolitical event).
