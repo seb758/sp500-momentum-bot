@@ -10037,3 +10037,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Run
 
 ### Decision: HOLD
 - Default HOLD pre-market; entries only if fresh-bar momentum confirms at/after 9:30. No email (no held position below hard cut; no satellite catalyst resolved; no major geopolitical event).
+
+### 9:30 AM Session Note
+- **BUY HAS (core) 95 @ $113.10** (limit $115, below artifact midpoint), 10% trail GTC $101.67 attached on fill. Fresh 11-20 bars: HAS/LH/REGN/VLTO/BDX all 8-12% above 50-day; TMO -1.3% below 50-day (fails), CRL -0.5% below 50-day (held; watch). Only 1 buy: prompt gate core positions <=6 after fill (rulebook allows 8) + cash above floor only ~$11.4k (SGOV too small to fund more; SPHY not a funding source).
+- Hard-cut watch: TYL -6.16% ($402.30 vs cut $398.69, ~0.9% away; trail $388.58 sits below cut) - midday must check first. V -5.24%, ALLE -4.02%.
+- Pattern for Friday: prompt gate (6 pos / 6 trades / 20%) vs rulebook (8 / 8 / 25%) mismatch caps deployment at ~70% core; Income 23.6% > 15% cap with SPHY not swept - both block the 85% core target. Owner to reconcile routine prompt with TRADING-STRATEGY.md.
+
