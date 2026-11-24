@@ -10100,3 +10100,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Hol
 - HOLD, no trades. Core 6/8 -> prompt gate (core <=6 positions after fill) blocks any new core buy; cash $5,027 only ~$593 above 5% floor ($4,434 on $88,677 equity), SGOV $1.7k too small to fund. Satellite: FSTR skipped (aging catalyst, illiquid); no biotech names listed.
 - Hard-cut check (9:32 ET): TYL $407.29 (-4.99%, cut $398.69, ~2.1% away), V $408.95 (-4.83%, cut $399.64, ~2.3% away) - neither breached. All 8 GTC trailing stops live, none moved down. Midday: TYL/V cut check first.
 - Friday carry: prompt-vs-rulebook gate mismatch (6/6/20% vs 8/8/25%) + Income 23.6% > 15% cap (SPHY unswept) keep core at ~71% vs 85% target.
+
+### 11 AM Session Note
+- HOLD, no trades. No "### Approved Trades (verified)" list today -> no buys; core 6/8 (prompt gate <=6) + cash $5,027 (~$582 above 5% floor on $88,905 equity) block entries anyway. Satellite 0/5, nothing approved.
+- Cut check (~11:12 ET): no breach. TYL $418.05 (-2.48%, recovered from -5%), V $413.99 (-3.66%), MTD -1.37%, ALLE -1.87%, HAS -0.91%, CRL +1.01%. No winner >= +15% -> no tightens. All 8 GTC trailing stops live, none moved down.
+- Thesis: no breaks (V/TYL momentum soft but intact). No sharp unexplained moves -> no Gemini call. 3pm: V cut check first ($399.64).
