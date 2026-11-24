@@ -10095,3 +10095,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Hol
 
 ### Decision: HOLD
 - Default HOLD. No email (no held position below hard cut; no satellite catalyst resolved; no major geopolitical event).
+
+### 9:30 AM Session Note
+- HOLD, no trades. Core 6/8 -> prompt gate (core <=6 positions after fill) blocks any new core buy; cash $5,027 only ~$593 above 5% floor ($4,434 on $88,677 equity), SGOV $1.7k too small to fund. Satellite: FSTR skipped (aging catalyst, illiquid); no biotech names listed.
+- Hard-cut check (9:32 ET): TYL $407.29 (-4.99%, cut $398.69, ~2.1% away), V $408.95 (-4.83%, cut $399.64, ~2.3% away) - neither breached. All 8 GTC trailing stops live, none moved down. Midday: TYL/V cut check first.
+- Friday carry: prompt-vs-rulebook gate mismatch (6/6/20% vs 8/8/25%) + Income 23.6% > 15% cap (SPHY unswept) keep core at ~71% vs 85% target.
