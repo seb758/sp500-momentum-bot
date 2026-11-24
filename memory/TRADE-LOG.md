@@ -4018,3 +4018,20 @@ Core now 6/8 positions, 1 trade this week (prompt gate <=6 positions -> no furth
 | SPHY | income | 856 | $23.36 | $22.315 | +0.29% | -$894.52 (-4.47%) | 5% trailing ($21.565) |
 
 **Notes:** No 3pm buys - no "### Approved Trades (verified)" list today; HAS (9:30, research-outage rule, stop attached on fill) was today's only entry. Core 6/8 positions, 1/6 trades this week; satellite 0/5, 0/4. Risk sweep: no hard-cut breaches - worst TYL -4.91% (cut $398.69, ~2.2% away; lagging the relief rally, no news), V -4.46% (Klarna/ACI partnership news, positive); no tightens; all positions carry live GTC trailing stops, none moved down. No satellite catalysts pending. Snapshot ~2pm ET. Flags: Cash 5.65% (near floor), Core 71.0% (below 85%), Income 23.39% vs 15% cap; SPHY -4.47% (stop ~3.4% away); Gemini outage (wk 5, model 404). Holiday week: Thu closed, Fri early close. Trades today: BUY HAS (core). Risky positions closed: none.
+
+## Nov 24 — 3pm Snapshot (Day 102, Tuesday)
+**Portfolio:** $89,092.52 | **Cash:** $5,027.42 (5.64%) | **Day P&L:** +$131.83 (+0.15%, vs Nov 23 3pm) | **Phase P&L:** -$10,907.48 (-10.91%)
+**Core exposure:** $63,286.58 (71.03% of equity) | **Satellite exposure:** $0.00 (0.00% of equity) | **Income exposure:** $20,777.56 (23.32% of equity)
+
+| Ticker | Sleeve | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|---|
+| HAS | core | 95 | $113.10 | $112.62 | -0.80% | -$45.34 (-0.42%) | 10% trailing ($103.49) |
+| CRL | core | 32 | $334.16 | $340.8375 | +0.76% | +$213.68 (+2.00%) | 10% trailing ($311.21) |
+| MTD | core | 6 | $1,732.79 | $1,715.795 | -0.56% | -$101.97 (-0.98%) | 10% trailing ($1,584.00) |
+| ALLE | core | 56 | $193.00 | $190.2207 | +0.51% | -$155.64 (-1.44%) | 10% trailing ($173.43) |
+| TYL | core | 25 | $428.70 | $414.36 | +1.88% | -$358.50 (-3.35%) | 10% trailing ($388.58) |
+| V | core | 25 | $429.72 | $414.99 | +1.37% | -$368.25 (-3.43%) | 10% trailing ($387.60) |
+| SGOV | income | 16.989473856 | $100.52 | $100.66 | +0.02% | +$2.38 (+0.14%) | 5% trailing ($95.703, 16 sh covered) |
+| SPHY | income | 856 | $23.36 | $22.275 | -0.11% | -$928.76 (-4.64%) | 5% trailing ($21.565) |
+
+**Notes:** No 3pm buys - no "### Approved Trades (verified)" list today; HELD all day. Core 6/8 positions, 1/6 trades this week; satellite 0/5, 0/4. Risk sweep: no hard-cut breaches - V -3.43% and TYL -3.35% both ~3.7-3.8% above their -7% cuts after bouncing on the day; no tightens (no winner >= +15%); all positions carry live GTC trailing stops (MTD/CRL hwm ratcheted up today), none moved down. No satellite catalysts pending. Snapshot ~2pm ET. Flags: Cash 5.64% (near floor), Core 71.0% (below 85%), Income 23.32% vs 15% cap; SPHY -4.64% (stop ~3.2% away); Gemini outage (wk 5, model 404). Holiday week: Thu closed, Fri early close. Trades today: none. Risky positions closed: none.
