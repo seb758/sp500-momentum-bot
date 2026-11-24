@@ -10056,3 +10056,42 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Run
 - Pattern for Friday: relief rally lifted everything except TYL (relative laggard 3 sessions) - candidate for thesis review if rank slips at Fri refresh.
 - Risky positions closed today: none.
 - Email FAILED: smtp.gmail.com:465 unreachable (curl exit 7, network block) - report sent via push notification instead.
+
+## 2026-11-24 — Pre-market Research (Tuesday, Thanksgiving week)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Holiday week: Thu 11-26 closed, Fri 11-27 early close.
+
+### Account
+- Equity: $89,024 (last_equity $88,790) | Cash: $5,027 (5.65%; floor 5% = $4,451) - ~$576 above floor.
+- Core: $63,197 (71.0%, 6/8; 1 trade this week) | Satellite: $0 (0%, 0/5) | Income: $20,799 (23.4% vs 15% cap, still above): SGOV $1,710 (+0.13%), SPHY $19,089 (-4.54%).
+- Core marks vs entry: HAS $114.33 (+1.09%), CRL $338.26 (+1.23%), MTD $1,737.00 (+0.24%), ALLE $189.26 (-1.94%), V $412.50 (-4.01%; cut $399.64, ~3.1% above), **TYL $407.15 (-5.03%; cut $398.69, ~2.1% above)**. None breached.
+- Live GTC trailing stops (all 8 "new", none moved down): HAS 10% ($103.49, hwm $114.99), ALLE 10% ($173.43), CRL 10% ($309.21), MTD 10% ($1,574.15), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; ~3.3% below price), SGOV 16 sh 5% ($95.703, exp 12-24). SGOV 0.99 sh unstopped (DRIP residue).
+
+### Data-quality notes
+- **Gemini FAILED (week 5)**: gemini-2.5-flash HTTP 404 (exit 4, "use gemini-3.8-flash"). No Gemini output used. Owner: update scripts/gemini_research.sh default model + check quota/billing.
+- **Fallback = Benzinga feed (20h) + WebSearch (labelled).** Futures sources conflict (see below). 2026 econ calendar for today not found - data gap, not fabricated. BBY FQ3 date conflicts (11-23 BMO vs 11-24) - unverified.
+
+### Market Context (WebSearch fallback)
+- Mon 11-23 close: S&P 500 +4.7% to 7,237 (back above 7,000); VIX -9.3% to 26.62 (Saxo/Yahoo). Driver: NVDA reinstating Jensen Huang as CEO.
+- Tue pre-market: **conflicting** - Yahoo live 6:27 ET ES -1% / NQ -2%, VIX ~29; Seeking Alpha 4:11 ET ES +0.1%, later "into the red". Read: flat-to-lower giveback after Monday surge; VIX high-20s. Unverified.
+- Week: PCE inflation Wed (per Saxo); Fed decision 12-09. China warning over Huang's return (SA headline). Options implied ~1.26% SPX move today.
+
+### Overnight news - held / watchlist (Benzinga, 20h)
+- Held: V - "Visa CLI" AI agent wallet launch (neutral+); Klarna partnership expansion (carried, +). ALLE, CRL, HAS, MTD, TYL, SGOV, SPHY: no items. No thesis breaks.
+- Watchlist: **ADP - raised FY27 revenue/EPS guide + dividend hike (positive)**. LLY - Innovation Day 12-07; SABCS breast-cancer data Dec (neutral+). REGN - I-SPY 2.2 arm enrollment (neutral). SWK - CFO at GS conf 12-03 (neutral). DIS - Super Bowl LXI IMAX deal (neutral). AAPL - PRODUCT(RED) return; withdrew from World Cup bidding (neutral). PG - Mielle launch (neutral). BBY "Balfour Beatty" + ROP "Roche" hits = unrelated.
+- VLTO, BDX, TMO, LH, MAS, DLTR, BRK.B, CTAS, FSTR: no items.
+
+### Core trade ideas
+- None pre-committed. 6/8 slots, but cash only ~$576 above 5% floor and SGOV ($1.7k) too small to fund a full-size buy; SPHY not a funding source -> effectively no new core entry possible without income-cap rebalance (owner/Fri review item).
+- If capacity existed: ADP (guide raise) joins HAS-style re-check list with LH/REGN/VLTO/BDX - verify 50-day + rank on fresh bars first.
+- 9:30 priority: TYL hard-cut check (~2.1% above cut, 3-session laggard; trail $388.58 below cut). V ~3.1% above.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date; aging 11-04 price-jump catalyst; illiquid. SKIP (drop at Fri refresh if no follow-through).
+- Biotech: no names on current list. No satellite catalysts within 5 trading days.
+
+### Risk factors
+- Giveback risk after +4.7% day (VIX still ~27-29); holiday-thin liquidity; PCE Wed; TYL near cut; Income 23.4% vs 15% cap; SPHY ~3.3% above 5% trail; cash at floor; Gemini outage wk 5.
+
+### Decision: HOLD
+- Default HOLD. No email (no held position below hard cut; no satellite catalyst resolved; no major geopolitical event).
