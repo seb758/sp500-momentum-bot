@@ -10150,3 +10150,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Hol
 
 ### Decision: HOLD
 - Default HOLD. No email (no held position below hard cut; no satellite catalyst resolved; no major geopolitical event found).
+
+### 9:30 AM Session Note
+- HOLD, no trades. Research decision HOLD, no approved trades. Core 6/8 -> prompt gate (core <=6 positions after fill) blocks new core buys; cash $5,027 only ~$616 above 5% floor ($4,411 on $88,227 equity), SGOV $1.7k too small to fund. Satellite 0/5: FSTR skipped (aging catalyst, illiquid); no biotech names listed.
+- Hard-cut check (~9:32 ET): no breach. MTD -3.27%, V -3.20% ($415.95, cut $399.64, ~3.9% away), TYL -2.96% ($416.00, cut $398.69, ~4.2% away), HAS -2.28%, ALLE -1.93%, CRL -1.79%. Soft open (equity -0.66% vs last close). All 8 GTC trailing stops live, none moved down.
+- Pre-holiday (Thu closed, Fri half day): 4-day gap risk on held names; no action warranted. Structural blockers for Fri unchanged (prompt 6/6 gate, Income 23.4% > 15% cap, Gemini 404 wk 5).
