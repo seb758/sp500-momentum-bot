@@ -10155,3 +10155,9 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Hol
 - HOLD, no trades. Research decision HOLD, no approved trades. Core 6/8 -> prompt gate (core <=6 positions after fill) blocks new core buys; cash $5,027 only ~$616 above 5% floor ($4,411 on $88,227 equity), SGOV $1.7k too small to fund. Satellite 0/5: FSTR skipped (aging catalyst, illiquid); no biotech names listed.
 - Hard-cut check (~9:32 ET): no breach. MTD -3.27%, V -3.20% ($415.95, cut $399.64, ~3.9% away), TYL -2.96% ($416.00, cut $398.69, ~4.2% away), HAS -2.28%, ALLE -1.93%, CRL -1.79%. Soft open (equity -0.66% vs last close). All 8 GTC trailing stops live, none moved down.
 - Pre-holiday (Thu closed, Fri half day): 4-day gap risk on held names; no action warranted. Structural blockers for Fri unchanged (prompt 6/6 gate, Income 23.4% > 15% cap, Gemini 404 wk 5).
+
+### 11 AM Session Note
+- HOLD, no trades. No "### Approved Trades (verified)" list today -> no buys (core 6/8, prompt <=6 gate; cash $5,027 ~$638 above floor). Satellite 0/5, nothing approved.
+- Hard-cut check (~11:12 ET): no breach. Worst MTD -5.29% ($1,641.11; cut $1,611.49, ~1.8% away), HAS -3.75%, TYL -3.19%, V -3.12%, CRL -2.89%, ALLE -1.36%. No tightens (no winner >= +15%). All 8 GTC trailing stops live, none moved down. SPHY $22.236 (~3.0% above 5% trail).
+- Broad selloff, not idiosyncratic: SPY ~$697.9 (-2.9% vs 11-24 close $718.78); equity $87,790 (-1.15%). MTD -3.7%, CRL -3.5%, HAS -3.0% intraday; Benzinga 20h only item = HAS small insider sale ($319k) - no thesis breaks. Gemini skipped (404 outage wk 5; moves market-driven).
+- Watch for 3pm: MTD nearest to -7% cut ahead of 4-day holiday gap (Thu closed, Fri half day).
