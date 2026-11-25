@@ -10111,3 +10111,42 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Hol
 - Risk sweep (~2:02pm ET): no hard-cut breaches - V $414.99 (-3.43%, ~3.7% above cut $399.64), TYL $414.36 (-3.35%, ~3.8% above cut $398.69), both bounced +1.4%/+1.9% on day. No winner >= +15% -> no tightens. All 8 GTC trailing stops live (MTD/CRL hwm ratcheted up today), none moved down. No satellite catalysts.
 - Pattern for Fri: 3rd straight day V/TYL recover from near-cut intraday lows - cut discipline held without forced exits. Structural blockers unchanged (prompt 6/6 gate, Income 23.3% > 15% cap, Gemini 404 wk 5).
 - Risky positions closed today: none.
+
+## 2026-11-25 — Pre-market Research (Wednesday, Thanksgiving week)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Holiday week: Thu 11-26 closed, Fri 11-27 early close.
+
+### Account
+- Equity: $88,818 (last_equity $88,813) | Cash: $5,027 (5.66%; floor 5% = $4,441) - ~$586 above floor.
+- Core: $63,017 (70.95%, 6/8; 1 trade this week) | Satellite: $0 (0%, 0/5) | Income: $20,774 (23.39% vs 15% cap, still above): SGOV $1,710 (+0.15%), SPHY $19,063 (-4.67%).
+- Core marks vs entry: CRL $336.13 (+0.59%), HAS $112.59 (-0.45%), ALLE $189.96 (-1.58%), MTD $1,704.00 (-1.66%), V $417.11 (-2.93%; cut $399.64, ~4.2% above), TYL $411.01 (-4.13%; cut $398.69, ~3.0% above). None breached.
+- Live GTC trailing stops (all 8 "new", none moved down): HAS 10% ($103.49), ALLE 10% ($173.43), CRL 10% ($311.21), MTD 10% ($1,584.00), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; ~3.2% below price), SGOV 16 sh 5% ($95.703, exp 12-24). SGOV 0.99 sh unstopped (DRIP residue).
+
+### Data-quality notes
+- **Gemini FAILED (week 5)**: gemini-2.5-flash HTTP 404 (exit 4, "use gemini-3.8-flash"). No Gemini output used. Owner: update scripts/gemini_research.sh default model (GEMINI_RESEARCH_MODEL).
+- **Fallback = Benzinga feed (20h) + WebSearch (labelled) + Alpaca SPY bars.** WebSearch returned no 11-24/11-25 coverage -> **ES/NQ futures and VIX for today = DATA GAP, not fabricated.** Econ calendar for today not verified (PCE flagged for Wed in Tue's entry, unconfirmed).
+
+### Market Context
+- SPY (Alpaca bars, verified): 11-23 $722.29 (+4.7%), 11-24 $718.78 (-0.49%) - modest giveback, holding most of Monday's rebound; still ~4% below 11-16 levels.
+- Futures/VIX: unknown (see data gap). Last known VIX 26.62 (Mon close, Tue entry).
+- Pre-holiday session; Thu closed, Fri half day -> thin liquidity.
+
+### Overnight news - held / watchlist (Benzinga, 20h)
+- Held: TYL - insider sold 20,000 sh (~$8.27M, SEC filing) (mild -, not a thesis break). V - iwoca/Enfuce UK SME card; Cameroon office (neutral+). HAS, CRL, MTD, ALLE, SGOV, SPHY: no items. No thesis breaks.
+- Watchlist: PG - BNP PT $189->$197 (mild +). DIS - state AGs object to Character.AI asset sale to Disney (neutral/mild -). AAPL - Korea-US AI roundtable; (RED) event (neutral). LLY - Canada diabetes survey (neutral).
+- BBY, VLTO, BDX, TMO, REGN, LH, SWK, MAS, DLTR, ADP, CTAS, ROP, FSTR: no items.
+
+### Core trade ideas
+- None pre-committed. 6/8 slots, but cash ~$586 above floor, SGOV $1.7k too small, SPHY not a funding source -> no full-size core entry possible without income-cap rebalance (owner/Fri review item, carried).
+- If capacity existed: ADP (Tue guide raise), PG (PT raise), LH/REGN/VLTO/BDX - verify 50-day + rank on fresh bars first.
+- 9:30 priority: TYL cut check (~3.0% above; insider sale headline), V ~4.2% above.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date; aging 11-04 price-jump catalyst; illiquid. SKIP (drop at Fri refresh if no follow-through).
+- Biotech: no names on current list. No satellite catalysts within 5 trading days.
+
+### Risk factors
+- Futures/VIX unknown (data gap); holiday-thin liquidity + 4-day weekend gap risk; TYL insider selling + 3% from cut; Income 23.4% vs 15% cap; SPHY ~3.2% above 5% trail; cash at floor; Gemini outage wk 5.
+
+### Decision: HOLD
+- Default HOLD. No email (no held position below hard cut; no satellite catalyst resolved; no major geopolitical event found).
