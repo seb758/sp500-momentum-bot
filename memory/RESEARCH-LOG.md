@@ -10210,3 +10210,7 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). US 
 - Market CLOSED (Thanksgiving). No orders placed. Account balance_asof 11-25, equity $88,834.19, cash $5,027.42 (5.66%, above 5% floor); 8 positions unchanged from 11-25 close.
 - Buy-side: HOLD. Pre-market listed no core/satellite ideas. Same structural blockers as before: cash at the floor, Income 23.4% vs 15% cap.
 - Fri half day 9:30 priority: MTD cut check (~3.2% above $1,611.49) after the 2-day gap; then the weekly-review Part C income rebalance.
+
+### 11 AM Session Note
+- Market CLOSED (Thanksgiving). No Approved Trades section -> no buys. No orders placed.
+- Positions unchanged vs 11-25 close; no core <= -7% (worst MTD -3.94%), no satellite held; no tighten triggers. All 8 GTC stops live, none moved.
