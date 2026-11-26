@@ -10167,3 +10167,41 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). Hol
 - Risk sweep (~2pm ET): no hard-cut breaches - market reversed the 11am selloff (equity $88,863, +0.06% vs last close). Worst MTD -3.81% ($1,666.85; cut $1,611.49, ~3.3% away), HAS -3.35% ($109.31; cut $105.18, ~3.8% away; only news = small insider sale). V/TYL bounced ~+2%. No tightens (no winner >= +15%). All 8 GTC trailing stops live (ALLE hwm ratcheted to $193.71), none moved down. No satellite catalysts.
 - Pattern for Fri review: 11am -2.9% SPY flush fully retraced by 2pm - intraday cut-checks near lows would have whipsawed; hard cuts held. Held through 4-day holiday gap (Thu closed, Fri half day) with stops live.
 - Risky positions closed today: none.
+
+## 2026-11-26 — Pre-market Research (Thursday, Thanksgiving - market CLOSED)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). US equity markets closed today; Fri 11-27 early close (1pm ET). No trade windows today.
+
+### Account
+- Equity: $88,834 (last_equity $88,834, balance as of 11-25) | Cash: $5,027 (5.66%; floor 5% = $4,442) - ~$586 above floor.
+- Core: $62,999 (70.92%, 6/8; 1 trade this week) | Satellite: $0 (0%, 0/5) | Income: $20,808 (23.42% vs 15% cap, still above): SGOV $1,711 (+0.16%), SPHY $19,097 (-4.50%).
+- Core marks vs entry (11-25 close): ALLE $192.20 (-0.41%), CRL $332.08 (-0.62%), V $424.39 (-1.24%), TYL $420.28 (-1.96%), HAS $110.58 (-2.23%; cut $105.18, ~4.9% above), MTD $1,664.55 (-3.94%; cut $1,611.49, ~3.2% above). None breached.
+- Live GTC trailing stops (all 8 "new", none moved down): HAS 10% ($103.49), ALLE 10% ($174.34), CRL 10% ($311.21), MTD 10% ($1,584.00), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; ~3.3% below price), SGOV 16 sh 5% ($95.703, exp 12-24). SGOV 0.99 sh unstopped (DRIP residue).
+
+### Data-quality notes
+- **Gemini FAILED (week 5)**: gemini-2.5-flash HTTP 404 (exit 4, "use gemini-3.8-flash"). No Gemini output used. Owner: set GEMINI_RESEARCH_MODEL / update script default.
+- **Fallback = Benzinga feed (24h) + WebSearch (labelled) + Alpaca SPY bars.** WebSearch returned no 11-25/11-26 coverage -> **futures and VIX = DATA GAP, not fabricated** (futures trade abbreviated Thanksgiving session anyway).
+
+### Market Context
+- SPY (Alpaca bars, verified): 11-23 $722.29, 11-24 $718.78, 11-25 $716.70 (-0.29%; after 11am -2.9% flush fully retraced intraday). Still ~2% below 11-18 ($730.20).
+- Futures/VIX: unknown (data gap). Last known VIX 26.62 (11-23 close, per prior entry).
+- Today: cash market closed. Fri: half day, thin liquidity; holiday retail (Black Friday) headlines the main theme.
+
+### Overnight news - held / watchlist (Benzinga, 24h)
+- Held: HAS - Seaport PT $130->$120 (mild -; PT still above price) + $319k insider sale (already logged). V - updated experimental AI-agent wallet (neutral+). ALLE, CRL, MTD, TYL, SGOV, SPHY: no items. No thesis breaks.
+- Watchlist: BBY - regular quarterly dividend declared; analyst PT adjustments post-results (neutral). DLTR - Truist PT $169 (neutral/+). PG - analyst PT updates (neutral+). LH - insider sale (mild -). LLY - GLP-1 eye-condition lawsuits (class headline, mild -). AAPL - Talkie app removal, Hyderabad store (neutral). DIS - Germany channel rebrand (neutral).
+- VLTO, ROP, BDX, TMO, REGN, SWK, MAS, ADP, BRK.B, CTAS, FSTR: no items.
+
+### Core trade ideas
+- None (market closed). For Fri: 6/8 slots but cash ~$586 above floor, SGOV $1.7k too small, SPHY not a funding source -> no full-size core entry without income-cap rebalance (Fri weekly-review Part C item, carried).
+- Fri 9:30 priority: MTD cut check (~3.2% above) after 2-day gap.
+
+### Satellite trade ideas
+- FSTR (industrials): no pending binary date; aging 11-04 price-jump catalyst; illiquid. SKIP (drop at Fri refresh if no follow-through).
+- Biotech: none listed. No satellite catalysts within 5 trading days.
+
+### Risk factors
+- Futures/VIX unknown; holiday gap into thin Fri half-session; MTD 3.2% from cut; HAS PT cut; Income 23.4% vs 15% cap; SPHY ~3.3% above 5% trail; cash at floor; Gemini outage wk 5.
+
+### Decision: HOLD
+- Market closed. No email (no held position below hard cut; no satellite catalyst resolved; no major geopolitical event found).
