@@ -10214,3 +10214,10 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). US 
 ### 11 AM Session Note
 - Market CLOSED (Thanksgiving). No Approved Trades section -> no buys. No orders placed.
 - Positions unchanged vs 11-25 close; no core <= -7% (worst MTD -3.94%), no satellite held; no tighten triggers. All 8 GTC stops live, none moved.
+
+### 3 PM Session Note
+- Market CLOSED (Thanksgiving). No Approved Trades list -> no buys; no closes, no tightens, no orders placed. Marks = 11-25 close (balance_asof 11-25), equity $88,834.19.
+- Risk sweep: no core <= -7% (worst MTD -3.94%, cut $1,611.49 ~3.2% away; HAS -2.23%); no satellite held, no catalysts pending; all 8 GTC stops live, none moved down.
+- Pattern for Fri review: holiday-week gap risk concentrated in MTD/HAS; income-cap rebalance (23.4% vs 15%) still the blocker for new core entries; Gemini model 404 wk 5.
+- Risky positions closed today: none.
+- Email FAILED: smtp.gmail.com:465 unreachable (curl exit 7, network block) - report sent via push notification instead.
