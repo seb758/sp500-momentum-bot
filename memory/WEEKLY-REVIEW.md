@@ -2888,3 +2888,114 @@ income $20,756 (23.9%), cash $15,772 (18.1%).
 Deployment finally resumed and beat a -5.1% S&P by 0.47pp, but timing was
 poor, one hard cut overshot to -9.8%, and stale routine caps left 18% cash
 idle.
+
+## Week ending 2026-11-27
+
+### Stats
+| Metric | Value |
+|---|---|
+| Starting portfolio | $87,026.75 (per 11-20 review) |
+| Ending portfolio | $89,048.00 (Alpaca equity, 11-27 post-close) |
+| Week return | +$2,021.25 (+2.32%) |
+| S&P 500 week | +3.90% (SPY close 11-20 $689.81 -> 11-25 $716.70; Gemini unavailable, WebSearch found no 11-27 wrap, computed from Alpaca; 11-27 half-day bar not served) |
+| Bot vs S&P | -1.58pp (bot includes Fri, SPY through Wed) |
+| Core trades | 1 entry (HAS); 0 closed (W:0/L:0), 6 open |
+| Satellite trades | 0 (no closes, no entries) |
+| Win rate | n/a (no closed trades) |
+| Best trade | n/a (no closes); best open CRL +0.97% (core) |
+| Worst trade | n/a (no closes); worst open HAS -3.54% (core) |
+| Profit factor | n/a (no closes) |
+
+Phase P&L: -10.95% vs $100k start. Realized this week: $0.
+
+### Closed Trades
+| Ticker | Sleeve | Entry | Exit | P&L | Notes |
+|---|---|---|---|---|---|
+| — | — | — | — | — | No closes this week |
+
+### Open Positions at Week End
+| Ticker | Sleeve | Entry | Close | Unrealized | Stop |
+|---|---|---|---|---|---|
+| CRL | core | $334.16 | $337.39 | +$103.36 (+0.97%) | 10% trailing ($311.21) |
+| V | core | $429.72 | $431.46 | +$43.50 (+0.40%) | 10% trailing ($388.81) |
+| ALLE | core | $193.00 | $191.77 | -$68.88 (-0.64%) | 10% trailing ($174.34) |
+| TYL | core | $428.70 | $422.47 | -$155.75 (-1.45%) | 10% trailing ($388.58) |
+| MTD | core | $1,732.79 | $1,680.49 | -$313.80 (-3.02%) | 10% trailing ($1,584.00); -7% cut $1,611.49 (~4.1% away) |
+| HAS | core | $113.10 | $109.09 | -$380.69 (-3.54%) | 10% trailing ($103.49); -7% cut $105.18 (~3.6% away) |
+| SPHY | income | $23.36 | $22.17 | -$1,017.01 (-5.09%) | 5% trailing ($21.565, ~2.7% away; Alpaca post-close mark, official close $22.327) |
+| SGOV | income | $100.52 | $100.72 | +$3.40 (+0.20%) | 5% trailing ($95.703, 16 sh covered; order exp 12-24) |
+
+Exposure (equity $89,048.00): core $63,330 (71.1%), satellite $0 (0%),
+income $20,690 (23.2%), cash $5,027 (5.65%).
+
+### Watchlist Refresh
+- Core: 4 added (GILD, GEHC, RSG, ACN re-added), 2 dropped (AAPL rank 77 out
+  of shortlist; TMO rank 52, only +0.5% above 50-day - trimmed). 25 names
+  (was 23). Full re-screen on the live S&P 500 CSV (503 symbols, commit
+  11-27); 500 ranked on Alpaca bars through 11-25. Fundamentals: FMP 2/15
+  ratings (cashflow 402 on all), rest WebSearch or carried. Failed FCF
+  (carried): MCK, CAH, CDW, BIIB, TSCO, A. Not added: MA (OCF -6.2%), AJG
+  (FCF unverified). Held by corporate-action guard: MRNA, PTC, OKTA, IDXX,
+  CDW. All 6 held core names stay on the list (no thesis-break clock).
+- Satellite: 0 added, 1 dropped (FSTR - no follow-through, -7.7% from 11-18,
+  aging catalyst). **0 tradeable names.** Rejected on momentum: ANAB (PDUFA
+  12-12), CORT (12-17), MLYS (12-22), VNDA, ALTG (no catalyst). COGT (FDA
+  approval 11-24, PDUFA 12-30) and PRAX binary watch only (pre-revenue).
+- **Core sector mix (25):** Health Care 8 (REGN, BDX, MTD, CRL, GILD, GEHC,
+  LLY, LH = 32.0%), Industrials 7 (VLTO, ALLE, ADP, MAS, RSG, CTAS, SWK =
+  28.0%), IT 3 (ACN, ROP, TYL = 12.0%), Cons. Disc. 2 (BBY, HAS = 8.0%), Cons.
+  Staples 2 (DLTR, PG = 8.0%), Financials 2 (V, BRK.B = 8.0%), Comm. Services
+  1 (DIS = 4.0%) - 7 sectors. Semis/AI-hw 0/25. No sector over the 40% cap.
+
+### What Worked
+- Patience Rule flag cleared: Core+Satellite 71.1% (> 60%) for the first time
+  since the flag began - research-outage rule now 2 weeks of evidence.
+- Holding through the -8.6% flush: all 5 prior core names recovered off the
+  11-20 low (V -6.5% -> +0.4%, CRL -5.9% -> +1.0%); no cuts triggered, no
+  panic sells, stops never moved down.
+- HAS entry used the feed-artifact limit rule correctly (limit below midpoint,
+  stop attached on fill - no unstopped window).
+- Holiday week handled cleanly: 4-day gap held with live GTC stops.
+
+### What Didn't Work
+- Lagged the rebound by ~1.6pp: SPY +3.9% (high-beta/semis bounce) vs bot
+  +2.3%; defensive HC/Industrials tilt plus 23% Income drag (SPHY -5.1%).
+- **Still blocked by stale routine caps:** sessions logged "prompt gate <=6
+  positions / 6 trades" all week, so core stayed at 6/8 with 2 open slots.
+- **Income 23.2% vs 15% cap, 3rd week running**, and SGOV is only $1.7k -
+  no funding source for new core buys (SPHY/EDGX not allowed). Cash sat at
+  the 5% floor; deployment frozen at 71% from Mon on.
+- SPHY now -5.1%, 5% trail ~2.7% away - income sleeve is the account's
+  biggest loser (-$1,017).
+- Satellite pipeline empty: 0 tradeable names, Gemini outage wk 6, email
+  SMTP blocked (curl exit 7) - notifications via push only.
+
+### Key Lessons
+- Recovery came from holding, not trading: the -7% cut zone was approached
+  but not breached, and the 10% trails kept every name.
+- The 85% core target is unreachable while Income sits above its cap and the
+  routine prompt enforces 6 positions - both are config gaps, not market
+  conditions.
+- Small-cap biotech catalysts this month are all pre-revenue or broken
+  charts; an empty satellite list is the correct outcome, not a bug.
+
+### Adjustments for Next Week
+- No TRADING-STRATEGY.md change (research-outage rule: 2 weeks working as
+  designed - keep; no rule failed badly).
+- Owner action (repeat, high): sync routines/market-open.md, routines/midday.md
+  (+ cloud prompts, .claude/commands/trade.md) to core 8 / 8 / 25%,
+  satellite 5 / 5 / 10% (7.5% binary).
+- Owner action (repeat, high): authorize the Income trim to the 15% cap
+  (sell ~$7.3k SPHY -> SGOV/cash). Frees funding for 1 core entry into the 2
+  open slots (candidates: REGN, VLTO, BDX, GILD on fresh bars).
+- Owner action (repeat): Gemini model/quota (gemini-3.8-flash, 429); Gmail
+  SMTP port 465 blocked from the cloud env.
+- Owner decision (repeat, NOT changed): close the -7% cut gap (fixed -7% stop
+  until +3%, then 10% trail).
+- Mon 11-30: HAS (~3.6% from cut) and MTD (~4.1%) first in the 9:30 cut
+  check; SPHY stop ~2.7% away; SGOV stop order expires 12-24.
+
+### Overall Grade: C+
+Positive week, no realized losses, deployment flag cleared - but trailed a
++3.9% S&P by 1.6pp and two config gaps (routine caps, Income over cap) kept
+2 core slots and 23% of equity idle.

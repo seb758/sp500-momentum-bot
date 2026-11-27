@@ -169,7 +169,101 @@ CRDO/VICR/SEZL/DAVE/PACS/STRL not re-checked this week (already confirmed
 core-ineligible and satellite-sector-mismatched eight refreshes running; no
 new information would change that).
 
-## Current — Week of 2026-11-20
+## Current — Week of 2026-11-27
+
+Nineteenth weekly screen refresh (weekly-review workflow, run 2026-11-27,
+post-Thanksgiving half day). **Full re-screen (fallback-sourced):** Gemini
+still down (404 default `gemini-2.5-flash`; 429 quota on `gemini-3.8-flash`);
+no Gemini output used. Constituent universe = **live S&P 500 table (503
+symbols)** parsed raw from the GitHub `datasets/s-and-p-500-companies` CSV
+(last commit 2026-11-27; HON/HONA/FDXF/OKTA/TWLO/VYLR present - spot-checked
+vs last week's universe). 500 ranked on fresh Alpaca bars (through 11-25
+close; 11-27 bar not served - 403 on recent window): avg rank of 3M and 6M
+return vs SPY (SPY 3M -7.1%, 6M -5.0%), 50/200-day MA. Skipped (short
+history): FDXF, HONA, VYLR. FMP rating worked 2/15 new names (ABBV, HCA,
+both C+; cashflow 402); rest 402 -> fundamentals via WebSearch (documented
+fallback) or carried from the 11-20/11-13 verified lists (labelled).
+
+**Corporate-action guard (HELD off, unverified):** MRNA (177% one-day move;
+6M +369% - implausible), PTC 33%, OKTA 30%, IDXX 22%, CDW 20% (CDW fails FCF
+anyway).
+
+### Core (S&P 500 momentum + FCF)
+
+| Ticker | Momentum Rank | 3M Rel. Return vs SPY | FCF Trend | Analyst Rating | Notes |
+|---|---|---|---|---|---|
+| REGN | 2 | +28.6% (6M +63.0%) | Stable (carried 11-20) | Buy/OW majority (carried) | Health Care. +16.7% above 50-day |
+| VLTO | 3 | +29.2% (6M +49.0%) | Q3 FCF $304M +18% YoY (carried 11-20) | n/a, no Sell (carried) | Industrials |
+| ALLE | 4 | +27.4% (6M +51.3%) | Improving (carried) | n/a, no Sell (carried) | Industrials. **Held (core)** |
+| BDX | 7 | +24.7% (6M +54.1%) | FY26 FCF $2.9B +42.5% (carried) | n/a, no Sell (carried) | Health Care (medtech) |
+| MTD | 11 | +25.3% (6M +48.1%) | Stable (carried) | Mixed/Hold (carried) | Health Care. **Held (core)**; only +2.6% above 50-day |
+| BBY | 12 | +29.8% (6M +42.3%) | Improving (carried) | Hold (carried) | Cons. Disc. FQ3 report timing unverified - check before entry (gap risk) |
+| ACN | 13 | +35.4% (6M +39.8%) | Stable: FY26 FCF $11.6B +7%; FY27 guide $11.0-11.8B (~-2% mid) (WebSearch, 8-K) | n/a, no Sell found; reverify before entry | **Re-added.** IT. Back +7.3% above 50-day (cut 11-19 at -9.8%) |
+| ROP | 15 | +21.3% (6M +56.1%) | Improving (carried) | Hold consensus (carried) | IT (software) |
+| DLTR | 16 | +26.9% (6M +39.7%) | Q2 FCF $675M vs ~$170M PY (carried) | Unverified - reverify before entry | Cons. Staples. Q3 results early Dec (gap risk) |
+| CRL | 18 | +19.1% (6M +88.1%) | Improving (carried) | Buy (carried) | Health Care. **Held (core)** |
+| GILD | 20 | +25.8% (6M +34.8%) | Q3 FCF $4.80B vs $3.96B; FCF margin 57.8% vs 51% (WebSearch, press release) | No Sell found (pre-Q3 RBC/Cantor PTs; reverify) | **New.** Health Care (biopharma) |
+| TYL | 23 | +20.7% (6M +42.4%) | Record Q3 FCF $277M +11.9% (carried) | Buy (carried) | IT (gov software). **Held (core)** |
+| GEHC | 25 | +22.0% (6M +37.6%) | Q3 FCF $793M (+$310M YoY, incl. $55M tariff refund); FY guide raised (WebSearch, 8-K) | n/a, no Sell found | **New.** Health Care (medtech) |
+| ADP | 26 | +18.3% (6M +49.1%) | ~+10% FY26 (carried) | Hold (carried) | Industrials |
+| HAS | 27 | +24.5% (6M +33.0%) | 9M OCF $907M +85% (carried 11-20) | Mixed; no Sell (carried) | Cons. Disc. **Held (core)**; weakest held name (-3.5%) |
+| LLY | 34 | +25.4% (6M +28.6%) | Positive/improving (carried) | Strong Buy (carried) | Health Care |
+| MAS | 36 | +26.5% (6M +28.0%) | 9M OCF $788M +30.5% (carried 11-20) | n/a, no Sell (carried) | Industrials |
+| RSG | 38 | +23.0% (6M +29.8%) | 9M adj FCF $2.276B vs $2.191B; FY26 guide raised to $2.565-2.585B (WebSearch, 8-K) | n/a, no Sell found | **New.** Industrials (waste). Defensive |
+| LH | 42 | +16.7% (6M +45.4%) | Q3 FCF $412M vs $281M (carried 11-20) | n/a, no Sell (carried) | Health Care |
+| V | 43 | +18.8% (6M +35.6%) | FY26 FCF $22.1B vs $21.6B (FMP, carried) | FMP B (carried) | Financials. **Held (core)** |
+| CTAS | 44 | +18.6% (6M +36.6%) | Improving (carried) | Buy (carried) | Industrials. Quebec workplace-fatality headline 11-27 (reputational) |
+| PG | 45 | +28.1% (6M +23.7%) | Stable (carried 11-20) | n/a, no Sell (carried) | Cons. Staples. Defensive |
+| SWK | 46 | +17.1% (6M +42.8%) | FY26 guide $1.0-1.2B, tariff-refund aided (carried 11-20) | n/a, no Sell (carried) | Industrials. FCF quality = watch |
+| DIS | 49 | +24.6% (6M +26.1%) | FY26 FCF $10.6B vs $10.1B (FMP, carried) | FMP B; Phillip downgrade to Accumulate 11-23 (not Sell) | Comm. Services |
+| BRK.B | 54 | +22.1% (6M +26.4%) | Stable (carried 11-20) | Hold (carried) | Financials |
+
+**Sector mix (25 names):** Health Care 8 (REGN, BDX, MTD, CRL, GILD, GEHC,
+LLY, LH = 32.0%), Industrials 7 (VLTO, ALLE, ADP, MAS, RSG, CTAS, SWK =
+28.0%), IT 3 (ACN, ROP, TYL = 12.0%), Cons. Disc. 2 (BBY, HAS), Cons. Staples
+2 (DLTR, PG), Financials 2 (V, BRK.B), Comm. Services 1 (DIS) - 7 sectors.
+Semis/AI-hardware 0/25 (NVDA rank 472, MU 478, AVGO 452, AMD 438 - all below
+50-day).
+
+**Dropped:** AAPL (rank 77, out of top-60 shortlist), TMO (rank 52, only
++0.5% above 50-day - weakest Health Care name, trimmed to hold list at 25 /
+HC at 32%; re-add if it firms).
+**Failed FCF gate (carried):** MCK (rank 6), CAH (8), CDW (9), BIIB (17), TSCO
+(28), A (32). **Fundamentals not added:** MA (rank 37; 9M OCF -6.2% YoY,
+buybacks+div > FCF - deteriorating), AJG (rank 19; rev +18%, organic 5%, but
+cash-flow line in 8-K snippet unidentified - FCF unverified). **Not checked
+(list full):** MRSH, ABBV (FMP C+, FCF flat carried), AIZ, HCA (FMP C+), EG,
+ULTA, EW, CPAY, TRV, VTRS. **Below 50-day:** RVTY, MRNA (also guard).
+
+### Satellite (small-cap biotech / industrials)
+
+| Ticker | Sub-sector | YoY Growth | Analyst Rating | Catalyst | Catalyst Date | Max Loss If Catalyst Fails | Notes |
+|---|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — | No tradeable satellite names this week |
+
+**Sourcing:** WebSearch + Benzinga (Gemini down) - December PDUFA calendar
+(prnewswire/TradingView, catalystalert, biopharmawatch) + small-cap
+industrial contract-award search; momentum on fresh Alpaca bars (11-25).
+**Dropped:** FSTR (industrials) - no follow-through on the 11-04 price-jump
+catalyst ($40.94 11-18 -> $37.78 11-25; 3M flat, 6M -6.5%), illiquid
+($1.8M/day), no pending catalyst.
+**Rejected (momentum gate):** ANAB (Quimilza/imsidolimab PDUFA 12-12; 3M
+-10.8%, 6M -10.3%, below 200-day), CORT (relacorilant PDUFA 12-17; -20% gap
+10-23, -31.5% below 50-day; likely >$3B cap), MLYS (PDUFA 12-22, pre-revenue,
+-24% below 50-day), VNDA (-8.5% below 50-day, 6M -41%), ALTG (industrials,
++33% 11-24 with no news - no catalyst; sub-$300M cap likely).
+**Binary watch only (NOT tradeable):** COGT - FDA approved EKITNA
+(bezuclastinib) for 2L GIST 11-24 (Benzinga/GlobeNewswire; stock +17% 11-24,
++9% 11-25 = resolved catalyst); next PDUFA 12-30 (NonAdvSM). Pre-revenue
+(launch just began) -> fails growth gate; cap likely >$3B at ~$36 (unverified).
+PRAX (PDUFA 12-27) pre-revenue, likely >$3B.
+**2-strike sub-sector status:** biotech 0 strikes (cooldown ended 11-20);
+industrials 0 strikes.
+
+
+## History
+
+### Week of 2026-11-20
 
 Eighteenth weekly screen refresh (weekly-review workflow, run 2026-11-20).
 **Full re-screen (fallback-sourced):** Gemini still down (404 default
@@ -255,9 +349,6 @@ Savara (SVRA, molgramostim) - both PDUFA 2026-11-22 (Sunday; confirmed via
 WebSearch, CAPR adcomm 9-3 against). Pre-revenue - fail growth gate.
 **2-strike sub-sector status:** biotech cooldown ENDED 2026-11-20 (0 active
 strikes going forward; new biotech entries allowed); industrials 0 strikes.
-
-
-## History
 
 ### Week of 2026-11-13
 
