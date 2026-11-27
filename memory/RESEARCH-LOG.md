@@ -10221,3 +10221,41 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). US 
 - Pattern for Fri review: holiday-week gap risk concentrated in MTD/HAS; income-cap rebalance (23.4% vs 15%) still the blocker for new core entries; Gemini model 404 wk 5.
 - Risky positions closed today: none.
 - Email FAILED: smtp.gmail.com:465 unreachable (curl exit 7, network block) - report sent via push notification instead.
+
+## 2026-11-27 — Pre-market Research (Friday, post-Thanksgiving HALF DAY - close 1pm ET)
+
+Env vars all present. `account`/`positions`/`orders` clean (no auth errors). balance_asof 11-25; marks include post-holiday indications on HAS/TYL/V/SGOV.
+
+### Account
+- Equity: $89,017 (last_equity $88,834, +0.21%) | Cash: $5,027 (5.65%; floor 5% = $4,451) - ~$577 above floor.
+- Core: $63,181 (70.98%, 6/8; 1 trade this week) | Satellite: $0 (0%, 0/5) | Income: $20,808 (23.38% vs 15% cap, still above): SGOV $1,711 (+0.18%), SPHY $19,097 (-4.50%).
+- Core marks vs entry: ALLE $192.20 (-0.41%), CRL $332.08 (-0.62%), V $426.94 (-0.65%), HAS $111.50 (-1.41%; cut $105.18, ~6.0% above), TYL $421.51 (-1.68%), MTD $1,664.55 (-3.94%; cut $1,611.49, ~3.3% above). None breached.
+- Live GTC trailing stops (all 8 "new", none moved down): HAS 10% ($103.49), ALLE 10% ($174.34), CRL 10% ($311.21), MTD 10% ($1,584.00), TYL 10% ($388.58), V 10% ($387.60), SPHY 5% ($21.565; ~3.3% below price), SGOV 16 sh 5% ($95.703, exp 12-24). SGOV 0.99 sh unstopped (DRIP residue).
+
+### Data-quality notes
+- **Gemini FAILED (week 5)**: gemini-2.5-flash HTTP 404 (exit 4, "no longer available"); retry with GEMINI_RESEARCH_MODEL=gemini-3.8-flash -> HTTP 429 quota exhausted (exit 4). No Gemini output used. Owner: fix model default / quota.
+- **Fallback = Benzinga feed (30h) + WebSearch (labelled) + Alpaca daily bars.** WebSearch returned only 2024/2025 Black Friday coverage -> **futures and VIX = DATA GAP, not fabricated.** Alpaca quotes stale (11-25 21:00 UTC IEX); 11-26/27 bars not served (403 on recent window).
+
+### Market Context
+- SPY (Alpaca bars, verified): 11-20 $689.81 (flush), 11-23 $722.29, 11-24 $718.78, 11-25 $716.70. ~1.8% below 11-17 ($732.44).
+- Futures/VIX: unknown (data gap). Last known VIX 26.62 (11-23 close, per prior entry).
+- Today: half session (1pm ET close), thin liquidity; Black Friday retail spending headlines main theme. No major scheduled US data found (unverified).
+
+### Overnight news - held / watchlist (Benzinga, 30h)
+- Held: V - Visa Flex Card (NBX partnership), Canada holiday survey, AI-agent wallet update (neutral+). ALLE, CRL, HAS, MTD, TYL, SGOV, SPHY: no items. No thesis breaks.
+- Watchlist: DIS - cease-and-desist to ByteDance (AI copyright), new CTO AI strategy, injunction vs FCC review of ABC stations (neutral/+). TMO - Uzbekistan cooperation (neutral). CTAS - Quebec CNESST workplace-fatality findings (mild -, headline/reputational). AAPL - Talkie app removal, Hyderabad store (neutral). ROP item is a Roche Canada mis-tag (ignore).
+- BBY, VLTO, BDX, REGN, LH, SWK, MAS, DLTR, ADP, BRK.B, LLY, PG, FSTR: no items.
+
+### Core trade ideas
+- None. 6/8 slots but cash ~$577 above floor; SGOV $1.7k too small to fund; SPHY/EDGX not funding sources -> no full-size core entry without Income-cap rebalance (today's weekly-review Part C, mandatory).
+- 9:30 priority: MTD cut check (~3.3% above) after 2-day gap.
+
+### Satellite trade ideas
+- FSTR (industrials): no follow-through - closes $40.94 (11-18) -> $37.78 (11-25), -7.7%; aging 11-04 price-jump catalyst, no pending binary date; illiquid (~45k sh/day). SKIP; recommend DROP at today's screen refresh.
+- Biotech: none listed. No satellite catalysts within 5 trading days.
+
+### Risk factors
+- Futures/VIX unknown; thin half-session after 2-day gap; MTD 3.3% from cut; Income 23.4% vs 15% cap; SPHY ~3.3% above 5% trail; cash at floor; Gemini outage wk 5; satellite pipeline empty.
+
+### Decision: HOLD
+- Default HOLD. No email (no held position below hard cut; no satellite catalyst resolved; no major geopolitical event found).
