@@ -10259,3 +10259,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). bal
 
 ### Decision: HOLD
 - Default HOLD. No email (no held position below hard cut; no satellite catalyst resolved; no major geopolitical event found).
+
+### 9:30 AM Session Note
+- HELD - no planned trades. Core 6/8 (prompt gate <=6 after fill blocks new core); satellite pipeline empty (FSTR skip). Cash $5,027 (5.62%) ~$553 above floor.
+- Live (10:32 ET): equity $89,490 (+0.74%). Worst MTD -2.83% (cut $1,611.49, ~4.3% away - cut-check cleared), HAS -1.60%, SPHY -4.37%. CRL +1.41%. All 8 GTC trailing stops live, none moved down; no tightens.
+- Flag for Friday review: Income 23.4% vs 15% cap still blocks core redeployment - Part C rebalance is the gating item.
