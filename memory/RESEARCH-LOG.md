@@ -10264,3 +10264,8 @@ Env vars all present. `account`/`positions`/`orders` clean (no auth errors). bal
 - HELD - no planned trades. Core 6/8 (prompt gate <=6 after fill blocks new core); satellite pipeline empty (FSTR skip). Cash $5,027 (5.62%) ~$553 above floor.
 - Live (10:32 ET): equity $89,490 (+0.74%). Worst MTD -2.83% (cut $1,611.49, ~4.3% away - cut-check cleared), HAS -1.60%, SPHY -4.37%. CRL +1.41%. All 8 GTC trailing stops live, none moved down; no tightens.
 - Flag for Friday review: Income 23.4% vs 15% cap still blocks core redeployment - Part C rebalance is the gating item.
+
+### 11 AM Session Note
+- HELD - no "### Approved Trades (verified)" list today -> no buys. Core 6/8, 1/6 trades this week; satellite 0/5, 0/4.
+- Live (11:10 ET): equity $89,029 (+0.22%). No cuts: worst HAS -3.79% ($108.81; cut $105.18, ~3.3% away; -1.6% on day, no news 6h), MTD -3.30% (cut $1,611.49, ~3.8% away). V +0.17% / CRL +0.82% lead. No tightens (no winner >= +15%). All 8 GTC trailing stops live (V hwm ratcheted to $432.01), none moved down.
+- Pattern for Friday review: HAS weakest since 11-23 entry (-3.8%, 3 down days of 4) - watch for -7% cut into next week.
